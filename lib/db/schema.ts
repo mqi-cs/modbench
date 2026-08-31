@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { check, index, integer, sqliteTable, text, unique } from "drizzle-orm/sqlite-core";
+import { check, index, integer, real, sqliteTable, text, unique } from "drizzle-orm/sqlite-core";
 
 // SQLite has no native enum. Every enum column is `text` + a CHECK
 // constraint listing the same values as the TS union type below it, so a
@@ -93,8 +93,15 @@ export const listings = sqliteTable("listings", {
   partId: text("part_id").notNull().references(() => parts.id),
   vendorId: text("vendor_id").notNull().references(() => vendors.id),
   sourceUrl: text("source_url").notNull(),
-  priceMinor: integer("price_minor").notNull(),
-  currency: text("currency").notNull(),
+  priceMinor: integer("price_minor").notNull(), // native price, vendor's own currency, never touched by conversion
+  currency: text("currency").notNull(), // 3-char, the vendor's own currency
+  // GBP-converted fields -- specs/09-COMPETITIVE-CONTEXT.md + 02-phase-1-data-pipeline.md
+  // "Currency model". Computed once at ingest from data/fixtures/fx-rates.json,
+  // never at display/request time. Stored per listing (not looked up globally)
+  // so historical prices stay accurate as the fixture's rates drift.
+  priceMinorBase: integer("price_minor_base"), // converted to GBP, integer minor units
+  fxRate: real("fx_rate"), // rate used, native -> GBP (GBP per 1 native unit)
+  fxRateDate: text("fx_rate_date"), // ISO date of the rate used, for the "rates as of" line
   inStock: integer("in_stock").notNull(), // 0/1
   lastCheckedAt: integer("last_checked_at").notNull(), // unix ms
 }, (table) => [

@@ -9,21 +9,20 @@ import { families, listings, parts, vendors, familyExceptions } from "../lib/db/
 import { eq } from "drizzle-orm";
 import { nameFamilyConflict } from "../lib/db/name-family-conflict";
 
-// Rough USD-equivalent conversion, sanity-check purposes only -- not used
-// for any real money calculation, which stays in each vendor's own
-// integer minor units per specs/00-PROJECT.md constraint #3.
-const APPROX_USD_RATE: Record<string, number> = { SGD: 0.74, PHP: 0.018, USD: 1 };
-
-const PLAUSIBLE_USD_RANGE: Record<string, [number, number]> = {
-  movement: [5, 200],
-  case: [15, 600],
-  dial: [8, 250],
-  hands: [3, 120],
-  bezel_insert: [8, 200],
-  crystal: [8, 200],
-  chapter_ring: [8, 120],
-  crown: [3, 80],
-  strap: [3, 150],
+// GBP plausible-price ranges, checked against priceMinorBase (the real,
+// ingest-time-converted GBP figure) so one range covers all vendors
+// regardless of native currency -- specs/02-phase-1-data-pipeline.md
+// "Currency model" + Pass measure 8.
+const PLAUSIBLE_GBP_RANGE: Record<string, [number, number]> = {
+  movement: [4, 160],
+  case: [12, 480],
+  dial: [6, 200],
+  hands: [2, 100],
+  bezel_insert: [6, 160],
+  crystal: [6, 160],
+  chapter_ring: [6, 100],
+  crown: [2, 65],
+  strap: [2, 120],
 };
 
 let failures = 0;
@@ -133,30 +132,50 @@ function main() {
     pass("every listing's currency matches its vendor's expectedCurrency");
   }
 
-  // 7. Price sanity -- every price within a plausible USD-equivalent range for its category; no null/zero.
-  // (No null/zero already enforced by the DB CHECK constraint; re-checked here for defense in depth.)
+  // 7. Conversion check -- every listing has a non-null priceMinorBase/fxRate/
+  //    fxRateDate, and every rate used exists in fx-rates.json. Pass measure 8.
+  const fxRates = JSON.parse(readFileSync("data/fixtures/fx-rates.json", "utf-8")) as { base: string; asOf: string; rates: Record<string, number> };
+  let conversionFailures = 0;
+  for (const l of allListings) {
+    if (l.priceMinorBase === null || l.fxRate === null || l.fxRateDate === null) {
+      fail(`listing ${l.id} missing priceMinorBase/fxRate/fxRateDate -- re-run ingest.ts`);
+      conversionFailures++;
+      continue;
+    }
+    const isBase = l.currency === fxRates.base;
+    if (!isBase && !(l.currency in fxRates.rates)) {
+      fail(`listing ${l.id} currency '${l.currency}' has no rate in fx-rates.json`);
+      conversionFailures++;
+    }
+  }
+  if (conversionFailures === 0) {
+    pass(`conversion check: every listing has priceMinorBase/fxRate/fxRateDate, every rate exists in fx-rates.json (base=${fxRates.base}, asOf=${fxRates.asOf})`);
+  }
+
+  // 8. Price sanity -- every price within a plausible GBP range for its
+  // category, checked against priceMinorBase so one range covers all
+  // vendors; no null or zero prices. (Non-positive priceMinor is already
+  // enforced by the DB CHECK constraint; re-checked here for defense in depth.)
   const partById = new Map(approvedParts.map((p) => [p.id, p]));
   let priceSanityFailures = 0;
   for (const l of allListings) {
     const part = partById.get(l.partId);
     if (!part) continue; // only sanity-check listings for approved parts
-    if (l.priceMinor <= 0) {
-      fail(`listing ${l.id} has non-positive price`);
+    if (l.priceMinor <= 0 || l.priceMinorBase === null || l.priceMinorBase <= 0) {
+      fail(`listing ${l.id} has non-positive or missing price`);
       priceSanityFailures++;
       continue;
     }
-    const rate = APPROX_USD_RATE[l.currency];
-    if (!rate) continue; // unknown currency already caught by check #6
-    const usdEquivalent = (l.priceMinor / 100) * rate;
-    const range = PLAUSIBLE_USD_RANGE[part.category];
-    if (range && (usdEquivalent < range[0] || usdEquivalent > range[1])) {
+    const gbpValue = l.priceMinorBase / 100;
+    const range = PLAUSIBLE_GBP_RANGE[part.category];
+    if (range && (gbpValue < range[0] || gbpValue > range[1])) {
       console.warn(
-        `WARN: listing ${l.id} (${part.name}, ${part.category}) is ~$${usdEquivalent.toFixed(2)} USD-equivalent, outside the plausible ${range[0]}-${range[1]} range -- worth a manual price check, not treated as a hard failure (bundles/rare finishes can legitimately be priced outside a rough heuristic range).`,
+        `WARN: listing ${l.id} (${part.name}, ${part.category}) is £${gbpValue.toFixed(2)}, outside the plausible £${range[0]}-${range[1]} range -- worth a manual price check, not treated as a hard failure (bundles/rare finishes can legitimately be priced outside a rough heuristic range).`,
       );
     }
   }
   if (priceSanityFailures === 0) {
-    pass("price sanity: no non-positive prices among approved parts' listings (soft range warnings printed above, if any)");
+    pass("price sanity: no non-positive/missing prices among approved parts' listings, checked against priceMinorBase (soft range warnings printed above, if any)");
   }
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);

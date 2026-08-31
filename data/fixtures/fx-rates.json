@@ -1,0 +1,9 @@
+{
+  "base": "GBP",
+  "asOf": "2026-08-31",
+  "source": "XE.com mid-market rate, manually checked and entered -- no live API call, per specs/00-PROJECT.md and 09-COMPETITIVE-CONTEXT.md",
+  "rates": {
+    "SGD": 1.7225,
+    "PHP": 84.50
+  }
+}

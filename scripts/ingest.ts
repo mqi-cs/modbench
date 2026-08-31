@@ -3,7 +3,7 @@
 // -- specs/00-PROJECT.md global constraint #2.
 
 import { and, eq } from "drizzle-orm";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { nanoid } from "nanoid";
 import { db, sqlite } from "../lib/db/client";
 import { listings, parts, vendors } from "../lib/db/schema";
@@ -12,6 +12,29 @@ import { priceToMinorUnits, ShopifyProductsResponseSchema, type ShopifyProduct }
 const USER_AGENT = "modbench-ingest/0.1 (+https://github.com/mqi-cs/modbench; contact: qasimimran291@gmail.com)";
 const RATE_LIMIT_MS = 2000;
 const PAGE_SIZE = 250;
+
+// Currency model -- specs/09-COMPETITIVE-CONTEXT.md, 02-phase-1-data-pipeline.md
+// "Currency model". Manually maintained fixture, no live API call ever,
+// not here and not at request time. Loaded once per ingest run.
+interface FxRates {
+  base: string;
+  asOf: string;
+  rates: Record<string, number>;
+}
+
+function loadFxRates(): FxRates {
+  const raw = JSON.parse(readFileSync("data/fixtures/fx-rates.json", "utf-8"));
+  if (raw.base !== "GBP") throw new Error(`fx-rates.json base must be GBP, got '${raw.base}'`);
+  return raw;
+}
+
+/** Native currency amount -> GBP-per-native-unit multiplier, from the fixture. */
+function fxRateFor(fx: FxRates, currency: string): number {
+  if (currency === fx.base) return 1;
+  const nativePerBase = fx.rates[currency];
+  if (!nativePerBase) throw new Error(`No fx rate for currency '${currency}' in fx-rates.json`);
+  return 1 / nativePerBase; // fx.rates.SGD is "SGD per 1 GBP", so GBP-per-SGD is the reciprocal
+}
 
 interface VendorConfig {
   key: string;
@@ -98,6 +121,9 @@ async function ingestVendor(
     return;
   }
 
+  const fx = loadFxRates();
+  const fxRate = fxRateFor(fx, vendorRow.expectedCurrency);
+
   const now = Date.now();
   let listingsUpserted = 0;
   let partsCreated = 0;
@@ -152,6 +178,9 @@ async function ingestVendor(
         partsCreated++;
       }
 
+      // Conversion happens once, here, at ingest -- never at display time.
+      const priceMinorBase = Math.round(priceMinor * fxRate);
+
       db.insert(listings)
         .values({
           id: nanoid(),
@@ -160,12 +189,23 @@ async function ingestVendor(
           sourceUrl,
           priceMinor,
           currency: vendorRow.expectedCurrency,
+          priceMinorBase,
+          fxRate,
+          fxRateDate: fx.asOf,
           inStock: variant.available ? 1 : 0,
           lastCheckedAt: now,
         })
         .onConflictDoUpdate({
           target: [listings.partId, listings.vendorId],
-          set: { priceMinor, inStock: variant.available ? 1 : 0, lastCheckedAt: now, sourceUrl },
+          set: {
+            priceMinor,
+            inStock: variant.available ? 1 : 0,
+            lastCheckedAt: now,
+            sourceUrl,
+            priceMinorBase,
+            fxRate,
+            fxRateDate: fx.asOf,
+          },
         })
         .run();
       listingsUpserted++;
