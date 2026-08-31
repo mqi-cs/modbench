@@ -1,0 +1,4060 @@
+[
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-green-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Green Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-black-mother-of-pearl-no-date",
+    "name": "Submariner Dial -  Black Mother of Pearl (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-enamel-black-date",
+    "name": "Submariner Dial - Enamel Black (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-enamel-black-no-date",
+    "name": "Submariner Dial - Enamel Black (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-black-mother-of-pearl-date",
+    "name": "Submariner Dial -  Black Mother of Pearl (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/gs-watch-case-39mm-ultra-thin-edition-nh34-ready",
+    "name": "GS 39mm — Ultra Thin NH34-Ready Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-gmt-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Black Chapter Ring - GMT 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-blue-chapter-ring-gmt-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Blue Chapter Ring - GMT 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-gmt-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Silver Chapter Ring - GMT 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bauhaus-dial-date-6h",
+    "name": "Bauhaus Dial (Date @ 6H)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bauhaus-dial-date-4h",
+    "name": "Bauhaus Dial (Date @ 4H)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bauhaus-dial-no-date",
+    "name": "Bauhaus Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-diver-38-green-ultra-thin-edition",
+    "name": "SKX013 Diver 38 Green — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-diver-38-black-ultra-thin-edition",
+    "name": "SKX013 Diver 38 Black — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-polished-yellow-gold",
+    "name": "Grand Seiko Dauphine Hands - Polished Yellow Gold",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-polished-black-second",
+    "name": "Grand Seiko Dauphine Hands - Polished Black Second",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-polished-black",
+    "name": "Grand Seiko Dauphine Hands - Polished Black",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/1908-watch-case-36mm-yellow-gold-ultra-thin-edition-nh34-ready",
+    "name": "1908 36mm Yellow Gold — Ultra Thin NH34-Ready Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/1908-watch-case-36mm-ultra-thin-edition-nh34-ready",
+    "name": "1908 36mm — Ultra Thin NH34-Ready Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bauhaus-watch-case-33mm-ultra-thin-edition",
+    "name": "Bauhaus 33mm — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-1016-dial-date",
+    "name": "Explorer 1016 Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-1016-dial-no-date",
+    "name": "Explorer 1016 Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-black-markers-ultra-thin-edition",
+    "name": "SKX013 Brushed Silver Chapter Ring - Black Markers — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-dweller-watch-case-36mm-ultra-thin-edition-titanium",
+    "name": "Seiko-Dweller 36mm — Ultra Thin Titanium Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/1908-sword-breguet-hands-polished-yellow-gold",
+    "name": "1908 Sword Breguet Hands - Polished Yellow Gold",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/1908-sword-breguet-hands-polished-silver",
+    "name": "1908 Sword Breguet Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/1908-dial-yellow-gold-indices-no-date",
+    "name": "1908 Dial - Yellow Gold Indices (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/1908-dial-silver-indices-no-date",
+    "name": "1908 Dial - Silver Indices (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/baton-ii-hands-polished-silver",
+    "name": "Baton II Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-black-markers-ii-ultra-thin-edition",
+    "name": "SKX013 Brushed Silver Chapter Ring - Black Markers II — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-black-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Silver Chapter Ring - Black Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seikonaut-watch-case-38mm-ultra-thin-edition-titanium",
+    "name": "Seikonaut 38mm — Ultra Thin Titanium Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seikonaut-watch-case-38mm-ultra-thin-edition",
+    "name": "Seikonaut 38mm — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sector-dial-pp5296-date",
+    "name": "Sector Dial – PP5296 (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sector-dial-lhc-i-no-date",
+    "name": "Sector Dial – LHC I (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sector-dial-pp5296-no-date",
+    "name": "Sector Dial – PP5296 (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pencil-hands-polished-blue",
+    "name": "Pencil Hands - Polished Blue",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/leaf-hands-polished-blue",
+    "name": "Leaf Hands - Polished Blue",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-white-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Black Chapter Ring - White Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh36-automatic-movement-day-date-4h-crown-black",
+    "name": "Seiko (TMI) NH36 Automatic Movement - Day Date @ 4H Crown (Black)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH36 Automatic Movement - Day Date @ 4H Crown (Black)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh36-automatic-movement-day-date-4h-crown-white",
+    "name": "Seiko (TMI) NH36 Automatic Movement - Day Date @ 4H Crown (White)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH36 Automatic Movement - Day Date @ 4H Crown (White)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/alpha-hands-blue-heated-steel",
+    "name": "Alpha Hands - Blue Heated Steel",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/lance-hands-blue-heated-steel",
+    "name": "Lance Hands - Blue Heated Steel",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/62gs-watch-case-36mm-ultra-thin-edition-nh34-ready",
+    "name": "62GS 36mm — Ultra Thin NH34-Ready Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pilot-watch-case-34mm-ultra-thin-edition",
+    "name": "Pilot 34mm — Ultra Thin NH34-Ready Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-ii-hands-polished-black",
+    "name": "Nautilus II Hands - Polished Black",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-ii-hands-polished-silver",
+    "name": "Nautilus II Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-arctic-white-dial-open-heart",
+    "name": "Nautilus Arctic White Dial (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-arctic-white-dial-gmt",
+    "name": "Nautilus Arctic White Dial (GMT)",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-arctic-white-dial-day-date",
+    "name": "Nautilus Arctic White Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-arctic-white-dial-date-6h",
+    "name": "Nautilus Arctic White Dial (Date @ 6H)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-arctic-white-dial-date",
+    "name": "Nautilus Arctic White Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-arctic-white-dial-no-date",
+    "name": "Nautilus Arctic White Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-iii-black",
+    "name": "NH Movement Rotor - Côtes de Genève III - Black",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-iii-blue",
+    "name": "NH Movement Rotor - Côtes de Genève III - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-iii-yellow-gold",
+    "name": "NH Movement Rotor - Côtes de Genève III - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/dauphine-hands-polished-black",
+    "name": "Dauphine Hands - Polished Black",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/dauphine-hands-polished-yellow-gold",
+    "name": "Dauphine Hands - Polished Yellow Gold",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/dauphine-hands-polished-silver",
+    "name": "Dauphine Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/baton-hands-polished-black-president-edition",
+    "name": "Baton Hands - Polished Black (President Edition)",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/baton-hands-polished-silver-blue-president-edition",
+    "name": "Baton Hands - Polished Silver & Blue (President Edition)",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/baton-hands-polished-yellow-gold-president-edition",
+    "name": "Baton Hands - Polished Yellow Gold (President Edition)",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/baton-hands-polished-silver-president-edition",
+    "name": "Baton Hands - Polished Silver (President Edition)",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-deep-blue-sunburst-dial-open-heart",
+    "name": "Nautilus Deep Blue Sunburst Dial (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-deep-blue-sunburst-dial-gmt",
+    "name": "Nautilus Deep Blue Sunburst Dial (GMT)",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-deep-blue-sunburst-dial-day-date",
+    "name": "Nautilus Deep Blue Sunburst Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-deep-blue-sunburst-dial-date-6h",
+    "name": "Nautilus Deep Blue Sunburst Dial (Date @ 6H)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-deep-blue-sunburst-dial-date",
+    "name": "Nautilus Deep Blue Sunburst Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-deep-blue-sunburst-dial-no-date",
+    "name": "Nautilus Deep Blue Sunburst Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-ice-blue-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Ice Blue Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-sandblasted-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Sandblasted Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-yellow-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Yellow Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-orange-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Orange Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-steel-bezel-insert-slope-pulsometer-black-markers",
+    "name": "SKX013 Steel Bezel Insert (Slope) - Pulsometer - Black Markers",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-rose-gold",
+    "name": "NH Movement Bridge - Côtes de Genève - Circular - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-blue",
+    "name": "NH Movement Bridge - Côtes de Genève - Circular - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-blue",
+    "name": "NH Movement Rotor - Hemicude - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-gunmetal",
+    "name": "NH Movement Rotor - Hemicude - Gunmetal",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-rose-gold",
+    "name": "NH Movement Rotor - Hemicude - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-yellow-gold",
+    "name": "NH Movement Rotor - Hemicude - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-silver",
+    "name": "NH Movement Rotor - Hemicude - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-gunmetal",
+    "name": "NH Movement Bridge - Côtes de Genève - Circular - Gunmetal",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-yellow-gold",
+    "name": "NH Movement Bridge - Côtes de Genève - Circular - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/vintage-enamel-biege-dial-date",
+    "name": "Vintage Enamel Biege Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/vintage-enamel-biege-dial-no-date",
+    "name": "Vintage Enamel Biege Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-watch-case-36mm-ultra-thin-titanium-polished-edition",
+    "name": "Explorer 36mm Titanium Polished — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/vintage-enamel-biege-dial-gmt",
+    "name": "Vintage Enamel Biege Dial (GMT)",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-watch-case-36mm-ultra-thin-titanium-sandblasted-edition",
+    "name": "Explorer 36mm Titanium Sandblasted — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/vintage-enamel-biege-dial-open-heart",
+    "name": "Vintage Enamel Biege Dial (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/vintage-enamel-biege-dial-day-date",
+    "name": "Vintage Enamel Biege Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Black Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Silver Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Black Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-white-markers-ultra-thin-edition",
+    "name": "SKX013 Brushed Black Chapter Ring - White Markers — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-black-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Mirror Polished Black Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-blue-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Blue Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-orange-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Orange Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-ice-blue-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Ice Blue Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-green-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Green Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-sky-blue-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Sky Blue Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-red-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Red Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-purple-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Purple Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Silver Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-purple-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Purple Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-blue-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Blue Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-yellow-chapter-ring-gmt-ii-24h-numerals-ultra-thin-edition",
+    "name": "SKX013 Brushed Yellow Chapter Ring - GMT II 24H Numerals — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-red-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Brushed Red Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-gmt-dial-vintage-enamel-biege-for-nh34",
+    "name": "Grand Seiko GMT Dial - Vintage Enamel Biege [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-v4-no-date",
+    "name": "Stardust Dial v4 (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-watch-case-36mm-ultra-thin-dlc-black-edition",
+    "name": "Explorer 36mm DLC Black — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-gmt-dial-stardust-for-nh34",
+    "name": "Grand Seiko GMT Dial - Stardust [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-v4-gmt-for-nh34",
+    "name": "Stardust Dial v4 (GMT) [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-v4-date",
+    "name": "Stardust Dial v4 (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-gmt-dial-sunburst-sky-blue-for-nh34",
+    "name": "Grand Seiko GMT Dial - Sunburst Sky Blue [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/troposphere-pilot-dial-v2-date-6h",
+    "name": "Troposphere Pilot Dial v2 (Date @ 6H)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/troposphere-pilot-dial-v2-date-4h",
+    "name": "Troposphere Pilot Dial v2 (Date @ 4H)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/troposphere-pilot-dial-v2-no-date",
+    "name": "Troposphere Pilot Dial v2 (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautical-explorer-dial-v2-date",
+    "name": "Nautical Explorer Dial v2 (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautical-explorer-dial-v2-no-date",
+    "name": "Nautical Explorer Dial v2 (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh35-automatic-movement-date-6h-white",
+    "name": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh35-automatic-movement-date-6h-black",
+    "name": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (Black)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH35 Automatic Movement - Date @ 6H (Black)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-gmt-24h-pepsi-blue-red",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - GMT 24H - Pepsi Blue/Red",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-gold-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Mirror Polished Gold Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-silver-chapter-ring-ultra-thin-edition",
+    "name": "SKX013 Mirror Polished Silver Chapter Ring — Ultra Thin",
+    "category": "chapter_ring",
+    "family": "lucius-ultra-thin-chapter-ring",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-yacht-master-silver",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - Yacht Master Silver",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-submariner-green",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - Submariner Green",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-submariner-blue",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - Submariner Blue",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-submariner-black",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - Submariner Black",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-yacht-master-black",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - Yacht Master Black",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-gmt-24h-sprite-black-green",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - GMT 24H - Sprite Black/Green",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-gmt-24h-root-beer-black-brown",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - GMT 24H - Root Beer Black/Brown",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-gmt-24h-coca-cola-black-red",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - GMT 24H - Coca-Cola Black/Red",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-gmt-24h-batman-black-blue",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - GMT 24H - Batman Black/Blue",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-watch-case-38mm-dlc-black-edition-nh34-ready",
+    "name": "SKX013 Watch Case - 38mm (DLC BLACK EDITION) [NH34-Ready]",
+    "category": "case",
+    "family": "skx013-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-watch-case-38mm-nh34-ready",
+    "name": "SKX013 Watch Case - 38mm [NH34-Ready]",
+    "category": "case",
+    "family": "skx013-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-blue",
+    "name": "NH Movement Rotor - Côtes de Genève II - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-gunmetal",
+    "name": "NH Movement Rotor - Côtes de Genève II - Gunmetal",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-rose-gold",
+    "name": "NH Movement Rotor - Côtes de Genève II - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-yellow-gold",
+    "name": "NH Movement Rotor - Côtes de Genève II - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-silver",
+    "name": "NH Movement Rotor - Côtes de Genève II - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-watch-case-36mm-ultra-thin-edition",
+    "name": "Explorer 36mm — Ultra Thin Watch Case",
+    "category": "case",
+    "family": "lucius-ultra-thin-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-oak-dial-ice-blue-open-heart",
+    "name": "The Great Oak Dial - Ice Blue (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-oak-dial-ice-blue-no-date",
+    "name": "The Great Oak Dial - Ice Blue (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-oak-dial-ice-blue-day-date",
+    "name": "The Great Oak Dial - Ice Blue (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-oak-dial-ice-blue-date",
+    "name": "The Great Oak Dial - Ice Blue (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/gmt-hands-gs-arrow-for-nh34",
+    "name": "GMT Hands - GS Arrow [For NH34]",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {
+      "gmt": true
+    },
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/GMT -- GMT-capable hand set"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-gmt-dial-snowflake-for-nh34",
+    "name": "Grand Seiko GMT Dial - Snowflake [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-sunburst",
+    "name": "NH Movement Bridge - Côtes de Genève - Sunburst - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-spiral-sunburst",
+    "name": "NH Movement Bridge - Côtes de Genève - Spiral Sunburst - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-silver",
+    "name": "NH Movement Bridge - Côtes de Genève - Circular - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-gunmetal",
+    "name": "NH Movement Rotor - The Great Fathom - Gunmetal",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-rose-gold",
+    "name": "NH Movement Rotor - The Great Fathom - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-yellow-gold",
+    "name": "NH Movement Rotor - The Great Fathom - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-silver",
+    "name": "NH Movement Rotor - The Great Fathom - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-blue",
+    "name": "NH Movement Rotor - The Great Fathom - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-gmt-dial-stardust-for-nh34",
+    "name": "Submariner GMT Dial - Stardust [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-ice-blue-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Ice Blue Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-ice-blue-chapter-ring-black-numerals",
+    "name": "SKX013 Brushed Ice Blue Chapter Ring - Black Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-ice-blue-chapter-ring-black-markers",
+    "name": "SKX013 Brushed Ice Blue Chapter Ring - Black Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-ice-blue-chapter-ring",
+    "name": "SKX013 Brushed Ice Blue Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx-sapphire-caseback-silver",
+    "name": "SKX Sapphire Caseback - Silver",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "tags fits-skx013/skx007/7s26-0020/0030 -- caseback thread shared across SKX007/013 shells per vendor tags, not independently confirmed"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx-slim-solid-caseback-silver-mirror-polished",
+    "name": "SKX Slim Solid Caseback - Silver Mirror Polished",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "tags fits-skx013/skx007/7s26-0020/0030 -- caseback thread shared across SKX007/013 shells per vendor tags, not independently confirmed"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx-solid-caseback-silver-mirror-polished",
+    "name": "SKX Solid Caseback - Silver Mirror Polished",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "tags fits-skx013/skx007/7s26-0020/0030 -- caseback thread shared across SKX007/013 shells per vendor tags, not independently confirmed"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-submariner-watch-case-36mm-nh34-ready",
+    "name": "SKX013 Submariner Watch Case - 36mm [NH34-Ready]",
+    "category": "case",
+    "family": "skx013-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-submariner-watch-case-36mm-dlc-black-edition-nh34-ready",
+    "name": "SKX013 Submariner Watch Case - 36mm (DLC BLACK EDITION) [NH34-Ready]",
+    "category": "case",
+    "family": "skx013-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-gs-diver-watch-case-36mm-dlc-black-edition-nh34-ready",
+    "name": "SKX013 GS Diver Watch Case - 36mm (DLC BLACK EDITION) [NH34-Ready]",
+    "category": "case",
+    "family": "skx013-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-gs-diver-watch-case-36mm-nh34-ready",
+    "name": "SKX013 GS Diver Watch Case - 36mm [NH34-Ready]",
+    "category": "case",
+    "family": "skx013-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-double-domed-sapphire-crystal-micro-bevel",
+    "name": "SKX013 Double Domed Sapphire Crystal - Micro Bevel",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-oak-gmt-dial-ice-blue-for-nh34",
+    "name": "The Great Oak Dial - Ice Blue (GMT) [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-gmt-dial-enamel-white-for-nh34",
+    "name": "Submariner GMT Dial - Enamel White [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-gmt-dial-enamel-black-for-nh34",
+    "name": "Submariner GMT Dial - Enamel Black [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-aluminium-bezel-insert-slope-gmt-24h-sprite-black-green",
+    "name": "SKX013 Aluminium Bezel Insert (Slope) - GMT 24H - Sprite Black/Green",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-aluminium-bezel-insert-slope-gmt-24h-root-beer-black-brown",
+    "name": "SKX013 Aluminium Bezel Insert (Slope) - GMT 24H - Root Beer Black/Brown",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-aluminium-bezel-insert-slope-gmt-24h-pepsi-blue-red",
+    "name": "SKX013 Aluminium Bezel Insert (Slope) - GMT 24H - Pepsi Blue/Red",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-aluminium-bezel-insert-slope-gmt-24h-coca-cola-black-red",
+    "name": "SKX013 Aluminium Bezel Insert (Slope) - GMT 24H - Coca-Cola Black/Red",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-aluminium-bezel-insert-slope-gmt-24h-batman-black-blue",
+    "name": "SKX013 Aluminium Bezel Insert (Slope) - GMT 24H - Batman Black/Blue",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-oak-hands-polished-silver",
+    "name": "The Great Oak Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/teardrop-needle-hands-polished-blue",
+    "name": "Teardrop Needle Hands - Polished Blue",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/teardrop-needle-hands-polished-blue-luminous",
+    "name": "Teardrop Needle Hands - Polished Blue - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/teardrop-needle-hands-polished-silver",
+    "name": "Teardrop Needle Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/teardrop-needle-hands-polished-silver-luminous",
+    "name": "Teardrop Needle Hands - Polished Silver - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-gmt-dial-snowflake-for-nh34",
+    "name": "Submariner GMT Dial - Snowflake [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/deep-diver-gmt-dial-for-nh34",
+    "name": "Deep Diver GMT Dial [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/gmt-hands-snowflake-for-nh34",
+    "name": "GMT Hands - Snowflake [For NH34]",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {
+      "gmt": true
+    },
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/GMT -- GMT-capable hand set"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/gmt-hands-explorer-for-nh34",
+    "name": "GMT Hands - Explorer [For NH34]",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {
+      "gmt": true
+    },
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/GMT -- GMT-capable hand set"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-yellow-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Yellow Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-red-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Red Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-purple-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Purple Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-orange-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Orange Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-green-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Green Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-blue-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Blue Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Black Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-gmt-24h-numerals",
+    "name": "SKX013 Brushed Silver Chapter Ring - GMT 24H Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/meteorite-gmt-dial-for-nh34",
+    "name": "Meteorite GMT Dial [For NH34]",
+    "category": "dial",
+    "family": "nh34-gmt-dial",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit 'GMT - NH34'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh34-gmt-hands-master-arrow",
+    "name": "GMT Hands - Master Arrow [For NH34]",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {
+      "gmt": true
+    },
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/GMT -- GMT-capable hand set"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-blue",
+    "name": "NH Movement Rotor - GS 9SA5 - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-blue",
+    "name": "NH Movement Rotor - FPJ Diamond - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-blue",
+    "name": "NH Movement Rotor - Côtes de Genève - Blue",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-gunmetal",
+    "name": "NH Movement Rotor - GS 9SA5 - Gunmetal",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-gunmetal",
+    "name": "NH Movement Rotor - FPJ Diamond - Gunmetal",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-gunmetal",
+    "name": "NH Movement Rotor - Côtes de Genève - Gunmetal",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-rose-gold",
+    "name": "NH Movement Rotor - GS 9SA5 - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-rose-gold",
+    "name": "NH Movement Rotor - FPJ Diamond - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-rose-gold",
+    "name": "NH Movement Rotor - Côtes de Genève - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-yellow-gold",
+    "name": "NH Movement Rotor - GS 9SA5 - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-yellow-gold",
+    "name": "NH Movement Rotor - FPJ Diamond - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-yellow-gold",
+    "name": "NH Movement Rotor - Côtes de Genève - Yellow Gold",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-silver",
+    "name": "NH Movement Rotor - FPJ Diamond - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-silver",
+    "name": "NH Movement Rotor - GS 9SA5 - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-silver",
+    "name": "NH Movement Rotor - Côtes de Genève - Silver",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh34-automatic-movement-gmt-date-white",
+    "name": "Seiko (TMI) NH34 Automatic Movement - GMT Date (White)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH34 Automatic Movement - GMT Date (White)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sword-hands-polished-silver",
+    "name": "Sword Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sword-hands-old-radium-polished-silver",
+    "name": "Sword Hands - Old Radium - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sterile-turquoise-enamel-dial-day-date",
+    "name": "Sterile Turquoise Enamel Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sterile-turquoise-enamel-dial-no-date",
+    "name": "Sterile Turquoise Enamel Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sterile-turquoise-enamel-dial-date",
+    "name": "Sterile Turquoise Enamel Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-turquoise-dial-day-date",
+    "name": "Nautilus Turquoise Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-turquoise-dial-no-date",
+    "name": "Nautilus Turquoise Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/broad-arrow-hands-old-radium-polished-silver",
+    "name": "Broad Arrow Hands - Old Radium - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-hands-old-radium-polished-silver",
+    "name": "Nautilus Hands - Old Radium - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-turquoise-dial-date",
+    "name": "Nautilus Turquoise Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-nh-gray-dial-holding-spacer",
+    "name": "Seiko NH Gray Dial Holding Spacer",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko NH Gray Dial Holding Spacer'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh72-automatic-movement-skeleton-ruthenium-grey",
+    "name": "Seiko (TMI) NH72 Automatic Movement - Skeleton Ruthenium Grey",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH72 Automatic Movement - Skeleton Ruthenium Grey'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/hemicube-dial-open-heart",
+    "name": "Hemicube Dial (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/hemicube-dial-no-date",
+    "name": "Hemicube Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/lapis-lazuli-gemstone-dial-open-heart",
+    "name": "Lapis Lazuli Gemstone Dial (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/lapis-lazuli-gemstone-dial-no-date",
+    "name": "Lapis Lazuli Gemstone Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shirakaba-white-birch-tree-dial-open-heart",
+    "name": "Shirakaba White Birch Tree Dial (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shirakaba-white-birch-tree-dial-day-date",
+    "name": "Shirakaba White Birch Tree Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shirakaba-white-birch-tree-dial-date",
+    "name": "Shirakaba White Birch Tree Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shirakaba-white-birch-tree-dial-no-date",
+    "name": "Shirakaba White Birch Tree Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/turquoise-crystal-dial-open-heart",
+    "name": "Turquoise Crystal Dial (Open Heart)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/turquoise-crystal-dial-day-date",
+    "name": "Turquoise Crystal Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/turquoise-crystal-dial-date",
+    "name": "Turquoise Crystal Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/turquoise-crystal-dial-no-date",
+    "name": "Turquoise Crystal Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-hands-polished-black",
+    "name": "Nautilus Hands - Polished Black",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/terra-explorer-dial-v2-enamel-white-no-markers",
+    "name": "Terra Explorer Dial v2 - Enamel White (No Markers)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/terra-explorer-dial-v2-enamel-white",
+    "name": "Terra Explorer Dial v2 - Enamel White",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/terra-explorer-dial-v2-enamel-black-no-markers",
+    "name": "Terra Explorer Dial v2 - Enamel Black (No Markers)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/terra-explorer-dial-v2-enamel-black",
+    "name": "Terra Explorer Dial v2 - Enamel Black",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-polished-red-luminous",
+    "name": "Grand Seiko Dauphine Hands - Polished Red - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-polished-blue-luminous",
+    "name": "Grand Seiko Dauphine Hands - Polished Blue - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/velvet-black-dial-no-date",
+    "name": "Velvet Black Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh35-automatic-movement-date-white",
+    "name": "Seiko (TMI) NH35 Automatic Movement - Date (White)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH35 Automatic Movement - Date (White)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh35-automatic-movement-date-black",
+    "name": "Seiko (TMI) NH35 Automatic Movement - Date (Black)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH35 Automatic Movement - Date (Black)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/snowflake-dial-date",
+    "name": "Snowflake Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/snowflake-dial-day-date",
+    "name": "Snowflake Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/snowflake-dial-no-date",
+    "name": "Snowflake Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/snowflake-hands-v2-bgw9-polished-gold-improved",
+    "name": "Snowflake Hands v2 - BGW9 - Polished Yellow Gold *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-silver-chapter-ring-black-numerals",
+    "name": "SKX013 Mirror Polished Silver Chapter Ring - Black Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-silver-chapter-ring-black-markers",
+    "name": "SKX013 Mirror Polished Silver Chapter Ring - Black Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-silver-chapter-ring-black-red-markers",
+    "name": "SKX013 Mirror Polished Silver Chapter Ring - Black & Red Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-black-markers",
+    "name": "SKX013 Brushed Silver Chapter Ring - Black Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-black-numerals",
+    "name": "SKX013 Brushed Silver Chapter Ring - Black Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring-black-red-markers",
+    "name": "SKX013 Brushed Silver Chapter Ring - Black & Red Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-white-numerals",
+    "name": "SKX013 Brushed Black Chapter Ring - White Numerals",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-white-markers",
+    "name": "SKX013 Brushed Black Chapter Ring - White Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring-white-red-markers",
+    "name": "SKX013 Brushed Black Chapter Ring - White & Red Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh36-automatic-movement-day-date-black",
+    "name": "Seiko (TMI) NH36 Automatic Movement - Day Date (Black)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH36 Automatic Movement - Day Date (Black)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-mother-of-pearl-edition-day-date",
+    "name": "Submariner Dial - Mother of Pearl Edition (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-mother-of-pearl-edition-date",
+    "name": "Submariner Dial - Mother of Pearl Edition (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-mother-of-pearl-edition-no-date",
+    "name": "Submariner Dial - Mother of Pearl Edition (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/second-hand-cap-polished-black",
+    "name": "Second Hand Cap - Polished Black",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/second-hand-cap-brushed-silver",
+    "name": "Second Hand Cap - Brushed Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/nautilus-hands-polished-silver",
+    "name": "Nautilus Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mercedes-hands-v2-skeleton-polished-silver",
+    "name": "Mercedes Hands v2 - Skeleton - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mercedes-hands-v2-skeleton-polished-black",
+    "name": "Mercedes Hands v2 - Skeleton - Polished Black",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mercedes-hands-v2-bgw9-polished-gold-improved",
+    "name": "Mercedes Hands v2 - BGW9 - Polished Yellow Gold *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-brushed-top-silver-luminous",
+    "name": "Grand Seiko Dauphine Hands - Brushed Top Silver - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mercedes-hands-v2-bgw9-polished-black-improved",
+    "name": "Mercedes Hands v2 - BGW9 - Polished Black *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-brushed-top-silver-red-luminous",
+    "name": "Grand Seiko Dauphine Hands - Brushed Top Silver & Red - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-brushed-top-silver-blue-luminous",
+    "name": "Grand Seiko Dauphine Hands - Brushed Top Silver & Blue - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/baton-hands-bgw9-polished-gold",
+    "name": "Baton Hands - BGW9 - Polished Yellow Gold",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/baton-hands-bgw9-polished-silver",
+    "name": "Baton Hands - BGW9 - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/diver-watch-case-38mm-skx013-submariner-edition-fits-nh-gmt-movements-eta2893-sw330",
+    "name": "Diver Watch Case - 38mm - SKX013/Submariner Edition (Fits NH & GMT Movements)",
+    "category": "case",
+    "family": "skx013-case",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/blank-brass-dial",
+    "name": "Blank Brass Dial - Sunburst brushed",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-snowflake-edition-no-date",
+    "name": "Submariner Dial - Snowflake Edition (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-snowflake-edition-day-date",
+    "name": "Submariner Dial - Snowflake Edition (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-snowflake-edition-date",
+    "name": "Submariner Dial - Snowflake Edition (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/marine-master-hands-bgw9-polished-silver-red",
+    "name": "Marine Master Hands - BGW9 - Polished Silver Red",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/marine-master-hands-bgw9-polished-silver",
+    "name": "Marine Master Hands - BGW9 - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/breguet-hands-polished-blue",
+    "name": "Breguet Hands - Polished Blue",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh38-automatic-movement-open-heart",
+    "name": "Seiko (TMI) NH38 Automatic Movement - Open Heart",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH38 Automatic Movement - Open Heart'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-brushed-top-silver",
+    "name": "Grand Seiko Dauphine Hands - Brushed Top Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-brushed-top-silver-red",
+    "name": "Grand Seiko Dauphine Hands - Brushed Top Silver & Red",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-brushed-top-silver-blue",
+    "name": "Grand Seiko Dauphine Hands - Brushed Top Silver & Blue",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-nh-automatic-movement-stem",
+    "name": "Seiko NH Automatic Movement Stem",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko NH Automatic Movement Stem'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-v2-no-date",
+    "name": "Stardust Dial v2 (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-v2-day-date",
+    "name": "Stardust Dial v2 (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-v2-date",
+    "name": "Stardust Dial v2 (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pilot-hands-bgw9-polished-silver-improved",
+    "name": "Pilot Hands - BGW9 - Polished Silver *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pilot-hands-bgw9-polished-black-improved",
+    "name": "Pilot Hands - BGW9 - Polished Black *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pilot-hands-bgw9-polished-blue-improved",
+    "name": "Pilot Hands - BGW9 - Polished Blue *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-flat-sapphire-crystal-high-top-big-bevel",
+    "name": "SKX013 Flat Sapphire Crystal - High Top Big Bevel",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-pepsi-dual-time-swiss-made",
+    "name": "SKX013 Ceramic Bezel Insert (Slope) - Pepsi Dual Time *SWISS MADE*",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-vintage-date",
+    "name": "Submariner Dial - Vintage (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/submariner-dial-vintage-no-date",
+    "name": "Submariner Dial - Vintage (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/muonionalusta-meteorite-dial-day-date",
+    "name": "Muonionalusta Meteorite Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/muonionalusta-meteorite-dial-no-date",
+    "name": "Muonionalusta Meteorite Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mercedes-hands-v2-old-radium-polished-silver-improved",
+    "name": "Mercedes Hands v2 - Old Radium - Polished Silver *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-dial-pink-swarovski-edition-day-date",
+    "name": "Mother of Pearl Dial - Pink / Swarovski Edition (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-dial-pink-swarovski-edition-no-date",
+    "name": "Mother of Pearl Dial - Pink / Swarovski Edition (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/muonionalusta-meteorite-dial-date",
+    "name": "Muonionalusta Meteorite Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-dial-pink-swarovski-edition-date",
+    "name": "Mother of Pearl Dial - Pink / Swarovski Edition (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-dial-natural-swarovski-edition-day-date",
+    "name": "Mother of Pearl Dial - Natural / Swarovski Edition (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-dial-natural-swarovski-edition-no-date",
+    "name": "Mother of Pearl Dial - Natural / Swarovski Edition (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-dial-natural-swarovski-edition-date",
+    "name": "Mother of Pearl Dial - Natural / Swarovski Edition (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bitcoin-dial-vintage-black",
+    "name": "Bitcoin Dial - Vintage Black",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bitcoin-dial-vintage-gold",
+    "name": "Bitcoin Dial - Vintage Gold",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bitcoin-dial-24k-gold",
+    "name": "Bitcoin Dial - 24k Gold",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-srpd-lumibrite-hands-rose-gold",
+    "name": "SEIKO SRPD Lumibrite Hands - Rose Gold",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-srpd-lumibrite-hands-yellow-gold-v2",
+    "name": "SEIKO SRPD Lumibrite Hands - Yellow Gold v2",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srpd-dial-orange",
+    "name": "SEIKO 5 Sports SRPD Dial - Orange",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srpd-dial-green-gold",
+    "name": "SEIKO 5 Sports SRPD Dial - Green Gold",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh36-automatic-movement-day-date-white",
+    "name": "Seiko (TMI) NH36 Automatic Movement - Day Date (White)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit 'Seiko (TMI) NH36 Automatic Movement - Day Date (White)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pitch-black-enamel-dial-day-date",
+    "name": "Pitch Black Enamel Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pitch-black-enamel-dial-no-date",
+    "name": "Pitch Black Enamel Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pitch-black-enamel-dial-date",
+    "name": "Pitch Black Enamel Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srpd-dial-pine-green",
+    "name": "SEIKO 5 Sports SRPD Dial - Pine Green",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srpd-dial-black-gold",
+    "name": "SEIKO 5 Sports SRPD Dial - Black Gold",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-srpd-lumibrite-hands-yellow-gold",
+    "name": "SEIKO SRPD Lumibrite Hands - Yellow Gold",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-lumibrite-polished-silver-pencil-hands",
+    "name": "SEIKO Lumibrite Polished Silver Pencil Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srpd-dial-black-silver",
+    "name": "SEIKO 5 Sports SRPD Dial - Black Silver",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-snzh55-sunburst-dial",
+    "name": "SEIKO SNZH55 Sunburst Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-snzh53-sunburst-dial",
+    "name": "SEIKO SNZH53 Sunburst Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx009-diver-dial",
+    "name": "SEIKO SKX009 Diver Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sterile-white-enamel-dial-no-date",
+    "name": "Sterile White Enamel Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/oil-painted-the-great-wave-off-kanagawa-dial-no-date",
+    "name": "[Oil Painted] The Great Wave off Kanagawa Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sterile-white-enamel-dial-day-date",
+    "name": "Sterile White Enamel Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/sterile-white-enamel-dial-date",
+    "name": "Sterile White Enamel Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/luminous-the-starry-night-dial-no-date",
+    "name": "Luminous The Starry Night Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/luminous-the-starry-night-dial-day-date",
+    "name": "Luminous The Starry Night Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mercedes-hands-v2-polished-silver",
+    "name": "Mercedes Hands v2 - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/luminous-the-starry-night-dial-date",
+    "name": "Luminous The Starry Night Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/snowflake-hands-v2-polished-silver",
+    "name": "Snowflake Hands v2 - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx007-lumibrite-hands",
+    "name": "SEIKO SKX007 Lumibrite Hands - Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx013-lumibrite-hands",
+    "name": "SEIKO SKX013 Lumibrite Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-lumibrite-polished-silver-sword-hands",
+    "name": "SEIKO Lumibrite Polished Silver Sword Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-bronze-medallion-diver-dial-gold-edition-day-date",
+    "name": "The Bronze Medallion Diver Dial - Gold Edition (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-bronze-medallion-diver-dial-gold-edition-date",
+    "name": "The Bronze Medallion Diver Dial - Gold Edition (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-bronze-medallion-diver-dial-gold-edition-no-date",
+    "name": "The Bronze Medallion Diver Dial - Gold Edition (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/grand-seiko-dauphine-hands-polished-silver-luminous",
+    "name": "Grand Seiko Dauphine Hands - Polished Silver - Luminous",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-sunset-day-date",
+    "name": "Tribute to Philippines Seafarers Dial - Sunset (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-sunset-date",
+    "name": "Tribute to Philippines Seafarers Dial - Sunset (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-sunset-no-date",
+    "name": "Tribute to Philippines Seafarers Dial - Sunset (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-day-day-date",
+    "name": "Tribute to Philippines Seafarers Dial - Day (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-day-date",
+    "name": "Tribute to Philippines Seafarers Dial - Day (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-day-no-date",
+    "name": "Tribute to Philippines Seafarers Dial - Day (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-fathom-dial-save-the-ocean",
+    "name": "The Great Fathom Dial - Save The Ocean",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-fathom-dial-blue",
+    "name": "The Great Fathom Dial - Blue",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-snkk87-silver-sunburst-dial",
+    "name": "SEIKO SNKK87 Sunburst Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-snkl15-silver-pinstriped-dial",
+    "name": "SEIKO SNKL15 Pinstriped Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-snkl23-black-pinstriped-dial",
+    "name": "SEIKO SNKL23 Pinstriped Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx013-diver-dial",
+    "name": "SEIKO SKX013 Diver Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-flat-sapphire-crystal",
+    "name": "SKX013 Flat Sapphire Crystal",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-fathom-dial-black",
+    "name": "The Great Fathom Dial - Black",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-bronze-medallion-diver-dial-no-date",
+    "name": "The Bronze Medallion Diver Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-bronze-medallion-diver-dial-day-date",
+    "name": "The Bronze Medallion Diver Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-bronze-medallion-diver-dial-date",
+    "name": "The Bronze Medallion Diver Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-no-date",
+    "name": "Stardust Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-day-date",
+    "name": "Stardust Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/stardust-dial-date",
+    "name": "Stardust Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-divers-dial-day-date",
+    "name": "Mother of Pearl Diver's Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-divers-dial-date",
+    "name": "Mother of Pearl Diver's Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/mother-of-pearl-divers-dial-no-date",
+    "name": "Mother of Pearl Diver's Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-fathom-hands",
+    "name": "The Great Fathom Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/fine-wind-clear-morning-dial-day-date",
+    "name": "Fine Wind, Clear Morning Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/luminous-bgw9-the-great-wave-off-kanagawa-dial-day-date",
+    "name": "Luminous The Great Wave off Kanagawa Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/luminous-bgw9-the-great-wave-off-kanagawa-dial-no-date",
+    "name": "Luminous The Great Wave off Kanagawa Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/luminous-bgw9-the-great-wave-off-kanagawa-dial-date",
+    "name": "Luminous The Great Wave off Kanagawa Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-gold-chapter-ring",
+    "name": "SKX013 Mirror Polished Gold Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-gold-chapter-ring",
+    "name": "SKX013 Brushed Gold Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-bgw9-lumed-steel-bezel-insert-red-skx",
+    "name": "SKX013 Steel Bezel Insert (Flat) - BGW9 - Red SKX",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-bgw9-lumed-steel-bezel-insert-black-skx",
+    "name": "SKX013 Steel Bezel Insert (Flat) - BGW9 - Black SKX",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-bgw9-lumed-steel-bezel-insert-red-submariner",
+    "name": "SKX013 Steel Bezel Insert (Flat) - BGW9 - Red Submariner",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-bgw9-lumed-steel-bezel-insert-black-submariner",
+    "name": "SKX013 Steel Bezel Insert (Flat) - BGW9 - Black Submariner",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-bgw9-lumed-sapphire-bezel-insert-black-dual-time",
+    "name": "SKX013 Lumed Sapphire Bezel Insert (Flat) - BGW9 - Black Dual Time",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-bgw9-lumed-sapphire-bezel-insert-black-submariner",
+    "name": "SKX013 Lumed Sapphire Bezel Insert (Flat) - BGW9 - Black Submariner",
+    "category": "bezel_insert",
+    "family": "skx013-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/polished-red-grand-seiko-dauphine-hands",
+    "name": "Grand Seiko Dauphine Hands - Polished Red Second",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/polished-blue-grand-seiko-dauphine-hands",
+    "name": "Grand Seiko Dauphine Hands - Polished Blue Second",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/polished-silver-grand-seiko-dauphine-hands",
+    "name": "Grand Seiko Dauphine Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/super-luminova-bgw9-seigaiha-dial-day-date",
+    "name": "Seigaiha Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/super-luminova-bgw9-seigaiha-dial-no-date",
+    "name": "Seigaiha Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/super-luminova-bgw9-seigaiha-dial-date",
+    "name": "Seigaiha Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pilot-hands-bgw9-polished-red-improved",
+    "name": "Pilot Hands - BGW9 - Polished Red *IMPROVED*",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/fine-wind-clear-morning-dial-date",
+    "name": "Fine Wind, Clear Morning Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/fine-wind-clear-morning-dial-no-date",
+    "name": "Fine Wind, Clear Morning Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/hand-painted-of-the-great-wave-off-kanagawa-dial-date",
+    "name": "[Hand Painted] The Great Wave off Kanagawa Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-wave-off-kanagawa-dial-day-date",
+    "name": "The Great Wave off Kanagawa Dial (Day Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-wave-off-kanagawa-dial-date",
+    "name": "The Great Wave off Kanagawa Dial (Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-great-wave-off-kanagawa-dial-no-date",
+    "name": "The Great Wave off Kanagawa Dial (No Date)",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-black-chapter-ring",
+    "name": "SKX013 Mirror Polished Black Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-silver-chapter-ring",
+    "name": "SKX013 Brushed Silver Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-black-chapter-ring",
+    "name": "SKX013 Brushed Black Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mirror-polished-silver-chapter-ring",
+    "name": "SKX013 Mirror Polished Silver Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/genuine-seiko-skx007-diver-dial",
+    "name": "SEIKO SKX007 Diver Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-lumibrite-polished-silver-dauphine-hands",
+    "name": "SEIKO Lumibrite Polished Silver Dauphine Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/pilot-hands-bgw9-polished-blue",
+    "name": "Pilot Hands - BGW9 - Polished Blue",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/broad-arrow-hands-bgw9-polished-silver",
+    "name": "Broad Arrow Hands - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/snowflake-hands-bgw9-polished-silver",
+    "name": "Snowflake Hands - BGW9 - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/bgw9-polished-silver-mercedes-hands",
+    "name": "Mercedes Hands - BGW9 - Polished Silver",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-deep-diver-bgw9-matt-black-diver-dial",
+    "name": "Deep Diver Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-nautical-explorer-bgw9-grainy-semi-glossy-black-diver-dial",
+    "name": "Nautical Explorer Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-troposphere-pilot-bgw9-matt-black-pilot-dial",
+    "name": "Troposphere Pilot Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/the-terra-explorer-bgw9-glossy-black-enamel-dial",
+    "name": "Terra Explorer Dial",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  }
+]

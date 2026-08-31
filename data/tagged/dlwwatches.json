@@ -1,0 +1,4442 @@
+[
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-coke",
+    "name": "Ceramic Insert - 007 GMT COKE",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-blueberry",
+    "name": "Ceramic Insert - 007 GMT Blueberry",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/nh34-gmt-movement-white",
+    "name": "NH34 GMT Movement - White",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH34/35/36 movement"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-reverse-sub-sterile-no-date",
+    "name": "Dial - Reverse Sub - Sterile - No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-reverse-sub-no-date",
+    "name": "Dial - Reverse Sub - No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-cali-mk2-sterile-no-date",
+    "name": "Dial - Cali MK2 - Sterile - No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-cali-mk2-no-date",
+    "name": "Dial - Cali MK2 - No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-cali-sterile-no-date",
+    "name": "Dial - Cali - Sterile - No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-cali-no-date",
+    "name": "Dial - Cali - No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-flieger-pilot-sterile-date-no-date",
+    "name": "Dial - Flieger Pilot - Sterile - Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-osm-sterile-date-no-date",
+    "name": "Dial - OSM - Sterile - Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-osm-date-no-date",
+    "name": "Dial - OSM - Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-spork-automatic-only-date-no-date",
+    "name": "Dial - Spork - Automatic Only - Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-spork-sterile-date-no-date",
+    "name": "Dial - Spork - Sterile - Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-spork-date-no-date",
+    "name": "Dial - Spork - Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-s5-vintage-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SRPE S5 Vintage - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-s5-vintage-bead-blasted-steel-with-case-back",
+    "name": "Case - SRPE S5 Vintage - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-s5-vintage-brushed-pvd-black-with-case-back",
+    "name": "Case - SRPE S5 Vintage - Full Brushed PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-s5-vintage-brushed-steel-with-case-back-1",
+    "name": "Case - SRPE S5 Vintage - Full Brushed Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-heritage-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SRPE GS Heritage - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-heritage-bead-blasted-steel-with-case-back",
+    "name": "Case - SRPE GS Heritage - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-heritage-polished-pvd-black-with-case-back",
+    "name": "Case - SRPE GS Heritage - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-heritage-polished-steel-with-case-back",
+    "name": "Case - SRPE GS Heritage - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-s5-vintage-polished-brushed-pvd-black-with-case-back",
+    "name": "Case - SRPE S5 Vintage - Polished/Brushed PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-s5-vintage-brushed-steel-with-case-back",
+    "name": "Case - SRPE S5 Vintage - Polished/Brushed Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-heritage-brushed-brushed-pvd-black-with-case-back",
+    "name": "Case - SRPE GS Heritage - Brushed PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-heritage-brushed-steel-with-case-back",
+    "name": "Case - SRPE GS Heritage - Brushed Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-field-s556-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SRPE Field S556 -  Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-field-s556-bead-blasted-steel-with-case-back",
+    "name": "Case - SRPE Field S556 -  Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-field-s556-brushed-pvd-black-with-case-back",
+    "name": "Case - SRPE Field S556 - Brushed PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-field-s556-brushed-steel-with-case-back",
+    "name": "Case - SRPE Field S556 - Brushed Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-evo-polished-brushed-pvd-rose-gold-with-case-back",
+    "name": "Case - SRPE GS EVO. - Polished/Brushed PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-evo-polished-brushed-pvd-gold-with-case-back",
+    "name": "Case - SRPE GS EVO. - Polished/Brushed PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-evo-polished-brushed-pvd-black-with-case-back",
+    "name": "Case - SRPE GS EVO. - Polished/Brushed PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-gs-evo-polished-brushed-steel-with-case-back",
+    "name": "Case - SRPE GS EVO. - Polished/Brushed Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-naut-polished-brushed-pvd-rose-gold-with-case-back",
+    "name": "Case - SRPE NAUT. - Polished/Brushed PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-naut-polished-brushed-pvd-gold-with-case-back",
+    "name": "Case - SRPE NAUT. - Polished/Brushed PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-naut-polished-brushed-pvd-black-with-case-back",
+    "name": "Case - SRPE NAUT. - Polished/Brushed PVD Black (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-srpe-naut-polished-brushed-steel-with-case-back",
+    "name": "Case - SRPE NAUT. - Polished/Brushed Steel (With Case Back)",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-bead-blasted-black",
+    "name": "Chapter Ring - SRPE - Bead Blasted Black",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-bead-blasted-steel",
+    "name": "Chapter Ring - SRPE - Bead Blasted Steel",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-rose",
+    "name": "Chapter Ring - SRPE - Brushed Rose",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-gold",
+    "name": "Chapter Ring - SRPE - Brushed Gold",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-black",
+    "name": "Chapter Ring - SRPE - Brushed Black",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-steel",
+    "name": "Chapter Ring - SRPE - Brushed Steel",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-rose-gold",
+    "name": "Chapter Ring - SRPE - Polished Rose Gold",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-gold",
+    "name": "Chapter Ring - SRPE - Polished Gold",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-black",
+    "name": "Chapter Ring - SRPE - Polished Black",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-steel",
+    "name": "Chapter Ring - SRPE - Polished Steel",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-bead-blasted-black-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Bead Blasted Black w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-bead-blasted-steel-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Bead Blasted Steel w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-rose-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Brushed Rose w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-gold-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Brushed Gold w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-black-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Brushed Black w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-brushed-steel-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Brushed Steel w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-rose-gold-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Polished Rose Gold w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-gold-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Polished Gold w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-black-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Polished Black w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/chapter-ring-srpe-polished-steel-w-engraved-markers",
+    "name": "Chapter Ring - SRPE - Polished Steel w Engraved Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-top-hat-srpe",
+    "name": "Sapphire Top Hat - SRPE",
+    "category": "crystal",
+    "family": "srpe-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-flat-srpe",
+    "name": "Sapphire Flat - SRPE",
+    "category": "crystal",
+    "family": "srpe-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-srpe",
+    "name": "Sapphire Double Dome - SRPE",
+    "category": "crystal",
+    "family": "srpe-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SRPE"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-b-wayne",
+    "name": "Ceramic Insert - 007 Sub B.Wayne",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-ncg-3h-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 Classic NCG 3H - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-ncg-3h-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 Classic NCG 3H - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-ncg-3h-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 Classic NCG 3H - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-ncg-3h-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 Classic NCG 3H - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-ncg-3h-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 Classic NCG 3H - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-ncg-3h-polished-steel-with-case-back",
+    "name": "Case - SKX007 Classic NCG 3H - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-b-wayne",
+    "name": "Ceramic Insert - 007 Dual Time B.Wayne",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-3h-polished-steel-with-case-back",
+    "name": "Case - SKX007 Classic 3H - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-3h-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 Classic 3H - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-3h-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 Classic 3H - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-3h-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 Classic 3H - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-3h-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 Classic 3H - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-3h-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 Classic 3H - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-b-wayne-x-gold",
+    "name": "Ceramic Insert - 007 GMT B.Wayne X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-b-wayne",
+    "name": "Ceramic Insert - 007 GMT B.Wayne",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-brushed-steel-with-brushed-lug-chamfer-with-case-back",
+    "name": "Case - SKX007 Sub - Full Brushed Steel with Brushed Lug Chamfer (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-brushed-steel-with-polished-lug-chamfer-with-case-back",
+    "name": "Case - SKX007 Sub - Full Brushed Steel with Polished Lug Chamfer (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/nh36-movement-black",
+    "name": "NH36 Movement - Black",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH34/35/36 movement"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-aegean-blue-x-white-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Aegean Blue X White - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/carbon-fiber-insert-007-gmt",
+    "name": "Carbon Fiber Insert - 007 GMT",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/carbon-fiber-insert-007-dual-time",
+    "name": "Carbon Fiber Insert - 007 Dual Time",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/carbon-fiber-insert-007-sub-red-t",
+    "name": "Carbon Fiber Insert - 007 Sub - Red T",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/carbon-fiber-insert-007-sub",
+    "name": "Carbon Fiber Insert - 007 Sub",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-red",
+    "name": "Ceramic Insert - 007 GMT Red",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-3h-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 MM 3H - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-3h-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 MM 3H - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-3h-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 MM 3H - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-3h-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 MM 3H - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-3h-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 MM 3H - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-3h-polished-steel-with-case-back",
+    "name": "Case - SKX007 MM 3H - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-ncg-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 Sub NCG - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-ncg-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 Sub NCG - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-peps",
+    "name": "Ceramic Insert - 007 GMT PEPS.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-blue",
+    "name": "Ceramic Insert - 007 GMT Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-green",
+    "name": "Ceramic Insert - 007 GMT Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-stealth-black-lume-pip",
+    "name": "Ceramic Insert - 007 Sub Stealth Black Lume Pip",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-mg",
+    "name": "Hands - MG",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-sumo",
+    "name": "Hands - Sumo",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-reverse-sub-stealth",
+    "name": "Ceramic Insert - 007 Reverse Sub Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-osm-black",
+    "name": "Ceramic Insert - 007 Yacht Master OSM Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-mil-sub-black",
+    "name": "Ceramic Insert - 007 Yacht Master Mil Sub Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-mg-black",
+    "name": "Ceramic Insert - 007 MG Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-mg-black-red-t",
+    "name": "Ceramic Insert - 007 MG Red T Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-mg-stealth",
+    "name": "Ceramic Insert - 007 MG Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-stealth-sterile-day-date",
+    "name": "Dial - Voyager 2 - Stealth Sterile - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-stealth-x-silver-sterile-day-date",
+    "name": "Dial - Voyager 2 - Stealth X Silver Sterile - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-minimus-black",
+    "name": "Ceramic Insert - 007 Yacht Master Minimus Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-red-x-white-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Red X White - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-olive-x-mustard-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Olive X Mustard - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-green-x-white-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Racing Green X White - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-green-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Racing Green - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-marine-blue-x-mint-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Marine Blue X Mint - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-marine-blue-x-grey-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Marine Blue X Grey - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-stealth-day-date",
+    "name": "Dial - 5KX - Stealth - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-blue-day-date",
+    "name": "Dial - 5KX - Blue - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-white-day-date",
+    "name": "Dial - 5KX - White - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-black-x-orange-day-date",
+    "name": "Dial - 5KX - Black X Orange - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-black-x-red-day-date",
+    "name": "Dial - 5KX - Black X Red - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-black-day-date",
+    "name": "Dial - 5KX - Black - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-blue-sterile-day-date",
+    "name": "Dial - 5KX - Blue Sterile - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-white-sterile-day-date",
+    "name": "Dial - 5KX - White Sterile - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-black-sterile-day-date",
+    "name": "Dial - 5KX - Black Sterile - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-matt-dark-blue",
+    "name": "Ceramic Insert - 007 OSM60 Matt Dark Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-grey",
+    "name": "Ceramic Insert - 007 OSM60 Matt Grey",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-stealth",
+    "name": "Ceramic Insert - 007 OSM60 Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-dark-blue",
+    "name": "Ceramic Insert - 007 OSM60 Dark Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-dark-blue-red-60",
+    "name": "Ceramic Insert - 007 OSM60 Dark Blue Red \"60\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-black-red-60",
+    "name": "Ceramic Insert - 007 OSM60 Black Red \"60\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-black",
+    "name": "Ceramic Insert - 007 OSM60 Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-dark-blue-luminous-aquaris-green-60",
+    "name": "Ceramic Insert - 007 OSM60 Dark Blue - Luminous Aquaris - Green \"60\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-black-luminous-aquaris-green-60",
+    "name": "Ceramic Insert - 007 OSM60 Black - Luminous Aquaris - Green \"60\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-black-luminous-aquaris",
+    "name": "Ceramic Insert - 007 OSM60 Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-osm60-black-luminous-green",
+    "name": "Ceramic Insert - 007 OSM60 Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-slim-ncg-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 Sub Slim NCG - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-slim-ncg-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 Sub Slim NCG - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-slim-ncg-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 Sub Slim NCG - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-slim-ncg-polished-steel-with-case-back",
+    "name": "Case - SKX007 Sub Slim NCG - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-olive-green",
+    "name": "Steel Insert - 007 Yacht Master Olive Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-gmt-black",
+    "name": "Ceramic Insert - 007 Yacht Master GMT Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-gmt-black-mk2",
+    "name": "Ceramic Insert - 007 Yacht Master GMT Black MK2",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/glass-insert-skx-dual-time-blue-x-orange-luminous-green",
+    "name": "Glass Insert - SKX Dual Time Gulf - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/glass-insert-skx-dual-time-black-x-red-luminous-green",
+    "name": "Glass Insert - SKX Dual Time COKE - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/glass-insert-skx-dual-time-blue-x-red-luminous-green",
+    "name": "Glass Insert - SKX Dual Time PEPS. - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-5kx-stealth-sterile-day-date",
+    "name": "Dial - 5KX - Stealth Sterile - Day Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-ncg-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 Sub NCG - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-ncg-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 Sub NCG - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-ncg-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 Sub NCG - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-ncg-polished-steel-with-case-back",
+    "name": "Case - SKX007 Sub NCG - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-classic-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 Classic - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-turquoise",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Turquoise",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-turquoise",
+    "name": "Ceramic Insert - 007 Dual Time Turquoise",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-turquoise",
+    "name": "Ceramic Insert - 007 Sub Turquoise",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-turquoise",
+    "name": "Ceramic Insert - 007 GMT Turquoise",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-brushed-stealth",
+    "name": "Ceramic Insert - SKX Brushed Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sam-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 SAM - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sam-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 SAM - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sam-brushed-pvd-black-with-case-back",
+    "name": "Case - SKX007 SAM - Brushed PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sam-brushed-pvd-gold-with-case-back",
+    "name": "Case - SKX007 SAM - Brushed PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sam-brushed-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 SAM - Brushed PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sam-brushed-steel-with-case-back",
+    "name": "Case - SKX007 SAM - Brushed Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-dark-knight-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Dark Knight - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-aegean-blue-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Aegean Blue - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-insert-skx-dual-time-black-luminous-green",
+    "name": "Sapphire Insert - SKX Dual Time Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-gmt-sprit",
+    "name": "Ceramic Insert - 007 GMT SPRIT.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-sprit",
+    "name": "Ceramic Insert - 007 Dual Time SPRIT.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-sprit",
+    "name": "Ceramic Insert - 007 Sub SPRIT.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-sam",
+    "name": "Hands - SAM",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-matt-aegean-blue",
+    "name": "Ceramic Insert - 007 Dual Time Matt Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-ospo-grey",
+    "name": "Ceramic Insert - 007 OSPO Grey",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-matt-aegean-blue",
+    "name": "Ceramic Insert - 007 Sub Matt Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-phantom-grey",
+    "name": "Ceramic Insert - 007 Phantom Grey",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-umber-x-rose-gold",
+    "name": "Ceramic Insert - SRP Turtle Umber X Rose Gold",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-umber-x-rose-gold",
+    "name": "Ceramic Insert - SKX Umber X Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-umber-x-rose-gold",
+    "name": "Ceramic Insert - 007 Sub Umber X Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-sub-brushed-gun-metal-red-t",
+    "name": "Steel Insert - 007 Sub - Brushed Gun Metal Red T",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-sub-brushed-steel-gun-metal",
+    "name": "Steel Insert - 007 Sub - Brushed Gun Metal",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-sub-brushed-steel-ice",
+    "name": "Steel Insert - 007 Sub - Brushed Steel ICE",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-sub-brushed-steel-red-t",
+    "name": "Steel Insert - 007 Sub - Brushed Steel Red T",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-sub-brushed-steel",
+    "name": "Steel Insert - 007 Sub - Brushed Steel",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-turtle-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 Turtle - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-turtle-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 Turtle - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 MM - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 MM - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 MM - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 MM - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-red-t-black",
+    "name": "Ceramic Insert - SKX Red T Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-turtle-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 Turtle - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-turtle-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 Turtle - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-turtle-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 Turtle - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 MM - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-mm-polished-steel-with-case-back",
+    "name": "Case - SKX007 MM - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-turtle-polished-steel-with-case-back",
+    "name": "Case - SKX007 Turtle - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-blue",
+    "name": "Ceramic Insert - 007 Dual Time Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-umber-x-rose-gold",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Umber X Rose Gold",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-root-beer-x-rose-gold",
+    "name": "Ceramic Insert - 007 Dual Time Root Beer X Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-umber-x-rose-gold",
+    "name": "Ceramic Insert - SKX Dual Time Umber X Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-forest-green",
+    "name": "Steel Insert - 007 Yacht Master Forest Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-purple",
+    "name": "Steel Insert - 007 Yacht Master Purple",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 Sub - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-polished-pvd-black-with-case-back",
+    "name": "Case - SKX007 Sub - Polished PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-monster-second-hands",
+    "name": "Hands - Monster Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-classic-second-hands",
+    "name": "Hands - Classic Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-classic",
+    "name": "Hands - Classic",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-deep-sea-luminous-azure",
+    "name": "Ceramic Insert - 007 Deep Sea - Luminous Azure",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-deep-sea-luminous-green",
+    "name": "Ceramic Insert - 007 Deep Sea - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-smp-aegean-blue",
+    "name": "Ceramic Insert - 007 SMP Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx007",
+    "name": "Ceramic Insert - 007 Sub Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-blue",
+    "name": "Ceramic Insert - 007 Sub Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-ceramic-bezel-inserts-sub-green",
+    "name": "Ceramic Insert - 007 Sub Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-all-black",
+    "name": "Ceramic Insert - 007 Sub Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-black-gold",
+    "name": "Ceramic Insert - 007 Sub Black X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-blue-gold",
+    "name": "Ceramic Insert - 007 Sub Blue X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-gmt-bat-1",
+    "name": "Ceramic Insert - 007 GMT BAT.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-gmt-series-black-blue-black-green",
+    "name": "Ceramic Insert - 007 GMT Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-mil-black",
+    "name": "Ceramic Insert - 007 Mil Sub Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-vintage-black",
+    "name": "Ceramic Insert - 007 Sub Vintage Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-yacht-master-black",
+    "name": "Ceramic Insert - 007 Yacht Master Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx-black",
+    "name": "Ceramic Insert - SKX Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-ghost-white",
+    "name": "Ceramic Insert - 007 Sub Ghost White",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-trident",
+    "name": "Hands - Trident Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-lightning-second-hands",
+    "name": "Hands - Lightning Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-ranger",
+    "name": "Hands - Ranger",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-osm",
+    "name": "Hands - OSM",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/double-dome-sapphire-crystal-seiko-new-turtle",
+    "name": "Sapphire Double Dome - SRP Turtle",
+    "category": "crystal",
+    "family": "srp-turtle-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-clover-second-hands",
+    "name": "Hands - Clover Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx-green",
+    "name": "Ceramic Insert - SKX Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-mix-match",
+    "name": "Hands - MIX & MATCH",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-bold",
+    "name": "Hands - BOLD Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-t-r-black",
+    "name": "Ceramic Insert - SRP Turtle Black",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-bat",
+    "name": "Ceramic Insert - SRP Turtle BAT.",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-sub-vintage-black",
+    "name": "Ceramic Insert - SRP Turtle Red T Black",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-stark-black",
+    "name": "Ceramic Insert - 007 Stark Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-black-x-tuscan",
+    "name": "Ceramic Insert - SRP Turtle Black X Gold",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx-blue",
+    "name": "Ceramic Insert - SKX Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-pink",
+    "name": "Ceramic Insert - 007 Sub Pink",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-polaris-second-hands",
+    "name": "Hands - Polaris Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-cathedral",
+    "name": "Hands - Cathedral",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-field-spec",
+    "name": "Hands - Field Spec",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-mercedes",
+    "name": "Hands - MERC",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-mil-spec",
+    "name": "Hands - Mil Spec",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-snowflake",
+    "name": "Hands - Snowflake",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-trek",
+    "name": "Hands - Trek",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-blades",
+    "name": "Hands - Blades",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-ghost-white",
+    "name": "Ceramic Insert - SRP Turtle Ghost White",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx-bat",
+    "name": "Ceramic Insert - SKX BAT.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-stealth",
+    "name": "Ceramic Insert - SRP Turtle Stealth",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-luminous-black",
+    "name": "Ceramic Insert - SRP Turtle Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-the-hornet",
+    "name": "Ceramic Insert - SRP Turtle Hornet",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-green",
+    "name": "Ceramic Insert - SRP Turtle Green",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-plain-black",
+    "name": "Dial - Sterile Black",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-plain-green",
+    "name": "Dial - Sterile Green",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-plain-white",
+    "name": "Dial - Sterile White",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-plain-blue",
+    "name": "Dial - Sterile Blue",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx-stark-black",
+    "name": "Ceramic Insert - SKX Stark Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-dual-time-black",
+    "name": "Ceramic Insert - 007 Dual Time Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-navigator-plain-green",
+    "name": "Dial - Navigator - Plain Green",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-sunburst-black",
+    "name": "Dial - Sterile Sunburst Black",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-sunburst-blue",
+    "name": "Dial - Sterile Sunburst Blue",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-sunburst-green",
+    "name": "Dial - Sterile Sunburst Green",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-sunburst-silver",
+    "name": "Dial - Sterile Sunburst Silver",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-turtle-re-issue-blue",
+    "name": "Ceramic Insert - SRP Turtle Blue",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx-vintage-black",
+    "name": "Ceramic Insert - SKX Vintage Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-skx-white",
+    "name": "Ceramic Insert - SKX White",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-sub-carbon",
+    "name": "Ceramic Insert - 007 Sub Carbon",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-arrow",
+    "name": "Hands - Arrow Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-007-ospo",
+    "name": "Ceramic Insert - 007 OSPO",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-falcon",
+    "name": "Hands - Falcon",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-yacht-master-silver",
+    "name": "Ceramic Insert - 007 Yacht Master Silver",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-hornet",
+    "name": "Ceramic Insert - 007 Sub Hornet",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-stealth",
+    "name": "Ceramic Insert - SKX Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-stealth",
+    "name": "Ceramic Insert - 007 Dual Time Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-vintage-black-mk2",
+    "name": "Ceramic Insert - 007 Sub Vintage Black MK2",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-smp",
+    "name": "Ceramic Insert - 007 SMP",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-bat",
+    "name": "Ceramic Insert - 007 Dual Time BAT.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-vintage-black-mk3",
+    "name": "Ceramic Insert - 007 Sub Vintage Black MK3",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/nh36-movement-1",
+    "name": "NH36 Movement - White",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH34/35/36 movement"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-turtle-re-issue-matt-silver",
+    "name": "Chapter Ring - Turtle Re-issue  - Matt Silver",
+    "category": "chapter_ring",
+    "family": "srp-turtle-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit Turtle chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-turtle-re-issue-polished-black",
+    "name": "Chapter Ring - Turtle Re-issue  - Polished Black",
+    "category": "chapter_ring",
+    "family": "srp-turtle-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit Turtle chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-turtle-re-issue-matt-black-w-markers-orange",
+    "name": "Chapter Ring - Turtle Re-issue  - Matt Black w Markers (Orange)",
+    "category": "chapter_ring",
+    "family": "srp-turtle-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit Turtle chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-turtle-re-issue-matt-black-w-markers-yellow",
+    "name": "Chapter Ring - Turtle Re-issue  - Matt Black w Markers (Yellow)",
+    "category": "chapter_ring",
+    "family": "srp-turtle-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit Turtle chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub",
+    "name": "Ceramic Insert - 007 Sub Brushed Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dt-black",
+    "name": "Ceramic Insert - SKX Dual Time Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-ceramic-insert-skx-dual-time-green",
+    "name": "Ceramic Insert - SKX Dual Time Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-ceramic-insert-skx-dual-time-blue",
+    "name": "Ceramic Insert - SKX Dual Time Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-stealth",
+    "name": "Ceramic Insert - SKX Dual Time Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-mil-spec-black-day-date-no-date",
+    "name": "Dial - Mil Spec - Black - Day Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-mil-spec-white-day-date-no-date",
+    "name": "Dial - Mil Spec - White - Day Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-flat-seiko-turtle-reissue-prospex-srp77x",
+    "name": "Sapphire Flat - SRP Turtle",
+    "category": "crystal",
+    "family": "srp-turtle-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-turtle-re-issue-dual-time-black",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Black",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-bat",
+    "name": "Ceramic Insert - SKX Dual Time BAT.",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-black-luminous-green",
+    "name": "Ceramic Insert - SKX Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-black-luminous-aquaris",
+    "name": "Ceramic Insert - SKX Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-mm",
+    "name": "Hands - MM",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-black-luminous-green",
+    "name": "Ceramic Insert - 007 Sub Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-black-luminous-aquaris",
+    "name": "Ceramic Insert - 007 Sub Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-luminous-green",
+    "name": "Ceramic Insert - 007 Dual Time Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-luminous-aquaris",
+    "name": "Ceramic Insert - 007 Dual Time Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-steel",
+    "name": "Steel Insert - 007 Dual Time - Brushed Steel",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-steel-red-12",
+    "name": "Steel Insert - 007 Dual Time - Brushed Steel Red \"12\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-ice",
+    "name": "Steel Insert - 007 Dual Time - Brushed ICE",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-gun-metal",
+    "name": "Steel Insert - 007 Dual Time - Brushed Gun Metal",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-black-luminous-green",
+    "name": "Ceramic Insert - SKX Dual Time Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-black-luminous-aquaris",
+    "name": "Ceramic Insert - SKX Dual Time Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-top-hat-srp-turtle",
+    "name": "Sapphire Top Hat - SRP Turtle",
+    "category": "crystal",
+    "family": "srp-turtle-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-blue",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Blue",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-green",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Green",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-bat",
+    "name": "Ceramic Insert - SRP Turtle Dual Time BAT.",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-stealth",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Stealth",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-black-luminous-aquaris",
+    "name": "Ceramic Insert - SRP Turtle Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-black-luminous-green",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-black-luminous-aquaris",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-turtle-re-issue-polished-silver",
+    "name": "Chapter Ring - Turtle Re-issue  - Polished Silver",
+    "category": "chapter_ring",
+    "family": "srp-turtle-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit Turtle chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-turtle-re-issue-brushed-silver",
+    "name": "Chapter Ring - Turtle Re-issue  - Brushed Steel",
+    "category": "chapter_ring",
+    "family": "srp-turtle-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit Turtle chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-green-x-gold",
+    "name": "Ceramic Insert - 007 Sub Green X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-red-t-black-x-gold",
+    "name": "Ceramic Insert - 007 Sub Red T Black X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-red-t-black",
+    "name": "Ceramic Insert - SKX Dual Time Red T Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-red-t-white",
+    "name": "Ceramic Insert - SKX Red T White",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-black-minimus",
+    "name": "Ceramic Insert - SKX Black - Minimus",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-black-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Black - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-white-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - White - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-red-t-black-x-gold",
+    "name": "Ceramic Insert - SRP Turtle Red T Black X Gold",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-pep-sunset",
+    "name": "Ceramic Insert - 007 Dual Time PEPS. (Sunset)",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-white",
+    "name": "Ceramic Insert - SKX Dual Time White",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-stealth-red-triangle",
+    "name": "Ceramic Insert - SRP Turtle Red T Stealth",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-umber",
+    "name": "Ceramic Insert - 007 Sub Umber",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-black-gold-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Black Gold - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-white-gold-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - White Gold - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-black-hornet",
+    "name": "Ceramic Insert - SKX Black - Hornet",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-smp-luminous-green",
+    "name": "Ceramic Insert - 007 SMP - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-smp-luminous-aquaris",
+    "name": "Ceramic Insert - 007 SMP - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-red-t-stealth",
+    "name": "Ceramic Insert - 007 Sub Red T Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-hornet-mk2",
+    "name": "Ceramic Insert - 007 Sub Hornet MK2",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-tuscan",
+    "name": "Ceramic Insert - SKX Black X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-aegean-blue",
+    "name": "Ceramic Insert - 007 Sub Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-deep-sea-black",
+    "name": "Ceramic Insert - 007 Deep Sea Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-aegean-blue-x-gold",
+    "name": "Ceramic Insert - 007 Sub Aegean Blue X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-umber-x-gold",
+    "name": "Ceramic Insert - 007 Dual Time Umber X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-steel",
+    "name": "Steel Insert - 007 Dual Time - Polished Steel",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-green",
+    "name": "Ceramic Insert - 007 Dual Time Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-1655-brushed-steel",
+    "name": "Steel Insert - 007 Ref. 1655 - Brushed Steel",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-ref-1655-brushed-steel-red-12",
+    "name": "Steel Insert - 007 Ref. 1655 - Brushed Steel Red \"12\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-ref-1655-brushed-ice",
+    "name": "Steel Insert - 007 Ref. 1655 - Brushed ICE",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-ref-1655-brushed-gun-metal",
+    "name": "Steel Insert - 007 Ref. 1655 - Brushed Gun Metal",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-umber-x-gold",
+    "name": "Ceramic Insert - 007 Sub Umber X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-matte-dark-grey",
+    "name": "Ceramic Insert - 007 Sub Matt Dark Grey",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-red-t-stealth",
+    "name": "Ceramic Insert - SKX Dual Time Red T Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-umber",
+    "name": "Ceramic Insert - 007 Dual Time Umber",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-red-t-black-x-gold",
+    "name": "Ceramic Insert - SKX Red T Black X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-stealth-red-t",
+    "name": "Ceramic Insert - SKX Red T Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-x-gold",
+    "name": "Ceramic Insert - 007 Dual Time Black X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-red-t-stealth",
+    "name": "Ceramic Insert - 007 Dual Time Red T Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-root-beer",
+    "name": "Ceramic Insert - 007 Dual Time Root Beer",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-umber",
+    "name": "Ceramic Insert - SKX Dual Time Umber",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-red-t-black-x-gold",
+    "name": "Ceramic Insert - 007 Dual Time Red T Black X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-umber-x-gold",
+    "name": "Ceramic Insert - SKX Umber X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-root-beer-x-gold",
+    "name": "Ceramic Insert - 007 Dual Time Root Beer X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-polished-steel",
+    "name": "Case - SKX007 Classic - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 Classic - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-sunburst-green-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Sunburst Green - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-sunburst-blue-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Sunburst Blue - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-sunburst-silver-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Sunburst Silver - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-umber",
+    "name": "Ceramic Insert - SKX Umber",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-cw",
+    "name": "Hands - CW",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-gs",
+    "name": "Hands - GS",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-black-x-red",
+    "name": "Ceramic Insert - 007 Sub Black X Red",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-black-x-orange",
+    "name": "Ceramic Insert - 007 Sub Black X Orange",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-black-x-yellow",
+    "name": "Ceramic Insert - 007 Sub Black X Yellow",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-black-x-green",
+    "name": "Ceramic Insert - 007 Sub Black X Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-black-x-blue",
+    "name": "Ceramic Insert - 007 Sub Black X Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-dark-knight",
+    "name": "Ceramic Insert - 007 Dual Time Dark Knight",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-red-t-black",
+    "name": "Ceramic Insert - 007 Dual Time Red T Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-mm-second-hands",
+    "name": "Hands - MM Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-aurous",
+    "name": "Steel Insert - 007 Dual Time - Brushed AUROUS",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-rosa",
+    "name": "Steel Insert - 007 Dual Time - Brushed ROSA",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-gold",
+    "name": "Steel Insert - 007 Dual Time - Brushed Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-brushed-rose-gold",
+    "name": "Steel Insert - 007 Dual Time - Brushed Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-steel-red-12",
+    "name": "Steel Insert - 007 Dual Time - Polished Steel Red \"12\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-gold",
+    "name": "Steel Insert - 007 Dual Time - Polished Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-rose-gold",
+    "name": "Steel Insert - 007 Dual Time - Polished Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-aurous",
+    "name": "Steel Insert - 007 Dual Time - Polished AUROUS",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-rosa",
+    "name": "Steel Insert - 007 Dual Time - Polished ROSA",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-steel",
+    "name": "Steel Insert - 007 Yacht Master Steel",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-black",
+    "name": "Steel Insert - 007 Yacht Master Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-gun-metal",
+    "name": "Steel Insert - 007 Yacht Master Gun Metal",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-gold",
+    "name": "Steel Insert - 007 Yacht Master Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-rose-gold",
+    "name": "Steel Insert - 007 Yacht Master Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-blue",
+    "name": "Steel Insert - 007 Yacht Master Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-sienna",
+    "name": "Steel Insert - 007 Yacht Master Sienna",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-gold",
+    "name": "Ceramic Insert - 007 Yacht Master Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-rose-gold",
+    "name": "Ceramic Insert - 007 Yacht Master Rose Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-gun-metal",
+    "name": "Steel Insert - 007 Dual Time - Polished Gun Metal",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-umber-x-gold",
+    "name": "Ceramic Insert - SKX Dual Time Umber X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-pep-reverse",
+    "name": "Ceramic Insert - 007 Dual Time PEPS. (Reverse)",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-polished-pvd-gold-with-case-back",
+    "name": "Case - SKX007 Classic - Polished PVD Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 Classic - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 Classic - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-black-rose-gold-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Black Rose Gold - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-white-rose-gold-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - White Rose Gold - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-mercedes-second-hands",
+    "name": "Hands - MERC Second Hands",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Hands', no explicit pinion tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-x-red",
+    "name": "Ceramic Insert - 007 Dual Time Black X Red",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-x-orange",
+    "name": "Ceramic Insert - 007 Dual Time Black X Orange",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-x-yellow",
+    "name": "Ceramic Insert - 007 Dual Time Black X Yellow",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-x-green",
+    "name": "Ceramic Insert - 007 Dual Time Black X Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-x-blue",
+    "name": "Ceramic Insert - 007 Dual Time Black X Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-aegean-blue",
+    "name": "Ceramic Insert - 007 Dual Time Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-dark-knight",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Dark Knight",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-dark-knight",
+    "name": "Ceramic Insert - SKX Dual Time Dark Knight",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-black-x-steel",
+    "name": "Steel Insert - 007 Yacht Master Black X Steel",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-dual-time-silver",
+    "name": "Ceramic Insert - 007 Yacht Master Dual Time Silver MK2",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-dual-time-black-mk2",
+    "name": "Ceramic Insert - 007 Yacht Master Dual Time Black MK2",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-dual-time-silver-1",
+    "name": "Ceramic Insert - 007 Yacht Master Dual Time Silver",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-dual-time-black",
+    "name": "Ceramic Insert - 007 Yacht Master Dual Time Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-dual-time-aegean-blue",
+    "name": "Ceramic Insert - SKX Dual Time Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-skx-aegean-blue",
+    "name": "Ceramic Insert - SKX Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-aegean-blue",
+    "name": "Ceramic Insert - SRP Turtle Aegean Blue",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-wave-2-5d-textured-surface-day-date-date-no-date",
+    "name": "Dial - Wave 2.5D Textured Surface - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-red-t-matte-dark-grey",
+    "name": "Ceramic Insert - 007 Sub Red T Matt Dark Grey",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-polished-steel-with-case-back",
+    "name": "Case - SKX007 Sub - Polished Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-polished-pvd-rose-gold-with-case-back",
+    "name": "Case - SKX007 Sub - Polished PVD Rose Gold (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-bead-blasted-steel-with-case-back",
+    "name": "Case - SKX007 Sub - Bead Blasted Steel (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-bead-blasted-pvd-black-with-case-back",
+    "name": "Case - SKX007 Sub - Bead Blasted PVD Black (With Case Back)",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-umber",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Umber",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-umber-x-gold",
+    "name": "Ceramic Insert - SRP Turtle Dual Time Umber X Gold",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-umber-x-gold",
+    "name": "Ceramic Insert - SRP Turtle Umber X Gold",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-umber",
+    "name": "Ceramic Insert - SRP Turtle Umber",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-dual-time-white",
+    "name": "Ceramic Insert - SRP Turtle Dual Time White",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-red-t-white",
+    "name": "Ceramic Insert - SRP Turtle Red T White",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-srp-turtle-brushed-stealth",
+    "name": "Ceramic Insert - SRP Turtle Brushed Stealth",
+    "category": "bezel_insert",
+    "family": "srp-turtle-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag/title explicit SRP Turtle"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-silver-sterile-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Silver Sterile - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-black-sterile-day-date-date-no-date",
+    "name": "Dial - Voyager 2 - Black Sterile - Day Date / Date / No Date",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-stealth",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Stealth",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-black-x-gold",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Black X Gold",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-black",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-black-luminous-green",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Black - Luminous Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-black-luminous-aquaris",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Black - Luminous Aquaris",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-red-t-black-x-gold",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Black X Gold Red \"12\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-aegean-blue",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Aegean Blue",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-dark-knight",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Dark Knight",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-black-red-12",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Black Red \"12\"",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-green",
+    "name": "Ceramic Insert - 007 Arabic Dual Time Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-mil-sub-green",
+    "name": "Ceramic Insert - 007 Mil Sub Green",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit SKX007/SRPD"
+  }
+]

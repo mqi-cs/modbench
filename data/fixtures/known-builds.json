@@ -135,7 +135,7 @@
       "expected": "compatible",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Sandblasted Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
         "dial": "Lucius Atelier Vintage Enamel Biege Dial (Date)",
         "hands": "Lucius Atelier Nautilus II Hands - Polished Black",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
@@ -148,7 +148,7 @@
       "expected": "compatible",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Olive Green Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Olive Green Finish",
         "dial": "Lucius Atelier Vintage Enamel Biege Dial (Date)",
         "hands": "Lucius Atelier 1908 Sword Breguet Hands - Polished Silver",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - GMT 24H - Sprite Black/Green"
@@ -161,7 +161,7 @@
       "expected": "compatible",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Sandblasted Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
         "dial": "Lucius Atelier Vintage Enamel Biege Dial (Date)",
         "hands": "Namoki Watch Hands: Syringe Silver",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
@@ -174,7 +174,7 @@
       "expected": "compatible",
       "parts": {
         "movement": "NH34 GMT Movement - White",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Sandblasted Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
         "dial": "Lucius Atelier Grand Seiko GMT Dial - Sunburst Sky Blue [For NH34]",
         "hands": "Lucius Atelier GMT Hands - GS Arrow [For NH34]",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - GMT 24H - Sprite Black/Green"
@@ -187,7 +187,7 @@
       "expected": "compatible",
       "parts": {
         "movement": "NH34 GMT Movement - White",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Olive Green Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Olive Green Finish",
         "dial": "Lucius Atelier Grand Seiko GMT Dial - Sunburst Sky Blue [For NH34]",
         "hands": "Lucius Atelier GMT Hands - GS Arrow [For NH34]",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
@@ -200,7 +200,7 @@
       "expected": "compatible",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Olive Green Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Olive Green Finish",
         "dial": "Lucius Atelier Vintage Enamel Biege Dial (Date)",
         "hands": "Lucius Atelier Nautilus II Hands - Polished Black",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
@@ -280,7 +280,7 @@
       "expected": "blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Sandblasted Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
         "dial": "Namoki Watch Dial: Spork Green",
         "hands": "Namoki Watch Hands: Syringe Silver",
         "bezelInsert": "Namoki SKX007/SRPD Steel Bezel Insert: Nautical Steel"
@@ -371,7 +371,7 @@
       "expected": "blocked",
       "parts": {
         "movement": "NH36 Movement - Black",
-        "case": "Namoki NMK912 Field Watch Case Bundle: Sandblasted Finish",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
         "dial": "DLW Dial - Reverse Sub - Sterile - No Date",
         "hands": "DLW Hands - Sumo",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"

@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1788188425750,
+      "tag": "0000_optimal_master_mold",
+      "breakpoints": true
+    }
+  ]
+}

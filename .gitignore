@@ -4,3 +4,7 @@ node_modules/
 .env.local
 data/raw/*.json
 !data/raw/.gitkeep
+data/modbench.db
+data/modbench.db-journal
+data/modbench.db-wal
+data/modbench.db-shm

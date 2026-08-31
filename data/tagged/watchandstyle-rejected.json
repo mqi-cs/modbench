@@ -1,0 +1,50 @@
+[
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sg012-sskx023-double-dome-sapphire-crystal",
+    "productName": "SG012 SSK023 Double Dome Sapphire Crystal",
+    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sg011-sskx023-flat-sapphire-crystal",
+    "productName": "SG011 SSK023 Flat Sapphire Crystal",
+    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rm013-ssk023-fkm-rubber-strap-with-end-links-black",
+    "productName": "RM013 SSK023 FKM Rubber Strap with End Links - Black",
+    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1584-ssk023-president-bracelet-steel",
+    "productName": "SB1249P SSK023 President Bracelet - Steel",
+    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1564-ssk023-jubilee-bracelet-steel",
+    "productName": "SB1564 SSK023 Jubilee Bracelet - Steel",
+    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1564-ssk023-oyster-bracelet-steel",
+    "productName": "SB1565 SSK023 Oyster Bracelet - Steel",
+    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g01388-snxs-flat-sapphire-crystal-blue-ar",
+    "productName": "G1388 SNXS Flat Sapphire Crystal - Blue AR",
+    "reason": "insufficient real family size (snxs-crystal confirmed at 2 SKUs across all 4 vendors, all categories -- see singleton-verification.md)",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g01387-snxs-double-dome-sapphire-crystal-blue-ar",
+    "productName": "G1387 SNXS Double Dome Sapphire Crystal - Blue AR",
+    "reason": "insufficient real family size (snxs-crystal confirmed at 2 SKUs across all 4 vendors, all categories -- see singleton-verification.md)",
+    "vendorKey": "watchandstyle"
+  }
+]
