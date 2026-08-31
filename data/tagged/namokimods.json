@@ -220,6 +220,16 @@
     "evidence": "vendor product_type 'SKX007 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-snakeskin-finish",
+    "name": "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-hands-cathedral-blue-steel-finish",
     "name": "Watch Hands: Cathedral Blue Steel Finish",
     "category": "hands",
@@ -237,7 +247,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-great-wave-rose-gold-finish",
@@ -386,6 +396,56 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-mm300-bezel-black-finish",
+    "name": "SKX007/SRPD Slim MM300 Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-mm300-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim MM300 Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-seamaster-bezel-gold-finish",
+    "name": "SKX007/SRPD Slim Seamaster Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-seamaster-bezel-black-finish",
+    "name": "SKX007/SRPD Slim Seamaster Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-seamaster-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim Seamaster Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk929-nautical-skx-sprd-watch-case-brushed",
     "name": "NMK929 Nautical SKX/SPRD Watch Case: Brushed Finish",
     "category": "case",
@@ -401,9 +461,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk962-skx007-srpd-n50-tool-diver-case-bundle-sandblasted-finish",
@@ -483,7 +543,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-brushed",
@@ -493,7 +553,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-fpj-blue-steel",
@@ -534,6 +594,16 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-jubilee-finish-female-end-links",
+    "name": "SKX007 Watch Bracelet: Jubilee Finish (Female End Links)",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-bezel-insert-104-countdown-style-black",
@@ -626,6 +696,26 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srpd-watch-bracelet-jubilee-steel-finish",
+    "name": "SRPD Watch Bracelet: Jubilee Steel Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpd-watch-bracelet-oyster-brushed-finish",
+    "name": "SRPD Watch Bracelet: Oyster Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-dial-gs-ice-forest",
     "name": "Watch Dial: GS Ice Forest",
     "category": "dial",
@@ -674,6 +764,26 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-oyster-female-end-link-bracelet",
+    "name": "SKX007 Watch Bracelet: Oyster Brushed Finish (Female End Links)",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/pebbled-leather-strap-black",
+    "name": "Pebbled Leather Strap: Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Leather Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-ssk-nh34-lumed-arrow-gmt-hand",
@@ -846,6 +956,36 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-ff-bezel-brushed-black-finish",
+    "name": "SKX007/SRPD Fathoms Bezel: Brushed Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-ff-bezel-rose-gold-finish",
+    "name": "SKX007/SRPD Fathoms Bezel: Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-ff-bezel-steel-finish",
+    "name": "SKX007/SRPD Fathoms Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk947-fathoms-skx007-srpd-dive-case-bundle-brushed-black-finish",
     "name": "NMK957 Fathoms SKX007/SRPD Dive Case Bundle: Brushed Black Finish",
     "category": "case",
@@ -884,6 +1024,16 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Casebacks', assumed SKX007/SRPD shell (shared caseback thread per Lucius evidence, not independently confirmed on this SKU)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-big-sub-bezel-steel-finish",
+    "name": "SKX007/SRPD Big Sub Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-glass-bezel-insert-vintage-dual-time-style-root-beer",
@@ -1084,6 +1234,36 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-big-crown-pvd-black",
+    "name": "SKX007 Sterile Big Crown: PVD Black",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-chunky-crown-pvd-black",
+    "name": "SKX007 Sterile Chunky Crown: PVD Black",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-knurled-crown-pvd-black",
+    "name": "SKX007 Sterile Knurled Crown: PVD Black",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-panda-chronograph",
@@ -1291,9 +1471,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/ssk-chapter-ring-gmt-green-with-white-markers",
@@ -1301,9 +1481,59 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-fkm-tropique-diver-grey",
+    "name": "Rubber Strap: FKM Tropique Diver Grey",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
     "specSource": "family-inferred",
     "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-fkm-tropique-diver-red",
+    "name": "Rubber Strap: FKM Tropique Diver Red",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-fkm-tropique-diver-green",
+    "name": "Rubber Strap: FKM Tropique Diver Green",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-fkm-tropique-diver-blue",
+    "name": "Rubber Strap: FKM Tropique Diver Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-fkm-tropique-diver-black",
+    "name": "Rubber Strap: FKM Tropique Diver Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-kanji-style-black-finish-w-gold-markers",
@@ -1313,7 +1543,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-steel-bezel-insert-dual-time-kanji-black-gold",
@@ -1443,7 +1673,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-arrows-style-green",
@@ -1453,7 +1683,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-arrows-style-yellow",
@@ -1463,7 +1693,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-arrows-style-red",
@@ -1473,7 +1703,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-arrows-style-orange",
@@ -1483,7 +1713,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-arrows-style-white",
@@ -1493,7 +1723,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-arrows-style-black",
@@ -1503,7 +1733,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-angled-chapter-ring-numerals-black",
@@ -1513,7 +1743,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/ssk-chapter-ring-gmt-black-with-red-markers",
@@ -1521,9 +1751,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-worldtimer-black",
@@ -1574,6 +1804,26 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/fkm-rubber-strap",
+    "name": "FKM Rubber Strap: Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-milspec-coin-edge-bezel-pvd-black-finish",
+    "name": "SKX007/SRPD Slim Coin Edge Bezel Mk 2: PVD Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-nautical-black",
@@ -1696,6 +1946,16 @@
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-fugu-bezel-steel-finish",
+    "name": "SKX007/SRPD Fugu Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-dial-fume-grey",
     "name": "Watch Dial: Fume Grey",
     "category": "dial",
@@ -1734,6 +1994,46 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-bolt-crown-rose-gold-finish",
+    "name": "SKX007 Bolt Crown: Rose Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-bolt-crown-gold-finish",
+    "name": "SKX007 Bolt Crown: Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-bolt-crown-black-finish",
+    "name": "SKX007 Bolt Crown: Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-bolt-crown-brushed-finish",
+    "name": "SKX007 Bolt Crown: Brushed Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-syringe-blue-skeleton",
@@ -1971,9 +2271,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/ssk-chapter-ring-gmt-black-with-white-markers",
@@ -1981,9 +2281,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/ssk-lumed-chapter-ring-gmt-brushed-finish",
@@ -1991,9 +2291,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/ssk-chapter-ring-gmt-brushed-finish",
@@ -2001,9 +2301,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/ssk-chapter-ring-polished-finish",
@@ -2011,9 +2311,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/ssk-chapter-ring-brushed-finish",
@@ -2021,9 +2321,9 @@
     "category": "chapter_ring",
     "family": "ssk-gmt-chapter-ring",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "vendor product_type 'SSK Chapter Rings'; resolved cross-vendor to Seiko 5 GMT"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Chapter Rings' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-tuna-black",
@@ -2286,6 +2586,56 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-knurled-w-blue-ring",
+    "name": "SKX007 Knurled Crown Mk2 Blue",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-knurled-w-green-ring",
+    "name": "SKX007 Knurled Crown Mk2 Green",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-knurled-w-orange-ring",
+    "name": "SKX007 Knurled Crown Mk2 Orange",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-knurled-w-red-ring",
+    "name": "SKX007 Knurled Crown Mk2 Red",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-knurled-w-clear-ring",
+    "name": "SKX007 Knurled Crown Mk2 Steel",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-dial-grid-steel",
     "name": "Watch Dial: Grid Steel",
     "category": "dial",
@@ -2314,6 +2664,46 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk357-ssk-slim-domed-sapphire-crystal-for-sloped-inserts",
+    "name": "NMK357 SSK Slim Domed Sapphire Crystal for Sloped Inserts",
+    "category": "crystal",
+    "family": "ssk-gmt-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Sapphire Crystals' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk356-ssk-slim-sapphire-crystal-for-flat-inserts",
+    "name": "NMK356 SSK Slim Sapphire Crystal for Flat Inserts",
+    "category": "crystal",
+    "family": "ssk-gmt-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Sapphire Crystals' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-slim-sub-bezel-steel-finish",
+    "name": "SSK Slim Sub Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "ssk-gmt-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Bezels' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-slim-coin-edge-bezel-steel-finish",
+    "name": "SSK Slim Coin Edge Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "ssk-gmt-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Bezels' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-alpine-black",
@@ -2653,7 +3043,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-chapter-ring-column-brushed-finish",
@@ -2663,7 +3053,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-sakura-red",
@@ -2756,14 +3146,74 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-mk2-blue",
+    "name": "SKX007 Chunky Crown Mk2 Blue",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-mk2-green",
+    "name": "SKX007 Chunky Crown Mk2 Green",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-mk2-orange",
+    "name": "SKX007 Chunky Crown Mk2 Orange",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-mk2-red",
+    "name": "SKX007 Chunky Crown Mk2 Red",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-mk2",
+    "name": "SKX007 Chunky Crown Mk2 Steel",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk914-slim-flat-sapphire-crystal-nh34",
     "name": "NMK314 SKX/SRPD Slim Flat Sapphire Crystal for Flat Inserts",
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-lx-bezel-brushed-finish",
+    "name": "SKX007/SRPD LX Bezel: Brushed Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk939-fifty-eight-watch-case-steel-finish",
@@ -2811,9 +3261,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk941-gmt-sub-skx007-srpd-watch-case-mk-2-rose-gold-finish-nh34-compatible",
@@ -3076,6 +3526,26 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-milspec-coin-edge-bezel-sandblasted-finish",
+    "name": "SKX007/SRPD Slim Coin Edge Bezel Mk 2: Sandblasted Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-milspec-coin-edge-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim Coin Edge Bezel Mk 2: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-glass-bezel-insert-dual-time-style-petronas",
     "name": "SKX007/SRPD Glass Bezel Insert: Dual Time Style Petronas",
     "category": "bezel_insert",
@@ -3134,6 +3604,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-bb-pro-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim BB Pro Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-gmt-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim GMT Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-107-minimal-tool-dial-white",
@@ -3226,6 +3716,96 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/ssk-lx-bezel-steel-finish",
+    "name": "SSK LX Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "ssk-gmt-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Bezels' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-mm300-bezel-steel-finish",
+    "name": "SSK MM300 Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "ssk-gmt-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Bezels' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-knurled-bezel-steel-finish",
+    "name": "SSK Knurled Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "ssk-gmt-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Bezels' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-sub-bezel-steel-finish",
+    "name": "SSK Sub Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "ssk-gmt-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Bezels' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-coin-edge-bezel-steel-finish",
+    "name": "SSK Coin Edge Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "ssk-gmt-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Bezels' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk354-ssk-domed-sapphire-crystal-for-sloped-inserts",
+    "name": "NMK354 - SSK Domed Sapphire Crystal for Sloped Inserts",
+    "category": "crystal",
+    "family": "ssk-gmt-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Sapphire Crystals' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk355-ssk-flat-sapphire-crystal-for-sloped-inserts",
+    "name": "NMK355 - SSK Flat Sapphire Crystal for Sloped Inserts",
+    "category": "crystal",
+    "family": "ssk-gmt-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Sapphire Crystals' / title match -> ssk-gmt"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-onion-crown-gold",
+    "name": "SKX007 Onion Crown: Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-onion-crown-steel",
+    "name": "SKX007 Onion Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-forged-carbon-bezel-insert-sub-style-black",
     "name": "SKX007/SRPD Lumed Forged Carbon Bezel Insert: Sub Style Black",
     "category": "bezel_insert",
@@ -3286,6 +3866,16 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srpe-watch-bracelet-oyster-gold-brushed-finish",
+    "name": "SRPE Watch Bracelet: Oyster Gold Brushed Finish",
+    "category": "strap",
+    "family": "srpe-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bracelets' / title match -> srpe (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-black-with-white-markers",
     "name": "SKX007/SRPD Chapter Ring: Black with White Markers",
     "category": "chapter_ring",
@@ -3293,7 +3883,107 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-big-crown-polished-finish",
+    "name": "SKX007 Sterile Big Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-chunky-crown-polished-finish",
+    "name": "SKX007 Sterile Chunky Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-knurled-crown-polished-finish",
+    "name": "SKX007 Sterile Knurled Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-lumed-chapter-ring-gmt-brushed-finish",
+    "name": "SRPE Lumed Chapter Ring: GMT Brushed Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-gmt-orange-finish",
+    "name": "SRPE Chapter Ring: GMT Orange Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-gmt-navy-finish-with-red-markers",
+    "name": "SRPE Chapter Ring: GMT Navy Finish with Red Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-gmt-navy-finish",
+    "name": "SRPE Chapter Ring: GMT Navy Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-gmt-black-finish-with-red-markers",
+    "name": "SRPE Chapter Ring: GMT Black Finish with Red Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-gmt-black-finish",
+    "name": "SRPE Chapter Ring: GMT Black Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-gmt-brushed-finish",
+    "name": "SRPE Chapter Ring: GMT Brushed Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk313-skx-flat-crystal-nh34",
@@ -3301,9 +3991,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk312-skx-domed-crystal-nh34",
@@ -3311,9 +4001,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-glass-bezel-insert-gmt-style-batman",
@@ -3391,9 +4081,19 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk353-ssk-flat-sapphire-crystal",
+    "name": "NMK353 - SSK Flat Sapphire Crystal for Flat Inserts",
+    "category": "crystal",
+    "family": "ssk-gmt-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SSK Sapphire Crystals' / title match -> ssk-gmt"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-gmt-style-black-grey-w-gold-markers",
@@ -3463,7 +4163,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-b-r-pilot-silver",
@@ -3496,6 +4196,36 @@
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-knurled-bezel-gold-finish",
+    "name": "SKX007/SRPD Slim Knurled Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-knurled-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim Knurled Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-knurled-bezel-black-finish",
+    "name": "SKX007/SRPD Slim Knurled Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-hands-smp-polished-finish",
     "name": "Watch Hands: SMP Polished Finish",
     "category": "hands",
@@ -3513,7 +4243,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-gmt-black-finish",
@@ -3523,7 +4253,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-gmt-black-finish-with-red-markers",
@@ -3533,7 +4263,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-gmt-navy-finish",
@@ -3543,7 +4273,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-gmt-navy-finish-with-red-markers",
@@ -3553,7 +4283,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-chapter-ring-gmt-brushed-finish",
@@ -3563,7 +4293,47 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-nautilus-gold-finish",
+    "name": "SKX007 Watch Bracelet: Nautilus Gold Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-nautilus-rose-gold-finish",
+    "name": "SKX007 Watch Bracelet: Nautilus Rose Gold Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-nautilus-black-finish",
+    "name": "SKX007 Watch Bracelet: Nautilus Black Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-watch-bracelet-nautilus-brushed-finish",
+    "name": "SKX007 Watch Bracelet: Nautilus Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-chapter-ring-brushed-finish",
@@ -3573,7 +4343,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-sub-style-grey-white",
@@ -3706,6 +4476,56 @@
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/fkm-rubber-strap-forest-green",
+    "name": "FKM Rubber Strap: Forest Green",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/fkm-rubber-strap-navy-blue",
+    "name": "FKM Rubber Strap: Navy Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/fkm-rubber-strap-red",
+    "name": "FKM Rubber Strap: Red",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/fkm-rubber-strap-orange",
+    "name": "FKM Rubber Strap: Orange",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/vintage-leather-strap-navy-blue",
+    "name": "Vintage Leather Strap: Navy Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Leather Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk941-gmt-sub-case-steel-finish-nh34-compatible",
     "name": "NMK941 GMT Sub SKX007/SRPD Watch Case Mk 2: Steel Finish (NH34 Compatible)",
     "category": "case",
@@ -3733,7 +4553,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-matte-black-finish-with-rainbow-markers",
@@ -3743,7 +4563,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-gmt-divemaster-black-nh34-compatible",
@@ -3836,6 +4656,26 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-lx-bezel-black-finish",
+    "name": "SKX007/SRPD Slim LX Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-lx-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim LX Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-ceramic-bezel-insert-dual-time-style-green-black",
     "name": "SKX007/SRPD Lumed Ceramic Bezel Insert: Dual Time Style Green/Black",
     "category": "bezel_insert",
@@ -3884,6 +4724,46 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit NH-series (product_type 'Rotors')"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-sub-bezel-gold-finish",
+    "name": "SKX007/SRPD Slim Sub Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-sub-bezel-rose-gold-finish",
+    "name": "SKX007/SRPD Slim Sub Bezel: Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-sub-bezel-black-finish",
+    "name": "SKX007/SRPD Slim Sub Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-sub-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim Sub Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-sub-style-baby-blue",
@@ -4046,6 +4926,66 @@
     "evidence": "vendor product_type 'SKX013 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-gmt-bezel-black-finish",
+    "name": "SKX007/SRPD GMT Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-dual-time-bezel-black-finish",
+    "name": "SKX007/SRPD Dual Time Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-gmt-bezel-ice-finish",
+    "name": "SKX007/SRPD GMT Bezel: Ice Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-gmt-bezel-steel-finish",
+    "name": "SKX007/SRPD GMT Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-dual-time-bezel-ice-finish",
+    "name": "SKX007/SRPD Dual Time Bezel: Ice Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-dual-time-bezel-steel-finish",
+    "name": "SKX007/SRPD Dual Time Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-hands-snowflake-gold-finish",
     "name": "Watch Hands: Snowflake Gold Finish",
     "category": "hands",
@@ -4096,6 +5036,46 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-stepped-pilot-bezel-rose-gold",
+    "name": "SKX007/SRPD Stepped Pilot Bezel: Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-stepped-pilot-bezel-gold",
+    "name": "SKX007/SRPD Stepped Pilot Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-stepped-pilot-bezel-pvd-black",
+    "name": "SKX007/SRPD Stepped Pilot Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-stepped-pilot-bezel-steel",
+    "name": "SKX007/SRPD Stepped Pilot Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-dssd-style-stealth",
     "name": "SKX007/SRPD Ceramic Bezel Insert: DSSD style Stealth",
     "category": "bezel_insert",
@@ -4116,14 +5096,64 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srpe-pilot-bezel-gold",
+    "name": "SRPE Pilot Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-pilot-bezel-pvd-black",
+    "name": "SRPE Pilot Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-pilot-bezel-polished",
+    "name": "SRPE Pilot Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-big-tooth-bezel-pvd-black-finish",
+    "name": "SKX007/SRPD Big Tooth Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-big-tooth-bezel-steel-finish",
+    "name": "SKX007/SRPD Big Tooth Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk308-skx-srpd-slim-domed-sapphire-crystal-for-sloped-inserts",
     "name": "NMK308 - SKX/SRPD Slim Domed Sapphire Crystal for Sloped Inserts",
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk309-skx-srpd-slim-flat-sapphire-crystal-for-flat-inserts",
@@ -4131,9 +5161,49 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-coin-edge-bezel-rose-gold-finish",
+    "name": "SKX007/SRPD Slim Coin Edge Bezel: Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-coin-edge-bezel-gold-finish",
+    "name": "SKX007/SRPD Slim Coin Edge Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-coin-edge-bezel-pvd-black-finish",
+    "name": "SKX007/SRPD Slim Coin Edge Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-coin-edge-bezel-steel-finish",
+    "name": "SKX007/SRPD Slim Coin Edge Bezel: Steel Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-cathedral-gold-finish",
@@ -4146,6 +5216,66 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nmk923-3-oclock-no-crown-guard-srpe-watch-case-pvd-black-finish",
+    "name": "NMK923 3 O'clock No Crown Guard SRPE Watch Case: PVD Black Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk923-3-oclock-no-crown-guard-srpe-watch-case-polished-finish",
+    "name": "NMK923 3 O'clock No Crown Guard SRPE Watch Case: Polished Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk923-3-oclock-no-crown-guard-srpe-watch-case-gold-finish",
+    "name": "NMK923 3 O'clock No Crown Guard SRPE Watch Case: Gold Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk922-srpe-watch-case-pvd-black-finish",
+    "name": "NMK922 SRPE Watch Case: PVD Black Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk922-srpe-watch-case-polished-finish",
+    "name": "NMK922 SRPE Watch Case: Polished Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk922-srpe-watch-case-gold-finish",
+    "name": "NMK922 SRPE Watch Case: Gold Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-chapter-ring-rainbow-brushed",
     "name": "SKX007/SRPD Chapter Ring: Rainbow Brushed Finish",
     "category": "chapter_ring",
@@ -4153,7 +5283,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-chapter-ring-rainbow-polished",
@@ -4163,7 +5293,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-dual-time-style-rainbow",
@@ -4204,6 +5334,66 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/vintage-leather-strap-brown",
+    "name": "Vintage Leather Strap: Brown",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Leather Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/pilot-leather-strap-black",
+    "name": "Pilot Leather Strap: Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Leather Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-crown-polished-gold-finish",
+    "name": "SKX013 Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-crown-polished-rose-gold-finish",
+    "name": "SKX013 Crown: Polished Rose Gold Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chunky-crown-polished-finish",
+    "name": "SKX013 Chunky Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-knurled-crown-polished-finish",
+    "name": "SKX013 Knurled Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-slim-caseback-rose-gold-finish",
@@ -4503,7 +5693,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-kanji-style-black-finish",
@@ -4513,7 +5703,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-great-wave-black-finish",
@@ -4636,6 +5826,46 @@
     "evidence": "vendor product_type 'SKX013 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-grip-crown-gold-finish",
+    "name": "SKX007 Big Grip Crown: Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-grip-crown-rose-gold-finish",
+    "name": "SKX007 Big Grip Crown: Rose Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-grip-crown-polished-black-finish",
+    "name": "SKX007 Big Grip Crown: Polished Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-grip-crown-polished-finish",
+    "name": "SKX007 Big Grip Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-hands-baton-polished-finish",
     "name": "Watch Hands: Baton Polished Finish",
     "category": "hands",
@@ -4644,6 +5874,26 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-srpd-watch-bracelet-oyster-rose-gold-finish",
+    "name": "SKX007 Watch Bracelet: Oyster Rose Gold Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-watch-bracelet-oyster-gold-finish",
+    "name": "SKX007 Watch Bracelet: Oyster Gold Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-slim-sapphire-caseback-pvd-black-finish",
@@ -4696,6 +5946,106 @@
     "evidence": "vendor product_type 'SKX007 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nmk802-curved-end-skx013-rubber-strap-olive-green",
+    "name": "NMK802 FKM Curved End SKX013 Rubber Strap: Olive Green",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX013 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk802-curved-end-skx013-rubber-strap-grey",
+    "name": "NMK802 FKM Curved End SKX013 Rubber Strap: Grey",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX013 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk802-curved-end-skx013-rubber-strap-navy-blue",
+    "name": "NMK802 FKM Curved End SKX013 Rubber Strap: Navy Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX013 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk802-curved-end-skx013-rubber-strap-orange",
+    "name": "NMK802 FKM Curved End SKX013 Rubber Strap: Orange",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX013 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk802-curved-end-skx013-rubber-strap-black",
+    "name": "NMK802 FKM Curved End SKX013 Rubber Strap: Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX013 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk801-curved-end-skx-srpd-rubber-strap-olive-green",
+    "name": "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Olive Green",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk801-curved-end-skx-srpd-rubber-strap-grey",
+    "name": "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Grey",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk801-curved-end-skx-srpd-rubber-strap-orange",
+    "name": "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Orange",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk801-curved-end-skx-srpd-rubber-strap-black",
+    "name": "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk801-curved-end-skx-srpd-rubber-strap-navy-blue",
+    "name": "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Navy Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007 Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk928-seamaster-skx-sprd-watch-case-gold-finish",
     "name": "NMK928 Seamaster SKX/SPRD Watch Case: Gold Finish",
     "category": "case",
@@ -4704,6 +6054,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-seamaster-bezel-black-finish",
+    "name": "SKX007/SRPD Seamaster Bezel: Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-seamaster-bezel-gold-finish",
+    "name": "SKX007/SRPD Seamaster Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk928-seamaster-skx-sprd-watch-case-black-finish",
@@ -4726,6 +6096,26 @@
     "evidence": "vendor product_type 'SKX007 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-seamaster-bezel-brushed-finish",
+    "name": "SKX007/SRPD Seamaster Bezel: Brushed Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-watch-bracelet-jubilee-brushed-polished-finish",
+    "name": "SRPE Watch Bracelet: Jubilee Brushed/Polished Finish",
+    "category": "strap",
+    "family": "srpe-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bracelets' / title match -> srpe (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk929-nautical-skx-sprd-watch-case-pvd-black-finish",
     "name": "NMK929 Nautical SKX/SPRD Watch Case: PVD Black Finish",
     "category": "case",
@@ -4741,9 +6131,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-snowflake-gold",
@@ -4766,6 +6156,26 @@
     "evidence": "title explicit NH-series (product_type 'Rotors')"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-pilot-bezel-rose-gold-finish",
+    "name": "SKX007/SRPD Pilot Bezel: Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-pilot-bezel-gold-finish",
+    "name": "SKX007/SRPD Pilot Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk934-mm300-skx-titanium-case-bundle",
     "name": "NMK934 MM300 SKX007/SPRD Titanium Case Bundle",
     "category": "case",
@@ -4784,6 +6194,116 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seatbelt-nato-strap-james-bond",
+    "name": "Seatbelt NATO Strap: Bond",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'NATO Strap' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seatbelt-nato-strap-black-grey",
+    "name": "Seatbelt NATO Strap: Black/Grey",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'NATO Strap' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seatbelt-nato-strap-olive-green",
+    "name": "Seatbelt NATO Strap: Olive Green",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'NATO Strap' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seatbelt-nato-strap-sand",
+    "name": "Seatbelt NATO Strap: Sand",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'NATO Strap' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seatbelt-nato-strap-grey",
+    "name": "Seatbelt NATO Strap: Grey",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'NATO Strap' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seatbelt-nato-strap-navy-blue",
+    "name": "Seatbelt NATO Strap:  Navy",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'NATO Strap' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seatbelt-nato-strap-black",
+    "name": "Seatbelt NATO Strap: Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'NATO Strap' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-waffle-orange",
+    "name": "Rubber Strap: Waffle Orange",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-waffle-grey",
+    "name": "Rubber Strap: Waffle Grey",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-waffle-navy-blue",
+    "name": "Rubber Strap: Waffle Navy",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/rubber-strap-waffle-black",
+    "name": "Rubber Strap: Waffle Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Rubber Straps' -- lug-width-based strap (leather/rubber/NATO/cotton), fits any case at the matching lug width, not case-specific"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-sub-style-green-white",
@@ -4896,6 +6416,26 @@
     "evidence": "vendor product_type 'SKX013 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srpe-coil-bezel-pvd-black-finish",
+    "name": "SRPE Coil Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-coil-bezel-gold-finish",
+    "name": "SRPE Coil Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-dial-skeleton-gunmetal-rose-gold",
     "name": "Watch Dial: Skeleton Gunmetal/Rose Gold",
     "category": "dial",
@@ -4914,6 +6454,46 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk918-pilot-case-bundle-polished-finish",
+    "name": "NMK918 Pilot SRPE Watch Case Bundle: Polished Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk918-pilot-case-bundle-aged-steel-finish",
+    "name": "NMK918 Pilot SRPE Watch Case Bundle: Aged Steel Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk917-pilot-case-w-coil-bezel-polished-finish",
+    "name": "NMK917 Pilot SRPE Watch Case Bundle w Coil Bezel: Polished Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk917-pilot-case-w-coil-bezel-aged-steel",
+    "name": "NMK917 Pilot SRPE Watch Case Bundle w Coil Bezel: Aged Steel Finish",
+    "category": "case",
+    "family": "srpe-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "vendor product_type 'SRPE Cases'"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-sakura-yellow",
@@ -4944,6 +6524,56 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-crown-gold-finish",
+    "name": "SKX007 Big Crown: Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-crown-rose-gold-finish",
+    "name": "SKX007 Big Crown: Rose Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-crown-sandblasted-finish",
+    "name": "SKX007 Big Crown: Sandblasted Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-crown-pvd-black-finish",
+    "name": "SKX007 Big Crown: PVD Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-big-crown-polished-finish",
+    "name": "SKX007 Big Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk916-3h-turtle-skx013-watch-case",
@@ -5016,6 +6646,36 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srpe-coil-bezel-polished-finish",
+    "name": "SRPE Coil Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-fluted-bezel-pvd-black-finish",
+    "name": "SRPE Fluted Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-grey-dawn-finish",
+    "name": "SRPE Chapter Ring: Grey Dawn Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-dial-divemaster-white-w-black-lume",
     "name": "Watch Dial: Divemaster White w Black Lume",
     "category": "dial",
@@ -5064,6 +6724,16 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Casebacks', assumed SKX007/SRPD shell (shared caseback thread per Lucius evidence, not independently confirmed on this SKU)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-super-engineer",
+    "name": "SKX007 Watch Bracelet: Super Engineer Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk921-b-r-skx007-srpd-watch-case-bundle-rose-gold-finish",
@@ -5156,6 +6826,26 @@
     "evidence": "vendor product_type 'SKX013 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nmk352-srpe-double-domed-sapphire-crystal",
+    "name": "NMK352 - SRPE Double Domed Sapphire Crystal",
+    "category": "crystal",
+    "family": "srpe-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Sapphire Crystals' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk351-srpe-flat-sapphire-crystal",
+    "name": "NMK351 - SRPE Flat Sapphire Crystal",
+    "category": "crystal",
+    "family": "srpe-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Sapphire Crystals' / title match -> srpe"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-steel-bezel-insert-dual-time-kanji-black",
     "name": "SKX007/SRPD Steel Bezel Insert: Dual Time Kanji Black",
     "category": "bezel_insert",
@@ -5174,6 +6864,166 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-brushed-finish",
+    "name": "SRPE Chapter Ring: Brushed Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-brushed-finish-with-laser-etched-markers",
+    "name": "SRPE Chapter Ring: Brushed Finish with Laser Etched Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-matte-black-finish",
+    "name": "SRPE Chapter Ring: Matte Black Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-matte-black-finish-with-red-markers",
+    "name": "SRPE Chapter Ring: Matte Black Finish with Red Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-chapter-ring-sunburst-navy-finish-with-white-markers",
+    "name": "SRPE Chapter Ring: Sunburst Navy Finish with White Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-polished-finish-with-laser-etched-markes",
+    "name": "SRPE Chapter Ring: Polished Finish with Laser Etched Markers",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chapter-ring-polished-finish",
+    "name": "SRPE Chapter Ring: Polished Finish",
+    "category": "chapter_ring",
+    "family": "srpe-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Chapter Rings' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-watch-bracelet-oyster-black-brushed-finish",
+    "name": "SRPE Watch Bracelet: Oyster Black Brushed Finish",
+    "category": "strap",
+    "family": "srpe-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bracelets' / title match -> srpe (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-watch-bracelet-oyster-brushed-finish-1",
+    "name": "SRPE Watch Bracelet: Oyster Brushed Finish",
+    "category": "strap",
+    "family": "srpe-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bracelets' / title match -> srpe (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-crown-pvd-black-finish",
+    "name": "SRPE Crown: PVD Black Finish",
+    "category": "crown",
+    "family": "srpe-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Crowns' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-crown-polished-gold-finish",
+    "name": "SRPE Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "srpe-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Crowns' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-crown-polished-finish",
+    "name": "SRPE Crown: Polished Finish",
+    "category": "crown",
+    "family": "srpe-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Crowns' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-fluted-bezel-gold-finish",
+    "name": "SRPE Fluted Bezel: Gold Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-fluted-bezel-polished-finish",
+    "name": "SRPE Fluted Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "srpe-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Bezels' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-knurled-crown-polished-finish",
+    "name": "SRPE Knurled Crown: Polished Finish",
+    "category": "crown",
+    "family": "srpe-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Crowns' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-chunky-crown-polished-finish",
+    "name": "SRPE Chunky Crown: Polished Finish",
+    "category": "crown",
+    "family": "srpe-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Crowns' / title match -> srpe"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-arabic-black-finish",
@@ -5224,6 +7074,56 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-crown-polished-gold-finish",
+    "name": "SKX007 Sterile Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-crown-rose-gold-finish",
+    "name": "SKX007 Sterile Crown: Rose Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-crown-sandblasted-finish",
+    "name": "SKX007 Sterile Crown: Sandblasted Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-crown-pvd-black-finish",
+    "name": "SKX007 Sterile Crown: PVD Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-sterile-crown-polished-finish",
+    "name": "SKX007 Sterile Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-lumed-ceramic-bezel-insert-smp-style",
@@ -5343,7 +7243,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-numerals-style-black-finish",
@@ -5353,7 +7253,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-numerals-style-silver-finish",
@@ -5363,7 +7263,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-62mas-black-finish",
@@ -5496,6 +7396,26 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx013-sterile-crown-pvd-matte-black-finish",
+    "name": "SKX013 Sterile Crown: PVD Matte Black Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-sterile-crown-polished-finish-1",
+    "name": "SKX013 Sterile Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-hands-lightning-second-hand-mk2",
     "name": "Watch Hands: Lightning Second Hand Mk2",
     "category": "hands",
@@ -5533,7 +7453,17 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-knurled-crown-polished-gold-finish",
+    "name": "SKX007 Knurled Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-aluminium-bezel-insert-seiko-style-black-grey",
@@ -5566,6 +7496,26 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx013-crown-pvd-matte-black-finish",
+    "name": "SKX013 Crown: PVD Matte Black Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-watch-bracelet-oyster-brushed-finish",
+    "name": "SRP Turtle Watch Bracelet: Oyster Brushed Finish",
+    "category": "strap",
+    "family": "srp-turtle-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bracelets' / title match -> srp-turtle (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-chapter-ring-circle-style-brushed-finish",
     "name": "SKX007/SRPD Lumed Chapter Ring: Circle Style Brushed Finish",
     "category": "chapter_ring",
@@ -5573,7 +7523,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-chapter-ring-polished-finish-1",
@@ -5583,7 +7533,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-lumed-glass-bezel-insert-vintage-dual-time-style-coke",
@@ -5676,6 +7626,26 @@
     "evidence": "vendor product_type 'SKX013 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-oyster-polished-middle-links",
+    "name": "SKX007 Watch Bracelet: Oyster with Polished Middle Links",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-watch-bracelet-beads-of-rice",
+    "name": "SKX/SRPD Watch Bracelet: Beads of Rice Brushed/Polished Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-titanium-caseback",
     "name": "SKX Titanium Caseback: Sandblasted Finish",
     "category": "case",
@@ -5686,6 +7656,66 @@
     "evidence": "product_type 'Casebacks', assumed SKX007/SRPD shell (shared caseback thread per Lucius evidence, not independently confirmed on this SKU)"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srpd-crown-pvd-matte-black-finish-red-s",
+    "name": "SRPD Crown: PVD Matte Black Finish (Red S)",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpd-crown-polished-rose-gold-finish",
+    "name": "SRPD Crown: Polished Rose Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpd-crown-pvd-matte-black-finish",
+    "name": "SRPD Crown: PVD Matte Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpd-crown-polished-gold-finish",
+    "name": "SRPD Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpd-crown-polished-finish-red-s",
+    "name": "SRPD Crown: Polished Finish (Red S)",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpd-crown-polished-finish",
+    "name": "SRPD Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPD Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-grey-dawn-finish",
     "name": "SKX007/SRPD Chapter Ring: Grey Dawn Finish",
     "category": "chapter_ring",
@@ -5693,7 +7723,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-cerulean-with-white-markers",
@@ -5703,7 +7733,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-purple-finish-white-markers",
@@ -5713,7 +7743,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-yellow-finish-with-black-markers",
@@ -5723,7 +7753,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-chapter-ring-red-finish-with-white-markers",
@@ -5733,7 +7763,67 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-knurled-bezel-polished-black-finish",
+    "name": "SKX007/SRPD Knurled Bezel: Polished Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-mm300-bezel-pvd-black-finish",
+    "name": "SKX013 MM300 Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-mm300-bezel-polished-finish",
+    "name": "SKX013 MM300 Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-polished-gold-finish",
+    "name": "SKX007 Chunky Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-rose-gold-finish",
+    "name": "SKX007 Chunky Crown: Rose Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-polished-black-finish",
+    "name": "SKX007 Chunky Crown: Polished Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx013-lumed-ceramic-bezel-insert-seiko-style-black-white",
@@ -5764,6 +7854,56 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-jubilee-two-tone-gold",
+    "name": "SKX007 Watch Bracelet: Jubilee Two-Tone Gold Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-oyster-two-tone-rose-gold",
+    "name": "SKX007 Watch Bracelet: Oyster Two-Tone Rose Gold Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-president",
+    "name": "SKX007 Watch Bracelet: President Brushed/Polished Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-watch-bracelet-oyster-brushed",
+    "name": "SKX013 Watch Bracelet: Oyster Brushed",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bracelets' / title match -> skx013 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-watch-bracelet-jubilee-brushed-polished",
+    "name": "SKX013 Watch Bracelet: Jubilee Brushed/Polished",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bracelets' / title match -> skx013 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk911-62mas-skx007-srpd-watch-case-rose-gold-finish",
@@ -5824,6 +7964,66 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-pvd-matte-black-finish",
+    "name": "SKX007 Chunky Crown: PVD Matte Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-polished-black-finish-red-s",
+    "name": "SKX007 Crown: Polished Black Finish (Red S)",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-chunky-crown-polished-finish-red-s",
+    "name": "SKX007 Chunky Crown: Polished Finish (Red S)",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-knurled-bezel-pvd-matte-black-finish",
+    "name": "SKX007/SRPD Knurled Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-mm300-bezel-polished-black-finish",
+    "name": "SKX007/SRPD MM300 Bezel: Polished Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-coin-edge-bezel-rose-gold-finish",
+    "name": "SKX007/SRPD Coin Edge Bezel: Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-cathedral-vintage-patina-lume-finish",
@@ -5975,7 +8175,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-mm1000-black-finish",
@@ -6036,6 +8236,36 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-lx-bezel-brushed-gold-finish",
+    "name": "SKX007/SRPD LX Bezel: Brushed Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-lx-bezel-brushed-rose-gold-finish-1",
+    "name": "SKX007/SRPD LX Bezel: Brushed Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-sub-bezel-polished-rose-gold-finish",
+    "name": "SKX007/SRPD Sub Bezel: Polished Rose Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-u1-black-finish",
@@ -6148,6 +8378,26 @@
     "evidence": "vendor product_type 'SKX007 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-oyster-black-brushed-finish",
+    "name": "SKX007 Watch Bracelet: Oyster Black Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-srpd-sub-bezel-polished-black-finish",
+    "name": "SKX007/SRPD Sub Bezel: Polished Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-dual-time-grey",
     "name": "SKX007/SRPD Ceramic Bezel Insert: Dual Time style Grey/White",
     "category": "bezel_insert",
@@ -6176,6 +8426,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-oyster-two-tone-gold-finish",
+    "name": "SKX007 Watch Bracelet: Oyster Two-Tone Gold Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-sword-vintage-patina-lume-finish",
@@ -6428,6 +8688,56 @@
     "evidence": "title/type explicit SKX013 bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-matte-black-finish-with-orange-marker",
+    "name": "SKX013 Chapter Ring: Matte Black Finish with Orange Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-matte-black-finish-with-yellow-markers",
+    "name": "SKX013 Chapter Ring: Matte Black Finish with Yellow Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-matte-black-finish-with-red-markers",
+    "name": "SKX013 Chapter Ring: Matte Black Finish with Red Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-matte-black-finish-with-gold-marker",
+    "name": "SKX013 Chapter Ring: Matte Black Finish with Gold Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-matte-black-finish-with-blue-marker",
+    "name": "SKX013 Chapter Ring: Matte Black Finish with Blue Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-titanium-case-bezel-crown-bundle",
     "name": "NMK910 SKX007 Titanium Case, Bezel, Crown Bundle",
     "category": "case",
@@ -6455,7 +8765,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-polished-gold-with-markers",
@@ -6465,7 +8775,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-polished-with-markers",
@@ -6475,7 +8785,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-polished-finish",
@@ -6485,7 +8795,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-polished-black-with-markers",
@@ -6495,7 +8805,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-polished-black",
@@ -6505,7 +8815,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-brushed-gold-with-markers",
@@ -6515,7 +8825,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-brushed-gold-finish",
@@ -6525,7 +8835,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-brushed-with-markers",
@@ -6535,7 +8845,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-brushed-finish",
@@ -6545,7 +8855,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-brushed-black-with-markers",
@@ -6555,7 +8865,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk304-skx007-srpd-flat-sapphire-crystal",
@@ -6563,9 +8873,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk305-skx-low-double-domed-crystal",
@@ -6573,9 +8883,109 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-brushed-black-finish",
+    "name": "SKX013 Chapter Ring: Brushed Black Finish",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-polished-finish",
+    "name": "SKX013 Chapter Ring: Polished Finish",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-brushed-finish-1",
+    "name": "SKX013 Chapter Ring: Brushed Finish",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-polished-with-markers",
+    "name": "SKX013 Chapter Ring: Polished Finish with Laser Etched Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-polished-black-with-markers",
+    "name": "SKX013 Chapter Ring: Polished Black Finish with Laser Etched Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-polished-black-finish",
+    "name": "SKX013 Chapter Ring: Polished Black Finish",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-brushed-with-markers",
+    "name": "SKX013 Chapter Ring: Brushed Finish with Laser Etched Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-chapter-ring-brushed-black-with-markers",
+    "name": "SKX013 Chapter Ring: Brushed Black Finish with Laser Etched Markers",
+    "category": "chapter_ring",
+    "family": "skx013-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Chapter Rings' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-jubilee",
+    "name": "SKX007 Watch Bracelet: Jubilee Polished/Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-oyster-brushed-finish",
+    "name": "SKX007 Watch Bracelet: Oyster Brushed Finish",
+    "category": "strap",
+    "family": "skx007-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007 Bracelets' / title match -> skx007 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-mercedes-rose-gold-finish",
@@ -6728,6 +9138,26 @@
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-polished-rose-gold-finish",
+    "name": "SKX007 Crown: Polished Rose Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-crown-polished-black-finish",
+    "name": "SKX007 Crown: Polished Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-caseback-brushed-black-finish",
     "name": "SKX Caseback: Brushed Black Finish",
     "category": "case",
@@ -6778,6 +9208,36 @@
     "evidence": "title/type explicit SKX013 bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crown-polished-gold-finish",
+    "name": "SRP Turtle Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "srp-turtle-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Crowns' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-knurled-crown-sandblasted-finish",
+    "name": "SKX007 Knurled Crown: Sandblasted Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-knurled-crown-pvd-matte-black-finish",
+    "name": "SKX007 Knurled Crown: PVD Matte Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-sapphire-display-caseback-pvd-black-finish",
     "name": "SKX Sapphire Display Caseback : PVD Black Finish",
     "category": "case",
@@ -6788,6 +9248,16 @@
     "evidence": "product_type 'Casebacks', assumed SKX007/SRPD shell (shared caseback thread per Lucius evidence, not independently confirmed on this SKU)"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx-knurled-crown-polished-finish",
+    "name": "SKX007 Knurled Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-forest-green-finish-with-white-markers",
     "name": "SKX007/SRPD Chapter Ring: Forest Green Finish with White Markers",
     "category": "chapter_ring",
@@ -6795,7 +9265,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-skx-skeleton-finish",
@@ -6855,7 +9325,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-lumed-ceramic-bezel-insert-smp-style-black-white-mk2",
@@ -6875,7 +9345,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-lumed-ceramic-bezel-insert-dual-time-style-batman",
@@ -6895,7 +9365,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-polished-gold-finish",
@@ -6905,7 +9375,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-polished-gold-finish-with-markers",
@@ -6915,7 +9385,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-brushed-black-finish-with-markers",
@@ -6925,7 +9395,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-brushed-black-finish",
@@ -6935,7 +9405,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-polished-black-finish",
@@ -6945,7 +9415,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-polished-black-finish-with-markers",
@@ -6955,7 +9425,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk303-skx-top-hat-sapphire-crystal",
@@ -6963,9 +9433,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-merc-second-hands",
@@ -6976,6 +9446,66 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-mm300-bezel-pvd-matte-black-finish",
+    "name": "SKX007/SRPD MM300 Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-sub-bezel-pvd-black-finish",
+    "name": "SRP Turtle Sub Bezel: PVD Black Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-sub-bezel-polished-gold-finish",
+    "name": "SRP Turtle Sub Bezel: Polished Gold Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-beyblade-bezel-polished-finish",
+    "name": "SKX007/SRPD Sharkey Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-turbine-bezel-polished-finish",
+    "name": "SKX007/SRPD Turbine Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-gear-bezel-polished-finish",
+    "name": "SKX007/SRPD Gear Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-merc-second-hands-1",
@@ -7038,6 +9568,126 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-pilot-bezel-sandblasted-finish",
+    "name": "SRP Turtle Pilot Bezel: Sandblasted Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-pilot-bezel-polished-finish",
+    "name": "SRP Turtle Pilot Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-pilot-bezel-pvd-matte-black-finish",
+    "name": "SRP Turtle Pilot Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-pilot-bezel-brushed-finish",
+    "name": "SRP Turtle Pilot Bezel: Brushed Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-pilot-bezel-sandblasted-finish",
+    "name": "SKX013 Pilot Bezel: Sandblasted Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-pilot-bezel-pvd-matte-black-finish",
+    "name": "SKX013 Pilot Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-pilot-bezel-brushed-finish",
+    "name": "SKX013 Pilot Bezel: Brushed Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-pilot-bezel-polished-finish",
+    "name": "SKX013 Pilot Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-pilot-bezel-pvd-matte-black-finish",
+    "name": "SKX007/SRPD Pilot Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-pilot-bezel-sandblasted-finish",
+    "name": "SKX007/SRPD Pilot Bezel: Sandblasted Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-pilot-bezel-polished-finish",
+    "name": "SKX007/SRPD Pilot Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-pilot-bezel-brushed-finish",
+    "name": "SKX007/SRPD Pilot Bezel: Brushed Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-blue-finish-with-black-markers",
     "name": "SKX007/SRPD Chapter Ring: Blue Finish with Black Markers",
     "category": "chapter_ring",
@@ -7045,7 +9695,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-brushed-gold-finish",
@@ -7055,7 +9705,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-orange-finish-with-black-markers",
@@ -7065,7 +9715,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-sunburst-navy-finish-with-white-markers",
@@ -7075,7 +9725,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk906-samurai-skx-watch-case-polished-finish",
@@ -7116,6 +9766,36 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-crown-pvd-matte-black-finish-red-s",
+    "name": "SKX013 Crown: PVD Matte Black Finish (Red S)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-sub-bezel-pvd-black-finish",
+    "name": "SKX013 Sub Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-coin-edge-bezel-pvd-black-finish",
+    "name": "SKX013 Coin Edge Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-caseback-sandblasted-finish",
@@ -7278,14 +9958,24 @@
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crown-pvd-matte-black-finish",
+    "name": "SRP Turtle Crown: PVD Matte Black Finish",
+    "category": "crown",
+    "family": "srp-turtle-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Crowns' / title match -> srp-turtle"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk302-skx-double-domed-sapphire-crystal-no-bevel-edge",
     "name": "NMK302 - SKX/SRPD Double Domed Sapphire Crystal (No Bevel Edge)",
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-laser-etched-polished-finish",
@@ -7295,7 +9985,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-laser-etched-brushed-finish",
@@ -7305,7 +9995,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-gs-polished-finish",
@@ -7336,6 +10026,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-crown-polished-gold-finish",
+    "name": "SKX007 Crown: Polished Gold Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-caseback-polished-brushed-finish",
@@ -7418,6 +10118,16 @@
     "evidence": "vendor product_type 'SRP Turtle Bezel Inserts'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-coin-edge-bezel-pvd-matte-black-finish",
+    "name": "SRP Turtle Coin Edge Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-matte-black-finish-with-orange-markers",
     "name": "SRP Turtle Chapter Ring: Matte Black Finish with Orange Markers",
     "category": "chapter_ring",
@@ -7425,7 +10135,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-matte-black-finish-with-yellow-markers",
@@ -7435,7 +10145,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-matte-black-finish-with-red-markers",
@@ -7445,7 +10155,107 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crown-sandblasted-finish",
+    "name": "SRP Turtle Crown: Sandblasted Finish",
+    "category": "crown",
+    "family": "srp-turtle-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Crowns' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crown-sandblasted-finish-red-s",
+    "name": "SRP Turtle Crown: Sandblasted Finish (Red S)",
+    "category": "crown",
+    "family": "srp-turtle-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Crowns' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crown-pvd-matte-black-finish-red-s",
+    "name": "SRP Turtle Crown: PVD Matte Black Finish (Red S)",
+    "category": "crown",
+    "family": "srp-turtle-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Crowns' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crown-polished-finish-red-s",
+    "name": "SRP Turtle Crown: Polished Finish (Red S)",
+    "category": "crown",
+    "family": "srp-turtle-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Crowns' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crown-polished-finish",
+    "name": "SRP Turtle Crown: Polished Finish",
+    "category": "crown",
+    "family": "srp-turtle-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Crowns' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-crown-polished-finish-red-s",
+    "name": "SKX013 Crown: Polished Finish (Red S)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-crown-polished-finish",
+    "name": "SKX013 Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Crowns' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-double-domed-sapphire-crystal-1",
+    "name": "NMK321 - SKX013 Double Domed Sapphire Crystal",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Sapphire Crystals' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-sub-bezel-polished-finish",
+    "name": "SKX013 Sub Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-coin-edge-bezel-polished-finish",
+    "name": "SKX013 Coin Edge Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Bezels' / title match -> skx013"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx013-ceramic-bezel-insert-vintage-sub-style-black-white",
@@ -7485,7 +10295,37 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-chunky-crown-polished-finish",
+    "name": "SKX007 Chunky Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-mm300-bezel-polished-finish",
+    "name": "SKX007/SRPD MM300 Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-knurled-bezel-polished-finish",
+    "name": "SKX007/SRPD Knurled Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-mm-gold-finish",
@@ -7608,6 +10448,16 @@
     "evidence": "vendor product_type 'SKX007 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx-sub-bezel-pvd-black-finish",
+    "name": "SKX007/SRPD Sub Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-watch-case-pvd-matte-black-finish",
     "name": "NMK901 SKX007/SRPD Watch Case : PVD Matte Black Finish",
     "category": "case",
@@ -7668,6 +10518,76 @@
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx-crown-polished-finish-red-s",
+    "name": "SKX007 Crown: Polished Finish (Red S)",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-crown-sandblasted-finish-red-s",
+    "name": "SKX007 Crown: Sandblasted Finish (Red S)",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-crown-sandblasted-finish",
+    "name": "SKX007 Crown: Sandblasted Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-crown-pvd-black-finish-red-s",
+    "name": "SKX007 Crown: PVD Matte Black Finish (Red S)",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-crown-pvd-black-finish",
+    "name": "SKX007 Crown: PVD Matte Black Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-crown-polished-finish",
+    "name": "SKX007 Crown: Polished Finish",
+    "category": "crown",
+    "family": "skx007-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-sub-bezel-polished-finish",
+    "name": "SRP Turtle Sub Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-matte-black-finish-with-yellow-markers",
     "name": "SKX007/SRPD Chapter Ring: Matte Black Finish with Yellow Markers",
     "category": "chapter_ring",
@@ -7675,7 +10595,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-matte-black-finish-with-red-markers",
@@ -7685,7 +10605,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-matte-black-finish",
@@ -7695,7 +10615,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-ceramic-bezel-insert-dual-time-style-black-white",
@@ -7735,7 +10655,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Sapphire Crystals'"
+    "evidence": "product_type 'SRP Turtle Sapphire Crystals' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-steel-bezel-insert-vintage-skx-style-red",
@@ -7755,7 +10675,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-chapter-ring-matte-silver-finish",
@@ -7765,7 +10685,37 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "vendor product_type 'SRP Turtle Chapter Rings'"
+    "evidence": "product_type 'SRP Turtle Chapter Rings' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-coin-edge-bezel-polished-finish",
+    "name": "SRP Turtle Coin Edge Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-coin-edge-bezel-sandblasted-finish",
+    "name": "SRP Turtle Coin Edge Bezel: Sandblasted Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-coin-edge-bezel-polished-gold-finish",
+    "name": "SRP Turtle Coin Edge Bezel: Polished Gold Finish",
+    "category": "bezel",
+    "family": "srp-turtle-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRP Turtle Bezels' / title match -> srp-turtle"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srp-turtle-steel-bezel-insert-bb-style-black",
@@ -7875,7 +10825,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-ceramic-bezel-insert-ym-style-silver",
@@ -7948,6 +10898,36 @@
     "evidence": "title explicit SKX007/SRPD bezel insert"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/skx-sub-bezel-polished-finish",
+    "name": "SKX007/SRPD Sub Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-sub-bezel-sandblasted-finish",
+    "name": "SKX007/SRPD Sub Bezel: Sandblasted Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-sub-bezel-polished-gold-finish",
+    "name": "SKX007/SRPD Sub Bezel: Polished Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/ceramic-bezel-insert-smp-style-blue-white",
     "name": "SKX007/SRPD Ceramic Bezel Insert: SMP style Blue/White",
     "category": "bezel_insert",
@@ -8005,7 +10985,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-brushed-finish",
@@ -8015,7 +10995,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-chapter-ring-polished-finish",
@@ -8025,7 +11005,7 @@
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit SKX007/SRPD chapter ring"
+    "evidence": "product_type 'Chapter Rings' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/double-domed-sapphire-crystal",
@@ -8033,9 +11013,9 @@
     "category": "crystal",
     "family": "skx007-crystal",
     "attributes": {},
-    "specSource": "family-inferred",
-    "confidence": "medium",
-    "evidence": "product_type 'Sapphire Crystals', assumed SKX007/SRPD (most common line at this vendor)"
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://namokimods.com/products/aluminium-bezel-insert-gmt-style-red-black-coke",
@@ -8156,5 +11136,45 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/coin-edge-bezel-sandblasted-finish",
+    "name": "SKX007/SRPD Coin Edge Bezel: Sandblasted Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/coin-edge-bezel-gold-finish",
+    "name": "SKX007/SRPD Coin Edge Bezel: Polished Gold Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/coin-edge-bezel-polished-finish",
+    "name": "SKX007/SRPD Coin Edge Bezel: Polished Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/coin-edge-bezel-pvd-black",
+    "name": "SKX007/SRPD Coin Edge Bezel: PVD Matte Black Finish",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Bezels' / title match -> skx007"
   }
 ]

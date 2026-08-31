@@ -19,6 +19,7 @@ const PLAUSIBLE_GBP_RANGE: Record<string, [number, number]> = {
   dial: [6, 200],
   hands: [2, 100],
   bezel_insert: [6, 160],
+  bezel: [6, 200], // the rotating ring itself, typically pricier than just the insert
   crystal: [6, 160],
   chapter_ring: [6, 100],
   crown: [2, 65],

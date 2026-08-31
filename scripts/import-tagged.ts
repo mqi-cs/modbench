@@ -17,7 +17,7 @@ import { isStyleTag } from "../lib/db/style-tags";
 const TaggedEntrySchema = z.object({
   sourceUrl: z.string(),
   name: z.string(),
-  category: z.enum(["movement", "case", "dial", "hands", "bezel_insert", "crystal", "chapter_ring", "crown", "strap"]),
+  category: z.enum(["movement", "case", "dial", "hands", "bezel_insert", "bezel", "crystal", "chapter_ring", "crown", "strap"]),
   family: z.string(),
   attributes: z.record(z.string(), z.unknown()),
   specSource: z.enum(["vendor-stated", "family-inferred", "manual"]),
@@ -39,6 +39,7 @@ function main() {
   let updated = 0;
   let skippedUnknownFamily = 0;
   let skippedBadStyleTag = 0;
+  let skippedAlreadyReviewed = 0;
   let rejectedWritten = 0;
   const now = Date.now();
 
@@ -50,6 +51,10 @@ function main() {
         const parsed = RejectedEntrySchema.safeParse(entry);
         if (!parsed.success) continue;
         const r = parsed.data;
+        // Idempotency: don't write a duplicate row if this exact source URL
+        // was already recorded as rejected in a previous run.
+        const alreadyRejected = db.select().from(rejectedParts).where(eq(rejectedParts.sourceUrl, r.sourceUrl)).get();
+        if (alreadyRejected) continue;
         db.insert(rejectedParts)
           .values({
             id: nanoid(),
@@ -93,6 +98,14 @@ function main() {
         console.warn(`No placeholder part for ${t.sourceUrl} -- run scripts/ingest.ts first. Skipped.`);
         continue;
       }
+      // Never overwrite a human review decision. Re-running the tagger (e.g.
+      // after fixing a tagging-rule gap) must not silently reset an already
+      // approved/rejected part back to pending -- that would erase real
+      // review work, not just re-tag an unprocessed one.
+      if (existing.reviewState !== "pending") {
+        skippedAlreadyReviewed++;
+        continue;
+      }
 
       db.update(parts)
         .set({
@@ -113,7 +126,7 @@ function main() {
   }
 
   console.log(`Updated ${updated} parts to pending with real tags.`);
-  console.log(`Skipped ${skippedUnknownFamily} (unknown family), ${skippedBadStyleTag} (bad style tag).`);
+  console.log(`Skipped ${skippedUnknownFamily} (unknown family), ${skippedBadStyleTag} (bad style tag), ${skippedAlreadyReviewed} (already approved/rejected -- review decision preserved).`);
   console.log(`Wrote ${rejectedWritten} rows to rejected_parts.`);
 }
 

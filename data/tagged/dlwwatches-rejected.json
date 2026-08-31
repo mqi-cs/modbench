@@ -1,1 +1,620 @@
-[]
+[
+  {
+    "sourceUrl": "https://dlwwatches.com/products/crown-samurai-polished-steel",
+    "productName": "Crown - Samurai - Polished Steel",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-red-t-black",
+    "productName": "Ceramic Insert - Urchin Dual Time Red T Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-umber-x-rose-gold",
+    "productName": "Ceramic Insert - Urchin Sub Umber X Rose Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-umber-x-rose-gold",
+    "productName": "Ceramic Insert - Urchin Dual Time Umber X Rose Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-yacht-master-silver",
+    "productName": "Ceramic Insert - Samurai Yacht Master Silver",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/double-dome-sapphire-crystal-seiko-snzf-urchin",
+    "productName": "Sapphire Double Dome - URCHIN SNZF",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-seiko-sumo",
+    "productName": "Sapphire Double Dome - SUMO",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-urchin-black",
+    "productName": "Ceramic Insert - Urchin Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-urchin-black-w-red-triangle",
+    "productName": "Ceramic Insert - Urchin Red T Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-urchin-stealth",
+    "productName": "Ceramic Insert - Urchin Stealth",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-bezel-inserts-urchin-green",
+    "productName": "Ceramic Insert - Urchin Green",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-sumo-mk2-red-t-black",
+    "productName": "Ceramic Insert - Sumo DS Red T Black",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-blue",
+    "productName": "Ceramic Insert - Sumo DS Blue",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-black",
+    "productName": "Ceramic Insert - Sumo DS Black",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-hulk",
+    "productName": "Ceramic Insert - Sumo DS Hulk",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-stealth",
+    "productName": "Ceramic Insert - Sumo DS Stealth",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-black",
+    "productName": "Ceramic Insert - Urchin Dual Time Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-green",
+    "productName": "Ceramic Insert - Urchin Dual Time Green",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-stealth",
+    "productName": "Ceramic Insert - Urchin Dual Time Stealth",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-hornet",
+    "productName": "Ceramic Insert - Sumo DS Hornet",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-seiko-prospex-samurai",
+    "productName": "Sapphire Double Dome - SAMURAI",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-smp",
+    "productName": "Ceramic Insert - Sumo SMP Black",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-dual-time-bat",
+    "productName": "Ceramic Insert - Sumo Dual Time BAT.",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-mako-ray-1-2",
+    "productName": "Sapphire Double Dome - Mako & Ray (1 & 2)",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-black",
+    "productName": "Ceramic Insert - Urchin Sub Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-vintage-black-mk1",
+    "productName": "Ceramic Insert - Urchin Sub Vintage Black MK1",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-vintage-black-mk2",
+    "productName": "Ceramic Insert - Urchin Sub Vintage Black MK2",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-vintage-black-mk3",
+    "productName": "Ceramic Insert - Urchin Sub Vintage Black MK3",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-bat",
+    "productName": "Ceramic Insert - Urchin Dual Time BAT.",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-snzf-matt-silver",
+    "productName": "Chapter Ring - Urchin - Matt Silver",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-silver-w-markers",
+    "productName": "Chapter Ring - Urchin - Matt Silver w Markers",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-white",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (White)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-red",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (Red)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-orange",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (Orange)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-yellow",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (Yellow)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black",
+    "productName": "Chapter Ring - Urchin - Matt Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-polished-silver",
+    "productName": "Chapter Ring - Urchin - Polished Silver",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-polished-black",
+    "productName": "Chapter Ring - Urchin - Polished Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-blue",
+    "productName": "Ceramic Insert - Urchin Blue",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-blue",
+    "productName": "Ceramic Insert - Urchin Dual Time Blue",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-brushed-stealth",
+    "productName": "Ceramic Insert - Urchin Brushed Stealth",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-black",
+    "productName": "Ceramic Insert - Samurai Black",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-stealth",
+    "productName": "Ceramic Insert - Samurai Stealth",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-red-t-black",
+    "productName": "Ceramic Insert - Samurai Red T Black",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-stark-black",
+    "productName": "Ceramic Insert - Samurai Stark Black",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-black-luminous-green",
+    "productName": "Ceramic Insert - Samurai Black - Luminous Green",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-black-luminous-aquaris",
+    "productName": "Ceramic Insert - Samurai Black - Luminous Aquaris",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-yacht-master-black",
+    "productName": "Ceramic Insert - Urchin Yacht Master Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-black-luminous-green",
+    "productName": "Ceramic Insert - Urchin Sub Black - Luminous Green",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-black-luminous-aquaris",
+    "productName": "Ceramic Insert - Urchin Sub Black - Luminous Aquaris",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-black-luminous-green",
+    "productName": "Ceramic Insert - Urchin Dual Time Black - Luminous Green",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-black-luminous-aquaris",
+    "productName": "Ceramic Insert - Urchin Dual Time Black - Luminous Aquaris",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-black-luminous-green",
+    "productName": "Ceramic Insert - Sumo DS Black - Luminous Green",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-mk2-black-luminous-aquaris",
+    "productName": "Ceramic Insert - Sumo DS Black - Luminous Aquaris",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-coin-edge-polished-steel",
+    "productName": "Bezel - Mako & Ray (1 & 2) Coin Edge - Polished Steel",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-coin-edge-polished-pvd-black",
+    "productName": "Bezel - Mako & Ray (1 & 2) Coin Edge - Polished PVD Black",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-coin-edge-bead-blasted-pvd-black",
+    "productName": "Bezel - Mako & Ray (1 & 2) Coin Edge - Bead Blasted PVD Black",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-brushed-steel",
+    "productName": "Chapter Ring - Urchin - Brushed Steel",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-yacht-master-black",
+    "productName": "Ceramic Insert - Samurai Yacht Master Black",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/crown-samurai-polished-steel-s",
+    "productName": "Crown - Samurai - Polished Steel - \"S\"",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/crown-srp-turtle-polished-steel-red-s-1",
+    "productName": "Crown - Samurai - Polished Steel - Red \"S\"",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/crown-samurai-polished-pvd-black-s",
+    "productName": "Crown - Samurai - Polished PVD Black - \"S\"",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/crown-samurai-polished-pvd-black-red-s",
+    "productName": "Crown - Samurai - Polished PVD Black - Red \"S\"",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/crown-samurai-bead-blasted-pvd-black-s",
+    "productName": "Crown - Samurai - Bead Blasted PVD Black - \"S\"",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/crown-samurai-bead-blasted-pvd-black-red-s",
+    "productName": "Crown - Samurai - Bead Blasted PVD Black - Red \"S\"",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-snzf-urchin-deep-sea-polished-steel",
+    "productName": "Bezel - Urchin Deep Sea - Polished Steel",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-urchin-deep-sea-polished-pvd-black",
+    "productName": "Bezel - Urchin Deep Sea - Polished PVD Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-bezel-urchin-deep-sea-bead-blasted-pvd-black",
+    "productName": "Bezel - Urchin Deep Sea - Bead Blasted PVD Black",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-dual-time-black",
+    "productName": "Ceramic Insert - Sumo Dual Time Black",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-dual-time-red-t-black",
+    "productName": "Ceramic Insert - Sumo Dual Time Red T Black",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-dual-time-stealth",
+    "productName": "Ceramic Insert - Sumo Dual Time Stealth",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-stealth",
+    "productName": "Ceramic Insert - Urchin Sub Stealth",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-sumo-yacht-master-black",
+    "productName": "Ceramic Insert - Sumo Yacht Master Black",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-dual-time-black",
+    "productName": "Ceramic Insert - Samurai Dual Time Black",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-dual-time-red-t-stealth",
+    "productName": "Ceramic Insert - Samurai Dual Time Red T Black",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-dual-time-stealth",
+    "productName": "Ceramic Insert - Samurai Dual Time Stealth",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-coin-edge-polished-pvd-gold",
+    "productName": "Bezel - Mako & Ray (1 & 2) Coin Edge - Polished PVD Gold",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-ceramic-insert-urchin-dual-time-pep-sunset",
+    "productName": "Ceramic Insert - Urchin Dual Time PEPS. (Sunset)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-dark-knight",
+    "productName": "Ceramic Insert - Urchin Dual Time Dark Knight",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-aegean-blue",
+    "productName": "Ceramic Insert - Urchin Dual Time Aegean Blue",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-green",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (Green)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-blue",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (Blue)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-gold",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (Gold)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-black-w-markers-black",
+    "productName": "Chapter Ring - Urchin - Matt Black w Markers (Black)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-urchin-matt-silver-w-markers-white",
+    "productName": "Chapter Ring - Urchin - Matt Silver w Markers (White)",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-black-x-gold",
+    "productName": "Ceramic Insert - Urchin Sub Black X Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-brushed-stealth",
+    "productName": "Ceramic Insert - Urchin Sub Brushed Stealth",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-red-t-stealth",
+    "productName": "Ceramic Insert - Urchin Sub Red T Stealth",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-green",
+    "productName": "Ceramic Insert - Urchin Sub Green",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-red-t-stealth",
+    "productName": "Ceramic Insert - Urchin Dual Time Red T Stealth",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-black-x-gold",
+    "productName": "Ceramic Insert - Urchin Dual Time Black X Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-red-t-black-x-gold",
+    "productName": "Ceramic Insert - Urchin Dual Time Red T Black X Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-umber-x-gold",
+    "productName": "Ceramic Insert - Urchin Dual Time Umber X Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-umber",
+    "productName": "Ceramic Insert - Urchin Dual Time Umber",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-aegean-blue",
+    "productName": "Ceramic Insert - Urchin Sub Aegean Blue",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-green-x-gold",
+    "productName": "Ceramic Insert - Urchin Sub Green X Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-red-t-black-x-gold",
+    "productName": "Ceramic Insert - Urchin Sub Red T Black X Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-umber-x-gold",
+    "productName": "Ceramic Insert - Urchin Sub Umber X Gold",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-umber",
+    "productName": "Ceramic Insert - Urchin Sub Umber",
+    "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-deep-sea-polished-steel",
+    "productName": "Bezel - Mako & Ray (1 & 2) Deep Sea - Polished Steel",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-deep-sea-polished-pvd-black",
+    "productName": "Bezel - Mako & Ray (1 & 2) Deep Sea - Polished PVD Black",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-deep-sea-polished-pvd-gold",
+    "productName": "Bezel - Mako & Ray (1 & 2) Deep Sea - Polished PVD Gold",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/bezel-mako-ray-1-2-deep-sea-bead-blasted-pvd-black",
+    "productName": "Bezel - Mako & Ray (1 & 2) Deep Sea - Bead Blasted PVD Black",
+    "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  }
+]

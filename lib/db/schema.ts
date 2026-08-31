@@ -11,6 +11,10 @@ export const CATEGORIES = [
   "dial",
   "hands",
   "bezel_insert",
+  "bezel", // the rotating bezel ring itself -- distinct from bezel_insert (the disc it holds).
+  // Mates to the case, not the insert; added when clearing the Phase 1 tagging
+  // backlog once it was clear this was a real, sizeable category (100+ SKUs
+  // per vendor), not a handful of edge cases.
   "crystal",
   "chapter_ring",
   "crown",

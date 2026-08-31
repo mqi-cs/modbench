@@ -124,6 +124,7 @@ const FAMILIES: { key: string; category: string; label: string; description: str
   { key: "skx013-crystal", category: "crystal", label: "SKX013 crystal", description: "Crystal sized for the SKX013 case. Confirmed 3 real SKUs at luciusatelier.com." },
   { key: "srpe-crystal", category: "crystal", label: "SRPE crystal", description: "Crystal sized for the SRPE case. Confirmed 3 real SKUs at dlwwatches.com." },
   { key: "srp-turtle-crystal", category: "crystal", label: "SRP Turtle crystal", description: "Crystal sized for the SRP Turtle case, part of the broader srp-turtle-case family." },
+  { key: "ssk-gmt-crystal", category: "crystal", label: "SSK (Seiko 5 GMT) crystal", description: "Crystal for the SSK/Seiko 5 GMT line, same resolution as ssk-gmt-chapter-ring." },
   { key: "srp-turtle-insert", category: "bezel_insert", label: "SRP Turtle bezel insert", description: "Bezel insert sized for the SRP Turtle case. Confirmed 10 real SKUs at namokimods.com." },
   { key: "srp-turtle-chapter-ring", category: "chapter_ring", label: "SRP Turtle chapter ring", description: "Chapter ring sized for the SRP Turtle case. Confirmed 16 real SKUs at namokimods.com, 20 at dlwwatches.com." },
   { key: "skx007-chapter-ring", category: "chapter_ring", label: "SKX007/SRPD chapter ring", description: "Chapter ring sized for the SKX007/SRPD case." },
@@ -148,6 +149,32 @@ const FAMILIES: { key: string; category: string; label: string; description: str
     category: "chapter_ring",
     label: "Lucius Atelier Ultra Thin chapter ring",
     description: "Chapter ring scoped to the lucius-ultra-thin-case family specifically, not the generic skx013-case family.",
+  },
+
+  // --- bezel ring (the rotating ring, distinct from bezel_insert), crown, strap ---
+  // Added when clearing the Phase 1 tagging backlog -- confirmed real,
+  // multi-vendor categories (100+ SKUs each), not edge cases.
+  { key: "skx007-bezel", category: "bezel", label: "SKX007/SRPD bezel ring", description: "The rotating bezel ring for the SKX007/SRPD case -- mates to the case, holds a skx007-insert." },
+  { key: "skx013-bezel", category: "bezel", label: "SKX013 bezel ring", description: "The rotating bezel ring for the SKX013 case." },
+  { key: "srpe-bezel", category: "bezel", label: "SRPE bezel ring", description: "The rotating bezel ring for the SRPE case." },
+  { key: "srp-turtle-bezel", category: "bezel", label: "SRP Turtle bezel ring", description: "The rotating bezel ring for the SRP Turtle case." },
+  { key: "ssk-gmt-bezel", category: "bezel", label: "SSK (Seiko 5 GMT) bezel ring", description: "The rotating bezel ring for the SSK/Seiko 5 GMT line, same resolution as ssk-gmt-chapter-ring." },
+
+  { key: "skx007-crown", category: "crown", label: "SKX007/SRPD crown", description: "Crown sized for the SKX007/SRPD case tube." },
+  { key: "skx013-crown", category: "crown", label: "SKX013 crown", description: "Crown sized for the SKX013 case tube." },
+  { key: "srpe-crown", category: "crown", label: "SRPE crown", description: "Crown sized for the SRPE case tube." },
+  { key: "srp-turtle-crown", category: "crown", label: "SRP Turtle crown", description: "Crown sized for the SRP Turtle case tube." },
+  { key: "ssk-gmt-crown", category: "crown", label: "SSK (Seiko 5 GMT) crown", description: "Crown for the SSK/Seiko 5 GMT line, same resolution as ssk-gmt-chapter-ring." },
+
+  { key: "skx007-bracelet", category: "strap", label: "SKX007/SRPD bracelet", description: "Metal bracelet with end-links contoured specifically to the SKX007/SRPD case -- not interchangeable with other case shapes despite matching lug width." },
+  { key: "skx013-bracelet", category: "strap", label: "SKX013 bracelet", description: "Metal bracelet with end-links contoured to the SKX013 case." },
+  { key: "srpe-bracelet", category: "strap", label: "SRPE bracelet", description: "Metal bracelet with end-links contoured to the SRPE case." },
+  { key: "srp-turtle-bracelet", category: "strap", label: "SRP Turtle bracelet", description: "Metal bracelet with end-links contoured to the SRP Turtle case." },
+  {
+    key: "generic-strap",
+    category: "strap",
+    label: "Generic lug-width strap",
+    description: "NATO, leather, rubber, or cotton straps that mount on spring bars and fit by lug width alone, not case shape -- compatible with any case at the matching lug width, unlike the case-specific bracelet families above.",
   },
 ];
 

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "sourceUrl": "https://luciusatelier.com/products/vetus-high-precision-tweezer-with-carbon-fibre-tip",
+    "productName": "Vetus® High Precision Tweezer with Carbon Fibre Tip",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-movement-holder",
+    "productName": "SEIKO Movement Holder",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "luciusatelier"
+  }
+]

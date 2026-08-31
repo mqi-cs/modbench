@@ -90,6 +90,36 @@
     "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/full-grain-cowhide-leather-strap-20-16mm-cognac-side-stitch",
+    "name": "Full Grain Cowhide Leather Strap 20/16mm [Cognac, Side Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/full-grain-cowhide-leather-strap-20-16mm-chocolate-side-stitch",
+    "name": "Full Grain Cowhide Leather Strap 20/16mm [Chocolate, Side Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/full-grain-cowhide-leather-strap-20-16mm-green-side-stitch",
+    "name": "Full Grain Cowhide Leather Strap 20/16mm [Green, Side Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/bauhaus-dial-date-6h",
     "name": "Bauhaus Dial (Date @ 6H)",
     "category": "dial",
@@ -188,6 +218,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family."
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx-crown-ii-1908-presage-6mm-yellow-gold",
+    "name": "SKX Crown II - 1908 Presage - 6mm - Yellow Gold",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-1908-presage-6mm-silver",
+    "name": "SKX Crown II - 1908 Presage - 6mm - Silver",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/bauhaus-watch-case-33mm-ultra-thin-edition",
@@ -408,6 +458,246 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit 'Seiko (TMI) NH36 Automatic Movement - Day Date @ 4H Crown (White)'"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-onion-7mm-dlc-black-edition",
+    "name": "SKX Crown II - Onion - 7mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-onion-6mm-dlc-black-edition",
+    "name": "SKX Crown II - Onion - 6mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-onion-7mm",
+    "name": "SKX Crown II - Onion - 7mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-onion-6mm",
+    "name": "SKX Crown II - Onion - 6mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-7mm-signed-s-dlc-black-edition",
+    "name": "SKX Crown II - Knurled - 7mm - Signed S (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-7mm-signed-s",
+    "name": "SKX Crown II - Knurled - 7mm - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-7mm-dlc-black-edition",
+    "name": "SKX Crown II - Knurled - 7mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-7mm",
+    "name": "SKX Crown II - Knurled - 7mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-6mm-signed-s-dlc-black-edition",
+    "name": "SKX Crown II - Knurled - 6mm - Signed S (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-6mm-dlc-black-edition",
+    "name": "SKX Crown II - Knurled - 6mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-6mm-signed-s",
+    "name": "SKX Crown II - Knurled - 6mm - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-knurled-6mm",
+    "name": "SKX Crown II - Knurled - 6mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-diamond-8mm-dlc-black-edition",
+    "name": "SKX Crown II - Diamond - 8mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-diamond-7mm-dlc-black-edition",
+    "name": "SKX Crown II - Diamond - 7mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-diamond-8mm",
+    "name": "SKX Crown II - Diamond - 8mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-diamond-7mm",
+    "name": "SKX Crown II - Diamond - 7mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-7mm-signed-s-dlc-black-edition",
+    "name": "SKX Crown II - Coin Edge - 7mm - Signed S (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-7mm-signed-s",
+    "name": "SKX Crown II - Coin Edge - 7mm - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-7mm-dlc-black-edition",
+    "name": "SKX Crown II - Coin Edge - 7mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-7mm",
+    "name": "SKX Crown II - Coin Edge - 7mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-6mm-signed-s-dlc-black-edition",
+    "name": "SKX Crown II - Coin Edge - 6mm - Signed S (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-6mm-signed-s",
+    "name": "SKX Crown II - Coin Edge - 6mm - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-6mm-dlc-black-edition",
+    "name": "SKX Crown II - Coin Edge - 6mm (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-ii-coin-edge-6mm",
+    "name": "SKX Crown II - Coin Edge - 6mm",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/alpha-hands-blue-heated-steel",
@@ -830,6 +1120,46 @@
     "evidence": "tags explicit fits-nh34/35/36/38/72"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/full-grain-cowhide-leather-strap-20-16mm-brown-side-stitch",
+    "name": "Full Grain Cowhide Leather Strap 20/16mm [Brown, Side Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/full-grain-cowhide-leather-strap-20-16mm-blue-side-stitch",
+    "name": "Full Grain Cowhide Leather Strap 20/16mm [Blue, Side Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/full-grain-cowhide-leather-strap-20-16mm-black-side-stitch",
+    "name": "Full Grain Cowhide Leather Strap 20/16mm [Black, Side Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shell-cordovan-leather-strap-20-16mm-black-vintage-side-stitch",
+    "name": "Shell Cordovan Leather Strap 20/16mm [Black, Side Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/vintage-enamel-biege-dial-date",
     "name": "Vintage Enamel Biege Dial (Date)",
     "category": "dial",
@@ -1068,6 +1398,16 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/custom-shell-cordovan-leather-strap",
+    "name": "Custom Shell Cordovan Leather Strap",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/grand-seiko-gmt-dial-vintage-enamel-biege-for-nh34",
@@ -1552,6 +1892,116 @@
     "evidence": "tags explicit fits-nh34/35/36/38/72"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-big-crown-coin-edge-signed-s-in-red-dlc-black-edition",
+    "name": "SKX013 Big Crown - Coin Edge - Signed S in Red (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-big-crown-coin-edge-signed-s-red",
+    "name": "SKX013 Big Crown - Coin Edge - Signed S in Red",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-big-crown-coin-edge-signed-s-dlc-black-edition",
+    "name": "SKX013 Big Crown - Coin Edge - Signed S (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-big-crown-coin-edge-signed-s",
+    "name": "SKX013 Big Crown - Coin Edge - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-big-crown-coin-edge-dlc-black-edition",
+    "name": "SKX013 Big Crown - Coin Edge (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shell-cordovan-leather-strap-20-16mm-navy-blue",
+    "name": "Shell Cordovan Leather Strap 20/16mm [Navy Blue, Full Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shell-cordovan-leather-strap-20-16mm-red-wine",
+    "name": "Shell Cordovan Leather Strap 20/16mm [Red Wine, Full Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shell-cordovan-leather-strap-20-16mm-green",
+    "name": "Shell Cordovan Leather Strap 20/16mm [Green, Full Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shell-cordovan-leather-strap-20-16mm-cognac",
+    "name": "Shell Cordovan Leather Strap 20/16mm [Cognac, Full Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shell-cordovan-leather-strap-20-16mm-chocolate",
+    "name": "Shell Cordovan Leather Strap 20/16mm [Chocolate, Full Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/shell-cordovan-leather-strap-20-16mm-black",
+    "name": "Shell Cordovan Leather Strap 20/16mm [Black, Full Stitch]",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/submariner-gmt-dial-stardust-for-nh34",
     "name": "Submariner GMT Dial - Stardust [For NH34]",
     "category": "dial",
@@ -1632,6 +2082,16 @@
     "evidence": "tags fits-skx013/skx007/7s26-0020/0030 -- caseback thread shared across SKX007/013 shells per vendor tags, not independently confirmed"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-big-crown-coin-edge",
+    "name": "SKX013 Big Crown - Coin Edge",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/skx013-submariner-watch-case-36mm-nh34-ready",
     "name": "SKX013 Submariner Watch Case - 36mm [NH34-Ready]",
     "category": "case",
@@ -1642,6 +2102,16 @@
     "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-coin-edge-bezel-polished-dlc-black-edition",
+    "name": "SKX013 The Coin Edge Bezel - Polished (DLC BLACK EDITION)",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/skx013-submariner-watch-case-36mm-dlc-black-edition-nh34-ready",
     "name": "SKX013 Submariner Watch Case - 36mm (DLC BLACK EDITION) [NH34-Ready]",
     "category": "case",
@@ -1650,6 +2120,36 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-submariner-bezel-polished-dlc-black-edition",
+    "name": "SKX013 Submariner Bezel - Polished (DLC BLACK EDITION)",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mm300-bezel-mirror-polished",
+    "name": "SKX013 MM300 Bezel - Mirror Polished",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-mm300-bezel-polished-dlc-black-edition",
+    "name": "SKX013 MM300 Bezel - Polished (DLC BLACK EDITION)",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/skx013-gs-diver-watch-case-36mm-dlc-black-edition-nh34-ready",
@@ -1672,6 +2172,16 @@
     "evidence": "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-24h-gmt-bezel-brushed-silver-black-markers",
+    "name": "SKX013 24H GMT Bezel - Brushed Silver - Black Markers",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/skx013-double-domed-sapphire-crystal-micro-bevel",
     "name": "SKX013 Double Domed Sapphire Crystal - Micro Bevel",
     "category": "crystal",
@@ -1680,6 +2190,156 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-knurled-signed-s-red-dlc-black-edition",
+    "name": "SKX013 Crown - Knurled - Signed S in Red (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-knurled-signed-s-dlc-black-edition",
+    "name": "SKX013 Crown - Knurled - Signed S (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-knurled-signed-s-red",
+    "name": "SKX013 Crown - Knurled - Signed S in Red",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-knurled-dlc-black-edition",
+    "name": "SKX013 Crown - Knurled (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-knurled-signed-s",
+    "name": "SKX013 Crown - Knurled - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-knurled",
+    "name": "SKX013 Crown - Knurled",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-slim-signed-s-red",
+    "name": "SKX013 Crown - Coin Edge - Slim - Signed S in Red",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-slim-signed-s",
+    "name": "SKX013 Crown - Coin Edge - Slim - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-slim",
+    "name": "SKX013 Crown - Coin Edge - Slim",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-signed-s-red-dlc-black-edition",
+    "name": "SKX013 Crown - Coin Edge - Signed S in Red (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-signed-s-dlc-black-edition",
+    "name": "SKX013 Crown - Coin Edge - Signed S (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-signed-s-red",
+    "name": "SKX013 Crown - Coin Edge - Signed S in Red",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-dlc-black-edition",
+    "name": "SKX013 Crown - Coin Edge (DLC BLACK EDITION)",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge-signed-s",
+    "name": "SKX013 Crown - Coin Edge - Signed S",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-crown-coin-edge",
+    "name": "SKX013 Crown - Coin Edge",
+    "category": "crown",
+    "family": "skx013-crown",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/the-great-oak-gmt-dial-ice-blue-for-nh34",
@@ -2648,6 +3308,16 @@
     "evidence": "tags explicit fits-nh34/35/36/38/72"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-the-coin-edge-bezel-silver-mirror-polished",
+    "name": "SKX007 The Coin Edge Bezel - Silver Mirror Polished",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx007"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/nautilus-hands-polished-silver",
     "name": "Nautilus Hands - Polished Silver",
     "category": "hands",
@@ -3158,6 +3828,36 @@
     "evidence": "title explicit 'Seiko (TMI) NH36 Automatic Movement - Day Date (White)'"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-fluted-bezel-silver-mirror-polished",
+    "name": "SKX013 The Fluted Bezel - Silver Mirror Polished",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-the-pilot-bezel-silver-mirror-polished",
+    "name": "SKX007 The Pilot Bezel - Silver Mirror Polished",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-the-pilot-bezel-silver-brushed",
+    "name": "SKX007 The Pilot Bezel - Silver Brushed",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx007"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/pitch-black-enamel-dial-day-date",
     "name": "Pitch Black Enamel Dial (Day Date)",
     "category": "dial",
@@ -3236,6 +3936,36 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-original-bezel-insert-black",
+    "name": "SKX013 Original Bezel & Insert - Black",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx009-original-bezel-insert-pepsi",
+    "name": "SKX009 Original Bezel & Insert - Pepsi",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-original-bezel-insert-black",
+    "name": "SKX007 Original Bezel & Insert - Black",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx007"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/seiko-snzh55-sunburst-dial",
@@ -3428,6 +4158,26 @@
     "evidence": "tags explicit fits-nh34/35/36/38/72"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-submariner-bezel-silver-mirror-polished",
+    "name": "SKX013 Submariner Bezel - Silver Mirror Polished",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-the-submariner-bezel-silver-mirror-polished",
+    "name": "SKX007 The Submariner Bezel - Silver Mirror Polished",
+    "category": "bezel",
+    "family": "skx007-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx007"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-sunset-day-date",
     "name": "Tribute to Philippines Seafarers Dial - Sunset (Day Date)",
     "category": "dial",
@@ -3598,6 +4348,16 @@
     "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-coin-edge-bezel-silver-mirror-polished",
+    "name": "SKX013 The Coin Edge Bezel - Silver Mirror Polished",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/stardust-dial-no-date",
     "name": "Stardust Dial (No Date)",
     "category": "dial",
@@ -3656,6 +4416,26 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-pilot-bezel-black-mirror-polished",
+    "name": "SKX013 The Pilot Bezel - Black Mirror Polished",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-pilot-bezel-black-brushed",
+    "name": "SKX013 The Pilot Bezel - Black Brushed",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/the-great-fathom-hands",
@@ -3786,6 +4566,56 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-pilot-bezel-silver-brushed",
+    "name": "SKX013 The Pilot Bezel - Silver Brushed",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-pilot-bezel-silver-mirror-polished",
+    "name": "SKX013 The Pilot Bezel - Silver Mirror Polished",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-big-bang-bezel-gold",
+    "name": "SKX013 The Big Bang Bezel - Gold",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-big-bang-bezel-silver",
+    "name": "SKX013 The Big Bang Bezel - Silver",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx013-the-big-bang-bezel-black",
+    "name": "SKX013 The Big Bang Bezel - Black",
+    "category": "bezel",
+    "family": "skx013-bezel",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tags/title match -> skx013"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/polished-red-grand-seiko-dauphine-hands",
@@ -3976,6 +4806,36 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/brown-vintage-italian-calf-genuine-leather-watch-strap",
+    "name": "Brown Vintage Italian Calf Leather Watch Strap",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/blue-vintage-italian-calf-genuine-leather-watch-strap",
+    "name": "Blue Vintage Italian Calf Leather Watch Strap",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/black-vintage-italian-calf-genuine-leather-watch-strap",
+    "name": "Black Vintage Italian Calf Leather Watch Strap",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/pilot-hands-bgw9-polished-blue",

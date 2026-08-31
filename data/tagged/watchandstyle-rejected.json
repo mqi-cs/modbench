@@ -2,37 +2,169 @@
   {
     "sourceUrl": "https://watchandstyle.net/products/sg012-sskx023-double-dome-sapphire-crystal",
     "productName": "SG012 SSK023 Double Dome Sapphire Crystal",
-    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "reason": "SKX023 family (abbreviated SSK023 by some vendors) -- a different case model, no family seeded this session",
     "vendorKey": "watchandstyle"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sg011-sskx023-flat-sapphire-crystal",
     "productName": "SG011 SSK023 Flat Sapphire Crystal",
-    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "reason": "SKX023 family (abbreviated SSK023 by some vendors) -- a different case model, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/ssc813-president-bracelet-silver",
+    "productName": "E1658P SSC813 President Bracelet - Silver",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/e1657-ssc813-jubilee-bracelet-silver",
+    "productName": "E1657 SSC813 Jubilee Bracelet - Silver",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1572-srpk-jubilee-bracelet-steel-copy",
+    "productName": "E1658O SSC813 Oyster Bracelet - Brushed Silver",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
     "vendorKey": "watchandstyle"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/rm013-ssk023-fkm-rubber-strap-with-end-links-black",
     "productName": "RM013 SSK023 FKM Rubber Strap with End Links - Black",
-    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "reason": "SKX023 family (abbreviated SSK023 by some vendors) -- a different case model, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1573-srpk-oyster-bracelet-steel-copy",
+    "productName": "SB1619 SRPK President Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1184-40mm-explorer-bezel-case-steel",
+    "productName": "RC1626 40mm Explorer Bezel Case - Two Tone - Steel/Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1627-40mm-explorer-bezel-case-two-tone-steel-rose-gold",
+    "productName": "RC1627 40mm Explorer Bezel Case - Two Tone - Steel/Rose Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1613-38mm-case-flat-bezel-sanblasted",
+    "productName": "RC1613 38mm Case - Flat Bezel - Sandblasted + Oyster Bracelet",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1250-seiko-alpinist-sarb017-oyster-bracelet-steel",
+    "productName": "SB1245O Seiko Alpinist (SARB017) Oyster Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1244eiko-alpinist-sarb017-jubilee-bracelet-steel",
+    "productName": "SB1244 Seiko Alpinist (SARB017) Jubilee Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/seiko-alpinist-sarb017-two-toned-jubilee-bracelet-steel-gold",
+    "productName": "SB1248 Seiko Alpinist (SARB017) Two Toned Jubilee Bracelet -Steel/Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/seiko-alpinist-sarb017-president-bracelet-steel",
+    "productName": "SB1245P Seiko Alpinist (SARB017) President Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
     "vendorKey": "watchandstyle"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sb1584-ssk023-president-bracelet-steel",
     "productName": "SB1249P SSK023 President Bracelet - Steel",
-    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "reason": "SKX023 family (abbreviated SSK023 by some vendors) -- a different case model, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1563-srpg-oyster-bracelet-sandblasted",
+    "productName": "SB1563 SRPG Oyster Bracelet - Sandblasted",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
     "vendorKey": "watchandstyle"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sb1564-ssk023-jubilee-bracelet-steel",
     "productName": "SB1564 SSK023 Jubilee Bracelet - Steel",
-    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "reason": "SKX023 family (abbreviated SSK023 by some vendors) -- a different case model, no family seeded this session",
     "vendorKey": "watchandstyle"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sb1564-ssk023-oyster-bracelet-steel",
     "productName": "SB1565 SSK023 Oyster Bracelet - Steel",
-    "reason": "SKX023 family (abbreviated SSK023 by this vendor) not yet scoped -- no family seeded this session",
+    "reason": "SKX023 family (abbreviated SSK023 by some vendors) -- a different case model, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1573-srpk-oyster-bracelet-steel",
+    "productName": "SB1573 SRPK Oyster Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1572-srpk-jubilee-bracelet-steel",
+    "productName": "SB1572 SRPK Jubilee Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1562-srpg-jubilee-bracelet-steel",
+    "productName": "SB1562 SRPG Jubilee Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/srpg-oyster-bracelet-steel",
+    "productName": "SB1561 SRPG Oyster Bracelet - Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1470-38mm-case-explorer-case",
+    "productName": "RPC0001 38mm Case - Explorer Case",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1469-38mm-case-fluted-bezel-1",
+    "productName": "RC1469 38mm Case - Fluted Bezel",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/srpd-glass-gasket",
+    "productName": "G1475 SRPD Glass Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/ssk-glass-gasket",
+    "productName": "G1434 SSK Glass Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1468-40mm-case-fluted-bezel-gold-1",
+    "productName": "RC1468 40mm Case - Fluted Bezel Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1467-40mm-case-fluted-bezel-rose-gold-1",
+    "productName": "RC1467 40mm Case - Fluted Bezel Rose Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
     "vendorKey": "watchandstyle"
   },
   {
@@ -45,6 +177,276 @@
     "sourceUrl": "https://watchandstyle.net/products/g01387-snxs-double-dome-sapphire-crystal-blue-ar",
     "productName": "G1387 SNXS Double Dome Sapphire Crystal - Blue AR",
     "reason": "insufficient real family size (snxs-crystal confirmed at 2 SKUs across all 4 vendors, all categories -- see singleton-verification.md)",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/40mm-jubilee-bracelet-two-tone-silver-gold",
+    "productName": "SB1211 40mm Jubilee Bracelet - Two Tone - Steel/Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/36mm-jubilee-bracelet-two-tone-silver-gold",
+    "productName": "SB1101 36mm Jubilee Bracelet - Two Tone - Steel/Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/36mm-oyster-bracelet-brushed-finish",
+    "productName": "SB1094 36mm Oyster Bracelet - Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/36mm-case-jubilee-bracelet-stainless",
+    "productName": "SB1099 36mm Case Jubilee Bracelet - Stainless",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/40mm-case-jubilee-bracelet-stainless",
+    "productName": "SB1186 40mm Case Jubilee Bracelet - Stainless",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1362-36mm-president-bracelet-brushed-finish",
+    "productName": "SB1362 40mm President Bracelet - Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/40mm-president-bracelet-two-tone-silver-gold",
+    "productName": "SB1367 40mm President Bracelet - Two Tone - SteelGold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1366-36mm-president-bracelet-gold",
+    "productName": "SB1366 36mm President Bracelet - Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1365-36mm-president-bracelet-rose-gold",
+    "productName": "SB1365 36mm President Bracelet - Rose Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1364-40mm-president-bracelet-two-tone-silver-rose-gold",
+    "productName": "SB1364 36mm President Bracelet - Two Tone - Steel/Rose Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb1363-36mm-president-bracelet-two-tone-silver-gold",
+    "productName": "SB1363 36mm President Bracelet - Two Tone - Steel/Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/36mm-president-bracelet-brushed-finish",
+    "productName": "SB1361 36mm President Bracelet - Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1359-36mm-explorer-style-case-sandblasted-titanium",
+    "productName": "RC1359 36mm Explorer Style Case - Sandblasted Titanium",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1358-36mm-explorer-style-case-brushed-titanium",
+    "productName": "RC1358 36mm Explorer Style Case - Brushed Titanium",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/40mm-fluted-bezel-case-two-tone-silver-ros-gold",
+    "productName": "RC1203 40mm Fluted Bezel Case - Two Tone Silver/Rose Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/40mm-fluted-bezel-case-two-tone-silver-gold-1",
+    "productName": "RC1204 40mm Fluted Bezel Case - Two Tone Silver/Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g0204-srpe-bezel-gasket",
+    "productName": "G0204 SRPE Bezel Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g1054-srpe-glass-gasket",
+    "productName": "G0996 SRPE Glass Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1184-40mm-explorer-bezel-case-silver",
+    "productName": "RC1184 40mm Explorer Bezel Case - Steel",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1183-36mm-fluted-bezel-case-silver",
+    "productName": "RC1183 40mm Fluted Bezel Case - Steel",
+    "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1054-36mm-fluted-bezel-case-two-tone-rose-gold-silver",
+    "productName": "RC1054 36mm Fluted Bezel Case - Two Tone - Rose Gold/Silver",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1053-36mm-fluted-bezel-case-two-tone-gold-silver",
+    "productName": "RC1053 36mm Fluted Bezel Case - Two Tone - Gold/Silver",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g1054-srpe-skx007-case-cover-gasket",
+    "productName": "G1054 SRPE Case Cover Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/case-cover-gasket",
+    "productName": "G0654 SKX007 Case Cover Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc1013-36mm-explorer-style-case-polished-silver",
+    "productName": "RPC0002 36mm Explorer Style Case - Polished Steel",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc0999-36mm-fluted-bezel-case-gold",
+    "productName": "RC0999 36mm Fluted Bezel Case - Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc0998-36mm-fluted-bezel-case-rose-gold",
+    "productName": "RC0998 36mm Fluted Bezel Case - Rose Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc0997-36mm-fluted-bezel-case-silver",
+    "productName": "RC0997 36mm Fluted Bezel Case - Steel",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc0996-36mm-explorer-style-case-gold",
+    "productName": "RC0996 36mm Explorer Style Case - Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc0995-36mm-explorer-case-rose-gold",
+    "productName": "RC0995 36mm Explorer Case - Rose Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rc094-36mm-explorer-case-silver",
+    "productName": "RPC0003 36mm Explorer Style Case - Brushed Steel",
+    "reason": "replacement case with no identifiable case-model marker (product_type '36mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g0357-skx007-glass-gasket",
+    "productName": "G0357 SKX007 Glass Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb0954-samurai-super-engineer-bracelet-brushed",
+    "productName": "SB0954 Samurai Super Engineer Bracelet - Brushed",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb0919-snzf17-oyster-bracelet-brushed-finish",
+    "productName": "SB0919 SNZF17 Oyster Bracelet - Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb0889-mm300-jubilee-bracelet-polished-brushed-finish",
+    "productName": "SB0894 MM300 Jubilee Bracelet - Polished/Brushed Finish",
+    "reason": "Seiko MM300 case model -- a different case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb0888-mm300-oyster-bracelet-brushed-finish",
+    "productName": "SB0893 MM300 Oyster Bracelet - Brushed Finish",
+    "reason": "Seiko MM300 case model -- a different case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb0872-62mas-oyster-bracelet-brushed",
+    "productName": "SB0872 62mas Oyster Bracelet - Brushed",
+    "reason": "Seiko 62MAS-style case -- a different case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/b0814-samurai-hexad-bracelet-sandblasted-black",
+    "productName": "Samurai Hexad Bracelet",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sb0722-samurai-hexad-bracelet-brushed",
+    "productName": "SB0722 Samurai Hexad Bracelet - Brushed",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/srp-turtle-replacement-case-rose-gold",
+    "productName": "RC0335 SRP Turtle Replacement Case - Rose Gold",
+    "reason": "replacement case with no identifiable case-model marker (product_type 'SRP Turtle Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/srp-turtle-re-issue-glass-gasket",
+    "productName": "G0358 SKX013 Glass Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/orient-ray-ii-sub-style-rotating-bezel",
+    "productName": "R0177 Orient Ray II - Sub Style Rotating Bezel",
+    "reason": "Orient brand part -- out of scope, this catalog covers Seiko/aftermarket NH3x-and-SKX-family parts only",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/orient-ray-ii-polished-coin-edge-rotating-bezel",
+    "productName": "R0178 Orient Ray II - Polished Coin Edge Rotating Bezel",
+    "reason": "Orient brand part -- out of scope, this catalog covers Seiko/aftermarket NH3x-and-SKX-family parts only",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rotating-bezel-gasket-skx007",
+    "productName": "G0356 Gasket for SKX007 Rotating Bezel",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/snzf17-sub-green-ceramic-bezel-insert",
+    "productName": "CI0057 SNZF17 Sub Green Ceramic Bezel Insert",
+    "reason": "bezel insert with no identifiable case-model marker (product_type 'SNZF17 Ceramic Insert')",
     "vendorKey": "watchandstyle"
   }
 ]

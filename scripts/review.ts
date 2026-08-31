@@ -38,17 +38,23 @@ function requiresMandatoryReview(part: { category: string; confidence: string; n
 
 async function runAutoAcceptHigh() {
   const now = Date.now();
+  // Bulk-accept anything that does NOT require mandatory review -- i.e.
+  // everything except low confidence, case/movement, and conflict-flagged
+  // parts. Not restricted to a fixed category list: any category (dial,
+  // hands, bezel_insert, crystal, chapter_ring, crown, bezel, strap) at
+  // medium-or-high confidence qualifies, matching the mandatory-review
+  // boundary exactly rather than a narrower category allowlist.
   const eligible = db
     .select()
     .from(parts)
     .where(eq(parts.reviewState, "pending"))
     .all()
-    .filter((p) => p.confidence === "high" && ["dial", "hands", "bezel_insert"].includes(p.category) && !requiresMandatoryReview(p));
+    .filter((p) => !requiresMandatoryReview(p));
 
   for (const p of eligible) {
     db.update(parts).set({ reviewState: "approved", updatedAt: now }).where(eq(parts.id, p.id)).run();
   }
-  console.log(`Bulk-accepted ${eligible.length} high-confidence dial/hands/bezel_insert parts.`);
+  console.log(`Bulk-accepted ${eligible.length} parts not requiring mandatory review.`);
 
   const spotCheckCount = Math.max(1, Math.ceil(eligible.length * 0.1));
   const shuffled = [...eligible].sort(() => Math.random() - 0.5);

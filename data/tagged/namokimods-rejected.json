@@ -1,1 +1,770 @@
-[]
+[
+  {
+    "sourceUrl": "https://namokimods.com/products/sumo-watch-bracelet-three-piece-brushed-black-finish",
+    "productName": "Sumo Watch Bracelet: Three-Piece Brushed Black Finish",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/sumo-watch-bracelet-three-piece-steel-finish",
+    "productName": "Sumo Watch Bracelet: Three-Piece Steel Finish",
+    "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk25-diy-watchmaking-kit-pr-dress-watch-gold",
+    "productName": "NMK-WK25 DIY Watchmaking Kit: PR Dress Watch Gold",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk24-diy-watchmaking-kit-pr-dress-watch-steel",
+    "productName": "NMK-WK24 DIY Watchmaking Kit: PR Dress Watch Steel",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk961-962-watch-bracelet-h-link-matte-black",
+    "productName": "NMK961/962 Watch Bracelet: H-Link Matte Black",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk961-962-watch-bracelet-h-link-steel",
+    "productName": "NMK961/962 Watch Bracelet: H-Link Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk961-962-watch-bracelet-h-link-sandblasted",
+    "productName": "NMK961/962 Watch Bracelet: H-Link Sandblasted",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk26-diy-watchmaking-kit-aquajust-by-timeticker",
+    "productName": "NMK-WK26 DIY Watchmaking Kit: \"AquaJust\" by TimeTicker",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-caseback-gasket",
+    "productName": "SSK Caseback Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk936-937-952-watch-bracelet-oyster-steel",
+    "productName": "NMK936/937/952 Watch Bracelet: Oyster Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk936-937-952-watch-bracelet-jubilee-steel",
+    "productName": "NMK936/937/952 Watch Bracelet: Jubilee Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk936-937-952-watch-bracelet-oyster-two-tone-gold",
+    "productName": "NMK936/937/952 Watch Bracelet: Oyster Two-Tone Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk936-937-952-watch-bracelet-jubilee-two-tone-gold",
+    "productName": "NMK936/937/952 Watch Bracelet: Jubilee Two-Tone Gold",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk18-diy-watchmaking-kit-w10-pilot-watch",
+    "productName": "NMK-WK22 DIY Watchmaking Kit: W10 Pilot Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpe-caseback-gasket",
+    "productName": "SRPE Caseback Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk946-951-watch-bracelet-jubilee-steel",
+    "productName": "NMK946/951 Watch Bracelet: Jubilee Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk951-alpine-tool-case-bundle-steel-finish",
+    "productName": "NMK946/951 Watch Bracelet: Oyster Brushed Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk21-diy-watchmaking-kit-watch-me-build-it",
+    "productName": "NMK-WK21 DIY Watchmaking Kit: \"MB-78\" by Watch Me Build It",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk20-diy-watchmaking-kit-seiko-mods-dubai",
+    "productName": "NMK-WK20 DIY Watchmaking Kit: \"Ice Blue Arabic\" by SVK Watches",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk19-diy-watchmaking-kit-bbmod",
+    "productName": "NMK-WK19 DIY Watchmaking Kit: \"Billy Airfield\" by BBmod",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/watchmaking-bundle-kit-nmk-wk01-khaki-field-watch",
+    "productName": "NMK-WK01 DIY Watchmaking Kit: Khaki Field Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk17-diy-watchmaking-kit-gs-wave-dress-watch",
+    "productName": "NMK-WK17 DIY Watchmaking Kit: GS Wave Dress Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-bezel-gasket",
+    "productName": "SSK Bezel Gaskets",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srpd-crystal-gasket-for-nh34-compatible-crystals",
+    "productName": "SRPD Crystal Gasket (for NH34 Compatible Crystals)",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk308-skx007-crystal-gasket",
+    "productName": "NMK308 SKX007 Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/flat-head-screwdriver-tool-for-rotors",
+    "productName": "Flat Head Screwdriver Tool for Rotors",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk308-sprd-l-shape-crystal-gasket",
+    "productName": "NMK308 SPRD Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/straight-end-watch-bracelet-ladder-brushed-finish",
+    "productName": "Straight End Watch Bracelet: Ladder Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/straight-end-watch-bracelet-7-links-brushed-finish",
+    "productName": "Straight End Watch Bracelet: 7 Links Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/straight-end-watch-bracelet-5-links-brushed-finish",
+    "productName": "Straight End Watch Bracelet: 5 Links Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/vetus-es259a-non-magnetic-precision-tweezer-with-carbon-fibre-tip",
+    "productName": "Vetus ES259A Non-Magnetic Precision Tweezer with Carbon Fibre Tip",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk948-miyota-field-case-black-finish",
+    "productName": "NMK949 Miyota Field Case Bundle: Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk948-miyota-field-case-steel-finish",
+    "productName": "NMK949 Miyota Field Case Bundle: Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk948-miyota-skx-case-black-finish",
+    "productName": "NMK948 Miyota SKX Case: Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk948-miyota-skx-case-steel-finish",
+    "productName": "NMK948 Miyota SKX Case: Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-90s5-premium-automatic-watch-movement",
+    "productName": "Miyota 90S5 Premium Automatic Watch Movement",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-9015-premium-automatic-watch-movement",
+    "productName": "Miyota 9015 Premium Automatic Watch Movement",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-baton-rose-gold-finish",
+    "productName": "Miyota Watch Hands: Baton Rose Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-baton-gold-finish",
+    "productName": "Miyota Watch Hands: Baton Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-baton-black-finish",
+    "productName": "Miyota Watch Hands: Baton Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-baton-steel-finish",
+    "productName": "Miyota Watch Hands: Baton Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-nautilus-rose-gold-finish",
+    "productName": "Miyota Watch Hands: Nautilus Rose Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-nautilus-gold-finish",
+    "productName": "Miyota Watch Hands: Nautilus Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-nautilus-black-finish",
+    "productName": "Miyota Watch Hands: Nautilus Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-snowflake-rose-gold-finish",
+    "productName": "Miyota Watch Hands: Snowflake Rose Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-snowflake-gold-finish",
+    "productName": "Miyota Watch Hands: Snowflake Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-snowflake-black-finish",
+    "productName": "Miyota Watch Hands: Snowflake Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-snowflake-steel-finish",
+    "productName": "Miyota Watch Hands: Snowflake Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-skx-black-finish",
+    "productName": "Miyota Watch Hands: SKX Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-skx-steel-finish",
+    "productName": "Miyota Watch Hands: SKX Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-pilot-white-finish",
+    "productName": "Miyota Watch Hands: Pilot White Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-mm-black-finish",
+    "productName": "Miyota Watch Hands: MM Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-mm-steel-finish",
+    "productName": "Miyota Watch Hands: MM Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-62mas-black-finish",
+    "productName": "Miyota Watch Hands: 62MAS Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-62mas-steel-finish",
+    "productName": "Miyota Watch Hands: 62MAS Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-mercedes-rose-gold-finish",
+    "productName": "Miyota Watch Hands: Mercedes Rose Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-mercedes-gold-finish",
+    "productName": "Miyota Watch Hands: Mercedes Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-mercedes-black-finish",
+    "productName": "Miyota Watch Hands: Mercedes Black Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-mercedes-steel-finish",
+    "productName": "Miyota Watch Hands: Mercedes Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-nautilus-steel-finish",
+    "productName": "Miyota Watch Hands: Nautilus Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-pitched-dauphine-rose-gold-finish",
+    "productName": "Miyota Watch Hands: Pitched Dauphine Rose Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-pitched-dauphine-gold-finish",
+    "productName": "Miyota Watch Hands: Pitched Dauphine Gold Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-pitched-dauphine-blue-finish",
+    "productName": "Miyota Watch Hands: Pitched Dauphine Blue Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/miyota-watch-hands-pitched-dauphine-steel-finish",
+    "productName": "Miyota Watch Hands: Pitched Dauphine Steel Finish",
+    "reason": "Miyota movement/hands -- a different movement brand from the NH3x family this catalog scopes, no family seeded",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk16-diy-watchmaking-kit-nrx-sports-watch",
+    "productName": "NMK-WK16 DIY Watchmaking Kit: NRX Sports Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk15-diy-watchmaking-kit-gs-dress-watch-gold",
+    "productName": "NMK-WK15 DIY Watchmaking Kit: GS Dress Watch Gold",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk14-diy-watchmaking-kit-gs-dress-watch",
+    "productName": "NMK-WK14 DIY Watchmaking Kit: GS Dress Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk13-diy-watchmaking-kit-square-mk2-pilot-watch",
+    "productName": "NMK-WK13 DIY Watchmaking Kit: Square Mk2 Pilot Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk11-diy-watchmaking-kit-nautilus-sport-watch",
+    "productName": "NMK-WK11 DIY Watchmaking Kit: Nautilus Sport Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk10-diy-watchmaking-kit-fifty-eight-dive-watch",
+    "productName": "NMK-WK10 DIY Watchmaking Kit: Fifty-Eight Dive Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-crystal-gasket-for-nh34-crystals",
+    "productName": "SKX007 Crystal Gasket (for NH34 Compatible Crystals)",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/ssk-crystal-gasket",
+    "productName": "SSK Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/watch-tool-screwdriver",
+    "productName": "Flat Head Screwdriver Tool for Bracelets",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk09-diy-watchmaking-kit-gmt-watch",
+    "productName": "NMK-WK09 DIY Watchmaking Kit: GMT Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-935-watch-bracelet-nautilus-two-tone-gold-finish",
+    "productName": "NMK926/935 Watch Bracelet: Nautilus Two-Tone Gold Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-935-watch-bracelet-nautilus-rose-gold-finish",
+    "productName": "NMK926/935 Watch Bracelet: Nautilus Two-Tone Rose Gold Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-935-watch-bracelet-nautilus-gold-finish",
+    "productName": "NMK926/935 Watch Bracelet: Nautilus Gold Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-935-watch-bracelet-nautilus-rose-gold-finish-1",
+    "productName": "NMK926/935 Watch Bracelet: Nautilus Rose Gold Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-935-watch-bracelet-nautilus-black-finish",
+    "productName": "NMK926/935 Watch Bracelet: Nautilus Black Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk911-927-62mas-oyster-bracelet-brushed",
+    "productName": "NMK911/927 62MAS Watch Bracelet: Oyster Brushed Steel",
+    "reason": "Seiko 62MAS-style case -- a different case line, no family seeded this session",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk914-6105-oyster-bracelet-brushed-steel",
+    "productName": "NMK914 Captain Willard 6105 Watch Bracelet: Oyster Brushed Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk932-field-oyster-bracelet-brushed-steel",
+    "productName": "NMK932 Field Watch Bracelet: Oyster Brushed Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk931-field-oyster-bracelet-brushed-steel",
+    "productName": "NMK931 Field Watch Bracelet: Oyster Brushed Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-935-watch-bracelet-nautilus-brushed-finish",
+    "productName": "NMK926/935 Watch Bracelet: Nautilus Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk08-diy-watchmaking-kit-perpetual-dress",
+    "productName": "NMK-WK08 DIY Watchmaking Kit: 36mm Perpetual Dress Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk912-field-oyster-bracelet-brushed-steel",
+    "productName": "NMK912 Field Oyster Bracelet - Brushed Steel",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk07-diy-watchmaking-kit-spork-pilot-watch",
+    "productName": "NMK-WK07 DIY Watchmaking Kit: Spork Pilot Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk06-diy-watchmaking-kit-sakura-dress-watch",
+    "productName": "NMK-WK06 DIY Watchmaking Kit: Sakura Dress Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk05-diy-watchmaking-kit-great-wave-dress-watch-white",
+    "productName": "NMK-WK05 DIY Watchmaking Kit: Great Wave Dress Watch White",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk04-diy-watchmaking-kit-black-lume-dive-watch",
+    "productName": "NMK-WK04 DIY Watchmaking Kit: Black Lume Tool Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk03-diy-watchmaking-kit-stealth-skeleton-tool-watch",
+    "productName": "NMK-WK03 DIY Watchmaking Kit: Stealth Skeleton Tool Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk-wk02-diy-watchmaking-kit-explorer-tool-watch",
+    "productName": "NMK-WK02 DIY Watchmaking Kit: Explorer Tool Watch",
+    "reason": "a bundled multi-part kit product, does not map to a single part category",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh-movement-holder-brushed-rainbow",
+    "productName": "NH Movement Holder: Rainbow Finish",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh-movement-holder-brushed-gunmetal",
+    "productName": "NH Movement Holder: Gunmetal Finish",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh-movement-holder-stainless-steel",
+    "productName": "NH Movement Holder: Brushed Finish",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-nautilus-watch-bracelet-oyster-rose-gold-brushed-finish",
+    "productName": "NMK926/935 Nautilus Watch Bracelet: Oyster Rose Gold Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-nautilus-watch-bracelet-oyster-gold-brushed-finish",
+    "productName": "NMK926/935 Nautilus Watch Bracelet: Oyster Gold Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-nautilus-watch-bracelet-oyster-black-brushed-finish",
+    "productName": "NMK926/935 Nautilus Watch Bracelet: Oyster Black Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk926-nautilus-watch-bracelet-oyster-brushed-finish",
+    "productName": "NMK926/935 Nautilus Watch Bracelet: Oyster Brushed Finish",
+    "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-5-sports-srpe-crystal-gasket",
+    "productName": "Seiko 5 Sports SRPE Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/mm300-watch-bracelet-jubilee-polished-brushed-finish",
+    "productName": "MM300 Watch Bracelet: Jubilee Polished/Brushed Finish",
+    "reason": "Seiko MM300 case model -- a different case line, no family seeded this session",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/mm300-watch-bracelet-oyster-brushed-finish",
+    "productName": "MM300 Watch Bracelet: Oyster Brushed Finish",
+    "reason": "Seiko MM300 case model -- a different case line, no family seeded this session",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-7033-rodico-premium-cleaning-putty",
+    "productName": "Bergeon 7033 Rodico Premium Cleaning Putty",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/orient-mako-ray-crystal-gasket",
+    "productName": "Orient Mako/Ray Crystal Gasket",
+    "reason": "Orient brand part -- out of scope, this catalog covers Seiko/aftermarket NH3x-and-SKX-family parts only",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-7055-lubri-gaskets-with-silicone-grease",
+    "productName": "Bergeon 7055 Lubri-Gaskets with Silicone Grease",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-7024-anti-magnetic-tweezers-3",
+    "productName": "Bergeon 7024 Anti Magnetic Tweezers #3",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/orient-mako-ray-domed-sapphire-crystal",
+    "productName": "NMK391 - Orient Mako/Ray Domed Sapphire Crystal (No Bevel Edge)",
+    "reason": "Orient brand part -- out of scope, this catalog covers Seiko/aftermarket NH3x-and-SKX-family parts only",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/samurai-watch-bracelet-hexad-brushed-finish",
+    "productName": "Samurai Watch Bracelet: Hexad Brushed Finish",
+    "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-5-srpd-crystal-gasket",
+    "productName": "Seiko 5 Sports SRPD Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-spare-parts-gasket-set",
+    "productName": "SRP Turtle Spare Parts: Click Spring & Gasket Set",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-spare-parts-gasket-set",
+    "productName": "SKX013 Spare Parts: Click Spring & Gasket Set",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-spare-parts-gasket-pack",
+    "productName": "SKX007 Spare Parts: Click Spring & Gasket Set",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-caseback-gasket",
+    "productName": "SKX013 Caseback Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-6938-dial-protectors-pack-of-3",
+    "productName": "Bergeon 6938 Dial Protectors (Pack of 3)",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-6033-rodico-cleaning-putty-watch-repair-tool",
+    "productName": "Bergeon 6033 Rodico Cleaning Putty",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-6767-f-spring-bar-tool",
+    "productName": "Bergeon 6767-F Watch Spring Bar Tool",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-4932-watch-case-knife-case-back-opener",
+    "productName": "Bergeon 4932 Watch Case Knife Caseback & Bezel Opener",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-2611-tn-watchmaker-loupe-with-opening",
+    "productName": "Bergeon 2611-TN Watchmaker Loupe with Opening",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/bergeon-5395-55-soft-gel-watch-case-casing-cushion",
+    "productName": "Bergeon 5395-55 Soft Gel Watch Case Casing Cushion (Black)",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-crystal-gasket",
+    "productName": "SRP Turtle Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/srp-turtle-bezel-gasket",
+    "productName": "SRP Turtle Bezel Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-bezel-gasket",
+    "productName": "SKX013 Bezel Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx013-crystal-gasket",
+    "productName": "SKX013 Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/orient-mako-ray-ii-coin-edge-bezel-polished-finish",
+    "productName": "Orient Mako/Ray Coin Edge Bezel: Polished Finish",
+    "reason": "Orient brand part -- out of scope, this catalog covers Seiko/aftermarket NH3x-and-SKX-family parts only",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/orient-mako-ray-sub-bezel-polished-finish",
+    "productName": "Orient Mako/Ray Sub Bezel: Polished Finish",
+    "reason": "Orient brand part -- out of scope, this catalog covers Seiko/aftermarket NH3x-and-SKX-family parts only",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx007-bezel-gasket",
+    "productName": "SKX007 Bezel Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-caseback-gasket",
+    "productName": "SKX007 Caseback Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/skx-crystal-gasket",
+    "productName": "SKX007 Crystal Gasket",
+    "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  }
+]
