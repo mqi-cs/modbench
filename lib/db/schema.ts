@@ -133,3 +133,24 @@ export const rejectedParts = sqliteTable("rejected_parts", {
   rawPayload: text("raw_payload").notNull(), // JSON, via lib/db/json.ts
   createdAt: integer("created_at").notNull(),
 });
+
+// Cross-vendor merges. Deliberately manual -- Investigation A found the
+// deduplication problem in 09-COMPETITIVE-CONTEXT.md (784 parts, 784
+// listings, a 1:1 ratio) and Investigation B's follow-up found the naive
+// title-matching used to detect candidates is itself unreliable (false
+// positives from shared marketing vocabulary, chaining). General automated
+// deduplication is explicitly NOT built here -- each merge is a human
+// judgment call, recorded with its reasoning. When a part is merged, its
+// listings move onto the surviving (canonical) part and its own `parts`
+// row is deleted -- this table is the permanent record of what that row
+// was, so the merge is auditable after the row is gone.
+export const partMerges = sqliteTable("part_merges", {
+  id: text("id").primaryKey(),
+  canonicalPartId: text("canonical_part_id").notNull().references(() => parts.id),
+  mergedPartName: text("merged_part_name").notNull(), // the deleted part's name, for audit
+  mergedSourceUrl: text("merged_source_url").notNull(), // retained even though the listing itself also carries it
+  mergedVendorKey: text("merged_vendor_key").notNull(),
+  mergedAttributes: text("merged_attributes").notNull(), // JSON snapshot at merge time, via lib/db/json.ts -- what verify-catalog.ts's conflicting-attributes check compares against the canonical part's current attributes
+  reason: text("reason").notNull(), // why a human judged this the same physical part
+  createdAt: integer("created_at").notNull(),
+});

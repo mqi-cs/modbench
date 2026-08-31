@@ -5,9 +5,10 @@
 
 import { readFileSync } from "node:fs";
 import { db, sqlite } from "../lib/db/client";
-import { families, listings, parts, vendors, familyExceptions } from "../lib/db/schema";
+import { families, listings, parts, vendors, familyExceptions, partMerges } from "../lib/db/schema";
 import { eq } from "drizzle-orm";
 import { nameFamilyConflict } from "../lib/db/name-family-conflict";
+import { fromJsonColumn } from "../lib/db/json";
 
 // GBP plausible-price ranges, checked against priceMinorBase (the real,
 // ingest-time-converted GBP figure) so one range covers all vendors
@@ -177,6 +178,41 @@ function main() {
   }
   if (priceSanityFailures === 0) {
     pass("price sanity: no non-positive/missing prices among approved parts' listings, checked against priceMinorBase (soft range warnings printed above, if any)");
+  }
+
+  // 9. Merged-part attribute conflict check. A merge claims two (or more)
+  // vendor listings are the SAME physical part -- if their recorded
+  // attributes actually disagree (e.g. different diameterMm), that's
+  // evidence the merge was wrong, not evidence to ignore. Compares each
+  // part_merges row's snapshot of the merged-away part's attributes
+  // against the canonical part's current attributes; a shared key with two
+  // different non-null values fails. Null-vs-anything is not a conflict --
+  // an unmeasured field on one listing says nothing about the other.
+  const merges = db.select().from(partMerges).all();
+  const partById2 = new Map(db.select().from(parts).all().map((p) => [p.id, p]));
+  let mergeConflicts = 0;
+  for (const m of merges) {
+    const canonicalPart = partById2.get(m.canonicalPartId);
+    if (!canonicalPart) {
+      fail(`part_merges row ${m.id} references canonical part ${m.canonicalPartId}, which no longer exists`);
+      mergeConflicts++;
+      continue;
+    }
+    const mergedAttrs = fromJsonColumn<Record<string, unknown>>(m.mergedAttributes);
+    const canonicalAttrs = fromJsonColumn<Record<string, unknown>>(canonicalPart.attributes);
+    for (const key of Object.keys(mergedAttrs)) {
+      const a = mergedAttrs[key];
+      const b = canonicalAttrs[key];
+      if (a === null || a === undefined || b === null || b === undefined) continue; // missing data isn't a conflict
+      if (Array.isArray(a) || Array.isArray(b)) continue; // e.g. styleTags -- set-equality isn't meaningful here, skip
+      if (a !== b) {
+        fail(`merge conflict: "${m.mergedPartName}" (${m.mergedSourceUrl}) has ${key}=${JSON.stringify(a)} but canonical part "${canonicalPart.name}" has ${key}=${JSON.stringify(b)} -- this merge may be wrong`);
+        mergeConflicts++;
+      }
+    }
+  }
+  if (mergeConflicts === 0) {
+    pass(`merged-part attribute conflict check: 0 conflicts across ${merges.length} merge record(s)`);
   }
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);
