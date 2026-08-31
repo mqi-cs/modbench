@@ -40,15 +40,18 @@ Extend as data demands. If a part cannot be confidently assigned a family, **exc
 Do not substitute without a stated reason.
 
 - **Next.js 15**, App Router, TypeScript in `strict` mode
-- **PostgreSQL 16** — Docker Compose locally
+- **SQLite** via `better-sqlite3` — a single file at `data/modbench.db`, no daemon, no Docker
 - **Drizzle ORM** + drizzle-kit migrations
 - **Tailwind CSS v4**
 - **Zod** for all external data validation (feed payloads, URL params, env)
 - **Vitest** for unit tests
 - **Canvas 2D API** for the visual preview, client-side
 - **sharp** for offline image normalisation
-- **@anthropic-ai/sdk** — offline ingestion scripts only, never in a request path
 - **pnpm**
+
+**No Docker.** The catalog is a few hundred rows with one user; a database server earns nothing here and costs setup friction. Write the schema so a later move to Postgres is a config change: keep JSON columns accessed through one helper, and don't use SQLite-specific SQL in queries.
+
+**No LLM API dependency.** There is no `@anthropic-ai/sdk` in this project through Phase 5. Part tagging is done by hand or by Claude Code reading the raw feed files directly — see `01a-PHASE-0-FINDINGS.md`. Phase 6 is the first phase that introduces an API dependency, and it is optional.
 
 State lives in the **URL**, not a client store. The configurator's slot selections serialise to a query string. This makes every build shareable and back-button-correct for free. Do not add Zustand or Redux.
 
@@ -89,6 +92,8 @@ Confirm each is Shopify before writing an adapter; if one is not, drop it rather
 
 Rate-limit to one request every 2 seconds. Set a descriptive User-Agent. Check each site's `robots.txt` and terms before ingesting, and cache aggressively so you poll rarely. If a vendor asks you to stop, stop.
 
+**Forums are not a data source.** WatchUSeek returns HTTP 402 behind a Tollbit paywall to automated tools — that is the site stating it wants payment for programmatic access. Reading threads in a browser for one-off research is ordinary use and how the Phase 0 fixtures were built. Do not build any automated forum access into this project, and do not route around a paywall. If forum data at scale is ever wanted, the sanctioned paid route is the only route.
+
 ## Design brief
 
 Read `/mnt/skills/public/frontend-design/SKILL.md` and follow its two-pass process. Write the design plan before the code.
@@ -109,9 +114,17 @@ Each phase has its own file with a scope, a task list, and a pass measure. **Do 
 | File | Phase | Estimate |
 |---|---|---|
 | `01-phase-0-validation.md` | Data validation, no code | 1 weekend |
+| `01a-PHASE-0-FINDINGS.md` | **Read before Phase 1.** Results + amendments | — |
 | `02-phase-1-data-pipeline.md` | Ingestion + extraction | ~1 week |
 | `03-phase-2-compat-engine.md` | Compatibility rules | ~1 week |
 | `04-phase-3-configurator.md` | Desktop configurator | ~2 weeks |
 | `05-phase-4-preview.md` | Canvas visual preview | ~2 weeks |
 | `06-phase-5-sharing.md` | Permalinks, homepage, style pages | ~1 week |
 | `07-phase-6-nl-image-input.md` | Natural language + image entry | deferred |
+| `08-DEFERRED.md` | **Review at the end of every phase.** Cut work to restore | — |
+
+## v1 simplifications
+
+SQLite and hand-tagging are deliberate reductions for v1, not permanent decisions. Both are recorded in `08-DEFERRED.md` with the signal that means it is time to restore them, and both carry guardrails that keep restoration cheap — JSON access through one helper, no SQLite-specific SQL, and `confidence`/`evidence` columns already present on `parts`.
+
+Read `08-DEFERRED.md` at the end of each phase. Simplifications nobody revisits become permanent by accident.
