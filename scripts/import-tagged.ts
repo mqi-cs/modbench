@@ -41,6 +41,7 @@ function main() {
   let skippedBadStyleTag = 0;
   let skippedAlreadyReviewed = 0;
   let rejectedWritten = 0;
+  let partsFlippedToRejected = 0;
   const now = Date.now();
 
   for (const file of files) {
@@ -54,19 +55,35 @@ function main() {
         // Idempotency: don't write a duplicate row if this exact source URL
         // was already recorded as rejected in a previous run.
         const alreadyRejected = db.select().from(rejectedParts).where(eq(rejectedParts.sourceUrl, r.sourceUrl)).get();
-        if (alreadyRejected) continue;
-        db.insert(rejectedParts)
-          .values({
-            id: nanoid(),
-            vendorKey: r.vendorKey,
-            sourceUrl: r.sourceUrl,
-            productName: r.productName,
-            reason: r.reason,
-            rawPayload: toJsonColumn({}),
-            createdAt: now,
-          })
-          .run();
-        rejectedWritten++;
+        if (!alreadyRejected) {
+          db.insert(rejectedParts)
+            .values({
+              id: nanoid(),
+              vendorKey: r.vendorKey,
+              sourceUrl: r.sourceUrl,
+              productName: r.productName,
+              reason: r.reason,
+              rawPayload: toJsonColumn({}),
+              createdAt: now,
+            })
+            .run();
+          rejectedWritten++;
+        }
+        // The rejected_parts row above is the audit trail, but the matching
+        // `parts` row (created by ingest.ts as a pending placeholder) was
+        // never being updated -- it stayed at reviewState:'pending' with
+        // the placeholder evidence forever, indistinguishable from a part
+        // that was simply never looked at. Flip it to 'rejected' here,
+        // same "never overwrite a human review decision" guard as the
+        // tagged-entry path below: only touch parts still genuinely pending.
+        const existingRejected = db.select().from(parts).where(eq(parts.sourceUrl, r.sourceUrl)).get();
+        if (existingRejected && existingRejected.reviewState === "pending") {
+          db.update(parts)
+            .set({ reviewState: "rejected", evidence: `rejected during tagging: ${r.reason}`, updatedAt: now })
+            .where(eq(parts.id, existingRejected.id))
+            .run();
+          partsFlippedToRejected++;
+        }
       }
       continue;
     }
@@ -127,7 +144,7 @@ function main() {
 
   console.log(`Updated ${updated} parts to pending with real tags.`);
   console.log(`Skipped ${skippedUnknownFamily} (unknown family), ${skippedBadStyleTag} (bad style tag), ${skippedAlreadyReviewed} (already approved/rejected -- review decision preserved).`);
-  console.log(`Wrote ${rejectedWritten} rows to rejected_parts.`);
+  console.log(`Wrote ${rejectedWritten} rows to rejected_parts, flipped ${partsFlippedToRejected} parts rows to reviewState:'rejected'.`);
 }
 
 main();

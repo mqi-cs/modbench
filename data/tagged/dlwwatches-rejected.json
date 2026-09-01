@@ -12,6 +12,12 @@
     "vendorKey": "dlwwatches"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-snk375-29mm",
+    "productName": "Sapphire Double Dome - SNK375 - 29mm",
+    "reason": "crystal with no identifiable case-model marker in tags (product_type 'Crystals')",
+    "vendorKey": "dlwwatches"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-sub-umber-x-rose-gold",
     "productName": "Ceramic Insert - Urchin Sub Umber X Rose Gold",
     "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
@@ -39,6 +45,12 @@
     "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-seiko-sumo",
     "productName": "Sapphire Double Dome - SUMO",
     "reason": "Seiko Sumo case model -- a different case line (~45mm), no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-seiko-shogun",
+    "productName": "Sapphire Double Dome - SHOGUN",
+    "reason": "crystal with no identifiable case-model marker in tags (product_type 'Crystals')",
     "vendorKey": "dlwwatches"
   },
   {
@@ -102,6 +114,12 @@
     "vendorKey": "dlwwatches"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-tall-dome-6309-7002",
+    "productName": "Sapphire Double Dome - High Dome - 6306, 6309, 7002 Divers",
+    "reason": "crystal with no identifiable case-model marker in tags (product_type 'Crystals')",
+    "vendorKey": "dlwwatches"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-green",
     "productName": "Ceramic Insert - Urchin Dual Time Green",
     "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
@@ -111,6 +129,12 @@
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-stealth",
     "productName": "Ceramic Insert - Urchin Dual Time Stealth",
     "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-seiko-skx031-skx033",
+    "productName": "Sapphire Double Dome - SKX031 & SKX033",
+    "reason": "crystal with no identifiable case-model marker in tags (product_type 'Crystals')",
     "vendorKey": "dlwwatches"
   },
   {
@@ -141,6 +165,18 @@
     "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-mako-ray-1-2",
     "productName": "Sapphire Double Dome - Mako & Ray (1 & 2)",
     "reason": "Orient Mako/Ray case model -- different brand and case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-snk809-30mm",
+    "productName": "Sapphire Double Dome - SNK809 - 30mm",
+    "reason": "crystal with no identifiable case-model marker in tags (product_type 'Crystals')",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/sapphire-double-dome-snzg15",
+    "productName": "Sapphire Double Dome - SNZG15",
+    "reason": "crystal with no identifiable case-model marker in tags (product_type 'Crystals')",
     "vendorKey": "dlwwatches"
   },
   {

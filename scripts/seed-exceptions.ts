@@ -23,6 +23,14 @@ interface ExceptionFamily {
   ruleKey: string;
   severity: "error" | "warning" | "info";
   message: string;
+  // Optional: only apply to parts whose name matches, instead of every part
+  // in the family. Needed when a family mixes conflicting and
+  // non-conflicting names (e.g. generic-strap holds both case-named straps
+  // that are genuinely generic and plain NATO/leather straps that were
+  // never flagged as a conflict in the first place -- blanket-applying the
+  // exception to all of them would misrepresent non-conflicts as documented
+  // exceptions).
+  nameFilter?: RegExp;
 }
 
 const EXCEPTION_FAMILIES: ExceptionFamily[] = [
@@ -51,6 +59,17 @@ const EXCEPTION_FAMILIES: ExceptionFamily[] = [
       "This crown is labelled for both 'SRPD' and 'SSK' (Seiko 5 GMT) builds -- the maker states it fits both, " +
       "since those two case lines share the same crown tube size. Not a conflict, just a part that fits two families.",
   },
+  {
+    family: "generic-strap",
+    ruleKey: "case-named-strap-is-lug-width-generic",
+    severity: "info",
+    message:
+      "This strap's name mentions a specific case model (e.g. SKX007, SKX013), but the vendor's own listing states a " +
+      "fixed lug width and lists multiple compatible case models -- it's a standard spring-bar strap, not shaped to " +
+      "one case. It fits any case at the matching lug width, the case name is just the vendor's recommendation. " +
+      "(Contrast with a bracelet or case-contoured strap, which is genuinely case-specific and gets its own family.)",
+    nameFilter: /skx007|skx013|srpd/i,
+  },
 ];
 
 function main() {
@@ -58,7 +77,8 @@ function main() {
   let inserted = 0;
 
   for (const ex of EXCEPTION_FAMILIES) {
-    const matches = db.select().from(parts).where(eq(parts.family, ex.family)).all();
+    const familyMatches = db.select().from(parts).where(eq(parts.family, ex.family)).all();
+    const matches = ex.nameFilter ? familyMatches.filter((p) => ex.nameFilter!.test(p.name)) : familyMatches;
     for (const part of matches) {
       if (existingPartIds.has(part.id)) continue; // idempotent: don't duplicate on re-run
       db.insert(familyExceptions)

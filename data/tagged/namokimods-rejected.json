@@ -594,6 +594,12 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/sii-nh71-skeletonized-movement",
+    "productName": "Seiko (SII/TMI) NH71 Gilt Skeletonized Movement",
+    "reason": "movement/movement-spare-part with no identifiable caliber marker in title (product_type 'Seiko Movements')",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/seiko-5-sports-srpe-crystal-gasket",
     "productName": "Seiko 5 Sports SRPE Crystal Gasket",
     "reason": "a seal/gasket accessory, not a component with its own compatibility family",
@@ -609,6 +615,12 @@
     "sourceUrl": "https://namokimods.com/products/mm300-watch-bracelet-oyster-brushed-finish",
     "productName": "MM300 Watch Bracelet: Oyster Brushed Finish",
     "reason": "Seiko MM300 case model -- a different case line, no family seeded this session",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/sii-nh70-skeletonized-movement",
+    "productName": "Seiko (SII/TMI) NH70 Skeletonized Movement",
+    "reason": "movement/movement-spare-part with no identifiable caliber marker in title (product_type 'Seiko Movements')",
     "vendorKey": "namokimods"
   },
   {

@@ -83,6 +83,27 @@ function resolveCaseModelPrefix(text: string): string | null {
   return null;
 }
 
+// A day/date-wheel disc, rotor, movement stem, or spacer ring installs onto
+// an existing movement -- it is not itself a swappable movement. Found
+// pre-Phase-2 (2026-09-01): 33 of these were tagged straight into
+// nh3x-movement alongside complete movements, which would let a build
+// configurator's movement slot treat a spare part as if it fulfilled the
+// slot. Routed to nh3x-movement-accessory instead wherever this matches.
+//
+// Deliberately checks the TITLE only, not the full title+type+tags blob:
+// a complete movement's own tags can legitimately mention "Black Date
+// Wheel" or "White Day Wheel" to describe which wheel color ships
+// installed (watchandstyle does this) -- that's a spec of the movement,
+// not evidence the product IS a wheel disc. Caught this as a live false
+// positive on "Seiko (TMI) NH35A Automatic Movement" (tags: "White Day
+// Wheel") before it reached review. Product titles for the actual spare
+// parts always name the part itself ("... Day Wheel Disc", "... Movement
+// Rotor", "... Movement Stem", "... Spacer Ring"), so title-only matching
+// is both sufficient and precise here.
+function isMovementAccessory(title: string): boolean {
+  return /day.?wheel|date.?wheel|\brotor\b|movement stem|\bspacer\b/.test(title);
+}
+
 // Out-of-scope markers, split by what they actually constrain:
 //
 // BRAND markers indicate a genuinely different movement/pinion spec --
@@ -213,12 +234,27 @@ function tagNamoki(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejecte
       } else {
         reject("crystal with no identifiable case-model marker in title/type/tags");
       }
-    } else if (pt === "movement spare parts" || pt === "rotors" || pt === "bridges") {
-      if (ti.includes("nh35") || ti.includes("nh36") || ti.includes("nh34") || ti.includes("nh ")) {
+    } else if (
+      pt === "movement spare parts" ||
+      pt === "rotors" ||
+      pt === "bridges" ||
+      pt === "seiko movements" ||
+      pt === "movement accessories"
+    ) {
+      // Real gap found pre-Phase-2 (same shape as the SRPE gap): this
+      // vendor's plain movements and movement spare parts (day/date wheel
+      // discs) sit under "Seiko Movements" / "Movement Accessories", two
+      // product_type strings the tagger never checked.
+      if (ti.includes("vk63") || ti.includes("vk64") || ti.includes("mecaquartz") || ti.includes("vk6")) {
+        push("movement", "vk6x-movement", "high", "vendor-stated", `title explicit VK6x mecaquartz (product_type '${p.product_type}')`);
+      } else if (isMovementAccessory(ti) && (ti.includes("nh") || pt.includes("movement"))) {
+        push("movement", "nh3x-movement-accessory", "high", "vendor-stated", `day/date wheel disc, rotor, stem, or spacer for NH-series (product_type '${p.product_type}') -- not a swappable movement`);
+      } else if (ti.includes("nh35") || ti.includes("nh36") || ti.includes("nh34") || ti.includes("nh38") || ti.includes("nh ")) {
         push("movement", "nh3x-movement", "high", "vendor-stated", `title explicit NH-series (product_type '${p.product_type}')`);
       } else {
         const oos = checkOutOfScope(combined, "movement");
         if (oos) reject(oos);
+        else reject(`movement/movement-spare-part with no identifiable caliber marker in title (product_type '${p.product_type}')`);
       }
     } else if (pt.endsWith("bezels")) {
       const prefix = resolveCaseModelPrefix(combined);
@@ -313,7 +349,7 @@ function tagLucius(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejecte
       push("movement", "nh3x-movement", "high", "vendor-stated", `title explicit '${p.title}'`);
     } else if (pt === "rotors" || pt === "bridges") {
       if (tg.includes("fits-nh34") || tg.includes("fits-nh35") || tg.includes("fits-nh36")) {
-        push("movement", "nh3x-movement", "high", "vendor-stated", "tags explicit fits-nh34/35/36/38/72");
+        push("movement", "nh3x-movement-accessory", "high", "vendor-stated", "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement");
       } else {
         const oos = checkOutOfScope(combined, "movement");
         if (oos) reject(oos);
@@ -383,15 +419,27 @@ function tagDlw(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejected: 
       else if (tg.includes("skx007") || tg.includes("srpd")) push("bezel_insert", "skx007-insert", "high", "vendor-stated", "tag explicit SKX007/SRPD");
       else if (oos) reject(oos);
     } else if (pt === "crystals") {
+      // Broadened pre-Phase-2: was SRPE/Turtle-only, missing real SKX007/
+      // SKX013 crystals (tag "SKX007 & SRPD (Slope)" etc.) -- same shape
+      // as the SRPE gap.
       const oos = checkOutOfScope(combined, "crystal");
       if (tg.includes("srpe")) push("crystal", "srpe-crystal", "high", "vendor-stated", "tag explicit SRPE");
       else if (tg.includes("srp turtle") || ti.includes("turtle")) push("crystal", "srp-turtle-crystal", "high", "vendor-stated", "tag/title explicit SRP Turtle");
+      else if (tg.includes("skx013")) push("crystal", "skx013-crystal", "high", "vendor-stated", "tag explicit SKX013");
+      else if (tg.includes("skx007") || tg.includes("srpd")) push("crystal", "skx007-crystal", "high", "vendor-stated", "tag explicit SKX007/SRPD");
       else if (oos) reject(oos);
+      else reject(`crystal with no identifiable case-model marker in tags (product_type '${p.product_type}')`);
     } else if (pt === "chapter rings") {
+      // Broadened pre-Phase-2: was SRPE/Turtle-only, missing 46 real
+      // SKX007/SRPD chapter rings (tag "SKX007 & SRPD", "With Markers")
+      // that were silently skipped instead of tagged or rejected.
       const oos = checkOutOfScope(combined, "chapter_ring");
       if (tg.includes("srpe")) push("chapter_ring", "srpe-chapter-ring", "high", "vendor-stated", "tag explicit SRPE");
       else if (ti.includes("turtle")) push("chapter_ring", "srp-turtle-chapter-ring", "high", "vendor-stated", "title explicit Turtle chapter ring");
+      else if (tg.includes("skx007") || tg.includes("srpd")) push("chapter_ring", "skx007-chapter-ring", "high", "vendor-stated", "tag explicit SKX007/SRPD");
+      else if (tg.includes("skx013")) push("chapter_ring", "skx013-chapter-ring", "high", "vendor-stated", "tag explicit SKX013");
       else if (oos) reject(oos);
+      else reject(`chapter ring with no identifiable case-model marker in tags (product_type '${p.product_type}')`);
     } else if (pt === "bezels") {
       const prefix = resolveCaseModelPrefix(combined);
       const oos = checkOutOfScope(combined, "bezel");
@@ -484,8 +532,27 @@ function tagWatchAndStyle(products: ShopifyProduct[]): { tagged: TaggedEntry[]; 
       else push("chapter_ring", "skx007-chapter-ring", "high", "vendor-stated", `product_type '${p.product_type}'`);
     } else if (pt.includes("srpe") && pt.includes("chapter ring")) {
       push("chapter_ring", "srpe-chapter-ring", "high", "vendor-stated", `product_type '${p.product_type}'`);
-    } else if (ti.includes("srp turtle") || (ti.includes("turtle") && pt.includes("sapphire"))) {
-      push("crystal", "srp-turtle-crystal", "high", "vendor-stated", "title/type explicit SRP Turtle crystal");
+    } else if (pt.includes("sapphire crystal") || ti.includes("srp turtle")) {
+      // Broadened pre-Phase-2: was Turtle-only, missing 19 real SKX007/
+      // SKX013/SRPE sapphire crystals -- same shape as the SRPE gap.
+      const oos = checkOutOfScope(combined, "crystal");
+      if (ti.includes("srp turtle") || (ti.includes("turtle") && pt.includes("sapphire"))) {
+        push("crystal", "srp-turtle-crystal", "high", "vendor-stated", "title/type explicit SRP Turtle crystal");
+      } else {
+        const prefix = resolveCaseModelPrefix(combined);
+        if (prefix) push("crystal", `${prefix}-crystal`, "high", "vendor-stated", `product_type '${p.product_type}' / title match -> ${prefix}`);
+        else if (oos) reject(oos);
+        else reject(`crystal with no identifiable case-model marker (product_type '${p.product_type}')`);
+      }
+    } else if (pt.includes("nh movement") || pt === "daywheel") {
+      // Real gap found pre-Phase-2: watchandstyle had NO movement-tagging
+      // branch at all -- "NH Movement", "NH Movement Rotor", "Daywheel"
+      // (day-window discs) were all silently skipped.
+      const oos = checkOutOfScope(combined, "movement");
+      if (oos) reject(oos);
+      else if (isMovementAccessory(ti) || pt === "daywheel")
+        push("movement", "nh3x-movement-accessory", "high", "vendor-stated", `product_type '${p.product_type}' -- day/date wheel disc, rotor, or stem, not a swappable movement`);
+      else push("movement", "nh3x-movement", "high", "vendor-stated", `product_type '${p.product_type}'`);
     } else if (pt.includes("bezel") && !pt.includes("insert") && !pt.includes("gasket")) {
       const prefix = resolveCaseModelPrefix(combined);
       const oos = checkOutOfScope(combined, "bezel");
@@ -504,7 +571,9 @@ function tagWatchAndStyle(products: ShopifyProduct[]): { tagged: TaggedEntry[]; 
       if (prefix) push("strap", `${prefix}-bracelet`, "high", "vendor-stated", `product_type '${p.product_type}' / title match -> ${prefix} (case-contoured end-links)`);
       else if (oos) reject(oos);
       else reject("bracelet with no identifiable case-model marker -- end-link shape is case-specific");
-    } else if (pt.includes("strap") || pt.includes("nato")) {
+    } else if (pt.includes("strap") || pt.includes("nato") || pt.includes("rubber")) {
+      // "rubber" added pre-Phase-2: "SKX007/SRPD FKM Rubber" etc. don't
+      // contain the word "strap" at all -- same shape as the SRPE gap.
       push("strap", "generic-strap", "medium", "family-inferred", `product_type '${p.product_type}' -- lug-width-based, fits any case at the matching lug width`);
     } else {
       const oos = checkOutOfScope(combined, "unknown");

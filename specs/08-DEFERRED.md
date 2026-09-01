@@ -86,6 +86,44 @@ Things cut from v1 that need to come back. Each entry records what was cut, why,
 
 ---
 
+## D6 — Cross-platform compatibility (non-Seiko)
+
+**Deferred from:** post-launch. Not in scope for phases 1–6.
+**Why it matters:** every existing tool, including assemble.watch, is organised around one platform. Real cross-platform fits exist and nobody surfaces them — so a beginner never learns what their options actually are.
+
+**Known facts to build on (collect more as you find them):**
+- Aftermarket Vostok Amphibia bezels accept inserts at 31.5mm inner / 38mm outer — the same dimensions the SKX uses, opening the entire Seiko insert market to Vostok builders
+- Modders build Casioaks using Seiko-vendor dials, chapter rings, hour markers and hands over an unchanged Casio GA-2100 module
+
+**Restore when:** the Seiko catalog is stable and phases 1–5 have shipped. This compounds the multi-vendor advantage rather than replacing it.
+
+**Guardrail — this is the part that matters now.** Two Phase 1 decisions could make this a schema rewrite rather than a re-tagging job:
+
+1. **Family keys should eventually describe the physical interface, not the parent watch.** `skx007-crystal` bakes the platform into the identity, so a shared 31.5/38mm insert would need duplicating per platform. The long-term shape is a family keyed on dimensions — insert OD/ID, dial diameter and feet spacing, pinion bore — with **platform as a separate label**.
+2. **Compatibility must be an explicit dimensional match**, never an implicit property of "the Seiko ecosystem." If it is implicit, cross-platform fits cannot be expressed at all.
+
+Do not restructure now. Just avoid foreclosing it.
+
+**Also:** keep `data/fixtures/cross-platform-notes.md` and add any genuine cross-platform fact found while reading forums for fixtures. It costs nothing now and becomes the seed catalog for this expansion.
+
+---
+
+## D7 — Cross-vendor deduplication
+
+**Cut in:** Phase 1 (parked after Investigation A/B and the Task 5 perceptual-hash check).
+**Why:** Investigation A found the 1:1 parts:listings ratio (784:784, later 3,224:3,222) means cross-vendor deduplication isn't happening at all — every vendor's copy of a part is its own separate `parts` row. Text-based candidate matching (145 mutual-best-match pairs) turned out to be unreliable on its own (Investigation A: chaining artifacts, shared marketing vocabulary producing false positives). Task 5 tried perceptual hashing on the raw vendor photos as the next check and found *that* unreliable too: on manual inspection of 3 pairs across the distance range, a confirmed-different pair (chapter ring with GMT markers vs. a blank one) scored a *lower* (more "similar") distance than two pairs that looked like the same or plausibly the same part on direct visual inspection. The hash was tracking photography style (background, lighting, crop) rather than the object, because none of these images have been normalized.
+
+**Restore when:** Phase 4 hits its 70% asset-ready threshold. Phase 4's `prepare-assets.ts` already builds exactly what this needs — background removed, centred, scaled to a fixed pixel radius from the real-world diameter (`05-phase-4-preview.md`) — for a completely different reason (the visual preview canvas). Re-running perceptual hashing on those normalized assets, once they exist, is then nearly free: the preprocessing step that was missing in Task 5 will already have been paid for by Phase 4. Attempting it standalone now (building a bespoke background-removal/normalization pipeline just to validate 145 candidate pairs) is a week spent answering a question that becomes close to free in a few phases.
+
+**Cost to restore:** Low, if Phase 4's asset pipeline generalises the way it's meant to. Re-run the Task 5 pHash comparison against `data/assets/<category>/<partId>.png` instead of raw vendor CDN URLs; expect the ranking to actually track visual similarity once background/lighting/crop are no longer part of the signal.
+
+**Guardrails that keep this cheap:**
+- The 145 candidate pairs (Investigation A, `data/fixtures/investigation-a-cross-vendor-overlap.md`) and the Task 5 negative result (`data/fixtures/task5-perceptual-hash-check.md`, `phash-raw-results.json`) are the input set for the retry — don't regenerate the candidate list from scratch, re-check it against normalized images.
+- `part_merges` (schema + `scripts/merge-parts.ts` + the verify-catalog.ts conflicting-attributes check) already exists from the one manual merge done in Task 4 (SRP Turtle sapphire crystal) — restoring dedup is "run more merges through the existing mechanism," not "build the mechanism."
+- Do not build a general automated-merge rule before this restores. Every merge stays a reviewed, reasoned decision (per `09-COMPETITIVE-CONTEXT.md`) even once image comparison is reliable enough to nominate candidates with more confidence.
+
+---
+
 ## Adding to this file
 
 When cutting anything, add an entry with the same five fields: what, why, restore signal, cost, and any guardrails that keep the cost low. An entry with no restore signal is not deferred work — it is a decision, and it belongs in `00-PROJECT.md` instead.

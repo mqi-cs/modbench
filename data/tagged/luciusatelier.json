@@ -823,31 +823,31 @@
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-iii-black",
     "name": "NH Movement Rotor - Côtes de Genève III - Black",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-iii-blue",
     "name": "NH Movement Rotor - Côtes de Genève III - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-iii-yellow-gold",
     "name": "NH Movement Rotor - Côtes de Genève III - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/dauphine-hands-polished-black",
@@ -1033,91 +1033,91 @@
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-rose-gold",
     "name": "NH Movement Bridge - Côtes de Genève - Circular - Rose Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-blue",
     "name": "NH Movement Bridge - Côtes de Genève - Circular - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-blue",
     "name": "NH Movement Rotor - Hemicude - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-gunmetal",
     "name": "NH Movement Rotor - Hemicude - Gunmetal",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-rose-gold",
     "name": "NH Movement Rotor - Hemicude - Rose Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-yellow-gold",
     "name": "NH Movement Rotor - Hemicude - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-hemicude-silver",
     "name": "NH Movement Rotor - Hemicude - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-gunmetal",
     "name": "NH Movement Bridge - Côtes de Genève - Circular - Gunmetal",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-circular-yellow-gold",
     "name": "NH Movement Bridge - Côtes de Genève - Circular - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/full-grain-cowhide-leather-strap-20-16mm-brown-side-stitch",
@@ -1693,51 +1693,51 @@
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-blue",
     "name": "NH Movement Rotor - Côtes de Genève II - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-gunmetal",
     "name": "NH Movement Rotor - Côtes de Genève II - Gunmetal",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-rose-gold",
     "name": "NH Movement Rotor - Côtes de Genève II - Rose Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-yellow-gold",
     "name": "NH Movement Rotor - Côtes de Genève II - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-ii-silver",
     "name": "NH Movement Rotor - Côtes de Genève II - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/explorer-watch-case-36mm-ultra-thin-edition",
@@ -1815,81 +1815,81 @@
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-sunburst",
     "name": "NH Movement Bridge - Côtes de Genève - Sunburst - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-spiral-sunburst",
     "name": "NH Movement Bridge - Côtes de Genève - Spiral Sunburst - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-bridge-cotes-de-geneve-silver",
     "name": "NH Movement Bridge - Côtes de Genève - Circular - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-gunmetal",
     "name": "NH Movement Rotor - The Great Fathom - Gunmetal",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-rose-gold",
     "name": "NH Movement Rotor - The Great Fathom - Rose Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-yellow-gold",
     "name": "NH Movement Rotor - The Great Fathom - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-silver",
     "name": "NH Movement Rotor - The Great Fathom - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-the-great-fathom-blue",
     "name": "NH Movement Rotor - The Great Fathom - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/skx013-big-crown-coin-edge-signed-s-in-red-dlc-black-edition",
@@ -2621,151 +2621,151 @@
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-blue",
     "name": "NH Movement Rotor - GS 9SA5 - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-blue",
     "name": "NH Movement Rotor - FPJ Diamond - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-blue",
     "name": "NH Movement Rotor - Côtes de Genève - Blue",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-gunmetal",
     "name": "NH Movement Rotor - GS 9SA5 - Gunmetal",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-gunmetal",
     "name": "NH Movement Rotor - FPJ Diamond - Gunmetal",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-gunmetal",
     "name": "NH Movement Rotor - Côtes de Genève - Gunmetal",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-rose-gold",
     "name": "NH Movement Rotor - GS 9SA5 - Rose Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-rose-gold",
     "name": "NH Movement Rotor - FPJ Diamond - Rose Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-rose-gold",
     "name": "NH Movement Rotor - Côtes de Genève - Rose Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-yellow-gold",
     "name": "NH Movement Rotor - GS 9SA5 - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-yellow-gold",
     "name": "NH Movement Rotor - FPJ Diamond - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-yellow-gold",
     "name": "NH Movement Rotor - Côtes de Genève - Yellow Gold",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-fpj-diamond-silver",
     "name": "NH Movement Rotor - FPJ Diamond - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-gs-9sa5-silver",
     "name": "NH Movement Rotor - GS 9SA5 - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/nh-movement-rotor-cotes-de-geneve-silver",
     "name": "NH Movement Rotor - Côtes de Genève - Silver",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "tags explicit fits-nh34/35/36/38/72"
+    "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh34-automatic-movement-gmt-date-white",

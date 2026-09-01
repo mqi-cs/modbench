@@ -24,6 +24,13 @@ const FAMILIES: { key: string; category: string; label: string; description: str
       "NH35 (date), NH36 (day-date), NH34 (GMT), NH38 (no-date), and related NH-series calibers. Shared physical footprint and mounting convention across the family; day/date/GMT function varies by exact caliber and is tracked in attributes, not a separate family.",
   },
   {
+    key: "nh3x-movement-accessory",
+    category: "movement",
+    label: "NH3x movement spare part",
+    description:
+      "Day-wheel/date-wheel discs, rotors, movement stems, and spacer rings for NH-series movements -- installs onto/into an existing NH3x movement, not a substitute for one. Split out of nh3x-movement pre-Phase-2 (2026-09-01) after review found 33 spare-part SKUs tagged into the same family as complete movements: with a shared family key, a build-configurator movement slot could not distinguish 'a rotor' from 'a movement' by family alone, which is exactly the false-positive shape Phase 2 exists to prevent. Not itself a swappable-movement family; Phase 2 should treat this as an add-on to an nh3x-movement selection, never as fulfilling the movement slot.",
+  },
+  {
     key: "nh3x-dial-standard",
     category: "dial",
     label: "NH3x dial, standard feet",

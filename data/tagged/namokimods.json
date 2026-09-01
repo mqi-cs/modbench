@@ -253,11 +253,11 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-great-wave-rose-gold-finish",
     "name": "NH Movement Rotor: Great Wave Rose Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk930-nautical-w-crown-guard-skx-watch-case-black",
@@ -1179,51 +1179,51 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-circular-cote-de-geneve-blue-steel-finish",
     "name": "NH Movement Rotor: Circular Cote de Geneve Blue Steel Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-circular-cote-de-geneve-black-finish",
     "name": "NH Movement Rotor: Circular Cote de Geneve Black Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-circular-cote-de-geneve-gold-finish",
     "name": "NH Movement Rotor: Circular Cote de Geneve Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-circular-cote-de-geneve-steel-finish",
     "name": "NH Movement Rotor: Circular Cote de Geneve Steel Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-cote-de-geneve-blue-finish",
     "name": "NH Movement Rotor: Cote de Geneve Blue Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-musou-black",
@@ -1466,6 +1466,46 @@
     "evidence": "vendor product_type 'Seiko VK Hands', distinct from the NH3x hands line"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-vk64-mechaquartz-watch-movement-white",
+    "name": "Seiko (SII) VK64 Mecaquartz Watch Movement White",
+    "category": "movement",
+    "family": "vk6x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit VK6x mecaquartz (product_type 'Seiko Movements')"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-vk63-mechaquartz-watch-movement-black",
+    "name": "Seiko (SII) VK63 Mecaquartz Watch Movement Black",
+    "category": "movement",
+    "family": "vk6x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit VK6x mecaquartz (product_type 'Seiko Movements')"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-vk63-mechaquartz-watch-movement-white",
+    "name": "Seiko (SII) VK63 Mecaquartz Watch Movement White",
+    "category": "movement",
+    "family": "vk6x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit VK6x mecaquartz (product_type 'Seiko Movements')"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh36a-lumed-kanji-day-wheel-disc-white",
+    "name": "NH36A Lumed Kanji Day Wheel Disc: White",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/ssk-chapter-ring-gmt-blue-with-white-markers",
     "name": "SSK Chapter Ring: GMT Blue with White Markers",
     "category": "chapter_ring",
@@ -1609,41 +1649,41 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-clous-de-paris-blue-steel-finish",
     "name": "NH Movement Rotor: Clous de Paris Blue Steel Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-clous-de-paris-black-finish",
     "name": "NH Movement Rotor: Clous de Paris Black Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-clous-de-paris-gold-finish",
     "name": "NH Movement Rotor: Clous de Paris Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-clous-de-paris-steel-finish",
     "name": "NH Movement Rotor: Clous de Paris Steel Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-sword-mk2-black",
@@ -2539,11 +2579,11 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-cote-de-geneve-gold-finish",
     "name": "NH Movement Rotor: Cote de Geneve Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk956-turtle-skx007-watch-case-polished-finish",
@@ -3066,6 +3106,56 @@
     "evidence": "vendor product_type 'Seiko Dials'; same product line as body_html-verified listings, not individually re-checked"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nh35-36a-lumed-date-wheel-disc-white",
+    "name": "NH35/36A Lumed Date Wheel Disc: White",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh35-36a-lumed-date-wheel-disc-black",
+    "name": "NH35/36A Lumed Date Wheel Disc: Black",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh36a-lumed-kanji-day-wheel-disc-black",
+    "name": "NH36A Lumed Kanji Day Wheel Disc: Black",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh35-36a-date-wheel-disc-red",
+    "name": "NH35/36A Date Wheel Disc: Red",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh35-36a-date-wheel-disc-blue",
+    "name": "NH35/36A Date Wheel Disc: Blue",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-steel-bezel-insert-ym-dual-time-style-black",
     "name": "SKX007/SRPD Steel Bezel Insert: YM Dual Time style Black",
     "category": "bezel_insert",
@@ -3194,6 +3284,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'Crowns' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-nh36a-automatic-movement-arabic-white",
+    "name": "Seiko (SII/TMI) NH36 Automatic Movement (Arabic White)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH-series (product_type 'Seiko Movements')"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk914-slim-flat-sapphire-crystal-nh34",
@@ -3449,41 +3549,41 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-asanoha-gold-finish",
     "name": "NH Movement Rotor: Asanoha Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-asanoha-steel-finish",
     "name": "NH Movement Rotor: Asanoha Steel Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-cloud-gold-finish",
     "name": "NH Movement Rotor: Cloud Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-cloud-steel-finish",
     "name": "NH Movement Rotor: Cloud Steel Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-milspec-type-ii",
@@ -4426,6 +4526,16 @@
     "evidence": "vendor product_type 'SKX013 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nh35-36a-date-wheel-disc-roulette",
+    "name": "NH35/36A Date Wheel Disc: Roulette",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-ceramic-bezel-insert-seamaster-gmt-style",
     "name": "SKX007/SRPD Ceramic Bezel Insert: Seamaster GMT Style Black/White",
     "category": "bezel_insert",
@@ -4719,11 +4829,11 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-cote-de-geneve-black-finish",
     "name": "NH Movement Rotor: Cote de Geneve Black Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-slim-sub-bezel-gold-finish",
@@ -4834,6 +4944,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-nh34a-gmt-automatic-movement-black",
+    "name": "Seiko (SII/TMI) NH34 GMT Automatic Movement (Black)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH-series (product_type 'Seiko Movements')"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk939-fifty-eight-watch-case-pvd-black-finish",
@@ -5204,6 +5324,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'Bezels' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-nh34a-gmt-automatic-movement",
+    "name": "Seiko (SII/TMI) NH34 GMT Automatic Movement",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH-series (product_type 'Seiko Movements')"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-hands-cathedral-gold-finish",
@@ -5709,41 +5839,41 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-great-wave-black-finish",
     "name": "NH Movement Rotor: Great Wave Black Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-great-wave-blue-finish",
     "name": "NH Movement Rotor: Great Wave Blue Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-great-wave-gold-finish",
     "name": "NH Movement Rotor: Great Wave Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-great-wave",
     "name": "NH Movement Rotor: Great Wave",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/watch-dial-divemaster-black",
@@ -5874,6 +6004,16 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "vendor product_type 'Seiko Hands', no explicit pinion statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-nh36a-automatic-movement",
+    "name": "Seiko (SII/TMI) NH36 Automatic Movement",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH-series (product_type 'Seiko Movements')"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx-srpd-watch-bracelet-oyster-rose-gold-finish",
@@ -6139,21 +6279,21 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-snowflake-gold",
     "name": "NH Movement Rotor: Snowflake Gold Finish",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-snowflake",
     "name": "NH Movement Rotor: Snowflake",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-pilot-bezel-rose-gold-finish",
@@ -6616,6 +6756,16 @@
     "evidence": "vendor product_type 'SKX007 Cases'"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nh-grey-movement-spacer-ring",
+    "name": "NH Grey Movement Spacer Ring",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-srpd-steel-bezel-insert-ym-dual-time-style-silver",
     "name": "SKX007/SRPD Steel Bezel Insert: YM Dual Time style Silver",
     "category": "bezel_insert",
@@ -6644,6 +6794,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit SKX007/SRPD bezel insert"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh36a-arabic-day-date-wheel-disc-set-white",
+    "name": "NH36A Arabic Day-Date Wheel Disc Set (White)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh36a-arabic-day-date-wheel-disc-set-black",
+    "name": "NH36A Arabic Day-Date Wheel Disc Set (Black)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/srpe-coil-bezel-polished-finish",
@@ -6769,11 +6939,11 @@
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-cote-de-geneve",
     "name": "NH Movement Rotor: Cote de Geneve",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk920-tuna-skx007-srpd-watch-case-brushed-finish",
@@ -7906,6 +8076,36 @@
     "evidence": "product_type 'SKX013 Bracelets' / title match -> skx013 (case-contoured end-links, not a generic lug-width strap)"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nh35-36a-kanji-date-wheel-disc-black",
+    "name": "NH35/36A Date Wheel Disc (Black)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh36a-3-oclock-kanji-day-wheel-disc-black",
+    "name": "NH36A 3 o'clock Kanji Day Wheel Disc (Black)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nh36a-4-oclock-kanji-day-wheel-disc-black",
+    "name": "NH36A 4 o'clock Kanji Day Wheel Disc (Black)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk911-62mas-skx007-srpd-watch-case-rose-gold-finish",
     "name": "NMK911 62MAS SKX007/SRPD Watch Case : Rose Gold Finish",
     "category": "case",
@@ -8268,6 +8468,26 @@
     "evidence": "product_type 'Bezels' / title match -> skx007"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-nh36a-automatic-movement-black",
+    "name": "Seiko (SII/TMI) NH36 Automatic Movement (Kanji Black)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH-series (product_type 'Seiko Movements')"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-nh35a-automatic-movement-black",
+    "name": "Seiko (SII/TMI) NH35 Automatic Movement (Black)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH-series (product_type 'Seiko Movements')"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/watch-hands-u1-black-finish",
     "name": "Watch Hands: U1 Black Finish",
     "category": "hands",
@@ -8376,6 +8596,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/sii-nh-movement-stem",
+    "name": "Seiko (SII/TMI) NH Movement Stem",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/skx007-watch-bracelet-oyster-black-brushed-finish",
@@ -9228,6 +9458,16 @@
     "evidence": "product_type 'Crowns' / title match -> skx007"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nh36-kanji-day-wheel-4oclock-white",
+    "name": "NH36A 4 o'clock Kanji Day Wheel Disc (White)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Accessories') -- not a swappable movement"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx-knurled-crown-pvd-matte-black-finish",
     "name": "SKX007 Knurled Crown: PVD Matte Black Finish",
     "category": "crown",
@@ -9846,6 +10086,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "vendor product_type 'SKX007 Cases'"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/seiko-sii-nh35a-automatic-movement",
+    "name": "Seiko (SII/TMI) NH35 Automatic Movement",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit NH-series (product_type 'Seiko Movements')"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk904-watch-case-pvd-black-finish",

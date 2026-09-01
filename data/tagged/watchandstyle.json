@@ -70,6 +70,16 @@
     "evidence": "product_type 'SKX007/SRPD Sapphire Insert' / title match -> skx007"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/sg008-skx007-srpd-double-dome-sapphire-crystal",
+    "name": "SG008 SKX007/SRPD Double Dome Sapphire Crystal",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/rc1633-alpinist-style-case-white-chapter-ring-steel",
     "name": "RC1633 Alpinist Style Case White Chapter Ring - Steel",
     "category": "case",
@@ -178,6 +188,16 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/seiko-tmi-nh71-automatic-movement",
+    "name": "Seiko (TMI) NH71 Automatic Movement",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/rc1632-alpinist-style-case-black-cr-steel",
@@ -358,6 +378,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "title explicit 'Alpinist', product_type 'Replacement Case'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sg001-skx007-type-1-double-dome-sapphire-crystal",
+    "name": "SG001 SKX007/SRPD Type 1 Double Dome Sapphire Crystal",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/ci1649-skx007-srpd-slope-ceramic-insert-dark-blue",
@@ -730,6 +760,56 @@
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/rs1589-mm300-fkm-rubber-strap-blue",
+    "name": "RS1589 MM300 FKM Rubber Strap - Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs1588-mm300-fkm-rubber-strap-black",
+    "name": "RS1588 MM300 FKM Rubber Strap - Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1592nh-movement-rotor-rose-gold",
+    "name": "P1592 NH Movement Rotor - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1591-nh-movement-rotor-gold",
+    "name": "P1591 NH Movement Rotor - Gold",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1590-nh-movement-rotor-silver",
+    "name": "P1590 NH Movement Rotor - Silver",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/gi1581-skx013-flat-glass-bezel-insert-lumed-dual-time-dark-blue-white",
     "name": "GI1581 SKX013 Flat Glass Bezel Insert - Lumed Dual Time - Dark Blue/White",
     "category": "bezel_insert",
@@ -880,6 +960,16 @@
     "evidence": "product_type 'SKX007/SRPD Replacement Case'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/g1560-skx013-double-dome-sapphire-for-nh34-movement",
+    "name": "G1560 SKX013 Double Dome Sapphire for NH34 Movement",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Sapphire Crystals' / title match -> skx013"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/d1552-dial-lumed-flieger",
     "name": "D1552 Dial - Lumed Flieger",
     "category": "dial",
@@ -978,6 +1068,16 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Leather Straps' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs1182-skx007-fkm-rubber-strap-orange",
+    "name": "RS1182 SKX007 FKM Rubber Strap - Orange",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/rc1459-w-s-divers-case-gold",
@@ -1258,6 +1358,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007/SRPD Replacement Case'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/w1441-5-oclock-window-date-wheel-disc-white",
+    "name": "W1441 5 o'clock Window Date Wheel Disc - White",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Daywheel' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/w1440-5-oclock-window-date-wheel-disc",
+    "name": "W1440 5 o'clock Window Date Wheel Disc - Black",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Daywheel' -- day/date wheel disc, rotor, or stem, not a swappable movement"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/d1433-dial-gyrocompass-style-bgw9-lume",
@@ -1750,6 +1870,16 @@
     "evidence": "product_type 'SKX007/SRPD Replacement Case'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/nh35-nh36-date-wheel-disc",
+    "name": "W1050 NH35/NH36 Date Wheel Disc",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Daywheel' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/cotton-straps-khaki",
     "name": "Cotton Straps - Khaki",
     "category": "strap",
@@ -2110,6 +2240,36 @@
     "evidence": "product_type 'SRPE Chapter Ring'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/g1267-skx007-double-dome-sapphire-for-slim-bezel-clear-ar",
+    "name": "SG007 SKX007/SRPD Double Dome Sapphire Crystal for Slim Bezel",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1268-nh-movement-rotor-silver",
+    "name": "P1268 NH Movement Rotor - Silver",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1269-nh-movement-rotor-black",
+    "name": "P1269 NH Movement Rotor - Black",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/h1265-gs-dauphine-hands-polished-blue",
     "name": "H1265 GS Dauphine Hands - Polished Blue",
     "category": "hands",
@@ -2128,6 +2288,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007/SRPD Chapter Ring'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1270-nh-movement-rotor-gold",
+    "name": "P1270 NH Movement Rotor - Gold",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/c1276-skx007-srpd-chapter-ring-micro-marker-blue",
@@ -2720,6 +2890,16 @@
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/skx007-flat-sapphire-crystal-for-nh34-movement-clear-ar",
+    "name": "G0342 SKX007/SRPD Flat Sapphire Crystal - For NH34 Movement Clear AR",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/skx007-slope-ceramic-insert-gmt-time-black-green",
     "name": "CI1190 SKX007/SRPD Slope Ceramic Insert - GMT Time Black/Green",
     "category": "bezel_insert",
@@ -2830,6 +3010,16 @@
     "evidence": "product_type '62mas Jubilee Bracelet' / title match -> skx013 (case-contoured end-links)"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/seiko-sii-nh34a-gmt-automatic-movement",
+    "name": "Seiko (TMI) NH34A GMT Automatic Movement",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/skx013-chapter-ring-v2-polished-gold",
     "name": "C1170 SKX013 Slim Chapter Ring - Polished Gold",
     "category": "chapter_ring",
@@ -2888,6 +3078,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX013 Jubilee Bracelet' / title match -> skx013 (case-contoured end-links)"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g1162-skx013-flat-sapphire-crystal-clear-ar",
+    "name": "G1162 SKX013 Flat Sapphire Crystal - Clear AR",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Sapphire Crystals' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g1161-skx007-flat-sapphire-for-flat-insert",
+    "name": "G1161 SKX007/SRPD Flat Sapphire - For Flat Insert",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/rc1163-nautilus-style-case-silver",
@@ -2998,6 +3208,16 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1082-nh-movement-rotor-black",
+    "name": "P1082 NH Movement Rotor - Black",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sb1135-skx007-president-bracelet-brushed-finish",
@@ -3128,6 +3348,36 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX013 Crown' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1085-nh-movement-rotor-silver",
+    "name": "P1085 NH Movement Rotor - Silver",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1084-nh-movement-rotor-rose-gold",
+    "name": "P1084 NH Movement Rotor - Rose Gold",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/p1083-nh-movement-rotor-gold",
+    "name": "P1083 NH Movement Rotor - Gold",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/c1102-skx007-chapter-ring-white-with-black-marker",
@@ -3268,6 +3518,16 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g1069-srpe-double-flat-sapphire-crystal",
+    "name": "G1069 SRPE Flat Sapphire Crystal",
+    "category": "crystal",
+    "family": "srpe-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Sapphire Crystals' / title match -> srpe"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/rc1081-skx007-samurai-conversion-case-sandblasted-titanium-sub-style-bezel",
@@ -3578,6 +3838,16 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/t0529-seiko-nh-movement-stem",
+    "name": "T0529 Seiko NH Movement Stem",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement Stem' -- day/date wheel disc, rotor, or stem, not a swappable movement"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sb1031-srp-turtle-jubilee-bracelet-two-tone-silver-gold",
@@ -4040,6 +4310,26 @@
     "evidence": "product_type 'SKX007/SRPD Ceramic Insert' / title match -> skx007"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/rs0985-skx013-fkm-rubber-strap-dark-blue",
+    "name": "RS0985 SKX013 FKM Rubber Strap - Dark Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/skx013-fkm-rubber-strap-black",
+    "name": "RS0984 SKX013 FKM Rubber Strap - Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/c0973-skx013-chapter-ring-polished-silver",
     "name": "C0973 SKX013  Chapter Ring - Polished Silver",
     "category": "chapter_ring",
@@ -4078,6 +4368,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007/SRPD Replacement Case'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g0952-skx007-flat-sapphire-for-slope-insert-with-lens",
+    "name": "SG010 SKX007/SRPD Flat Sapphire for Slope Insert",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/g0359-srp-turtle-re-issue-glass-gasket",
@@ -4190,6 +4490,16 @@
     "evidence": "product_type 'SKX007/SRPD Oyster Bracelet' / title match -> skx007 (case-contoured end-links)"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/g0953-srpe-double-dome-sapphire-crystal",
+    "name": "SG013 SRPE Double Dome Sapphire Crystal",
+    "category": "crystal",
+    "family": "srpe-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SRPE Sapphire Crystals' / title match -> srpe"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/r0947-srpe-fluted-bezel-rose-gold",
     "name": "R0947 SRPE Fluted Bezel - Rose Gold",
     "category": "bezel",
@@ -4228,6 +4538,56 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007/SRPD Bezel' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0963-skx007-fkm-rubber-strap-green",
+    "name": "RS0963 SKX007 FKM Rubber Strap - Green",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0962-skx007-fkm-rubber-strap-orange",
+    "name": "RS0962 SKX007/SRPD FKM Rubber Strap - Orange",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0961-skx007-fkm-rubber-strap-green",
+    "name": "RS0961 SKX007/SRPD FKM Rubber Strap - Green",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0960-skx007-fkm-rubber-strap-red",
+    "name": "RS0960 SKX007/SRPD FKM Rubber Strap - Red",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0959-skx007-fkm-rubber-strap-yellow",
+    "name": "RS0959 SKX007SRPD FKM Rubber Strap - Yellow",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sb0911-skx007-oyster-bracelet-brushed-polished-finish",
@@ -4548,6 +4908,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007/SRPD Steel Insert' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0910-skx007-rubber-strap-blue",
+    "name": "RS0910 SKX007/SRPD FKM Rubber Strap - Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0909-skx007-rubber-strap-black",
+    "name": "RS0909 SKX007/SRPD FKM Rubber Strap - Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/cn0908-skx013-sterile-crown-knurled-silver",
@@ -4930,6 +5310,26 @@
     "evidence": "product_type 'SKX007/SRPD Sapphire Insert' / title match -> skx007"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/rs0861-skx007-rubber-strap-blue",
+    "name": "RS0861 SKX007 FKM Rubber Strap - Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0860-skx007-rubber-strap-black",
+    "name": "RS0966 SKX007 FKM Rubber Strap - Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'SKX007/SRPD FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/skx007-crown-with-red-s-sanblasted-silver",
     "name": "CN0866 SKX007 Crown with Red S - Sanblasted Silver",
     "category": "crown",
@@ -5068,6 +5468,46 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Dial', no fitment tags in feed metadata at all -- weakest-evidenced vendor for dials, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/w0791-nh36a-kanji-day-date-wheel-disc-4-oclock-black",
+    "name": "W0791 NH36A Kanji Day Wheel Disc -  3.8 O'clock  (Black)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Daywheel' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/w0790-nh36a-kanji-day-wheel-disc-3-oclock-black",
+    "name": "W0790 NH36A Kanji Day Wheel Disc -  3 O'clock  (Black)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Daywheel' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/copy-of-w0788-nh36a-kanji-day-wheel-disc-4-oclock-white",
+    "name": "W0816 NH36A Kanji Day Wheel -  3.8 O'clock  (White)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Daywheel' -- day/date wheel disc, rotor, or stem, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/w0788-nh36a-kanji-day-wheel-disc-3-oclock-white",
+    "name": "W0815 NH36A Kanji Day Wheel Disc -  3 O'clock  (White)",
+    "category": "movement",
+    "family": "nh3x-movement-accessory",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'Daywheel' -- day/date wheel disc, rotor, or stem, not a swappable movement"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/r0783-skx007-rotating-bezel-lx-style-sandblasted-blue",
@@ -6270,6 +6710,26 @@
     "evidence": "title/type explicit SRP Turtle crystal"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/sii-nh35a-automatic-movement-black",
+    "name": "Seiko (TMI) NH35A Automatic Movement - Black",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sii-nh36a-automatic-movement-4-oclock-crown-case-black-kanji",
+    "name": "Seiko (TMI) NH36A Automatic Movement (3.8 o'clock crown case) - Black",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/rc0718-skx007-replacement-case-titanium",
     "name": "RC0718 SKX007 Replacement Case - Titanium - Sub Bezel (Brushed/Polished)",
     "category": "case",
@@ -6600,6 +7060,16 @@
     "evidence": "product_type 'SKX007/SRPD Bezel' / title match -> skx007"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/sii-nh36a-automatic-movement-3-oclock-crown-case-kanji-black",
+    "name": "Seiko (TMI) NH36A Automatic Movement (3 o'clock crown case) - Black",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/cn0238-skx007-crown-black-with-engraved-s-sandblasted-black",
     "name": "CN0238 SKX007 Crown Black with Engraved \"S\" - Sandblasted Black",
     "category": "crown",
@@ -6638,6 +7108,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007 Crown' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sii-nh38a-automatic-movement",
+    "name": "Seiko (TMI) NH38A Automatic Movement",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/r0714-skx007-coin-edge-bezel-sandblasted-blue",
@@ -6890,6 +7370,26 @@
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/g0650-skx013-double-dome-sapphire-crystal-big-bevel",
+    "name": "G0650 SKX013 Double Dome Sapphire Crystal - Bevel Edge",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Sapphire Crystals' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sg006-skx007-srpd-flat-sapphire",
+    "name": "SG006 SKX007/SRPD Flat Sapphire Crystal",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/rc0686-skx0013-mini-turtle-conversion-case-4-oclock-crown-silver",
     "name": "RC0673 SKX013 Mini Turtle Conversion Case - 3.8 O'clock Crown - Silver",
     "category": "case",
@@ -7050,6 +7550,46 @@
     "evidence": "product_type 'SKX007/SRPD Ceramic Insert' / title match -> skx007"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/sg003-skx007-double-dome-sapphire-crystal",
+    "name": "SG003 SKX007/SRPD Double Sapphire Crystal for Slope Insert",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g0350-skx013-flat-sapphire-crystal-clear-ar",
+    "name": "G0350 SKX013 Flat Sapphire Crystal - Clear AR",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Sapphire Crystals' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sg005-skx007-flat-sapphire-crystal-clear-ar",
+    "name": "SG005 SKX007/SRPD Flat Sapphire Crystal",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/g0656-skx013-double-dome-sapphire-crystal-for-slope-insert",
+    "name": "G0656 SKX013 Double Dome Sapphire Crystal - For Slope Insert",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Sapphire Crystals' / title match -> skx013"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/c0649-srp-turtle-chapter-ring-black-orange-marker",
     "name": "C0649 SRP Turtle Chapter Ring - Black/Orange Marker",
     "category": "crystal",
@@ -7208,6 +7748,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX013 Ceramic Insert' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0563-22mm-flouro-rubber-strap-black",
+    "name": "RS0563 22mm FKM Rubber Strap - Black",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/rs0564-22mm-flouro-rubber-strap-blue",
+    "name": "RS0564 22mm FKM Rubber Strap - Blue",
+    "category": "strap",
+    "family": "generic-strap",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "product_type 'FKM Rubber' -- lug-width-based, fits any case at the matching lug width"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/ci0633-skx013-ceramic-insert-dual-time-dark-blue",
@@ -7378,6 +7938,36 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sii-nh36a-automatic-movement-4-oclock-crown-case",
+    "name": "Seiko (TMI) NH36A Automatic Movement (3.8 o'clock crown case)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sii-nh36a-automatic-movement",
+    "name": "Seiko (TMI) NH36A Automatic Movement (3 o'clock crown case)",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/sii-nh35a-automatic-movement",
+    "name": "Seiko (TMI) NH35A Automatic Movement",
+    "category": "movement",
+    "family": "nh3x-movement",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'NH Movement'"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/sb0515-srp-turtle-re-issue-oyster-bracelet-brushed-finish",
@@ -7758,6 +8348,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007/SRPD Chapter Ring'"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/skx007-type-double-dome-sapphire-crystal",
+    "name": "G0376 SKX007/SRPD Type 2  Double Dome Sapphire Crystal",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/skx007-replacement-case-bronze",
@@ -8630,6 +9230,16 @@
     "evidence": "product_type 'SKX007/SRPD Chapter Ring'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/skx013-flat-sapphire-crystal",
+    "name": "G0349 SKX013 Flat Sapphire Crystal - Blue AR",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Sapphire Crystals' / title match -> skx013"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/skx007-aftermarket-case-rose-gold",
     "name": "RC0316 SKX007 Replacement Case - Rose Gold",
     "category": "case",
@@ -9010,6 +9620,16 @@
     "evidence": "product_type 'SKX013 Chapter Ring'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/skx013-double-dome-sapphire-crystal",
+    "name": "G0348 SKX013 Double Dome Sapphire Crystal - For Flat Insert",
+    "category": "crystal",
+    "family": "skx013-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX013 Sapphire Crystals' / title match -> skx013"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/skx013-skx-style-ceramic-bezel-insert-flat",
     "name": "CI0041 Seiko SKX013 Ceramic Bezel Insert - Flat SKX Style",
     "category": "bezel_insert",
@@ -9258,6 +9878,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX007/SRPD Ceramic Insert' / title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/skx007-double-dome-sapphire-crystal-for-flat-insert",
+    "name": "SG004 SKX007/SRPD Double Sapphire Crystal for Flat Insert",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "product_type 'SKX007/SRPD Sapphire Crystals' / title match -> skx007"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/srp-turtle-chapter-ring-silver-with-marker",
