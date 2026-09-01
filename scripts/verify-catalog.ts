@@ -5,7 +5,7 @@
 
 import { readFileSync } from "node:fs";
 import { db, sqlite } from "../lib/db/client";
-import { families, listings, parts, vendors, familyExceptions, partMerges } from "../lib/db/schema";
+import { families, listings, parts, vendors, familyExceptions, partMerges, rejectedParts } from "../lib/db/schema";
 import { eq } from "drizzle-orm";
 import { nameFamilyConflict } from "../lib/db/name-family-conflict";
 import { fromJsonColumn } from "../lib/db/json";
@@ -213,6 +213,47 @@ function main() {
   }
   if (mergeConflicts === 0) {
     pass(`merged-part attribute conflict check: 0 conflicts across ${merges.length} merge record(s)`);
+  }
+
+  // 10. Review-state tracking invariant. Found and fixed pre-Phase-2
+  // (2026-09-01): import-tagged.ts was writing rejected_parts audit rows
+  // without updating the matching parts.reviewState, leaving 307 real
+  // rejection decisions stuck at the ingest placeholder -- indistinguishable
+  // from parts nobody had looked at yet, which silently corrupted every
+  // "how much is left to review" count. Two sub-checks make that bug class
+  // impossible to reintroduce silently:
+  //   a) every rejected_parts row's sourceUrl has a matching parts row at
+  //      reviewState 'rejected' (not stuck pending, not missing).
+  //   b) approved + rejected + pending accounts for every part row -- the
+  //      review_state CHECK constraint already limits the column to these
+  //      three values, so this is really "no part row got missed by either
+  //      query," but it's cheap insurance against a future 4th state or a
+  //      query bug silently dropping rows.
+  const allParts = db.select().from(parts).all();
+  const partBySourceUrl = new Map(allParts.map((p) => [p.sourceUrl, p]));
+  const allRejectedParts = db.select().from(rejectedParts).all();
+  let staleRejections = 0;
+  for (const r of allRejectedParts) {
+    const part = partBySourceUrl.get(r.sourceUrl);
+    if (!part) {
+      fail(`rejected_parts row ${r.id} (${r.sourceUrl}) has no matching parts row at all`);
+      staleRejections++;
+    } else if (part.reviewState !== "rejected") {
+      fail(`rejected_parts row ${r.id} (${r.sourceUrl}) is recorded as rejected but parts.review_state is '${part.reviewState}', not 'rejected' -- the state-tracking bug this check exists to catch`);
+      staleRejections++;
+    }
+  }
+  if (staleRejections === 0) {
+    pass(`review-state tracking: every rejected_parts row (${allRejectedParts.length}) has a matching parts row at reviewState 'rejected'`);
+  }
+
+  const stateCounts = { approved: 0, pending: 0, rejected: 0 } as Record<string, number>;
+  for (const p of allParts) stateCounts[p.reviewState] = (stateCounts[p.reviewState] ?? 0) + 1;
+  const stateSum = stateCounts.approved + stateCounts.pending + stateCounts.rejected;
+  if (stateSum !== allParts.length) {
+    fail(`approved (${stateCounts.approved}) + pending (${stateCounts.pending}) + rejected (${stateCounts.rejected}) = ${stateSum}, but total parts = ${allParts.length} -- a part row has an unaccounted reviewState`);
+  } else {
+    pass(`review-state totals: approved ${stateCounts.approved} + pending ${stateCounts.pending} + rejected ${stateCounts.rejected} = ${allParts.length} total parts`);
   }
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);
