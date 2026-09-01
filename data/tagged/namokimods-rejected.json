@@ -78,6 +78,12 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/dial-bezel-insert-multi-tool",
+    "productName": "Dial & Bezel Insert Multi-Tool",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk-wk18-diy-watchmaking-kit-w10-pilot-watch",
     "productName": "NMK-WK22 DIY Watchmaking Kit: W10 Pilot Watch",
     "reason": "a bundled multi-part kit product, does not map to a single part category",
@@ -162,6 +168,12 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/watchmaking-tool-kit-gmt",
+    "productName": "Watchmaking Tool Kit",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk21-automatic-pilot-watch-tonneau-steel",
     "productName": "NMK21 Automatic Pilot Watch: Tonneau Steel",
     "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
@@ -183,6 +195,12 @@
     "sourceUrl": "https://namokimods.com/products/straight-end-watch-bracelet-5-links-brushed-finish",
     "productName": "Straight End Watch Bracelet: 5 Links Brushed Finish",
     "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/adhesive-dial-dots-1",
+    "productName": "Lubri-Gaskets Silicone Grease",
+    "reason": "a tool, not a watch part",
     "vendorKey": "namokimods"
   },
   {
@@ -390,6 +408,18 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/gel-watch-case-cushion",
+    "productName": "Gel Watch Case Cushion",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/adhesive-dial-dots",
+    "productName": "Adhesive Dial Dots",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk20-automatic-field-watch-milspec-type-ii-sandblasted",
     "productName": "NMK20 Automatic Field Watch: Milspec Type II Sandblasted",
     "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
@@ -476,6 +506,12 @@
   {
     "sourceUrl": "https://namokimods.com/products/watch-tool-screwdriver",
     "productName": "Flat Head Screwdriver Tool for Bracelets",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/watch-tool-finger-cots-30pcs",
+    "productName": "Black Finger Cots (Set of 30pcs)",
     "reason": "a tool, not a watch part",
     "vendorKey": "namokimods"
   },
@@ -624,6 +660,18 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/watch-case-cushion",
+    "productName": "Watch Case Cushion",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/uv-flashlight",
+    "productName": "UV Flashlight",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk926-nautilus-watch-bracelet-oyster-rose-gold-brushed-finish",
     "productName": "NMK926/935 Nautilus Watch Bracelet: Oyster Rose Gold Brushed Finish",
     "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
@@ -698,12 +746,18 @@
   {
     "sourceUrl": "https://namokimods.com/products/orient-mako-ray-crystal-gasket",
     "productName": "Orient Mako/Ray Crystal Gasket",
-    "reason": "Orient brand part -- out of scope, this catalog covers Seiko/aftermarket NH3x-and-SKX-family parts only",
+    "reason": "a tool, not a watch part",
     "vendorKey": "namokimods"
   },
   {
     "sourceUrl": "https://namokimods.com/products/bergeon-7055-lubri-gaskets-with-silicone-grease",
     "productName": "Bergeon 7055 Lubri-Gaskets with Silicone Grease",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/20mm-fat-spring-bars-pair",
+    "productName": "20mm Fat Spring Bars (Pair)",
     "reason": "a tool, not a watch part",
     "vendorKey": "namokimods"
   },
@@ -768,6 +822,12 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/namokimods-virtual-gift-card",
+    "productName": "namokiMODS Virtual Gift Card",
+    "reason": "a gift card, not a physical part",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/bergeon-6938-dial-protectors-pack-of-3",
     "productName": "Bergeon 6938 Dial Protectors (Pack of 3)",
     "reason": "a tool, not a watch part",
@@ -800,6 +860,24 @@
   {
     "sourceUrl": "https://namokimods.com/products/bergeon-5395-55-soft-gel-watch-case-casing-cushion",
     "productName": "Bergeon 5395-55 Soft Gel Watch Case Casing Cushion (Black)",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/watch-hand-remover",
+    "productName": "Watch Hand Remover",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/hand-setting-tool-gmt-compatible",
+    "productName": "Hand Setting Tool (Compatible with GMT Hands)",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/springbar-pliers-band-tool",
+    "productName": "Springbar Pliers Tool",
     "reason": "a tool, not a watch part",
     "vendorKey": "namokimods"
   },
@@ -840,6 +918,12 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/bezel-opener-tool",
+    "productName": "Bezel Opener Tool",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/skx007-bezel-gasket",
     "productName": "SKX007 Bezel Gasket",
     "reason": "a seal/gasket accessory, not a component with its own compatibility family",
@@ -855,6 +939,18 @@
     "sourceUrl": "https://namokimods.com/products/skx-crystal-gasket",
     "productName": "SKX007 Crystal Gasket",
     "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/springbar-tool",
+    "productName": "Spring Bar Tool",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/22mm-fat-spring-bars-pair",
+    "productName": "22mm Fat Spring Bars (Pair)",
+    "reason": "a tool, not a watch part",
     "vendorKey": "namokimods"
   }
 ]

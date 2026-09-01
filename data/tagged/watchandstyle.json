@@ -920,6 +920,16 @@
     "evidence": "product_type 'SKX007/SRPD Chapter Ring'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/c1551-skx007-slim-sterile-case-back-brushed",
+    "name": "C1551 SKX007 Slim Sterile Case Back - Brushed",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/22mm-cowhide-leather-strap",
     "name": "22mm Cowhide Leather Strap",
     "category": "strap",
@@ -3210,6 +3220,26 @@
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/c1111-skx007-slim-case-back-nh-movement-gold",
+    "name": "C1111 SKX007 Slim Case Back - NH movement - Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/skx007-slim-case-back-nh-movement-rose-gold",
+    "name": "C1110 SKX007 Slim Case Back - NH movement - Rose Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/p1082-nh-movement-rotor-black",
     "name": "P1082 NH Movement Rotor - Black",
     "category": "movement",
@@ -3380,6 +3410,16 @@
     "evidence": "product_type 'NH Movement Rotor' -- day/date wheel disc, rotor, or stem, not a swappable movement"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/skx007-slim-sapphire-case-back-nh-movement-rose-gold",
+    "name": "C1052 SKX007 Slim Sapphire Case Back - NH movement - Rose Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/c1102-skx007-chapter-ring-white-with-black-marker",
     "name": "C1102 SKX007/SRPD Chapter Ring White with Black Marker",
     "category": "chapter_ring",
@@ -3528,6 +3568,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SRPE Sapphire Crystals' / title match -> srpe"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c1077-skx007-slim-sterile-case-back-brushed-black",
+    "name": "C1077 SKX007 Slim Sterile Case Back - Brushed Black",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c1076-skx007-slim-sapphire-case-back-nh-movement-black",
+    "name": "C1076 SKX007 Slim Sapphire Case Back - NH movement - Black",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/rc1081-skx007-samurai-conversion-case-sandblasted-titanium-sub-style-bezel",
@@ -3830,6 +3890,16 @@
     "evidence": "product_type 'FKM Waffle Strap' -- lug-width-based, fits any case at the matching lug width"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/c1051-skx007-slim-sapphire-case-back-nh-movement-gold",
+    "name": "C1051 SKX007 Slim Sapphire Case Back - NH movement - Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/h0603-sumo-style-hand-set-polished-rose-gold",
     "name": "H0603 Sumo Style Hand Set -Polished Rose Gold",
     "category": "hands",
@@ -3938,6 +4008,16 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c1013-skx007-sapphire-case-back-v2-nh-movement",
+    "name": "C1013 SKX007 Slim Sapphire Case Back -  Silver",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/rc1003-srpe-3-oclock-crown-case-black",
@@ -5270,6 +5350,16 @@
     "evidence": "product_type 'SKX007/SRPD Replacement Case'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/c0367-skx007-sterile-case-back-nh-movement",
+    "name": "C0367 SKX007 Sterile Case Back - NH Movement",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/h0612-gs-style-hand-set-white",
     "name": "H0612 GS Style Hand Set - White",
     "category": "hands",
@@ -5778,6 +5868,16 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c0813-skx007-slim-sterile-case-back",
+    "name": "C0813 SKX007 Slim Sterile Case Back",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/r0807-skx007-cs1-rotating-bezel-sandblasted-black",
@@ -6730,6 +6830,16 @@
     "evidence": "product_type 'NH Movement'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/c0721-skx007-sterile-case-back-gold",
+    "name": "C0721 SKX007 Sterile Case Back - Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/rc0718-skx007-replacement-case-titanium",
     "name": "RC0718 SKX007 Replacement Case - Titanium - Sub Bezel (Brushed/Polished)",
     "category": "case",
@@ -7430,6 +7540,16 @@
     "evidence": "title explicit SKX013, product_type is a replacement case"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/c0682-skx007-sterile-case-back-rose-gold",
+    "name": "C0682 SKX007 Sterile Case Back - Rose Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/r0647-skx007-t1000-rotating-bezel-polished-black",
     "name": "R0647 SKX007/SRPD T1000 Rotating Bezel - Polished Black",
     "category": "bezel",
@@ -7970,6 +8090,26 @@
     "evidence": "product_type 'NH Movement'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/c0555-skx007-sapphire-case-back-gold",
+    "name": "C0555 SKX007 Sapphire Case Back -  Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c0556-skx007-sapphire-case-back",
+    "name": "C0556 SKX007 Sapphire Case Back - Rose Gold",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/sb0515-srp-turtle-re-issue-oyster-bracelet-brushed-finish",
     "name": "SB0657 SRP Turtle Re-issue Oyster Bracelet - Brushed Finish",
     "category": "crystal",
@@ -8078,6 +8218,16 @@
     "specSource": "family-inferred",
     "confidence": "low",
     "evidence": "product_type 'Hands', no fitment tags in feed metadata at all -- weakest-evidenced vendor for hands, per Phase 0 audit"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c0542-seiko-skx007-sapphire-case-back",
+    "name": "C0542 SKX007 Sapphire Case Back - Sandblasted Black",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/c0546-skx007-chapter-ring-sky-blue",
@@ -8700,6 +8850,16 @@
     "evidence": "product_type 'SKX007/SRPD Chapter Ring'"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/skx007-matt-black-case-back",
+    "name": "C0370 SKX007 Matte Black Case Back",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/skx007-replacement-case-3-oclock-crown-rose-gold",
     "name": "RC0324 SKX007 Replacement  Case - 3 O'clock Crown -  Rose Gold",
     "category": "case",
@@ -9058,6 +9218,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "product_type 'SKX013 Bezel' / title match -> skx013"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/skx007-sapphire-case-back",
+    "name": "C0361 SKX007 Sapphire Case Back - NH Movement",
+    "category": "case",
+    "family": "skx007-case",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks"
   },
   {
     "sourceUrl": "https://watchandstyle.net/products/skx007-po-style-aluminum-bezel-insert-blue",

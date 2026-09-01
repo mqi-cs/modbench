@@ -1,5 +1,23 @@
 [
   {
+    "sourceUrl": "https://luciusatelier.com/products/lucius-atelier-gift-card",
+    "productName": "Lucius Atelier Gift Card",
+    "reason": "a gift card, not a physical part",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/install-rotor",
+    "productName": "Install Rotor",
+    "reason": "a labor service, not a physical part",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/install-rotor-bridge",
+    "productName": "Install Rotor & Bridge",
+    "reason": "a labor service, not a physical part",
+    "vendorKey": "luciusatelier"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/38mm-st1901-pulsograph-la2201b",
     "productName": "38mm ST1901 Pulsograph LA2201B",
     "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
@@ -69,6 +87,18 @@
     "sourceUrl": "https://luciusatelier.com/products/seikonaut-black-edition-aventurine-glass-watch",
     "productName": "SEIKONAUT Black Aventurine Glass Edition",
     "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/assemble-diver-watch-case",
+    "productName": "Assemble Diver Watch Case",
+    "reason": "a labor service, not a physical part",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/assemble-watch-case",
+    "productName": "Assemble Watch Case",
+    "reason": "a labor service, not a physical part",
     "vendorKey": "luciusatelier"
   },
   {
@@ -429,6 +459,12 @@
     "sourceUrl": "https://luciusatelier.com/products/seiko-5-snzg15-nautical-explorer-mod-xxx384",
     "productName": "SEIKO 5 SNZG15 Nautical Explorer Mod #XXX384",
     "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/spring-bar-tool-with-4-extra-tips",
+    "productName": "Spring Bar Tool With 4 Extra Tips",
+    "reason": "a tool, not a watch part",
     "vendorKey": "luciusatelier"
   },
   {

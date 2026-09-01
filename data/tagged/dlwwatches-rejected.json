@@ -114,6 +114,12 @@
     "vendorKey": "dlwwatches"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dlw-virtual-gift-card",
+    "productName": "DLW Virtual Gift Card",
+    "reason": "gift card or bespoke custom-order listing, not a physical part",
+    "vendorKey": "dlwwatches"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-dual-time-bat",
     "productName": "YARD SALE - Ceramic Insert - SRP Turtle Dual Time BAT.",
     "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
@@ -543,6 +549,12 @@
     "sourceUrl": "https://dlwwatches.com/products/springbar-tool",
     "productName": "Springbar Tool",
     "reason": "a tool, not a watch part",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/custom-orders",
+    "productName": "Custom orders",
+    "reason": "gift card or bespoke custom-order listing, not a physical part",
     "vendorKey": "dlwwatches"
   },
   {

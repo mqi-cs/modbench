@@ -1,5 +1,11 @@
 [
   {
+    "sourceUrl": "https://watchandstyle.net/products/le1017-laser-engraving-services",
+    "productName": "LE1017 Laser Engraving Services",
+    "reason": "a laser-engraving service, not a physical caseback part",
+    "vendorKey": "watchandstyle"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/sg012-sskx023-double-dome-sapphire-crystal",
     "productName": "SG012 SSK023 Double Dome Sapphire Crystal",
     "reason": "SKX023 family (abbreviated SSK023 by some vendors) -- a different case model, no family seeded this session",
@@ -57,6 +63,18 @@
     "sourceUrl": "https://watchandstyle.net/products/rc1613-38mm-case-flat-bezel-sanblasted",
     "productName": "RC1613 38mm Case - Flat Bezel - Sandblasted + Oyster Bracelet",
     "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c1614-sapphire-case-back",
+    "productName": "C1614 Sapphire Case Back",
+    "reason": "caseback with no identifiable case-model marker in title (title 'C1614 Sapphire Case Back')",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c1611-steel-case-back",
+    "productName": "C1611 Steel Case Back",
+    "reason": "caseback with no identifiable case-model marker in title (title 'C1611 Steel Case Back')",
     "vendorKey": "watchandstyle"
   },
   {
@@ -288,6 +306,12 @@
     "vendorKey": "watchandstyle"
   },
   {
+    "sourceUrl": "https://watchandstyle.net/products/t0534-burgeon-rodico-6033-1",
+    "productName": "T0534 Burgeon Rodico 6033-1",
+    "reason": "a tool, not a watch part",
+    "vendorKey": "watchandstyle"
+  },
+  {
     "sourceUrl": "https://watchandstyle.net/products/rc1184-40mm-explorer-bezel-case-silver",
     "productName": "RC1184 40mm Explorer Bezel Case - Steel",
     "reason": "replacement case with no identifiable case-model marker (product_type '40mm Replacement Case') -- a real case line, no family seeded this session",
@@ -381,6 +405,12 @@
     "sourceUrl": "https://watchandstyle.net/products/sb0919-snzf17-oyster-bracelet-brushed-finish",
     "productName": "SB0919 SNZF17 Oyster Bracelet - Brushed Finish",
     "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific",
+    "vendorKey": "watchandstyle"
+  },
+  {
+    "sourceUrl": "https://watchandstyle.net/products/c0897-sterile-case-back-chameleon",
+    "productName": "C0897 Sterile Case Back - Chameleon",
+    "reason": "caseback with no identifiable case-model marker in title (title 'C0897 Sterile Case Back - Chameleon')",
     "vendorKey": "watchandstyle"
   },
   {

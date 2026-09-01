@@ -197,7 +197,13 @@ function tagNamoki(products: ShopifyProduct[]): TagResult {
       tagged.push({ sourceUrl: url, name: p.title, category, family, attributes, specSource, confidence, evidence });
     const reject = (reason: string) => rejected.push({ sourceUrl: url, productName: p.title, reason });
 
-    if (pt === "modded watches") {
+    if (pt === "tools" || pt === "gift cards") {
+      // Found via the unmatched-product-type report: 15 real SKUs of
+      // generic tools (not caught by the named-tool regex in
+      // BRAND_OUT_OF_SCOPE, e.g. "Watchmaking Tool Kit") plus 1 gift card,
+      // all sitting silently unmatched. Neither is a watch part.
+      reject(pt === "gift cards" ? "a gift card, not a physical part" : "a tool, not a watch part");
+    } else if (pt === "modded watches") {
       // Permanently excluded (2026-09-01): a complete, pre-built watch, not
       // a component -- out of scope for a parts compatibility catalog by
       // definition (there's no "family" a whole watch fits into). Found via
@@ -335,7 +341,13 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
 
     const isUltraThin = tg.includes("ultra-thin") || ti.includes("ultra thin");
 
-    if (pt === "watches") {
+    if (pt === "watch tools" || pt === "gift card" || pt === "service") {
+      // Found via the unmatched-product-type report: 1 generic tool SKU
+      // (not caught by the named-tool regex, e.g. "Spring Bar Tool With 4
+      // Extra Tips"), 1 gift card, and 4 labor services (e.g. "Install
+      // Rotor"). None are physical parts.
+      reject(pt === "gift card" ? "a gift card, not a physical part" : pt === "service" ? "a labor service, not a physical part" : "a tool, not a watch part");
+    } else if (pt === "watches") {
       // Permanently excluded (2026-09-01): a complete, pre-built watch, not
       // a component -- out of scope for a parts compatibility catalog by
       // definition (there's no "family" a whole watch fits into). Found via
@@ -440,7 +452,12 @@ function tagDlw(products: ShopifyProduct[]): TagResult {
       tagged.push({ sourceUrl: url, name: p.title, category, family, attributes, specSource, confidence, evidence });
     const reject = (reason: string) => rejected.push({ sourceUrl: url, productName: p.title, reason });
 
-    if (pt === "cases") {
+    if (pt === "watch tools") {
+      // Found via the unmatched-product-type report: this vendor files
+      // both its gift card and its "Custom Orders" listing under product_type
+      // "Watch Tools" -- neither is a physical, catalogable part.
+      reject("gift card or bespoke custom-order listing, not a physical part");
+    } else if (pt === "cases") {
       const oos = checkOutOfScope(combined, "case");
       if (tg.includes("srpe")) push("case", "srpe-case", "high", "vendor-stated", "tag explicit SRPE");
       else if (tg.includes("skx007") || tg.includes("srpd")) push("case", "skx007-case", "high", "vendor-stated", "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)");
@@ -574,7 +591,26 @@ function tagWatchAndStyle(products: ShopifyProduct[]): TagResult {
       }
     }
 
-    if (ti.includes("alpinist") && (pt.includes("case") || pt.includes("replacement case"))) {
+    if (pt === "case back") {
+      // Found via the unmatched-product-type report: 21 real SKUs under a
+      // product_type this vendor's case-handling branches never checked
+      // (they key on 'replacement case', not 'case back'). Same family as
+      // the rest of the catalog's casebacks -- a caseback is a component of
+      // the case assembly, threaded to match, not its own compatibility
+      // family (see e.g. 'SKX Sapphire Display Caseback', already tagged
+      // skx007-case).
+      if (ti.includes("service") || ti.includes("engraving")) {
+        reject("a laser-engraving service, not a physical caseback part");
+      } else if (ti.includes("skx007")) {
+        push("case", "skx007-case", "high", "vendor-stated", "title explicit SKX007 caseback -- tagged into skx007-case, same convention as this catalog's other casebacks");
+      } else {
+        const oos = checkOutOfScope(combined, "case");
+        if (oos) reject(oos);
+        else reject(`caseback with no identifiable case-model marker in title (title '${p.title}')`);
+      }
+    } else if (pt === "tools") {
+      reject("a tool, not a watch part");
+    } else if (ti.includes("alpinist") && (pt.includes("case") || pt.includes("replacement case"))) {
       push("case", "alpinist-style-case", "high", "vendor-stated", "title explicit 'Alpinist', product_type 'Replacement Case'");
     } else if (pt.includes("skx007/srpd") && pt.includes("case")) {
       push("case", "skx007-case", "high", "vendor-stated", `product_type '${p.product_type}'`);
@@ -607,6 +643,16 @@ function tagWatchAndStyle(products: ShopifyProduct[]): TagResult {
       if (prefix) push("bezel_insert", `${prefix}-insert`, "high", "vendor-stated", `product_type '${p.product_type}' / title match -> ${prefix}`);
       else if (oos) reject(oos);
       else reject(`bezel insert with no identifiable case-model marker (product_type '${p.product_type}')`);
+    } else if (pt.includes("snzf") && pt.includes("chapter ring")) {
+      // Found via the unmatched-product-type report: 2 SKUs fell through
+      // to the generic catch-all's category "unknown" check, which never
+      // applies CASE_MODEL_OUT_OF_SCOPE (scoped to CASE_SHAPE_DEPENDENT_CATEGORIES,
+      // which "unknown" isn't in) -- so the existing SNZF/Sea Urchin
+      // out-of-scope marker never fired. Routed through checkOutOfScope
+      // with the real category so it rejects with the real reason instead
+      // of silently vanishing.
+      const oos = checkOutOfScope(combined, "chapter_ring");
+      if (oos) reject(oos);
     } else if (pt.includes("skx013") && pt.includes("chapter ring")) {
       push("chapter_ring", "skx013-chapter-ring", "high", "vendor-stated", `product_type '${p.product_type}'`);
     } else if (pt.includes("skx007/srpd") && pt.includes("chapter ring")) {
