@@ -1,14 +1,518 @@
 [
   {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-chapter-ring-dial-hands-strap-set-random-design",
+    "productName": "YARD SALE - Chapter Ring, Dial, Hands, Strap Set (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-caseback",
+    "productName": "YARD SALE - Caseback (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-dial-and-hands-random-design",
+    "productName": "YARD SALE - Dial and Hands Set (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-bezel-insert-chapter-ring-random-design",
+    "productName": "YARD SALE - Bezel, Bezel Insert, Chapter Ring, Crown, Glass Set (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-case-with-strap-set-random-design",
+    "productName": "YARD SALE - Case with Strap Set (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-bracelet-random-design",
+    "productName": "YARD SALE - Bracelet (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-strap-random-design",
+    "productName": "YARD SALE - Strap (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-movement-random-design",
+    "productName": "YARD SALE - Movement (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-hands-random-design",
+    "productName": "YARD SALE - Hands (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-dial-random-design",
+    "productName": "YARD SALE - Dial (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-glass-random-design",
+    "productName": "YARD SALE - Glass (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-crown-random-design",
+    "productName": "YARD SALE - Crown (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-chapter-ring-random-design",
+    "productName": "YARD SALE - Chapter Ring (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-case-random-design",
+    "productName": "YARD SALE - Case Set (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-bezel-random-design",
+    "productName": "YARD SALE - Bezel (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-bezel-insert-random-design",
+    "productName": "YARD SALE - Bezel Insert (Random Design)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/crown-samurai-polished-steel",
     "productName": "Crown - Samurai - Polished Steel",
     "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
     "vendorKey": "dlwwatches"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-sub-aegean-blue",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Sub Aegean Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-samurai-yacht-master-black",
+    "productName": "YARD SALE - Ceramic Insert - Samurai Yacht Master Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-dual-time-bat",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Dual Time BAT.",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-c-r-urchin-matt-black-w-markers-orange",
+    "productName": "YARD SALE - C.R. - Urchin - Matt Black w Markers (Orange)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-hands-assorted-designs-for-modding-practice",
+    "productName": "YARD SALE - Hands - Assorted Designs for Modding Practice (10 Sets)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-green",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-blue",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-sub-black",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Sub Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-samurai-yacht-master-silver",
+    "productName": "YARD SALE - Ceramic Insert - Samurai Yacht Master Silver",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-yacht-master-dual-time-black-mk2",
+    "productName": "YARD SALE - Ceramic Insert - 007 Yacht Master Dual Time Black MK2",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-yacht-master-dual-time-black",
+    "productName": "YARD SALE - Ceramic Insert - 007 Yacht Master Dual Time Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-blue",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-black-x-gold",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Black X Gold",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-stealth",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Stealth",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-red-t-black",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Red T Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-stealth",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Stealth",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-black",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-urchin-dual-time-red-t-black",
     "productName": "Ceramic Insert - Urchin Dual Time Red T Black",
     "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-sumo-ds-hulk",
+    "productName": "YARD SALE - Ceramic Insert - Sumo DS Hulk",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-sumo-ds-blue",
+    "productName": "YARD SALE - Ceramic Insert - Sumo DS Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-sumo-ds-red-t-black",
+    "productName": "YARD SALE - Ceramic Insert - Sumo DS Red T Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-sumo-ds-black",
+    "productName": "YARD SALE - Ceramic Insert - Sumo DS Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-sumo-smp-black",
+    "productName": "YARD SALE - Ceramic Insert - Sumo SMP Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-blue",
+    "productName": "YARD SALE - Ceramic Insert - SKX Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-green",
+    "productName": "YARD SALE - Ceramic Insert - SKX Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-bat",
+    "productName": "YARD SALE - Ceramic Insert - SKX BAT.",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-hornet",
+    "productName": "YARD SALE - Ceramic Insert - SKX Hornet",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-vintage-black",
+    "productName": "YARD SALE - Ceramic Insert - SKX Vintage Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-black-1",
+    "productName": "YARD SALE - Ceramic Insert - SKX Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-ospo-aegean-blue-x-red",
+    "productName": "YARD SALE - Ceramic Insert - 007 OSPO Aegean Blue X Red",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-batman",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Batman",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/7s26-movement-black",
+    "productName": "7S26 Movement - Black",
+    "reason": "Seiko 7S26 movement -- a different movement architecture from the NH3x family this catalog scopes, and only 1 SKU found across all 4 vendors -- insufficient to seed a family (same bar as snxs-crystal, see singleton-verification.md)",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-hands-luminous-white-red",
+    "productName": "YARD SALE - Hands - Luminous White & Red",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-bat",
+    "productName": "YARD SALE - Ceramic Insert - Urchin BAT.",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-sub-bat",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Sub BAT.",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-bat",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle BAT.",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-yard-sale-ceramic-insert-007-yacht-master-silver",
+    "productName": "YARD SALE - Ceramic Insert - 007 Yacht Master Silver",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-yacht-master-black",
+    "productName": "YARD SALE - Ceramic Insert - 007 Yacht Master Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-hornet",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Hornet",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-vintage-black-mk2",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Vintage Black MK2",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-vintage-black",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Vintage Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-green",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-stealth",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Stealth",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-blue",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-pink",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Pink",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-smp",
+    "productName": "YARD SALE - Ceramic Insert - 007 SMP",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-sub-black",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-black-luminous-green",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Black - Luminous Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-dual-time-black-mk2-luminous-green",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Dual Time Black MK2",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-dual-time-black-luminous-green",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Dual Time Black - Luminous Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-007-dual-time-peps-sunset",
+    "productName": "YARD SALE - Ceramic Insert - 007 Dual Time PEPS. (Reverse)",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-c-r-urchin-polished-silver",
+    "productName": "YARD SALE - C.R. - Urchin - Polished Silver",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-c-r-turtle-re-issue-polished-silver",
+    "productName": "YARD SALE - C.R. - Turtle Re-issue  - Polished Silver",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-dual-time-blue",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Dual Time Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-dual-time-green",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Dual Time Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-dual-time-stealth",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Dual Time Stealth",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-yard-sale-ceramic-insert-urchin-dual-time-bat",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Dual Time BAT.",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-urchin-dual-time-black",
+    "productName": "YARD SALE - Ceramic Insert - Urchin Dual Time Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-dual-time-stealth",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Dual Time Stealth",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-dual-time-blue",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Dual Time Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-dual-time-black",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Dual Time Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-srp-turtle-black-luminous-green",
+    "productName": "YARD SALE - Ceramic Insert - SRP Turtle Black - Luminous Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-dual-time-blue",
+    "productName": "YARD SALE - Ceramic Insert - SKX Dual Time Blue",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-black",
+    "productName": "YARD SALE - Ceramic Insert - SKX Dual Time Black",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/yard-sale-ceramic-insert-skx-black-luminous-green",
+    "productName": "YARD SALE - Ceramic Insert - SKX Black - Luminous Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-yard-sale-ceramic-insert-007-dual-time-stealth",
+    "productName": "YARD SALE - Ceramic Insert - 007 Dual Time Stealth",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-yard-sale-ceramic-insert-007-sub-vintage-black-mk3",
+    "productName": "YARD SALE - Ceramic Insert - 007 Sub Vintage Black MK3",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-yard-sale-ceramic-insert-007-dual-time-green",
+    "productName": "YARD SALE - Ceramic Insert - 007 Dual Time Green",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-yard-sale-ceramic-insert-007-dual-time-bat",
+    "productName": "YARD SALE - Ceramic Insert - 007 Dual Time BAT.",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
     "vendorKey": "dlwwatches"
   },
   {
@@ -33,6 +537,12 @@
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-samurai-yacht-master-silver",
     "productName": "Ceramic Insert - Samurai Yacht Master Silver",
     "reason": "Seiko Samurai case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/springbar-tool",
+    "productName": "Springbar Tool",
+    "reason": "a tool, not a watch part",
     "vendorKey": "dlwwatches"
   },
   {
@@ -441,6 +951,12 @@
     "sourceUrl": "https://dlwwatches.com/products/copy-of-bezel-urchin-deep-sea-bead-blasted-pvd-black",
     "productName": "Bezel - Urchin Deep Sea - Bead Blasted PVD Black",
     "reason": "Seiko 'Sea Urchin' (SNZF) case model -- a different case line, no family seeded this session",
+    "vendorKey": "dlwwatches"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/rubber-strap-skx007-pre-production-batch",
+    "productName": "YARD SALE - Rubber Strap - SKX007/SRPD Classic",
+    "reason": "'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith",
     "vendorKey": "dlwwatches"
   },
   {

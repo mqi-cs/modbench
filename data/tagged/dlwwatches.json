@@ -210,6 +210,16 @@
     "evidence": "title/tag mentions skx007, but product_type 'Straps' doesn't distinguish bracelet vs strap construction -- kept medium"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-gem",
+    "name": "Dial - Handcrafted Series - Gem",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/crown-srp-turtle-polished-steel",
     "name": "Crown - SRP Turtle - Polished Steel",
     "category": "crown",
@@ -368,6 +378,16 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "title/tag mentions skx007, but product_type 'Straps' doesn't distinguish bracelet vs strap construction -- kept medium"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-blackout",
+    "name": "Dial - Handcrafted Series - Blackout",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/crown-srpe-polished-brushed-pvd-black",
@@ -1810,6 +1830,36 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-denim-light-blue",
+    "name": "Dial - Handcrafted Series - Denim Light Blue",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-denim-blue",
+    "name": "Dial - Handcrafted Series - Denim Blue",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-denim-dark-blue",
+    "name": "Dial - Handcrafted Series - Denim Dark Blue",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-mg-black",
     "name": "Ceramic Insert - 007 MG Black",
     "category": "bezel_insert",
@@ -1848,6 +1898,46 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-chroma-spheres-4",
+    "name": "Dial - Handcrafted Series - Chroma Spheres 4",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-chroma-spheres-3",
+    "name": "Dial - Handcrafted Series - Chroma Spheres 3",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-chroma-spheres-2",
+    "name": "Dial - Handcrafted Series - Chroma Spheres 2",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-chroma-spheres-1",
+    "name": "Dial - Handcrafted Series - Chroma Spheres 1",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/dial-voyager-2-stealth-x-silver-sterile-day-date",
@@ -2230,6 +2320,16 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-dial-handcrafted-series-corinthian",
+    "name": "Dial - Handcrafted Series - Corinthian",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-gmt-black",
     "name": "Ceramic Insert - 007 Yacht Master GMT Black",
     "category": "bezel_insert",
@@ -2258,6 +2358,56 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-luna",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Luna",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-eclipse",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Monochrome",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/copy-of-c-r-skx007-hand-painted-series-aurora",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Aurora",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-sunrise",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Sunrise",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-polychrome",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Polychrome",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/bracelet-skx007-srpd-oys-brushed-pvd-black",
@@ -2438,6 +2588,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-original",
+    "name": "Dial - Handcrafted Series - Original",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-turquoise",
@@ -2680,6 +2840,16 @@
     "evidence": "title/tag mentions skx007, but product_type 'Straps' doesn't distinguish bracelet vs strap construction -- kept medium"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-handcrafted-series-kintsugi",
+    "name": "Dial - Handcrafted Series - Kintsugi",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/crown-skx007-bead-blasted-pvd-black-blue-s",
     "name": "Crown - SKX007 - Bead Blasted PVD Black - Blue \"S\"",
     "category": "crown",
@@ -2868,6 +3038,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag/title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-srpd-hand-painted-series-gem",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Gem",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-matt-aegean-blue",
@@ -3190,6 +3370,16 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-mosaic-mk3",
+    "name": "Dial - Handcrafted Series - Mosaic MK3",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-forest-green",
     "name": "Steel Insert - 007 Yacht Master Forest Green",
     "category": "bezel_insert",
@@ -3318,6 +3508,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-sakura",
+    "name": "Dial - Handcrafted Series - Sakura",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-safari",
+    "name": "Dial - Handcrafted Series - Safari",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/hands-monster-second-hands",
@@ -3498,6 +3708,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag/title match -> skx007"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-galaxy",
+    "name": "Dial - Handcrafted Series - Galaxy",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-smp-aegean-blue",
@@ -5390,6 +5610,26 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-blossom",
+    "name": "Dial - Handcrafted Series - Plum Blossom",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-bamboo-batch-2",
+    "name": "Dial - Handcrafted Series - Bamboo",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-red-t-stealth",
     "name": "Ceramic Insert - 007 Sub Red T Stealth",
     "category": "bezel_insert",
@@ -5398,6 +5638,26 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-horizon",
+    "name": "Dial - Handcrafted Series - Horizon",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-supernova",
+    "name": "Dial - Handcrafted Series - Supernova",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-sub-hornet-mk2",
@@ -5458,6 +5718,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-specks",
+    "name": "Dial - Handcrafted Series - Specks",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-dual-time-polished-steel",
@@ -5550,6 +5820,26 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-kanagawa",
+    "name": "Dial - Handcrafted Series - The Great Wave",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-spritz",
+    "name": "Dial - Handcrafted Series - Spritz",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-umber",
     "name": "Ceramic Insert - 007 Dual Time Umber",
     "category": "bezel_insert",
@@ -5578,6 +5868,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-spartan",
+    "name": "Dial - Handcrafted Series - Spartan",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-black-x-gold",
@@ -5730,6 +6030,16 @@
     "evidence": "tag/title match -> srp-turtle"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-magma",
+    "name": "Dial - Handcrafted Series - Magma",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-dual-time-root-beer",
     "name": "Ceramic Insert - 007 Dual Time Root Beer",
     "category": "bezel_insert",
@@ -5838,6 +6148,46 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/hands-hand-painted-series",
+    "name": "Hands - Handcrafted Series",
+    "category": "hands",
+    "family": "nh3x-hands-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' hands, blank product_type -- no explicit pinion statement, same confidence as this vendor's plain 'Hands' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-spectrum",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Spectrum",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-specks-on-markers",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Specks (Markers)",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-specks-polished-black",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Specks (Steel)",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/hands-cw",
@@ -6300,6 +6650,16 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-constellation",
+    "name": "Dial - Handcrafted Series - Constellation",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-yacht-master-gold",
     "name": "Ceramic Insert - 007 Yacht Master Gold",
     "category": "bezel_insert",
@@ -6388,6 +6748,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-hand-painted-series-constellation",
+    "name": "Chapter Ring - SKX007/SRPD - Handcrafted Series - Constellation",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "title explicit SKX007/SRPD Handcrafted Series chapter ring"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/c-r-skx007-brushed-blue",
@@ -6660,6 +7030,16 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-marble",
+    "name": "Dial - Handcrafted Series - Marble",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/steel-insert-007-yacht-master-black-x-steel",
     "name": "Steel Insert - 007 Yacht Master Black X Steel",
     "category": "bezel_insert",
@@ -6758,6 +7138,76 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-mosaic",
+    "name": "Dial - Handcrafted Series - Mosaic",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-comet",
+    "name": "Dial - Handcrafted Series - Comet",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-specks-mk2",
+    "name": "Dial - Handcrafted Series - Specks MK2",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-specks-mk3",
+    "name": "Dial - Handcrafted Series - Specks MK3",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-gradient",
+    "name": "Dial - Handcrafted Series - Gradient",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-spectrum-mk2",
+    "name": "Dial - Handcrafted Series - Spectrum",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-veins-of-gold",
+    "name": "Dial - Handcrafted Series - Veins of Gold",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/case-skx007-sub-polished-steel-with-case-back",
@@ -6890,6 +7340,16 @@
     "evidence": "product_type 'Dials', no explicit feet/fitment tag on this SKU"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-liquidmetal",
+    "name": "Dial - Handcrafted Series - Liquidmetal",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/bezel-skx007-deep-sea-polished-pvd-gun-metal",
     "name": "Bezel - SKX007/SRPD Deep Sea - Polished PVD Gun Metal",
     "category": "bezel",
@@ -6930,6 +7390,16 @@
     "evidence": "tag explicit SKX007/SRPD"
   },
   {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-spartan-mk2",
+    "name": "Dial - Handcrafted Series - Spartan MK2",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
+  },
+  {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-black-luminous-green",
     "name": "Ceramic Insert - 007 Arabic Dual Time Black - Luminous Green",
     "category": "bezel_insert",
@@ -6958,6 +7428,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-mosaic-mk2",
+    "name": "Dial - Handcrafted Series - Mosaic MK2",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/ceramic-insert-007-arabic-dual-time-aegean-blue",
@@ -6998,6 +7478,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit SKX007/SRPD"
+  },
+  {
+    "sourceUrl": "https://dlwwatches.com/products/dial-hand-painted-series-constellation-mk2",
+    "name": "Dial - Handcrafted Series - Constellation MK2",
+    "category": "dial",
+    "family": "nh3x-dial-standard",
+    "attributes": {},
+    "specSource": "family-inferred",
+    "confidence": "medium",
+    "evidence": "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type"
   },
   {
     "sourceUrl": "https://dlwwatches.com/products/bezel-skx007-lx-brushed-pvd-blue",

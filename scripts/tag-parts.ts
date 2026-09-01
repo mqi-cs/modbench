@@ -42,6 +42,27 @@ interface RejectedEntry {
   reason: string;
 }
 
+// A product that fell through every vendor branch's if/else chain into the
+// terminal `else` with checkOutOfScope() returning null -- neither tagged
+// nor rejected, no trace anywhere. This is the exact shape every gap found
+// pre-Phase-2 had (movement, chapter_ring, crystal, strap): a real product
+// under a product_type string no branch checked for, silently dropped.
+// Tracked separately from RejectedEntry (which is a considered "this is
+// out of scope" decision) so the standard pipeline output can surface
+// "nobody decided about this" as distinct from "this was excluded on
+// purpose."
+interface UnmatchedEntry {
+  sourceUrl: string;
+  productName: string;
+  productType: string;
+}
+
+interface TagResult {
+  tagged: TaggedEntry[];
+  rejected: RejectedEntry[];
+  unmatched: UnmatchedEntry[];
+}
+
 function latestRawFile(vendorKey: string): string {
   const files = readdirSync("data/raw").filter((f) => f.startsWith(`${vendorKey}-`) && f.endsWith(".json"));
   files.sort(); // ISO dates sort lexically
@@ -160,10 +181,11 @@ function checkOutOfScope(text: string, category: string): string | null {
 }
 
 // ---------- namokimods.com ----------
-function tagNamoki(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejected: RejectedEntry[] } {
+function tagNamoki(products: ShopifyProduct[]): TagResult {
   const base = "https://namokimods.com";
   const tagged: TaggedEntry[] = [];
   const rejected: RejectedEntry[] = [];
+  const unmatched: UnmatchedEntry[] = [];
 
   for (const p of products) {
     const pt = typeLower(p);
@@ -279,17 +301,19 @@ function tagNamoki(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejecte
     } else {
       const oos = checkOutOfScope(combined, "unknown");
       if (oos) reject(oos);
+      else unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
     }
   }
 
-  return { tagged, rejected };
+  return { tagged, rejected, unmatched };
 }
 
 // ---------- luciusatelier.com ----------
-function tagLucius(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejected: RejectedEntry[] } {
+function tagLucius(products: ShopifyProduct[]): TagResult {
   const base = "https://luciusatelier.com";
   const tagged: TaggedEntry[] = [];
   const rejected: RejectedEntry[] = [];
+  const unmatched: UnmatchedEntry[] = [];
 
   for (const p of products) {
     const pt = typeLower(p);
@@ -376,17 +400,19 @@ function tagLucius(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejecte
     } else {
       const oos = checkOutOfScope(combined, "unknown");
       if (oos) reject(oos);
+      else unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
     }
   }
 
-  return { tagged, rejected };
+  return { tagged, rejected, unmatched };
 }
 
 // ---------- dlwwatches.com ----------
-function tagDlw(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejected: RejectedEntry[] } {
+function tagDlw(products: ShopifyProduct[]): TagResult {
   const base = "https://dlwwatches.com";
   const tagged: TaggedEntry[] = [];
   const rejected: RejectedEntry[] = [];
+  const unmatched: UnmatchedEntry[] = [];
 
   for (const p of products) {
     const pt = typeLower(p);
@@ -459,20 +485,60 @@ function tagDlw(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejected: 
       // bracelet family when the title/tags actually name a model.
       if (prefix) push("strap", `${prefix}-bracelet`, "medium", "family-inferred", `title/tag mentions ${prefix}, but product_type 'Straps' doesn't distinguish bracelet vs strap construction -- kept medium`);
       else push("strap", "generic-strap", "medium", "family-inferred", "product_type 'Straps', no case-model marker -- assumed lug-width-based");
+    } else if (ti.startsWith("yard sale")) {
+      // Found via the unmatched-product-type report (2026-09-01): 84 SKUs
+      // with product_type left blank, all "YARD SALE - <part> (Random
+      // Design)" -- a grab-bag of surplus stock where the buyer doesn't
+      // choose the design. Genuinely un-taggable: a family assignment
+      // claims a specific, known physical spec, and "random design" is
+      // explicitly the opposite of that. Reject, don't silently drop --
+      // this is a real, large SKU count and someone should be able to see
+      // why it's excluded, not just find it missing.
+      reject("'Yard Sale' random-design surplus bundle -- vendor does not let the buyer choose the specific part/design, so no family can be assigned in good faith");
+    } else if (ti === "springbar tool") {
+      reject("a tool, not a watch part");
+    } else if (ti.startsWith("7s26 movement")) {
+      // Same blank-product_type cluster, one real SKU: a 7S26 is a
+      // different movement architecture from the NH3x family this catalog
+      // scopes (different height, different rotor/keyless works) -- not a
+      // drop-in swap. Single SKU across all 4 vendors' full catalogs, same
+      // singleton shape as snxs-crystal (see singleton-verification.md):
+      // not enough real evidence to seed and maintain a whole new family
+      // for one listing.
+      reject("Seiko 7S26 movement -- a different movement architecture from the NH3x family this catalog scopes, and only 1 SKU found across all 4 vendors -- insufficient to seed a family (same bar as snxs-crystal, see singleton-verification.md)");
+    } else if (ti.startsWith("dial - handcrafted series")) {
+      const oos = checkOutOfScope(combined, "dial");
+      if (oos) reject(oos);
+      else push("dial", "nh3x-dial-standard", "medium", "family-inferred", "title explicit 'Handcrafted Series' decorative dial, blank product_type -- no explicit feet/fitment statement, same confidence as this vendor's plain 'Dials' product_type");
+    } else if (ti.startsWith("hands - handcrafted series")) {
+      const oos = checkOutOfScope(combined, "hands");
+      if (oos) reject(oos);
+      else push("hands", "nh3x-hands-standard", "medium", "family-inferred", "title explicit 'Handcrafted Series' hands, blank product_type -- no explicit pinion statement, same confidence as this vendor's plain 'Hands' product_type");
+    } else if (ti.startsWith("chapter ring") && ti.includes("handcrafted series")) {
+      const oos = checkOutOfScope(combined, "chapter_ring");
+      if (ti.includes("skx007") || ti.includes("srpd")) push("chapter_ring", "skx007-chapter-ring", "high", "vendor-stated", "title explicit SKX007/SRPD Handcrafted Series chapter ring");
+      else if (oos) reject(oos);
+      else reject(`Handcrafted Series chapter ring with no identifiable case-model marker in title (title '${p.title}')`);
+    } else if (ti.startsWith("ceramic insert") && ti.includes("handcrafted series")) {
+      const oos = checkOutOfScope(combined, "bezel_insert");
+      if (oos) reject(oos);
+      else reject(`Handcrafted Series bezel insert with no identifiable case-model marker in title (title '${p.title}') -- unlike the chapter rings in this same series, this one doesn't state SKX007/SRPD/SKX013`);
     } else {
       const oos = checkOutOfScope(combined, "unknown");
       if (oos) reject(oos);
+      else unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
     }
   }
 
-  return { tagged, rejected };
+  return { tagged, rejected, unmatched };
 }
 
 // ---------- watchandstyle.net ----------
-function tagWatchAndStyle(products: ShopifyProduct[]): { tagged: TaggedEntry[]; rejected: RejectedEntry[] } {
+function tagWatchAndStyle(products: ShopifyProduct[]): TagResult {
   const base = "https://watchandstyle.net";
   const tagged: TaggedEntry[] = [];
   const rejected: RejectedEntry[] = [];
+  const unmatched: UnmatchedEntry[] = [];
 
   for (const p of products) {
     const pt = typeLower(p);
@@ -578,16 +644,17 @@ function tagWatchAndStyle(products: ShopifyProduct[]): { tagged: TaggedEntry[]; 
     } else {
       const oos = checkOutOfScope(combined, "unknown");
       if (oos) reject(oos);
+      else unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
     }
   }
 
-  return { tagged, rejected };
+  return { tagged, rejected, unmatched };
 }
 
 function main() {
   mkdirSync("data/tagged", { recursive: true });
 
-  const vendors: { key: string; fn: (p: ShopifyProduct[]) => { tagged: TaggedEntry[]; rejected: RejectedEntry[] } }[] = [
+  const vendors: { key: string; fn: (p: ShopifyProduct[]) => TagResult }[] = [
     { key: "namokimods", fn: tagNamoki },
     { key: "luciusatelier", fn: tagLucius },
     { key: "dlwwatches", fn: tagDlw },
@@ -596,21 +663,54 @@ function main() {
 
   let totalTagged = 0;
   let totalRejected = 0;
+  let totalUnmatched = 0;
   const byCategory: Record<string, number> = {};
+  // vendor -> product_type -> { count, exampleUrl } -- every product_type
+  // that reached the terminal else with no tagger branch and wasn't ruled
+  // out of scope either. See UnmatchedEntry above: this is the standing
+  // report Task 3 (pre-Phase-2) asks for, not a one-off script -- every
+  // tag-parts.ts run regenerates it, so a new vendor product_type can't
+  // silently vanish the way movement/chapter_ring/crystal/strap did.
+  const unmatchedByVendor: Record<string, Record<string, { count: number; exampleUrl: string }>> = {};
 
   for (const v of vendors) {
     const products = loadProducts(v.key);
-    const { tagged, rejected } = v.fn(products);
+    const { tagged, rejected, unmatched } = v.fn(products);
     writeFileSync(`data/tagged/${v.key}.json`, JSON.stringify(tagged, null, 2));
     writeFileSync(`data/tagged/${v.key}-rejected.json`, JSON.stringify(rejected.map((r) => ({ ...r, vendorKey: v.key })), null, 2));
-    console.log(`${v.key}: ${tagged.length} tagged, ${rejected.length} rejected (from ${products.length} raw products)`);
+    console.log(`${v.key}: ${tagged.length} tagged, ${rejected.length} rejected, ${unmatched.length} unmatched (from ${products.length} raw products)`);
     totalTagged += tagged.length;
     totalRejected += rejected.length;
+    totalUnmatched += unmatched.length;
     for (const t of tagged) byCategory[t.category] = (byCategory[t.category] ?? 0) + 1;
+
+    const byType: Record<string, { count: number; exampleUrl: string }> = {};
+    for (const u of unmatched) {
+      const key = u.productType || "(empty product_type)";
+      if (!byType[key]) byType[key] = { count: 0, exampleUrl: u.sourceUrl };
+      byType[key].count++;
+    }
+    if (Object.keys(byType).length > 0) unmatchedByVendor[v.key] = byType;
   }
 
-  console.log(`\nTotal tagged: ${totalTagged}, total rejected: ${totalRejected}`);
+  console.log(`\nTotal tagged: ${totalTagged}, total rejected: ${totalRejected}, total unmatched: ${totalUnmatched}`);
   console.log("By category:", byCategory);
+
+  if (totalUnmatched > 0) {
+    console.log(`\n${totalUnmatched} product(s) matched no tagger branch and were not ruled out of scope -- see data/fixtures/unmatched-product-types.json`);
+    for (const [vendorKey, byType] of Object.entries(unmatchedByVendor)) {
+      const sorted = Object.entries(byType).sort((a, b) => b[1].count - a[1].count);
+      console.log(`  ${vendorKey}:`);
+      for (const [productType, info] of sorted) {
+        console.log(`    '${productType}': ${info.count} (e.g. ${info.exampleUrl})`);
+      }
+    }
+  }
+  // Deliberately NOT in data/tagged/ -- import-tagged.ts scans every *.json
+  // file in that directory expecting a tagged/rejected-entry array, and
+  // this file's shape (vendor -> product_type -> {count, exampleUrl}) is
+  // neither.
+  writeFileSync("data/fixtures/unmatched-product-types.json", JSON.stringify(unmatchedByVendor, null, 2));
 }
 
 main();
