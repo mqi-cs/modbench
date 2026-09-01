@@ -67,12 +67,73 @@ function parseCaliber(title: string): string | null {
   return m ? m[0].toUpperCase() : null;
 }
 
+// Real, positive vendor evidence only, per Amendment A -- "no date" in a
+// title is as much a vendor statement as "date" is. A title that mentions
+// neither leaves both fields null (never guessed) rather than assuming
+// "most dials have a date."
+function parseDialComplication(title: string): { hasDateWindow: boolean | null; hasDayWindow: boolean | null } {
+  const t = title.toLowerCase();
+  if (/day[\s\-/]?date/.test(t)) return { hasDateWindow: true, hasDayWindow: true };
+  if (/no date/.test(t)) return { hasDateWindow: false, hasDayWindow: false };
+  if (/\bdate\b/.test(t)) return { hasDateWindow: true, hasDayWindow: false };
+  return { hasDateWindow: null, hasDayWindow: null };
+}
+
+// Hand-verified against real vendor body_html (same rigor as CASE_DEFAULTS/
+// DIAL_DEFAULTS above, not a guess) -- these are the specific dial SKUs
+// this session found explicit crown/date-position statements for, keyed by
+// exact part name. Positions are the set of date-window positions this
+// dial's own listing states it supports; a movement whose stated
+// dateWindowPosition (see parseCaliber's sibling logic below, and the
+// movement branch in main()) isn't in this set is a real, evidenced
+// mismatch -- not every dial in the catalog has this researched yet
+// (most don't state crown position at all, and stay null, correctly,
+// rather than being guessed at just to make a rule fire).
+const DIAL_DATE_POSITION_OVERRIDES: Record<string, string[]> = {
+  "Vintage Enamel Biege Dial (Date)":
+    // body_html: "Fits 3 and 4 o'clock crown builds... One dial works for
+    // both modern 3 o'clock and classic SKX-style 4 o'clock crown
+    // positions" + spec table "Crown Position: Both 3 o'clock and 4
+    // o'clock". luciusatelier.com/products/vintage-enamel-biege-dial-date
+    ["3", "4:30"],
+};
+
 function main() {
   const approved = db.select().from(parts).where(eq(parts.reviewState, "approved")).all();
   let updated = 0;
 
   for (const p of approved) {
     const existing = fromJsonColumn<Record<string, unknown>>(p.attributes);
+
+    // Dial complication fields (hasDateWindow/hasDayWindow/dateWindowPosition)
+    // were added to this script after dials were first backfilled with
+    // placeholder nulls, so the generic "already non-empty, skip" guard
+    // below would otherwise skip every dial forever. Re-derive just these
+    // fields, idempotently, from real title/vendor evidence -- merge into
+    // whatever's already there rather than the wholesale skip other
+    // categories get, since nothing here overwrites a human review
+    // decision (these were never manually set, only auto-backfilled).
+    if (p.category === "dial") {
+      const fam = DIAL_DEFAULTS[p.family];
+      const complication = parseDialComplication(p.name);
+      const override = DIAL_DATE_POSITION_OVERRIDES[p.name];
+      const attrs = {
+        diameterMm: existing.diameterMm ?? fam?.diameterMm ?? null,
+        hasFeet: existing.hasFeet ?? fam?.hasFeet ?? null,
+        hasDateWindow: complication.hasDateWindow,
+        hasDayWindow: complication.hasDayWindow,
+        // The set of crown/date positions this specific dial's own listing
+        // states it supports (see DIAL_DATE_POSITION_OVERRIDES) -- null
+        // means genuinely unresearched, not "no date window" (that's
+        // hasDateWindow's job).
+        supportedDatePositions: override ?? null,
+        styleTags: (existing.styleTags as string[] | undefined) ?? [],
+      };
+      db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();
+      updated++;
+      continue;
+    }
+
     if (Object.keys(existing).length > 0) continue; // already has real attributes, don't overwrite
 
     let attrs: Record<string, unknown> = {};
@@ -95,15 +156,6 @@ function main() {
         dialApertureMm: fam?.dialApertureMm ?? null,
         crystalDiameterMm: fam?.dialApertureMm ?? null,
         requiresSpacerFor: [] as string[],
-      };
-    } else if (p.category === "dial") {
-      const fam = DIAL_DEFAULTS[p.family];
-      attrs = {
-        diameterMm: fam?.diameterMm ?? null,
-        hasFeet: fam?.hasFeet ?? null,
-        dateWindowPosition: null,
-        hasDayWindow: null,
-        styleTags: [] as string[],
       };
     } else if (p.category === "hands") {
       attrs = {
