@@ -10,6 +10,7 @@ import { PartPicker } from "./PartPicker";
 import { BuildSummary } from "./BuildSummary";
 import { StarterBuilds } from "./StarterBuilds";
 import type { StarterBuild } from "@/data/fixtures/starter-builds";
+import { z } from "zod";
 
 // Warnings that reflect a gap in the catalog rather than a problem with
 // the specific combination in front of the user.
@@ -28,13 +29,26 @@ const SLOT_PARAM: Record<SlotKey, string> = {
   strap: "strap",
 };
 
+// Spec: "Parse and validate with Zod." Part ids are nanoids, so anything
+// that isn't a plausible id is rejected before it's used as a lookup key
+// -- a query string is external input like any feed payload
+// (00-PROJECT.md: Zod for all external data validation).
+const PartIdSchema = z.string().min(1).max(64).regex(/^[A-Za-z0-9_-]+$/);
+
+function readSlotParam(params: URLSearchParams, param: string): string | null {
+  const raw = params.get(param);
+  if (raw === null) return null;
+  const parsed = PartIdSchema.safeParse(raw);
+  return parsed.success ? parsed.data : null;
+}
+
 function buildFromParams(params: URLSearchParams, known: CatalogSlice["parts"]): Build {
   const parts: Build["parts"] = {};
   for (const [slot, param] of Object.entries(SLOT_PARAM) as [SlotKey, string][]) {
-    const id = params.get(param);
-    // An unknown or unapproved id drops that slot rather than crashing --
-    // spec: "never a crash, never a silent empty state". The dropped-slot
-    // notice is surfaced by the caller.
+    const id = readSlotParam(params, param);
+    // A malformed, unknown, or unapproved id drops that slot rather than
+    // crashing -- spec: "never a crash, never a silent empty state". The
+    // dropped-slot notice is surfaced by the caller.
     if (id && known[id]) parts[slot] = id;
   }
   return { parts };
@@ -95,8 +109,10 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
     const params = new URLSearchParams(window.location.search);
     const dropped: string[] = [];
     for (const [slot, param] of Object.entries(SLOT_PARAM) as [SlotKey, string][]) {
-      const id = params.get(param);
-      if (id && !slice.parts[id]) dropped.push(slot);
+      const raw = params.get(param);
+      if (raw === null) continue;
+      const id = readSlotParam(params, param);
+      if (!id || !slice.parts[id]) dropped.push(slot);
     }
     setDroppedSlots(dropped);
     setBuild(buildFromParams(params, slice.parts));
@@ -155,6 +171,7 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
         currency: listing.currency,
         inStock: listing.inStock,
         sourceUrl: listing.sourceUrl,
+        imageUrl: catalog.images[part.id] ?? null,
         state,
         reason: error?.message ?? warn?.message ?? null,
       });
@@ -164,7 +181,7 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
     // price ascending within each band.
     const rank = { compatible: 0, warning: 1, blocked: 2 } as const;
     return items.sort((a, b) => rank[a.state] - rank[b.state] || a.priceMinorBase - b.priceMinorBase);
-  }, [activeSlot, build, slice, catalog.listings]);
+  }, [activeSlot, build, slice, catalog.listings, catalog.images]);
 
   const filledCount = Object.keys(build.parts).length;
 

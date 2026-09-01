@@ -29,6 +29,7 @@ export interface PickerItem {
   currency: string;
   inStock: boolean;
   sourceUrl: string;
+  imageUrl: string | null;
   state: PartState;
   reason: string | null;
 }

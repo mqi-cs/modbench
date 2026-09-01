@@ -122,6 +122,16 @@ export function PartPicker({
   );
 }
 
+// Vendor product photos are full-resolution -- some are 9 MB PNGs, which
+// is unusable with ~30 cards on screen. Shopify's CDN (all four vendors
+// are on Shopify) resizes on request via ?width=, taking that same image
+// to ~240 KB. Applied at render time so the stored URL stays the vendor's
+// canonical one; a non-Shopify host is passed through untouched.
+function thumb(url: string, width = 320): string {
+  if (!url.includes("cdn.shopify.com")) return url;
+  return `${url}${url.includes("?") ? "&" : "?"}width=${width}`;
+}
+
 function PartCard({ item, selected, onSelect }: { item: PickerItem; selected: boolean; onSelect: (id: string) => void }) {
   const blocked = item.state === "blocked";
   const warn = item.state === "warning";
@@ -136,7 +146,10 @@ function PartCard({ item, selected, onSelect }: { item: PickerItem; selected: bo
       : "border-l-[3px] border-l-transparent";
 
   return (
-    <li className="min-w-0">
+    // The vendor link sits alongside the select button, not inside it: an
+    // anchor nested in a button is invalid HTML and the two are genuinely
+    // separate actions -- choose this part vs go read its listing.
+    <li className={`relative flex min-w-0 flex-col border border-rule bg-card ${stateClass} ${selected ? "outline-2 outline-brass" : ""}`}>
       <button
         type="button"
         data-part
@@ -144,10 +157,20 @@ function PartCard({ item, selected, onSelect }: { item: PickerItem; selected: bo
         aria-disabled={blocked}
         aria-describedby={item.reason ? `reason-${item.id}` : undefined}
         title={item.reason ?? undefined}
-        className={`flex h-full w-full flex-col gap-2 border border-rule bg-card p-3 text-left ${stateClass} ${
-          selected ? "outline-2 outline-brass" : ""
-        } ${blocked ? "cursor-not-allowed" : "hover:bg-brass-tint/40"}`}
+        className={`flex h-full w-full flex-col gap-2 p-3 text-left ${blocked ? "cursor-not-allowed" : "hover:bg-brass-tint/40"}`}
       >
+        {item.imageUrl ? (
+          <img
+            src={thumb(item.imageUrl)}
+            alt=""
+            loading="lazy"
+            className={`h-28 w-full bg-paper object-contain ${blocked ? "opacity-45 grayscale" : ""}`}
+          />
+        ) : (
+          <span aria-hidden className="flex h-28 w-full items-center justify-center bg-paper text-[11px] text-graphite/60">
+            no image
+          </span>
+        )}
         <span className={`text-[13px] leading-snug font-medium ${blocked ? "text-graphite" : ""}`}>{item.name}</span>
 
         <span className="mt-auto flex items-baseline justify-between gap-2">
@@ -175,6 +198,18 @@ function PartCard({ item, selected, onSelect }: { item: PickerItem; selected: bo
           </span>
         )}
       </button>
+
+      {/* "Every part card links out to its vendor page in a new tab. This
+          is a research tool as much as a configurator." (spec) */}
+      <a
+        href={item.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="border-t border-rule px-3 py-1.5 text-[11px] text-graphite hover:bg-paper hover:text-ink"
+      >
+        View at {item.vendorKey}
+        <span className="sr-only"> (opens in a new tab)</span>
+      </a>
     </li>
   );
 }

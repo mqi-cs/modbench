@@ -81,6 +81,9 @@ export const parts = sqliteTable("parts", {
   reviewState: text("review_state").notNull().default("pending"),
   notes: text("notes"),
   sourceUrl: text("source_url").notNull(),
+  // First image from the vendor's own feed. Display only -- lib/compat
+  // never sees it, and no rule may key off it.
+  imageUrl: text("image_url"),
   createdAt: integer("created_at").notNull(),
   updatedAt: integer("updated_at").notNull(),
 }, (table) => [

@@ -56,6 +56,9 @@ export interface DisplayListing {
 // no gain, since every field is recoverable from these two.
 export interface CatalogPayload {
   parts: CatalogSlice["parts"];
+  // Display only, keyed by part id -- kept OUT of CatalogSlice so
+  // lib/compat can't see it and no rule can key off an image.
+  images: Record<string, string>;
   familyExceptions: CatalogSlice["familyExceptions"];
   listings: DisplayListing[];
   vendors: VendorInfo[];
@@ -86,6 +89,9 @@ export function loadCatalog(): CatalogPayload {
     };
   }
 
+  const images: Record<string, string> = {};
+  for (const p of approved) if (p.imageUrl && sliceParts[p.id]) images[p.id] = p.imageUrl;
+
   const rows = db.select().from(listings).all().filter((l) => sliceParts[l.partId] && l.priceMinorBase !== null);
   const displayListings: DisplayListing[] = rows.map((l) => {
     const v = vendorById.get(l.vendorId);
@@ -113,6 +119,7 @@ export function loadCatalog(): CatalogPayload {
         severity: e.severity as "error" | "warning" | "info",
         message: e.message,
       })),
+    images,
     listings: displayListings,
     vendors: allVendors.map((v) => {
       const rate = v.expectedCurrency === fx.base ? 1 : (fx.rates[v.expectedCurrency] ?? 1);
