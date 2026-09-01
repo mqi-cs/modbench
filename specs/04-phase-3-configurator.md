@@ -44,7 +44,7 @@ Sort each picker: compatible first, then by price ascending. Compatible-with-war
 
 **Warnings panel** is always visible in the right column, never collapsed behind a click. Group by severity. Each finding shows its message, the slots involved, and its fix if there is one.
 
-**Running total** breaks down as: parts subtotal, then per-vendor shipping, then estimated tools. Show the tool cost as a separate line clearly marked one-off, since a modder buying their second watch already owns them. Add a toggle: "I already have tools."
+**Running total** is computed in GBP from `priceMinorBase` and breaks down as: parts subtotal, then per-vendor shipping, then estimated tools. Show each part's native vendor price alongside the GBP figure, since that is what the person will actually be charged, and display the FX rate date wherever a converted total appears. Show the tool cost as a separate line clearly marked one-off, since a modder buying their second watch already owns them. Add a toggle: "I already have tools."
 
 **Vendor grouping.** Group the parts list by vendor with each vendor's shipping cost. When a selected part is available cheaper elsewhere, or when switching vendors would drop a shipping charge, surface it inline: "Also at Namoki for £4 more, but you're already ordering from them — saves £12 shipping."
 

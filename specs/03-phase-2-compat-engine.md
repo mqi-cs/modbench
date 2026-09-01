@@ -99,7 +99,7 @@ Add a property test: for any two randomly selected parts from the catalog, `eval
 - **No LLM calls anywhere in `lib/compat`.** Enforce with a lint rule if you like.
 - No imports from `lib/db` inside `lib/compat`. Pure data in, pure data out.
 - Every `error` finding must trace to an explicit spec comparison or a `family_exceptions` row. If a rule cannot determine an answer, it emits a `warning` saying so. It never guesses either way.
-- Messages are written for a beginner. Not "dial feet position mismatch (3/9 vs none)" but "This dial has no feet, so it won't clip onto the movement. You can glue it in place with dial dots — most modders do — but you'll need to be careful about centring it."
+- Messages are written for a beginner, in **two layers**: what is wrong with this specific combination, then the underlying principle. Not "dial feet position mismatch (3/9 vs none)" but "This dial has no feet — the small posts that clip it onto the movement. You can glue it in place with dial dots, which most modders do, but you'll need to be careful about centring it." The second layer is what turns a block into a lesson, and it is the main education feature of the product (see `09-COMPETITIVE-CONTEXT.md`).
 - Rules are order-independent. No rule may depend on another having run.
 
 ## Pass measure
@@ -110,4 +110,4 @@ Add a property test: for any two randomly selected parts from the catalog, `eval
 4. Every rule has unit tests covering both branches. Line coverage of `lib/compat` **≥90%**.
 5. The property test runs 1,000 random pairs with no throws.
 6. `evaluateBuild` on a full 6-slot build completes in **under 10ms**, so the UI can call it on every keystroke.
-7. Read all 15 rule messages aloud. Any that a beginner wouldn't understand gets rewritten.
+7. Read all 15 rule messages aloud. Any that a beginner wouldn't understand gets rewritten. **Every `error` and `warning` message carries both layers** — the specific problem and the underlying principle. A message that only states the problem fails this measure.

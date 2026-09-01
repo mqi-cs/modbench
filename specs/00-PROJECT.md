@@ -122,6 +122,7 @@ Each phase has its own file with a scope, a task list, and a pass measure. **Do 
 | `06-phase-5-sharing.md` | Permalinks, homepage, style pages | ~1 week |
 | `07-phase-6-nl-image-input.md` | Natural language + image entry | deferred |
 | `08-DEFERRED.md` | **Review at the end of every phase.** Cut work to restore | — |
+| `09-COMPETITIVE-CONTEXT.md` | **Read before Phase 2.** Why features exist | — |
 
 ## v1 simplifications
 
