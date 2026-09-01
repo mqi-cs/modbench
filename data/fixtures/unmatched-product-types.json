@@ -37,6 +37,42 @@
       "exampleUrl": "https://namokimods.com/products/srp-turtle-bezel-insert-3m-adhesive-stickers"
     }
   },
+  "luciusatelier": {
+    "Bracelets": {
+      "count": 14,
+      "exampleUrl": "https://luciusatelier.com/products/oyster-bracelet-20-16mm-brushed"
+    },
+    "Cases": {
+      "count": 19,
+      "exampleUrl": "https://luciusatelier.com/products/gs-watch-case-39mm-v2-nh34-ready"
+    },
+    "Dials": {
+      "count": 2,
+      "exampleUrl": "https://luciusatelier.com/products/snowflake-dial-open-heart"
+    },
+    "Chapter Rings": {
+      "count": 10,
+      "exampleUrl": "https://luciusatelier.com/products/skx007-brushed-silver-chapter-ring-black-numerals"
+    },
+    "Bezel Inserts": {
+      "count": 3,
+      "exampleUrl": "https://luciusatelier.com/products/skx007-ceramic-bezel-insert-slope-pepsi-dual-time-swiss-made"
+    },
+    "Crystals": {
+      "count": 2,
+      "exampleUrl": "https://luciusatelier.com/products/skx007-double-domed-sapphire-crystal-micro-bevel"
+    },
+    "Bezels": {
+      "count": 3,
+      "exampleUrl": "https://luciusatelier.com/products/snk-tachymeter-bezel-silver"
+    }
+  },
+  "dlwwatches": {
+    "(empty product_type)": {
+      "count": 1,
+      "exampleUrl": "https://dlwwatches.com/products/ceramic-insert-hand-painted-series-gem"
+    }
+  },
   "watchandstyle": {
     "SRPL \" Shogurai\" Hexad\"": {
       "count": 2,

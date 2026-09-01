@@ -196,6 +196,7 @@ function tagNamoki(products: ShopifyProduct[]): TagResult {
     const push = (category: string, family: string, confidence: TaggedEntry["confidence"], specSource: TaggedEntry["specSource"], evidence: string, attributes: Record<string, unknown> = {}) =>
       tagged.push({ sourceUrl: url, name: p.title, category, family, attributes, specSource, confidence, evidence });
     const reject = (reason: string) => rejected.push({ sourceUrl: url, productName: p.title, reason });
+    const markUnmatched = () => unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
 
     if (pt === "tools" || pt === "gift cards") {
       // Found via the unmatched-product-type report: 15 real SKUs of
@@ -338,6 +339,7 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
     const push = (category: string, family: string, confidence: TaggedEntry["confidence"], specSource: TaggedEntry["specSource"], evidence: string, attributes: Record<string, unknown> = {}) =>
       tagged.push({ sourceUrl: url, name: p.title, category, family, attributes, specSource, confidence, evidence });
     const reject = (reason: string) => rejected.push({ sourceUrl: url, productName: p.title, reason });
+    const markUnmatched = () => unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
 
     const isUltraThin = tg.includes("ultra-thin") || ti.includes("ultra thin");
 
@@ -362,6 +364,7 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
       } else if (tg.includes("fits-skx013")) {
         push("case", "skx013-case", "medium", "family-inferred", "product_type 'Cases', tag fits-skx013, not part of the Ultra Thin line");
       } else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "casebacks") {
       push("case", "skx007-case", "medium", "family-inferred", "tags fits-skx013/skx007/7s26-0020/0030 -- caseback thread shared across SKX007/013 shells per vendor tags, not independently confirmed");
     } else if (pt === "dials") {
@@ -371,6 +374,7 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
       } else if (tg.includes("fits-skx013") || tg.includes("skx007")) {
         push("dial", "nh3x-dial-standard", "medium", "family-inferred", "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU");
       } else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "hands") {
       const oos = checkOutOfScope(combined, "hands"); // brand-only check: same reasoning as dial
       if (tg.includes("gmt - nh34") || (tg.includes("gmt") && tg.includes("nh34"))) {
@@ -378,6 +382,7 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
       } else if (tg.includes("fits-nh34") || tg.includes("fits-nh35") || tg.includes("fits-nh36")) {
         push("hands", "nh3x-hands-standard", "high", "vendor-stated", "tags explicit fits-nh34/35/36/38/72");
       } else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "bezel inserts") {
       const oos = checkOutOfScope(combined, "bezel_insert");
       if (isUltraThin) {
@@ -385,11 +390,13 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
       } else if (tg.includes("fits-skx013")) {
         push("bezel_insert", "skx013-insert", "high", "vendor-stated", "tag explicit fits-skx013");
       } else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "crystals") {
       const oos = checkOutOfScope(combined, "crystal");
       if (tg.includes("fits-skx013") && !isUltraThin) {
         push("crystal", "skx013-crystal", "high", "vendor-stated", "tag explicit fits-skx013");
       } else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "chapter rings") {
       const oos = checkOutOfScope(combined, "chapter_ring");
       if (isUltraThin) {
@@ -397,6 +404,7 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
       } else if (tg.includes("fits-skx013")) {
         push("chapter_ring", "skx013-chapter-ring", "high", "vendor-stated", "tag explicit fits-skx013");
       } else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "movements") {
       push("movement", "nh3x-movement", "high", "vendor-stated", `title explicit '${p.title}'`);
     } else if (pt === "rotors" || pt === "bridges") {
@@ -412,17 +420,20 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
       if (isUltraThin) push("bezel", "skx013-bezel", "low", "manual", "Ultra Thin-scoped bezel ring -- do not treat as fitting a stock SKX013 case");
       else if (prefix) push("bezel", `${prefix}-bezel`, "high", "vendor-stated", `tags/title match -> ${prefix}`);
       else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "crowns") {
       const prefix = tg.includes("fits-skx013") ? "skx013" : resolveCaseModelPrefix(combined);
       const oos = checkOutOfScope(combined, "crown");
       if (prefix) push("crown", `${prefix}-crown`, "high", "vendor-stated", `tags/title match -> ${prefix}`);
       else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "bracelets") {
       const prefix = isUltraThin ? null : tg.includes("fits-skx013") ? "skx013" : resolveCaseModelPrefix(combined);
       const oos = checkOutOfScope(combined, "strap");
       if (isUltraThin) reject("Ultra Thin-scoped bracelet -- end-links contoured to a proprietary case, does not fit stock SKX shells");
       else if (prefix) push("strap", `${prefix}-bracelet`, "high", "vendor-stated", `tags/title match -> ${prefix} (case-contoured end-links)`);
       else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "straps") {
       push("strap", "generic-strap", "medium", "family-inferred", "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width");
     } else {
@@ -451,6 +462,7 @@ function tagDlw(products: ShopifyProduct[]): TagResult {
     const push = (category: string, family: string, confidence: TaggedEntry["confidence"], specSource: TaggedEntry["specSource"], evidence: string, attributes: Record<string, unknown> = {}) =>
       tagged.push({ sourceUrl: url, name: p.title, category, family, attributes, specSource, confidence, evidence });
     const reject = (reason: string) => rejected.push({ sourceUrl: url, productName: p.title, reason });
+    const markUnmatched = () => unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
 
     if (pt === "watch tools") {
       // Found via the unmatched-product-type report: this vendor files
@@ -462,6 +474,7 @@ function tagDlw(products: ShopifyProduct[]): TagResult {
       if (tg.includes("srpe")) push("case", "srpe-case", "high", "vendor-stated", "tag explicit SRPE");
       else if (tg.includes("skx007") || tg.includes("srpd")) push("case", "skx007-case", "high", "vendor-stated", "tag explicit SKX007/SRPD (Turtle-styled variants are dimensionally SKX007 per the tag, styling name aside)");
       else if (oos) reject(oos);
+      else markUnmatched();
     } else if (ti.includes("movement") && (ti.includes("nh34") || ti.includes("nh35") || ti.includes("nh36"))) {
       push("movement", "nh3x-movement", "high", "vendor-stated", "title explicit NH34/35/36 movement");
     } else if (pt === "dials") {
@@ -477,6 +490,7 @@ function tagDlw(products: ShopifyProduct[]): TagResult {
       if (tg.includes("srp turtle") || ti.includes("turtle")) push("bezel_insert", "srp-turtle-insert", "high", "vendor-stated", "tag/title explicit SRP Turtle");
       else if (tg.includes("skx007") || tg.includes("srpd")) push("bezel_insert", "skx007-insert", "high", "vendor-stated", "tag explicit SKX007/SRPD");
       else if (oos) reject(oos);
+      else markUnmatched();
     } else if (pt === "crystals") {
       // Broadened pre-Phase-2: was SRPE/Turtle-only, missing real SKX007/
       // SKX013 crystals (tag "SKX007 & SRPD (Slope)" etc.) -- same shape
@@ -582,6 +596,7 @@ function tagWatchAndStyle(products: ShopifyProduct[]): TagResult {
     const push = (category: string, family: string, confidence: TaggedEntry["confidence"], specSource: TaggedEntry["specSource"], evidence: string, attributes: Record<string, unknown> = {}) =>
       tagged.push({ sourceUrl: url, name: p.title, category, family, attributes, specSource, confidence, evidence });
     const reject = (reason: string) => rejected.push({ sourceUrl: url, productName: p.title, reason });
+    const markUnmatched = () => unmatched.push({ sourceUrl: url, productName: p.title, productType: p.product_type });
 
     if (ti.includes("snxs") || ti.includes("ssk023")) {
       const oos = checkOutOfScope(combined, "case"); // these two markers only ever appear on case-dependent items in this vendor's real catalog
