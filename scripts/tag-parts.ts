@@ -104,12 +104,25 @@ function resolveCaseModelPrefix(text: string): string | null {
   return null;
 }
 
-// A day/date-wheel disc, rotor, movement stem, or spacer ring installs onto
-// an existing movement -- it is not itself a swappable movement. Found
-// pre-Phase-2 (2026-09-01): 33 of these were tagged straight into
-// nh3x-movement alongside complete movements, which would let a build
-// configurator's movement slot treat a spare part as if it fulfilled the
-// slot. Routed to nh3x-movement-accessory instead wherever this matches.
+// A day/date-wheel disc, rotor, bridge, corrector wheel, dial washer,
+// barrel, mainspring, C-clip, small screws, intermediate wheel/pinion,
+// gasket, movement stem, or spacer ring installs onto an existing movement
+// -- none of these are themselves a swappable movement. Found pre-Phase-2
+// (2026-09-01): 33 were tagged straight into nh3x-movement alongside
+// complete movements in this session's own tagging pass (fixed below), and
+// a SEPARATE 75 were found already sitting in nh3x-movement from an
+// earlier review pass that predates this split entirely -- decorative
+// rotor/bridge finishes (Côtes de Genève, Clous de Paris, Great Wave,
+// GS 9SA5, FPJ Diamond, ...) and small mechanical spares, all approved
+// before nh3x-movement-accessory existed, so the tagger's "never overwrite
+// an approved part" guard meant they'd stay silently mixed into the
+// complete-movement family forever. A build configurator's movement slot
+// treating "NH Movement Rotor - Côtes de Genève - Blue" as if it fulfilled
+// the slot is exactly the false-positive shape this project exists to
+// prevent -- movements anchor every Phase 2 rule. The 75 pre-existing rows
+// were corrected directly (same evidence, see parts.evidence for each);
+// this broadened pattern is what makes a full rebuild from scratch produce
+// the same, correct classification from the source data.
 //
 // Deliberately checks the TITLE only, not the full title+type+tags blob:
 // a complete movement's own tags can legitimately mention "Black Date
@@ -122,7 +135,7 @@ function resolveCaseModelPrefix(text: string): string | null {
 // Rotor", "... Movement Stem", "... Spacer Ring"), so title-only matching
 // is both sufficient and precise here.
 function isMovementAccessory(title: string): boolean {
-  return /day.?wheel|date.?wheel|\brotor\b|movement stem|\bspacer\b/.test(title);
+  return /day.?wheel|date.?wheel|\brotor\b|\bbridge\b|corrector|\bwheel\b|washer|\bscrews?\b|\bbarrel\b|mainspring|\bc clip\b|\bsnap\b|\bspacer\b|\bpinion\b|\bgasket\b|movement stem|\bstem\b|holding spacer/i.test(title);
 }
 
 // Out-of-scope markers, split by what they actually constrain:

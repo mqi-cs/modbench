@@ -123,11 +123,11 @@
     "sourceUrl": "https://namokimods.com/products/nh36-intermediate-wheel-for-day-corrector",
     "name": "NH36 Intermediate Wheel for Day Corrector",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Movement Spare Parts')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Spare Parts') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk912-field-watch-case-bundle-sandblasted-finish",
@@ -143,61 +143,61 @@
     "sourceUrl": "https://namokimods.com/products/nh35-36-day-date-corrector-wheel",
     "name": "NH35/36 Day-Date Corrector Wheel",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Movement Spare Parts')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Spare Parts') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh35-36-intermediate-date-driving-wheel-and-pinion",
     "name": "NH35/36 Intermediate Date Driving Wheel and Pinion",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Movement Spare Parts')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Spare Parts') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh35-36-barrel-complete-with-mainspring",
     "name": "NH35/36 Barrel (Complete with Mainspring)",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Movement Spare Parts')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Spare Parts') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-small-screws-pack-of-5",
     "name": "NH Small Screws (Pack of 5)",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Movement Spare Parts')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Spare Parts') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh36-c-clip-snap-for-day-star-with-dial-disk",
     "name": "NH36 C Clip - Snap for Day Star with Dial Disk",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Movement Spare Parts')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Spare Parts') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh34-dial-washer",
     "name": "NH34 Dial Washer",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Movement Spare Parts')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Movement Spare Parts') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nmk960-sumo-skx007-srpd-case-brushed-black-finish",
@@ -1619,31 +1619,31 @@
     "sourceUrl": "https://namokimods.com/products/nh-decorated-movement-bridge-perlage-steel",
     "name": "NH Decorated Movement Bridge: Perlage Steel",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-decorated-movement-bridge-circular-cote-de-geneve-steel",
     "name": "NH Decorated Movement Bridge: Circular Cote de Geneve Steel",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-decorated-movement-bridge-vertical-cote-de-geneve-steel",
     "name": "NH Decorated Movement Bridge: Vertical Cote de Geneve Steel",
     "category": "movement",
-    "family": "nh3x-movement",
+    "family": "nh3x-movement-accessory",
     "attributes": {},
     "specSource": "vendor-stated",
     "confidence": "high",
-    "evidence": "title explicit NH-series (product_type 'Rotors')"
+    "evidence": "day/date wheel disc, rotor, stem, or spacer for NH-series (product_type 'Rotors') -- not a swappable movement"
   },
   {
     "sourceUrl": "https://namokimods.com/products/nh-movement-rotor-clous-de-paris-blue-steel-finish",
