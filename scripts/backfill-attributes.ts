@@ -127,6 +127,7 @@ function main() {
         // means genuinely unresearched, not "no date window" (that's
         // hasDateWindow's job).
         supportedDatePositions: override ?? null,
+        lumed: parseLumed(p.name, ""),
         styleTags: (existing.styleTags as string[] | undefined) ?? [],
       };
       db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();
