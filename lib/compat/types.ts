@@ -93,6 +93,20 @@ export interface CatalogSlice {
   parts: Record<string, CatalogPart>; // keyed by id
   familyExceptions: CatalogFamilyException[];
   listings: CatalogListing[];
+  // Optional precomputed index of listings by partId. Purely a
+  // performance affordance: the two commerce rules otherwise scan the
+  // whole listings array on every call, which the configurator does
+  // hundreds of times per keystroke (once per candidate part in the
+  // active slot). Still plain data supplied by the caller -- lib/compat
+  // never builds or mutates it -- and every rule falls back to filtering
+  // when it is absent, so behaviour is identical either way.
+  listingsByPart?: Record<string, CatalogListing[]>;
+}
+
+// Every rule that needs a part's listings goes through here, so the
+// indexed and unindexed paths can't drift apart.
+export function listingsFor(catalog: CatalogSlice, partId: string): CatalogListing[] {
+  return catalog.listingsByPart?.[partId] ?? catalog.listings.filter((l) => l.partId === partId);
 }
 
 export interface Rule {

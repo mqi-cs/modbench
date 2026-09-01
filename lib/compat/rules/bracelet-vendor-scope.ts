@@ -1,5 +1,5 @@
 import type { Rule, Finding } from "../types";
-import { getPart } from "../types";
+import { getPart, listingsFor } from "../types";
 
 // NEW 2026-09-01 (Phase 3 body_html mining pass). 20 luciusatelier
 // bracelet listings carry a constraint stronger than any the engine could
@@ -30,7 +30,7 @@ export const braceletVendorScope: Rule = {
     const scopedTo = strap.attributes.vendorScopedTo as string | null | undefined;
     if (!scopedTo) return [];
 
-    const caseVendors = catalog.listings.filter((l) => l.partId === caseP.id).map((l) => l.vendorKey);
+    const caseVendors = listingsFor(catalog, caseP.id).map((l) => l.vendorKey);
     if (caseVendors.length === 0) {
       return [
         {

@@ -1,5 +1,6 @@
 import type { Rule, Finding } from "../types";
 import type { CatalogListing } from "../types";
+import { listingsFor } from "../types";
 
 function cheapestListing(listings: CatalogListing[]): CatalogListing | null {
   if (listings.length === 0) return null;
@@ -14,7 +15,7 @@ export const multiVendorShipping: Rule = {
     let partsWithNoListing = 0;
     for (const partId of Object.values(build.parts)) {
       if (!partId) continue;
-      const listings = catalog.listings.filter((l) => l.partId === partId);
+      const listings = listingsFor(catalog, partId);
       const cheapest = cheapestListing(listings);
       if (cheapest) vendorsUsed.add(cheapest.vendorKey);
       else partsWithNoListing++;

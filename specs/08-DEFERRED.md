@@ -117,6 +117,14 @@ Do not restructure now. Just avoid foreclosing it.
 
 **Cost to restore:** Low, if Phase 4's asset pipeline generalises the way it's meant to. Re-run the Task 5 pHash comparison against `data/assets/<category>/<partId>.png` instead of raw vendor CDN URLs; expect the ranking to actually track visual similarity once background/lighting/crop are no longer part of the signal.
 
+**Escalation (added 2026-09-01, end of Phase 3):** this is no longer only
+a data-quality deferral. Phase 3 shipped vendor grouping and the shipping-
+consolidation engine, and both are inert without it: 4,055 of 4,056 parts
+have a single listing, so there is never a second vendor to consolidate
+to. The headline pass measure in `04-phase-3-configurator.md` is blocked
+on this entry. Restoring D7 is what turns the project's stated
+differentiator from working code into a working feature.
+
 **Guardrails that keep this cheap:**
 - The 145 candidate pairs (Investigation A, `data/fixtures/investigation-a-cross-vendor-overlap.md`) and the Task 5 negative result (`data/fixtures/task5-perceptual-hash-check.md`, `phash-raw-results.json`) are the input set for the retry — don't regenerate the candidate list from scratch, re-check it against normalized images.
 - `part_merges` (schema + `scripts/merge-parts.ts` + the verify-catalog.ts conflicting-attributes check) already exists from the one manual merge done in Task 4 (SRP Turtle sapphire crystal) — restoring dedup is "run more merges through the existing mechanism," not "build the mechanism."

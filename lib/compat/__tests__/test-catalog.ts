@@ -64,7 +64,10 @@ export function buildCatalogSlice(): CatalogSlice {
       };
     });
 
-  return { parts: catalogParts, familyExceptions: catalogFamilyExceptions, listings: catalogListings };
+  const listingsByPart: Record<string, typeof catalogListings> = {};
+  for (const l of catalogListings) (listingsByPart[l.partId] ??= []).push(l);
+
+  return { parts: catalogParts, familyExceptions: catalogFamilyExceptions, listings: catalogListings, listingsByPart };
 }
 
 // known-builds.json fixture parts carry a display vendor prefix ("Namoki

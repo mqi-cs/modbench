@@ -82,9 +82,52 @@ Follow the design plan from `00-PROJECT.md`. Specific requirements:
 - No layout shift when the warnings panel changes — reserve its space.
 - Loading states for the initial catalog fetch. No spinners on filtering; that must be synchronous.
 
+## BLOCKED — the headline pass measure depends on D7
+
+**"For a build spanning 3+ vendors, the tool surfaces at least one
+concrete consolidation saving, hand-verified against real shipping costs"
+cannot currently be met, and not for want of implementation.**
+
+The logic exists, is pure, and is unit-tested (`lib/pricing.ts`,
+`findConsolidationSavings` — three tests covering a net-positive swap, a
+swap that costs more than the shipping it saves, and a target vendor that
+doesn't stock the part). Vendor grouping, per-vendor subtotals and
+per-vendor shipping all work on real data and are on screen.
+
+What's missing is the data it needs. Suggesting "buy this from a vendor
+already in your order" requires knowing the same physical part is sold by
+two vendors. In the current catalog **4,055 of 4,056 parts have exactly
+one listing**. The single exception is the SRP Turtle sapphire crystal
+merged by hand in Phase 1 Task 4 — and even that one can't produce a
+saving: namokimods' copy is out of stock, and dlwwatches' is £23.36 dearer
+than watchandstyle's, which is more than the £17.75 shipping consolidating
+it would save.
+
+This traces directly to **D7 — Cross-vendor deduplication** in
+`08-DEFERRED.md`, parked in Phase 1 after perceptual hashing on
+unnormalised vendor photos proved unreliable. Until parts are merged
+across vendors, there is no alternative vendor to consolidate *to*.
+
+**This is the strategic feature.** `09-COMPETITIVE-CONTEXT.md` names
+cross-vendor comparison as the thing a single-vendor competitor
+structurally cannot copy, and shipping consolidation is how that shows up
+in the interface. It is currently inert. D7's restore signal (Phase 4's
+70% asset-ready threshold) should be treated as gating this, not merely
+as tidy-up.
+
 ## Pass measure
 
-1. **All three starter builds load, evaluate to `ok`, and are editable.**
+1. **All three starter builds load, evaluate to not-`blocked`, and are
+   editable.** *(Amended 2026-09-01, same correction already applied to the
+   regression fixtures.) The original wording said `ok`. That is
+   unreachable in this catalog, and for a good reason: every rule now
+   warns when it lacks the data to decide, and two of those fire on
+   essentially every real build — `date-window-alignment` (no vendor in
+   this catalog publishes a dial's date-aperture position) and
+   `unverified-part` (most parts are family-inferred). Requiring a literal
+   `ok` would create pressure to suppress exactly the warnings the
+   zero-false-positive design exists to surface. `ok-with-warnings` is the
+   honest healthy state for a real build here.*
 2. **A full build can be completed end to end** — six slots, from empty, using only the UI.
 3. **Filtering is synchronous and imperceptible.** Re-filter after a selection completes in under 50ms with the full catalog.
 4. **Every blocked part shows a reason on hover or focus.** No unexplained disabled states.

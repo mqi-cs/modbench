@@ -1,5 +1,6 @@
 import type { Rule, Finding, SlotKey } from "../types";
 import type { CatalogListing } from "../types";
+import { listingsFor } from "../types";
 
 function cheapestListing(listings: CatalogListing[]): CatalogListing | null {
   if (listings.length === 0) return null;
@@ -15,7 +16,7 @@ export const stockAvailability: Rule = {
       if (!partId) continue;
       const part = catalog.parts[partId];
       if (!part) continue;
-      const listings = catalog.listings.filter((l) => l.partId === partId);
+      const listings = listingsFor(catalog, partId);
       const cheapest = cheapestListing(listings);
       if (!cheapest) {
         // Was a silent skip. A part with no listing data at all isn't
