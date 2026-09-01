@@ -259,6 +259,28 @@ function main() {
     pass(`review-state totals: approved ${stateCounts.approved} + pending ${stateCounts.pending} + rejected ${stateCounts.rejected} = ${allParts.length} total parts`);
   }
 
+  // 11. Attribute provenance guard. Three separate times this project
+  // shipped a real attribute silently derived from an UNRELATED one
+  // (crown position read as date position; dial aperture varying per case
+  // family when 28.5mm is universal; crystal diameter copied from dial
+  // aperture when 31.5 and 28 are not interchangeable). Each was invisible
+  // until a rule built on it produced a wrong answer. This makes the
+  // pattern impossible to reintroduce silently: every `x: fam?.y`
+  // assignment in backfill-attributes.ts must have x === y.
+  // See data/fixtures/attribute-provenance.md for the full audit.
+  const backfillSrc = readFileSync("scripts/backfill-attributes.ts", "utf-8");
+  const crossDerivations: string[] = [];
+  for (const m of backfillSrc.matchAll(/^\s*(\w+):\s*(?:existing\.\w+\s*\?\?\s*)?fam\?\.(\w+)/gm)) {
+    if (m[1] !== m[2]) crossDerivations.push(`${m[1]} <- fam.${m[2]}`);
+  }
+  if (crossDerivations.length > 0) {
+    for (const d of crossDerivations) {
+      fail(`attribute provenance: '${d}' assigns one field from a differently-named one -- if this derivation is real, give the source field its own entry in the defaults table and document why`);
+    }
+  } else {
+    pass("attribute provenance: no attribute is derived from a differently-named field");
+  }
+
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);
   sqlite.close();
   process.exit(failures === 0 ? 0 : 1);

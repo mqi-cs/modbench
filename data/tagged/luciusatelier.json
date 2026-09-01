@@ -120,6 +120,16 @@
     "evidence": "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/oyster-bracelet-20-16mm-brushed",
+    "name": "Oyster Bracelet 20/16mm [Brushed]",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/bauhaus-dial-date-6h",
     "name": "Bauhaus Dial (Date @ 6H)",
     "category": "dial",
@@ -240,6 +250,26 @@
     "evidence": "tags/title match -> skx013"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/settimo-bracelet-20-16mm-yellow-gold-pvd",
+    "name": "Settimo Bracelet 20/16mm - Yellow Gold",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/settimo-bracelet-20-16mm",
+    "name": "Settimo Bracelet 20/16mm - Silver",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/bauhaus-watch-case-33mm-ultra-thin-edition",
     "name": "Bauhaus 33mm — Ultra Thin Watch Case",
     "category": "case",
@@ -278,6 +308,36 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/president-bracelet-20-16mm",
+    "name": "President Bracelet 20/16mm",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/jubilee-bracelet-20-16mm",
+    "name": "Jubilee Bracelet 20/16mm",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/gs-bracelet-20-16mm",
+    "name": "GS Bracelet 20/16mm",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/seiko-dweller-watch-case-36mm-ultra-thin-edition-titanium",
@@ -2192,6 +2252,16 @@
     "evidence": "tag explicit fits-skx013"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/oyster-bracelet-20-18mm-mid-polished-dlc-black-edition",
+    "name": "Oyster Bracelet 20/18mm [Mid-Polished] (DLC BLACK EDITION)",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/skx013-crown-knurled-signed-s-red-dlc-black-edition",
     "name": "SKX013 Crown - Knurled - Signed S in Red (DLC BLACK EDITION)",
     "category": "crown",
@@ -2342,6 +2412,16 @@
     "evidence": "tags/title match -> skx013"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/president-bracelet-20-18mm",
+    "name": "President Bracelet 20/18mm",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/the-great-oak-gmt-dial-ice-blue-for-nh34",
     "name": "The Great Oak Dial - Ice Blue (GMT) [For NH34]",
     "category": "dial",
@@ -2422,6 +2502,16 @@
     "evidence": "tag explicit fits-skx013"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/oyster-bracelet-20-18mm-brushed",
+    "name": "Oyster Bracelet 20/18mm [Brushed]",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/the-great-oak-hands-polished-silver",
     "name": "The Great Oak Hands - Polished Silver",
     "category": "hands",
@@ -2492,6 +2582,16 @@
     "evidence": "tags explicit 'GMT - NH34'"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/jubilee-bracelet-20-18mm",
+    "name": "Jubilee Bracelet 20/18mm",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/gmt-hands-snowflake-for-nh34",
     "name": "GMT Hands - Snowflake [For NH34]",
     "category": "hands",
@@ -2514,6 +2614,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tags explicit fits-nh34/GMT -- GMT-capable hand set"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/oyster-bracelet-20-18mm-mid-polished",
+    "name": "Oyster Bracelet 20/18mm [Mid-Polished]",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/skx013-brushed-yellow-chapter-ring-gmt-24h-numerals",
@@ -2766,6 +2876,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tags explicit fits-nh34/35/36/38/72 -- rotor/bridge spare part, not a swappable movement"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/gs-bracelet-20-18mm",
+    "name": "GS Bracelet 20/18mm",
+    "category": "strap",
+    "family": "skx013-bracelet",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "medium",
+    "evidence": "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/seiko-tmi-nh34-automatic-movement-gmt-date-white",

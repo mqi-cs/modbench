@@ -455,7 +455,19 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
       const oos = checkOutOfScope(combined, "strap");
       if (isUltraThin) reject("Ultra Thin-scoped bracelet -- end-links contoured to a proprietary case, does not fit stock SKX shells");
       else if (prefix) push("strap", `${prefix}-bracelet`, "high", "vendor-stated", `tags/title match -> ${prefix} (case-contoured end-links)`);
-      else if (oos) reject(oos);
+      else if (/^(oyster|settimo|president|jubilee|gs|super engineer|beads of rice|milanese) bracelet \d+\/\d+mm/i.test(ti)) {
+        // Found in the Phase 3 body_html mining pass. These carry no
+        // case-model marker in the title (so resolveCaseModelPrefix can't
+        // see them, and they sat unmatched), but their body_html names the
+        // exact cases they fit -- all SKX013-line Lucius cases -- and adds
+        // a constraint narrower than any family key can carry: "Fits
+        // Lucius Atelier cases only. The end-links are shaped to our case
+        // profiles -- this bracelet does not fit generic 20mm lugs or OEM
+        // [cases]". Tagged to the case line the vendor lists; the
+        // vendor-only narrowing rides on the vendorScopedTo attribute and
+        // is enforced by the bracelet-vendor-scope rule.
+        push("strap", "skx013-bracelet", "medium", "vendor-stated", "body_html lists SKX013-line Lucius cases + 'Fits Lucius Atelier cases only' -- case line from vendor text, vendor-only scope carried in attributes");
+      } else if (oos) reject(oos);
       else markUnmatched();
     } else if (pt === "straps") {
       push("strap", "generic-strap", "medium", "family-inferred", "product_type 'Straps' -- lug-width-based, fits any case at the matching lug width");

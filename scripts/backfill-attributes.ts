@@ -80,6 +80,25 @@ const DIAL_INCOMPATIBLE_CASE_FAMILIES: Record<string, string[]> = {
   "SEIKO SNKL23 Pinstriped Dial": ["skx013-case"],
 };
 
+// Vendor text, found in the Phase 3 body_html mining pass. A chapter ring
+// is not decoration on these cases -- it is the part that sets dial
+// height, and the vendor says so in as many words:
+//   "This case needs an SKX013 chapter ring to seat the dial correctly --
+//    it is mandatory and never included."
+//   "...without it the dial sits too low and the hands won't clear."
+//   -- luciusatelier, 26 case listings
+// Matched on a title fragment because the statement is per-SKU and the
+// families involved (lucius-ultra-thin-case, skx013-case) also contain
+// cases that carry no such statement.
+const CASE_REQUIRES_CHAPTER_RING = /ultra thin|\[nh34-ready\]|watch case - 3[689]mm|datejust watch case|gs watch case|gs diver watch case|explorer watch case|seikonaut watch case/i;
+
+// "Fits Lucius Atelier cases only. The end-links are shaped to our case
+// profiles -- this bracelet does not fit generic 20mm lugs or OEM [cases]"
+// -- luciusatelier, 20 bracelet listings. Stronger than the usual
+// platform constraint: scoped to one VENDOR's cases, not one case line,
+// so even a correctly-sized SKX013 case from another vendor is excluded.
+const BRACELET_VENDOR_SCOPED = /^(oyster|settimo|president|jubilee|gs|super engineer|beads of rice|milanese) bracelet \d+\/\d+mm/i;
+
 const CASE_CROWN_POSITIONS: Record<string, string> = {
   "skx007-case": "3.8",
   "srp-turtle-case": "3.8",
@@ -270,6 +289,9 @@ function main() {
         // vendor's own title says so.
         hasDoubleDomedCrystal: /double.?dome/i.test(p.name) ? true : null,
         crownPosition: CASE_CROWN_POSITIONS[p.family] ?? null, // Finding B: vendor-stated only, null where unstated
+        // Vendor-stated: this case will not seat a dial at the right
+        // height without a chapter ring. See CASE_REQUIRES_CHAPTER_RING.
+        requiresChapterRing: CASE_REQUIRES_CHAPTER_RING.test(p.name) ? true : null,
         requiresSpacerFor: (existing.requiresSpacerFor as string[] | undefined) ?? [],
       };
       db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();
@@ -281,7 +303,7 @@ function main() {
     // reason cases and dials are: pure title parsing plus family
     // constants, never a human decision, and the `profile` field below is
     // new as of the Phase 2 mechanism audit.
-    if (p.category === "bezel_insert" || p.category === "crystal") {
+    if (p.category === "bezel_insert" || p.category === "crystal" || p.category === "strap") {
       const attrs: Record<string, unknown> = {
         material: parseMaterial(p.name),
         // flat / slope / domed -- a bezel insert and the crystal above it
@@ -291,6 +313,13 @@ function main() {
       };
       if (p.category === "bezel_insert") {
         attrs.outerDiameterMm = INSERT_DEFAULTS[p.family]?.outerDiameterMm ?? null;
+      }
+      if (p.category === "strap") {
+        // Vendor-stated in the title: "20/16mm" (lug/clasp) or "22mm".
+        const m = /(\d{2})\s*\/\s*\d{2}\s*mm|\b(\d{2})\s*mm\b/i.exec(p.name);
+        attrs.lugWidthMm = m ? Number(m[1] ?? m[2]) : null;
+        // Vendor-stated single-vendor scoping -- see BRACELET_VENDOR_SCOPED.
+        attrs.vendorScopedTo = BRACELET_VENDOR_SCOPED.test(p.name) ? "luciusatelier" : null;
       }
       db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();
       updated++;
@@ -326,7 +355,7 @@ function main() {
         lumed: parseLumed(p.name, ""),
       };
     } else {
-      // crystal, chapter_ring, crown, strap: minimal but non-empty, category has no dedicated schema shape yet
+      // chapter_ring, crown: minimal but non-empty, category has no dedicated schema shape yet
       attrs = { material: parseMaterial(p.name) };
     }
 

@@ -1,5 +1,6 @@
 import type { Build, BuildResult, CatalogSlice, Finding, Rule } from "./types";
 import { deriveTools } from "./tools";
+import { familyPlatform } from "./platform";
 
 import { movementCaseFit } from "./rules/movement-case-fit";
 import { dialMovementFeet } from "./rules/dial-movement-feet";
@@ -21,6 +22,8 @@ import { crownCaseFit } from "./rules/crown-case-fit";
 import { strapFit } from "./rules/strap-fit";
 import { insertCrystalProfileFit } from "./rules/insert-crystal-profile-fit";
 import { dialCaseModelExclusion } from "./rules/dial-case-model-exclusion";
+import { requiresChapterRing } from "./rules/requires-chapter-ring";
+import { braceletVendorScope } from "./rules/bracelet-vendor-scope";
 
 // Registration order is cosmetic, not load-bearing -- rules are
 // order-independent by construction (each reads only Build/CatalogSlice,
@@ -50,7 +53,21 @@ export const RULES: Rule[] = [
   strapFit,
   insertCrystalProfileFit,
   dialCaseModelExclusion,
+  requiresChapterRing,
+  braceletVendorScope,
 ];
+
+// The chapter-ring family a case implies, used to tell the caller WHICH
+// chapter ring to add rather than just that one is missing. Falls back to
+// the case's own platform prefix, which is how every case-shape family in
+// this catalog is named (see lib/compat/platform.ts).
+function caseFamilyFor(build: Build, catalog: CatalogSlice): string {
+  const caseId = build.parts.case;
+  const caseP = caseId ? catalog.parts[caseId] : undefined;
+  if (!caseP) return "chapter-ring";
+  const platform = familyPlatform(caseP.family);
+  return platform ? `${platform}-chapter-ring` : "chapter-ring";
+}
 
 function statusFromFindings(findings: Finding[]): BuildResult["status"] {
   if (findings.some((f) => f.severity === "error")) return "blocked";
@@ -69,16 +86,25 @@ export function evaluateBuild(build: Build, catalog: CatalogSlice): BuildResult 
     findings.push(...rule.evaluate(build, catalog));
   }
 
+  // requiredAdditions is derived from findings that carry a `fix` naming
+  // a part the build is missing, rather than being computed separately --
+  // that way a rule states its requirement once and can't drift out of
+  // sync with the addition it implies. Currently only
+  // requires-chapter-ring produces one (26 luciusatelier cases state a
+  // chapter ring is "mandatory and never included"); no case in this
+  // catalog has evidenced requiresSpacerFor data, so no spacer additions
+  // are emitted -- per Amendment A that stays empty rather than guessed.
+  const requiredAdditions: BuildResult["requiredAdditions"] = findings
+    .filter((f) => f.ruleKey === "requires-chapter-ring")
+    .map(() => ({
+      slot: "chapterRing" as const,
+      family: caseFamilyFor(build, catalog),
+      reason: "This case does not seat the dial at the right height without a chapter ring, and does not include one.",
+    }));
+
   return {
     findings,
-    // No case in this catalog has real, evidenced requiresSpacerFor data
-    // yet (scripts/backfill-attributes.ts's CASE_DEFAULTS leaves every
-    // case's requiresSpacerFor at [] -- no spacer requirement has been
-    // independently confirmed for any family this session). Per Amendment
-    // A, this stays empty rather than guessed at; it becomes real the
-    // moment real evidence is gathered and backfilled, with no change
-    // needed here.
-    requiredAdditions: [],
+    requiredAdditions,
     requiredTools: deriveTools(build, catalog),
     status: statusFromFindings(findings),
   };

@@ -151,6 +151,49 @@ dial's date-aperture position. Two were re-sourced away from a paywalled,
 unverifiable forum thread onto vendor listings. Two new ones were added
 from vendor warning text found by mining all four vendors' `body_html`.
 
+## STANDING LIMITATION — fixture coverage per rule
+
+**Read this before citing the zero-false-positive result anywhere.** It is
+the single easiest thing in this project to overclaim, and the claim it
+actually supports is narrower than "the engine is proven correct."
+
+Of 20 rules, **3 are evidenced against a real-world failure** — i.e. a bad
+fixture exists whose vendor text states the incompatibility about those
+specific parts, and which blocks via that rule:
+
+| Rule | Bad fixtures backing it |
+|---|---|
+| `insert-case-diameter` | 6 (bad-002, 003, 006, 007, 008, 010) |
+| `insert-crystal-profile-fit` | 1 (bad-011) |
+| `dial-case-model-exclusion` | 1 (bad-012) |
+| *the other 17 rules* | **0** |
+
+The concentration is not an oversight to fix by writing more fixtures. It
+reflects what vendors actually publish: they warn about bezel inserts,
+crystal profiles and dial exclusions because those are what customers
+return. For most other pairings no vendor has written down a warning, so
+there is nothing to source a fixture from. **Extending this coverage means
+finding more vendor warning text, not authoring more fixtures** — a
+fixture written to satisfy a rule tests only that the rule agrees with
+itself.
+
+**What the project can therefore claim, precisely:**
+
+- *Not* "every rule is proven correct against reality." 17 rules have no
+  real-world failure behind them.
+- *But* "the engine never asserts compatibility it hasn't verified." Every
+  rule was checked against vendor documentation and caliber references for
+  whether the physical claim it makes is actually true (three were found
+  false and rebuilt during the Phase 2 audit), every rule is unit-tested on
+  both branches, and — the load-bearing half — **every rule fails safe**:
+  when an attribute needed to decide is missing, the rule emits a warning
+  saying so rather than passing silently. A silent pass is the only
+  behaviour that could produce a false positive, and no rule has one.
+
+Both halves are the honest statement. The first without the second
+undersells a real guarantee; the second without the first is the
+overclaim. Keep them together.
+
 **The count is evidence-limited, not a target.** Ship the number of bad
 fixtures the vendor documentation actually supports. Fewer real ones with
 stated provenance beats a round number padded with invented combinations —

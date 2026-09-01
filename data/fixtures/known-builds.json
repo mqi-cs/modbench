@@ -370,6 +370,20 @@
       "source": "https://luciusatelier.com/products/seiko-snkk87-sunburst-dial",
       "sourceQuote": "luciusatelier, SEIKO SNKK87 Sunburst Dial listing: \"Fit Models SNK803, SNK805, SNK807, SNK809, SKX007, SKX009, SKX011 and more / Not compatible with SKX013, SKX015 and SKX017\". The same wording appears on SNKL15 and SNKL23.",
       "notes": "The case is an SKX013-family case, which this dial's own listing explicitly rules out. Invisible to every other rule: the dial is tagged nh3x-dial-standard (a movement-family family carrying no case constraint by design), and it's an ordinary 28.5mm dial like every other dial in the catalog, so neither family matching nor diameter can see it. Caught by the new dial-case-model-exclusion rule."
+    },
+    {
+      "id": "bad-013",
+      "expected": "blocked",
+      "parts": {
+        "movement": "Seiko (TMI) NH35 Automatic Movement - Date (White)",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
+        "dial": "Lucius Atelier Vintage Enamel Biege Dial (Date)",
+        "hands": "Lucius Atelier Nautilus II Hands - Polished Black",
+        "strap": "Lucius Atelier Oyster Bracelet 20/16mm [Brushed]"
+      },
+      "source": "https://luciusatelier.com/products/oyster-bracelet-20-16mm-brushed",
+      "sourceQuote": "luciusatelier, Oyster Bracelet 20/16mm listing: \"Fits Lucius Atelier cases only. The end-links are shaped to our case profiles -- this bracelet does not fit generic 20mm lugs or OEM [cases]\". 20 Lucius bracelet listings carry it.",
+      "notes": "The case is a genuine SKX013-line case at the correct 20mm lug width, from a different maker. Family matching passes it (both skx013-*), lug width passes it (both 20mm) -- only the vendor scope catches it. This is a strictly narrower constraint than any other rule expresses: not 'which case line' but 'whose case'. Caught by the new bracelet-vendor-scope rule."
     }
   ]
 }
