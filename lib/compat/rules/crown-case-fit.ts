@@ -40,7 +40,7 @@ export const crownCaseFit: Rule = {
         {
           ruleKey: "crown-case-fit",
           severity: "warning",
-          message: `Can't confirm "${crown.name}" fits "${caseP.name}"'s crown tube -- the case model this crown is scoped to isn't identified for one or both parts here.`,
+          message: `Can't confirm "${crown.name}" fits "${caseP.name}"'s crown tube -- the case line one or both parts are scoped to isn't identified here. A crown screws into a tube with a specific thread pitch and diameter, and cross-threading the wrong one strips the tube rather than just sitting loose, so this is worth confirming before ordering.`,
           slots: ["crown", "case"],
         },
       ];

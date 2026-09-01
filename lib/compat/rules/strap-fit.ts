@@ -37,7 +37,7 @@ export const strapFit: Rule = {
           {
             ruleKey: "strap-fit",
             severity: "error",
-            message: `"${strap.name}" is a ${strapLug}mm strap, but "${caseP.name}"'s lugs are ${caseLug}mm apart -- the spring bar has to span the exact lug gap, so a strap cut for a different width simply will not sit between the lugs.`,
+            message: `"${strap.name}" is a ${strapLug}mm strap, but "${caseP.name}"'s lugs are ${caseLug}mm apart. Lug width is the one measurement a strap has to match exactly: the spring bar spans the gap between the lugs, so a strap cut narrower leaves the bar exposed and one cut wider won't go in at all. Unlike case model, this is the only thing that matters for a plain spring-bar strap -- match the width and it fits any case.`,
             slots: ["strap", "case"],
           },
         ];
@@ -74,7 +74,7 @@ export const strapFit: Rule = {
         {
           ruleKey: "strap-fit",
           severity: "warning",
-          message: `Can't confirm "${strap.name}"'s end-links fit "${caseP.name}" -- the case model this bracelet is scoped to isn't identified for one or both parts here.`,
+          message: `Can't confirm "${strap.name}"'s end-links fit "${caseP.name}" -- the case line one or both parts are scoped to isn't identified here. A bracelet differs from a plain strap in exactly this way: its end-links are shaped to hug one specific case's shoulders, so matching lug width isn't enough on its own.`,
           slots: ["strap", "case"],
         },
       ];

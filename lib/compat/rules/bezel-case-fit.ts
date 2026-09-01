@@ -35,7 +35,7 @@ export const bezelCaseFit: Rule = {
         {
           ruleKey: "bezel-case-fit",
           severity: "warning",
-          message: `Can't confirm "${bezel.name}" fits "${caseP.name}" -- the case model this bezel is scoped to isn't identified for one or both parts here.`,
+          message: `Can't confirm "${bezel.name}" fits "${caseP.name}" -- the case line one or both parts are scoped to isn't identified here. A bezel ring clips or threads onto a mount machined into the top of the case, and that mount is specific to the case line, so this is worth confirming on the vendor's listing rather than assuming.`,
           slots: ["bezel", "case"],
         },
       ];

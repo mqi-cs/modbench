@@ -32,7 +32,7 @@ export const chapterRingFit: Rule = {
         {
           ruleKey: "chapter-ring-fit",
           severity: "warning",
-          message: `Can't confirm "${chapterRing.name}" fits "${caseP.name}" -- the case model this chapter ring is scoped to isn't identified for one or both parts here.`,
+          message: `Can't confirm "${chapterRing.name}" fits "${caseP.name}" -- the case line one or both parts are scoped to isn't identified here. A chapter ring sits loose between the dial and the crystal, located by the case's inner wall, so its diameter has to suit that specific case; a mismatch shows as a gap or an uneven sit rather than a hard failure.`,
           slots: ["chapterRing", "case"],
         },
       ];
