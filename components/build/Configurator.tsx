@@ -11,6 +11,10 @@ import { BuildSummary } from "./BuildSummary";
 import { StarterBuilds } from "./StarterBuilds";
 import type { StarterBuild } from "@/data/fixtures/starter-builds";
 
+// Warnings that reflect a gap in the catalog rather than a problem with
+// the specific combination in front of the user.
+const CATALOG_WIDE_WARNINGS = new Set(["unverified-part", "date-window-alignment", "day-window-presence", "hand-stack-clearance"]);
+
 const SLOT_PARAM: Record<SlotKey, string> = {
   movement: "movement",
   case: "case",
@@ -130,7 +134,16 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
       const trialResult = evaluateBuild(trial, slice);
       const relevant = trialResult.findings.filter((f) => f.slots.includes(activeSlot));
       const error = relevant.find((f) => f.severity === "error");
-      const warn = relevant.find((f) => f.severity === "warning");
+      // Only a warning about THIS pairing changes the card's state. The
+      // catalog-wide "we don't have the data to check" warnings fire on
+      // nearly every part (no vendor publishes dial date-aperture
+      // positions; most parts are family-inferred), so letting them set
+      // the card state painted the entire picker amber -- at which point
+      // amber stops distinguishing anything and the three-severity design
+      // collapses to two. They still appear in full in the findings panel,
+      // where they're a statement about the catalog rather than a signal
+      // about one part.
+      const warn = relevant.find((f) => f.severity === "warning" && !CATALOG_WIDE_WARNINGS.has(f.ruleKey));
       const state: PartState = error ? "blocked" : warn ? "warning" : "compatible";
 
       items.push({
