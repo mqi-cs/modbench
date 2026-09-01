@@ -89,7 +89,7 @@ function main() {
     return s;
   }
   let unresolvedBuildParts = 0;
-  for (const build of [...knownBuilds.goodBuilds, ...knownBuilds.badBuilds]) {
+  for (const build of [...knownBuilds.regressionFixtures, ...knownBuilds.badBuilds]) {
     for (const [slot, value] of Object.entries(build.parts as Record<string, string | null>)) {
       if (value === null) continue;
       const stripped = stripPrefix(value);
@@ -247,8 +247,11 @@ function main() {
     pass(`review-state tracking: every rejected_parts row (${allRejectedParts.length}) has a matching parts row at reviewState 'rejected'`);
   }
 
-  const stateCounts = { approved: 0, pending: 0, rejected: 0 } as Record<string, number>;
-  for (const p of allParts) stateCounts[p.reviewState] = (stateCounts[p.reviewState] ?? 0) + 1;
+  const stateCounts: Record<"approved" | "pending" | "rejected", number> = { approved: 0, pending: 0, rejected: 0 };
+  for (const p of allParts) {
+    const key = p.reviewState as "approved" | "pending" | "rejected";
+    stateCounts[key] = (stateCounts[key] ?? 0) + 1;
+  }
   const stateSum = stateCounts.approved + stateCounts.pending + stateCounts.rejected;
   if (stateSum !== allParts.length) {
     fail(`approved (${stateCounts.approved}) + pending (${stateCounts.pending}) + rejected (${stateCounts.rejected}) = ${stateSum}, but total parts = ${allParts.length} -- a part row has an unaccounted reviewState`);

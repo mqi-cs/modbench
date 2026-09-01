@@ -1,8 +1,8 @@
 {
-  "goodBuilds": [
+  "regressionFixtures": [
     {
-      "id": "good-001",
-      "expected": "compatible",
+      "id": "reg-001",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Namoki NMK960 Sumo SKX007/SRPD Case: Steel Finish",
@@ -14,8 +14,8 @@
       "notes": "All 5 parts are exact rows in data/fixtures/family-audit.csv, all skx007-case/nh3x-movement/nh3x-dial-standard/nh3x-hands-standard/skx007-insert family, all from namokimods.com."
     },
     {
-      "id": "good-002",
-      "expected": "compatible",
+      "id": "reg-002",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "DLW Case - SKX007 Sub NCG - Polished PVD Gold (With Case Back)",
@@ -27,8 +27,8 @@
       "notes": "All 5 parts audited, all real live dlwwatches.com SKX007-tagged SKUs. Sterile no-date dial over a date-position movement (NH35) is a common, benign real practice -- date wheel sits inert with no functional issue."
     },
     {
-      "id": "good-003",
-      "expected": "compatible",
+      "id": "reg-003",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Watch & Style RC1331 SKX007 Field Case - Black",
@@ -40,8 +40,8 @@
       "notes": "Cross-vendor build (watchandstyle case+dial+insert, dlwwatches hands) -- all 5 audited. Case+insert explicitly SKX007/SRPD-tagged; dial is the audit's weakest-evidenced watchandstyle row (low confidence, no fitment signal in feed metadata) -- kept deliberately to test how the compat engine should treat a low-confidence part (should probably surface an 'unverified-part' info/warning finding, not block)."
     },
     {
-      "id": "good-004",
-      "expected": "compatible",
+      "id": "reg-004",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH36 Movement - Black",
         "case": "Namoki NMK960 Sumo SKX007/SRPD Case: Steel Finish",
@@ -53,8 +53,8 @@
       "notes": "Cross-vendor (namoki case/dial/insert, lucius hands) -- all 5 audited. Lucius hands tagged fits-nh34/35/36/38/72 and fits-skx007/013, so NH36 is a valid pairing. Namoki dial's body_html doesn't explicitly confirm a day aperture -- flag for Phase 1 to verify this dial actually has a day window before treating this fixture as strictly 'ok' rather than 'ok-with-warnings'."
     },
     {
-      "id": "good-005",
-      "expected": "compatible",
+      "id": "reg-005",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Watch & Style RC1331 SKX007 Field Case - Black",
@@ -66,8 +66,8 @@
       "notes": "Cross-vendor (watchandstyle case+insert, lucius dial+hands) -- all 5 audited. GMT-style insert on a plain date-only NH35 is cosmetic only (no functional GMT hand) -- a common real styling choice."
     },
     {
-      "id": "good-006",
-      "expected": "compatible",
+      "id": "reg-006",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Lucius Atelier SKX Solid Caseback - Silver Mirror Polished",
@@ -79,8 +79,8 @@
       "notes": "Uses the audited caseback row (medium confidence -- caseback thread compatibility across SKX007/013 shells is a vendor-tag claim, not independently confirmed) standing in for the case slot, since it's the only case-category audit row explicitly tagged for a generic SKX007 shell rather than a specific finish. Case/dial/hands/insert combination otherwise straightforward skx007-case family."
     },
     {
-      "id": "good-007",
-      "expected": "compatible",
+      "id": "reg-007",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH36 Movement - Black",
         "case": "DLW Case - SKX007 Sub NCG - Polished PVD Gold (With Case Back)",
@@ -92,8 +92,8 @@
       "notes": "All 5 parts audited, all dlwwatches.com SKX007-tagged. Dial is the audit's lowest-confidence row overall (no product_type, no fitment tags at all, flagged for manual review) -- deliberately included as a 'compatible' fixture that should realistically resolve to ok-with-warnings once Phase 2's unverified-part rule fires, not a clean ok. Whether NH36 (day-date) is even sensible with this dial is unknown since the dial has no stated day/date window -- another reason this fixture should trigger warnings, not a silent pass."
     },
     {
-      "id": "good-008",
-      "expected": "compatible",
+      "id": "reg-008",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Watch & Style RC1331 SKX007 Field Case - Black",
@@ -105,8 +105,8 @@
       "notes": "Uses the GMT-tagged hands (tags include fits-skx007) on a plain NH35 build purely for styling (24hr hand present but non-functional without an NH34 GMT module) -- a real, common cosmetic choice, same pattern as good-005's GMT insert."
     },
     {
-      "id": "good-009",
-      "expected": "compatible",
+      "id": "reg-009",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Namoki NMK960 Sumo SKX007/SRPD Case: Steel Finish",
@@ -118,8 +118,8 @@
       "notes": "3-vendor build (namoki case, dlw dial+insert, lucius hands) -- all 5 audited, all skx007-case family. Demonstrates the cross-vendor mixing the project is meant to validate."
     },
     {
-      "id": "good-010",
-      "expected": "compatible",
+      "id": "reg-010",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH36 Movement - Black",
         "case": "Watch & Style RC1331 SKX007 Field Case - Black",
@@ -131,8 +131,8 @@
       "notes": "3-vendor build, all 5 audited. Same day-window caveat as good-004 -- Spork Green dial's day-aperture status not independently confirmed, flagged for Phase 1."
     },
     {
-      "id": "good-011",
-      "expected": "compatible",
+      "id": "reg-011",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
@@ -144,8 +144,8 @@
       "notes": "All 5 parts audited, all explicitly fits-skx013 (lucius items) or skx013-tagged (namoki case). Cross-vendor."
     },
     {
-      "id": "good-012",
-      "expected": "compatible",
+      "id": "reg-012",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Namoki NMK912 Field Watch Case Bundle : Olive Green Finish",
@@ -157,8 +157,8 @@
       "notes": "Variant of good-011 with the other case finish and a GMT-style (cosmetic) insert on a plain NH35 -- all 5 audited."
     },
     {
-      "id": "good-013",
-      "expected": "compatible",
+      "id": "reg-013",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
@@ -170,8 +170,8 @@
       "notes": "All 5 audited. Namoki's generic nh3x-hands-standard hands (medium confidence, no explicit skx013 tag but hands compatibility is driven by movement pinion, not case diameter, so this is expected to work) paired with skx013-specific case/insert."
     },
     {
-      "id": "good-014",
-      "expected": "compatible",
+      "id": "reg-014",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH34 GMT Movement - White",
         "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
@@ -183,8 +183,8 @@
       "notes": "A genuine, functional GMT build -- all 5 parts audited and vendor-tagged fits-nh34/fits-skx013/GMT. This is the cleanest, highest-confidence fixture in the whole good set: every part's evidence is a direct vendor tag, not an inference."
     },
     {
-      "id": "good-015",
-      "expected": "compatible",
+      "id": "reg-015",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH34 GMT Movement - White",
         "case": "Namoki NMK912 Field Watch Case Bundle : Olive Green Finish",
@@ -196,8 +196,8 @@
       "notes": "Variant of good-014 with the olive case and a non-GMT (dive-style) insert instead -- insert styling doesn't affect the GMT function, which lives in the movement/dial/hands. All 5 audited."
     },
     {
-      "id": "good-016",
-      "expected": "compatible",
+      "id": "reg-016",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Namoki NMK912 Field Watch Case Bundle : Olive Green Finish",
@@ -209,8 +209,8 @@
       "notes": "All 5 audited, same family as good-011 with the alternate case finish for coverage."
     },
     {
-      "id": "good-017",
-      "expected": "compatible",
+      "id": "reg-017",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH34 GMT Movement - White",
         "case": "Watch & Style RC1331 SKX007 Field Case - Black",
@@ -222,8 +222,8 @@
       "notes": "GMT dial+hands tags include 'skx007' alongside 'skx013', so pairing with a genuine SKX007 case is vendor-confirmed, not inferred. All 5 audited, cross-vendor."
     },
     {
-      "id": "good-018",
-      "expected": "compatible",
+      "id": "reg-018",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH34 GMT Movement - White",
         "case": "DLW Case - SKX007 Sub NCG - Polished PVD Gold (With Case Back)",
@@ -235,8 +235,8 @@
       "notes": "Same GMT dial/hands family as good-017, dlwwatches case+insert instead. All 5 audited, cross-vendor."
     },
     {
-      "id": "good-019",
-      "expected": "compatible",
+      "id": "reg-019",
+      "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
         "case": "Namoki NMK960 Sumo SKX007/SRPD Case: Steel Finish",
@@ -248,8 +248,8 @@
       "notes": "All 5 audited. Dial confidence is medium (same 'Watch Dial:' line as the vendor-confirmed Spork Green, not independently re-checked)."
     },
     {
-      "id": "good-020",
-      "expected": "compatible",
+      "id": "reg-020",
+      "expected": "not-blocked",
       "parts": {
         "movement": "NH36 Movement - Black",
         "case": "Lucius Atelier SKX Solid Caseback - Silver Mirror Polished",
@@ -263,19 +263,6 @@
   ],
   "badBuilds": [
     {
-      "id": "bad-001",
-      "expected": "blocked",
-      "parts": {
-        "movement": "NH36 Movement - Black",
-        "case": "DLW Case - SKX007 Sub NCG - Polished PVD Gold (With Case Back)",
-        "dial": "DLW Dial - Reverse Sub - Sterile - No Date",
-        "hands": "DLW Hands - Sumo",
-        "bezelInsert": "DLW Ceramic Insert - 007 GMT COKE"
-      },
-      "source": "https://luciusatelier.com/blogs/news/seiko-watch-modding-101",
-      "notes": "NH36 is vendor-confirmed day-date ('three-hand day-date' per Lucius's guide; Namoki separately sells a dedicated 'NH36 Intermediate Wheel for Day Corrector' spare part, confirming day hardware is NH36-specific). This dial is explicitly 'Sterile - No Date' -- no day or date aperture at all. Unlike good-020 (where a sterile dial over NH36 is a deliberate, informed cosmetic choice), this fixture models the beginner mistake of not realizing NH36 costs more specifically for a day-date function the dial can't display -- should block or at minimum hard-warn, not silently pass as equivalent to an NH35 build."
-    },
-    {
       "id": "bad-002",
       "expected": "blocked",
       "parts": {
@@ -285,8 +272,9 @@
         "hands": "Namoki Watch Hands: Syringe Silver",
         "bezelInsert": "Namoki SKX007/SRPD Steel Bezel Insert: Nautical Steel"
       },
-      "source": "https://www.watchuseek.com/threads/skx007-diameter-size.1046969/",
-      "notes": "Case is skx013-case family (38mm) but dial and bezel insert are both skx007-case family (43mm case, larger bezel/dial aperture). WatchUSeek confirms the 5mm diameter difference between SKX007 and SKX013. All 5 parts are real audited SKUs; the mismatch is deliberately cross-family to test that the compat engine catches a dial-case-diameter AND insert-case-diameter mismatch simultaneously."
+      "source": "https://namokimods.com/products/nmk912-field-watch-case-bundle-sandblasted-finish",
+      "notes": "Case is skx013-case family (38mm) but dial and bezel insert are both skx007-case family (43mm case, larger bezel/dial aperture). WatchUSeek confirms the 5mm diameter difference between SKX007 and SKX013. All 5 parts are real audited SKUs; the mismatch is deliberately cross-family to test that the compat engine catches a dial-case-diameter AND insert-case-diameter mismatch simultaneously.",
+      "sourceQuote": "namokimods, NMK912 case listing: \"NMK912 SKX013 Field Watch Case Bundle... Diameter: 38mm, Lug to Lug: 46.5mm, Lug Width: 20mm... Compatible with SKX013 Crowns... Integrated Rehaut (Chapter Ring)\". The case is scoped by its own vendor to SKX013 parts and ships with an SKX013 crown; the bezel insert selected here is an SKX007/SRPD part. Replaces the previous citation (a WatchUSeek thread behind a Tollbit paywall, unverifiable per 01a-PHASE-0-FINDINGS.md Finding 3)."
     },
     {
       "id": "bad-003",
@@ -298,41 +286,16 @@
         "hands": "Lucius Atelier Nautilus II Hands - Polished Black",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
       },
-      "source": "https://www.watchuseek.com/threads/skx007-diameter-size.1046969/",
-      "notes": "Mirror of bad-002 in the other direction: skx007-case (43mm) paired with a 'Slope' bezel insert whose tags scope it explicitly to fits-skx013 (38mm bezel diameter). All 5 audited."
-    },
-    {
-      "id": "bad-004",
-      "expected": "blocked",
-      "parts": {
-        "movement": "NH34 GMT Movement - White",
-        "case": "DLW Case - SKX007 Sub NCG - Polished PVD Gold (With Case Back)",
-        "dial": "Namoki Watch Dial: Spork Green",
-        "hands": "Namoki Watch Hands: Syringe Silver",
-        "bezelInsert": "Namoki SKX007/SRPD Steel Bezel Insert: Nautical Steel"
-      },
-      "source": "https://luciusatelier.com/blogs/news/seiko-watch-modding-101",
-      "notes": "NH34 is a GMT movement (vendor-confirmed: 'GMT, available since 2022... the only NH movement for travel-watch builds'), which needs a dial with a GMT sub-scale/marker and GMT-capable hands (a 4th, 24-hour hand) to be meaningful. This dial/hands pair has no GMT features -- physically the movement may still fit the case (same nh3x footprint), but the GMT function is wasted and the standard 3-hand hands will not mount the 4th GMT hand pinion NH34 has, which is a real fitment failure, not just a styling gap. All 5 parts audited."
-    },
-    {
-      "id": "bad-005",
-      "expected": "blocked",
-      "parts": {
-        "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Namoki NMK960 Sumo SKX007/SRPD Case: Steel Finish",
-        "dial": "Lucius Atelier Vintage Enamel Biege Dial (Date)",
-        "hands": "Namoki Watch Hands: Syringe Silver",
-        "bezelInsert": "Namoki SKX007/SRPD Steel Bezel Insert: Nautical Steel"
-      },
-      "source": "https://luciusatelier.com/products/seiko-tmi-nh35-automatic-movement-date-6h-white",
-      "notes": "This exact movement SKU is titled 'Date @ 6H' -- a real, non-default date-wheel position, distinct from the two conventions Lucius's own guide documents ('3 o'clock suits classic divers. 4:30 is a Seiko hallmark'). The dial's date cutout position was not independently confirmed in this session (audit row is medium confidence, family-inferred). Modeling the case where a movement's date-wheel position and a dial's date-cutout position are assumed to match without checking -- a real, documented failure mode (see also Watch & Style's real 'W1441 5 o'clock Window Date Wheel Disc' SKU, proving position varies)."
+      "source": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-submariner-green",
+      "notes": "Mirror of bad-002 in the other direction: skx007-case (43mm) paired with a 'Slope' bezel insert whose tags scope it explicitly to fits-skx013 (38mm bezel diameter). All 5 audited.",
+      "sourceQuote": "luciusatelier, SKX013 Ceramic Bezel Insert (Slope) listing: \"Fits the SKX013, SKX015, SKX017 and all 7S26-0030 cases.\" SKX007 is not in that list. The case selected here is an SKX007-family case. Replaces the previous citation (same paywalled WatchUSeek thread as bad-002)."
     },
     {
       "id": "bad-006",
       "expected": "blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Lucius Atelier SKX013 Diver 38 Black \u2014 Ultra Thin Watch Case",
+        "case": "Lucius Atelier SKX013 Diver 38 Black — Ultra Thin Watch Case",
         "dial": "Lucius Atelier Vintage Enamel Biege Dial (Date)",
         "hands": "Lucius Atelier Nautilus II Hands - Polished Black",
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
@@ -367,19 +330,6 @@
       "notes": "Alpinist-style cases have a fixed, fluted bezel with no rotating insert -- the case listing has no bezel-insert accessory at all in the vendor's own catalog structure. Ordering any bezel insert (here, a real skx007-insert SKU) for this case is a beginner mistake stemming from assuming every case takes an insert. Dial/hands compatibility with the Alpinist case's own diameter/aperture is also unconfirmed (40mm class per the audit vs. namoki's SKX-line dials)."
     },
     {
-      "id": "bad-009",
-      "expected": "blocked",
-      "parts": {
-        "movement": "NH36 Movement - Black",
-        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
-        "dial": "DLW Dial - Reverse Sub - Sterile - No Date",
-        "hands": "DLW Hands - Sumo",
-        "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
-      },
-      "source": "https://www.watchuseek.com/threads/post-your-mods-here.246526/page-759",
-      "notes": "Modeled on a real, narrated bad build from WatchUSeek user 'begud' (quoted by 'adamjaffeback' in post #15,161 on the 'Post your mods here' megathread): an SKX013-class build with a DLW dial/hands pairing and a Lucius Atelier bezel/insert/chapter-ring pairing that, per the poster's own account, resulted in the bezel not turning, the second hand touching the crystal when the case back was fully screwed down, and a misaligned day disc. The exact SKUs in that 2020 post are not identifiable/live today, so this fixture substitutes current, audited SKUs from the same vendors in the same rough roles (DLW dial+hands, Lucius bezel insert) rather than quoting the original SKUs verbatim. Compounded here with a day-date NH36 on a no-date dial (see bad-001) as the primary, cleanly-testable error; the original post's issues were more about a specific low-quality third-party case's tolerances than a family mismatch."
-    },
-    {
       "id": "bad-010",
       "expected": "blocked",
       "parts": {
@@ -391,6 +341,35 @@
       },
       "source": "https://dlwwatches.com/products/case-srpe-gs-evo-polished-brushed-pvd-black-with-case-back",
       "notes": "SRPE is a distinct real Seiko case line (confirmed by dlwwatches.com's own SRPE-tagged case/crystal/chapter-ring family, all real multi-SKU listings in the audit) with different dimensions from SKX007/013. Pairing an SRPE case with SKX007-family dial and bezel insert is the same class of mistake as bad-002/003/006/007/008 -- a real, distinct case family being assumed compatible with SKX007 parts just because both are 'Seiko mod' cases from the same vendor ecosystem."
+    },
+    {
+      "id": "bad-011",
+      "expected": "blocked",
+      "parts": {
+        "movement": "Seiko (TMI) NH35 Automatic Movement - Date (White)",
+        "case": "Namoki NMK960 Sumo SKX007/SRPD Case: Steel Finish",
+        "dial": "Namoki Watch Dial: Spork Green",
+        "hands": "Namoki Watch Hands: Syringe Silver",
+        "bezelInsert": "Watch & Style CI0024 SKX007/SRPD Flat Ceramic Bezel Insert - SKX Style",
+        "crystal": "Watch & Style SG008 SKX007/SRPD Double Dome Sapphire Crystal"
+      },
+      "source": "https://watchandstyle.net/products/ci0024-skx007-srpd-flat-ceramic-bezel-insert-skx-style",
+      "sourceQuote": "watchandstyle, CI0024 listing: \"Check your crystal before this one: it takes flat crystals only, OEM or flat sapphire, and will not sit correctly under a double dome.\" The same warning appears on CI1707/CI1708 (\"Ceramic Insert compatible with flat sapphire crystals only (not compatible with double dome sapphire)\") and inverted on SG003/SG007 (\"Crystal will not fit SKX007 OEM aluminum insert\") -- ~39 watchandstyle SKUs carry a profile-fit statement.",
+      "notes": "Every part here is SKX007-family and correctly sized for the case, so platform/family matching passes it. The incompatibility is PROFILE: a flat insert is machined to sit under a flat crystal, and this crystal is double-domed. Found by mining vendor body_html during the Phase 2 mechanism audit; the engine had no rule covering it, so this was a live false-positive hole. Caught by the new insert-crystal-profile-fit rule."
+    },
+    {
+      "id": "bad-012",
+      "expected": "blocked",
+      "parts": {
+        "movement": "Seiko (TMI) NH35 Automatic Movement - Date (White)",
+        "case": "Namoki NMK912 Field Watch Case Bundle : Sandblasted Finish",
+        "dial": "Lucius Atelier SEIKO SNKK87 Sunburst Dial",
+        "hands": "Namoki Watch Hands: Syringe Silver",
+        "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
+      },
+      "source": "https://luciusatelier.com/products/seiko-snkk87-sunburst-dial",
+      "sourceQuote": "luciusatelier, SEIKO SNKK87 Sunburst Dial listing: \"Fit Models SNK803, SNK805, SNK807, SNK809, SKX007, SKX009, SKX011 and more / Not compatible with SKX013, SKX015 and SKX017\". The same wording appears on SNKL15 and SNKL23.",
+      "notes": "The case is an SKX013-family case, which this dial's own listing explicitly rules out. Invisible to every other rule: the dial is tagged nh3x-dial-standard (a movement-family family carrying no case constraint by design), and it's an ordinary 28.5mm dial like every other dial in the catalog, so neither family matching nor diameter can see it. Caught by the new dial-case-model-exclusion rule."
     }
   ]
 }
