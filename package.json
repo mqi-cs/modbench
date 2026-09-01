@@ -11,7 +11,8 @@
     "import-tagged": "tsx scripts/import-tagged.ts",
     "review": "tsx scripts/review.ts",
     "verify-catalog": "tsx scripts/verify-catalog.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "better-sqlite3": "^13.0.3",
