@@ -3318,6 +3318,56 @@
     "evidence": "tags/title match -> skx007"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-silver-chapter-ring-black-numerals",
+    "name": "SKX007 Brushed Silver Chapter Ring - Black Numerals",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-silver-chapter-ring-black-red-markers",
+    "name": "SKX007 Brushed Silver Chapter Ring - Black & Red Markers",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-silver-chapter-ring-black-markers",
+    "name": "SKX007 Brushed Silver Chapter Ring - Black Markers",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-black-chapter-ring-white-markers",
+    "name": "SKX007 Brushed Black Chapter Ring - White Markers",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-black-chapter-ring-white-numerals",
+    "name": "SKX007 Brushed Black Chapter Ring - White Numerals",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/nautilus-hands-polished-silver",
     "name": "Nautilus Hands - Polished Silver",
     "category": "hands",
@@ -3336,6 +3386,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tags explicit fits-nh34/35/36/38/72"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-black-chapter-ring-white-red-markers",
+    "name": "SKX007 Brushed Black Chapter Ring - White & Red Markers",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/mercedes-hands-v2-skeleton-polished-black",
@@ -3616,6 +3676,16 @@
     "specSource": "vendor-stated",
     "confidence": "high",
     "evidence": "tag explicit fits-skx013"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-ceramic-bezel-insert-slope-pepsi-dual-time-swiss-made",
+    "name": "SKX007 Ceramic Bezel Insert (Slope) - Pepsi Dual Time *SWISS MADE*",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-pepsi-dual-time-swiss-made",
@@ -4178,6 +4248,36 @@
     "evidence": "tags/title match -> skx007"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-double-domed-sapphire-crystal-micro-bevel",
+    "name": "SKX007 Double Domed Sapphire Crystal - Micro Bevel",
+    "category": "crystal",
+    "family": "skx007-crystal",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-ceramic-bezel-insert-slope-yacht-master-silver",
+    "name": "SKX007 Ceramic Bezel Insert (Slope) - Yacht Master Silver",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-ceramic-bezel-insert-slope-yacht-master-black",
+    "name": "SKX007 Ceramic Bezel Insert (Slope) - Yacht Master Black",
+    "category": "bezel_insert",
+    "family": "skx007-insert",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/tribute-to-philippines-seafarers-dial-sunset-day-date",
     "name": "Tribute to Philippines Seafarers Dial - Sunset (Day Date)",
     "category": "dial",
@@ -4726,6 +4826,46 @@
     "specSource": "family-inferred",
     "confidence": "medium",
     "evidence": "product_type 'Dials', fits-skx013/skx007 tags, no explicit feet statement on this SKU"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-black-chapter-ring",
+    "name": "SKX007 Brushed Black Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-mirror-polished-black-chapter-ring",
+    "name": "SKX007 Mirror Polished Black Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-brushed-silver-chapter-ring",
+    "name": "SKX007 Brushed Silver Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/skx007-mirror-polished-silver-chapter-ring",
+    "name": "SKX007 Mirror Polished Silver Chapter Ring",
+    "category": "chapter_ring",
+    "family": "skx007-chapter-ring",
+    "attributes": {},
+    "specSource": "vendor-stated",
+    "confidence": "high",
+    "evidence": "tag explicit skx007"
   },
   {
     "sourceUrl": "https://luciusatelier.com/products/the-great-wave-off-kanagawa-dial-date",

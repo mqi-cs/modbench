@@ -389,12 +389,20 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
         push("bezel_insert", "skx013-insert", "low", "manual", "Ultra Thin-scoped insert -- excluded from generic skx013-insert confidence; do not treat as fitting a stock SKX013 case");
       } else if (tg.includes("fits-skx013")) {
         push("bezel_insert", "skx013-insert", "high", "vendor-stated", "tag explicit fits-skx013");
+      } else if (tg.includes("skx007")) {
+        // Found via the unmatched-product-type report: this branch only
+        // ever checked the 'fits-skx013' tag, missing every SKX007-tagged
+        // insert (this vendor tags those plain 'skx007', not
+        // 'fits-skx007') -- same gap shape as the SRPE gap.
+        push("bezel_insert", "skx007-insert", "high", "vendor-stated", "tag explicit skx007");
       } else if (oos) reject(oos);
       else markUnmatched();
     } else if (pt === "crystals") {
       const oos = checkOutOfScope(combined, "crystal");
       if (tg.includes("fits-skx013") && !isUltraThin) {
         push("crystal", "skx013-crystal", "high", "vendor-stated", "tag explicit fits-skx013");
+      } else if (tg.includes("skx007")) {
+        push("crystal", "skx007-crystal", "high", "vendor-stated", "tag explicit skx007");
       } else if (oos) reject(oos);
       else markUnmatched();
     } else if (pt === "chapter rings") {
@@ -403,6 +411,8 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
         push("chapter_ring", "lucius-ultra-thin-chapter-ring", "medium", "family-inferred", "title/tags 'Ultra Thin' -- scoped to lucius-ultra-thin-case, not generic skx013-case (see family-audit.csv)");
       } else if (tg.includes("fits-skx013")) {
         push("chapter_ring", "skx013-chapter-ring", "high", "vendor-stated", "tag explicit fits-skx013");
+      } else if (tg.includes("skx007")) {
+        push("chapter_ring", "skx007-chapter-ring", "high", "vendor-stated", "tag explicit skx007");
       } else if (oos) reject(oos);
       else markUnmatched();
     } else if (pt === "movements") {
