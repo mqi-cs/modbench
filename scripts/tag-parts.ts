@@ -197,7 +197,15 @@ function tagNamoki(products: ShopifyProduct[]): TagResult {
       tagged.push({ sourceUrl: url, name: p.title, category, family, attributes, specSource, confidence, evidence });
     const reject = (reason: string) => rejected.push({ sourceUrl: url, productName: p.title, reason });
 
-    if (pt === "skx007 cases") {
+    if (pt === "modded watches") {
+      // Permanently excluded (2026-09-01): a complete, pre-built watch, not
+      // a component -- out of scope for a parts compatibility catalog by
+      // definition (there's no "family" a whole watch fits into). Found via
+      // the unmatched-product-type report; 13 real SKUs, always this exact
+      // product_type, so an explicit rule is cheaper and more legible than
+      // leaving it to fall through to checkOutOfScope's generic path.
+      reject("a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog");
+    } else if (pt === "skx007 cases") {
       push("case", "skx007-case", "high", "vendor-stated", "vendor product_type 'SKX007 Cases'");
     } else if (pt === "skx013 cases") {
       push("case", "skx013-case", "high", "vendor-stated", "vendor product_type 'SKX013 Cases'");
@@ -327,7 +335,15 @@ function tagLucius(products: ShopifyProduct[]): TagResult {
 
     const isUltraThin = tg.includes("ultra-thin") || ti.includes("ultra thin");
 
-    if (pt === "cases") {
+    if (pt === "watches") {
+      // Permanently excluded (2026-09-01): a complete, pre-built watch, not
+      // a component -- out of scope for a parts compatibility catalog by
+      // definition (there's no "family" a whole watch fits into). Found via
+      // the unmatched-product-type report; 75 real SKUs, always this exact
+      // product_type, so an explicit rule is cheaper and more legible than
+      // leaving it to fall through to checkOutOfScope's generic path.
+      reject("a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog");
+    } else if (pt === "cases") {
       const oos = checkOutOfScope(combined, "case");
       if (isUltraThin) {
         push("case", "lucius-ultra-thin-case", "high", "vendor-stated", "body_html states standard SKX bezels/inserts/crystals do NOT fit -- verified Phase 0. THE false-positive-trap family.");

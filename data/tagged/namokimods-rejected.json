@@ -162,6 +162,12 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nmk21-automatic-pilot-watch-tonneau-steel",
+    "productName": "NMK21 Automatic Pilot Watch: Tonneau Steel",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/straight-end-watch-bracelet-ladder-brushed-finish",
     "productName": "Straight End Watch Bracelet: Ladder Brushed Finish",
     "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
@@ -384,6 +390,18 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nmk20-automatic-field-watch-milspec-type-ii-sandblasted",
+    "productName": "NMK20 Automatic Field Watch: Milspec Type II Sandblasted",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk19-automatic-field-watch-milspec-type-i-sandblasted",
+    "productName": "NMK19 Automatic Field Watch: Milspec Type I Sandblasted",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk-wk16-diy-watchmaking-kit-nrx-sports-watch",
     "productName": "NMK-WK16 DIY Watchmaking Kit: NRX Sports Watch",
     "reason": "a bundled multi-part kit product, does not map to a single part category",
@@ -408,6 +426,18 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nmk16-automatic-dress-watch-gs-gold",
+    "productName": "NMK16 Automatic Dress Watch: GS Gold",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk15-automatic-dress-watch-gs-steel",
+    "productName": "NMK15 Automatic Dress Watch: GS Steel",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/nmk-wk11-diy-watchmaking-kit-nautilus-sport-watch",
     "productName": "NMK-WK11 DIY Watchmaking Kit: Nautilus Sport Watch",
     "reason": "a bundled multi-part kit product, does not map to a single part category",
@@ -429,6 +459,18 @@
     "sourceUrl": "https://namokimods.com/products/ssk-crystal-gasket",
     "productName": "SSK Crystal Gasket",
     "reason": "a seal/gasket accessory, not a component with its own compatibility family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk14-automatic-sport-watch-b-r-mk-2-steel",
+    "productName": "NMK14 Automatic Sport Watch: Square Mk 2 Steel",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk13-automatic-sport-watch-b-r-mk-2-gold",
+    "productName": "NMK13 Automatic Sport Watch: Square Mk 2 Gold",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
     "vendorKey": "namokimods"
   },
   {
@@ -471,6 +513,18 @@
     "sourceUrl": "https://namokimods.com/products/nmk926-935-watch-bracelet-nautilus-black-finish",
     "productName": "NMK926/935 Watch Bracelet: Nautilus Black Finish",
     "reason": "bracelet with no identifiable case-model marker -- end-link shape is case-specific, cannot default to a generic strap family",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk12-automatic-dive-watch-fifty-eight-navy-blue",
+    "productName": "NMK12 Automatic Dive Watch: Fifty-Eight Navy Blue",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk11-automatic-dive-watch-fifty-eight-black",
+    "productName": "NMK11 Automatic Dive Watch: Fifty-Eight Black",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
     "vendorKey": "namokimods"
   },
   {
@@ -594,6 +648,18 @@
     "vendorKey": "namokimods"
   },
   {
+    "sourceUrl": "https://namokimods.com/products/nmk09-automatic-field-watch-khaki",
+    "productName": "NMK09 Automatic Field Watch: Khaki",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk06-automatic-dive-watch-62mas-black",
+    "productName": "NMK06 Automatic Dive Watch: \"62MAS\" Black",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
     "sourceUrl": "https://namokimods.com/products/sii-nh71-skeletonized-movement",
     "productName": "Seiko (SII/TMI) NH71 Gilt Skeletonized Movement",
     "reason": "movement/movement-spare-part with no identifiable caliber marker in title (product_type 'Seiko Movements')",
@@ -639,6 +705,18 @@
     "sourceUrl": "https://namokimods.com/products/bergeon-7055-lubri-gaskets-with-silicone-grease",
     "productName": "Bergeon 7055 Lubri-Gaskets with Silicone Grease",
     "reason": "a tool, not a watch part",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk04-watch-lumed-dssd-black-on-oyster-bracelet",
+    "productName": "NMK04 Automatic Dive Watch: Lumed DSSD Black on Oyster Bracelet",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "namokimods"
+  },
+  {
+    "sourceUrl": "https://namokimods.com/products/nmk03-watch-ym-rose-gold-with-fitted-rubber-strap",
+    "productName": "NMK03 Automatic Dive Watch: YM Rose Gold with Fitted Rubber Strap",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
     "vendorKey": "namokimods"
   },
   {

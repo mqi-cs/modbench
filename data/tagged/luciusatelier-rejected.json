@@ -1,14 +1,464 @@
 [
   {
+    "sourceUrl": "https://luciusatelier.com/products/38mm-st1901-pulsograph-la2201b",
+    "productName": "38mm ST1901 Pulsograph LA2201B",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/38mm-st19-chronograph-la2201a",
+    "productName": "38mm ST1901 Chronograph LA2201A",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-39mm-snowflake-007",
+    "productName": "Explorer 39mm Snowflake 007",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/worlds-blackest-black-mod-006",
+    "productName": "World's Blackest Black Mod 006",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/worlds-blackest-black-mod-005",
+    "productName": "World's Blackest Black Mod 005",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-39mm-vintage-sub-mod-004",
+    "productName": "Explorer 39mm Vintage Sub Mod 004",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-39mm-stardust-mod-003",
+    "productName": "Explorer 39mm Stardust Mod 003",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/explorer-pink-mother-of-pearl-mod-002",
+    "productName": "Explorer 36mm Pink Mother of Pearl Mod 002",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/worlds-blackest-black-mod-001",
+    "productName": "World's Blackest Black Mod 001",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seikonaut-watch-001",
+    "productName": "SEIKONAUT Watch 001",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seikonaut-luminous-great-wave",
+    "productName": "SEIKONAUT Luminous Great Wave",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seikonaut-black-edition-aventurine-glass-watch",
+    "productName": "SEIKONAUT Black Aventurine Glass Edition",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx013-vintage-submariner-pepsi-dual-time-1",
+    "productName": "SEIKO SKX013 Vintage Submariner Pepsi Dual Time #1",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp65k1-black-meteorite-xxx098",
+    "productName": "SEIKO 5 Sports SRDP65K1 Black Meteorite #XXX098",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp55k1-pepsi-dual-time-meteorite-xxx361",
+    "productName": "SEIKO 5 Sports SRDP55K1 Pepsi Dual Time Meteorite #XXX361",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp55k1-the-great-wave-off-kanagawa-mod-2",
+    "productName": "SEIKO 5 Sports SRDP55K1 The Great Wave off Kanagawa Mod #2",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp65k1-the-starry-night-black-edition",
+    "productName": "SEIKO 5 Sports SRDP65K1 The Starry Night - Black Edition",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl15-oil-painted-great-wave-mod-xxx012",
+    "productName": "SEIKO 5 SNKL15 Oil-Painted Great Wave Mod #XXX012",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp55k1-the-great-wave-off-kanagawa-mod-1",
+    "productName": "SEIKO 5 Sports SRDP55K1 The Great Wave off Kanagawa Mod #1",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk809-the-starry-night-mod-xxx097",
+    "productName": "SEIKO 5 SNK809 The Starry Night Mod #XXX097",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-seigaiha-mod-xxx288",
+    "productName": "SEIKO 5 SNKK87 Seigaiha Mod #XXX288",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-seigaiha-mod-xxx352",
+    "productName": "SEIKO 5 SNKK87 Seigaiha Mod #XXX352",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-seigaiha-mod-xxx262",
+    "productName": "SEIKO 5 SNKK87 Seigaiha Mod #XXX262",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp55k1-the-starry-night-mod-xxx722",
+    "productName": "SEIKO 5 Sports SRDP55K1 The Starry Night Mod #XXX722",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp55k1-the-great-wave-off-kanagawa-mod-xxx135",
+    "productName": "SEIKO 5 Sports SRDP55K1 The Great Wave off Kanagawa Mod #XXX135",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-sports-srdp55k1-the-great-wave-off-kanagawa-xxx138",
+    "productName": "SEIKO 5 Sports SRDP55K1 The Great Wave off Kanagawa Mod #XXX138",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk793-the-starry-night-mod-xxx542",
+    "productName": "SEIKO 5 SNK793 The Starry Night Mod #XXX542",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk793-the-starry-night-mod-xxx106",
+    "productName": "SEIKO 5 SNK793 The Starry Night Mod #XXX106",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-seigaiha-mod-xxx351",
+    "productName": "SEIKO 5 SNKK87 Seigaiha Mod #XXX351",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx009-the-great-wave-off-kanagawa-xxx064",
+    "productName": "SEIKO SKX009 The Great Wave off Kanagawa #XXX064",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx009-the-great-wave-off-kanagawa-xxx237",
+    "productName": "SEIKO SKX009 The Great Wave off Kanagawa #XXX237",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-mother-of-pearl-mod-xxx273",
+    "productName": "SEIKO 5 SNKK87 Mother of Pearl Mod #XXX273",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-mother-of-pearl-mod-xxx268",
+    "productName": "SEIKO 5 SNKK87 Mother of Pearl Mod #XXX268",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/vetus-high-precision-tweezer-with-carbon-fibre-tip",
     "productName": "Vetus® High Precision Tweezer with Carbon Fibre Tip",
     "reason": "a tool, not a watch part",
     "vendorKey": "luciusatelier"
   },
   {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-nautical-explorer-mod-xxx728",
+    "productName": "SEIKO 5 SNKL23 Nautical Explorer Mod #XXX728",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-explorer-mod-xxx257",
+    "productName": "SEIKO 5 SNKL23 Explorer Mod #XXX257",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx009-the-starry-night",
+    "productName": "SEIKO SKX009 The Starry Night #xxx150",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx007-the-great-wave-off-kanagawa-xxx661",
+    "productName": "SEIKO SKX007 The Great Wave off Kanagawa #XXX661",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-snzh55-the-great-fathom-black-edition-xxx244",
+    "productName": "SEIKO SNZH55 The Great Fathom Black Edition #XXX244",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-snzh53-the-great-fathom-blue-edition-xxx806",
+    "productName": "SEIKO SNZH53 The Great Fathom Blue Edition #XXX806",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-stardust-mod-xxx678",
+    "productName": "SEIKO 5 SNKL23 Stardust Mod #XXX678",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx007-the-great-wave-off-kanagawa-xxx797",
+    "productName": "SEIKO SKX007 The Great Wave off Kanagawa #XXX797",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx007-the-great-fathom-save-the-ocean-xxx636",
+    "productName": "SEIKO SKX007 The Great Fathom Save The Ocean #XXX636",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx013-the-great-wave-mod-xxx716",
+    "productName": "SEIKO SKX013 The Great Wave Mod #XXX716",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-stardust-mod-xxx628",
+    "productName": "SEIKO 5 SNKL23 Stardust Mod #XXX628",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-worlds-blackest-black-mod-xxx605",
+    "productName": "SEIKO 5 SNKL23 World's Blackest Black Mod #XXX605",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-stardust-mod-xxx609",
+    "productName": "SEIKO 5 SNKL23 Stardust Mod #XXX609",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx013-the-great-wave-mod-xxx355",
+    "productName": "SEIKO SKX013 The Great Wave Mod #XXX355",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx013-the-great-fathom-mod-xxx645",
+    "productName": "SEIKO SKX013 The Great Fathom Mod #XXX645",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk809-stardust-mod-xxx824",
+    "productName": "SEIKO 5 SNK809 Stardust Mod #XXX824",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk809-the-bronze-medallion-diver-mod-xxx812",
+    "productName": "SEIKO 5 SNK809 The Bronze Medallion Diver Mod #XXX812",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl15-mother-of-pearl-mod-xxx185",
+    "productName": "SEIKO 5 SNKL15 Mother of Pearl Mod #XXX185",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
     "sourceUrl": "https://luciusatelier.com/products/seiko-movement-holder",
     "productName": "SEIKO Movement Holder",
     "reason": "a tool, not a watch part",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-seigaiha-mod-xxx764",
+    "productName": "SEIKO 5 SNKK87 Seigaiha Mod #XXX764",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-fine-wind-clear-morning-mod-xxx130",
+    "productName": "SEIKO 5 SNKK87 Fine Wind, Clear Morning Mod #XXX130",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-fine-wind-clear-morning-mod-xxx495",
+    "productName": "SEIKO 5 SNKK87 Fine Wind, Clear Morning Mod #XXX495",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx007-great-wave-mod-xxx355",
+    "productName": "SEIKO SKX007 Great Wave Mod #XXX355",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk369-deep-diver-mod-xxx039",
+    "productName": "SEIKO 5 SNK369 Deep Diver Mod #XXX039",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk883-terra-explorer-mod-xxx233",
+    "productName": "SEIKO 5 SNK883 Terra Explorer Mod #XXX233",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk883-terra-explorer-mod-xxx228",
+    "productName": "SEIKO 5 SNK883 Terra Explorer Mod #XXX228",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-the-great-wave-mod-xxx512",
+    "productName": "SEIKO 5 SNKL23 The Great Wave Mod #XXX512",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk809-terra-explorer-mod-xxx895",
+    "productName": "SEIKO 5 SNK809 Terra Explorer Mod #XXX895",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk809-deep-diver-mod-xxx281",
+    "productName": "SEIKO 5 SNK809 Deep Diver Mod #XXX281",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-nautical-explorer-mod-xxx458",
+    "productName": "SEIKO 5 SNKK87 Nautical Explorer Mod #XXX458",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-terra-explorer-mod-xxx200",
+    "productName": "SEIKO 5 SNKK87 Terra Explorer Mod #XXX200",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-deep-diver-mod-xxx327",
+    "productName": "SEIKO 5 SNKK87 Deep Diver Mod #XXX327",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-black-bay-mod-xxx042",
+    "productName": "SEIKO 5 SNKL23 Black Bay Mod #XXX042",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-skx013-automatic-divers-watch",
+    "productName": "SEIKO SKX013 Automatic Divers' Watch",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl15-the-great-wave-mod-xxx398",
+    "productName": "SEIKO 5 SNKL15 The Great Wave Mod #XXX398",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl15-great-wave-mod-xxx989",
+    "productName": "SEIKO 5 SNKL15 The Great Wave Mod #XXX989",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk803-pilot-flieger-mod-xxx142",
+    "productName": "SEIKO 5 SNK803 Pilot Mod #XXX142",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snzg15-nautical-explorer-mod-xxx384",
+    "productName": "SEIKO 5 SNZG15 Nautical Explorer Mod #XXX384",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk803-automatic-watch",
+    "productName": "SEIKO 5 SNK803 Automatic Watch",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkk87-terra-explorer-mod-xxx179",
+    "productName": "SEIKO 5 SNKK87 Terra Explorer Mod #XXX179",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snke53-automatic-watch",
+    "productName": "SEIKO 5 SNKE53 Automatic Watch",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snk807-automatic-watch",
+    "productName": "SEIKO 5 SNK807 Automatic Watch",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
+    "vendorKey": "luciusatelier"
+  },
+  {
+    "sourceUrl": "https://luciusatelier.com/products/seiko-5-snkl23-automatic-watch",
+    "productName": "SEIKO 5 SNKL23 Automatic Watch",
+    "reason": "a complete, pre-built watch, not a component -- out of scope for a parts compatibility catalog",
     "vendorKey": "luciusatelier"
   }
 ]
