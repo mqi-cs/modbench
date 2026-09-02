@@ -1,6 +1,17 @@
 import { defineConfig } from "vitest/config";
+import { fileURLToPath } from "node:url";
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      // `server-only` throws on import outside a React Server Component.
+      // Tests of server modules (loadCatalog, buildView, the style-build
+      // fixtures) are exercising exactly the server path, so the guard is
+      // stubbed rather than the modules being restructured to avoid it.
+      "server-only": fileURLToPath(new URL("./lib/db/server-only-stub.ts", import.meta.url)),
+      "@": fileURLToPath(new URL("./", import.meta.url)),
+    },
+  },
   test: {
     coverage: {
       provider: "v8",

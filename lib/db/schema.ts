@@ -170,3 +170,31 @@ export const partMerges = sqliteTable("part_merges", {
   reason: text("reason").notNull(), // why a human judged this the same physical part
   createdAt: integer("created_at").notNull(),
 });
+
+// Saved builds. specs/06-phase-5-sharing.md: "The full query-string URL is
+// too long to paste into a Reddit comment."
+//
+// Immutable and anonymous by design -- there are no accounts, and opening
+// a build in the configurator forks it into a fresh URL rather than
+// mutating the original. That is what lets these be cached indefinitely.
+export const builds = sqliteTable("builds", {
+  // 8 chars, so the link is short enough to paste inline. Collision risk
+  // is checked on insert rather than assumed away.
+  id: text("id").primaryKey(),
+  // JSON object of slot -> part id. Access only through lib/db/json.ts.
+  slots: text("slots").notNull(),
+  createdAt: integer("created_at").notNull(),
+  viewCount: integer("view_count").notNull().default(0),
+}, (table) => [
+  check("builds_id_length_check", sql`length(${table.id}) = 8`),
+]);
+
+// Rate limiting for POST /api/builds, per specs/06-phase-5-sharing.md.
+// In the database rather than in memory because the dev server and any
+// serverless deployment both lose in-process state between requests, and
+// a limiter that resets on every cold start is not a limiter.
+export const rateLimits = sqliteTable("rate_limits", {
+  key: text("key").primaryKey(),
+  windowStart: integer("window_start").notNull(),
+  count: integer("count").notNull(),
+});

@@ -75,3 +75,91 @@ Define these in `data/fixtures/style-builds.ts` and assert in tests that all ten
 6. **Lighthouse ≥90** on performance and accessibility for `/`, `/b/[id]`, and one style page.
 7. No trademarked model names in any page title, slug, heading, or meta description. Grep for a list of them to confirm.
 8. Build pages server-render fully with JavaScript disabled — the parts list and total must be in the HTML.
+
+---
+
+## Result
+
+Built and verified. Two deviations, both recorded rather than quietly absorbed.
+
+### Pass measures
+
+1. **Save, share, open fresh, fork.** Met. `POST /api/builds` returns
+   `/b/<id>`; the page server-renders; "Open in configurator" links to the
+   ordinary query-string form carrying no build id, so editing forks.
+   Tested including that slot keys map to the configurator's own parameter
+   names — they differ (`bezelInsert` is `insert`), and a link built from
+   the wrong names would open an empty configurator while looking valid.
+2. **Blocked builds cannot be saved.** Met, and re-checked server-side
+   rather than trusted from the client: the endpoint re-evaluates and
+   returns 422 with the blocking reasons. The test finds a genuinely
+   blocked pairing in the catalog rather than constructing one, so it
+   fails if the engine stops blocking it.
+3. **OG cards render on two real platforms.** **Outstanding — needs a
+   person.** The card itself renders correctly (verified by fetching
+   `/b/<id>/opengraph-image` and looking at it), and `metadataBase` is set
+   so `og:url` and `og:image` are absolute, which is what Slack and
+   Discord need. Pasting into those two is not something this session can
+   do.
+4. **Ten style pages load, evaluate, open correctly.** Met, with the
+   amendment below.
+5. **Homepage renders six builds, no vendor photography.** Met. Grepped:
+   the rendered homepage contains 42 `/assets/` images and zero external
+   image hosts.
+6. **Lighthouse ≥90 performance and accessibility.** Met, after a real
+   fix. First run: `/` 97/100, `/b/[id]` **79**/100, style page 98/100.
+   The build page was losing 1.94s to the render-blocking Google Fonts
+   stylesheet on a third-party origin. Moved to `next/font`, which
+   self-hosts the faces at build time. Second run: **99, 97, 97**, all
+   accessibility 100.
+7. **No trademarked model names in titles, slugs, headings, meta.** Met,
+   and enforced rather than reviewed. `lib/trademarks.ts` holds the
+   vocabulary; `lib/build-name.ts` strips it out of generated `/b/[id]`
+   titles before they reach a `<title>`; a test greps every style page's
+   title, slug and summary, and every title the generator produces for
+   all 474 dials in the catalog.
+8. **Server-renders with JavaScript disabled.** Met by construction: the
+   build page has no client component in its tree at all. `StaticPreview`
+   stacks the pre-composited layers as absolutely-positioned `<img>`
+   elements instead of using a canvas, which needs no script. Verified by
+   grepping the raw HTML for the parts list and total.
+
+### Amendments
+
+**A. Style pages assert "not blocked", not `ok`.** The spec says to assert
+all ten evaluate to `ok`. That is unreachable and the reason is already in
+the catalog: four rules — `date-window-alignment`, `day-window-presence`,
+`hand-stack-clearance`, `unverified-part` — fire on nearly every build,
+because no vendor publishes dial date-window positions (D7) and most parts
+are family-inferred. Any build with a dial and a date movement is
+`ok-with-warnings` by construction.
+
+The assertion used instead is stronger than a weakened `ok` would be: not
+blocked, **and** every warning present is one of those four known
+catalog-wide gaps. A warning specific to *these* parts fails the test. That
+caught a real defect — one style paired a sloped bezel insert with a flat
+crystal, which the engine blocks, and another paired an insert with no
+stated profile against a crystal, which draws an unconfirmable-fitment
+warning. Both fixtures were corrected rather than the test relaxed.
+
+**B. The OG image composites to a single PNG with sharp.** Stacking the
+prepared layers inside the card does not work: Satori cannot decode WebP,
+which is the format Phase 4 stores assets in, and inlining six 800×800
+layers as data URIs put over a megabyte of base64 through the renderer and
+killed the response with an empty reply. Flattening to one PNG first fixes
+both. Satori also has no text wrapping or ellipsis, so a long generated
+name ran straight off the card — the size is stepped down by name length
+and the string clamped.
+
+### Notes
+
+- Rate limiting lives in the database, not a module-level `Map`. A
+  serverless deployment loses in-process state between requests, so an
+  in-memory limiter would reset on every cold start and limit nothing.
+- Build ids use an alphabet with no `0`/`O` or `1`/`l`/`I`, because a
+  shared link gets read aloud and retyped from screenshots. Collisions are
+  checked on insert rather than assumed away.
+- `saveBuild` resolves part ids through `partById`, so an id of
+  `__proto__` is rejected rather than resolving to something inherited —
+  the same class as the Phase 3 URL bug, now on a path that takes input
+  straight off the network.
