@@ -3,7 +3,7 @@
 // including the currency, price-sanity, and name/family-conflict checks --
 // "not optional."
 
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { db, sqlite } from "../lib/db/client";
 import { families, listings, parts, vendors, familyExceptions, partMerges, rejectedParts } from "../lib/db/schema";
 import { eq } from "drizzle-orm";
@@ -307,6 +307,47 @@ function main() {
     }
   } else {
     pass("prototype-key guard: part-id lookups go through hasOwn-checked helpers");
+  }
+
+  // 13. Preview assets. asset_state is a claim about a file on disk, and
+  // the app decides between drawing a layer and showing a "not drawn"
+  // placeholder purely from that column -- so a 'ready' row with no file
+  // produces a layer that silently fails to paint, which is the one
+  // outcome specs/05-phase-4-preview.md rules out ("never silently omit a
+  // layer").
+  const ASSET_DIRS: Record<string, string> = {
+    dial: "public/assets/dial",
+    hands: "public/assets/hands",
+    bezel_insert: "public/assets/bezel_insert",
+    chapter_ring: "public/assets/chapter_ring",
+  };
+  const readyParts = approvedParts.filter((p) => p.assetState === "ready");
+  if (readyParts.length === 0) {
+    console.warn("WARN: no parts have asset_state 'ready' -- run `pnpm prepare-assets` before the preview will draw anything.");
+  } else {
+    const missingFiles = readyParts.filter((p) => {
+      const dir = ASSET_DIRS[p.category];
+      return !dir || !existsSync(`${dir}/${p.id}.webp`);
+    });
+    if (missingFiles.length > 0) {
+      for (const p of missingFiles.slice(0, 5)) fail(`part ${p.id} (${p.name}) is asset_state 'ready' but ${ASSET_DIRS[p.category] ?? "?"}/${p.id}.webp does not exist`);
+      if (missingFiles.length > 5) fail(`... and ${missingFiles.length - 5} more 'ready' parts with no asset file`);
+    } else {
+      pass(`preview assets: all ${readyParts.length} 'ready' parts have a file on disk`);
+    }
+
+    // And the other direction: a file with no 'ready' row is dead weight
+    // in the repo and a sign the pipeline ran against a different catalog.
+    let orphans = 0;
+    const readyIds = new Set(readyParts.map((p) => p.id));
+    for (const dir of Object.values(ASSET_DIRS)) {
+      if (!existsSync(dir)) continue;
+      for (const file of readdirSync(dir)) {
+        if (!readyIds.has(file.replace(/\.webp$/, ""))) orphans++;
+      }
+    }
+    if (orphans > 0) fail(`${orphans} asset file(s) on disk have no approved part marked 'ready' -- re-run \`pnpm prepare-assets\``);
+    else pass("preview assets: no orphaned asset files");
   }
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);

@@ -98,3 +98,26 @@ listing. Suggesting "buy this from a vendor already in your order" needs
 the same part sold by two vendors, and cross-vendor deduplication is
 deferred (`08-DEFERRED.md` D7). Restoring D7 is what turns working code
 into a working feature.
+
+## Preview assets
+
+The visual preview draws from PNG-derived WebP layers prepared offline —
+nothing fetches a vendor image at request time.
+
+```
+pnpm draw-case-art     # the two hand-drawn case illustrations, per platform
+pnpm prepare-assets    # cut out, scale and classify every part photograph
+pnpm prepare-assets --dry-run --category=dial   # classify and report, write nothing
+```
+
+`prepare-assets` caches downloads under `data/raw/images/` (gitignored), so
+re-running after a threshold change costs no network. It writes
+`public/assets/<category>/<partId>.webp` and sets `parts.asset_state` to
+`ready`, `needs-manual` or `unavailable`. `pnpm verify-catalog` asserts the
+two agree in both directions.
+
+Roughly half the catalog has no usable layer, almost all of it bezel
+inserts: two of the four vendors photograph inserts fitted to a complete
+watch rather than alone. Those parts stay fully selectable and priced, and
+the preview names them under the canvas as not drawn. See
+`specs/05-phase-4-preview.md` for the measured breakdown.

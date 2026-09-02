@@ -7,6 +7,7 @@ import { eq } from "drizzle-orm";
 import { db } from "./db/client";
 import { familyExceptions, listings, parts, vendors } from "./db/schema";
 import { fromJsonColumn } from "./db/json";
+import { encodePreviewable } from "./preview/previewable";
 import { readFileSync } from "node:fs";
 import type { CatalogSlice, SlotKey } from "./compat";
 
@@ -59,6 +60,12 @@ export interface CatalogPayload {
   // Display only, keyed by part id -- kept OUT of CatalogSlice so
   // lib/compat can't see it and no rule can key off an image.
   images: Record<string, string>;
+  // Which parts scripts/prepare-assets.ts produced a preview layer for,
+  // as a base64 bitmask over the sorted part ids -- 0.45KB against the
+  // 21.1KB the same 1,241 ids cost as an array. Decode with
+  // decodePreviewable(). Display only, and kept out of CatalogSlice so
+  // lib/compat cannot see it and no rule can key off it.
+  previewable: string;
   familyExceptions: CatalogSlice["familyExceptions"];
   listings: DisplayListing[];
   vendors: VendorInfo[];
@@ -92,6 +99,11 @@ export function loadCatalog(): CatalogPayload {
   const images: Record<string, string> = {};
   for (const p of approved) if (p.imageUrl && sliceParts[p.id]) images[p.id] = p.imageUrl;
 
+  const previewable = encodePreviewable(
+    Object.keys(sliceParts),
+    approved.filter((p) => p.assetState === "ready" && sliceParts[p.id]).map((p) => p.id),
+  );
+
   const rows = db.select().from(listings).all().filter((l) => sliceParts[l.partId] && l.priceMinorBase !== null);
   const displayListings: DisplayListing[] = rows.map((l) => {
     const v = vendorById.get(l.vendorId);
@@ -109,6 +121,7 @@ export function loadCatalog(): CatalogPayload {
 
   return {
     parts: sliceParts,
+    previewable,
     familyExceptions: db
       .select()
       .from(familyExceptions)

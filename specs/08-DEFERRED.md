@@ -167,3 +167,32 @@ State of each restore signal now that the configurator ships:
 ## Adding to this file
 
 When cutting anything, add an entry with the same five fields: what, why, restore signal, cost, and any guardrails that keep the cost low. An entry with no restore signal is not deferred work — it is a decision, and it belongs in `00-PROJECT.md` instead.
+
+---
+
+## D9 — Bezel insert product photography (raised Phase 4)
+
+**Status:** blocked on the vendors, same channel as D7.
+
+Namoki (237 approved inserts) and DLW (250) do not publish a photograph of
+a bezel insert on its own. Namoki renders each insert already fitted to a
+complete watch; DLW shoots them on wrists and props. Between them that is
+487 of 681 inserts — 71.5% of the category — with no recoverable
+top-down image, which is what holds the Phase 4 preview's insert layer at
+27.5% ready and puts pass measure 2 out of reach by arithmetic rather than
+by effort (see specs/05-phase-4-preview.md).
+
+**The ask:** a flat, top-down photograph of the insert alone on a plain
+backdrop — exactly what watchandstyle and Lucius Atelier already publish,
+and what puts them at 98% and 77%.
+
+**Why it is worth asking:** it is the single highest-leverage unblock left
+in the catalog. Nothing else would move a headline number by 30 points.
+Bundle it with the D7 dial-date-position request rather than sending two
+separate emails.
+
+**Explicitly not the route:** extracting the annulus from Namoki's fitted
+renders. Their templates are consistent enough that masking a radius band
+would half-work today, and would break silently when they re-render.
+Worse, the arithmetic says even a perfect extraction leaves the measure
+unmet, so it would buy a fragile dependency for a number that still fails.

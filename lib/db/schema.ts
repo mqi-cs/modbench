@@ -28,6 +28,16 @@ export type SpecSource = (typeof SPEC_SOURCES)[number];
 export const REVIEW_STATES = ["pending", "approved", "rejected"] as const;
 export type ReviewState = (typeof REVIEW_STATES)[number];
 
+// Whether scripts/prepare-assets.ts produced a usable preview layer for
+// this part. Display only, like image_url -- lib/compat never sees it and
+// no compatibility rule may key off it. 'needs-manual' means the vendor's
+// photograph was understood well enough to reject (a wrist shot, a colour
+// grid, an insert photographed fitted to a whole watch) and a human would
+// have to cut it out; 'unavailable' means it could not be fetched or
+// decoded at all.
+export const ASSET_STATES = ["ready", "needs-manual", "unavailable"] as const;
+export type AssetState = (typeof ASSET_STATES)[number];
+
 export const CONFIDENCE_LEVELS = ["high", "medium", "low"] as const;
 export type ConfidenceLevel = (typeof CONFIDENCE_LEVELS)[number];
 
@@ -84,6 +94,8 @@ export const parts = sqliteTable("parts", {
   // First image from the vendor's own feed. Display only -- lib/compat
   // never sees it, and no rule may key off it.
   imageUrl: text("image_url"),
+  // Null until scripts/prepare-assets.ts has run over this part.
+  assetState: text("asset_state"),
   createdAt: integer("created_at").notNull(),
   updatedAt: integer("updated_at").notNull(),
 }, (table) => [
@@ -91,6 +103,7 @@ export const parts = sqliteTable("parts", {
   check("parts_spec_source_check", inList("spec_source", SPEC_SOURCES)),
   check("parts_review_state_check", inList("review_state", REVIEW_STATES)),
   check("parts_confidence_check", inList("confidence", CONFIDENCE_LEVELS)),
+  check("parts_asset_state_check", sql`${table.assetState} IS NULL OR ${table.assetState} IN ('ready', 'needs-manual', 'unavailable')`),
   index("parts_family_idx").on(table.family),
   index("parts_review_state_idx").on(table.reviewState),
 ]);

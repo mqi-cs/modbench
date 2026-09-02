@@ -25,7 +25,12 @@ export const STARTER_BUILDS: StarterBuild[] = [
       case: "NMK960 Sumo SKX007/SRPD Case: Steel Finish",
       dial: "Watch Dial: Spork Green",
       hands: "Watch Hands: Syringe Silver",
-      bezelInsert: "SKX007/SRPD Steel Bezel Insert: Nautical Steel",
+      // Swapped from Namoki's "Nautical Steel" once Phase 4 landed. Same
+      // platform and the same steel count-up character, but Namoki
+      // photographs every insert fitted to a complete watch, so that one
+      // can never have a preview layer -- and a starter build with a
+      // missing layer is the first thing a visitor sees.
+      bezelInsert: "SI013 SKX007/SRPD Stainless Bezel Insert - Yacht Master - Silver",
     },
   },
   {
@@ -48,8 +53,12 @@ export const STARTER_BUILDS: StarterBuild[] = [
       movement: "Seiko (TMI) NH35 Automatic Movement - Date (White)",
       case: "RC1331 SKX007 Field Case - Black",
       dial: "D0590 Arabic Dial - Sunburst Green",
-      hands: "Hands - Sumo",
-      bezelInsert: "CI0004 SKX007/SRPD Luminous Sub Black Ceramic Bezel Insert",
+      // Swapped from DLW's "Hands - Sumo" once Phase 4 landed: that
+      // listing's photograph is a colour-variant montage, which cannot
+      // produce a preview layer. Flieger sword hands keep the field-watch
+      // character.
+      hands: "Watch Hands: Flieger Sword Silver",
+      bezelInsert: "CI1576 SKX007/SRPD Count Down Timer Flat Ceramic Bezel Insert - Black",
     },
   },
 ];

@@ -8,3 +8,4 @@ data/modbench.db-shm
 data/modbench.db-wal
 data/raw/*.json
 node_modules/
+data/raw/images/

@@ -8,6 +8,7 @@ import { ASSEMBLY_ORDER, type Catalog, type PickerItem, type PartState } from ".
 import { SlotRail } from "./SlotRail";
 import { PartPicker } from "./PartPicker";
 import { BuildSummary } from "./BuildSummary";
+import { Preview } from "./Preview";
 import { StarterBuilds } from "./StarterBuilds";
 import type { StarterBuild } from "@/data/fixtures/starter-builds";
 import { SLOT_PARAM, buildFromParams, droppedSlots, paramsFromBuild } from "./url-state";
@@ -184,16 +185,23 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
             el?.focus();
           }}
         />
-        <BuildSummary
-          build={build}
-          parts={slice.parts}
-          fxAsOf={catalog.fxAsOf}
-          result={result}
-          totals={totals}
-          includeTools={includeTools}
-          onToggleTools={() => setIncludeTools((v) => !v)}
-          onJumpToSlot={setActiveSlot}
-        />
+        {/* Preview sits above the summary rather than in a fourth column:
+            at 1600px a fourth column would squeeze the picker, and the
+            drawing is what you look at while reading the total, so the two
+            belong in the same field of view. */}
+        <div className="flex flex-col gap-px bg-rule">
+          <Preview build={build} catalog={catalog} />
+          <BuildSummary
+            build={build}
+            parts={slice.parts}
+            fxAsOf={catalog.fxAsOf}
+            result={result}
+            totals={totals}
+            includeTools={includeTools}
+            onToggleTools={() => setIncludeTools((v) => !v)}
+            onJumpToSlot={setActiveSlot}
+          />
+        </div>
       </main>
     </div>
   );
