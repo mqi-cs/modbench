@@ -77,11 +77,17 @@ export default function Home() {
         </section>
 
         <section className="mx-auto max-w-[1100px] px-6 pb-14" aria-label="Example builds">
+          {/* One caption for the whole grid. Repeated per card it becomes
+              wallpaper, and the honesty requirement needs it read. */}
+          <p className="mb-4 text-[12px] text-graphite">
+            <span className="font-medium text-ink">These are diagrams, not photographs.</span> Every picture on this
+            page is drawn from the parts in the build — shapes and colours are approximate and real finishes vary.
+          </p>
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {hero.map(({ style, view }) => (
               <li key={style.slug} className="border border-rule bg-card p-4">
                 <Link href={`/styles/${style.slug}`} className="block">
-                  <StaticPreview layers={view.layers} alt={`Flat diagram of the ${style.title} build`} />
+                  <StaticPreview layers={view.layers} alt={`Flat diagram of the ${style.title} build`} caption={false} />
                   <h2 className="mt-3 text-[15px] font-semibold">{style.title}</h2>
                   <p className="num mt-1 text-[13px] tabular-nums text-graphite">
                     {formatGbp(view.totals.grandTotalMinorLow)} · {view.totals.groups.length}{" "}

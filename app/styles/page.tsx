@@ -35,11 +35,15 @@ export default function StylesIndex() {
           Every one is a real parts list that passes the compatibility checks, priced across the vendors that stock
           it. Open one and change whatever you like — nothing here is a fixed product.
         </p>
-        <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <p className="mt-6 text-[12px] text-graphite">
+          <span className="font-medium text-ink">These are diagrams, not photographs.</span> Each is drawn from the
+          parts in the build — shapes and colours are approximate and real finishes vary.
+        </p>
+        <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {styles.map(({ style, view }) => (
             <li key={style.slug} className="border border-rule bg-card p-4">
               <Link href={`/styles/${style.slug}`} className="block">
-                <StaticPreview layers={view.layers} alt={`Flat diagram of the ${style.title} build`} />
+                <StaticPreview layers={view.layers} alt={`Flat diagram of the ${style.title} build`} caption={false} />
                 <h2 className="mt-3 text-[15px] font-semibold">{style.title}</h2>
                 <p className="num mt-1 text-[13px] tabular-nums text-graphite">
                   {formatGbp(view.totals.grandTotalMinorLow)} · {view.totals.groups.length}{" "}

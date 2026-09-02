@@ -10,7 +10,23 @@ import { drawCalls, placeholders, type PreviewLayer } from "@/lib/preview/compos
  * a common 800x800 frame, so absolutely-positioned <img> elements stack
  * to exactly the same picture with no script at all.
  */
-export function StaticPreview({ layers, alt, className = "" }: { layers: PreviewLayer[]; alt: string; className?: string }) {
+export function StaticPreview({
+  layers,
+  alt,
+  className = "",
+  caption = true,
+}: {
+  layers: PreviewLayer[];
+  alt: string;
+  className?: string;
+  /**
+   * Set false in a grid, where one caption covers every card. Repeating
+   * "diagram, not a photo" six times down a page turns it into wallpaper,
+   * and a disclaimer nobody reads is not doing the job the honesty
+   * requirement asks of it -- the grid carries one instead.
+   */
+  caption?: boolean;
+}) {
   const calls = drawCalls(layers);
   const missing = placeholders(layers);
 
@@ -36,9 +52,14 @@ export function StaticPreview({ layers, alt, className = "" }: { layers: Preview
           ))
         )}
       </div>
+      {(caption || missing.length > 0) && (
       <figcaption className="mt-3 text-[12px] leading-relaxed text-graphite">
-        <span className="font-medium text-ink">Diagram, not a photo.</span> Shapes and colours are approximate, parts
-        are drawn flat and to nominal size, and real finishes vary.
+        {caption && (
+          <>
+            <span className="font-medium text-ink">Diagram, not a photo.</span> Shapes and colours are approximate,
+            parts are drawn flat and to nominal size, and real finishes vary.
+          </>
+        )}
         {missing.length > 0 && (
           <>
             {" "}
@@ -47,6 +68,7 @@ export function StaticPreview({ layers, alt, className = "" }: { layers: Preview
           </>
         )}
       </figcaption>
+      )}
     </figure>
   );
 }
