@@ -5,6 +5,7 @@ import { STARTER_BUILDS } from "@/data/fixtures/starter-builds";
 import { loadCatalog } from "@/lib/catalog";
 import { buildView, configuratorHref, resolveByName } from "@/lib/build-view";
 import { StaticPreview } from "@/components/StaticPreview";
+import { Discover } from "@/components/Discover";
 import { formatGbp } from "@/lib/money";
 
 export const dynamic = "force-static";
@@ -69,6 +70,10 @@ export default function Home() {
               Browse styles
             </Link>
           </div>
+        </section>
+
+        <section className="mx-auto max-w-[1100px] px-6 pb-10">
+          <Discover />
         </section>
 
         <section className="mx-auto max-w-[1100px] px-6 pb-14" aria-label="Example builds">

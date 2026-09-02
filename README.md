@@ -121,3 +121,17 @@ inserts: two of the four vendors photograph inserts fitted to a complete
 watch rather than alone. Those parts stay fully selectable and priced, and
 the preview names them under the canvas as not drawn. See
 `specs/05-phase-4-preview.md` for the measured breakdown.
+
+## Style tags and search
+
+```
+pnpm backfill-style-tags            # assign the controlled vocabulary from listing names
+pnpm backfill-style-tags --dry-run  # report the distribution, write nothing
+```
+
+`lib/style-vocabulary.ts` holds the 43-tag controlled vocabulary and is the
+single source for both the model prompt and the validator, so the two
+can't drift. Natural-language and image search parse to constraints and
+then query deterministically — the model never picks a part and never
+judges compatibility. Without `ANTHROPIC_API_KEY` both features fall back
+to keyword parsing over the same vocabulary rather than failing.
