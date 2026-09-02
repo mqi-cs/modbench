@@ -4,6 +4,7 @@ import { useDeferredValue, useMemo, useRef, useState } from "react";
 import type { SlotKey } from "@/lib/compat";
 import { formatGbp, formatNative } from "@/lib/money";
 import { ASSEMBLY_ORDER, type PickerItem } from "./types";
+import { isNavKey, nextIndex } from "./keyboard";
 
 // In-picker filtering. Not in the original spec, which assumed a catalog
 // of a few hundred parts -- at 3,451 a single category can run to 681
@@ -54,12 +55,22 @@ export function PartPicker({
       onEscape();
       return;
     }
-    if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+    if (!isNavKey(e.key)) return;
     e.preventDefault();
+
     const buttons = Array.from(listRef.current?.querySelectorAll<HTMLButtonElement>("button[data-part]") ?? []);
-    const idx = buttons.findIndex((b) => b === document.activeElement);
-    const next = e.key === "ArrowDown" ? Math.min(idx + 1, buttons.length - 1) : Math.max(idx - 1, 0);
-    buttons[next]?.focus();
+    if (buttons.length === 0) return;
+    const current = buttons.findIndex((b) => b === document.activeElement);
+
+    // Column count measured from the rendered grid rather than assumed:
+    // the track is auto-fill, so it changes with viewport width. Items in
+    // the first row share the smallest offsetTop.
+    const firstTop = buttons[0]!.offsetTop;
+    let columns = buttons.findIndex((b) => b.offsetTop > firstTop);
+    if (columns <= 0) columns = buttons.length; // single row
+
+    const target = nextIndex(e.key, current, buttons.length, columns);
+    if (target !== null) buttons[target]?.focus();
   }
 
   return (
