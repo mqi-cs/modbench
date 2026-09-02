@@ -3,7 +3,7 @@
 // including the currency, price-sanity, and name/family-conflict checks --
 // "not optional."
 
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { db, sqlite } from "../lib/db/client";
 import { families, listings, parts, vendors, familyExceptions, partMerges, rejectedParts } from "../lib/db/schema";
 import { eq } from "drizzle-orm";
@@ -279,6 +279,34 @@ function main() {
     }
   } else {
     pass("attribute provenance: no attribute is derived from a differently-named field");
+  }
+
+  // 12. Prototype-key lookup guard. Part ids reach the engine from a URL,
+  // and `catalog.parts` / `listingsByPart` are plain objects, so a bare
+  // `record[id]` lookup resolves ids like "__proto__" or "constructor" to
+  // something inherited from Object.prototype. That shipped twice: once
+  // putting a bogus part into the build, once crashing listingsFor with
+  // "listings.reduce is not a function". Every lookup keyed by a part id
+  // must go through Object.hasOwn (or the partById/listingsFor helpers).
+  const engineSrc = [
+    "lib/compat/types.ts",
+    "lib/compat/index.ts",
+    "components/build/url-state.ts",
+    ...readdirSync("lib/compat/rules").map((f) => `lib/compat/rules/${f}`),
+  ]
+    .map((f) => ({ file: f, src: readFileSync(f, "utf-8") }))
+    .filter(({ src }) => /\.(parts|listingsByPart)\[/.test(src.replace(/Object\.hasOwn\([^)]*\)/g, "")));
+  const unguarded = engineSrc.filter(({ file, src }) => {
+    // types.ts legitimately contains the guarded lookups themselves.
+    if (file.endsWith("types.ts")) return !src.includes("Object.hasOwn");
+    return true;
+  });
+  if (unguarded.length > 0) {
+    for (const { file } of unguarded) {
+      fail(`prototype-key guard: ${file} indexes a parts/listings record by a part id without Object.hasOwn -- use partById()/listingsFor() instead`);
+    }
+  } else {
+    pass("prototype-key guard: part-id lookups go through hasOwn-checked helpers");
   }
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);

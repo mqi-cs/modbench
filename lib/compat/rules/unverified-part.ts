@@ -1,3 +1,4 @@
+import { partById } from "../types";
 import type { Rule, Finding, SlotKey } from "../types";
 
 // Amendment D, 01a-PHASE-0-FINDINGS.md: specSource 'family-inferred' means
@@ -12,7 +13,7 @@ export const unverifiedPart: Rule = {
     const findings: Finding[] = [];
     for (const [slot, partId] of Object.entries(build.parts) as [SlotKey, string | undefined][]) {
       if (!partId) continue;
-      const part = catalog.parts[partId];
+      const part = partById(catalog, partId);
       if (!part) continue;
       if (part.specSource === "family-inferred") {
         findings.push({

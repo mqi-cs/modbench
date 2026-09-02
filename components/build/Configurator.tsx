@@ -10,63 +10,17 @@ import { PartPicker } from "./PartPicker";
 import { BuildSummary } from "./BuildSummary";
 import { StarterBuilds } from "./StarterBuilds";
 import type { StarterBuild } from "@/data/fixtures/starter-builds";
-import { z } from "zod";
+import { SLOT_PARAM, buildFromParams, droppedSlots, paramsFromBuild } from "./url-state";
 
 // Warnings that reflect a gap in the catalog rather than a problem with
 // the specific combination in front of the user.
 const CATALOG_WIDE_WARNINGS = new Set(["unverified-part", "date-window-alignment", "day-window-presence", "hand-stack-clearance"]);
 
-const SLOT_PARAM: Record<SlotKey, string> = {
-  movement: "movement",
-  case: "case",
-  dial: "dial",
-  hands: "hands",
-  bezelInsert: "insert",
-  bezel: "bezel",
-  crystal: "crystal",
-  chapterRing: "chapter",
-  crown: "crown",
-  strap: "strap",
-};
-
-// Spec: "Parse and validate with Zod." Part ids are nanoids, so anything
-// that isn't a plausible id is rejected before it's used as a lookup key
-// -- a query string is external input like any feed payload
-// (00-PROJECT.md: Zod for all external data validation).
-const PartIdSchema = z.string().min(1).max(64).regex(/^[A-Za-z0-9_-]+$/);
-
-function readSlotParam(params: URLSearchParams, param: string): string | null {
-  const raw = params.get(param);
-  if (raw === null) return null;
-  const parsed = PartIdSchema.safeParse(raw);
-  return parsed.success ? parsed.data : null;
-}
-
-function buildFromParams(params: URLSearchParams, known: CatalogSlice["parts"]): Build {
-  const parts: Build["parts"] = {};
-  for (const [slot, param] of Object.entries(SLOT_PARAM) as [SlotKey, string][]) {
-    const id = readSlotParam(params, param);
-    // A malformed, unknown, or unapproved id drops that slot rather than
-    // crashing -- spec: "never a crash, never a silent empty state". The
-    // dropped-slot notice is surfaced by the caller.
-    if (id && known[id]) parts[slot] = id;
-  }
-  return { parts };
-}
-
-function paramsFromBuild(build: Build): string {
-  const p = new URLSearchParams();
-  for (const [slot, id] of Object.entries(build.parts) as [SlotKey, string | undefined][]) {
-    if (id) p.set(SLOT_PARAM[slot], id);
-  }
-  return p.toString();
-}
-
 export function Configurator({ catalog, starters }: { catalog: Catalog; starters: (StarterBuild & { resolved: Partial<Record<SlotKey, string>> })[] }) {
   const [build, setBuild] = useState<Build>({ parts: {} });
   const [activeSlot, setActiveSlot] = useState<SlotKey>("movement");
   const [includeTools, setIncludeTools] = useState(true);
-  const [droppedSlots, setDroppedSlots] = useState<string[]>([]);
+  const [dropped, setDropped] = useState<SlotKey[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
   const pushBuild = useCallback((next: Build) => {
@@ -107,14 +61,7 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
   // also makes every build shareable and the back button correct for free.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const dropped: string[] = [];
-    for (const [slot, param] of Object.entries(SLOT_PARAM) as [SlotKey, string][]) {
-      const raw = params.get(param);
-      if (raw === null) continue;
-      const id = readSlotParam(params, param);
-      if (!id || !slice.parts[id]) dropped.push(slot);
-    }
-    setDroppedSlots(dropped);
+    setDropped(droppedSlots(params, slice.parts));
     setBuild(buildFromParams(params, slice.parts));
     setHydrated(true);
     const onPop = () => setBuild(buildFromParams(new URLSearchParams(window.location.search), slice.parts));
@@ -207,10 +154,10 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
         </div>
       </header>
 
-      {droppedSlots.length > 0 && (
+      {dropped.length > 0 && (
         <div className="border-b border-amber/30 bg-amber-tint px-6 py-2 text-[13px] text-amber">
-          {droppedSlots.length === 1 ? "One slot in that link" : `${droppedSlots.length} slots in that link`} pointed at a
-          part that isn&rsquo;t in the catalog any more, so {droppedSlots.length === 1 ? "it was" : "they were"} left empty.
+          {dropped.length === 1 ? "One slot in that link" : `${dropped.length} slots in that link`} pointed at a
+          part that isn&rsquo;t in the catalog any more, so {dropped.length === 1 ? "it was" : "they were"} left empty.
         </div>
       )}
 

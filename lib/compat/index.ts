@@ -1,6 +1,7 @@
 import type { Build, BuildResult, CatalogSlice, Finding, Rule } from "./types";
 import { deriveTools } from "./tools";
 import { familyPlatform } from "./platform";
+import { partById } from "./types";
 
 import { movementCaseFit } from "./rules/movement-case-fit";
 import { dialMovementFeet } from "./rules/dial-movement-feet";
@@ -63,7 +64,7 @@ export const RULES: Rule[] = [
 // this catalog is named (see lib/compat/platform.ts).
 function caseFamilyFor(build: Build, catalog: CatalogSlice): string {
   const caseId = build.parts.case;
-  const caseP = caseId ? catalog.parts[caseId] : undefined;
+  const caseP = caseId ? partById(catalog, caseId) : null;
   if (!caseP) return "chapter-ring";
   const platform = familyPlatform(caseP.family);
   return platform ? `${platform}-chapter-ring` : "chapter-ring";

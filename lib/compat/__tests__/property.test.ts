@@ -80,6 +80,19 @@ describe("property: evaluateBuild over random part pairs", () => {
     expect(result.findings.some((f) => f.severity === "warning")).toBe(true);
   });
 
+  it("treats inherited object keys as unresolvable rather than as parts", () => {
+    // `catalog.parts` is a plain object, so a build referencing
+    // "__proto__" or "constructor" used to resolve to something off
+    // Object.prototype and hand rules an object that isn't a part.
+    for (const key of ["__proto__", "constructor", "toString", "hasOwnProperty"]) {
+      const build: Build = { parts: { dial: key } };
+      expect(() => evaluateBuild(build, catalog)).not.toThrow();
+      const result = evaluateBuild(build, catalog);
+      // Nothing should claim to know anything about a non-part.
+      expect(result.findings.every((f) => !f.message.includes("[object"))).toBe(true);
+    }
+  });
+
   it("handles an empty build and unresolvable part ids without throwing", () => {
     expect(() => evaluateBuild({ parts: {} }, catalog)).not.toThrow();
     const ghost: Build = { parts: { dial: "does-not-exist" as string } as Partial<Record<SlotKey, string>> };

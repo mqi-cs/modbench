@@ -106,7 +106,20 @@ export interface CatalogSlice {
 // Every rule that needs a part's listings goes through here, so the
 // indexed and unindexed paths can't drift apart.
 export function listingsFor(catalog: CatalogSlice, partId: string): CatalogListing[] {
-  return catalog.listingsByPart?.[partId] ?? catalog.listings.filter((l) => l.partId === partId);
+  const index = catalog.listingsByPart;
+  // Object.hasOwn, not `?.[id] ??`: for an id like "constructor" a bare
+  // lookup returns Object itself, which isn't nullish, so the fallback
+  // never ran and .reduce was called on a function.
+  if (index && Object.hasOwn(index, partId)) return index[partId] ?? [];
+  return catalog.listings.filter((l) => l.partId === partId);
+}
+
+// The one safe way to resolve a part id against the catalog. Ids can come
+// from a URL, so an id like "__proto__" must not resolve to something
+// inherited from Object.prototype.
+export function partById(catalog: CatalogSlice, partId: string): CatalogPart | null {
+  if (!Object.hasOwn(catalog.parts, partId)) return null;
+  return catalog.parts[partId] ?? null;
 }
 
 export interface Rule {
@@ -123,5 +136,9 @@ export interface Rule {
 export function getPart(build: Build, catalog: CatalogSlice, slot: SlotKey): CatalogPart | null {
   const id = build.parts[slot];
   if (!id) return null;
-  return catalog.parts[id] ?? null;
+  // Object.hasOwn rather than a bare lookup: `parts` is a plain object, so
+  // ids like "__proto__" or "constructor" would otherwise resolve to
+  // something inherited from Object.prototype and hand a rule an object
+  // that isn't a part at all.
+  return partById(catalog, id);
 }

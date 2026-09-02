@@ -1,3 +1,4 @@
+import { partById } from "../types";
 import type { Rule, Finding, SlotKey } from "../types";
 
 // Surfaces every family_exceptions row attached to a selected part
@@ -18,7 +19,7 @@ export const familyException: Rule = {
     const findings: Finding[] = [];
     for (const [slot, partId] of Object.entries(build.parts) as [SlotKey, string | undefined][]) {
       if (!partId) continue;
-      const part = catalog.parts[partId];
+      const part = partById(catalog, partId);
       if (!part) continue;
       for (const exception of catalog.familyExceptions) {
         if (exception.partId !== partId) continue;

@@ -1,6 +1,6 @@
 import type { Rule, Finding, SlotKey } from "../types";
 import type { CatalogListing } from "../types";
-import { listingsFor } from "../types";
+import { listingsFor, partById } from "../types";
 
 function cheapestListing(listings: CatalogListing[]): CatalogListing | null {
   if (listings.length === 0) return null;
@@ -14,7 +14,7 @@ export const stockAvailability: Rule = {
     const findings: Finding[] = [];
     for (const [slot, partId] of Object.entries(build.parts) as [SlotKey, string | undefined][]) {
       if (!partId) continue;
-      const part = catalog.parts[partId];
+      const part = partById(catalog, partId);
       if (!part) continue;
       const listings = listingsFor(catalog, partId);
       const cheapest = cheapestListing(listings);
