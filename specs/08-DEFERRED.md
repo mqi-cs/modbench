@@ -147,6 +147,23 @@ differentiator from working code into a working feature.
 
 ---
 
+## End-of-phase review — Phase 3 (2026-09-02)
+
+Required by `00-PROJECT.md`: "Read `08-DEFERRED.md` at the end of each
+phase. Simplifications nobody revisits become permanent by accident."
+State of each restore signal now that the configurator ships:
+
+| Entry | Signal | Status |
+|---|---|---|
+| **D7** cross-vendor dedup | Phase 4 asset threshold | **Escalated — now blocking.** Phase 3 shipped the consolidation engine and it is inert without this. See the entry above and `04-phase-3-configurator.md`. |
+| **D3** responsive build pages | "the first shared link goes out" | **Armed.** Phase 3 built the shareable URL — every build is now a link, and the stated acquisition channels (r/watchmodding, r/SeikoMods) are mobile-heavy. The signal is no longer hypothetical; it fires the first time someone posts a build. Scope stays as written: the read-only build page, not the configurator. |
+| **D1** Postgres | "catalog passes ~5,000 parts" | Not yet — **4,056**. Close enough to keep an eye on; nothing to do. |
+| **D2** LLM extraction | "past ~500 parts, or a fifth vendor" | **Numerically tripped (4,056) but the rationale has been superseded.** The deterministic tagger didn't just prove tractable, it proved *diagnostic*: reading the feeds by rule surfaced the crown-vs-date conflation, three false-premise rules, and two whole failure classes hiding in `body_html`. An extraction model would likely have reproduced the vendors' own phrasing without noticing any of it. Restore this for *volume* if a fifth vendor lands — not as an upgrade in data quality. |
+| **D4** scheduled ingestion | stale prices users notice | Not yet. Prices are 2 days old. |
+| **D5** second preview case family | Phase 4 threshold | Phase 4. |
+| **D6** cross-platform | phases 1–5 shipped | Not yet. |
+| **D8** untagged remainder | cluster grows | Unchanged: 86 unmatched, down from 98 (the Lucius bracelets were closed by the Phase 3 mining pass). |
+
 ## Adding to this file
 
 When cutting anything, add an entry with the same five fields: what, why, restore signal, cost, and any guardrails that keep the cost low. An entry with no restore signal is not deferred work — it is a decision, and it belongs in `00-PROJECT.md` instead.

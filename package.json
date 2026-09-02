@@ -4,15 +4,27 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
+    "seed": "tsx scripts/seed.ts",
+    "seed-exceptions": "tsx scripts/seed-exceptions.ts",
     "ingest": "tsx scripts/ingest.ts",
+    "tag": "tsx scripts/tag-parts.ts",
     "import-tagged": "tsx scripts/import-tagged.ts",
     "review": "tsx scripts/review.ts",
+    "merge-parts": "tsx scripts/merge-parts.ts",
+    "backfill-attributes": "tsx scripts/backfill-attributes.ts",
+    "backfill-images": "tsx scripts/backfill-images.ts",
     "verify-catalog": "tsx scripts/verify-catalog.ts",
+    "catalog:rebuild": "pnpm db:migrate && pnpm seed && pnpm ingest && pnpm tag && pnpm import-tagged && pnpm seed-exceptions && pnpm backfill-attributes && pnpm backfill-images && pnpm verify-catalog",
+    "catalog:refresh": "pnpm tag && pnpm import-tagged && pnpm backfill-attributes && pnpm backfill-images && pnpm verify-catalog",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "check": "tsc --noEmit && vitest run && tsx scripts/verify-catalog.ts"
   },
   "dependencies": {
     "better-sqlite3": "^13.0.3",
