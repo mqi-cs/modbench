@@ -7,6 +7,7 @@ import { STYLE_BUILDS } from "../../data/fixtures/style-builds";
 import { findReservedTerms } from "../trademarks";
 import { describeBuild } from "../build-name";
 import { evaluateBuild, type SlotKey } from "../compat";
+import { resolveWatch } from "../preview/composite";
 import { SLOT_PARAM } from "../../components/build/url-state";
 
 const catalog = loadCatalog();
@@ -156,9 +157,16 @@ describe("style builds", () => {
         expect(view.totals.groups.length).toBeGreaterThan(0);
       });
 
-      it("draws every layer it has a part for", () => {
-        const missing = view.layers.filter((l) => l.status === "placeholder");
-        expect(missing.map((l) => `${l.key}: ${l.label}`)).toEqual([]);
+      it("resolves every part it has to something drawable", () => {
+        // Every illustrated part must land on a silhouette -- its own or
+        // its category's documented fallback -- and the dial must have a
+        // real photograph, since these pages are the shop window.
+        const watch = resolveWatch(view.preview);
+        for (const slot of ["crown", "chapterRing", "hands", "bezelInsert"] as const) {
+          const chosen = view.build.parts[slot];
+          if (chosen) expect(watch[slot], `${slot} resolved to nothing`).not.toBeNull();
+        }
+        expect(watch.dialPlaceholder, "style pages should not show a dial-less preview").toBe(false);
       });
 
       // Pass measure 7.

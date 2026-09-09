@@ -101,11 +101,12 @@ into a working feature.
 
 ## Preview assets
 
-The visual preview draws from PNG-derived WebP layers prepared offline —
-nothing fetches a vendor image at request time.
+The preview draws the case, crown, chapter ring, bezel insert and hands as
+SVG from `lib/preview/art/`, and shows the dial as the vendor's own
+photograph. Only the dial needs a prepared asset; nothing fetches a vendor
+image at request time.
 
 ```
-pnpm draw-case-art     # the two hand-drawn case illustrations, per platform
 pnpm prepare-assets    # cut out, scale and classify every part photograph
 pnpm prepare-assets --dry-run --category=dial   # classify and report, write nothing
 ```

@@ -1,0 +1,3402 @@
+{
+  "generatedAt": "2026-09-09T15:14:26.088Z",
+  "note": "Parts with no shape evidence in the vendor's own words. Each took its category's documented fallback.",
+  "fallbacks": [
+    {
+      "id": "wlP-gwxjzqRrrF5mcbb27",
+      "category": "bezel_insert",
+      "name": "AI0063 SKX007/SRPD Orange Aluminum Bezel Insert",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "4A5w8Qu_15xf_Jf2nl1Zc",
+      "category": "bezel_insert",
+      "name": "AI0066 SKX007/SRPD Aluminum Bezel Insert - Gray Orange II",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "uh-U3i6mzVOVbEF8c5SWU",
+      "category": "bezel_insert",
+      "name": "AI0068 SKX007/SRPD Aluminum Bezel Insert - Ghost",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "DmV2sJrilKO1tSw73sKFq",
+      "category": "bezel_insert",
+      "name": "AI0069 SKX007/SRPD Aluminum Bezel Insert - Coke",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "WoNf9nhqDDcKs59EXMcGU",
+      "category": "bezel_insert",
+      "name": "AI0070 SKX007/SRPD Aluminum Bezel Insert - Orange P.O",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "NpMoh305UUS8l-8g2ooua",
+      "category": "bezel_insert",
+      "name": "AI0071 SKX007/SRPD Blue Aluminum Bezel Insert",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "61lCG3WHA-E-EioA-8PIw",
+      "category": "bezel_insert",
+      "name": "AI0075 SKX007/SRPD Aluminum Bezel Insert - Black SKX Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "F4MpuUwLpGM7sLSpfaUbb",
+      "category": "bezel_insert",
+      "name": "AI0076 SKX007/SRPD Red Aluminum Bezel Insert",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "5AwHv5wJcEylmyXZM_8ow",
+      "category": "bezel_insert",
+      "name": "AI0081 SRP Turtle Aluminum Bezel Insert - Black Gray II",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "s1YgMtib-TkPd4KhwyhEe",
+      "category": "bezel_insert",
+      "name": "AI0082 SRP Turtle Aluminum Bezel Insert - Black Gray",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "bIT7lrbDmMifSnSHJSCOd",
+      "category": "bezel_insert",
+      "name": "AI0083 SRP Turtle Aluminum Bezel Insert - Black/Orange",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Mi0KUrjddPdK16gbzwYCu",
+      "category": "bezel_insert",
+      "name": "AI0084 SRP Turtle Aluminum Bezel Insert - Black Yellow",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "BEJdGbrXKlwKQ4iR7vsOr",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 Deep Sea Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "h53JD_fKqybRYNctAMTmO",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 MG Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "_mxXbHUhwBNfnmcT50QSY",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 MG Red T Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "eCDu3HadSkwjv4c3A0PsU",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 MG Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "3oQ9QCG1lFt--LTxdCFdv",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSM60 Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "4igsGQ1xQ4fXm-9FAnoX-",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSM60 Black Red \"60\"",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "ZG8pk3JpZG7IAOiJIGDF2",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSM60 Dark Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "pv3_xzPx3g0VsNzssrulj",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSM60 Dark Blue Red \"60\"",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "2IVI_hjNz4GfOV2uRcyA9",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSM60 Matt Dark Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "C1ITlEhhrRo72AIM05ofx",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSM60 Matt Grey",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "OhtYLp-nc_gCVEJJbjr0M",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSM60 Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "2PUNNb0EEt2z9yCD9u7nN",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSPO",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "V9mquZ5oKSnhEw3frXKzl",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 OSPO Grey",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "kYu_L-mrJglevNAEDopxW",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 SMP",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "urDaz7zJHYDAdqIbkRSLP",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 SMP Aegean Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "NQwt9PdR4fGlWe_p66npj",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - 007 Stark Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "bK-J6E-GJZOdw1JWF4Nm2",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Aegean Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "reFMDkfUA98Z_36NM7HGY",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX BAT.",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "RqYt8PhQ1JoKrK-II9GFQ",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "J4gLaunPC_wCLvtBSPtsN",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Black - Hornet",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "yzDzOeUt5qzCXgDoEiuK9",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Black - Minimus",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "nQCxm8zMBXXSbiz1MHb38",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Black X Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "l8PQZ1YwzbtJOdWIclb5X",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "yx338jCjSSSVyNnj-l1MU",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Brushed Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "1U5wYd5n5aNpkHUTGT32I",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Green",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "9Pt20fV3BYg3fkhkjRaD1",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Red T Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "KMT2IZpoZO-BN38Ic-ONX",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Red T Black X Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "kPpV-lZqmkbdFrOQPM9z_",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Red T Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "UXU7yt83COZf8jezZWQ7c",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Red T White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Wtgcj3A2Mz3eWZJ8y_7DW",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Stark Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "NnJl8iFh35uJ1q_SitOqc",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "T1dYRgKNklmRfma3d2FkD",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Umber",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "I6eTG1MEzXYvt8nRhnhNZ",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Umber X Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "HwcksEQ2k91zj_InOH1x9",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Umber X Rose Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "LdRd3d3fE4Q9NRwys7x8I",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX Vintage Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "lMrk2WcKNc8fqEc2ob4ZA",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SKX White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "IDbzLiopclTc_1DdAuFWN",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Aegean Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "oRARbeJwKHqxXyeP5qrS0",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle BAT.",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "gM-88HbYlS7IXqVEniDee",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "5Lz-YlaMMqq5cKZwYpnPN",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Black X Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "ylkVJ2sVmKE4kUMT8TqiH",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "YM8QjvwXmL9Lk5X6iOWuk",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Brushed Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "b5xRfBh_7PaKV9e82yejn",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Ghost White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "sOxEklb3itdd4xRpkwNbP",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Green",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "fAuFAiD3vRDhDad_p2IX6",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Hornet",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "ZaXu5HTo7RkF_7OhHo14O",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Red T Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "IQX0NKuqwKEEqmduyTCsb",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Red T Black X Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "6YOBDwDh4gELH8174o6AB",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Red T Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "1oj4wOdNXqq6UpbXz4LkN",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Red T White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "1KEyaHwnkO83DSv90x1K9",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "I-cs2upH5wUkGI-7Xs_Wl",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Umber",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "tKR-tyF3qhMVae4oJcc91",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Umber X Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "2TsDC_mf4OyxhWTgItAwA",
+      "category": "bezel_insert",
+      "name": "Ceramic Insert - SRP Turtle Umber X Rose Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "nxYlgxO9wluBylC8TZJdc",
+      "category": "bezel_insert",
+      "name": "CI0026 SKX007/SRPD Stealth SKX Style Ceramic Bezel Insert",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "l73kOdlS9WJl6u6aklkdN",
+      "category": "bezel_insert",
+      "name": "CI0027 SKX007/SRPD Ceramic Bezel Insert - SKX  Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "VG-H9f7e1OZBfCFilvy4h",
+      "category": "bezel_insert",
+      "name": "CI0031 SKX007/SRPD Blue Style Ceramic Bezel Insert - Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "FNBXnovDqiUoBdLnl3ffO",
+      "category": "bezel_insert",
+      "name": "CI0035 SKX007/SRPD SKX Stealth Ceramic Bezel Insert - Sandblasted",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Fc3cV7l7pssj1YEd7OupT",
+      "category": "bezel_insert",
+      "name": "CI0049 SRP Turtle Re-issue Ceramic Bezel Insert - SRP Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "FRqMxC3r8d36ZwrmGUU7R",
+      "category": "bezel_insert",
+      "name": "CI0051 SRP Turtle Re-issue - Sandblasted Ceramic Insert - Blue SRP  Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "DoKnkOFSOMfvlFfPZNHL9",
+      "category": "bezel_insert",
+      "name": "CI0525 SKX013 Ceramic Insert- Green SKX Style - Lumed",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "sC6vjn71Idr2BJyniAzyo",
+      "category": "bezel_insert",
+      "name": "CI0631 SKX013 Ceramic Insert- SKX Style - Pink",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "17DDiSU5rdNG5RbIN39aO",
+      "category": "bezel_insert",
+      "name": "CI0632 SKX013 Ceramic Insert- SKX Style - Dark Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "GH6yaHUvpDCzI7XVfeMMr",
+      "category": "bezel_insert",
+      "name": "CI0668 SKX007/SRPD SKX Style Ceramic Bezel Insert - Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "t94hMvFtB-qC-6B3_zYpJ",
+      "category": "bezel_insert",
+      "name": "CI0669 SKX007/SRPD SKX Style Ceramic Bezel Insert - Black/Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "jUS8gycGJRxkKCxmcX58k",
+      "category": "bezel_insert",
+      "name": "CI0935 SKX007/SRPD Flat Ceramic Bezel Insert - SKX Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "EUxohQJVBmDgyvmW-ILbK",
+      "category": "bezel_insert",
+      "name": "CI0936 SKX007/SRPD Flat Ceramic Bezel Insert - SKX Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Ah92F0kwwZlBttAQTH-55",
+      "category": "bezel_insert",
+      "name": "CI0974 SKX007/SRPD White Flat Ceramic Insert - SKX Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "apsez1ifyrRb5MbOFzYls",
+      "category": "bezel_insert",
+      "name": "CI0977 SKX007/SRPD White Ceramic Bezel Insert - PO Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "SaQRjbyGqlLJb-XyjKGXl",
+      "category": "bezel_insert",
+      "name": "CI1188 SKX007/SRPD Flat Ceramic Bezel Insert - SKX Stealth",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "GsAHyT4jrv1dJm_SVFv-d",
+      "category": "bezel_insert",
+      "name": "CI1389 SKX007/SRPD U1 Style Flat Ceramic Bezel Insert - Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "TtRRNCnklVoYnKZvKS4o-",
+      "category": "bezel_insert",
+      "name": "CI1390 SKX007/SRPD U1 Style Flat Ceramic Bezel Insert - White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "PSHz01k77CBSjvQJb0M5v",
+      "category": "bezel_insert",
+      "name": "CI1649 SKX007/SRPD Slope Ceramic Insert - Sterile Dark Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "YkUBMculV01G2Nsp6YSLx",
+      "category": "bezel_insert",
+      "name": "CI1650 SKX007/SRPD Slope Ceramic Insert - Sterile Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "jkllc_tEMRfG7NTLYUdsT",
+      "category": "bezel_insert",
+      "name": "GI0596 SKX007/SRPD Flat Glass Bezel Insert - Lumed SKX Style White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "BYrBBOiZSm4cFjC9Br8f7",
+      "category": "bezel_insert",
+      "name": "GI0597 SKX007/SRPD Flat Glass Bezel Insert - Lumed Coke SKX Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "NZvTjJOms-KQwTTX6peNs",
+      "category": "bezel_insert",
+      "name": "GI0624 SKX007/SRPD Flat Glass Bezel Insert - Dark Blue/Gray",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "zVJ84adU9s5FMzkFIAG_X",
+      "category": "bezel_insert",
+      "name": "GI0643 SKX007/SRPD Flat Glass Bezel Insert - Lumed SKX Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "FF7srEYQnewMB-5VVd0TB",
+      "category": "bezel_insert",
+      "name": "GI0644 SKX007/SRPD Flat Glass Bezel Insert - SKX Style Black BGW9 Lume",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "mbHiO8LRl2ikVMYE_2xvm",
+      "category": "bezel_insert",
+      "name": "GI0788 SKX007/SRPD Flat Glass Bezel Insert - Lumed Orange/Gray",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "wjAvT2O30947GEYSBGJh_",
+      "category": "bezel_insert",
+      "name": "GI0789 SKX007/SRPD Flat Glass Bezel Insert - Lumed Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "nbK6WPo_gIuLOr3WHLK96",
+      "category": "bezel_insert",
+      "name": "GI0862 SKX007/SRPD Flat Glass Bezel Insert - Lumed Orange",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "nIEFiHTcZwNinrIE1d3yN",
+      "category": "bezel_insert",
+      "name": "GI0863 SKX007/SRPD Flat Glass Bezel Insert - Dark Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "UETeJ7RO8m7RC9v31XhJ_",
+      "category": "bezel_insert",
+      "name": "GI0864 SKX007/SRPD Flat Glass Bezel Insert - Lumed Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "tYJhbLDsjqy28S2eg35lF",
+      "category": "bezel_insert",
+      "name": "GI0940 SKX007/SRPD Flat Glass Bezel Insert - Black PO Style - Lumed",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "luxdDI3Ip6sQQSd7gzuQx",
+      "category": "bezel_insert",
+      "name": "GI0941 SKX007/SRPD Flat Glass Bezel Insert - Lumed Blue PO Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "JdLGkP_nGHxn0Q8K_5PJG",
+      "category": "bezel_insert",
+      "name": "GI0942 SKX007/SRPD Flat Glass Bezel Insert - Lumed Green PO Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "KP--Df9a7xMUtPvHy4a7c",
+      "category": "bezel_insert",
+      "name": "GI0943 SKX007/SRPD Flat Glass Bezel Insert - Lumed Green SKX Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "d-z_aqoxiF1MOtQQEZlfV",
+      "category": "bezel_insert",
+      "name": "GI1206 SKX007/SRPD Flat Glass Bezel Insert - Lumed Blue/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "2zKzc6nzBYF2GXvMInAqH",
+      "category": "bezel_insert",
+      "name": "GI1628 SKX013 Flat Glass Bezel Insert - Lumed - Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "NiG3pigIZ_nuc7WNnxUpU",
+      "category": "bezel_insert",
+      "name": "SI0091 SKX007/SRPD Stainless Bezel Insert - Explorer",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "HD65lbCMmv8pLO29gy0ov",
+      "category": "bezel_insert",
+      "name": "SI0104 SRP Turtle Re-issue Stainless Bezel Insert - SRP Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "vraFz8Mn8pOeTMNtH8P6o",
+      "category": "bezel_insert",
+      "name": "SI0105 SRP Turtle Re-issue Stainless Bezel Insert - Explorer Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "LYuRMeyZQOxjT9uIiF_G7",
+      "category": "bezel_insert",
+      "name": "SI0110 SRP Turtle Re-issue Stainless Bezel Insert - SSSMBLACK002",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "vPLJoeXii0fHq3_ZFV7uL",
+      "category": "bezel_insert",
+      "name": "SI0111 SRP Turtle Re-issue Stainless Bezel Insert - DT Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "h99un_IZik_4tr6rxYv-F",
+      "category": "bezel_insert",
+      "name": "SI0112 SRP Turtle Re-issue Stainless Bezel Insert - DT Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "ZbAFqA3Ehj71N919SdR2n",
+      "category": "bezel_insert",
+      "name": "SI0113 SRP Turtle Re-issue Stainless Bezel Insert - SSSMRED001",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "XL1eJsdIcwqo5eWlrryoq",
+      "category": "bezel_insert",
+      "name": "SI0114 SKX013 Stainless Bezel Insert - SKX Style Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "1oRiyUy_1Eb_EttQP-TTI",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Aluminium Bezel Insert: PO Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "UBRZV0_emJFZpDrOgFgUU",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Aluminium Bezel Insert: PO Style Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Vfarf5w4oqFWYj4c3aILy",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Aluminium Bezel Insert: PO Style Orange",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "ZtWwuyTDI1DQxqbHzxPlz",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Aluminium Bezel Insert: Seiko style Black/Grey",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "5UqMZUmTY2fwrnZgHZyaQ",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Aluminium Bezel Insert: Seiko style Black/Yellow (Bumblebee)",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "_J187mHdf54C8Sa4teP8a",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Arabic style Aegean Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "QK82mFEBodJntMiepgIyD",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Arabic style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "kfIGUUSz71QTtWIgSKb3o",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Arabic style Black/Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "EcFRfJQwbQKAxj6laRSg-",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Arabic style Coffee",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "s3UAuXHbpj7c3V2C6KMI-",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Arabic style Green",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "YvnysMgssU7ZzHB5LuAt_",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Arabic style White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "atYsGX-15FxlHMCGIrCpQ",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: DSSD Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "105Wfj3Xu9B5oLue8w6Fq",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: DSSD style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "zbyRKsp-N2tJnRa2oAZG1",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: DSSD style White/Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "uEi07t_nHUJAbvKZmkTnd",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: DT Style Bruce Wayne",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "XeQHWTmlfuEZDAyaVSEuw",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Seiko style Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "JzvozUKP0arMxtZ38TdnE",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: Seiko style Green",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "sN__08ZJsF1tNQtL1b2iU",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: SMP style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "0B-FypYzoDbij_0qL0j9q",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: SMP style Blue/Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "PfdczQ66jCQu_FZdt3YFe",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: SMP style Blue/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "aSSJWLkjteRkTNCll2_3s",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: SMP style Blue/White Mk2",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "sgxgCtlhi75z43PHNWDtc",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: YM style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "EPe7kJ8vD_65zFcnp7seQ",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: YM style Rainbow",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Umul5se_6BFIhzvnoU2ow",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Ceramic Bezel Insert: YM style Silver",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "jHMFWIZMx1eKrWzdF_w1V",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: Fathoms Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "ZabJpQ-1GQo2qdEaTBIGY",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: Seiko Style Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "OYNhXwBgPZesbNCF-55Ov",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: Seiko Style Bumblebee",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "xbg4qPsPkSIAide0DFD7y",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: Seiko Style Coke",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "KxJZ3NwBPHeYraXpzvzLN",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: Seiko Style Orange/Navy",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "9AUlATZpIDbcPlJoYC__y",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: Seiko Style Silver",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "lkhh9x3kHkopWIcB9EQCp",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: SKX Style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "gfUmudoggBstEkbTrYcg-",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Glass Bezel Insert: Vintage Fathoms",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Zu8ecJ1_w1Qe-3vUKiww9",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Lumed Ceramic Bezel Insert: DSSD style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "qsiM6GFYj7-3tbVWjZuZs",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Lumed Ceramic Bezel Insert: SMP style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "rcXJ5XMDIjDwD_JL_hW8F",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Lumed Ceramic Bezel Insert: SMP style Black/White Mk2",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "yw7G4K2V2nk7ttJv4OTW6",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Lumed Ceramic Bezel Insert: SMP style Blue/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "BHfFrZISvCeib4Qg754Oo",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: BB Style Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "gI_WeAPJHU-n4htEljM6I",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: Exp II Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "k_G5F6-KDbhmJi7zZm-7E",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: Monster style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "c5toeGp3eejJTIgmfBPUW",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: Nautical Steel",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "82tDyl_HQwc12JBFaVTFm",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: P01 Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "48juQg36aGA9LoB5EVUUk",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: SMP style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "JuWLjFknRccpqVDEVEtCk",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: SMP style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "_PvnJSN_hxA-CdcI_6JGh",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: SMP style Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "psgYiqMBmmRENtTF1TyVW",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: SMP style Rose Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "voliYKPyBL2msWz9e8iZl",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: SMP style Silver",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "1gw5ztm1RKrY6J_P5YHhw",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: U1 Sandblasted",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "76yuoYZECNocpoQ-CKeZ0",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: U1 style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "gvJ2H3M7pkJDh77A3z1iu",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: Vintage U1 Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "7hJePb6Jw5h9KmsiDxjnJ",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: YM style Rose Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "S1CioUyNNHC0tMAvX_Ted",
+      "category": "bezel_insert",
+      "name": "SKX007/SRPD Steel Bezel Insert: YM style Silver",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "8Dp_1F1_FP7_63t9EY6MZ",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: BB58 style Black/Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "wEfnHtPQZaALyQ2Z2z3Q2",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: Seiko style Blue",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Q3-iJ-oKA8II3KOJ63kZ8",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: Seiko style Green",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "btH_1GnQ6eZRsBLTpjROg",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: Seiko style Green/Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "PczogVldgKQyMWsmxA7zc",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: SMP style Black/Gold",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "Q6kGXFl5k_wLszwa2xRwf",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: SMP style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "09jxe7TmnCdz6NrJQrVVv",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: SMP style Blue/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "5YFbxv0xLfPFrnmE5uUP5",
+      "category": "bezel_insert",
+      "name": "SKX013 Ceramic Bezel Insert: Vintage Seiko Style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "z1h7kRant8TVHi31Xr9yb",
+      "category": "bezel_insert",
+      "name": "SKX013 Lumed Ceramic Bezel Insert: Seiko style Black/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "lf2D7IsjgJZlFDW7aptSW",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert (Slope) - Pulsometer - Black Markers",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "EcKhN7-qpi-FLJ7k63PgH",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert: BB Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "StX6zg1NOW4nilOxM4iU1",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert: BB Style Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "dI2_2PWxpmtkmTqn5pjXR",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert: Seiko Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "wft2rn-qBNkcI1c7pxrZx",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert: Seiko Style Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "5rZHJ1Ca4VuI_fuIGwQzo",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert: SMP Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "jLSQtHX4EcDBfT71sRT7U",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert: Superocean Style",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "PEYbxrnp86BiPo87ueyAE",
+      "category": "bezel_insert",
+      "name": "SKX013 Steel Bezel Insert: Superocean Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "ozMYAgHMKG4PX_86bcTmV",
+      "category": "bezel_insert",
+      "name": "SRP Turtle Ceramic Bezel Insert: SMP style Blue/White",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "6ZQD_k1sZspDIcZSMuKtO",
+      "category": "bezel_insert",
+      "name": "SRP Turtle Steel Bezel Insert: BB Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "fDqlHnAe4eBpnsk0BcJIq",
+      "category": "bezel_insert",
+      "name": "SRP Turtle Steel Bezel Insert: BB Style Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "7oiXMrh9i9FbgvJ24jF6C",
+      "category": "bezel_insert",
+      "name": "SRP Turtle Steel Bezel Insert: Seiko Style Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "atOOhmrZfjS-t5u2q9sW-",
+      "category": "bezel_insert",
+      "name": "SRP Turtle Steel Bezel Insert: Vintage Seiko Style Black",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "GhM_yykU36BF-NfXt5E0H",
+      "category": "bezel_insert",
+      "name": "SRP Turtle Steel Bezel Insert: Vintage Seiko Style Red",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "dV_SXIp3Ls26n5rUHX9gA",
+      "category": "bezel_insert",
+      "name": "Steel Insert - 007 Ref. 1655 - Brushed Gun Metal",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "cjXwus3UJMfg2yqewdSkV",
+      "category": "bezel_insert",
+      "name": "Steel Insert - 007 Ref. 1655 - Brushed ICE",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "GJJrAtMUdFMBCSG561s5F",
+      "category": "bezel_insert",
+      "name": "Steel Insert - 007 Ref. 1655 - Brushed Steel",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "1b4TanDmtItToRG05Sb3b",
+      "category": "bezel_insert",
+      "name": "Steel Insert - 007 Ref. 1655 - Brushed Steel Red \"12\"",
+      "assigned": "insert-dive"
+    },
+    {
+      "id": "6JfEd4cA2vpc2-1_0ZcO6",
+      "category": "chapter_ring",
+      "name": "C0179 SKX007/SRPD Chapter Ring - Black with Gold Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "TFAJrmTCvDqx2N3kYsg_z",
+      "category": "chapter_ring",
+      "name": "C0184 SKX007/SRPD Chapter Ring - Green with Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "TgglYNWb7Lo8zwomVEbhG",
+      "category": "chapter_ring",
+      "name": "C0185 SKX007/SRPD Chapter Ring - Light Blue with Black Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "DUwnKOdfucuG-KyOdEIPd",
+      "category": "chapter_ring",
+      "name": "C0186 SKX007/SRPD Chapter Ring - Light Blue with White Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "mxiVXaa984vKEhbsptTqK",
+      "category": "chapter_ring",
+      "name": "C0188 SKX007/SRPD Chapter Ring - Orange with Black Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "jAKvmYvNwGratiulBeKcR",
+      "category": "chapter_ring",
+      "name": "C0193 SKX007/SRPD Chapter Ring with White Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "tmIfByFPXrdMNguUH1LTf",
+      "category": "chapter_ring",
+      "name": "C0194 SKX007/SRPD Chapter Ring-Black with Orange Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "14hGl4_jsjbalgO-rZPnu",
+      "category": "chapter_ring",
+      "name": "C0195 SKX007/SRPD Chapter Ring-Black with Red Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "eFpOqHfOM-dN3NBQbgY6D",
+      "category": "chapter_ring",
+      "name": "C0196 SKX007/SRPD Chapter Ring-Black Yellow Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "XMzzOCH_ilnL_EqZivqq7",
+      "category": "chapter_ring",
+      "name": "C0200 SKX007/SRPD Chapter Ring-Matte Black",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "n8JK0I3gELSmQ416EpvSy",
+      "category": "chapter_ring",
+      "name": "C0206 SKX007/SRPD GMT  Chapter Ring - Black/Red",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "efopUfE5Fa6ejaNR6TX-U",
+      "category": "chapter_ring",
+      "name": "C0215 SKX013 Chapter Ring - Dark Blue with Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "8WNox-kEaQYPyA1oQ4Kiw",
+      "category": "chapter_ring",
+      "name": "C0374 SKX007/SRPD Chapter Ring - Red Wine",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "M3ZauxFhiywBMaIDfEIaC",
+      "category": "chapter_ring",
+      "name": "C0453 SKX007/SRPD Lumed GMT  Chapter Ring - Engraved",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "tKHvID7aXwoJb9DQEFGwN",
+      "category": "chapter_ring",
+      "name": "C0531 SKX007/SRPD Chapter Ring-Black with Orange Marker (slim marker)",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "879Wr7QYaP_JNJbTyGxTo",
+      "category": "chapter_ring",
+      "name": "C0532 SKX007/SRPD Chapter Ring-Black Yellow Marker (Slim Marker)",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "aM5wkSQRpa4dMd_VY-MNR",
+      "category": "chapter_ring",
+      "name": "C0533 SKX007/SRPD GMT  Chapter Ring - Silver/Black",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "VGnGeGnKWX7GYAs0ctih4",
+      "category": "chapter_ring",
+      "name": "C0543 SKX007/SRPD Chapter Ring - Sunburst Orange",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "TGHNjuIMtKGjlNtC2gieg",
+      "category": "chapter_ring",
+      "name": "C0544 SKX007/SRPD Chapter Ring - Dark Green",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "TGGq1s2LjlrtZ8ZNIl6wk",
+      "category": "chapter_ring",
+      "name": "C0545 SKX007/SRPD Chapter Ring - Red Wine",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "rGfIaC-UUEttxQBKmA_tg",
+      "category": "chapter_ring",
+      "name": "C0546 SKX007/SRPD Chapter Ring - Sky Blue",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "lH0kG8IEkmjYj5yMpWP9t",
+      "category": "chapter_ring",
+      "name": "C0767 SKX007/SRPD Chapter Ring - 05-60 - Silver",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "xOsWaObTlV12B_3R3Hv43",
+      "category": "chapter_ring",
+      "name": "C0768 SKX007/SRPD Chapter Ring - 05-60 - Matte Yellow",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "fKmvGG5Zq_OSpLQhPkja1",
+      "category": "chapter_ring",
+      "name": "C0769 SKX007/SRPD Chapter Ring - 05-60 - Black",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "Jz229sOV5GplGJ8nIft4q",
+      "category": "chapter_ring",
+      "name": "C0770 SKX007/SRPD Chapter Ring - 05-60 - Dark Blue",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "pMK2DIrOaCBxLVQcBQ22A",
+      "category": "chapter_ring",
+      "name": "C0771 SKX007/SRPD Chapter Ring - Black with big blue marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "1QI5m_6Bf8sfjUA4WvLcZ",
+      "category": "chapter_ring",
+      "name": "C0804 SKX007/SRPD Chapter Ring - 05-60 - Orange",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "Jm-fPhkiPV1JEdyfWAcOn",
+      "category": "chapter_ring",
+      "name": "C1102 SKX007/SRPD Chapter Ring White with Black Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "-VhJyuW53LQtsltf55ZzQ",
+      "category": "chapter_ring",
+      "name": "C1191 SKX007/SRPD GMT  Chapter Ring - Engraved",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "FnEyQitYWPcPXDNvLfTfn",
+      "category": "chapter_ring",
+      "name": "C1271 SKX007/SRPD Chapter Ring - Micro Marker - Green",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "MvbmEOlUfCwC-HcZerrLr",
+      "category": "chapter_ring",
+      "name": "C1272 SKX007/SRPD Chapter Ring - Micro Marker - Red",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "ustUOeOjBQ-QNaPTmQiUL",
+      "category": "chapter_ring",
+      "name": "C1273 SKX007/SRPD Chapter Ring - Micro Marker - White",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "uhnS4bGqERI1GMQBQOCRS",
+      "category": "chapter_ring",
+      "name": "C1274 SKX007/SRPD Chapter Ring - Micro Marker - Orange",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "fs18LGouN_VAyXk9UfejA",
+      "category": "chapter_ring",
+      "name": "C1275 SKX007/SRPD Chapter Ring - Micro Marker - Yellow",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "i-3FOw3wfec9AhpNWgTOK",
+      "category": "chapter_ring",
+      "name": "C1276 SKX007/SRPD Chapter Ring - Micro Marker - Blue",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "ss5UmA8G5ornoyq3P2fQM",
+      "category": "chapter_ring",
+      "name": "C1332 SRPE Chapter Ring - Black with White Marker",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "M7IC3xavF9xjuavknt2Bx",
+      "category": "chapter_ring",
+      "name": "C1333 SRPE Chapter Ring - GMT Black/White",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "UKlJMuT5UDzlpLjRjTYRK",
+      "category": "chapter_ring",
+      "name": "C1334 SRPE Chapter Ring - GMT Black/Red",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "o0zvpqFInqIuiVhoyw09b",
+      "category": "chapter_ring",
+      "name": "C1335 SRPE Chapter Ring - GMT Blue/White",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "b0Gmo31oWB980XBd6junB",
+      "category": "chapter_ring",
+      "name": "C1336 SRPE Chapter Ring - GMT Blue/Red",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "2-dXSLgqUi7xBl5IZqQX2",
+      "category": "chapter_ring",
+      "name": "C1337 SRPE Chapter Ring - GMT Orange/Black",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "vhvZQbGeC3l5mx-BhokVI",
+      "category": "chapter_ring",
+      "name": "C1558 SSK Lume Engrave GMT Chapter Ring - C3 lume",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "zj-Z-ePGo6NxK9obqjeTv",
+      "category": "chapter_ring",
+      "name": "C1620 SSK GMT Chapter Ring - Silver",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "t0CdS_dBhkmZuYnMIX_IS",
+      "category": "chapter_ring",
+      "name": "C1621 SSK GMT Chapter Ring - Black",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "jtCxzoWh1CB3Jk3q3Xz-d",
+      "category": "chapter_ring",
+      "name": "C1622 SSK GMT Chapter Ring - Black/Red",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "KdIOIssGJmeWbYfdBmPPP",
+      "category": "chapter_ring",
+      "name": "C1624 SSK GMT Chapter Ring - Blue",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "sR9PD6j_82tHRHozEeOqC",
+      "category": "chapter_ring",
+      "name": "C1625 SSK GMT Chapter Ring - Green",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "2H-AEjRo0bAVxyvkdEsqa",
+      "category": "chapter_ring",
+      "name": "Chapter Ring - SRPE - Bead Blasted Black",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "labtpQ2DMkJt3PuLjClB7",
+      "category": "chapter_ring",
+      "name": "Chapter Ring - SRPE - Bead Blasted Black w Engraved Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "zgxabjWo9zmlK_dE4E9gm",
+      "category": "chapter_ring",
+      "name": "Chapter Ring - SRPE - Bead Blasted Steel",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "6flKLrECuKV_L3duNpO8d",
+      "category": "chapter_ring",
+      "name": "Chapter Ring - SRPE - Bead Blasted Steel w Engraved Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "V3LUKefXdXtZtRkDssfbO",
+      "category": "chapter_ring",
+      "name": "Chapter Ring - Turtle Re-issue  - Matt Black w Markers (Orange)",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "7tJynikAer28w44-HoNlO",
+      "category": "chapter_ring",
+      "name": "Chapter Ring - Turtle Re-issue  - Matt Black w Markers (Yellow)",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "TiAX2r_MkR9NVH4G9BwSK",
+      "category": "chapter_ring",
+      "name": "Chapter Ring - Turtle Re-issue  - Matt Silver",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "YTZgBKKjtdy8JUgaoVTp0",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Black with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "o4KMZ7I36_R0K_u3ECT8S",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Blue Finish with Black Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "_mLPhGzQupoyfUvEFSCzB",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Cerulean Finish with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "pfKDRtxpFuHaNxUx_UTLG",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Forest Green Finish with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "_lOQtP32VviSl-9U1HC3Q",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: GMT Black Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "hzxTLdJBIZm5Q20n844sU",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: GMT Black Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "OvNILuz8tWJ9AN9b507nr",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: GMT Navy Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "s4y_aWZL4AuUkQ-TenBTB",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: GMT Navy Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "bw0J7Igr4tp01CpP3PLWc",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: GMT Orange Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "ah90Lmd5owSOSRZDPy-O0",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Grey Dawn Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "VrpzI37mdDXmLT-ATyaVS",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Kanji Style Black Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "bdbK2T82K8s8VtA4f8c4m",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Kanji Style Black Finish w Gold Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "VvIjFXWOHnBW2VGnFy3R_",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "MiSiCrUu9cAuu0ltIzkCU",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Kanji Style Steel Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "UHkDu-fH1tNvSFvmm6t1g",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Black Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "EetETXWj8yhdUk0GER-uw",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Black Finish with Blue Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "qx4I3Mhgs4zture73CxOV",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Black Finish with Gold Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "uvrPCk2jl6BLUEUC8if9P",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Black Finish with Orange Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "tNFcZxv24ZxAKudVGHLK1",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Black Finish with Rainbow Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "PB24X2Nu9Z1A0HJ1JWNWU",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Black Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "dmyCjPQRxhDJbkJ-g-WE8",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Black Finish with Yellow Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "kPxmCcTnNGWBzD_d0_mrN",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Silver Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "UgGQ73St3NKEbcEtx-DLl",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Matte Silver Finish with Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "XETjmeMEAEQhKHdxRQjTP",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Multi-Colour Finish with Black Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "uB-1gJd1g7X_sfK53wtgF",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Numerals Style Black Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "_3jqGHRWhYqSp74ksFdUI",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Numerals Style Navy Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "E3ojS7a5APexqBZUIgGCV",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Numerals Style Silver Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "M3IlRzXPWLi7ejeZJFcqn",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Orange Finish with Black Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "0LGGJufcgVxrwi01Ua494",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Purple Finish with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "NdR3mri4lIXcn4wRY66WL",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Red Finish with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "hVKbvtB9IfIQBPMg58H-U",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Sunburst Navy Finish with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "Dzmp165OohXQMqP1K-GMf",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Chapter Ring: Yellow Finish with Black Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "DyWyRiidz3ilSWI1b7Vv9",
+      "category": "chapter_ring",
+      "name": "SKX007/SRPD Lumed Chapter Ring: Column Black Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "-ggBxw5IxgeNbCZhrxdVL",
+      "category": "chapter_ring",
+      "name": "SKX013 Chapter Ring: Matte Black Finish with Blue Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "cKDTit1ptvd4e8rlDUH2N",
+      "category": "chapter_ring",
+      "name": "SKX013 Chapter Ring: Matte Black Finish with Gold Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "0y3YqusoQ5o94qmwvH0cL",
+      "category": "chapter_ring",
+      "name": "SKX013 Chapter Ring: Matte Black Finish with Orange Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "uLY4qc-NETFrnYZt3stF5",
+      "category": "chapter_ring",
+      "name": "SKX013 Chapter Ring: Matte Black Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "NSgVAOkzrBV4ongFWh5OR",
+      "category": "chapter_ring",
+      "name": "SKX013 Chapter Ring: Matte Black Finish with Yellow Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "da0ysaVPsMUvHyQke57Q4",
+      "category": "chapter_ring",
+      "name": "SRP Turtle Chapter Ring: Matte Black Finish with Orange Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "odstnuqQ5wW-8FPXowjsh",
+      "category": "chapter_ring",
+      "name": "SRP Turtle Chapter Ring: Matte Black Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "H8_phvYAAltV-osUF7CbV",
+      "category": "chapter_ring",
+      "name": "SRP Turtle Chapter Ring: Matte Black Finish with Yellow Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "K0qYk5mjJhcpp7cY_BxJ1",
+      "category": "chapter_ring",
+      "name": "SRP Turtle Chapter Ring: Matte Silver Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "Mq_kKcaMiZgM_kupHch_7",
+      "category": "chapter_ring",
+      "name": "SRP Turtle Chapter Ring: Matte Silver Finish with Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "o6Rqyi4k1DxLvdZgRm16e",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: GMT Black Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "fbHXh4aJ1YDnr1Un-Ddg2",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: GMT Black Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "OFq3yGTqcdG6QAv6ncd-l",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: GMT Navy Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "ERvIUwrm9RVj6KwthuSKZ",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: GMT Navy Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "t9auj_A2U1tdQmxNY765c",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: GMT Orange Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "21oKKC7Xnf7YTCG9N-Sla",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: Grey Dawn Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "DR-ozk6ZdHpDXQO3z_d-D",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: Matte Black Finish",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "5YXwnZA_TrlD7p57Kcmui",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: Matte Black Finish with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "ptDmoMRcNRyzV1DTJK37U",
+      "category": "chapter_ring",
+      "name": "SRPE Chapter Ring: Sunburst Navy Finish with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "tr_OQSkBpKX1Azl_mOSDA",
+      "category": "chapter_ring",
+      "name": "SSK Chapter Ring: GMT Black with Red Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "YF4xgLOE1XChQ2blkvag8",
+      "category": "chapter_ring",
+      "name": "SSK Chapter Ring: GMT Black with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "_5sOulwbOTou-50MvQ3Zz",
+      "category": "chapter_ring",
+      "name": "SSK Chapter Ring: GMT Blue with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "Ivq7o697hIuXRYUmgFCfs",
+      "category": "chapter_ring",
+      "name": "SSK Chapter Ring: GMT Green with White Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "mQkWjsMM69RGfCwf7A2IY",
+      "category": "chapter_ring",
+      "name": "SSK Chapter Ring: GMT Silver with Black Markers",
+      "assigned": "ring-plain"
+    },
+    {
+      "id": "5wgmiKViiHRKr9TCa9di5",
+      "category": "crown",
+      "name": "CN0236 SKX007 Crown - Sandblasted Gold",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "rXt62QfrgWT08P42eRk4h",
+      "category": "crown",
+      "name": "CN0238 SKX007 Crown Black with Engraved \"S\" - Sandblasted Black",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "ZvkW_XZXMBVk8I9iX41U0",
+      "category": "crown",
+      "name": "CN0241 SKX007 Crown Engraved \"S\" - Rose Gold",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "sW_YDqoxgpVW7ZvSxLCD2",
+      "category": "crown",
+      "name": "CN0242 SKX007 Crown with Red \"S\" - Sandblasted Black",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "-FbbYvPXMjKR3GSyzA0Gu",
+      "category": "crown",
+      "name": "CN0260 SKX013 Crown with \"S\" - Matte Black",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "6bpJVuZpZrb05pzShR1hW",
+      "category": "crown",
+      "name": "CN0663 SRPD/SSK Crown - Sandblasted Black",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "kda_GxMZjzB23dhJ57l6D",
+      "category": "crown",
+      "name": "CN0720 SKX013 T1 Crown - Sandblasted Black",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "iwlXe_GxSf5bFRWK05O7d",
+      "category": "crown",
+      "name": "CN0760 SKX007 Crown - Sandblasted Dark Blue",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "KHVTrax2FrMfSZnk98G5x",
+      "category": "crown",
+      "name": "CN0761 SKX007 Crown - Chameleon",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "1LIcLC5tFxi3-6s36Xjik",
+      "category": "crown",
+      "name": "CN0762 SKX007 Crown - Sandblasted Blue",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "IKe2WyG0AnTMrA3WhDqRx",
+      "category": "crown",
+      "name": "CN0866 SKX007 Crown with Red S - Sanblasted Silver",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "yed9SJUAkmFCkmcsNt1gm",
+      "category": "crown",
+      "name": "CN0890 SKX007 Crown - Sterile Black",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "tLRBLfAXS4Dzz6AF_YHIy",
+      "category": "crown",
+      "name": "CN1179 SKX007 Sterile Slim Crown - Sandblasted Black",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "SlEoY7vGaaJbQbo4aKk5C",
+      "category": "crown",
+      "name": "CN1360 SKX013 Slim Crown - Brushed Silver",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "Pq3iJJ28ZbGziMlbP8Xaq",
+      "category": "crown",
+      "name": "Crown - SRP Turtle - Bead Blasted PVD Black - \"S\"",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "htKrFrnfqwdWqSiO5DGOt",
+      "category": "crown",
+      "name": "Crown - SRP Turtle - Bead Blasted PVD Black - Red \"S\"",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "nxypbvcT_G4X_O6NQcTsJ",
+      "category": "crown",
+      "name": "Crown - SRPE - Bead Blasted PVD Black - \"S\"",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "xJmJF0aaLI55xgPVPRtw4",
+      "category": "crown",
+      "name": "Crown - SRPE - Bead Blasted Steel - \"S\"",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "ipLsmVob2edm5LVIEVTGv",
+      "category": "crown",
+      "name": "SKX007 Crown: PVD Matte Black Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "DISrM2PcLFeGWehzqfTRm",
+      "category": "crown",
+      "name": "SKX007 Crown: PVD Matte Black Finish (Red S)",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "hI-HxiLqsojrJZ968Dczm",
+      "category": "crown",
+      "name": "SKX007 Crown: Sandblasted Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "LX7dEJBgPLB9DniSc0tKY",
+      "category": "crown",
+      "name": "SKX007 Crown: Sandblasted Finish (Red S)",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "HYXowgjX45_7BvEp8hrCg",
+      "category": "crown",
+      "name": "SKX007 Sterile Crown: PVD Black Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "nQTiL4A4m16l7bcFSyhQW",
+      "category": "crown",
+      "name": "SKX007 Sterile Crown: Rose Gold Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "O39xGMiBUXI42YtlhQj7t",
+      "category": "crown",
+      "name": "SKX007 Sterile Crown: Sandblasted Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "NFzLUfk2iWoKtGiayR9dV",
+      "category": "crown",
+      "name": "SKX013 Crown: PVD Matte Black Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "aHjjto7n5jexU25A2To9d",
+      "category": "crown",
+      "name": "SKX013 Crown: PVD Matte Black Finish (Red S)",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "czMIdVjeGnebvX-Mkh4Jj",
+      "category": "crown",
+      "name": "SKX013 Sterile Crown: PVD Matte Black Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "iEGaYINNabV7plTZh_wtE",
+      "category": "crown",
+      "name": "SRP Turtle Crown: PVD Matte Black Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "amz89v0rnJKBL1UQyrWl7",
+      "category": "crown",
+      "name": "SRP Turtle Crown: PVD Matte Black Finish (Red S)",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "m4KGlebEaCE3aiicf2rLj",
+      "category": "crown",
+      "name": "SRP Turtle Crown: Sandblasted Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "n9LqTkSSd3dMij8hB1nr1",
+      "category": "crown",
+      "name": "SRP Turtle Crown: Sandblasted Finish (Red S)",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "XM5ZZLO9fWNJf5f0ztoQL",
+      "category": "crown",
+      "name": "SRPD Crown: PVD Matte Black Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "qAN8syQK3GH1cXEQt-NTD",
+      "category": "crown",
+      "name": "SRPD Crown: PVD Matte Black Finish (Red S)",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "JSWRnuYPOOSSEfDRJcqbw",
+      "category": "crown",
+      "name": "SRPE Crown: PVD Black Finish",
+      "assigned": "crown-knurled"
+    },
+    {
+      "id": "kO2_QZS32jN18pW-b-LZk",
+      "category": "hands",
+      "name": "Breguet Hands - Polished Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "sIZ7XhlEXIiS47v2XbVuF",
+      "category": "hands",
+      "name": "EII - GMT Hand",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ZeWPka2uyhLvy5I4sCN-g",
+      "category": "hands",
+      "name": "Fleur De Lis - Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "KxXcPsMrhZNaXOoqyjkxp",
+      "category": "hands",
+      "name": "GMT Hand",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "BPJPSTtWyacB4J0X9JLc8",
+      "category": "hands",
+      "name": "GMT Hand - BB Pro Style",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "JgJ6JBKmr-W9QkWiaD3U8",
+      "category": "hands",
+      "name": "GMT Hand - SBGE Style",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "CVQWsWNdpG6uoxIQQRb5Z",
+      "category": "hands",
+      "name": "GMT Hand - SNR025 Style",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "nB0PUmrxypeIxUJ9neeuW",
+      "category": "hands",
+      "name": "GMT Hands - Explorer [For NH34]",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "8prsYL4jcqpfo8frQ6RTc",
+      "category": "hands",
+      "name": "H0272  GS Style Hands (H&M) - Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "MYsmvwAKFOrJy-I4zmg-q",
+      "category": "hands",
+      "name": "H0273 MM300 Style Hand Set - Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "7StTW3URZlsy7DobL0acW",
+      "category": "hands",
+      "name": "H0278 Blade Hand Set - Polished Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "qXoJ4cX16p51K8H67UO3b",
+      "category": "hands",
+      "name": "H0279 Kunai Hands (H&M) - C3 Lume - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "fZOBvclbvcsFhG170FCvS",
+      "category": "hands",
+      "name": "H0280 Kunai Hands (H&M) - C3 Lume - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "MUy4Root5hmTHj_yXEJRq",
+      "category": "hands",
+      "name": "H0292 MM300 Style Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "p7nbe3dbbM6n2fsEynaVK",
+      "category": "hands",
+      "name": "H0293 MM300 Hand Set - Polished Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "MPR8Lc3qDpuFOz6BZ0iTb",
+      "category": "hands",
+      "name": "H0294 Mil Spec Style Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "askokivmSG0-1GWnCtPWS",
+      "category": "hands",
+      "name": "H0304 SM Style Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "yx6TwISGWeTV_Y-3T1zeo",
+      "category": "hands",
+      "name": "H0457 SM Style Hands Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "zJDiUfeulsLj8RlwkRwcU",
+      "category": "hands",
+      "name": "H0465 SKX Style Hands Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "DM5Rz4DeUHQYIYj1oQzMc",
+      "category": "hands",
+      "name": "H0466 SKX Style Hands Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "NE78AkfCXDVxuuO4LG-1p",
+      "category": "hands",
+      "name": "H0467 SKX Style Hands Set - Polished Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "1FIGfg55weB21xfx3MYjt",
+      "category": "hands",
+      "name": "H0468 Mil Spec Style Hand Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "dZjGj5_1P_HTrFGV3fVak",
+      "category": "hands",
+      "name": "H0503 Kunai Hands Set - BGW9 Lume - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Lrw-oWTTvAmpGzdzCGEuH",
+      "category": "hands",
+      "name": "H0504 Kunai Hands Set - BGW9 Lume - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "X5-Dng5m0ASUAv1D073l2",
+      "category": "hands",
+      "name": "H0507 SKX Style Hands Set - BGW9 Lume - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "GDZiW6MQvKpIEgdu_na3e",
+      "category": "hands",
+      "name": "H0508 SKX Style Hands Set - BGW9 Lume - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "PbbZLaLBOFvV-ZXHuf50_",
+      "category": "hands",
+      "name": "H0509 SKX Style Hands Set - BGW9 Lume - White",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "KiSAb0uSYm43FRrqW7BC9",
+      "category": "hands",
+      "name": "H0510 SKX Style Hands Set - BGW9 Lume - Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "dH8QSEXeTWJgyuTJew4Xy",
+      "category": "hands",
+      "name": "H0511 SKX Style Hands Set - BGW9 Lume - Orange",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "QZbvNAdlA8W7BShvuy672",
+      "category": "hands",
+      "name": "H0512 SKX Style Hands Set - BGW9 Lume - Red",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "mbPXOMxC5n3nNDV0Jhqs8",
+      "category": "hands",
+      "name": "H0513 SKX Style Hands Set - White",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "n7qcfOfiGEstIPSCOt4Wv",
+      "category": "hands",
+      "name": "H0514 SKX Style Hands Set - Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "8SXW9GS23oMea0IFjYXs6",
+      "category": "hands",
+      "name": "H0515 SKX Style Hands Set - Orange",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "NzSDSed73mg7UeJsE6DEm",
+      "category": "hands",
+      "name": "H0516 SKX Style Hands Set - Red",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "jaHcocW7RG1n_P9yi5g83",
+      "category": "hands",
+      "name": "H0557 MM1000 Style Hands Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "1RC3hAZengBQaTKQjtfbT",
+      "category": "hands",
+      "name": "H0558 MM1000 Style Hands Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "gFUcV-WAeY640GXIya_0W",
+      "category": "hands",
+      "name": "H0559 MM1000 Style Hands Set - Brushed Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "9CvecvILXKW9bIT5WTwz8",
+      "category": "hands",
+      "name": "H0560 MM1000 Style Hands Set - Polished Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "qG5dz6ABIefZvgEallKDu",
+      "category": "hands",
+      "name": "H0598 Tuna Style Hands Set - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "EkkkvU7ZwdLHPOvU_ObDd",
+      "category": "hands",
+      "name": "H0599 Tuna Style Hands Set - Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "yas6ldAL8AFYs0CtssTln",
+      "category": "hands",
+      "name": "H0602 Sumo Style Hand Set -Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "zj_Ifh2g31lk_HOG3umAF",
+      "category": "hands",
+      "name": "H0603 Sumo Style Hand Set -Polished Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Yktaf3oDzfQIF82oordoY",
+      "category": "hands",
+      "name": "H0604 GS Style Hand Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "emL6aDzFYhXXWipLszoU0",
+      "category": "hands",
+      "name": "H0605 GS Style Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "RdsY0BI-B0ACD7qQ1ytlo",
+      "category": "hands",
+      "name": "H0610 GS Style Hand Set - Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "qRBYmMzdwpcpAdrbPbXlp",
+      "category": "hands",
+      "name": "H0611 GS Style Hand Set - Orange",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Dsjn6Q1XFpd10phjhVrcU",
+      "category": "hands",
+      "name": "H0612 GS Style Hand Set - White",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "AKJSMux_CxJe99vfFEU0O",
+      "category": "hands",
+      "name": "H0613 Tuna Style Hands Set - Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "CEI5gP8n2ENRQCb3CCjLj",
+      "category": "hands",
+      "name": "H0614 Tuna Style Hands Set - Orange",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "JbqyS6ONeeT63Ir8VsBgB",
+      "category": "hands",
+      "name": "H0615 Tuna Style Hands Set - White",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "EA5pKSCgdeTt44qRK2qFA",
+      "category": "hands",
+      "name": "H0616 Sumo Style Hand Set - Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "aSAh7JeR3hMWlnqYrK0rD",
+      "category": "hands",
+      "name": "H0617 Sumo Style Hand Set - Orange",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "UjtETcj3PFTT_UWlSAIYK",
+      "category": "hands",
+      "name": "H0674 Samurai Style Hands Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "XgP1kuAd6N39lGqACp7_w",
+      "category": "hands",
+      "name": "H0675 Samurai Style Hands Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "PLdrGAVSRYrrVsD5w7lAm",
+      "category": "hands",
+      "name": "H0676 Samurai Style Hands Set - Red",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "1mUwOiuHCkucrQ1lB-ShJ",
+      "category": "hands",
+      "name": "H0677 Samurai Style Hands Set - BGW9 Lume - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "W0oFrq8Beu569DdE2Pyzm",
+      "category": "hands",
+      "name": "H0678 Samurai Style Hands Set - BGW9 Lume - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "LZi5uCX5zSRTyVTvuaA2w",
+      "category": "hands",
+      "name": "H0679 Samurai Style Hands Set - BGW9 Lume - Red",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "h7C831vMXI1agVy8m1Cus",
+      "category": "hands",
+      "name": "H0726 Blade Hand Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "omCCEEWFvlRUNvUGdTn9l",
+      "category": "hands",
+      "name": "H0727 Blade Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "w4kxOlVQUlvaSDImu09UO",
+      "category": "hands",
+      "name": "H0795 62mas Style Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "5im9skz6t_ey7ujwOjasf",
+      "category": "hands",
+      "name": "H0796 62mas Style Hand Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "hBB_GOV0bjz6LP9K0tCGo",
+      "category": "hands",
+      "name": "H0799 MM300 Style Hand Set - Black Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "jot-HkJwWWujSMfWbBcDo",
+      "category": "hands",
+      "name": "H0800 SKX Style Hands Set - Black Lume - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "WQsXH15X8dpvFRMS1NKKJ",
+      "category": "hands",
+      "name": "H0801 MM1000 Style Hands Set - Black Lume - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "1aBghf_wDapHlY0gnw7DJ",
+      "category": "hands",
+      "name": "H0853 MM1000 Style Hands Set - BGW9 Lume - Polished Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "RM64jUhno7VTWonXAkIUm",
+      "category": "hands",
+      "name": "H0854 MM1000 Style Hands Set - BGW9 Lume - Brushed Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "7Yl2tvsK5KedqsWBALIhm",
+      "category": "hands",
+      "name": "H0855 MM1000 Style Hands Set - BGW9 Lume - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "6fWyCb0Tlk6zdW6chUJq5",
+      "category": "hands",
+      "name": "H0856 MM1000 Style Hands Set - Silver  - Black Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Civf31rWDxHey69epydn3",
+      "category": "hands",
+      "name": "H0857 MM300 Hand Set - Black Lume - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "EAmNLhFr2ehSo863BwFjn",
+      "category": "hands",
+      "name": "H0920 LX Style Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "9sDxYvxdMz9rN4OZU-5mU",
+      "category": "hands",
+      "name": "H0921 LX Style Hand Set - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "JQ9d6AB1AXIGjNplb1koS",
+      "category": "hands",
+      "name": "H0976 Pilot Hand set",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "95wb4eo3DVjaupBTYRTj4",
+      "category": "hands",
+      "name": "H0977 Nautilus Hand Set - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "DWQ3tdOTFFaXAQer1umE0",
+      "category": "hands",
+      "name": "H0978 Nautilus Hand Set - Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "pIrzlTWHBfGmeeOCsZijI",
+      "category": "hands",
+      "name": "H0979 Nautilus Hand Set - Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "chc1oUcJR8104dkYrLZLN",
+      "category": "hands",
+      "name": "H0980 Nautilus Hand Set - Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "69JFTP8ztyUvz3zNBzYXE",
+      "category": "hands",
+      "name": "H0987 MM300 Hand Set - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "TDJRdacQbA9S8IXSYr7SU",
+      "category": "hands",
+      "name": "H0988 MM300 Style Hand Set - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "S4nyL4UWK644G9hCaDRBs",
+      "category": "hands",
+      "name": "H0989 MM300 Style Hand Set - Brushed Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "bOVrWQIxESAiIIKL3f4et",
+      "category": "hands",
+      "name": "H0991 62mas Style Hand Set - Brushed Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "rrKqL1mhfBaTKSwH3Ai-6",
+      "category": "hands",
+      "name": "H0992 GS Style Hand Set -Brushed Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "CTp-xE8fOAzg1AqQ2WzCZ",
+      "category": "hands",
+      "name": "H0993 MM1000 Hand Set - Brushed Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "6DOjL_wxuqwkifVJDAB3U",
+      "category": "hands",
+      "name": "H1022 Nautilus Hand Set - BGW9 - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "4DYMGMyZqdgRoF9kELFVz",
+      "category": "hands",
+      "name": "H1025 Nautilus Hand Set - BGW9 - Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "4Q48uYYWmBMCJ1VaHxvVD",
+      "category": "hands",
+      "name": "H1026 Nautilus Hand Set - BGW9 - Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "7FeO77MH1mZKmKxDWfNUG",
+      "category": "hands",
+      "name": "H1092 Nautilus Hand Set - BGW9 Lume - Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "-ETfMeuGjsAiNpuib07ub",
+      "category": "hands",
+      "name": "H1171 62mas Style Hand Set - Brushed Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "D3Hr4YGBHptay3-5f1i4R",
+      "category": "hands",
+      "name": "H1172 62mas Style Hand Set - Gun Metal Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Qopq0xrfFP3Qd4Z-n2nj7",
+      "category": "hands",
+      "name": "H1224 Pilot Hand set - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "keeZXfzTY9d-ZW3UMcpQg",
+      "category": "hands",
+      "name": "H1348 SKX Style Skeleton Hands Set - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "IokuKEn_2_lPIk80s8uLT",
+      "category": "hands",
+      "name": "H1349 SKX Style Skeleton Hands Set - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "nbZNw408gxzGzD_5Notj8",
+      "category": "hands",
+      "name": "H1350 U1 Style Hands Set - Black - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "o9I-n8YcJY2MWnLqnXL_s",
+      "category": "hands",
+      "name": "H1351 U1 Style Hands Set - Black - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Zp_1Ks6ZTkyTVJVyzGvtn",
+      "category": "hands",
+      "name": "H1407 GyroCompass Style Hand Set - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "0w8R_OE--0E2_hTlFyTCH",
+      "category": "hands",
+      "name": "H1408 Gyro Compass Style Hand Set - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "RmoBM-PEs6iQJEHaa4jqr",
+      "category": "hands",
+      "name": "H1409 Tron Skeleton Style Hand Set - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "hCPUDjUiHBUcYiJ8eOAnn",
+      "category": "hands",
+      "name": "H1410 Tron Skeleton Style Hand Set - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "v7x4TejYGJK5dL27B0BLi",
+      "category": "hands",
+      "name": "H1413 Tuna Style Hands Set - Brushed Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "BV-xWRQ5-eft4HhXsq9Zb",
+      "category": "hands",
+      "name": "H1414 GS Style Hand Set - Brushed Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "aWveqb1Gxxr84LNnVcGpU",
+      "category": "hands",
+      "name": "H1446 SPB077 Style Hands Set - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "FJv769578VDo6Y90Nf2XU",
+      "category": "hands",
+      "name": "H1447 SPB077 Style Hands Set - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "PiFdhh4aCaaTcXB0aDhu_",
+      "category": "hands",
+      "name": "H1453 Breguet Style Hands - Polished Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "_ft-BxFxU8pwg5PAiEGjI",
+      "category": "hands",
+      "name": "H1454 Breguet Style Hands - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "XgGs3r69lWcs9KSQT1dTe",
+      "category": "hands",
+      "name": "H1474 Nautilus Hand Set - Skeleton - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "9GLU3h4-A8oExlo8zYrDg",
+      "category": "hands",
+      "name": "H1548 SKX Style Skeleton Hand Set - Brushed - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "fo7oRzD1Yh5L2kaBv8Cwq",
+      "category": "hands",
+      "name": "H1549 SKX Style Skeleton Hand Set - Brushed - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "3gyKLUlv0s3tV3KHsDPHr",
+      "category": "hands",
+      "name": "H1582 Gyro Compass Style Hand Set II - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "pfGOcMklSgzFcytDHNcv6",
+      "category": "hands",
+      "name": "H1587 FFF Style Hand Set - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "AuAQRukAYdsy5e0s4Wijw",
+      "category": "hands",
+      "name": "H1691 SRPL11 Style Hand Set - Brushed",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "rnJZ2W70w36jqMHdjvGes",
+      "category": "hands",
+      "name": "Hands - BOLD Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "uDVRiq5nXfhNeokRwTNbh",
+      "category": "hands",
+      "name": "Hands - Classic Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "kPqN7_2q9b7-j_ailxWgg",
+      "category": "hands",
+      "name": "Hands - Clover Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ukVqbXp_x554nRDjHHysj",
+      "category": "hands",
+      "name": "Hands - Handcrafted Series",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ZXbSeS4jf7W1UnYaRoNaU",
+      "category": "hands",
+      "name": "Hands - Lightning Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "4nrojI4Q5YXIzCm4pawzx",
+      "category": "hands",
+      "name": "Hands - MM Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "OWF9io6Xlr8tATQism9E5",
+      "category": "hands",
+      "name": "Hands - Monster Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "YaQe0GYuC6MXyQWnYlnJp",
+      "category": "hands",
+      "name": "Hands - Polaris Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "7LMjxAeSGk9qb9OPcObu5",
+      "category": "hands",
+      "name": "Hands - Trident Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "bUy1KvlVfuLCPa_6ewVv0",
+      "category": "hands",
+      "name": "Leaf Hands - Polished Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "2yVJc2uINiC6D2zzkZJWQ",
+      "category": "hands",
+      "name": "Marine Master Hands - BGW9 - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "56fOoIPkgkxNGbPyCEhTU",
+      "category": "hands",
+      "name": "Marine Master Hands - BGW9 - Polished Silver Red",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "WjYmkE3gc9y62tTjIwbT0",
+      "category": "hands",
+      "name": "Milgauss Style - Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Vr_LZfcDrt_zpvbNxvdKH",
+      "category": "hands",
+      "name": "MM Style - Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "HD4yd7Hvtdsp_2N-tuXm8",
+      "category": "hands",
+      "name": "Nautilus Hands - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "HOuXymWA84NNp8XMzbWxy",
+      "category": "hands",
+      "name": "Nautilus II Hands - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Djmn3nLLpc3I0wSrJOa0f",
+      "category": "hands",
+      "name": "Nautilus II Hands - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ZaVPdPNtArlodOqULaU7_",
+      "category": "hands",
+      "name": "Needle - Seconds Hand",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "GIhLAwnVjJp2lwtn0AV-P",
+      "category": "hands",
+      "name": "Second Hand Cap - Brushed Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "qFkgEo4NtNZgR1z8XqQnb",
+      "category": "hands",
+      "name": "Second Hand Cap - Polished Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Y3NBeuhi__ZvCQo71krzw",
+      "category": "hands",
+      "name": "SEIKO SKX007 Lumibrite Hands - Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "U74jAcSoflnbVMgKHMvW3",
+      "category": "hands",
+      "name": "SEIKO SKX013 Lumibrite Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "IIm9J-Q-cjQWPlRTDQwvq",
+      "category": "hands",
+      "name": "SEIKO SRPD Lumibrite Hands - Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "wGaT2Om6F7wLjlNKPg_Is",
+      "category": "hands",
+      "name": "SEIKO SRPD Lumibrite Hands - Yellow Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "llTxObzEWkJWkADpVKncC",
+      "category": "hands",
+      "name": "SEIKO SRPD Lumibrite Hands - Yellow Gold v2",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "JRBN1v_6SNkhVjb_xbN3K",
+      "category": "hands",
+      "name": "SKX - Seconds Hand - BGW9 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "vixnmFy-rYb9oKH6xA1fr",
+      "category": "hands",
+      "name": "SKX - Seconds Hand - C3 Lume",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "z-5XBrDpGc3cR-fFOQ9Xc",
+      "category": "hands",
+      "name": "Striker - Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Sic8TBrGcaQO5o4fGMIzW",
+      "category": "hands",
+      "name": "Striker II - Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "zQiSXuwJ8uH2EenEO2w7c",
+      "category": "hands",
+      "name": "Teardrop Needle Hands - Polished Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "PDSdm2SKWlDw3h8jsfek1",
+      "category": "hands",
+      "name": "Teardrop Needle Hands - Polished Blue - Luminous",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "499Eytt-K5gnDQ2H6AqlX",
+      "category": "hands",
+      "name": "Teardrop Needle Hands - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "T_08zEkCveYd0sQcQPrcH",
+      "category": "hands",
+      "name": "Teardrop Needle Hands - Polished Silver - Luminous",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "5ehzdJ4fU2PWccrHBgOwI",
+      "category": "hands",
+      "name": "The Great Fathom Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "8a2bzGIsXZoYmTn0dPiKa",
+      "category": "hands",
+      "name": "The Great Oak Hands - Polished Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ZF6V4qwqUFOgg1WvFde51",
+      "category": "hands",
+      "name": "Trident - Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "zmGSr1Im9xAelufRTt4Es",
+      "category": "hands",
+      "name": "Watch Hands Bundle: VK Daytona Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "GhMMY5I4On5Yp8ULCSO5R",
+      "category": "hands",
+      "name": "Watch Hands Bundle: VK Daytona Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "wJ93kldml5Y52gj-QW-RQ",
+      "category": "hands",
+      "name": "Watch Hands Bundle: VK Daytona Steel",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "v_Co9w_Yq664ricNyNcP5",
+      "category": "hands",
+      "name": "Watch Hands: 62MAS Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "2aqN5dN2MS7d5HfhR9pTD",
+      "category": "hands",
+      "name": "Watch Hands: 62MAS Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "nw3m9dW9LFZQNSBXG-F6U",
+      "category": "hands",
+      "name": "Watch Hands: Breguet Blue Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "h_O3B5tOlOCw_p7c7cZZe",
+      "category": "hands",
+      "name": "Watch Hands: Breguet Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "o96rEJddAc1oYlSvqaHz8",
+      "category": "hands",
+      "name": "Watch Hands: Breguet Silver Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "e_-247ktBR6If6NuFa7Ee",
+      "category": "hands",
+      "name": "Watch Hands: Daytona Style Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "YCZGvHQtFmuuqjExET8Ql",
+      "category": "hands",
+      "name": "Watch Hands: Daytona Style Rose Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "QUeFEW4ULP0UfntlkHcCy",
+      "category": "hands",
+      "name": "Watch Hands: Daytona Style Steel Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "TEUpT0Tm-Yx7POa45xeGU",
+      "category": "hands",
+      "name": "Watch Hands: Fathoms Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "kF_dGQKC6HIb_tjdLhlBP",
+      "category": "hands",
+      "name": "Watch Hands: Fathoms Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "QIybI5oXtXpQaSsHXKZb5",
+      "category": "hands",
+      "name": "Watch Hands: Fathoms Rose Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "JUOtwrhiHzXlKzXf935An",
+      "category": "hands",
+      "name": "Watch Hands: Fathoms White Patina Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "gJANn4hIhjmjmVCgSAmqW",
+      "category": "hands",
+      "name": "Watch Hands: FPJ Blue Steel",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "gflx2ID31TLRfDHV3sjEd",
+      "category": "hands",
+      "name": "Watch Hands: FPJ Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "IypwVORxgMBIqj-FzpzvZ",
+      "category": "hands",
+      "name": "Watch Hands: FPJ Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "v1KKRs11hQIBEm4p91tRq",
+      "category": "hands",
+      "name": "Watch Hands: FPJ Steel",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "8iyl88JjiDD5MjfuZX_Ed",
+      "category": "hands",
+      "name": "Watch Hands: GS Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "81MP8Ir_yaNDrvDcLNLXc",
+      "category": "hands",
+      "name": "Watch Hands: GS Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "i8ZaL5E3Xn9zrtK6ah3xf",
+      "category": "hands",
+      "name": "Watch Hands: Khaki Field Black Patina Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "08LG8DoZxasOiEv28JNRF",
+      "category": "hands",
+      "name": "Watch Hands: Khaki Field Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "uVm-7sXi6rgMVNet9FLRK",
+      "category": "hands",
+      "name": "Watch Hands: Khaki Field White Patina Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "kKjIfjdXWyYSBhwnmHG5e",
+      "category": "hands",
+      "name": "Watch Hands: Kunai Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "DCNQv1yJ4tXk8Y-1cB927",
+      "category": "hands",
+      "name": "Watch Hands: Kunai Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "WU0UP2DSWmx8ps0qJyu5m",
+      "category": "hands",
+      "name": "Watch Hands: Leaf Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "SQKU5q3M58Awr9drWD92r",
+      "category": "hands",
+      "name": "Watch Hands: Leaf Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "tMEMXuNCFseiWdCroHwEx",
+      "category": "hands",
+      "name": "Watch Hands: Leaf Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "EyJ1E9D1EHWO3ZNKcFvwI",
+      "category": "hands",
+      "name": "Watch Hands: Leaf Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "4SB6GpKvwB_spoOyFQ5-b",
+      "category": "hands",
+      "name": "Watch Hands: Lightning Second Hand Mk2",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "UEWCpC9lgxjSqjLSv76UE",
+      "category": "hands",
+      "name": "Watch Hands: Lightning Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "stq0XpVlOF73ceGjEwgmv",
+      "category": "hands",
+      "name": "Watch Hands: Lumed Leaf Blue",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ZAPJ4Y0O-Ft70r8Qigau3",
+      "category": "hands",
+      "name": "Watch Hands: Lumed Leaf Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "HjwF4dJapuFTfEc5WpFBb",
+      "category": "hands",
+      "name": "Watch Hands: Lumed Leaf Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "DCiO-aD1w8ouEn5cVcaqI",
+      "category": "hands",
+      "name": "Watch Hands: Lumed Lightning Second Hand",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "9f37dxoK9XPpYbCK8D6En",
+      "category": "hands",
+      "name": "Watch Hands: Lumed MM Skeleton Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "8VHimU6m_BQzYL_RnxYSx",
+      "category": "hands",
+      "name": "Watch Hands: Lumed Oak Skeleton Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "qG1uRVVnueVw8UyxXPT7_",
+      "category": "hands",
+      "name": "Watch Hands: LX Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "I_9gP2C62Ay6lvSg2IBj2",
+      "category": "hands",
+      "name": "Watch Hands: LX Silver Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "h1gqfDXZagaxNABBovrT6",
+      "category": "hands",
+      "name": "Watch Hands: Milspec Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "5u_FPz3zxaxIn-MamYWlu",
+      "category": "hands",
+      "name": "Watch Hands: Milspec White",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "SMsi3_rrrF4HDGGqnY3iq",
+      "category": "hands",
+      "name": "Watch Hands: MM Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "HrPU60sP6OOJ98xXRh-uY",
+      "category": "hands",
+      "name": "Watch Hands: MM Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "vqIGqt_XepecUJPH3tDXO",
+      "category": "hands",
+      "name": "Watch Hands: MM Mk2 Gunmetal",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "v63CjgJyAaCmtHdmyk8SD",
+      "category": "hands",
+      "name": "Watch Hands: MM Mk2 Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "Te9d7zJm_hIBvLjEGSoy_",
+      "category": "hands",
+      "name": "Watch Hands: MM Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "1SXY0XCHpaKJGF5q2sXa7",
+      "category": "hands",
+      "name": "Watch Hands: MM Vintage Patina Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "DKqUKTpwtGl1kn0igZlBQ",
+      "category": "hands",
+      "name": "Watch Hands: MM1000 Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "6rV5O-b4vRVRJIXWltUhb",
+      "category": "hands",
+      "name": "Watch Hands: MM1000 Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "FRb-z8vSSFnxYxxATrXbt",
+      "category": "hands",
+      "name": "Watch Hands: MM1000 Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "JDncpIMhjG2BOYoQuSDtz",
+      "category": "hands",
+      "name": "Watch Hands: MM1000 Rose Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "hPrigl1Qwvb8H1mQuqQGv",
+      "category": "hands",
+      "name": "Watch Hands: Nautical Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "-nZU-md2zJoYwrXrwoWFp",
+      "category": "hands",
+      "name": "Watch Hands: Nautical Steel",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "BxH4O6XMu19eb-uLotlHl",
+      "category": "hands",
+      "name": "Watch Hands: Nautilus Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "FhY6-3Q6EV7SkVg6iLvdT",
+      "category": "hands",
+      "name": "Watch Hands: Nautilus Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ZvELT7NFjeLJ4Cak18Glx",
+      "category": "hands",
+      "name": "Watch Hands: Nautilus Steel Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "y3pgJU1x4klBW8985kLg3",
+      "category": "hands",
+      "name": "Watch Hands: Oak Steel Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "H_E5tIZOHLccMxjKUZffZ",
+      "category": "hands",
+      "name": "Watch Hands: Pilot Black Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "rZDprCmhLBxQgWpwMB9Nh",
+      "category": "hands",
+      "name": "Watch Hands: Samurai Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "wgUjrWjKAhuQa861a1-r4",
+      "category": "hands",
+      "name": "Watch Hands: Samurai Silver Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "BdnxIHhlILixwV1DWeZ8-",
+      "category": "hands",
+      "name": "Watch Hands: SKX Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "wkIUg-MUaSNUI4hhAy-Mt",
+      "category": "hands",
+      "name": "Watch Hands: SKX Black Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "mmJukOYi6qVpNL_TAKXNT",
+      "category": "hands",
+      "name": "Watch Hands: SKX Gold Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "2jodogkNF92e9PIH9oLqK",
+      "category": "hands",
+      "name": "Watch Hands: SKX Minute Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "h83XkqoMxNyPYMonaKJLd",
+      "category": "hands",
+      "name": "Watch Hands: SKX Silver Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "e7KibMKSB1CR6-BHGErLT",
+      "category": "hands",
+      "name": "Watch Hands: SKX Skeleton Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "MzivT2oebWEeMz3kJMaYT",
+      "category": "hands",
+      "name": "Watch Hands: SKX Vintage Patina Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "QajI-wEWWYyIW_PON_Xgy",
+      "category": "hands",
+      "name": "Watch Hands: SMP Polished Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "dXbppjK4AMewCxxa1bX1n",
+      "category": "hands",
+      "name": "Watch Hands: Sumo Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "68m6k0QmcfHrQ650bDSv5",
+      "category": "hands",
+      "name": "Watch Hands: Sumo Silver Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "l9NPCCZJWbTxhhrK_Lfq5",
+      "category": "hands",
+      "name": "Watch Hands: Trident Second Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ZQduQzWHyMjehLjNZVGAh",
+      "category": "hands",
+      "name": "Watch Hands: Tron Skeleton",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "NPDpOrjmagiLG8ppwHVI2",
+      "category": "hands",
+      "name": "Watch Hands: Tuna Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "EMNZpXNcF9811rBN8hz7z",
+      "category": "hands",
+      "name": "Watch Hands: Tuna Silver",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "HW1tPawrkA6KR_gBJV3Is",
+      "category": "hands",
+      "name": "Watch Hands: U1 Black Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "if-HRLO-cncMC0lpfvocp",
+      "category": "hands",
+      "name": "Watch Hands: U1 Black Patina Lume Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "_OwYWZBg0bt-hEx2No4o0",
+      "category": "hands",
+      "name": "Watch Hands: U1 Orange Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "BJLTpgWJjbDCbv7mtpNym",
+      "category": "hands",
+      "name": "Watch Hands: U1 Red Finish",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "uWKx75FTFWDgNnc_eNyuG",
+      "category": "hands",
+      "name": "Watch Hands: Vector Black",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "FTLm-ZwNi_FHZ2Y19LFup",
+      "category": "hands",
+      "name": "Watch Hands: Vector Rainbow",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "oPd4e2WAT0q9gxis-58Wu",
+      "category": "hands",
+      "name": "Watch Hands: VK Chronograph Hand",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "TwVkSh9v_7M9eLopxw4gg",
+      "category": "hands",
+      "name": "Watch Hands: VK Daytona Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "WAFbf50vnovY3f22EP4Ok",
+      "category": "hands",
+      "name": "Watch Hands: VK Daytona Rose Gold",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "ehf5b9XeNrrtPR2FzxMH4",
+      "category": "hands",
+      "name": "Watch Hands: VK Daytona Steel",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "npxxogjE8nqPbmkEQexLB",
+      "category": "hands",
+      "name": "Watch Hands: VK Sub-Dial Hands",
+      "assigned": "hand-sword"
+    },
+    {
+      "id": "B_9KRkwGyz-25Wc9QrBjN",
+      "category": "hands",
+      "name": "Watch Hands: VK Vantage Steel",
+      "assigned": "hand-sword"
+    }
+  ]
+}

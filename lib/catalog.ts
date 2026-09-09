@@ -8,6 +8,7 @@ import { db } from "./db/client";
 import { familyExceptions, listings, parts, vendors } from "./db/schema";
 import { fromJsonColumn } from "./db/json";
 import { encodePreviewable } from "./preview/previewable";
+import { ART_TAGS, encodeArt, type ArtEntry, type EncodedArt } from "./preview/art-codec";
 import { readFileSync } from "node:fs";
 import type { CatalogSlice, SlotKey } from "./compat";
 
@@ -66,6 +67,11 @@ export interface CatalogPayload {
   // decodePreviewable(). Display only, and kept out of CatalogSlice so
   // lib/compat cannot see it and no rule can key off it.
   previewable: string;
+  // How each part is drawn, indexed by the sorted part ids rather than
+  // keyed by them -- see lib/preview/art-codec.ts. Display only, and kept
+  // out of CatalogSlice like every other display field, so no
+  // compatibility rule can key off how a part is drawn.
+  art: EncodedArt;
   familyExceptions: CatalogSlice["familyExceptions"];
   listings: DisplayListing[];
   vendors: VendorInfo[];
@@ -99,6 +105,23 @@ export function loadCatalog(): CatalogPayload {
   const images: Record<string, string> = {};
   for (const p of approved) if (p.imageUrl && sliceParts[p.id]) images[p.id] = p.imageUrl;
 
+  // Only the parts that are actually drawn, and only the tags the art
+  // reads. Shipping every approved part with its full tag list added 45KB
+  // gzipped to the page for data no renderer looks at -- the dial and
+  // case need no entry at all, and a search tag like "dressy" or
+  // "vintage" changes nothing about how a part is drawn.
+  const DRAWN = new Set(["hands", "crown", "chapter_ring", "bezel_insert"]);
+  const artTags = new Set<string>(ART_TAGS);
+  const art: Record<string, ArtEntry> = {};
+  for (const p of approved) {
+    if (!sliceParts[p.id] || !DRAWN.has(p.category)) continue;
+    const attributes = fromJsonColumn<Record<string, unknown>>(p.attributes);
+    const shape = typeof attributes.shapeTag === "string" ? attributes.shapeTag : null;
+    if (!shape) continue;
+    const tags = Array.isArray(attributes.styleTags) ? (attributes.styleTags as string[]).filter((t) => artTags.has(t)) : [];
+    art[p.id] = { shape, tags };
+  }
+
   const previewable = encodePreviewable(
     Object.keys(sliceParts),
     approved.filter((p) => p.assetState === "ready" && sliceParts[p.id]).map((p) => p.id),
@@ -122,6 +145,7 @@ export function loadCatalog(): CatalogPayload {
   return {
     parts: sliceParts,
     previewable,
+    art: encodeArt(Object.keys(sliceParts), art),
     familyExceptions: db
       .select()
       .from(familyExceptions)

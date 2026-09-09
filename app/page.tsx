@@ -4,7 +4,7 @@ import { STYLE_BUILDS } from "@/data/fixtures/style-builds";
 import { STARTER_BUILDS } from "@/data/fixtures/starter-builds";
 import { loadCatalog } from "@/lib/catalog";
 import { buildView, configuratorHref, resolveByName } from "@/lib/build-view";
-import { StaticPreview } from "@/components/StaticPreview";
+import { WatchPreview } from "@/components/build/WatchPreview";
 import { Discover } from "@/components/Discover";
 import { formatGbp } from "@/lib/money";
 
@@ -87,7 +87,7 @@ export default function Home() {
             {hero.map(({ style, view }) => (
               <li key={style.slug} className="border border-rule bg-card p-4">
                 <Link href={`/styles/${style.slug}`} className="block">
-                  <StaticPreview layers={view.layers} alt={`Flat diagram of the ${style.title} build`} caption={false} />
+                  <WatchPreview input={view.preview} title={`Diagram of the ${style.title} build`} caption={false} />
                   <h2 className="mt-3 text-[15px] font-semibold">{style.title}</h2>
                   <p className="num mt-1 text-[13px] tabular-nums text-graphite">
                     {formatGbp(view.totals.grandTotalMinorLow)} · {view.totals.groups.length}{" "}

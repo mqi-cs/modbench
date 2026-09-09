@@ -1,10 +1,10 @@
 import "server-only";
 import { loadCatalog, type CatalogPayload } from "./catalog";
 import { computeTotals, type BuildTotals } from "./pricing";
-import { evaluateBuild, familyPlatform, type Build, type BuildResult, type CatalogSlice, type SlotKey } from "./compat";
+import { evaluateBuild, type Build, type BuildResult, type CatalogSlice, type SlotKey } from "./compat";
 import { decodePreviewable } from "./preview/previewable";
-import { resolveLayers, type PreviewLayer } from "./preview/composite";
-import { DEFAULT_PLATFORM, PLATFORM_GEOMETRY } from "./preview/layers";
+import { decodeArt } from "./preview/art-codec";
+import { type ResolveInput } from "./preview/composite";
 import { SLOT_PARAM } from "../components/build/url-state";
 
 // Everything a read-only build page needs, assembled once on the server.
@@ -15,7 +15,7 @@ export interface BuildView {
   build: Build;
   result: BuildResult;
   totals: BuildTotals;
-  layers: PreviewLayer[];
+  preview: ResolveInput;
   catalog: CatalogPayload;
   slice: CatalogSlice;
   /** Slot ids that could not be resolved, e.g. a fixture naming a stale part. */
@@ -56,17 +56,18 @@ export function buildView(parts: Partial<Record<SlotKey, string>>, unresolved: S
   const result = evaluateBuild(build, slice);
   const totals = computeTotals(build, catalog.listings, catalog.vendors, result.requiredTools, true);
 
-  const caseFamily = parts.case ? catalog.parts[parts.case]?.family : undefined;
-  const platform = caseFamily ? familyPlatform(caseFamily) : null;
-  const layers = resolveLayers({
+  const preview: ResolveInput = {
     parts: parts as Partial<Record<string, string>>,
     previewable: decodePreviewable(Object.keys(catalog.parts), catalog.previewable),
-    names: Object.fromEntries(Object.entries(catalog.parts).map(([id, p]) => [id, p.name])),
-    platform: platform && platform in PLATFORM_GEOMETRY ? platform : DEFAULT_PLATFORM,
-    hasCase: Boolean(parts.case),
-  });
+    meta: Object.fromEntries(
+      Object.entries(decodeArt(Object.keys(catalog.parts), catalog.art)).map(([id, a]) => [
+        id,
+        { name: catalog.parts[id]?.name ?? id, shape: a.shape, tags: a.tags },
+      ]),
+    ),
+  };
 
-  return { build, result, totals, layers, catalog, slice, unresolved };
+  return { build, result, totals, preview, catalog, slice, unresolved };
 }
 
 /**

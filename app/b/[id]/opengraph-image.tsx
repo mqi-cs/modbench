@@ -1,11 +1,12 @@
 import { ImageResponse } from "next/og";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import sharp from "sharp";
+import { resolveWatch } from "@/lib/preview/composite";
+import { WatchArt } from "@/lib/preview/art/WatchArt";
 import { loadBuild } from "@/lib/builds";
 import { buildView } from "@/lib/build-view";
 import { describeBuild } from "@/lib/build-name";
 import { formatGbp } from "@/lib/money";
-import { drawCalls } from "@/lib/preview/composite";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -14,24 +15,38 @@ export const alt = "Modbench build";
 export const runtime = "nodejs";
 
 /**
- * The share card: the Phase 4 render, the build's generated name, the
- * total, and the part count.
+ * Rasterises the preview SVG for the share card.
  *
- * The layers are flattened to a single PNG with sharp rather than being
- * stacked as separate images inside the card. Two reasons, both found by
- * trying the other way: Satori cannot decode WebP, which is the format
- * the prepared assets are stored in, and inlining six 800x800 layers as
- * data URIs put well over a megabyte of base64 through the renderer and
- * killed the response outright.
+ * Satori, behind ImageResponse, cannot render an <svg> subtree with the
+ * fidelity the art needs, and it cannot decode WebP at all -- so the
+ * whole watch is rendered to SVG markup here, handed to sharp, and
+ * inlined as a single PNG. The dial photograph has to be embedded as a
+ * data URI first, because librsvg resolves no relative or remote hrefs.
  */
-async function compositePng(sources: string[]): Promise<string | null> {
-  const present = sources.filter((src) => existsSync(`public${src}`));
-  if (present.length === 0) return null;
+async function renderWatchPng(preview: Parameters<typeof resolveWatch>[0]): Promise<string | null> {
+  const watch = resolveWatch(preview);
+  if (watch.dialHref) {
+    const file = `public${watch.dialHref}`;
+    if (existsSync(file)) {
+      try {
+        const png = await sharp(readFileSync(file)).png().toBuffer();
+        watch.dialHref = `data:image/png;base64,${png.toString("base64")}`;
+      } catch {
+        watch.dialHref = null;
+      }
+    } else {
+      watch.dialHref = null;
+    }
+  }
   try {
-    const png = await sharp({ create: { width: 800, height: 800, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
-      .composite(present.map((src) => ({ input: `public${src}` })))
-      .png()
-      .toBuffer();
+    // Imported at call time, not at module scope: Next refuses a static
+    // import of react-dom/server from a component module, and this file
+    // is one. It only ever runs on the server, where the dynamic form is
+    // fine.
+    const { renderToStaticMarkup } = await import("react-dom/server");
+    const markup = renderToStaticMarkup(<WatchArt watch={watch} title="" />);
+    const svg = markup.replace("<svg", '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500"');
+    const png = await sharp(Buffer.from(svg)).png().toBuffer();
     return `data:image/png;base64,${png.toString("base64")}`;
   } catch {
     return null;
@@ -57,7 +72,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const name = describeBuild(view);
   const partCount = Object.keys(saved.slots).length;
   const vendors = view.totals.groups.length;
-  const rendered = await compositePng(drawCalls(view.layers).map((call) => call.src));
+  const rendered = await renderWatchPng(view.preview);
 
   return new ImageResponse(
     (

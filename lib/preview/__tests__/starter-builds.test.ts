@@ -3,9 +3,8 @@ import { db } from "../../db/client";
 import { parts } from "../../db/schema";
 import { eq } from "drizzle-orm";
 import { STARTER_BUILDS } from "../../../data/fixtures/starter-builds";
-import { drawCalls, placeholders, resolveLayers } from "../composite";
-import { familyPlatform } from "../../compat/platform";
-import { PLATFORM_GEOMETRY, DEFAULT_PLATFORM } from "../layers";
+import { drawnLayers, resolveWatch, type ResolveInput } from "../composite";
+import { fromJsonColumn } from "../../db/json";
 
 // specs/05-phase-4-preview.md pass measure 1: "All three starter builds
 // render with every layer present."
@@ -33,24 +32,24 @@ describe("starter builds", () => {
         expect(Object.keys(resolved).sort()).toEqual(Object.keys(starter.partNames).sort());
       });
 
-      it("draws every layer its slots call for", () => {
-        const caseFamily = resolved.case ? byName.get(starter.partNames.case!)?.family : undefined;
-        const platform = caseFamily ? familyPlatform(caseFamily) : null;
-        const layers = resolveLayers({
-          parts: resolved,
-          previewable,
-          names,
-          platform: platform && platform in PLATFORM_GEOMETRY ? platform : DEFAULT_PLATFORM,
-          hasCase: Boolean(resolved.case),
-        });
-        const missing = placeholders(layers);
+      it("draws every part its slots call for", () => {
+        const meta: ResolveInput["meta"] = Object.fromEntries(
+          approved.map((p) => {
+            const a = fromJsonColumn<Record<string, unknown>>(p.attributes);
+            return [p.id, { name: p.name, shape: String(a.shapeTag ?? ""), tags: Array.isArray(a.styleTags) ? (a.styleTags as string[]) : [] }];
+          }),
+        );
+        const watch = resolveWatch({ parts: resolved, previewable, meta });
+        // Starter builds are the first thing a visitor sees, so every
+        // part they name must actually draw.
+        for (const slot of ["crown", "chapterRing", "hands", "bezelInsert"] as const) {
+          if (resolved[slot]) expect(watch[slot], `${slot} did not resolve`).not.toBeNull();
+        }
         expect(
-          missing.map((l) => `${l.key}: ${l.label}`),
-          "starter builds are the first thing a visitor sees, so a placeholder here is a broken first impression -- swap the part for one with a usable vendor photograph rather than relaxing this",
-        ).toEqual([]);
-        // Case, bezel and glare are drawn art; the rest come from the
-        // prepared assets. Anything less means a layer went missing.
-        expect(drawCalls(layers).length).toBe(3 + Object.keys(resolved).filter((s) => s !== "case" && s !== "movement").length);
+          watch.dialPlaceholder,
+          "a starter build showing no dial is a broken first impression -- swap the dial for one with a usable photograph rather than relaxing this",
+        ).toBe(false);
+        expect(drawnLayers(watch).length).toBeGreaterThan(2);
       });
     });
   }

@@ -8,10 +8,12 @@ import { ASSEMBLY_ORDER, type Catalog, type PickerItem, type PartState } from ".
 import { SlotRail } from "./SlotRail";
 import { PartPicker } from "./PartPicker";
 import { BuildSummary } from "./BuildSummary";
-import { Preview } from "./Preview";
+import { WatchPreview } from "./WatchPreview";
 import { StarterBuilds } from "./StarterBuilds";
 import type { StarterBuild } from "@/data/fixtures/starter-builds";
 import { SLOT_PARAM, buildFromParams, droppedSlots, paramsFromBuild } from "./url-state";
+import { decodePreviewable } from "@/lib/preview/previewable";
+import { decodeArt } from "@/lib/preview/art-codec";
 
 // Warnings that reflect a gap in the catalog rather than a problem with
 // the specific combination in front of the user.
@@ -44,6 +46,23 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
   // the single listings array the server sent. Cheap -- one pass over
   // ~3.4k rows on mount -- and it keeps the payload from carrying three
   // copies of the same data.
+  // Display-only lookups for the preview. Derived once; lib/compat never
+  // sees either of them.
+  const previewable = useMemo(
+    () => decodePreviewable(Object.keys(catalog.parts), catalog.previewable),
+    [catalog.parts, catalog.previewable],
+  );
+  const artMeta = useMemo(
+    () =>
+      Object.fromEntries(
+        Object.entries(decodeArt(Object.keys(catalog.parts), catalog.art)).map(([id, a]) => [
+          id,
+          { name: catalog.parts[id]?.name ?? id, shape: a.shape, tags: a.tags },
+        ]),
+      ),
+    [catalog.art, catalog.parts],
+  );
+
   const slice = useMemo<CatalogSlice>(() => {
     const shippingByVendor = new Map(catalog.vendors.map((v) => [v.key, v.shippingMinorBase]));
     const sliceListings = catalog.listings.map((l) => ({
@@ -190,7 +209,15 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
             drawing is what you look at while reading the total, so the two
             belong in the same field of view. */}
         <div className="flex flex-col gap-px bg-rule">
-          <Preview build={build} catalog={catalog} />
+          <WatchPreview
+            input={{
+              parts: build.parts as Partial<Record<string, string>>,
+              previewable,
+              meta: artMeta,
+            }}
+            title="Diagram of the build so far"
+            className="p-5"
+          />
           <BuildSummary
             build={build}
             parts={slice.parts}

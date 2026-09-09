@@ -9,6 +9,7 @@ import { families, listings, parts, vendors, familyExceptions, partMerges, rejec
 import { eq } from "drizzle-orm";
 import { nameFamilyConflict } from "../lib/db/name-family-conflict";
 import { fromJsonColumn } from "../lib/db/json";
+import { SHAPES, shapeById } from "../lib/preview/shape-vocabulary";
 
 // GBP plausible-price ranges, checked against priceMinorBase (the real,
 // ingest-time-converted GBP figure) so one range covers all vendors
@@ -349,6 +350,32 @@ function main() {
     if (orphans > 0) fail(`${orphans} asset file(s) on disk have no approved part marked 'ready' -- re-run \`pnpm prepare-assets\``);
     else pass("preview assets: no orphaned asset files");
   }
+
+  // 14. Every approved part in an illustrated category must resolve to a
+  // silhouette the art can actually draw. The preview no longer has a
+  // flat or unshaded path to fall through to, so a missing or unknown
+  // shapeTag is a part that renders as nothing at all.
+  const ILLUSTRATED = ["hands", "crown", "chapter_ring", "bezel_insert"];
+  const illustrated = approvedParts.filter((p) => ILLUSTRATED.includes(p.category));
+  const badShape = illustrated.filter((p) => {
+    const shape = fromJsonColumn<Record<string, unknown>>(p.attributes).shapeTag;
+    if (typeof shape !== "string") return true;
+    const def = shapeById(shape);
+    return !def || def.category !== p.category;
+  });
+  if (badShape.length > 0) {
+    for (const p of badShape.slice(0, 5)) fail(`part ${p.id} (${p.name}) has no drawable shape -- run \`pnpm backfill-shapes\``);
+    if (badShape.length > 5) fail(`... and ${badShape.length - 5} more parts with no drawable shape`);
+  } else {
+    pass(`shapes: all ${illustrated.length} parts in illustrated categories resolve to a silhouette`);
+  }
+
+  // And no shape in the vocabulary may match nothing: dead art reads as
+  // coverage that is not there.
+  const usedShapes = new Set(illustrated.map((p) => String(fromJsonColumn<Record<string, unknown>>(p.attributes).shapeTag ?? "")));
+  const deadShapes = SHAPES.filter((sh) => !usedShapes.has(sh.id)).map((sh) => sh.id);
+  if (deadShapes.length > 0) fail(`${deadShapes.length} shape(s) match no part: ${deadShapes.join(", ")}`);
+  else pass(`shapes: every one of the ${SHAPES.length} defined silhouettes is used`);
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);
   sqlite.close();

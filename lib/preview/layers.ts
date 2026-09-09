@@ -1,4 +1,4 @@
-// Render geometry and z-order for the preview.
+// Render geometry for the offline asset pipeline.
 //
 // Pure data and arithmetic. Nothing here reaches the database, and
 // nothing here is ever read by lib/compat -- these numbers decide how
@@ -92,28 +92,4 @@ export function renderRadiusPx(category: string, family: string): number {
     default:
       return (g.dial * PX_PER_MM) / 2;
   }
-}
-
-/**
- * Draw order, back to front. specs/05-phase-4-preview.md fixes this list;
- * pass measure 5 ("insert never behind the case, hands never behind the
- * dial") is a test over exactly this array, so it is exported rather than
- * inlined into the draw loop.
- */
-export const LAYER_ORDER = ["case", "dial", "chapterRing", "hands", "bezel", "bezelInsert", "glare"] as const;
-export type LayerKey = (typeof LAYER_ORDER)[number];
-
-/** Build slot each layer draws from. `glare` is generated, not a part. */
-export const LAYER_SLOT: Record<LayerKey, string | null> = {
-  case: "case",
-  dial: "dial",
-  chapterRing: "chapterRing",
-  hands: "hands",
-  bezel: "bezel",
-  bezelInsert: "bezelInsert",
-  glare: null,
-};
-
-export function layerIndex(key: LayerKey): number {
-  return LAYER_ORDER.indexOf(key);
 }

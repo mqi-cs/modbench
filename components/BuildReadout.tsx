@@ -3,7 +3,7 @@ import { formatGbp, formatNative } from "@/lib/money";
 import { ASSEMBLY_ORDER } from "@/components/build/types";
 import type { BuildView } from "@/lib/build-view";
 import { configuratorHref } from "@/lib/build-view";
-import { StaticPreview } from "./StaticPreview";
+import { WatchPreview } from "./build/WatchPreview";
 
 const SLOT_LABEL = Object.fromEntries(ASSEMBLY_ORDER.map((s) => [s.slot, s.label]));
 
@@ -16,14 +16,14 @@ const SLOT_LABEL = Object.fromEntries(ASSEMBLY_ORDER.map((s) => [s.slot, s.label
  * there to be no client component in the tree at all.
  */
 export function BuildReadout({ view, title, blurb }: { view: BuildView; title: string; blurb?: string }) {
-  const { totals, result, layers, catalog, build } = view;
+  const { totals, result, preview, catalog, build } = view;
   const errors = result.findings.filter((f) => f.severity === "error");
   const warnings = result.findings.filter((f) => f.severity === "warning");
 
   return (
     <div className="mx-auto grid max-w-[1100px] gap-px bg-rule md:grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
       <section className="bg-card p-6">
-        <StaticPreview layers={layers} alt={`Flat diagram of ${title}`} />
+        <WatchPreview input={preview} title={`Diagram of ${title}`} />
       </section>
 
       <section className="bg-card p-6">

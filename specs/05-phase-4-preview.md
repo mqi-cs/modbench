@@ -204,3 +204,89 @@ static files from `public/`; `data/` is not web-reachable.
    each draw call names a file that exists, decodes, is canvas-sized and
    has alpha, and compositing a starter build's layers in order yields a
    buffer with a valid PNG signature.
+
+---
+
+## Rollout — the preview is drawn, not composited
+
+The preview no longer stacks prepared photographs. Case, crown, chapter
+ring, bezel insert and hands are drawn as SVG from `lib/preview/art/`;
+the dial stays the vendor's own photograph.
+
+### Why
+
+A run of side-by-side tests against vendor photography settled three
+things in order. Proportion and colour closed most of the gap but left
+flat fills reading as painted card. Gradients across an interior did not
+fix that — polished steel concentrates its brightest values in narrow
+bands at chamfers, so it is the *frequency* of the variation that says
+metal, not its amplitude. A narrow constant-width edge facet did fix it,
+and applying that same facet to every part from one primitive under one
+light is what makes the assembly read as a single object.
+
+### Shapes
+
+Twenty silhouettes, all reachable — `verify-catalog` check 14 fails on any
+shape that matches no part, because dead art reads as coverage that is not
+there.
+
+| Category | Shapes | Distribution |
+|---|---|---|
+| hands | 9 | sword 262 · three-lobe 54 · dauphine 39 · baton 32 · faceted 20 · arrow 12 · cathedral 8 · syringe 7 · pencil 4 |
+| crown | 6 | smooth 115 · knurled 78 · chunky 35 · coin 31 · onion 9 · bolt 4 |
+| bezel insert | 3 | dive 333 · gmt 287 · plain 61 |
+| chapter ring | 2 | plain 308 · angled 70 |
+
+`ring-flat` was defined and then removed: every listing mentioning "flat"
+turned out to be describing the *insert* a ring suits ("flat chapter ring
+for sloped inserts"), so it matched nothing.
+
+### Fallbacks
+
+The search vocabulary from Phase 6 answers "what does this look like" in a
+shopper's words; it does not answer "what shape is this". Crowns and
+chapter rings carried no tags at all, and 55% of hands carried only colour
+tags. `scripts/backfill-shapes.ts` mines form from names and `body_html`,
+preferring an existing reviewed tag over raw text, and every part with no
+evidence takes its category's documented fallback:
+
+| Category | Fallback | Parts | Share |
+|---|---|---|---|
+| hands | `hand-sword` | 233 | 53.2% |
+| bezel insert | `insert-dive` | 187 | 27.5% |
+| chapter ring | `ring-plain` | 111 | 29.4% |
+| crown | `crown-knurled` | 35 | 12.9% |
+
+All 566 are listed in `data/fixtures/shape-fallbacks.json`. A fallback is
+a *visual* default, not a compatibility claim — nothing here reaches
+`lib/compat`, and the distinction is why a default silhouette is
+acceptable where a default fit would not be.
+
+### Amendments
+
+**E. The dial is the only photograph.** Dial coverage is 69.2%, above the
+65% floor. Faking sunburst or applied-index texture in flat facets is a
+much harder, lower-value problem than the silhouettes around it, and dial
+photos were the strongest element in every comparison run.
+
+**F. SVG, not canvas.** The canvas is gone. SVG server-renders, so a build
+page still shows a picture with JavaScript disabled; sharp rasterises it
+directly for the share card; and the art is vector anyway, so there is
+nothing to pre-bake. `renderToStaticMarkup` is imported dynamically in the
+OG route, because Next refuses a static import of `react-dom/server` from
+a component module.
+
+**G. Prepared assets are now dial-only in practice.** `prepare-assets.ts`
+still processes hands, chapter rings and inserts, and roughly 24MB of
+those assets are no longer read by anything. Left in place deliberately:
+deleting them forecloses a photo fallback, and that is a separate call.
+
+### Measurements after the rollout
+
+- Lighthouse: `/` 96, `/styles/[slug]` 97, accessibility 100 on both.
+  First pass came back at 91 — ten previews at sixty `<line>` elements per
+  tick ring is a few thousand DOM nodes, so each ring is now one `<path>`.
+- Build page payload 357KB gzipped against a 348KB baseline. The art map
+  keyed by part id cost 35KB gzipped, almost all of it nanoid keys that
+  gzip cannot compress; `lib/preview/art-codec.ts` indexes by sorted id
+  order instead and carries no keys at all.
