@@ -64,3 +64,56 @@ export function inkOn(hex: string): string {
   const l = (((n >> 16) & 255) * 0.299 + ((n >> 8) & 255) * 0.587 + (n & 255) * 0.114) / 255;
   return l > 0.55 ? "#26282c" : "#ececea";
 }
+
+/**
+ * A four-tone metal ramp plus the contrast its finish implies.
+ *
+ * The case used to be drawn from the STEEL constants unconditionally, so
+ * 130 PVD-black and 97 gold cases in the catalog all rendered as bare
+ * steel -- a part shown in the wrong colour, on a tool whose claim is
+ * accuracy. The ramp keeps the SAME relative light/body/mid/dark spacing
+ * whatever the base colour, because that spacing is what the edge facets
+ * are tuned against; only the hue moves.
+ */
+export interface MetalFamily {
+  light: string;
+  body: string;
+  mid: string;
+  dark: string;
+  /** Facet contrast. Polished metal throws a harder edge than sandblasted. */
+  facet: number;
+}
+
+function ramp(base: string, facet: number): MetalFamily {
+  return {
+    light: shiftHex(base, 255, 0.17),
+    body: base,
+    mid: shiftHex(base, 0, 0.1),
+    dark: shiftHex(base, 0, 0.25),
+    facet,
+  };
+}
+
+function shiftHex(hex: string, target: number, t: number): string {
+  const n = parseInt(hex.slice(1), 16);
+  const ch = (sh: number) => Math.round((((n >> sh) & 255) * (1 - t) + target * t));
+  return "#" + [16, 8, 0].map((sh) => ch(sh).toString(16).padStart(2, "0")).join("");
+}
+
+/**
+ * Metal family for a case, bezel or bracelet, from its own finish tags.
+ *
+ * Order matters: `rose-gold` is checked before `gold-tone` because the
+ * vendor string "Rose Gold Finish" contains "gold" and carries both tags.
+ */
+export function metalFamily(tags: readonly string[]): MetalFamily {
+  // Sandblasted and matte cases scatter light; polished ones concentrate
+  // it. Everything else sits between.
+  const facet = tags.includes("polished") ? 0.5 : tags.includes("matte") ? 0.28 : tags.includes("brushed") ? 0.36 : 0.42;
+  if (tags.includes("rose-gold")) return ramp("#b0846f", facet);
+  if (tags.includes("gold-tone")) return ramp("#b6902f", facet);
+  if (tags.includes("black")) return ramp("#3a3c40", facet);
+  if (tags.includes("grey")) return ramp("#6e7175", facet);
+  if (tags.includes("blue")) return ramp("#4a5a72", facet);
+  return ramp(STEEL.measured, facet);
+}

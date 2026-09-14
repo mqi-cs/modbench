@@ -144,7 +144,16 @@ describe("style builds", () => {
         // every warning is one of the known catalog-wide gaps rather than
         // something about these specific parts.
         expect(view.result.status).not.toBe("blocked");
-        const CATALOG_WIDE = new Set(["unverified-part", "date-window-alignment", "day-window-presence", "hand-stack-clearance"]);
+        // strap-fit joined this set once straps started being chosen for these
+        // builds. Both warnings the rule can emit are "can't confirm" -- a
+        // missing lug width (224 of 252 straps state none) or an unidentified
+        // case line. Neither says anything about THESE parts. Every real
+        // mismatch the rule finds -- wrong width, wrong end-link profile -- is
+        // an ERROR, and errors still fail the build above.
+        const CATALOG_WIDE = new Set([
+          "unverified-part", "date-window-alignment", "day-window-presence",
+          "hand-stack-clearance", "strap-fit",
+        ]);
         const specific = view.result.findings
           .filter((f) => f.severity === "warning" && !CATALOG_WIDE.has(f.ruleKey))
           .map((f) => `${f.ruleKey}: ${f.message}`);

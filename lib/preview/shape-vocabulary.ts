@@ -67,7 +67,13 @@ export const SHAPES: ShapeDef[] = [
   // rubber are not separate shapes here -- at this angle they differ in
   // colour and stitching, both of which the band already carries.
   { id: "strap-nato", category: "strap", label: "pass-through", evidence: /\bnato\b|\bzulu\b|\bsingle\s?pass\b|\bseatbelt\b|\bperlon\b/i },
-  { id: "strap-bracelet", category: "strap", label: "bracelet", evidence: /\bbracelet\b|\boyster\b|\bjubilee\b|\bpresident\b|\bengineer\b|\bmilanese\b|\bmesh\b|\bbeads?\s?of\s?rice\b|\bsuper\s?-?\s?engineer\b|\bnautilus\b/i },
+  // Jubilee and Oyster are split out because they differ where a bracelet
+  // actually reads from above: a Jubilee is five lanes with narrow
+  // polished centre links, an Oyster three broad brushed ones. Anything
+  // else evidenced as a bracelet takes the generic three-lane drawing.
+  { id: "strap-jubilee", category: "strap", label: "jubilee bracelet", evidence: /\bjubilee\b|\bbeads?\s?of\s?rice\b|\bpresident\b/i },
+  { id: "strap-oyster", category: "strap", label: "oyster bracelet", evidence: /\boyster\b|\bsuper\s?-?\s?engineer\b|\bengineer\b/i },
+  { id: "strap-bracelet", category: "strap", label: "bracelet", evidence: /\bbracelet\b|\bmilanese\b|\bmesh\b|\bnautilus\b/i },
   { id: "strap-band", category: "strap", label: "band", evidence: /\bleather\b|\brubber\b|\bfkm\b|\bsilicone\b|\bnylon\b|\bcanvas\b|\bsuede\b|\bcordovan\b|\btropic\b|\bwaffle\b|\bstrap\b/i },
 ];
 

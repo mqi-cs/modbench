@@ -5,7 +5,7 @@
 
 import { C, CROWN_ANGLE, at, mm, type WatchMm } from "./geometry";
 import { CircleFacet, FACET_PX, PathFacet, RectFacet, facetPair, shift } from "./facets";
-import { RECESS, STEEL, bodyColour, inkOn, metalColour } from "./palette";
+import { RECESS, STEEL, bodyColour, inkOn, metalFamily, type MetalFamily } from "./palette";
 import { StepShadow } from "./depth";
 
 /** Lug thickness at the root and at the tip. Read off vendor case photos. */
@@ -169,27 +169,27 @@ function guardPt(R: number, deg: number): [number, number] {
  * that job, which is why the case holds its silhouette against a light
  * page AND a dark one without either being tuned for.
  */
-export function CaseBody({ m }: { m: WatchMm }) {
+export function CaseBody({ m, metal }: { m: WatchMm; metal: MetalFamily }) {
   const caseR = mm(m.caseDiameter) / 2;
   const chamferR = caseR - mm(1.0);
   const seatR = mm(m.insertOuter) / 2 + mm(0.6);
   const apertureR = mm(m.dialAperture) / 2 + mm(1.2);
   const outline = caseOutline(m);
-  const caseF = facetPair(STEEL.body);
-  const chamF = facetPair(STEEL.light);
-  const seatF = facetPair(STEEL.dark);
+  const caseF = facetPair(metal.body, metal.facet);
+  const chamF = facetPair(metal.light, metal.facet);
+  const seatF = facetPair(metal.dark, metal.facet);
 
   return (
     <g>
-      <path d={outline} fill={STEEL.body} />
+      <path d={outline} fill={metal.body} />
       <PathFacet d={outline} bright={caseF.bright} dark={caseF.dark} />
       {/* The chamfer is a rim, not a disc. Filled edge to edge it covered
           the case top, and the lugs then read as bars floating behind a
           lighter circle rather than as part of the same piece of steel. */}
-      <circle cx={C} cy={C} r={chamferR} fill="none" stroke={STEEL.light} strokeWidth={mm(1.4)} />
+      <circle cx={C} cy={C} r={chamferR} fill="none" stroke={metal.light} strokeWidth={mm(1.4)} />
       <CircleFacet r={chamferR - FACET_PX / 2} bright={chamF.bright} dark={chamF.dark} />
       {/* A bore, so its lit arc is the far wall. */}
-      <circle cx={C} cy={C} r={seatR} fill={STEEL.dark} />
+      <circle cx={C} cy={C} r={seatR} fill={metal.dark} />
       <CircleFacet r={seatR - FACET_PX / 2} bright={seatF.bright} dark={seatF.dark} inner />
       <StepShadow r={seatR} width={mm(0.9)} opacity={0.3} />
       <circle cx={C} cy={C} r={apertureR} fill={RECESS} />
@@ -199,7 +199,16 @@ export function CaseBody({ m }: { m: WatchMm }) {
 }
 
 /**
- * Crown, seen from directly above: a block standing off the case flank.
+ * Crown, seen from directly above: a stem, a knurled barrel and a flat cap.
+ *
+ * Redrawn against the vendors' own crown photographs, which show three
+ * things the previous flat rectangle had none of. There is a distinct
+ * STEM between the case flank and the crown head. The barrel is covered
+ * in knurling, and knurling is the crown's defining feature at any size --
+ * it is a repeating bright-ridge / dark-groove pair, which is the same
+ * frequency-not-amplitude finding the whole shading investigation rests
+ * on, just at a smaller pitch. And the outer end is a flat CAP, smoother
+ * and a touch lighter than the barrel, separated by a chamfer.
  *
  * Diameter is the vendor's own where one is stated (9.6% of crowns say
  * "Crown diameter: 7mm" or 8mm outright) and 7.0mm otherwise. How far it
@@ -207,30 +216,87 @@ export function CaseBody({ m }: { m: WatchMm }) {
  * photographs at unknown angles, so it stays an estimate.
  */
 export function Crown({ shape, tags, m }: { shape: string; tags: readonly string[]; m: WatchMm }) {
+  const metal = metalFamily(tags);
   const width = mm(m.crown);
-  const out = mm(shape === "crown-chunky" ? 3.4 : shape === "crown-onion" ? 3.2 : 2.8);
+  const out = mm(shape === "crown-chunky" ? 3.8 : shape === "crown-onion" ? 3.4 : 3.1);
   const caseR = mm(m.caseDiameter) / 2;
-  // Starts well inside the guard shoulder, so the crown reads as emerging
-  // from the case rather than balanced on its edge on a stalk.
-  const x0 = caseR - mm(2.4);
-  const body = tags.includes("gold-tone") ? "#b58c34" : tags.includes("black") ? "#3a3c40" : STEEL.mid;
-  const f = facetPair(body);
-  const teeth = shape === "crown-coin" ? 14 : shape === "crown-knurled" ? 9 : shape === "crown-chunky" ? 7 : 0;
+
+  // Starts inside the guard shoulder so the crown reads as emerging from
+  // the case rather than balanced on its edge.
+  const stemX = caseR - mm(2.4);
+  const x0 = caseR - mm(0.4);
+  const x1 = x0 + out;
+  const capW = mm(0.62);
+  const f = facetPair(metal.body, metal.facet);
+  const capF = facetPair(metal.light, metal.facet);
+
+  // Knurl pitch, in teeth across the crown's diameter. A coin edge is
+  // finer than a knurl, which is finer than a chunky grip.
+  const teeth = shape === "crown-coin" ? 15 : shape === "crown-knurled" ? 11 : shape === "crown-chunky" ? 8 : 0;
+  const pitch = width / Math.max(teeth, 1);
+  const ridge = shift(metal.body, "light", 0.34);
+  const groove = shift(metal.body, "dark", 0.34);
 
   return (
     <g transform={`rotate(${CROWN_ANGLE - 90} ${C} ${C})`}>
       <g transform={`translate(${C} ${C})`}>
+        {/* Stem: the tube the crown screws down onto, mostly hidden. */}
+        <rect x={stemX} y={-width * 0.3} width={x0 - stemX + mm(0.3)} height={width * 0.6} fill={metal.mid} />
+        <RectFacet x={stemX} y={-width * 0.3} w={x0 - stemX + mm(0.3)} h={width * 0.6} bright={f.bright} dark={f.dark} width={FACET_PX * 0.5} />
+
         {shape === "crown-onion" ? (
-          <ellipse cx={x0 + out * 0.55} cy={0} rx={out * 0.62} ry={width / 2} fill={body} />
+          <ellipse cx={x0 + out * 0.55} cy={0} rx={out * 0.62} ry={width / 2} fill={metal.body} />
         ) : (
-          <rect x={x0} y={-width / 2} width={out} height={width} rx={mm(shape === "crown-bolt" ? 1.4 : 0.35)} fill={body} />
+          <rect x={x0} y={-width / 2} width={out} height={width} rx={mm(shape === "crown-bolt" ? 1.3 : 0.3)} fill={metal.body} />
         )}
-        {Array.from({ length: teeth }, (_, i) => {
-          const y = -width / 2 + (width * (i + 0.5)) / teeth;
-          return <rect key={i} x={x0 + mm(0.3)} y={y - mm(0.11)} width={out - mm(1.1)} height={mm(0.22)} fill={shift(body, "dark", 0.28)} />;
-        })}
-        {shape === "crown-bolt" && <rect x={x0 + out * 0.3} y={-mm(0.35)} width={out * 0.55} height={mm(0.7)} fill={shift(body, "dark", 0.35)} />}
-        <RectFacet x={x0} y={-width / 2} w={out} h={width} bright={f.bright} dark={f.dark} width={FACET_PX * 0.7} />
+
+        {/* Knurling: one bright ridge and one dark groove per tooth. A
+            single dark bar per tooth read as printed stripes; the pair is
+            what makes it read as cut metal. */}
+        {teeth > 0 &&
+          Array.from({ length: teeth }, (_, i) => {
+            const y = -width / 2 + pitch * (i + 0.5);
+            return (
+              <g key={i}>
+                <rect x={x0 + mm(0.25)} y={y - pitch * 0.34} width={out - capW - mm(0.5)} height={pitch * 0.3} fill={ridge} opacity={0.85} />
+                <rect x={x0 + mm(0.25)} y={y + pitch * 0.04} width={out - capW - mm(0.5)} height={pitch * 0.3} fill={groove} opacity={0.85} />
+              </g>
+            );
+          })}
+
+        {shape === "crown-bolt" && (
+          <>
+            <rect x={x0 + out * 0.22} y={-mm(0.32)} width={out * 0.6} height={mm(0.64)} fill={shift(metal.body, "dark", 0.4)} />
+            <rect x={x0 + out * 0.22} y={-mm(0.32)} width={out * 0.6} height={mm(0.2)} fill={shift(metal.body, "light", 0.3)} />
+          </>
+        )}
+
+        {/* Flat cap at the outer end, with its own chamfer. */}
+        {shape !== "crown-onion" && (
+          <>
+            <rect x={x1 - capW} y={-width / 2} width={capW} height={width} fill={metal.light} />
+            <RectFacet x={x1 - capW} y={-width / 2} w={capW} h={width} bright={capF.bright} dark={capF.dark} width={FACET_PX * 0.45} />
+          </>
+        )}
+
+        {/* An onion crown is a dome, so it takes the barrel facet as an
+            outline on the ellipse rather than a rectangle round it --
+            drawn as a rect it grew a box round the dome. */}
+        {shape === "crown-onion" ? (
+          <ellipse
+            cx={x0 + out * 0.55}
+            cy={0}
+            rx={out * 0.62 - FACET_PX * 0.35}
+            ry={width / 2 - FACET_PX * 0.35}
+            fill="none"
+            stroke={f.bright}
+            strokeWidth={FACET_PX * 0.7}
+            strokeDasharray={`${(out + width) * 0.55} ${(out + width) * 2}`}
+            transform={`rotate(-135 ${x0 + out * 0.55} 0)`}
+          />
+        ) : (
+          <RectFacet x={x0} y={-width / 2} w={out} h={width} bright={f.bright} dark={f.dark} width={FACET_PX * 0.7} />
+        )}
       </g>
     </g>
   );
@@ -269,7 +335,7 @@ export function ChapterRing({ shape, tags, m }: { shape: string; tags: readonly 
 }
 
 /** Bezel ring and its insert. The annulus is sized; the printing is the shape. */
-export function BezelAndInsert({ shape, tags, m }: { shape: string; tags: readonly string[]; m: WatchMm }) {
+export function BezelAndInsert({ shape, tags, m, metal }: { shape: string; tags: readonly string[]; m: WatchMm; metal: MetalFamily }) {
   // Inside the case rim, not flush with it. Drawn edge to edge the bezel
   // covered every pixel of case top surface, which left the lugs attached
   // to nothing visible.
@@ -278,7 +344,9 @@ export function BezelAndInsert({ shape, tags, m }: { shape: string; tags: readon
   const ii = mm(m.insertInner) / 2;
   const body = bodyColour(tags, "#22242a");
   const ink = inkOn(body);
-  const ringF = facetPair(STEEL.body);
+  // The rotating bezel is part of the case, machined in the same metal --
+  // a PVD case with a bare steel bezel ring is not a thing anyone sells.
+  const ringF = facetPair(metal.body, metal.facet);
   const insF = facetPair(body, 0.55);
 
   // A 24-hour scale reads twice round, a count-up dive scale once, and a
@@ -291,7 +359,7 @@ export function BezelAndInsert({ shape, tags, m }: { shape: string; tags: readon
       {/* One path, not sixty <line> elements. Identical output, and it
           keeps a page of ten previews to a few hundred DOM nodes rather
           than a few thousand -- which is worth six Lighthouse points. */}
-      <path d={ticks(outerR - mm(1), outerR, 60)} stroke={shift(STEEL.body, "dark", 0.35)} strokeWidth={1.5} strokeLinecap="round" opacity={0.55} />
+      <path d={ticks(outerR - mm(1), outerR, 60)} stroke={shift(metal.body, "dark", 0.35)} strokeWidth={1.5} strokeLinecap="round" opacity={0.55} />
       <CircleFacet r={outerR - FACET_PX / 2} bright={ringF.bright} dark={ringF.dark} />
 
       <path
@@ -339,44 +407,103 @@ export function BezelAndInsert({ shape, tags, m }: { shape: string; tags: readon
  * And without it the lugs point at nothing, which is what made them read
  * as free-floating tabs in the first place.
  *
- * Strap and bracelet DO differ at this angle, which is why they are
- * separate silhouettes rather than one recoloured stub: a bracelet fills
- * the lug gap in steel and breaks into links across its width, a band sits
- * a little inside the gap with stitching down its length, and a NATO
- * passes under the case as one continuous strip. Drawn first, so the case
- * covers the end that tucks under it.
+ * A BRACELET IS NOT A COLOURED BLOCK
+ *
+ * It is the largest metallic area after the case, and drawn as one filled
+ * rectangle with three seam lines it read as exactly that -- a block.
+ * Against the vendors' own bracelet photographs the structure that
+ * actually carries it is two-dimensional: LANES down the length (three
+ * broad ones on an Oyster, five with narrow polished centres on a
+ * Jubilee) crossed by a link row every few millimetres, with every lane
+ * edge and every row edge catching the light. So each lane and each row
+ * gets the same edge facet the rest of the assembly uses, at the same
+ * width, under the same light.
+ *
+ * Colour comes from the part's own finish tags through metalFamily, not
+ * from a fixed steel constant -- a rose-gold Oyster and a PVD one are
+ * both in this catalog.
  */
 export function Strap({ shape, tags, m, reach }: { shape: string; tags: readonly string[]; m: WatchMm; reach: number }) {
   const gap = mm(m.lugWidth);
   const from = mm(m.caseDiameter) / 2 - mm(2.5);
-  const bracelet = shape === "strap-bracelet";
   const nato = shape === "strap-nato";
-  const body = bracelet ? metalColour(tags) : bodyColour(tags, "#3b3733");
-  const f = facetPair(body, bracelet ? 0.4 : 0.26);
-  const w = nato ? gap : bracelet ? gap : gap - mm(1.2);
+  const bracelet = shape === "strap-bracelet" || shape === "strap-jubilee" || shape === "strap-oyster";
+  const metal = metalFamily(tags);
+  const body = bracelet ? metal.body : bodyColour(tags, "#3b3733");
+  const f = facetPair(body, bracelet ? metal.facet : 0.26);
+  const w = nato || bracelet ? gap : gap - mm(1.2);
   const ink = shift(body, "light", 0.3);
 
+  /**
+   * Link lanes across the width, as fractions, left to right.
+   *
+   * An Oyster is three links, a broad centre between two outers. A
+   * Jubilee is five, two broad brushed outers around three narrow
+   * polished centres -- which is the thing that makes a Jubilee
+   * recognisable at a glance, so it is worth the extra geometry.
+   */
+  const laneFractions = shape === "strap-jubilee" ? [0.28, 0.11, 0.12, 0.11, 0.28] : [0.28, 0.44, 0.28];
+  const laneTotal = laneFractions.reduce((a, b) => a + b, 0);
+  const polishedCentre = shape === "strap-jubilee" ? [1, 2, 3] : [];
+  // Real link pitch, off the vendor photographs: a Jubilee row is about
+  // 1.6mm deep and an Oyster row about 2.3mm. Set looser than this the
+  // rows vanish at preview size and the bracelet goes back to a block.
+  const linkPitch = mm(shape === "strap-jubilee" ? 1.6 : 2.3);
+
+  /** One arm, from the case out to the frame edge. */
   const arm = (sign: number) => {
-    const y0 = sign < 0 ? -reach : from;
+    const y0 = C + (sign < 0 ? -reach : from);
     const h = reach - from;
+    const left = C - w / 2;
+
+    if (!bracelet) {
+      return (
+        <g key={sign}>
+          <rect x={left} y={y0} width={w} height={h} rx={mm(1.1)} fill={body} />
+          <RectFacet x={left} y={y0} w={w} h={h} bright={f.bright} dark={f.dark} width={FACET_PX * 0.8} />
+          {!nato &&
+            [-1, 1].map((sd) => (
+              <rect key={sd} x={C + sd * (w / 2 - mm(1.1)) - mm(0.2)} y={y0} width={mm(0.4)} height={h} fill={ink} opacity={0.55} />
+            ))}
+        </g>
+      );
+    }
+
+    const rows = Math.max(1, Math.round(h / linkPitch));
+    const rowH = h / rows;
+    let x = left;
+
     return (
       <g key={sign}>
-        <rect x={C - w / 2} y={C + y0} width={w} height={h} rx={bracelet ? mm(0.4) : mm(1.1)} fill={body} />
-        <RectFacet x={C - w / 2} y={C + y0} w={w} h={h} bright={f.bright} dark={f.dark} width={FACET_PX * 0.8} />
-        {bracelet
-          ? // Link seams run ACROSS a bracelet, and the centre link is
-            // narrower than the outers -- the two things that read as
-            // "bracelet" rather than "band" at this size.
-            [0.3, 0.62, 0.94].map((t) => (
-              <rect key={t} x={C - w / 2} y={C + y0 + h * t} width={w} height={mm(0.34)} fill={shift(body, "dark", 0.34)} />
-            ))
-          : // Stitching runs ALONG a band, inset from both edges.
-            !nato && [-1, 1].map((s) => (
-              <rect key={s} x={C + s * (w / 2 - mm(1.1)) - mm(0.2)} y={C + y0} width={mm(0.4)} height={h} fill={ink} opacity={0.55} />
-            ))}
-        {bracelet && (
-          <rect x={C - w * 0.17} y={C + y0} width={w * 0.34} height={h} fill={shift(body, "light", 0.08)} />
-        )}
+        {laneFractions.map((frac, i) => {
+          const lw = (w * frac) / laneTotal;
+          const lx = x;
+          x += lw;
+          // Polished centre links sit a shade lighter than the brushed
+          // outers, which is the whole visual difference on a Jubilee.
+          const laneBody = polishedCentre.includes(i) ? shift(body, "light", 0.15) : body;
+          const laneF = facetPair(laneBody, metal.facet);
+          return (
+            <g key={i}>
+              <rect x={lx} y={y0} width={lw} height={h} fill={laneBody} />
+              {/* One link row every few millimetres, each with a lit top
+                  edge. Kept low-contrast on purpose: at full facet
+                  strength the rows stack into a bright grid and the
+                  bracelet reads as mesh rather than solid links. */}
+              {Array.from({ length: rows }, (_, r) => (
+                <rect key={r} x={lx} y={y0 + rowH * r} width={lw} height={FACET_PX * 0.5} fill={laneF.bright} opacity={0.5} />
+              ))}
+              {Array.from({ length: rows }, (_, r) => (
+                <rect key={`d${r}`} x={lx} y={y0 + rowH * (r + 1) - FACET_PX * 0.5} width={lw} height={FACET_PX * 0.5} fill={laneF.dark} opacity={0.42} />
+              ))}
+              {/* Lane edges, full strength: the long seams down a bracelet
+                  are its strongest highlight in every vendor photograph. */}
+              <rect x={lx} y={y0} width={FACET_PX * 0.55} height={h} fill={laneF.bright} />
+              <rect x={lx + lw - FACET_PX * 0.55} y={y0} width={FACET_PX * 0.55} height={h} fill={laneF.dark} />
+            </g>
+          );
+        })}
+        <RectFacet x={left} y={y0} w={w} h={h} bright={f.bright} dark={f.dark} width={FACET_PX * 0.8} />
       </g>
     );
   };

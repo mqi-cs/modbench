@@ -118,6 +118,25 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* The dedup ask. Placed after the honesty section deliberately:
+            it is a request for help with a gap the page has just admitted
+            to, which is the only framing that earns a stranger's time. */}
+        <section className="mx-auto max-w-[1100px] px-6 py-12">
+          <h2 className="text-[20px] font-semibold tracking-tight">Spotted the same part twice?</h2>
+          <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-graphite">
+            Vendors sell a lot of the same physical parts under their own names, and right now we treat every
+            vendor&rsquo;s copy as a separate part — which is why you rarely see two prices for one thing. Matching them
+            automatically gets it wrong often enough that we don&rsquo;t. If you already know two listings are the same
+            part, that&rsquo;s something we can&rsquo;t work out on our own.
+          </p>
+          <Link
+            href="/submit-match"
+            className="mt-4 inline-block border border-rule-strong bg-card px-4 py-2 text-[14px] font-medium hover:border-ink"
+          >
+            Tell us two listings are the same part
+          </Link>
+        </section>
       </main>
 
       <footer className="border-t border-rule px-6 py-8 text-center text-[12px] text-graphite">

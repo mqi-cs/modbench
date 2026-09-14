@@ -24,8 +24,10 @@ import { tagsFromName, STYLE_TAGS, TAG_NAMES } from "../lib/style-vocabulary";
 
 // Straps joined the list when they started being drawn: a strap is the
 // largest block of colour on a build after the dial, and its name is the
-// only place that colour is recorded.
-const TAGGABLE = ["dial", "hands", "bezel_insert", "strap"];
+// only place that colour is recorded. Cases joined for a blunter reason
+// -- 130 of 401 are named PVD Black, Matte Black or DLC and 97 are gold,
+// and every one of them was being drawn in steel.
+const TAGGABLE = ["dial", "hands", "bezel_insert", "strap", "case"];
 
 function main() {
   const dryRun = process.argv.includes("--dry-run");

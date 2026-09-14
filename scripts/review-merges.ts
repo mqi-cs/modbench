@@ -15,10 +15,11 @@
 //   pnpm review-merges accept <id> <canonical-part-id> "reason"
 //   pnpm review-merges reject <id> "reason"
 
+import { existsSync, rmSync } from "node:fs";
 import { eq, inArray } from "drizzle-orm";
 import { nanoid } from "nanoid";
 import { db, sqlite } from "../lib/db/client";
-import { listings, mergeCandidates, parts, vendors } from "../lib/db/schema";
+import { familyExceptions, listings, mergeCandidates, partHashes, parts, vendors } from "../lib/db/schema";
 import { fromJsonColumn } from "../lib/db/json";
 
 function candidate(id: string) {
@@ -133,6 +134,18 @@ function accept(id: string, canonicalId: string, reason: string) {
         `${reason.trim()} [reviewed from merge candidate ${row.id}; submitter note: ${row.note ?? "none"}]`,
         now,
       );
+      // Rows that hang off the duplicate and must go with it. Both are
+      // derived, not source data: a perceptual hash is recomputed by
+      // backfill-phash, and a family exception describes a part row that
+      // is about to stop existing. Without this the FOREIGN KEY on
+      // part_hashes fails and the whole merge rolls back.
+      db.delete(partHashes).where(eq(partHashes.partId, dupe.id)).run();
+      // And the prepared preview asset, which is keyed by part id and
+      // would otherwise be left on disk with nothing pointing at it --
+      // verify-catalog's orphaned-asset check catches exactly this.
+      const asset = `public/assets/${dupe.category}/${dupe.id}.webp`;
+      if (existsSync(asset)) rmSync(asset);
+      db.delete(familyExceptions).where(eq(familyExceptions.partId, dupe.id)).run();
       db.delete(parts).where(eq(parts.id, dupe.id)).run();
       console.log(`Merged "${dupe.name}" into ${canonical.name}.`);
       merged++;

@@ -173,6 +173,39 @@ the conflicting-attributes check in verify-catalog covers it unchanged.
 The two routes share one queue and a pair found by both is labelled
 `source: 'both'`.
 
+**SCOPE NARROWED, 2026-09-14. The remaining blocker is PHOTOGRAPHY, not
+matching technique.** The hash works on normalised assets. What it cannot
+do is run on categories nobody photographs top-down, which is D9's
+problem, not a matching problem. So:
+
+- **The submission path at `/submit-match` is now the PRIMARY mechanism.**
+  A modder who knows two listings are the same part is better ground truth
+  than any hash, and it works for every category including the ones with
+  no assets at all.
+- **pHash is a supplementary signal**, used to nominate candidates at
+  scale and to corroborate a human claim (`source: 'both'`).
+- **Do not invest further in pHash coverage or in chasing D9 photography**
+  until the submission path has been in front of real users.
+
+**DO NOT RELAX THE COLOUR-TAG GATE.** The hash is computed on greyscale
+pixels and is therefore blind to finish. The same MM1000 hand set in
+polished silver and in polished gold scores 16/256 -- well inside any
+threshold worth using. Distance alone would merge them and assert that a
+silver part and a gold part are one SKU: destructive, because merging
+deletes a `parts` row, and exactly the false-positive class this project
+exists to prevent. Candidates are gated on distance AND colour agreement,
+and that gate is load-bearing.
+
+**First review round, 2026-09-14: 3 merged, 8 rejected.** Eleven
+candidates cleared distance <= 40 with agreeing colour tags; only three
+survived looking at the two photographs side by side. Seven of the eight
+rejections were LUME COLOUR -- cream patina against white C3, or a lume
+insert present on one listing and not the other -- which the colour
+vocabulary does not model at all, because `black` describes the frame. So
+the realistic precision of the automated gate on hands is about 27%, and
+human review is not a formality on top of it. If lume colour is ever
+added to the vocabulary, most of those eight become decidable.
+
 **Guardrails that keep this cheap:**
 - The 145 candidate pairs (Investigation A, `data/fixtures/investigation-a-cross-vendor-overlap.md`) and the Task 5 negative result (`data/fixtures/task5-perceptual-hash-check.md`, `phash-raw-results.json`) are the input set for the retry — don't regenerate the candidate list from scratch, re-check it against normalized images.
 - `part_merges` (schema + `scripts/merge-parts.ts` + the verify-catalog.ts conflicting-attributes check) already exists from the one manual merge done in Task 4 (SRP Turtle sapphire crystal) — restoring dedup is "run more merges through the existing mechanism," not "build the mechanism."
@@ -222,6 +255,39 @@ writes `part_merges` through the same mechanics `merge-parts.ts` used, so
 the conflicting-attributes check in verify-catalog covers it unchanged.
 The two routes share one queue and a pair found by both is labelled
 `source: 'both'`.
+
+**SCOPE NARROWED, 2026-09-14. The remaining blocker is PHOTOGRAPHY, not
+matching technique.** The hash works on normalised assets. What it cannot
+do is run on categories nobody photographs top-down, which is D9's
+problem, not a matching problem. So:
+
+- **The submission path at `/submit-match` is now the PRIMARY mechanism.**
+  A modder who knows two listings are the same part is better ground truth
+  than any hash, and it works for every category including the ones with
+  no assets at all.
+- **pHash is a supplementary signal**, used to nominate candidates at
+  scale and to corroborate a human claim (`source: 'both'`).
+- **Do not invest further in pHash coverage or in chasing D9 photography**
+  until the submission path has been in front of real users.
+
+**DO NOT RELAX THE COLOUR-TAG GATE.** The hash is computed on greyscale
+pixels and is therefore blind to finish. The same MM1000 hand set in
+polished silver and in polished gold scores 16/256 -- well inside any
+threshold worth using. Distance alone would merge them and assert that a
+silver part and a gold part are one SKU: destructive, because merging
+deletes a `parts` row, and exactly the false-positive class this project
+exists to prevent. Candidates are gated on distance AND colour agreement,
+and that gate is load-bearing.
+
+**First review round, 2026-09-14: 3 merged, 8 rejected.** Eleven
+candidates cleared distance <= 40 with agreeing colour tags; only three
+survived looking at the two photographs side by side. Seven of the eight
+rejections were LUME COLOUR -- cream patina against white C3, or a lume
+insert present on one listing and not the other -- which the colour
+vocabulary does not model at all, because `black` describes the frame. So
+the realistic precision of the automated gate on hands is about 27%, and
+human review is not a formality on top of it. If lume colour is ever
+added to the vocabulary, most of those eight become decidable.
 
 **Guardrails that keep this cheap:**
 - The standing unmatched-product-type report already does the finding; restoring this is "work the existing list," not "go looking again."

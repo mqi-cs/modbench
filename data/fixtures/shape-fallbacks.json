@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T15:58:27.789Z",
+  "generatedAt": "2026-09-14T21:22:18.620Z",
   "note": "Parts with no shape evidence in the vendor's own words. Each took its category's documented fallback.",
   "fallbacks": [
     {
@@ -3397,6 +3397,72 @@
       "category": "hands",
       "name": "Watch Hands: VK Vantage Steel",
       "assigned": "hand-sword"
+    },
+    {
+      "id": "nzqctLxjCPMsGISWOHwr-",
+      "category": "strap",
+      "name": "Cotton Straps - Black",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "-8GWOThYM1RlG9d90fhWG",
+      "category": "strap",
+      "name": "Cotton Straps - Brown",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "He2HH1aeFrgoiXntwk6en",
+      "category": "strap",
+      "name": "Cotton Straps - Gray",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "AQoxpIk1V6tOW4PfBm3yB",
+      "category": "strap",
+      "name": "Cotton Straps - Khaki",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "DQyPsCAbcqL0jAJDhCOq7",
+      "category": "strap",
+      "name": "Cotton Straps - Navy Blue",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "NHkmiJqnO9e8tVDzyTcsH",
+      "category": "strap",
+      "name": "Cotton Straps - Olive Green",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "Kx0mE2ss6kBpkprPkXAOT",
+      "category": "strap",
+      "name": "PARA Elastic - Black with Orange + White Stripes",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "kw-8-MIXcxtY4ZiGtuDpx",
+      "category": "strap",
+      "name": "PARA Elastic - Black with Red + White Stripes",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "dL0UNsB8SaY_hWIP0F42u",
+      "category": "strap",
+      "name": "PARA Elastic - Light Khaki with Brown + White Stripes",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "FJGmDmLXh5veyU6n3gkeh",
+      "category": "strap",
+      "name": "Woven Camo - Arctic - Double Pass",
+      "assigned": "strap-band"
+    },
+    {
+      "id": "ROl3Kf1kqTXq04hmv3GJV",
+      "category": "strap",
+      "name": "Woven Camo - Desert - Double Pass",
+      "assigned": "strap-band"
     }
   ]
 }

@@ -399,3 +399,34 @@ the case is invisible from above.
 "Steel Bezel Insert: Nautical Blue" carries both `silver-tone` and `blue`
 — and with metal tones checked first, every such insert drew steel
 coloured. Chromatic tags now win; metal tones are the fallback.
+
+---
+
+## Saturation — closed, both levers rejected (2026-09-14)
+
+The GMT build's dial reads as a coloured object in an otherwise neutral
+frame. The diagnosis held up: it is saturation and detail density, not
+"photograph against drawing" — that dial is itself a flat studio shot.
+Two levers were built and both are rejected.
+
+**Warming the drawn metal toward the dial. Rejected.** Tested at two fixed
+strengths and once adaptively, against three saturated builds and one
+unsaturated control. The control is what settles it: the black dive
+classic goes cream at 0.6, khaki at 1.2 and salmon under the adaptive
+tint, for very little gain on the saturated builds. Warming does not
+reduce the mismatch so much as move the neutral element from grey to
+beige — it is still the only unsaturated thing in the frame, and it has
+stopped reading as steel. The adaptive variant also turned out unstable:
+all four test dials produced roughly the same tint direction, so "toward
+this dial" was really "orange" with extra steps.
+
+**Desaturating the dial photograph instead. Rejected, for a different
+reason.** It behaves much better — the metals stay steel, the control
+build is untouched, and −20% visibly helps the GMT. But it shows a
+vendor's dial in a colour the product is not, on a tool whose entire claim
+is accuracy. That disqualifies it regardless of how it looks.
+
+**Decision: ship as-is.** This is closed, not deferred. If the preview is
+ever pushed further here, the thing to try is interior surface character
+(brushing direction, sunburst), which is the same conclusion Route B's
+closure reached from the other direction.

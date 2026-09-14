@@ -50,7 +50,12 @@ function main() {
   for (const part of targets) {
     const category = part.category as ShapeCategory;
     const handle = (part.sourceUrl || "").split("/products/")[1]?.split(/[?#]/)[0] ?? "";
-    const text = `${part.name} ${bodies.get(handle) ?? ""}`;
+    // Straps match on the NAME only. Vendors name them unusually
+    // explicitly ("Oyster Bracelet 20/16mm", "Full Grain Cowhide Leather
+    // Strap"), and the body copy does the opposite -- leather listings
+    // that mention "bracelet" in passing were being classified as metal
+    // bracelets and drawn with links.
+    const text = category === "strap" ? part.name : `${part.name} ${bodies.get(handle) ?? ""}`;
     const attributes = fromJsonColumn<Record<string, unknown>>(part.attributes);
     const styleTags = Array.isArray(attributes.styleTags) ? (attributes.styleTags as string[]) : [];
     // A reviewed tag beats raw text; raw text beats nothing.

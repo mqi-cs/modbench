@@ -127,7 +127,12 @@ export function loadCatalog(): CatalogPayload {
       : ((attributes.renderMm as RenderMm | undefined) ?? undefined);
     const hasMm = mm !== undefined && Object.keys(mm).length > 0;
     if (isCase) {
-      if (hasMm) art[p.id] = { shape: "", tags: [], mm };
+      // Tags as well as millimetres: finish is what tells a PVD case from
+      // a steel one, and both are display-only.
+      const caseTags = Array.isArray(attributes.styleTags)
+        ? (attributes.styleTags as string[]).filter((t) => artTags.has(t))
+        : [];
+      if (hasMm || caseTags.length > 0) art[p.id] = { shape: "", tags: caseTags, mm: hasMm ? mm : undefined };
       continue;
     }
     const shape = typeof attributes.shapeTag === "string" ? attributes.shapeTag : null;

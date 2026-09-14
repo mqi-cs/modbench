@@ -14,6 +14,7 @@
 // problem than the silhouettes around it.
 
 import { CANVAS, C, mm, watchMm } from "./geometry";
+import { metalFamily } from "./palette";
 import { CaseBody, BezelAndInsert, ChapterRing, Crown, Strap } from "./parts";
 import { HandSet } from "./hands";
 import { RingShadow } from "./depth";
@@ -42,6 +43,11 @@ export function WatchArt({ watch, title }: { watch: ResolvedWatch; title: string
   // photos always land at the right size. A case wider than the 46mm the
   // constant was set from would then run its lugs off the edge, so the
   // VIEWBOX opens up instead -- same pixel space, just more of it shown.
+  // The case's own finish. Without this a PVD-black case and a steel one
+  // produced identical pixels, which is most of why selecting a different
+  // case looked like it did nothing.
+  const caseMetal = metalFamily(watch.caseTags);
+
   const span = Math.max(CANVAS, mm(m.lugToLug) + mm(2.4));
   // The strap runs to the frame edge and is cropped there, rather than
   // the frame growing to contain it. Sizing the frame to the strap made
@@ -59,7 +65,7 @@ export function WatchArt({ watch, title }: { watch: ResolvedWatch; title: string
       preserveAspectRatio="xMidYMid meet"
     >
       {strap && <Strap shape={strap.shape} tags={strap.tags} m={m} reach={strapReach} />}
-      {hasCase && <CaseBody m={m} />}
+      {hasCase && <CaseBody m={m} metal={caseMetal} />}
       {hasCase && crown && <Crown shape={crown.shape} tags={crown.tags} m={m} />}
       {dialHref && (
         <image href={dialHref} x={0} y={0} width={CANVAS} height={CANVAS} preserveAspectRatio="xMidYMid meet" />
@@ -70,7 +76,7 @@ export function WatchArt({ watch, title }: { watch: ResolvedWatch; title: string
       {chapterRing && <ChapterRing shape={chapterRing.shape} tags={chapterRing.tags} m={m} />}
       {chapterRing && <RingShadow m={m} />}
       {hands && <HandSet shape={hands.shape} tags={hands.tags} m={m} />}
-      {hasCase && bezelInsert && <BezelAndInsert shape={bezelInsert.shape} tags={bezelInsert.tags} m={m} />}
+      {hasCase && bezelInsert && <BezelAndInsert shape={bezelInsert.shape} tags={bezelInsert.tags} m={m} metal={caseMetal} />}
     </svg>
   );
 }

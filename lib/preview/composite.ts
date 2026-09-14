@@ -38,6 +38,12 @@ export interface ResolvedWatch {
   hasCase: boolean;
   /** Case dimensions, from its attributes. Null when no case is chosen. */
   caseMm: RenderMm | null;
+  /**
+   * The case's own finish tags. The case used to be drawn from a fixed
+   * steel palette whatever was chosen, which is why a PVD-black case and
+   * a steel one produced identical pixels.
+   */
+  caseTags: string[];
   /** Dial photo, when the part has a prepared asset. */
   dialHref: string | null;
   /** True when a dial is selected but has no usable photograph. */
@@ -89,6 +95,7 @@ export function resolveWatch(input: ResolveInput): ResolvedWatch {
   const out: ResolvedWatch = {
     hasCase: Boolean(caseId),
     caseMm: caseId ? (metaFor(caseId)?.mm ?? null) : null,
+    caseTags: caseId ? (metaFor(caseId)?.tags ?? []) : [],
     dialHref: dialId && dialHasPhoto ? assetUrl("dial", dialId) : null,
     dialPlaceholder: Boolean(dialId) && !dialHasPhoto,
     dialName: dialId ? (metaFor(dialId)?.name ?? null) : null,

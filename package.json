@@ -18,6 +18,7 @@
     "review": "tsx scripts/review.ts",
     "review-merges": "tsx scripts/review-merges.ts",
     "merge-parts": "tsx scripts/merge-parts.ts",
+    "pick-straps": "tsx scripts/pick-straps.ts",
     "backfill-attributes": "tsx scripts/backfill-attributes.ts",
     "backfill-images": "tsx scripts/backfill-images.ts",
     "backfill-style-tags": "tsx scripts/backfill-style-tags.ts",

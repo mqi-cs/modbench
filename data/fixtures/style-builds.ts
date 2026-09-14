@@ -54,7 +54,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK314 SKX/SRPD Slim Flat Sapphire Crystal for Flat Inserts",
       crown: "SKX007 Sterile Knurled Crown: PVD Black",
-      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
+      strap: "FKM Rubber Strap - Tropic - Black",
     },
   },
   {
@@ -72,7 +72,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Angled Chapter Ring: Sandblasted",
       crystal: "NMK314 SKX/SRPD Slim Flat Sapphire Crystal for Flat Inserts",
       crown: "SKX007 Knurled Crown Mk2 Steel",
-      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
+      strap: "Seatbelt NATO Strap: Black/Grey",
     },
   },
   {
@@ -90,7 +90,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Angled Chapter Ring: Brushed",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
       crown: "SKX007 Knurled Crown Mk2 Steel",
-      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
+      strap: "Pebbled Leather Strap: Black",
     },
   },
   {
@@ -108,7 +108,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Black Finish w Gold Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
       crown: "SKX007 Sterile Knurled Crown: PVD Black",
-      strap: "FKM Rubber Strap - SKX007/SRPD Classic - Orange",
+      strap: "SKX007 Watch Bracelet: Jubilee Finish (Female End Links)",
     },
   },
   {
@@ -126,7 +126,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
       crown: "SKX007 Knurled Crown Mk2 Steel",
-      strap: "SKX007 Watch Bracelet: Nautilus Black Finish",
+      strap: "SKX007 Watch Bracelet: Oyster Brushed Finish (Female End Links)",
     },
   },
   {
@@ -149,7 +149,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK310 - SKX/SRPD Flat Sapphire Crystal for Flat Inserts",
       crown: "SKX007 Knurled Crown Mk2 Steel",
-      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
+      strap: "SRPD Watch Bracelet: Oyster Brushed Finish",
     },
   },
   {
@@ -167,7 +167,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
       crown: "SKX007 Sterile Knurled Crown: PVD Black",
-      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
+      strap: "Vintage Leather Strap: Brown",
     },
   },
   {
@@ -187,7 +187,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       // the slim flat crystal blocks against it, which the engine catches.
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
       crown: "SKX007 Sterile Knurled Crown: PVD Black",
-      strap: "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Grey",
+      strap: "Rubber Strap: FKM Tropique Diver Grey",
     },
   },
   {
@@ -205,7 +205,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
       crown: "SKX007 Knurled Crown Mk2 Steel",
-      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
+      strap: "SKX007 Watch Bracelet: Super Engineer Brushed Finish",
     },
   },
   {
@@ -223,7 +223,7 @@ export const STYLE_BUILDS: StyleBuild[] = [
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK314 SKX/SRPD Slim Flat Sapphire Crystal for Flat Inserts",
       crown: "SKX007 Knurled Crown Mk2 Steel",
-      strap: "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Olive Green",
+      strap: "Rubber Strap: FKM Tropique Diver Green",
     },
   },
 ];

@@ -22,6 +22,8 @@ import type { RenderMm } from "./dimensions";
 export const ART_TAGS = [
   "gold-tone", "silver-tone", "blue", "green", "red", "orange", "yellow",
   "brown", "cream", "white", "grey", "black", "two-tone-bezel", "aged-lume",
+  // Appended, never reordered -- the position IS the bit.
+  "rose-gold", "matte", "polished", "brushed",
 ] as const;
 
 /** Dimension fields, in the order they are serialised. Append only. */
@@ -72,13 +74,17 @@ export function encodeArt(allIds: string[], art: Readonly<Record<string, ArtEntr
     const entry = Object.hasOwn(art, id) ? art[id] : undefined;
     if (!entry) return "";
 
+    let bits = 0;
+    for (const [i, tag] of ART_TAGS.entries()) if (entry.tags.includes(tag)) bits |= 1 << i;
+
     let head = "";
     if (entry.shape) {
       let shapeIndex = shapes.indexOf(entry.shape);
       if (shapeIndex === -1) shapeIndex = shapes.push(entry.shape) - 1;
-      let bits = 0;
-      for (const [i, tag] of ART_TAGS.entries()) if (entry.tags.includes(tag)) bits |= 1 << i;
       head = bits === 0 ? String(shapeIndex) : `${shapeIndex}.${bits.toString(36)}`;
+    } else if (bits !== 0) {
+      // A case: no silhouette, but its finish tags still have to travel.
+      head = `.${bits.toString(36)}`;
     }
 
     const mmToken = encodeMm(entry.mm);
@@ -98,22 +104,29 @@ export function decodeArt(allIds: string[], encoded: EncodedArt | undefined): Re
   for (const [i, id] of sorted.entries()) {
     const field = fields[i];
     if (!field) continue;
-    const [head, dimRaw] = field.split(":");
+    const [head = "", dimRaw] = field.split(":");
     const mm = dimRaw === undefined ? undefined : decodeMm(encoded.d?.[Number(dimRaw)]);
 
-    if (!head) {
-      // Dimensions but no silhouette: a case.
-      if (mm) out[id] = { shape: "", tags: [], mm };
+    const [shapeIndex, bitsRaw] = head.split(".");
+    const tagsOf = (raw: string | undefined) => {
+      const bits = raw ? parseInt(raw, 36) : 0;
+      return ART_TAGS.filter((_, bit) => bits & (1 << bit)) as unknown as string[];
+    };
+
+    // A case: finish tags and dimensions, but no silhouette. Written as a
+    // leading dot, so the shape index parses as empty rather than as 0 --
+    // which would have drawn every case as whatever shape happened to be
+    // first in the dictionary.
+    if (shapeIndex === "") {
+      if (head !== "" || mm) out[id] = { shape: "", tags: tagsOf(bitsRaw), mm };
       continue;
     }
-    const [shapeIndex, bitsRaw] = head.split(".");
     const shape = encoded.s[Number(shapeIndex)];
     // A truncated or mismatched payload must read as "not drawn" rather
     // than as some other part's shape.
     if (!shape) continue;
-    const bits = bitsRaw ? parseInt(bitsRaw, 36) : 0;
-    const tags = ART_TAGS.filter((_, bit) => bits & (1 << bit));
-    out[id] = mm ? { shape, tags: [...tags], mm } : { shape, tags: [...tags] };
+    const tags = tagsOf(bitsRaw);
+    out[id] = mm ? { shape, tags, mm } : { shape, tags };
   }
   return out;
 }
