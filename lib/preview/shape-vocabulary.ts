@@ -16,7 +16,7 @@
 // falling back to a default silhouette is explicitly not the same class of
 // claim as asserting that two parts fit.
 
-export type ShapeCategory = "hands" | "crown" | "chapter_ring" | "bezel_insert";
+export type ShapeCategory = "hands" | "crown" | "chapter_ring" | "bezel_insert" | "strap";
 
 export interface ShapeDef {
   id: string;
@@ -59,6 +59,16 @@ export const SHAPES: ShapeDef[] = [
   { id: "insert-gmt", category: "bezel_insert", label: "24-hour", evidence: /\bgmt\b|\bdual\s?time\b|\b24\s?h(our)?\b|\bworldtime|\bpepsi\b|\bbatman\b/i },
   { id: "insert-dive", category: "bezel_insert", label: "count-up dive", evidence: /\bdive\b|\bdiver\b|\bcount\s?(up|down)\b|\btimer\b|\bsub\b/i },
   { id: "insert-plain", category: "bezel_insert", label: "plain", evidence: /\bsmooth\b|\bplain\b|\bfluted\b|\byacht\b|\bno\s?scale\b/i },
+
+  // --- Strap kinds. Only three, because only three LOOK different from
+  // directly above: a bracelet fills the lug gap in steel with a link
+  // seam, a NATO passes under the case as one continuous band across the
+  // gap, and everything else is a band butting into each lug. Leather and
+  // rubber are not separate shapes here -- at this angle they differ in
+  // colour and stitching, both of which the band already carries.
+  { id: "strap-nato", category: "strap", label: "pass-through", evidence: /\bnato\b|\bzulu\b|\bsingle\s?pass\b|\bseatbelt\b|\bperlon\b/i },
+  { id: "strap-bracelet", category: "strap", label: "bracelet", evidence: /\bbracelet\b|\boyster\b|\bjubilee\b|\bpresident\b|\bengineer\b|\bmilanese\b|\bmesh\b|\bbeads?\s?of\s?rice\b|\bsuper\s?-?\s?engineer\b|\bnautilus\b/i },
+  { id: "strap-band", category: "strap", label: "band", evidence: /\bleather\b|\brubber\b|\bfkm\b|\bsilicone\b|\bnylon\b|\bcanvas\b|\bsuede\b|\bcordovan\b|\btropic\b|\bwaffle\b|\bstrap\b/i },
 ];
 
 /**
@@ -74,6 +84,7 @@ export const SHAPE_FALLBACK: Record<ShapeCategory, string> = {
   crown: "crown-knurled",
   chapter_ring: "ring-plain",
   bezel_insert: "insert-dive",
+  strap: "strap-band",
 };
 
 /**

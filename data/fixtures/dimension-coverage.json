@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-09-14T15:40:09.497Z",
+  "note": "Per-part dimensions parsed from vendor listing text. Parts not counted here are drawn at their platform constant. Display only -- no rule in lib/compat reads attributes.renderMm.",
+  "coverage": {
+    "bezel_insert": {
+      "total": 681,
+      "stated": 137
+    },
+    "chapter_ring": {
+      "total": 378,
+      "stated": 138
+    },
+    "crown": {
+      "total": 272,
+      "stated": 26
+    },
+    "hands": {
+      "total": 438,
+      "stated": 62
+    }
+  }
+}

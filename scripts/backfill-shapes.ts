@@ -20,7 +20,7 @@ import { parts } from "../lib/db/schema";
 import { fromJsonColumn } from "../lib/db/json";
 import { SHAPE_FALLBACK, matchShape, shapeFromStyleTags, shapesFor, type ShapeCategory } from "../lib/preview/shape-vocabulary";
 
-const CATEGORIES: ShapeCategory[] = ["hands", "crown", "chapter_ring", "bezel_insert"];
+const CATEGORIES: ShapeCategory[] = ["hands", "crown", "chapter_ring", "bezel_insert", "strap"];
 const FEEDS = ["namokimods", "luciusatelier", "dlwwatches", "watchandstyle"];
 
 /** Vendor description text, keyed by the product handle in the source URL. */

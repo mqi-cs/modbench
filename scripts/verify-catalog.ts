@@ -355,7 +355,7 @@ function main() {
   // silhouette the art can actually draw. The preview no longer has a
   // flat or unshaded path to fall through to, so a missing or unknown
   // shapeTag is a part that renders as nothing at all.
-  const ILLUSTRATED = ["hands", "crown", "chapter_ring", "bezel_insert"];
+  const ILLUSTRATED = ["hands", "crown", "chapter_ring", "bezel_insert", "strap"];
   const illustrated = approvedParts.filter((p) => ILLUSTRATED.includes(p.category));
   const badShape = illustrated.filter((p) => {
     const shape = fromJsonColumn<Record<string, unknown>>(p.attributes).shapeTag;
@@ -376,6 +376,32 @@ function main() {
   const deadShapes = SHAPES.filter((sh) => !usedShapes.has(sh.id)).map((sh) => sh.id);
   if (deadShapes.length > 0) fail(`${deadShapes.length} shape(s) match no part: ${deadShapes.join(", ")}`);
   else pass(`shapes: every one of the ${SHAPES.length} defined silhouettes is used`);
+
+  // 15. Dimension provenance. Not a pass/fail -- a part that states no
+  // size is drawn at the platform default and that is correct behaviour.
+  // It is reported because the default IS a guess, and a category whose
+  // coverage quietly drops to zero is a broken parse, not a quiet catalog.
+  const DIMENSIONED: [string, string[]][] = [
+    ["bezel_insert", ["outer", "inner"]],
+    ["chapter_ring", ["outer", "inner"]],
+    ["crown", ["diameter"]],
+    ["hands", ["hour", "minute", "second"]],
+  ];
+  const coverage: string[] = [];
+  for (const [category, fields] of DIMENSIONED) {
+    const rows = approvedParts.filter((p) => p.category === category);
+    const stated = rows.filter((p) => {
+      const mm = fromJsonColumn<Record<string, unknown>>(p.attributes).renderMm as Record<string, unknown> | undefined;
+      return mm !== undefined && fields.some((f) => typeof mm[f] === "number");
+    }).length;
+    coverage.push(`${category} ${stated}/${rows.length} (${((stated / (rows.length || 1)) * 100).toFixed(1)}%)`);
+    if (stated === 0) fail(`no ${category} states a dimension -- the parse in scripts/backfill-dimensions.ts has stopped matching`);
+  }
+  const casesSized = approvedParts.filter(
+    (p) => p.category === "case" && typeof fromJsonColumn<Record<string, unknown>>(p.attributes).caseDiameterMm === "number",
+  ).length;
+  const caseTotal = approvedParts.filter((p) => p.category === "case").length;
+  pass(`dimensions: drawn from the vendor's own figures where stated -- case ${casesSized}/${caseTotal}, ${coverage.join(", ")}`);
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);
   sqlite.close();

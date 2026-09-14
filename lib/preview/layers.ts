@@ -4,21 +4,22 @@
 // nothing here is ever read by lib/compat -- these numbers decide how
 // large to draw a part, never whether it fits.
 //
-// WHY PLATFORM CONSTANTS AND NOT PART ATTRIBUTES
+// WHY PLATFORM CONSTANTS HERE, AND NOT IN THE ART
 //
-// specs/05-phase-4-preview.md says to scale each part by its own
-// `attributes` diameter field. Those fields are empty: outerDiameterMm is
-// null for all 681 approved bezel inserts and lengthSetMm is null for all
-// 438 approved hand sets, because no vendor states either in a feed. Only
-// dial diameterMm is populated, and it is the same 28.5 for all 467 that
-// have it.
+// This file used to carry an argument that platform constants were the
+// more accurate source, because "no vendor states either in a feed".
+// THAT ARGUMENT WAS WRONG, and the correction is worth keeping written
+// down. It was checked against the parsed `attributes` columns, which are
+// indeed null, and not against the listing text, where 17.8% of inserts
+// state an outer diameter and 14.2% of hand sets state an H/M/S triple.
+// The parse had simply never been run for those fields, and where the
+// numbers do exist they disagree with the constants that stood in for
+// them -- see lib/preview/dimensions.ts.
 //
-// Falling back to the platform is not a workaround, it is the more
-// accurate source. These parts are interchangeable *because* their
-// dimensions are fixed by the case they mount to -- an SKX007 bezel
-// insert is 37.8mm across regardless of who sells it, which is the entire
-// premise the catalog is built on. A per-SKU number would only ever
-// restate the platform's number, or be wrong.
+// The live art therefore draws each part at its own stated size
+// (lib/preview/art/geometry.ts). The constants below survive only for the
+// OFFLINE asset pipeline, which crops and scales prepared photographs to
+// one fixed frame and needs a single scale per category to do it.
 
 export const CANVAS = 800;
 

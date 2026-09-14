@@ -290,3 +290,112 @@ deleting them forecloses a photo fallback, and that is a separate call.
   keyed by part id cost 35KB gzipped, almost all of it nanoid keys that
   gzip cannot compress; `lib/preview/art-codec.ts` indexes by sorted id
   order instead and carries no keys at all.
+
+---
+
+## Route B — closed, not deferred (2026-09-14)
+
+**Decision: Route B is not being built, and this is not a TODO.**
+
+Route B was the option of illustrating each part's true facet geometry —
+modelling the actual cut surfaces of a hand, a crown, a lug — rather than
+the constant-width edge strip Route A settled on. It stays closed for one
+reason: it buys more of what the preview is already good at and none of
+what it is short of.
+
+Route A's strength is edges. The narrow bright strip on the lit silhouette
+and the narrow dark strip opposite is what makes these read as metal at
+all, and the side-by-side tests found the signal is the *frequency* of
+tonal change at a chamfer, not its amplitude. Full facet geometry refines
+exactly that: more edges, more accurately placed. The remaining gap is
+somewhere else entirely — the interiors are flat, and the parts carry no
+surface character (brushing direction, sunburst, the way a polished flank
+picks up its surroundings). Route B does not touch flat interiors. It
+would be a large, high-risk piece of work whose payoff lands on the one
+axis that is already strong.
+
+If the preview is ever pushed further, the next thing to try is interior
+surface character, not finer edges. That is a different technique and a
+different investigation, and it should be opened on its own terms rather
+than by reviving this one.
+
+---
+
+## Dimensions — parts are drawn at their own stated size (2026-09-14)
+
+`lib/preview/layers.ts` argued platform constants were the better source
+because "no vendor states either in a feed". That was checked against the
+parsed `attributes` columns and not against `body_html`, and it was wrong.
+
+| field | stated by | was assumed | vendors actually say |
+|---|---|---|---|
+| bezel insert outer | 17.8% of inserts | 37.8mm | **38.0mm** |
+| bezel insert bore | 20.1% of inserts | 31.3mm | **31.8mm** |
+| chapter ring outer | 36.5% of rings | 30.6mm | **30.5mm** |
+| chapter ring bore | 36.5% of rings | 28.5mm (flush with the dial) | **27.7mm** (it overlaps) |
+| crown diameter | 9.6% of crowns | 7.0mm | 7.0mm, and 8.0mm on big crowns |
+| hand reach H/M/S | 14.2% of hand sets | 9.0 / 12.5 / 13.0 | **8.5 / 12.5 / 12.5** |
+| case diameter | 98.8% of cases | one platform constant | per part |
+| case lug width | 95.5% of cases | one platform constant | per part |
+| case dial aperture | 94.8% of cases | one platform constant | per part |
+
+The chapter-ring bore is the one that mattered most: drawn flush with the
+dial it left a hairline seam exactly where the eye goes first, and a real
+ring overhangs the dial edge by about 0.4mm a side.
+
+`scripts/backfill-dimensions.ts` parses the labelled patterns and writes
+`attributes.renderMm`; anything not stated falls back to the MODAL stated
+value rather than to the old assumption. **`renderMm` is display-only and
+no rule in `lib/compat` reads it.** `attributes.lengthSetMm` is
+deliberately left null even though hand lengths are now parseable, because
+`hand-stack-clearance` keys off that field: a length mined from marketing
+prose is good enough to draw with and not good enough to assert a fit
+from.
+
+---
+
+## Silhouette and depth pass (2026-09-14)
+
+**Case.** Redrawn as one closed path — body, four tapered lugs and a
+crown-guard shoulder — replacing a circle with four rectangles laid over
+it. The rectangles reached to the case centre and were shaded against
+their own bounding boxes, so they read as floating tabs. The new outline
+interrupts the body arc where each lug's own face leaves the circle,
+fillets the inside corner, and bows the outer flank so the lug leaves the
+body almost tangentially. `PathFacet` lights the whole silhouette as one
+surface.
+
+**Depth.** Perceived depth in a top-down render comes from stepped
+elevation, and three cues were built and judged against vendor photographs:
+
+1. *Inner-edge facets at every ring boundary* — kept. Already the
+   technique; every step now has a visible lip.
+2. *Narrow contact shadows at each step* — kept, and the strongest of the
+   three. A dark band immediately inside each ring on the side away from
+   the light, at the same light direction as the facets. Tried at roughly
+   twice this strength and rejected: at that level the arcs stop reading
+   as shadow and start reading as painted crescents.
+3. *Axial offset of dial and hands* — **discarded.** A real photograph does
+   shift the dial slightly with the light, but it shifts the case walls,
+   the bore and the hands' own shadows by the same parallax. Moving only
+   the dial made the chapter ring look out of round, which is a worse
+   error than the one it fixed.
+
+**Hands.** The sword silhouette — the fallback, so 233 of 438 sets — was a
+straight blade tapering only at the tip. The real part is a lance,
+narrowing toward both the tip and the boss. Corrected.
+
+**Strap.** Now drawn, as three silhouettes. At this angle a strap is two
+stubs disappearing behind the lugs, which is thin; it earns its place
+because it is a priced slot, because it is the largest block of colour
+after the dial, and because without it the lugs point at nothing, which is
+part of what made them read as detached. Strap and bracelet genuinely
+differ from above — a bracelet fills the lug gap in steel and breaks into
+links across its width, a band sits inside the gap with stitching along
+it, and a NATO is identified by its keepers, since the strip passing under
+the case is invisible from above.
+
+**Insert colour.** Vendors name the material and the face in one string —
+"Steel Bezel Insert: Nautical Blue" carries both `silver-tone` and `blue`
+— and with metal tones checked first, every such insert drew steel
+coloured. Chromatic tags now win; metal tones are the fallback.

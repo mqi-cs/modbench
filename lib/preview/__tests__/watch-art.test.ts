@@ -5,14 +5,25 @@ import { parts } from "../../db/schema";
 import { fromJsonColumn } from "../../db/json";
 import { drawnLayers, resolveWatch, type ResolveInput } from "../composite";
 import { SHAPES, SHAPE_FALLBACK, shapeById, shapesFor, type ShapeCategory } from "../shape-vocabulary";
+import { caseDimensions, type RenderMm } from "../dimensions";
+import { DEFAULT_MM, watchMm } from "../art/geometry";
 
 const approved = db.select().from(parts).where(eq(parts.reviewState, "approved")).all();
-const ILLUSTRATED: ShapeCategory[] = ["hands", "crown", "chapter_ring", "bezel_insert"];
+const ILLUSTRATED: ShapeCategory[] = ["hands", "crown", "chapter_ring", "bezel_insert", "strap"];
 
 const meta: ResolveInput["meta"] = Object.fromEntries(
   approved.map((p) => {
     const a = fromJsonColumn<Record<string, unknown>>(p.attributes);
-    return [p.id, { name: p.name, shape: String(a.shapeTag ?? ""), tags: Array.isArray(a.styleTags) ? (a.styleTags as string[]) : [] }];
+    const mm = p.category === "case" ? caseDimensions(a as never) : (a.renderMm as RenderMm | undefined);
+    return [
+      p.id,
+      {
+        name: p.name,
+        shape: String(a.shapeTag ?? ""),
+        tags: Array.isArray(a.styleTags) ? (a.styleTags as string[]) : [],
+        mm: mm && Object.keys(mm).length > 0 ? mm : undefined,
+      },
+    ];
   }),
 );
 
@@ -64,6 +75,7 @@ describe("resolveWatch", () => {
   const ringId = byCategory("chapter_ring").id;
   const crownId = byCategory("crown").id;
   const insertId = byCategory("bezel_insert").id;
+  const strapId = byCategory("strap").id;
 
   it("draws the dial from a photo only when one exists, and says so when it does not", () => {
     const withPhoto = resolveWatch(input({ parts: { dial: dialId }, previewable: new Set([dialId]) }));
@@ -88,7 +100,7 @@ describe("resolveWatch", () => {
 
   it("keeps the physical assembly order in every combination", () => {
     // specs/05-phase-4-preview.md pass measure 5.
-    const slots = { case: caseId, dial: dialId, hands: handsId, chapterRing: ringId, crown: crownId, bezelInsert: insertId };
+    const slots = { case: caseId, dial: dialId, hands: handsId, chapterRing: ringId, crown: crownId, bezelInsert: insertId, strap: strapId };
     const keys = Object.keys(slots) as (keyof typeof slots)[];
     for (let mask = 0; mask < 1 << keys.length; mask++) {
       const chosen: Record<string, string> = {};
@@ -101,6 +113,36 @@ describe("resolveWatch", () => {
       if (at("dial") !== -1 && at("hands") !== -1) expect(at("hands")).toBeGreaterThan(at("dial"));
       if (at("dial") !== -1 && at("chapterRing") !== -1) expect(at("chapterRing")).toBeGreaterThan(at("dial"));
       if (at("chapterRing") !== -1 && at("hands") !== -1) expect(at("hands")).toBeGreaterThan(at("chapterRing"));
+      // The strap tucks UNDER the case, so it must be behind everything.
+      if (at("strap") !== -1) expect(at("strap")).toBe(0);
+    }
+  });
+
+  it("draws a strap with or without a case, since a strap needs no case to exist", () => {
+    expect(drawnLayers(resolveWatch(input({ parts: { strap: strapId } })))).toEqual(["strap"]);
+    const withCase = drawnLayers(resolveWatch(input({ parts: { strap: strapId, case: caseId } })));
+    expect(withCase).toEqual(["strap", "case"]);
+  });
+
+  it("carries the case's own dimensions through to the art", () => {
+    const sized = approved.find(
+      (p) => p.category === "case" && typeof fromJsonColumn<Record<string, unknown>>(p.attributes).caseDiameterMm === "number",
+    )!;
+    expect(resolveWatch(input({ parts: { case: sized.id } })).caseMm?.caseDiameter).toBeGreaterThan(30);
+    expect(resolveWatch(input()).caseMm).toBeNull();
+  });
+
+  it("leaves a case that states no diameter to fall back, rather than drawing nothing", () => {
+    // 5 of 401 approved cases state none. They must still draw, at the
+    // platform default -- a missing dimension is not a missing case.
+    const unsized = approved.filter(
+      (p) => p.category === "case" && fromJsonColumn<Record<string, unknown>>(p.attributes).caseDiameterMm == null,
+    );
+    for (const p of unsized) {
+      const watch = resolveWatch(input({ parts: { case: p.id } }));
+      expect(watch.hasCase, p.name).toBe(true);
+      expect(watch.caseMm?.caseDiameter, p.name).toBeUndefined();
+      expect(watchMm({ case: watch.caseMm }).caseDiameter, p.name).toBe(DEFAULT_MM.caseDiameter);
     }
   });
 

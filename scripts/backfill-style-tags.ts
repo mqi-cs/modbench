@@ -22,7 +22,10 @@ import { parts } from "../lib/db/schema";
 import { fromJsonColumn } from "../lib/db/json";
 import { tagsFromName, STYLE_TAGS, TAG_NAMES } from "../lib/style-vocabulary";
 
-const TAGGABLE = ["dial", "hands", "bezel_insert"];
+// Straps joined the list when they started being drawn: a strap is the
+// largest block of colour on a build after the dial, and its name is the
+// only place that colour is recorded.
+const TAGGABLE = ["dial", "hands", "bezel_insert", "strap"];
 
 function main() {
   const dryRun = process.argv.includes("--dry-run");

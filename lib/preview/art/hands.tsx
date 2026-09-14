@@ -1,21 +1,23 @@
 // Hand silhouettes for the illustrated preview.
 //
 // Proportions are the ones measured off a vendor photograph during the
-// shading investigation: pivot-to-tip lengths are what the vendor states
-// (9 / 12.5 / 13mm for hour / minute / second), and boss, shaft and lobe
-// widths were measured at 40 stations along each hand and cross-checked
-// against those stated lengths, which agreed to within 2%.
+// shading investigation: boss, shaft and lobe widths were measured at 40
+// stations along each hand and cross-checked against the vendor's stated
+// lengths, which agreed to within 2%.
+//
+// Pivot-to-tip length is now the vendor's own where one is stated -- 14.2%
+// of hand sets print an "H / M / S" triple in their listing -- and the
+// modal stated triple otherwise. The 9.0mm hour reach this file used to
+// carry was an assumption; 45 of the 62 sets that state a length say 8.5.
 //
 // Each silhouette is a different outline over the same skeleton, so a
 // sword hand and a dauphine hand sit on the same pivot at the same reach
 // and only their edges differ.
 
-import { C, mm } from "./geometry";
+import { C, mm, type WatchMm } from "./geometry";
 import { FACET_PX, litSideOf } from "./facets";
 import { STEEL, metalColour } from "./palette";
 
-/** Stated by the vendor, in millimetres from pivot to tip. */
-export const REACH = { hour: 9.0, minute: 12.5, second: 13.0 } as const;
 /** Measured: widths and feature positions, in millimetres. */
 const D = {
   hour: { boss: 2.58, shaft: 1.49, lobe: 3.09, lobeAt: 5.9, tail: 1.13 },
@@ -31,6 +33,8 @@ interface HandProps {
   angle: number;
   metal: string;
   lume: string;
+  /** Pivot-to-tip reach for this hand, in canvas pixels. */
+  reach: number;
 }
 
 /** Narrow chamfer down each long edge, bright toward the light. */
@@ -82,14 +86,23 @@ function outline(shape: string, reach: number, w: number, tail: number): string 
     case "hand-three-lobe":
     case "hand-sword":
     default:
-      // Sword: straight flanks tapering to a point over the last sixth.
-      return `0,${-reach} ${w / 2},${-reach * 0.84} ${w / 2},${t} ${-w / 2},${t} ${-w / 2},${-reach * 0.84}`;
+      // Lance, not a blade: widest around the middle and narrowing toward
+      // BOTH the tip and the boss. Drawn with straight flanks before, it
+      // tapered only at the tip and read as a plank with a point on it --
+      // the clearest silhouette error left after the shading work.
+      return [
+        `0,${-reach}`,
+        `${w * 0.5},${-reach * 0.74}`,
+        `${w * 0.62},${-reach * 0.44}`,
+        `${w * 0.32},${t}`,
+        `${-w * 0.32},${t}`,
+        `${-w * 0.62},${-reach * 0.44}`,
+        `${-w * 0.5},${-reach * 0.74}`,
+      ].join(" ");
   }
 }
 
-export function Hand({ shape, role, angle, metal, lume }: HandProps) {
-  const reach = mm(REACH[role]);
-
+export function Hand({ shape, role, angle, metal, lume, reach }: HandProps) {
   if (role === "second") {
     const d = D.second;
     const shaft = Math.max(1.6, mm(d.shaft));
@@ -132,14 +145,14 @@ export function Hand({ shape, role, angle, metal, lume }: HandProps) {
 }
 
 /** A full hand set at ten past ten, the arrangement every brand photographs. */
-export function HandSet({ shape, tags }: { shape: string; tags: readonly string[] }) {
+export function HandSet({ shape, tags, m }: { shape: string; tags: readonly string[]; m: WatchMm }) {
   const metal = metalColour(tags);
   const lume = tags.includes("aged-lume") ? "#cdbc94" : tags.includes("black") ? STEEL.lume : "#e6e4d6";
   return (
     <g>
-      <Hand shape={shape} role="hour" angle={305} metal={metal} lume={lume} />
-      <Hand shape={shape} role="minute" angle={62} metal={metal} lume={lume} />
-      <Hand shape={shape} role="second" angle={180} metal={metal} lume={lume} />
+      <Hand shape={shape} role="hour" angle={305} metal={metal} lume={lume} reach={mm(m.hourHand)} />
+      <Hand shape={shape} role="minute" angle={62} metal={metal} lume={lume} reach={mm(m.minuteHand)} />
+      <Hand shape={shape} role="second" angle={180} metal={metal} lume={lume} reach={mm(m.secondHand)} />
       <circle cx={C} cy={C} r={mm(1.0)} fill={metal} />
     </g>
   );

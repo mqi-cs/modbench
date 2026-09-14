@@ -26,13 +26,23 @@ interface ParsedIntent {
 }
 ```
 
-1. Claude parses the input into `ParsedIntent`. JSON only, Zod-validated.
+1. The model parses the input into `ParsedIntent`. JSON only, Zod-validated.
 2. **Constrain the model to the existing `styleTags` vocabulary.** Pass the full list in the prompt. Tags outside it are dropped, not invented.
 3. Your own code queries the catalog against the parsed constraints and assembles 2–3 candidate builds.
 4. Every candidate runs through `evaluateBuild`. **Anything blocked is discarded, never shown.**
-5. Claude writes the explanation of each candidate — why these parts, what the tradeoffs are.
+5. The model writes the explanation of each candidate — why these parts, what the tradeoffs are.
 
 The model parses and explains. It never selects parts and never judges compatibility. Those stay in your code, where they're testable.
+
+**Provider-neutral by design.** This spec names no vendor because nothing
+in it depends on one: the model is asked for JSON matching a schema this
+repo defines, the reply is Zod-validated, tags outside the controlled
+vocabulary are dropped, and a total failure falls back to the keyword
+parser. `lib/llm.ts` currently calls the Anthropic Messages API over plain
+`fetch` with no SDK dependency, and swapping it for another provider is a
+change to that one file's request shape and its key name. Read any
+"the model" in this document as whichever provider `lib/llm.ts` is
+pointed at.
 
 Show the parsed constraints back as editable chips. The user must be able to see and correct what was understood before results appear.
 
@@ -84,8 +94,8 @@ Show detected attributes as editable chips before any results. Low-confidence at
 ## Result
 
 Built. The deterministic half is complete and tested; the model half is
-written but could not be exercised, because there is no `ANTHROPIC_API_KEY`
-in this environment. What that does and doesn't leave verified is set out
+written but could not be exercised, because no model API key is set in
+this environment. What that does and doesn't leave verified is set out
 per pass measure below.
 
 ## The blocker that had to be cleared first

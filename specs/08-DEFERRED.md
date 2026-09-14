@@ -125,6 +125,20 @@ to. The headline pass measure in `04-phase-3-configurator.md` is blocked
 on this entry. Restoring D7 is what turns the project's stated
 differentiator from working code into a working feature.
 
+**DO NOT DELETE THE PREPARED ASSETS (added 2026-09-14).** `public/assets/`
+holds roughly 24MB of normalised hands, chapter-ring and bezel-insert
+images that nothing in the app reads any more: the Phase 4 rollout
+replaced photographic compositing with drawn silhouettes, and only dials
+are still displayed as photographs. They look like dead weight and they
+are not. They are the exact input this entry has been waiting for. Task 5
+found perceptual hashing unreliable **because raw vendor photos vary in
+background, lighting and crop**, and these assets are those same photos
+with background removed, centred, and scaled to a fixed pixel radius from
+the real-world diameter. Deleting them for tidiness re-blocks the
+project's stated differentiator and costs a re-run of the whole asset
+pipeline to undo. They also remain the fallback if a drawn silhouette
+turns out to be wrong for some category. 24MB is not worth the risk.
+
 **Guardrails that keep this cheap:**
 - The 145 candidate pairs (Investigation A, `data/fixtures/investigation-a-cross-vendor-overlap.md`) and the Task 5 negative result (`data/fixtures/task5-perceptual-hash-check.md`, `phash-raw-results.json`) are the input set for the retry — don't regenerate the candidate list from scratch, re-check it against normalized images.
 - `part_merges` (schema + `scripts/merge-parts.ts` + the verify-catalog.ts conflicting-attributes check) already exists from the one manual merge done in Task 4 (SRP Turtle sapphire crystal) — restoring dedup is "run more merges through the existing mechanism," not "build the mechanism."
@@ -191,8 +205,36 @@ in the catalog. Nothing else would move a headline number by 30 points.
 Bundle it with the D7 dial-date-position request rather than sending two
 separate emails.
 
+**Superseded in part (2026-09-14):** inserts are now DRAWN, not
+photographed, so this no longer gates the preview and pass measure 2 is
+closed by a different route. What survives is the D7 dependency: a
+top-down insert photograph is still the normalised input cross-vendor
+deduplication needs, and 487 inserts without one is still 487 parts that
+cannot be matched by image. Keep the ask; drop the urgency.
+
 **Explicitly not the route:** extracting the annulus from Namoki's fitted
 renders. Their templates are consistent enough that masking a radius band
 would half-work today, and would break silently when they re-render.
 Worse, the arithmetic says even a perfect extraction leaves the measure
 unmet, so it would buy a fragile dependency for a number that still fails.
+
+---
+
+## Not deferred — decisions, recorded here so they are not re-opened as work
+
+These have no restore signal. They are listed only because each looks like
+an open TODO to someone reading the phase specs, and each is not.
+
+- **Route B (full facet geometry) — closed, 2026-09-14.** It refines edge
+  fidelity, which is already Route A's strength, and does nothing for the
+  flat interiors that are the actual remaining gap. If the preview is
+  pushed further the next thing to try is interior surface character, and
+  that is a new investigation rather than a revival of this one. Reasoning
+  in `05-phase-4-preview.md`.
+- **The dial stays a photograph.** Not an unfinished part of the drawn
+  rollout. `05-phase-4-preview.md`.
+- **`attributes.lengthSetMm` stays null** even though hand lengths are now
+  parseable from listing text. `hand-stack-clearance` keys off it, and a
+  dimension mined from marketing prose is good enough to draw with and not
+  good enough to assert a fit from. The drawn size lives in
+  `attributes.renderMm`, which `lib/compat` never reads.

@@ -21,14 +21,16 @@ export const STEEL = {
 export const RECESS = "#3c3c3a";
 
 /**
- * Ordered so the first match wins. Colour tags are checked in this order
- * because a part tagged both "black" and "silver-tone" (a black hand set
- * with a steel frame) should draw as steel with black inlay, which is what
- * the hand art does with these two values.
+ * Chromatic colours, checked BEFORE the metal tones below.
+ *
+ * Order matters and this one is the fix for a real bug. Vendors name the
+ * insert's material and its face in the same string -- "Steel Bezel
+ * Insert: Nautical Blue" carries both `silver-tone` and `blue` -- and
+ * with the metals checked first every such insert drew steel-coloured.
+ * The face is what the preview shows, so the face colour wins; a part
+ * with no chromatic tag still falls through to its metal tone.
  */
 const TAG_COLOURS: [string, string][] = [
-  ["gold-tone", "#b58c34"],
-  ["silver-tone", "#c3c5c4"],
   ["blue", "#26406b"],
   ["green", "#22462f"],
   ["red", "#7d2129"],
@@ -39,6 +41,8 @@ const TAG_COLOURS: [string, string][] = [
   ["white", "#eceae4"],
   ["grey", "#5d6064"],
   ["black", "#23252a"],
+  ["gold-tone", "#b58c34"],
+  ["silver-tone", "#c3c5c4"],
 ];
 
 /** Body colour for a part, from its style tags. */

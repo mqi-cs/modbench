@@ -1,4 +1,11 @@
 // Ten curated builds, one per recognisable look.
+//
+// Each is a COMPLETE build, crown and strap included. They were neither
+// until the preview started drawing those slots and the gap became
+// visible: every curated build rendered with a bare case flank and lugs
+// pointing at nothing, which read as a drawing error and was really a
+// missing part. The starter builds in starter-builds.ts deliberately stay
+// shorter -- those are starting points, these are finished looks.
 // specs/06-phase-5-sharing.md: "Ten hand-made pages, each a curated build
 // for a recognisable look."
 //
@@ -46,6 +53,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "CI0975 SKX007/SRPD White Flat Ceramic Bezel  Insert - Vintage Sub",
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK314 SKX/SRPD Slim Flat Sapphire Crystal for Flat Inserts",
+      crown: "SKX007 Sterile Knurled Crown: PVD Black",
+      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
     },
   },
   {
@@ -62,6 +71,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "CI1576 SKX007/SRPD Count Down Timer Flat Ceramic Bezel Insert - Black",
       chapterRing: "SKX007/SRPD Angled Chapter Ring: Sandblasted",
       crystal: "NMK314 SKX/SRPD Slim Flat Sapphire Crystal for Flat Inserts",
+      crown: "SKX007 Knurled Crown Mk2 Steel",
+      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
     },
   },
   {
@@ -78,6 +89,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "SKX007 Ceramic Bezel Insert (Slope) - Yacht Master Silver",
       chapterRing: "SKX007/SRPD Angled Chapter Ring: Brushed",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
+      crown: "SKX007 Knurled Crown Mk2 Steel",
+      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
     },
   },
   {
@@ -94,6 +107,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "SKX007 Ceramic Bezel Insert (Slope) - Pepsi Dual Time *SWISS MADE*",
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Black Finish w Gold Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
+      crown: "SKX007 Sterile Knurled Crown: PVD Black",
+      strap: "FKM Rubber Strap - SKX007/SRPD Classic - Orange",
     },
   },
   {
@@ -110,6 +125,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "SKX007 Ceramic Bezel Insert (Slope) - Yacht Master Black",
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
+      crown: "SKX007 Knurled Crown Mk2 Steel",
+      strap: "SKX007 Watch Bracelet: Nautilus Black Finish",
     },
   },
   {
@@ -131,6 +148,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "CI1390 SKX007/SRPD U1 Style Flat Ceramic Bezel Insert - White",
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK310 - SKX/SRPD Flat Sapphire Crystal for Flat Inserts",
+      crown: "SKX007 Knurled Crown Mk2 Steel",
+      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
     },
   },
   {
@@ -147,6 +166,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "CI1189 SKX007/SRPD Slope Ceramic Bezel Insert - Dual Time Black/Brown",
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
+      crown: "SKX007 Sterile Knurled Crown: PVD Black",
+      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
     },
   },
   {
@@ -165,6 +186,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       // Sloped insert, so the crystal has to be the sloped-profile one --
       // the slim flat crystal blocks against it, which the engine catches.
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
+      crown: "SKX007 Sterile Knurled Crown: PVD Black",
+      strap: "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Grey",
     },
   },
   {
@@ -181,6 +204,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "SKX007 Ceramic Bezel Insert (Slope) - Yacht Master Black",
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK315 SKX/SRPD Flat Sapphire Crystal for Sloped Inserts w Cyclops",
+      crown: "SKX007 Knurled Crown Mk2 Steel",
+      strap: "SKX007 Watch Bracelet: Snakeskin Brushed Finish",
     },
   },
   {
@@ -197,6 +222,8 @@ export const STYLE_BUILDS: StyleBuild[] = [
       bezelInsert: "GI002 SKX007/SRPD Flat Glass Bezel Insert - Lumed GMT Black/Green",
       chapterRing: "SKX007/SRPD Chapter Ring: Kanji Style Blue Finish w Silver Markers",
       crystal: "NMK314 SKX/SRPD Slim Flat Sapphire Crystal for Flat Inserts",
+      crown: "SKX007 Knurled Crown Mk2 Steel",
+      strap: "NMK801 FKM Curved End SKX/SRPD Rubber Strap: Olive Green",
     },
   },
 ];

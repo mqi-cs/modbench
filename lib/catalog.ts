@@ -9,6 +9,7 @@ import { familyExceptions, listings, parts, vendors } from "./db/schema";
 import { fromJsonColumn } from "./db/json";
 import { encodePreviewable } from "./preview/previewable";
 import { ART_TAGS, encodeArt, type ArtEntry, type EncodedArt } from "./preview/art-codec";
+import { caseDimensions, type RenderMm } from "./preview/dimensions";
 import { readFileSync } from "node:fs";
 import type { CatalogSlice, SlotKey } from "./compat";
 
@@ -110,16 +111,29 @@ export function loadCatalog(): CatalogPayload {
   // gzipped to the page for data no renderer looks at -- the dial and
   // case need no entry at all, and a search tag like "dressy" or
   // "vintage" changes nothing about how a part is drawn.
-  const DRAWN = new Set(["hands", "crown", "chapter_ring", "bezel_insert"]);
+  // The case carries no silhouette tag -- there is one case drawing --
+  // but it does carry the dimensions the whole assembly is scaled from,
+  // so it gets an entry with an empty shape.
+  const DRAWN = new Set(["hands", "crown", "chapter_ring", "bezel_insert", "strap"]);
   const artTags = new Set<string>(ART_TAGS);
   const art: Record<string, ArtEntry> = {};
   for (const p of approved) {
-    if (!sliceParts[p.id] || !DRAWN.has(p.category)) continue;
+    if (!sliceParts[p.id]) continue;
+    const isCase = p.category === "case";
+    if (!isCase && !DRAWN.has(p.category)) continue;
     const attributes = fromJsonColumn<Record<string, unknown>>(p.attributes);
+    const mm = isCase
+      ? caseDimensions(attributes as Parameters<typeof caseDimensions>[0])
+      : ((attributes.renderMm as RenderMm | undefined) ?? undefined);
+    const hasMm = mm !== undefined && Object.keys(mm).length > 0;
+    if (isCase) {
+      if (hasMm) art[p.id] = { shape: "", tags: [], mm };
+      continue;
+    }
     const shape = typeof attributes.shapeTag === "string" ? attributes.shapeTag : null;
     if (!shape) continue;
     const tags = Array.isArray(attributes.styleTags) ? (attributes.styleTags as string[]).filter((t) => artTags.has(t)) : [];
-    art[p.id] = { shape, tags };
+    art[p.id] = hasMm ? { shape, tags, mm } : { shape, tags };
   }
 
   const previewable = encodePreviewable(

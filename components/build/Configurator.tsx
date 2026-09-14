@@ -57,7 +57,7 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
       Object.fromEntries(
         Object.entries(decodeArt(Object.keys(catalog.parts), catalog.art)).map(([id, a]) => [
           id,
-          { name: catalog.parts[id]?.name ?? id, shape: a.shape, tags: a.tags },
+          { name: catalog.parts[id]?.name ?? id, shape: a.shape, tags: a.tags, mm: a.mm },
         ]),
       ),
     [catalog.art, catalog.parts],

@@ -10,16 +10,20 @@
 // genuinely different kinds of thing, and the old layer list made that
 // awkward once most parts stopped being photographs.
 
+import type { RenderMm } from "./dimensions";
+
 export function assetUrl(category: string, partId: string): string {
   return `/assets/${category}/${partId}.webp`;
 }
 
-/** One illustrated part: which silhouette to draw and in what colours. */
+/** One illustrated part: which silhouette to draw, in what colours, at what size. */
 export interface ShapePart {
   partId: string;
   name: string;
   shape: string;
   tags: string[];
+  /** The vendor's own millimetres, where this part states any. */
+  mm?: RenderMm;
 }
 
 /**
@@ -32,6 +36,8 @@ export interface ShapePart {
  */
 export interface ResolvedWatch {
   hasCase: boolean;
+  /** Case dimensions, from its attributes. Null when no case is chosen. */
+  caseMm: RenderMm | null;
   /** Dial photo, when the part has a prepared asset. */
   dialHref: string | null;
   /** True when a dial is selected but has no usable photograph. */
@@ -41,17 +47,18 @@ export interface ResolvedWatch {
   chapterRing: ShapePart | null;
   hands: ShapePart | null;
   bezelInsert: ShapePart | null;
+  strap: ShapePart | null;
 }
 
 export interface ResolveInput {
   parts: Partial<Record<string, string>>;
   /** Part ids with a prepared photo. Only the dial consults this now. */
   previewable: ReadonlySet<string>;
-  /** Per-part display data: name, shapeTag and styleTags. */
-  meta: Readonly<Record<string, { name: string; shape: string; tags: string[] }>>;
+  /** Per-part display data: name, shapeTag, styleTags and stated size. */
+  meta: Readonly<Record<string, { name: string; shape: string; tags: string[]; mm?: RenderMm }>>;
 }
 
-const SHAPE_SLOTS = ["crown", "chapterRing", "hands", "bezelInsert"] as const;
+const SHAPE_SLOTS = ["crown", "chapterRing", "hands", "bezelInsert", "strap"] as const;
 
 /**
  * Resolves a build into one photograph and a set of silhouettes.
@@ -72,14 +79,16 @@ export function resolveWatch(input: ResolveInput): ResolvedWatch {
     if (!partId) return null;
     const meta = metaFor(partId);
     if (!meta) return null;
-    return { partId, name: meta.name, shape: meta.shape, tags: meta.tags };
+    return { partId, name: meta.name, shape: meta.shape, tags: meta.tags, mm: meta.mm };
   };
 
   const dialId = input.parts.dial;
   const dialHasPhoto = Boolean(dialId && input.previewable.has(dialId));
 
+  const caseId = input.parts.case;
   const out: ResolvedWatch = {
-    hasCase: Boolean(input.parts.case),
+    hasCase: Boolean(caseId),
+    caseMm: caseId ? (metaFor(caseId)?.mm ?? null) : null,
     dialHref: dialId && dialHasPhoto ? assetUrl("dial", dialId) : null,
     dialPlaceholder: Boolean(dialId) && !dialHasPhoto,
     dialName: dialId ? (metaFor(dialId)?.name ?? null) : null,
@@ -87,6 +96,7 @@ export function resolveWatch(input: ResolveInput): ResolvedWatch {
     chapterRing: null,
     hands: null,
     bezelInsert: null,
+    strap: null,
   };
   for (const slot of SHAPE_SLOTS) out[slot] = pick(slot);
   return out;
@@ -101,6 +111,7 @@ export function resolveWatch(input: ResolveInput): ResolvedWatch {
  */
 export function drawnLayers(watch: ResolvedWatch): string[] {
   const out: string[] = [];
+  if (watch.strap) out.push("strap");
   if (watch.hasCase) out.push("case");
   if (watch.hasCase && watch.crown) out.push("crown");
   if (watch.dialHref || watch.dialPlaceholder) out.push("dial");

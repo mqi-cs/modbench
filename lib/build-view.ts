@@ -62,7 +62,7 @@ export function buildView(parts: Partial<Record<SlotKey, string>>, unresolved: S
     meta: Object.fromEntries(
       Object.entries(decodeArt(Object.keys(catalog.parts), catalog.art)).map(([id, a]) => [
         id,
-        { name: catalog.parts[id]?.name ?? id, shape: a.shape, tags: a.tags },
+        { name: catalog.parts[id]?.name ?? id, shape: a.shape, tags: a.tags, mm: a.mm },
       ]),
     ),
   };

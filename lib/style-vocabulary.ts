@@ -31,7 +31,7 @@ export interface StyleTag {
   /** Words in a vendor listing name that evidence this tag. */
   evidence: RegExp;
   /** Which part categories may carry it. */
-  slots: ("dial" | "hands" | "bezel_insert")[];
+  slots: ("dial" | "hands" | "bezel_insert" | "strap")[];
 }
 
 const COLOUR_WORD = "black|white|blue|green|red|orange|yellow|grey|gray|gold|silver|brown|bronze|cream|beige|biege|pink|purple|navy|slate";
@@ -49,18 +49,18 @@ const TWO_COLOUR = new RegExp(`\\b(?:${COLOUR_WORD})\\b\\s*(?:/|-|\\band\\b)\\s*
 
 export const STYLE_TAGS: StyleTag[] = [
   // --- Colour. The single most common thing anyone asks for.
-  { tag: "black", category: "colour", label: "black", evidence: /\bblack\b|\bonyx\b|\bnoir\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "white", category: "colour", label: "white", evidence: /\bwhite\b|\bsnow\b|\barctic\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "cream", category: "colour", label: "cream or ivory", evidence: /\bcream\b|\bivory\b|\bbiege\b|\bbeige\b|\becru\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "blue", category: "colour", label: "blue", evidence: /\bblue\b|\bnavy\b|\baegean\b|\bcobalt\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "green", category: "colour", label: "green", evidence: /\bgreen\b|\bolive\b|\bemerald\b|\bjade\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "grey", category: "colour", label: "grey", evidence: /\bgrey\b|\bgray\b|\bslate\b|\bgun\s?metal\b|\bcharcoal\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "brown", category: "colour", label: "brown or bronze tone", evidence: /\bbrown\b|\bbronze\b|\bcopper\b|\bumber\b|\bchocolate\b|\btropical\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "red", category: "colour", label: "red or burgundy", evidence: /\bred\b|\bburgundy\b|\bmaroon\b|\bcherry\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "orange", category: "colour", label: "orange", evidence: /\borange\b|\bamber\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "yellow", category: "colour", label: "yellow", evidence: /\byellow\b|\bmustard\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "gold-tone", category: "colour", label: "gold tone", evidence: /\bgold\b|\bgilt\b|\bbrass\b/i, slots: ["dial", "hands", "bezel_insert"] },
-  { tag: "silver-tone", category: "colour", label: "silver or steel tone", evidence: /\bsilver\b|\bsteel\b|\bstainless\b|\brhodium\b/i, slots: ["dial", "hands", "bezel_insert"] },
+  { tag: "black", category: "colour", label: "black", evidence: /\bblack\b|\bonyx\b|\bnoir\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "white", category: "colour", label: "white", evidence: /\bwhite\b|\bsnow\b|\barctic\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "cream", category: "colour", label: "cream or ivory", evidence: /\bcream\b|\bivory\b|\bbiege\b|\bbeige\b|\becru\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "blue", category: "colour", label: "blue", evidence: /\bblue\b|\bnavy\b|\baegean\b|\bcobalt\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "green", category: "colour", label: "green", evidence: /\bgreen\b|\bolive\b|\bemerald\b|\bjade\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "grey", category: "colour", label: "grey", evidence: /\bgrey\b|\bgray\b|\bslate\b|\bgun\s?metal\b|\bcharcoal\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "brown", category: "colour", label: "brown or bronze tone", evidence: /\bbrown\b|\bbronze\b|\bcopper\b|\bumber\b|\bchocolate\b|\btropical\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "red", category: "colour", label: "red or burgundy", evidence: /\bred\b|\bburgundy\b|\bmaroon\b|\bcherry\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "orange", category: "colour", label: "orange", evidence: /\borange\b|\bamber\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "yellow", category: "colour", label: "yellow", evidence: /\byellow\b|\bmustard\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "gold-tone", category: "colour", label: "gold tone", evidence: /\bgold\b|\bgilt\b|\bbrass\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
+  { tag: "silver-tone", category: "colour", label: "silver or steel tone", evidence: /\bsilver\b|\bsteel\b|\bstainless\b|\brhodium\b/i, slots: ["dial", "hands", "bezel_insert", "strap"] },
 
   // --- Dial finish.
   { tag: "sunburst", category: "finish", label: "sunburst", evidence: /\bsunburst\b|\bsun\s?ray\b/i, slots: ["dial"] },

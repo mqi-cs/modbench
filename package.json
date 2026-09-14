@@ -21,10 +21,11 @@
     "backfill-images": "tsx scripts/backfill-images.ts",
     "backfill-style-tags": "tsx scripts/backfill-style-tags.ts",
     "backfill-shapes": "tsx scripts/backfill-shapes.ts",
+    "backfill-dimensions": "tsx scripts/backfill-dimensions.ts",
     "prepare-assets": "tsx scripts/prepare-assets.ts",
     "verify-catalog": "tsx scripts/verify-catalog.ts",
-    "catalog:rebuild": "pnpm db:migrate && pnpm seed && pnpm ingest && pnpm tag && pnpm import-tagged && pnpm seed-exceptions && pnpm backfill-attributes && pnpm backfill-images && pnpm backfill-style-tags && pnpm backfill-shapes && pnpm prepare-assets && pnpm verify-catalog",
-    "catalog:refresh": "pnpm tag && pnpm import-tagged && pnpm backfill-attributes && pnpm backfill-images && pnpm backfill-style-tags && pnpm backfill-shapes && pnpm prepare-assets && pnpm verify-catalog",
+    "catalog:rebuild": "pnpm db:migrate && pnpm seed && pnpm ingest && pnpm tag && pnpm import-tagged && pnpm seed-exceptions && pnpm backfill-attributes && pnpm backfill-images && pnpm backfill-style-tags && pnpm backfill-shapes && pnpm backfill-dimensions && pnpm prepare-assets && pnpm verify-catalog",
+    "catalog:refresh": "pnpm tag && pnpm import-tagged && pnpm backfill-attributes && pnpm backfill-images && pnpm backfill-style-tags && pnpm backfill-shapes && pnpm backfill-dimensions && pnpm prepare-assets && pnpm verify-catalog",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "check": "tsc --noEmit && vitest run && tsx scripts/verify-catalog.ts"
