@@ -533,4 +533,10 @@ async function main() {
   if (dryRun) console.log("Dry run: no PNGs written, no database rows updated.");
 }
 
-main();
+// Only when run as a script. scripts/dedup-calibrate.ts imports analyse()
+// from here to normalise one pair the same way the pipeline does, and a
+// bare main() call meant that import silently re-ran the whole asset
+// build as a side effect of asking for one function.
+if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split("/").pop() ?? "\u0000")) {
+  main();
+}

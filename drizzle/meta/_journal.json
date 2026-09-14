@@ -50,6 +50,13 @@
       "when": 1788386300000,
       "tag": "0006_sleepy_vampiro",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1789405669296,
+      "tag": "0007_merge_candidates",
+      "breakpoints": true
     }
   ]
 }

@@ -198,3 +198,58 @@ export const rateLimits = sqliteTable("rate_limits", {
   windowStart: integer("window_start").notNull(),
   count: integer("count").notNull(),
 });
+
+// A perceptual hash per part that has a prepared asset.
+//
+// Kept in its own table rather than on parts.attributes for one concrete
+// reason: lib/catalog.ts ships every approved part's attributes to the
+// browser, and 1,218 sixty-four-character hashes is ~78KB of payload for
+// something no page renders. Nothing user-facing reads this; it exists so
+// cross-vendor match suggestions can be made server-side.
+export const partHashes = sqliteTable("part_hashes", {
+  partId: text("part_id").primaryKey().references(() => parts.id),
+  // Hex, 256 bits, from lib/dedup/phash.ts over the normalised asset.
+  phash: text("phash").notNull(),
+  computedAt: integer("computed_at").notNull(),
+});
+
+export const MERGE_CANDIDATE_STATES = ["pending", "accepted", "rejected"] as const;
+export type MergeCandidateState = (typeof MERGE_CANDIDATE_STATES)[number];
+
+export const MERGE_CANDIDATE_SOURCES = ["user-link", "phash", "both"] as const;
+export type MergeCandidateSource = (typeof MERGE_CANDIDATE_SOURCES)[number];
+
+// A CLAIM that two or more listings are the same physical part. Never a
+// merge.
+//
+// The distinction is the whole point of this table. A wrong merge asserts
+// that two different parts are identical, which is a false positive of
+// exactly the kind lib/compat exists to prevent -- and unlike a bad
+// compatibility warning it is destructive, because merging deletes a parts
+// row. So a submission lands here, a human reads it, and only then does
+// scripts/review-merges.ts write part_merges. Nothing in this table is
+// visible to the configurator, and lib/compat never sees it.
+export const mergeCandidates = sqliteTable("merge_candidates", {
+  id: text("id").primaryKey(),
+  // Part ids claimed to be one part, JSON, sorted. Two or more.
+  partIds: text("part_ids").notNull(),
+  // Exactly what was pasted, including anything that did not resolve --
+  // retained per the project rule that both source URLs are always kept.
+  submittedUrls: text("submitted_urls").notNull(),
+  unresolvedUrls: text("unresolved_urls").notNull(),
+  source: text("source").notNull(),
+  // Hamming distance over normalised assets, when both sides have one.
+  phashDistance: integer("phash_distance"),
+  // Whether the parts' colour style tags agree. The hash is greyscale and
+  // cannot tell a silver hand set from the same model in gold.
+  colourAgreement: text("colour_agreement"),
+  note: text("note"),
+  status: text("status").notNull().default("pending"),
+  reviewerNote: text("reviewer_note"),
+  createdAt: integer("created_at").notNull(),
+  reviewedAt: integer("reviewed_at"),
+}, (table) => [
+  check("merge_candidates_status_check", inList("status", MERGE_CANDIDATE_STATES)),
+  check("merge_candidates_source_check", inList("source", MERGE_CANDIDATE_SOURCES)),
+  index("merge_candidates_status_idx").on(table.status),
+]);

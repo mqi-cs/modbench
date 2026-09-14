@@ -139,6 +139,40 @@ project's stated differentiator and costs a re-run of the whole asset
 pipeline to undo. They also remain the fallback if a drawn silhouette
 turns out to be wrong for some category. 24MB is not worth the risk.
 
+**RETRIED 2026-09-14, and it worked — see
+`data/fixtures/task5-retry-normalised.md`.** Re-running the hash over the
+normalised assets un-inverted the ordering: the confirmed-different
+chapter ring pair now sits at the 28th percentile of unrelated parts while
+the likely-same dial pair sits at the 1.4th, where under raw photographs
+the different pair scored *better* than the same one. Hands go from a best
+distance of 94/256 to 4/256.
+
+Three things qualify it, and all three are now recorded rather than
+implicit:
+
+1. **Only 62 of 145 pairs can be re-hashed.** Bezel inserts are 0 of 42,
+   for the D9 reason — nobody photographs them alone. Cases, crystals and
+   movements were never preview categories.
+2. **The Task 4 crystal calibration pair cannot be recovered at all.**
+   Both vendor photographs are oblique side-on shots that the pipeline
+   rejects. Normalisation fixes the hash where it can run; it cannot fix
+   photography that was never top-down.
+3. **The hash is greyscale and therefore blind to finish.** The same hand
+   set in silver and in gold scores 16/256. Distance alone would merge
+   them. The shortlist is gated on distance AND colour-tag agreement.
+
+Eleven pairs are now queued in `merge_candidates` for human review. None
+is merged.
+
+**AND A SECOND ROUTE, added the same day: user-submitted matches.**
+`/submit-match` takes pasted vendor product links, resolves them, shows
+what else in the catalog might be the same thing, and records a CANDIDATE.
+Never a merge — `scripts/review-merges.ts` is the human gate, and it
+writes `part_merges` through the same mechanics `merge-parts.ts` used, so
+the conflicting-attributes check in verify-catalog covers it unchanged.
+The two routes share one queue and a pair found by both is labelled
+`source: 'both'`.
+
 **Guardrails that keep this cheap:**
 - The 145 candidate pairs (Investigation A, `data/fixtures/investigation-a-cross-vendor-overlap.md`) and the Task 5 negative result (`data/fixtures/task5-perceptual-hash-check.md`, `phash-raw-results.json`) are the input set for the retry — don't regenerate the candidate list from scratch, re-check it against normalized images.
 - `part_merges` (schema + `scripts/merge-parts.ts` + the verify-catalog.ts conflicting-attributes check) already exists from the one manual merge done in Task 4 (SRP Turtle sapphire crystal) — restoring dedup is "run more merges through the existing mechanism," not "build the mechanism."
@@ -154,6 +188,40 @@ turns out to be wrong for some category. 24MB is not worth the risk.
 **Restore when:** revisiting full-catalog tagging coverage (this session tagged the majority of the 4 vendors' real catalogs, not 100%), or when any single cluster in catalog-gaps.md grows large enough to be worth its own tagger branch (the Handcrafted Series line and the casebacks both started this size before being closed this session).
 
 **Cost to restore:** Low per cluster — each one in catalog-gaps.md is either a mechanical branch addition (same pattern as every gap closed this session) or a small, scoped family-evidence-gathering exercise (e.g. verifying the luciusatelier homage-case line shares real dimensions before seeding a family for it, same rigor as `family-audit.csv`/`singleton-verification.md`).
+
+**RETRIED 2026-09-14, and it worked — see
+`data/fixtures/task5-retry-normalised.md`.** Re-running the hash over the
+normalised assets un-inverted the ordering: the confirmed-different
+chapter ring pair now sits at the 28th percentile of unrelated parts while
+the likely-same dial pair sits at the 1.4th, where under raw photographs
+the different pair scored *better* than the same one. Hands go from a best
+distance of 94/256 to 4/256.
+
+Three things qualify it, and all three are now recorded rather than
+implicit:
+
+1. **Only 62 of 145 pairs can be re-hashed.** Bezel inserts are 0 of 42,
+   for the D9 reason — nobody photographs them alone. Cases, crystals and
+   movements were never preview categories.
+2. **The Task 4 crystal calibration pair cannot be recovered at all.**
+   Both vendor photographs are oblique side-on shots that the pipeline
+   rejects. Normalisation fixes the hash where it can run; it cannot fix
+   photography that was never top-down.
+3. **The hash is greyscale and therefore blind to finish.** The same hand
+   set in silver and in gold scores 16/256. Distance alone would merge
+   them. The shortlist is gated on distance AND colour-tag agreement.
+
+Eleven pairs are now queued in `merge_candidates` for human review. None
+is merged.
+
+**AND A SECOND ROUTE, added the same day: user-submitted matches.**
+`/submit-match` takes pasted vendor product links, resolves them, shows
+what else in the catalog might be the same thing, and records a CANDIDATE.
+Never a merge — `scripts/review-merges.ts` is the human gate, and it
+writes `part_merges` through the same mechanics `merge-parts.ts` used, so
+the conflicting-attributes check in verify-catalog covers it unchanged.
+The two routes share one queue and a pair found by both is labelled
+`source: 'both'`.
 
 **Guardrails that keep this cheap:**
 - The standing unmatched-product-type report already does the finding; restoring this is "work the existing list," not "go looking again."
