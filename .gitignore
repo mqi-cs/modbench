@@ -2,7 +2,8 @@
 .env
 .env.local
 .next/
-data/modbench.db
+# The catalog itself IS checked in -- see README, "Running it". Only
+# SQLite's transient sidecars are ignored; they are regenerated on open.
 data/modbench.db-journal
 data/modbench.db-shm
 data/modbench.db-wal

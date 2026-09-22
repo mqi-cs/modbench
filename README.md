@@ -27,8 +27,19 @@ pnpm install
 pnpm dev            # → http://localhost:3000/build
 ```
 
-The database (`data/modbench.db`) is a build artifact and is gitignored.
-To build it from the raw vendor feeds:
+**The catalog (`data/modbench.db`, ~4MB) is checked in.** Clone, install,
+run — you get the same 4,053 reviewed parts, prices and merge decisions
+this repo was developed against, with no pipeline run and no vendor
+requests.
+
+That is deliberate rather than lazy. Most of what is in that file cannot
+be regenerated from the code: which parts a human approved or rejected,
+which cross-vendor listings were judged to be the same physical part
+(`part_merges`), and which candidates were rejected and why
+(`merge_candidates`). The scripts reproduce the derived columns; they
+cannot reproduce a judgement.
+
+To rebuild it from the raw vendor feeds instead:
 
 ```bash
 pnpm catalog:rebuild
@@ -36,12 +47,18 @@ pnpm catalog:rebuild
 
 That runs the full offline pipeline in dependency order — migrate, seed,
 ingest, tag, import, seed exceptions, backfill attributes, backfill
-images, verify. **The order is load-bearing.** To re-run only the parts
-that change when tagging rules change:
+images, style tags, shapes, dimensions, assets, perceptual hashes, verify.
+**The order is load-bearing.** To re-run only the parts that change when
+tagging rules change:
 
 ```bash
 pnpm catalog:refresh
 ```
+
+The feeds themselves (`data/raw/`, 22MB of JSON plus 307MB of cached
+product images) are NOT checked in, so a fresh clone cannot run
+`catalog:rebuild` or `catalog:refresh` until it re-ingests. Running the
+app needs neither.
 
 Ingestion is deliberately manual, never a cron job. You want a human
 between the scrape and the database — that path is where a bad family tag
