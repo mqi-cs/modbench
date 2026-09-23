@@ -1,0 +1,132 @@
+<!doctype html>
+<!-- TEMPORARY — option 2 demo: pre-rendered part layers, composited in the browser.
+     Everything on offer comes from layers/manifest.json, so a new render batch
+     shows up here without touching this file. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layered Preview Demo</title>
+<style>
+  :root { --paper:#f6f7f8; --card:#fff; --ink:#15191e; --graphite:#5b646e; --rule:#d3d8dd; --brass:#9a7328; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:14px/1.5 system-ui, sans-serif; }
+  main { max-width: 1340px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--graphite); margin: 16px 0 6px; font-weight: 600; }
+  p.note { color: var(--graphite); margin: 0 0 14px; max-width: 88ch; }
+  .layout { display:grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 20px; align-items: start; }
+  @media (max-width: 920px) { .layout { grid-template-columns: 1fr; } }
+  .stage { position: relative; aspect-ratio: 1; background: var(--paper); border:1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+  .stage img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .panel { background: var(--card); border:1px solid var(--rule); border-radius:6px; padding: 12px 14px; max-height: 88vh; overflow:auto; }
+  .opts { display:flex; flex-wrap:wrap; gap:6px; }
+  button { font:inherit; font-size: 13px; padding:4px 10px; border:1px solid var(--rule); background:var(--card); border-radius:4px; cursor:pointer; color: var(--ink); }
+  button[aria-pressed=true] { border-color:var(--brass); color:var(--brass); background:#fbf7ee; }
+  button small { color: var(--graphite); font-size: 11px; margin-left: 4px; }
+  button[aria-pressed=true] small { color: var(--brass); }
+  .stats { font: 12px/1.6 ui-monospace, monospace; color: var(--graphite); margin-top: 10px; }
+  .stats b { color: var(--ink); font-weight: 600; }
+  .layers-list { font: 12px/1.7 ui-monospace, monospace; color: var(--graphite); }
+  a { color: var(--brass); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Layered preview — batch 1</h1>
+  <p class="note">Each part was rendered <b>once, on its own</b>, from a fixed camera, as a transparent image; the browser just stacks them. Batch 1 covers the most common class in every slot. <b>Layer mode → paired</b> renders case and strap together so the strap is shadowed by the case and plugs into the lugs; <b>separate</b> is cheaper and slightly detached. Counts on each button are how many catalogue listings that option stands for. <a href="index.html">Back to the comparison page</a>.</p>
+
+  <div class="layout">
+    <div>
+      <div class="stage" id="stage"></div>
+      <div class="stats" id="stats">loading…</div>
+    </div>
+    <div class="panel">
+      <h2 style="margin-top:0">View</h2><div class="opts" id="views"></div>
+      <h2>Layer mode</h2><div class="opts" id="modes"></div>
+      <h2>Presets</h2><div class="opts" id="presets"></div>
+      <div id="slots"></div>
+      <h2>Layer stack (bottom → top)</h2>
+      <div class="layers-list" id="stack"></div>
+    </div>
+  </div>
+</main>
+<script>
+let M, state;
+
+const file = (name, view) => `layers/${name}-${view}.webp`;
+
+function stack() {
+  const paired = state.mode === "paired" && M.pair.views.includes(state.view);
+  const opt = (slot, key) => M.slots.find(s => s.key === slot).options.find(o => o.key === key);
+  if (!paired) return M.order.map(s => [s, opt(s, state[s]).file]);
+  const [a, b] = M.pair.slots;
+  return [[`${a}+${b}`, `${M.pair.prefix}-${state[a]}-${state[b]}`],
+          ...M.order.filter(s => s !== a && s !== b).map(s => [s, opt(s, state[s]).file])];
+}
+
+function button(parent, label, sub, pressed, onclick) {
+  const b = document.createElement("button");
+  b.innerHTML = label + (sub ? ` <small>${sub}</small>` : "");
+  b.setAttribute("aria-pressed", String(pressed)); b.onclick = onclick;
+  parent.appendChild(b);
+}
+
+function controls() {
+  const v = document.getElementById("views"); v.innerHTML = "";
+  M.views.forEach(k => button(v, k === "hero" ? "3/4 hero" : "Top-down", "", state.view === k, () => { state.view = k; draw(); }));
+  const m = document.getElementById("modes"); m.innerHTML = "";
+  const pairedHere = M.pair.views.includes(state.view);
+  [["paired", "Paired case+strap"], ["separate", "Separate layers"]].forEach(([k, t]) =>
+    button(m, t, k === "paired" && !pairedHere ? "hero only" : "", state.mode === k, () => { state.mode = k; draw(); }));
+  const p = document.getElementById("presets"); p.innerHTML = "";
+  M.presets.forEach(cfg => button(p, cfg.name, "", M.order.every(s => state[s] === cfg[s]), () => { M.order.forEach(s => { if (cfg[s]) state[s] = cfg[s]; }); draw(); }));
+  const host = document.getElementById("slots"); host.innerHTML = "";
+  for (const s of M.slots) {
+    const h = document.createElement("h2"); h.textContent = s.label; host.appendChild(h);
+    const row = document.createElement("div"); row.className = "opts"; host.appendChild(row);
+    for (const o of s.options) {
+      const pct = o.cover && o.cover.total ? `${Math.round(100 * o.cover.n / o.cover.total)}%` : "";
+      button(row, o.label, o.cover && o.cover.n > 1 ? `${o.cover.n} · ${pct}` : "", state[s.key] === o.key, () => { state[s.key] = o.key; draw(); });
+    }
+  }
+}
+
+async function draw() {
+  const t0 = performance.now();
+  controls();
+  const stage = document.getElementById("stage");
+  [...stage.querySelectorAll("img")].forEach(i => i.remove());
+  const layers = stack();
+  layers.forEach(([, name], z) => {
+    const img = new Image(); img.alt = ""; img.style.zIndex = String(z + 1); img.src = file(name, state.view);
+    stage.appendChild(img);
+  });
+  const imgs = [...stage.querySelectorAll("img")];
+  await Promise.all(imgs.map(i => i.decode().catch(() => {})));
+  const ms = performance.now() - t0;
+  document.getElementById("stack").innerHTML = layers.map(([s, n], i) => `${i + 1}. ${s} → ${n}`).join("<br>");
+  const combos = M.slots.reduce((a, s) => a * s.options.length, 1);
+  const kb = imgs.map(i => (performance.getEntriesByName(i.src)[0] || {}).encodedBodySize || 0).reduce((a, b) => a + b, 0) / 1024;
+  document.getElementById("stats").innerHTML =
+    `Switch + decode <b>${ms.toFixed(0)} ms</b> · ${imgs.length} layers${kb ? `, <b>${kb.toFixed(0)} KB</b> fetched` : ", cached"} · ` +
+    `batch covers <b>${combos.toLocaleString()}</b> builds · manifest ${M.built}`;
+}
+
+function preload() {
+  for (const s of M.slots) for (const o of s.options) for (const v of M.views) { const i = new Image(); i.src = file(o.file, v); }
+  const [a, b] = M.pair.slots;
+  for (const oa of M.slots.find(s => s.key === a).options) for (const ob of M.slots.find(s => s.key === b).options)
+    for (const v of M.pair.views) { const i = new Image(); i.src = file(`${M.pair.prefix}-${oa.key}-${ob.key}`, v); }
+}
+
+fetch("layers/manifest.json").then(r => r.json()).then(m => {
+  M = m;
+  state = { view: "hero", mode: "paired" };
+  M.order.forEach(s => { state[s] = M.slots.find(x => x.key === s).options[0].key; });
+  Object.assign(state, Object.fromEntries(Object.entries(M.presets[0]).filter(([k]) => k !== "name")));
+  return draw();
+}).then(preload);
+</script>
+</body>
+</html>
