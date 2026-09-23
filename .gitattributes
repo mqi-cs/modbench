@@ -1,0 +1,23 @@
+# The catalog and the prepared preview images are binary. Marking them so
+# stops git attempting a textual diff, attempting a merge it cannot do, or
+# rewriting line endings inside them on a different platform.
+#
+# This matters more than it looks. data/modbench.db is checked in (see
+# README, "Running it"), and two people changing it on the same branch
+# produces a conflict git cannot resolve -- the only outcomes are "keep
+# mine" or "keep theirs", wholesale. There is no merging two people's part
+# approvals. The workflow in README "Working with someone else" exists to
+# keep that from happening; this line makes sure git fails loudly rather
+# than quietly producing a corrupt database if it ever does.
+data/modbench.db binary
+*.webp binary
+*.png binary
+*.jpg binary
+
+# Generated. Collapsed in diffs and PR reviews so a catalog re-run does
+# not bury a real change under thousands of lines.
+pnpm-lock.yaml -diff linguist-generated
+data/fixtures/shape-fallbacks.json -diff
+data/fixtures/asset-states.json -diff
+data/fixtures/phash-raw-results.json -diff
+data/fixtures/dedup-phash-normalised.json -diff

@@ -64,6 +64,70 @@ Ingestion is deliberately manual, never a cron job. You want a human
 between the scrape and the database — that path is where a bad family tag
 would enter the catalog.
 
+## Working with someone else
+
+Two branches. `develop` is where work happens and is the repo default;
+`main` is protected and only moves through a pull request.
+
+```bash
+git switch develop      # everything starts here
+```
+
+**The catalog is a binary, so only one person works at a time.** Git
+cannot merge two versions of `data/modbench.db`. If both of you change it
+on `develop`, the only resolutions are "keep mine" or "keep theirs" and
+somebody's part approvals are lost — the database holds judgements that
+the pipeline cannot regenerate. So the rule is a baton, not a lock:
+
+1. **Pull before you start.** `git pull --ff-only` on `develop`. If that
+   refuses to fast-forward, you have local work on an old base — sort that
+   out before writing anything new, not after.
+2. **Push when you stop.** Even mid-way. An unpushed day is the only way
+   the other person can start from a stale catalog.
+3. **Say when you pick the baton up and put it down.** This is the whole
+   mechanism. There is nothing in git enforcing it.
+
+If you do end up with `both modified: data/modbench.db`, do not guess.
+Work out which side made catalog decisions the other does not have —
+`sqlite3 data/modbench.db "SELECT COUNT(*) FROM part_merges"` and the same
+for `merge_candidates` and approved `parts` is usually enough to tell —
+keep that one with `git checkout --theirs` or `--ours`, and have the other
+person redo their changes on top.
+
+### Joining a clone that was made before this
+
+A clone taken when `main` was the default still points at it. To move onto
+`develop`, keeping work already done:
+
+```bash
+git fetch origin
+git stash                              # only if you have uncommitted work
+git switch -c develop origin/develop
+git stash pop
+```
+
+If you already committed on your local `main`, those commits sit directly
+on top of what `develop` branched from, so they can go straight on:
+
+```bash
+git fetch origin
+git switch -c develop                  # at your current HEAD, with your work
+git push -u origin develop
+```
+
+Prefer a pull request for anything you want the other person to read
+before it lands. Nothing about `develop` requires one.
+
+### Releasing to main
+
+`main` exists to hold the last known-good state. Move it with a PR:
+
+```bash
+gh pr create --base main --head develop --fill
+```
+
+Direct pushes to `main` are rejected for everyone, owner included.
+
 ## Checks
 
 ```bash
