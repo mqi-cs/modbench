@@ -97,12 +97,28 @@ export const dateWindowAlignment: Rule = {
       ];
     }
 
-    if (!dialPositions.includes(movementPosition)) {
+    // Factory positions are stated for a stem at 3 o'clock; a case that puts
+    // the crown elsewhere turns the whole movement by the same amount.
+    const mv = hours(movementPosition);
+    const crown = hours(casePosition);
+    const cuts = dialPositions.map(hours);
+    if (mv === null || crown === null || cuts.some((c) => c === null)) {
+      return [
+        {
+          ruleKey: "date-window-alignment",
+          severity: "warning",
+          message: `Can't confirm the date lines up on this build -- one of the stated positions (movement ${movementPosition}, crown ${casePosition}, dial ${dialPositions.join("/")}) isn't a clock position this check can read, so it isn't guessed at.`,
+          slots: ["dial", "movement", "case"],
+        },
+      ];
+    }
+    const landed = (((mv + crown - 3) % 12) + 12) % 12;
+    if (!cuts.some((c) => clockGap(c!, landed) <= 0.25)) {
       return [
         {
           ruleKey: "date-window-alignment",
           severity: "error",
-          message: `"${movement.name}"'s date wheel sits at ${movementPosition} o'clock and "${caseP?.name}" puts the crown at ${casePosition} o'clock, but "${dial.name}"'s date cutout is cut for ${dialPositions.map((p) => `${p} o'clock`).join(" or ")}. The date window is a hole at a fixed spot on the dial face -- with the wheel landing somewhere else, you'll see blank dial where the cutout is and the date itself hidden behind solid dial.`,
+          message: `"${movement.name}"'s date wheel sits at ${movementPosition} o'clock and "${caseP?.name}" puts the crown at ${casePosition} o'clock, turning the wheel to about ${formatHours(landed)} o'clock -- but "${dial.name}"'s date cutout is cut for ${dialPositions.map((p) => `${p} o'clock`).join(" or ")}. The date window is a hole at a fixed spot on the dial face -- with the wheel landing somewhere else, you'll see blank dial where the cutout is and the date itself hidden behind solid dial.`,
           slots: ["dial", "movement", "case"],
         },
       ];
@@ -111,3 +127,23 @@ export const dateWindowAlignment: Rule = {
     return [];
   },
 };
+
+/** "3", "3.8" or "4:30" as hours on a 12-hour dial; null if unreadable. */
+function hours(p: string): number | null {
+  const m = /^(\d{1,2})(?::(\d{2})|(\.\d+))?$/.exec(p.trim());
+  if (!m) return null;
+  const hour = Number(m[1]);
+  const frac = m[2] ? Number(m[2]) / 60 : m[3] ? Number(m[3]) : 0;
+  return hour >= 1 && hour <= 12 && frac < 1 ? (hour + frac) % 12 : null;
+}
+
+function clockGap(a: number, b: number): number {
+  const d = Math.abs(a - b) % 12;
+  return Math.min(d, 12 - d);
+}
+
+function formatHours(h: number): string {
+  const whole = Math.floor(h) || 12;
+  const min = Math.round((h % 1) * 60);
+  return min ? `${whole}:${String(min).padStart(2, "0")}` : String(whole);
+}
