@@ -126,3 +126,14 @@ export function at(r: number, deg: number): [number, number] {
   const a = ((deg - 90) * Math.PI) / 180;
   return [C + r * Math.cos(a), C + r * Math.sin(a)];
 }
+
+/**
+ * Bezel seat radius, canvas pixels. The seat is cut into the case, so it
+ * follows the case, not the insert: insertOuter falls back to 38mm with no
+ * insert chosen, which on a 37.8mm case put the seat outside the case and
+ * hid the rim. 1.65mm in from the edge is where the old formula landed on
+ * the stock SKX007.
+ */
+export function caseSeatR(m: WatchMm): number {
+  return mm(m.caseDiameter) / 2 - mm(1.65);
+}

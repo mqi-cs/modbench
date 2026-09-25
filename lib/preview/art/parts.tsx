@@ -3,7 +3,7 @@
 // same light, which is what makes the assembly read as one object rather
 // than as a collage.
 
-import { C, CROWN_ANGLE, at, mm, type WatchMm } from "./geometry";
+import { C, CROWN_ANGLE, at, caseSeatR, mm, type WatchMm } from "./geometry";
 import { CircleFacet, FACET_PX, PathFacet, RectFacet, facetPair, shift } from "./facets";
 import { RECESS, STEEL, bodyColour, inkOn, metalFamily, type MetalFamily } from "./palette";
 import { StepShadow } from "./depth";
@@ -172,7 +172,7 @@ function guardPt(R: number, deg: number): [number, number] {
 export function CaseBody({ m, metal }: { m: WatchMm; metal: MetalFamily }) {
   const caseR = mm(m.caseDiameter) / 2;
   const chamferR = caseR - mm(1.0);
-  const seatR = mm(m.insertOuter) / 2 + mm(0.6);
+  const seatR = caseSeatR(m);
   const apertureR = mm(m.dialAperture) / 2 + mm(1.2);
   const outline = caseOutline(m);
   const caseF = facetPair(metal.body, metal.facet);
