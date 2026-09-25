@@ -19,6 +19,7 @@ import { checkCaseShapeFit } from "../platform";
 export const crownCaseFit: Rule = {
   key: "crown-case-fit",
   appliesTo: ["crown", "case"],
+  familyDecides: ["crown", "case"],
   evaluate(build, catalog): Finding[] {
     const crown = getPart(build, catalog, "crown");
     const caseP = getPart(build, catalog, "case");

@@ -24,6 +24,7 @@ import { checkCaseShapeFit } from "../platform";
 export const strapFit: Rule = {
   key: "strap-fit",
   appliesTo: ["strap", "case"],
+  familyDecides: ["strap", "case"],
   evaluate(build, catalog): Finding[] {
     const strap = getPart(build, catalog, "strap");
     const caseP = getPart(build, catalog, "case");
@@ -32,12 +33,15 @@ export const strapFit: Rule = {
     if (strap.family === "generic-strap") {
       const strapLug = strap.attributes.lugWidthMm as number | null | undefined;
       const caseLug = caseP.attributes.lugWidthMm as number | null | undefined;
+      // A warning, not an error: the case's lug width is its case line's
+      // standard figure (class C in attribute-provenance.md), not a number
+      // this listing states, and only vendor-stated data may block (WS1 a).
       if (typeof strapLug === "number" && typeof caseLug === "number" && strapLug !== caseLug) {
         return [
           {
             ruleKey: "strap-fit",
-            severity: "error",
-            message: `"${strap.name}" is a ${strapLug}mm strap, but "${caseP.name}"'s lugs are ${caseLug}mm apart. Lug width is the one measurement a strap has to match exactly: the spring bar spans the gap between the lugs, so a strap cut narrower leaves the bar exposed and one cut wider won't go in at all. Unlike case model, this is the only thing that matters for a plain spring-bar strap -- match the width and it fits any case.`,
+            severity: "warning",
+            message: `"${strap.name}" is a ${strapLug}mm strap, but "${caseP.name}"'s lugs are ${caseLug}mm apart as standard for its case line. Lug width is the one measurement a strap has to match exactly: the spring bar spans the gap between the lugs, so a strap cut narrower leaves the bar exposed and one cut wider won't go in at all. Check the lug width on the case's own listing before ordering -- if it is ${caseLug}mm, this strap won't fit.`,
             slots: ["strap", "case"],
           },
         ];

@@ -14,6 +14,7 @@ import { checkCaseShapeFit } from "../platform";
 export const bezelCaseFit: Rule = {
   key: "bezel-case-fit",
   appliesTo: ["bezel", "case"],
+  familyDecides: ["bezel", "case"],
   evaluate(build, catalog): Finding[] {
     const bezel = getPart(build, catalog, "bezel");
     const caseP = getPart(build, catalog, "case");

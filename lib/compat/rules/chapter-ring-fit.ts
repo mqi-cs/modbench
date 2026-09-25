@@ -11,6 +11,7 @@ import { checkCaseShapeFit } from "../platform";
 export const chapterRingFit: Rule = {
   key: "chapter-ring-fit",
   appliesTo: ["chapterRing", "case", "dial"],
+  familyDecides: ["chapterRing", "case"],
   evaluate(build, catalog): Finding[] {
     const chapterRing = getPart(build, catalog, "chapterRing");
     const caseP = getPart(build, catalog, "case");

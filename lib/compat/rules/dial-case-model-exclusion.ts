@@ -26,6 +26,7 @@ import { getPart } from "../types";
 export const dialCaseModelExclusion: Rule = {
   key: "dial-case-model-exclusion",
   appliesTo: ["dial", "case"],
+  familyDecides: ["case"],
   evaluate(build, catalog): Finding[] {
     const dial = getPart(build, catalog, "dial");
     const caseP = getPart(build, catalog, "case");

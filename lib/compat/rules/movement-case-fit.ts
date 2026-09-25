@@ -22,6 +22,7 @@ import { getPart } from "../types";
 export const movementCaseFit: Rule = {
   key: "movement-case-fit",
   appliesTo: ["movement", "case"],
+  familyDecides: ["movement"],
   evaluate(build, catalog): Finding[] {
     const movement = getPart(build, catalog, "movement");
     if (!movement) return [];

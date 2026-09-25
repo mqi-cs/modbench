@@ -31,6 +31,7 @@ function isChronographMovement(family: string): boolean {
 export const dialMovementFeet: Rule = {
   key: "dial-movement-feet",
   appliesTo: ["dial", "movement"],
+  familyDecides: ["dial", "movement"],
   evaluate(build, catalog): Finding[] {
     const dial = getPart(build, catalog, "dial");
     const movement = getPart(build, catalog, "movement");

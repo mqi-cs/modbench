@@ -32,6 +32,7 @@ const TOOL_COST_RANGES: Record<ToolKey, ToolCostRange> = {
   "movement-holder": { minGbp: 5, maxGbp: 15 },
   "spring-bar-tool": { minGbp: 3, maxGbp: 10 },
   "bezel-insert-tool": { minGbp: 5, maxGbp: 12 },
+  "crystal-press": { minGbp: 15, maxGbp: 40 },
 };
 
 export function getToolCostRange(tool: ToolKey): ToolCostRange {
@@ -64,6 +65,11 @@ export function deriveTools(build: Build, catalog: CatalogSlice): ToolKey[] {
   }
   if (strap) {
     tools.add("spring-bar-tool");
+  }
+  // A crystal bought on its own has to be pressed into the case; one that
+  // comes fitted in a case bundle never appears in the crystal slot.
+  if (getPart(build, catalog, "crystal")) {
+    tools.add("crystal-press");
   }
 
   return [...tools];

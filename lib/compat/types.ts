@@ -22,9 +22,23 @@ export type SlotKey =
   | "crown"
   | "strap";
 
+// Where a part's data came from. The last two arrive with WS4's
+// bring-your-own links: a marketplace seller's claim, or something the user
+// confirmed themselves. Neither may drive an error or produce a clean ok.
+export type SpecSource = "vendor-stated" | "family-inferred" | "manual" | "marketplace-stated" | "user-entered";
+
+// How strong the evidence behind a finding is, shown next to it in the UI.
+//   verified    -- stated data, and a real bad build with the seller's own
+//                  words behind the rule (lib/compat/evidence.ts)
+//   checked     -- stated data, rule tested by mechanism only
+//   unconfirmed -- decided by inferred, marketplace or user-entered data
+// Only a verified finding may block; evaluateBuild downgrades the rest.
+export type EvidenceTier = "verified" | "checked" | "unconfirmed";
+
 export interface Finding {
   ruleKey: string;
   severity: Severity;
+  tier?: EvidenceTier; // set by evaluateBuild, never by a rule
   message: string; // plain language, addressed to a beginner, two layers (see 03-phase-2-compat-engine.md)
   slots: SlotKey[]; // which selections this concerns
   fix?: string; // what to do about it
@@ -47,7 +61,8 @@ export type ToolKey =
   | "case-back-opener"
   | "movement-holder"
   | "spring-bar-tool"
-  | "bezel-insert-tool";
+  | "bezel-insert-tool"
+  | "crystal-press";
 
 export interface BuildResult {
   findings: Finding[];
@@ -70,7 +85,7 @@ export interface CatalogPart {
   family: string;
   name: string;
   attributes: Record<string, unknown>;
-  specSource: "vendor-stated" | "family-inferred" | "manual";
+  specSource: SpecSource;
   confidence: "high" | "medium" | "low";
 }
 
@@ -125,6 +140,10 @@ export function partById(catalog: CatalogSlice, partId: string): CatalogPart | n
 export interface Rule {
   key: string;
   appliesTo: SlotKey[];
+  // Slots whose family tag decides this rule's errors. A part in one of
+  // them whose family was inferred rather than vendor-stated makes the
+  // finding unconfirmed.
+  familyDecides?: SlotKey[];
   evaluate(build: Build, catalog: CatalogSlice): Finding[];
 }
 

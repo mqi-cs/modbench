@@ -5,6 +5,7 @@ import { checkCaseShapeFit } from "../platform";
 export const crystalCaseFit: Rule = {
   key: "crystal-case-fit",
   appliesTo: ["crystal", "case"],
+  familyDecides: ["crystal", "case"],
   evaluate(build, catalog): Finding[] {
     const crystal = getPart(build, catalog, "crystal");
     const caseP = getPart(build, catalog, "case");

@@ -179,9 +179,16 @@ function parseProfile(title: string): "flat" | "domed" | "slope" | null {
   return null;
 }
 
+// "NH35A" is the same caliber as "NH35" (WS1: 10 real movements had no
+// caliber because of the suffix). NH70/71/72 are the skeleton calibers.
 function parseCaliber(title: string): string | null {
-  const m = /\bNH3[4568]\b/i.exec(title);
+  const m = /\bNH(?:3[4568]|7[012])(?=A?\b)/i.exec(title);
   return m ? m[0].toUpperCase() : null;
+}
+
+function parseMovementCrown(title: string): string | null {
+  const m = /\((\d(?:\.\d)?) o'clock crown case\)|@ (\d)H Crown/i.exec(title);
+  return m ? (m[1] ?? m[2]!) : null;
 }
 
 // Real, positive vendor evidence only, per Amendment A -- "no date" in a
@@ -334,10 +341,17 @@ function main() {
 
     if (p.category === "movement") {
       const caliber = parseCaliber(p.name);
+      // The skeleton calibers' day/date layout and height aren't stated by
+      // any vendor here; unknown stays null.
+      const skeleton = caliber !== null && caliber.startsWith("NH7");
       attrs = {
         caliber,
-        hasDay: caliber === "NH36" ? true : caliber ? false : null,
-        hasDate: caliber === "NH38" ? false : caliber ? true : null,
+        hasDay: skeleton ? null : caliber === "NH36" ? true : caliber ? false : null,
+        hasDate: skeleton ? null : caliber === "NH38" ? false : caliber ? true : null,
+        // The crown position this movement's date wheel is set for, where
+        // the listing names one: DLW's "(3.8 o'clock crown case)", Lucius's
+        // "Day Date @ 4H Crown". Unnamed means the factory stem at 3.
+        crownPosition: parseMovementCrown(p.name),
         // Only "Date @ NH" title language counts as date-APERTURE-position
         // evidence (e.g. "Date @ 6H" -- confirmed by the vendor's own
         // comparison table listing this as the "Complication" column, a
@@ -348,7 +362,7 @@ function main() {
         // the matching dial-side bug). Crown position isn't tracked here
         // at all yet; genuinely unknown stays null rather than guessed.
         dateWindowPosition: p.name.toLowerCase().includes("date @ 6h") ? "6" : null,
-        heightMm: caliber ? 5.32 : null, // well-known public NH3x movement height spec
+        heightMm: caliber && !skeleton ? 5.32 : null, // well-known public NH3x movement height spec
       };
     } else if (p.category === "hands") {
       attrs = {

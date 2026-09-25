@@ -97,12 +97,15 @@ export const dateWindowAlignment: Rule = {
       ];
     }
 
-    // Factory positions are stated for a stem at 3 o'clock; a case that puts
-    // the crown elsewhere turns the whole movement by the same amount.
+    // A date position is stated for the crown position the movement is sold
+    // for: 3 o'clock, unless the listing names another ("NH36A (3.8 o'clock
+    // crown case)", "@ 4H Crown"). A case that puts the crown elsewhere
+    // turns the whole movement by the difference.
     const mv = hours(movementPosition);
     const crown = hours(casePosition);
+    const soldFor = hours((movement.attributes.crownPosition as string | null | undefined) ?? "3");
     const cuts = dialPositions.map(hours);
-    if (mv === null || crown === null || cuts.some((c) => c === null)) {
+    if (mv === null || crown === null || soldFor === null || cuts.some((c) => c === null)) {
       return [
         {
           ruleKey: "date-window-alignment",
@@ -112,7 +115,7 @@ export const dateWindowAlignment: Rule = {
         },
       ];
     }
-    const landed = (((mv + crown - 3) % 12) + 12) % 12;
+    const landed = (((mv + crown - soldFor) % 12) + 12) % 12;
     if (!cuts.some((c) => clockGap(c!, landed) <= 0.25)) {
       return [
         {

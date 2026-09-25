@@ -274,7 +274,10 @@
       },
       "source": "https://namokimods.com/products/nmk912-field-watch-case-bundle-sandblasted-finish",
       "notes": "Case is skx013-case family (38mm) but dial and bezel insert are both skx007-case family (43mm case, larger bezel/dial aperture). WatchUSeek confirms the 5mm diameter difference between SKX007 and SKX013. All 5 parts are real audited SKUs; the mismatch is deliberately cross-family to test that the compat engine catches a dial-case-diameter AND insert-case-fit mismatch simultaneously.",
-      "sourceQuote": "namokimods, NMK912 case listing: \"NMK912 SKX013 Field Watch Case Bundle... Diameter: 38mm, Lug to Lug: 46.5mm, Lug Width: 20mm... Compatible with SKX013 Crowns... Integrated Rehaut (Chapter Ring)\". The case is scoped by its own vendor to SKX013 parts and ships with an SKX013 crown; the bezel insert selected here is an SKX007/SRPD part. Replaces the previous citation (a WatchUSeek thread behind a Tollbit paywall, unverifiable per 01a-PHASE-0-FINDINGS.md Finding 3)."
+      "sourceQuote": "namokimods, NMK912 case listing: \"NMK912 SKX013 Field Watch Case Bundle... Diameter: 38mm, Lug to Lug: 46.5mm, Lug Width: 20mm... Compatible with SKX013 Crowns... Integrated Rehaut (Chapter Ring)\". The case is scoped by its own vendor to SKX013 parts and ships with an SKX013 crown; the bezel insert selected here is an SKX007/SRPD part. Replaces the previous citation (a WatchUSeek thread behind a Tollbit paywall, unverifiable per 01a-PHASE-0-FINDINGS.md Finding 3).",
+      "evidences": [
+        "insert-case-fit"
+      ]
     },
     {
       "id": "bad-003",
@@ -288,7 +291,10 @@
       },
       "source": "https://luciusatelier.com/products/skx013-ceramic-bezel-insert-slope-submariner-green",
       "notes": "Mirror of bad-002 in the other direction: skx007-case (43mm) paired with a 'Slope' bezel insert whose tags scope it explicitly to fits-skx013 (38mm bezel diameter). All 5 audited.",
-      "sourceQuote": "luciusatelier, SKX013 Ceramic Bezel Insert (Slope) listing: \"Fits the SKX013, SKX015, SKX017 and all 7S26-0030 cases.\" SKX007 is not in that list. The case selected here is an SKX007-family case. Replaces the previous citation (same paywalled WatchUSeek thread as bad-002)."
+      "sourceQuote": "luciusatelier, SKX013 Ceramic Bezel Insert (Slope) listing: \"Fits the SKX013, SKX015, SKX017 and all 7S26-0030 cases.\" SKX007 is not in that list. The case selected here is an SKX007-family case. Replaces the previous citation (same paywalled WatchUSeek thread as bad-002).",
+      "evidences": [
+        "insert-case-fit"
+      ]
     },
     {
       "id": "bad-006",
@@ -302,7 +308,11 @@
       },
       "source": "https://luciusatelier.com/products/skx013-diver-38-black-ultra-thin-edition",
       "sourceQuote": "luciusatelier, SKX013 Diver 38 Black — Ultra Thin Watch Case listing: \"the bezel, ceramic insert, and sapphire crystal are unique to this case — standard SKX bezels, inserts, and crystals will not fit, and ours will not fit a stock SKX.\"",
-      "notes": "THE key false-positive-trap fixture. This case's own body_html states directly: 'standard SKX bezels, inserts, and crystals will not fit, and ours will not fit a stock SKX.' The bezel insert used here is a standard fits-skx013 SKU (not one of Lucius's own Ultra Thin-scoped accessories), so despite every part individually being a real, high-confidence, vendor-tagged 'skx013' part, the case is a proprietary redesign that rejects them. This is the single most important bad-build fixture in the set -- if Phase 2's rules pass this as compatible, the zero-false-positive guarantee has already failed."
+      "notes": "THE key false-positive-trap fixture. This case's own body_html states directly: 'standard SKX bezels, inserts, and crystals will not fit, and ours will not fit a stock SKX.' The bezel insert used here is a standard fits-skx013 SKU (not one of Lucius's own Ultra Thin-scoped accessories), so despite every part individually being a real, high-confidence, vendor-tagged 'skx013' part, the case is a proprietary redesign that rejects them. This is the single most important bad-build fixture in the set -- if Phase 2's rules pass this as compatible, the zero-false-positive guarantee has already failed.",
+      "evidences": [
+        "insert-case-fit",
+        "family-exception"
+      ]
     },
     {
       "id": "bad-007",
@@ -356,7 +366,10 @@
       },
       "source": "https://watchandstyle.net/products/ci0024-skx007-srpd-flat-ceramic-bezel-insert-skx-style",
       "sourceQuote": "watchandstyle, CI0024 listing: \"Check your crystal before this one: it takes flat crystals only, OEM or flat sapphire, and will not sit correctly under a double dome.\" The same warning appears on CI1707/CI1708 (\"Ceramic Insert compatible with flat sapphire crystals only (not compatible with double dome sapphire)\") and inverted on SG003/SG007 (\"Crystal will not fit SKX007 OEM aluminum insert\") -- ~39 watchandstyle SKUs carry a profile-fit statement.",
-      "notes": "Every part here is SKX007-family and correctly sized for the case, so platform/family matching passes it. The incompatibility is PROFILE: a flat insert is machined to sit under a flat crystal, and this crystal is double-domed. Found by mining vendor body_html during the Phase 2 mechanism audit; the engine had no rule covering it, so this was a live false-positive hole. Caught by the new insert-crystal-profile-fit rule."
+      "notes": "Every part here is SKX007-family and correctly sized for the case, so platform/family matching passes it. The incompatibility is PROFILE: a flat insert is machined to sit under a flat crystal, and this crystal is double-domed. Found by mining vendor body_html during the Phase 2 mechanism audit; the engine had no rule covering it, so this was a live false-positive hole. Caught by the new insert-crystal-profile-fit rule.",
+      "evidences": [
+        "insert-crystal-profile-fit"
+      ]
     },
     {
       "id": "bad-012",
@@ -370,7 +383,10 @@
       },
       "source": "https://luciusatelier.com/products/seiko-snkk87-sunburst-dial",
       "sourceQuote": "luciusatelier, SEIKO SNKK87 Sunburst Dial listing: \"Fit Models SNK803, SNK805, SNK807, SNK809, SKX007, SKX009, SKX011 and more / Not compatible with SKX013, SKX015 and SKX017\". The same wording appears on SNKL15 and SNKL23.",
-      "notes": "The case is an SKX013-family case, which this dial's own listing explicitly rules out. Invisible to every other rule: the dial is tagged nh3x-dial-standard (a movement-family family carrying no case constraint by design), and it's an ordinary 28.5mm dial like every other dial in the catalog, so neither family matching nor diameter can see it. Caught by the new dial-case-model-exclusion rule."
+      "notes": "The case is an SKX013-family case, which this dial's own listing explicitly rules out. Invisible to every other rule: the dial is tagged nh3x-dial-standard (a movement-family family carrying no case constraint by design), and it's an ordinary 28.5mm dial like every other dial in the catalog, so neither family matching nor diameter can see it. Caught by the new dial-case-model-exclusion rule.",
+      "evidences": [
+        "dial-case-model-exclusion"
+      ]
     },
     {
       "id": "bad-013",
@@ -384,7 +400,122 @@
       },
       "source": "https://luciusatelier.com/products/oyster-bracelet-20-16mm-brushed",
       "sourceQuote": "luciusatelier, Oyster Bracelet 20/16mm listing: \"Fits Lucius Atelier cases only. The end-links are shaped to our case profiles -- this bracelet does not fit generic 20mm lugs or OEM [cases]\". 20 Lucius bracelet listings carry it.",
-      "notes": "The case is a genuine SKX013-line case at the correct 20mm lug width, from a different maker. Family matching passes it (both skx013-*), lug width passes it (both 20mm) -- only the vendor scope catches it. This is a strictly narrower constraint than any other rule expresses: not 'which case line' but 'whose case'. Caught by the new bracelet-vendor-scope rule."
+      "notes": "The case is a genuine SKX013-line case at the correct 20mm lug width, from a different maker. Family matching passes it (both skx013-*), lug width passes it (both 20mm) -- only the vendor scope catches it. This is a strictly narrower constraint than any other rule expresses: not 'which case line' but 'whose case'. Caught by the new bracelet-vendor-scope rule.",
+      "evidences": [
+        "bracelet-vendor-scope"
+      ]
+    },
+    {
+      "id": "bad-014",
+      "expected": "blocked",
+      "evidences": [
+        "crystal-case-fit"
+      ],
+      "parts": {
+        "case": "NMK960 Sumo SKX007/SRPD Case: Steel Finish",
+        "crystal": "Sapphire Flat - SRPE"
+      },
+      "source": "https://dlwwatches.com/products/sapphire-flat-srpe",
+      "sourceQuote": "dlwwatches, Sapphire Flat - SRPE listing: \"Fits 5 SRPE 51, 53, 55, 57, 61, 63, 65, 67, 69\". An SKX007 case is not in that list.",
+      "notes": "WS1 step 4. An SRPE crystal in an SKX007-line case: the crystal's own listing scopes it to the SRPE series only."
+    },
+    {
+      "id": "bad-015",
+      "expected": "blocked",
+      "evidences": [
+        "bezel-case-fit"
+      ],
+      "parts": {
+        "case": "NMK912 Field Watch Case Bundle : Sandblasted Finish",
+        "bezel": "R0879 SKX007/SRPD Rotating Bezel - LX Style - Polished Dark Blue"
+      },
+      "source": "https://watchandstyle.net/products/r0879-skx007-rotating-bezel-lx-style-polished-dark-blue",
+      "sourceQuote": "watchandstyle, R0879 listing: \"Will fit SKX007, SKX009, SKX011 (0200 Case)\". The NMK912 is an SKX013-line case (namokimods: \"Diameter: 38mm\").",
+      "notes": "WS1 step 4. An SKX007 bezel on an SKX013 case."
+    },
+    {
+      "id": "bad-016",
+      "expected": "blocked",
+      "evidences": [
+        "crown-case-fit"
+      ],
+      "parts": {
+        "case": "NMK960 Sumo SKX007/SRPD Case: Steel Finish",
+        "crown": "Crown - SRPE - Polished/Brushed PVD Black"
+      },
+      "source": "https://dlwwatches.com/products/crown-srpe-polished-brushed-pvd-black",
+      "sourceQuote": "dlwwatches, Crown - SRPE listing: \"Fits 5 SRPE 51, 53, 55, 57, 61, 63, 65, 67, 69\". An SKX007 case is not in that list.",
+      "notes": "WS1 step 4. An SRPE crown on an SKX007-line case."
+    },
+    {
+      "id": "bad-017",
+      "expected": "blocked",
+      "evidences": [
+        "strap-fit"
+      ],
+      "parts": {
+        "case": "NMK912 Field Watch Case Bundle : Sandblasted Finish",
+        "strap": "SKX007 Watch Bracelet: Jubilee Finish (Female End Links)"
+      },
+      "source": "https://namokimods.com/products/skx007-watch-bracelet-jubilee-finish-female-end-links",
+      "sourceQuote": "namokimods, SKX007 Jubilee bracelet listing: \"Female End Links designed to fit the SKX007 and our own range of SKX007 watch cases\". The NMK912 is an SKX013-line case.",
+      "notes": "WS1 step 4. Bracelet end-links shaped for the SKX007 on an SKX013 case (the end-link branch of strap-fit; its lug-width branch only warns)."
+    },
+    {
+      "id": "bad-018",
+      "expected": "blocked",
+      "evidences": [
+        "dial-movement-feet"
+      ],
+      "parts": {
+        "dial": "Watch Dial: Panda Chronograph",
+        "movement": "Seiko (TMI) NH35A Automatic Movement - Black"
+      },
+      "source": "https://namokimods.com/products/watch-dial-panda-chronograph",
+      "sourceQuote": "namokimods, Panda Chronograph dial listing: \"This dial is compatible with Seiko VK63 Mechaquartz Chronograph Movement only\".",
+      "notes": "WS1 step 4. A VK63 chronograph dial on an NH35A."
+    },
+    {
+      "id": "bad-019",
+      "expected": "blocked",
+      "evidences": [
+        "movement-case-fit"
+      ],
+      "parts": {
+        "case": "NMK960 Sumo SKX007/SRPD Case: Steel Finish",
+        "movement": "NH35/36 Day-Date Corrector Wheel"
+      },
+      "source": "https://namokimods.com/products/nh35-36-day-date-corrector-wheel",
+      "sourceQuote": "namokimods, NH35/36 Day-Date Corrector Wheel listing: \"The corrector wheel responsible for advancing both the day and date displays during quick-set operation ... Compatible with NH35 and NH36 movements.\" A part of a movement, not a movement.",
+      "notes": "WS1 step 4. A spare part chosen in the movement slot."
+    },
+    {
+      "id": "bad-020",
+      "expected": "blocked",
+      "evidences": [
+        "day-window-presence"
+      ],
+      "parts": {
+        "dial": "Nautilus Arctic White Dial (Day Date)",
+        "movement": "Seiko (TMI) NH35 Automatic Movement - Date (White)"
+      },
+      "source": "https://luciusatelier.com/products/nautilus-arctic-white-dial-day-date",
+      "sourceQuote": "luciusatelier, Nautilus Arctic White Dial (Day Date) listing: \"Day Date NH36 Day + date at 3 o'clock\". The NH35 has no day wheel.",
+      "notes": "WS1 step 4. A day-date dial on a date-only NH35: the day aperture shows blank."
+    },
+    {
+      "id": "bad-022",
+      "expected": "blocked",
+      "evidences": [
+        "requires-chapter-ring"
+      ],
+      "parts": {
+        "case": "SKX013 Watch Case - 38mm (DLC BLACK EDITION) [NH34-Ready]",
+        "dial": "Namoki Watch Dial: Spork Green"
+      },
+      "source": "https://luciusatelier.com/products/skx013-watch-case-38mm-dlc-black-edition-nh34-ready",
+      "sourceQuote": "luciusatelier, SKX013 Watch Case - 38mm (DLC BLACK EDITION) listing: \"Chapter Rings SKX013-spec (required, sold separately)\".",
+      "notes": "WS1 step 4. A case that needs a chapter ring it doesn't include, built without one."
     }
   ]
 }

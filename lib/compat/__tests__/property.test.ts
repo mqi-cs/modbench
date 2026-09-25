@@ -99,3 +99,35 @@ describe("property: evaluateBuild over random part pairs", () => {
     expect(() => evaluateBuild(ghost, catalog)).not.toThrow();
   });
 });
+
+// WS1 pass measure 3: data that isn't the maker's own -- inferred, a
+// marketplace seller's claim, or the user's entry -- can never leave a
+// build cleanly "ok", and can never block it.
+describe("property: non-vendor data never yields a clean ok, and never blocks", () => {
+  const sources = ["family-inferred", "marketplace-stated", "user-entered"] as const;
+  const rand = mulberry32(20260926);
+
+  for (const source of sources) {
+    it(`${source}: 1,000 random real pairs`, () => {
+      for (let i = 0; i < 1000; i++) {
+        const a = allParts[Math.floor(rand() * allParts.length)] as CatalogPart;
+        let b = allParts[Math.floor(rand() * allParts.length)] as CatalogPart;
+        if (b.slot === a.slot) b = allParts.find((p) => p.slot !== a.slot)!;
+        const relabelled: CatalogPart = { ...a, id: `${a.id}~${source}`, specSource: source };
+        const slice = { ...catalog, parts: { ...catalog.parts, [relabelled.id]: relabelled } };
+        const build: Build = { parts: { [a.slot]: relabelled.id, [b.slot]: b.id } };
+        const result = evaluateBuild(build, slice);
+        const context = `${source} ${a.name} (${a.slot}) + ${b.name} (${b.slot})`;
+
+        expect(result.status, context).not.toBe("ok");
+        expect(result.findings.some((f) => f.severity === "warning" && f.slots.includes(a.slot)), context).toBe(true);
+        for (const f of result.findings) {
+          if (f.tier === "unconfirmed") expect(f.severity, `${context}: ${f.ruleKey}`).not.toBe("error");
+          // Marketplace and user data touch every value of the part, so
+          // nothing about it can block, whichever rule looked.
+          if (source !== "family-inferred" && f.slots.includes(a.slot)) expect(f.severity, `${context}: ${f.ruleKey}`).not.toBe("error");
+        }
+      }
+    });
+  }
+});

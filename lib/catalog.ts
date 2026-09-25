@@ -11,7 +11,7 @@ import { encodePreviewable } from "./preview/previewable";
 import { ART_TAGS, encodeArt, type ArtEntry, type EncodedArt } from "./preview/art-codec";
 import { caseDimensions, type RenderMm } from "./preview/dimensions";
 import { readFileSync } from "node:fs";
-import type { CatalogSlice, SlotKey } from "./compat";
+import type { CatalogSlice, SlotKey, SpecSource } from "./compat";
 
 const CATEGORY_TO_SLOT: Record<string, SlotKey> = {
   movement: "movement",
@@ -98,7 +98,7 @@ export function loadCatalog(): CatalogPayload {
       family: p.family,
       name: p.name,
       attributes: fromJsonColumn<Record<string, unknown>>(p.attributes),
-      specSource: p.specSource as "vendor-stated" | "family-inferred" | "manual",
+      specSource: p.specSource as SpecSource,
       confidence: p.confidence as "high" | "medium" | "low",
     };
   }

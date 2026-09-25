@@ -7,6 +7,7 @@ import { checkCaseShapeFit } from "../platform";
 export const insertCaseFit: Rule = {
   key: "insert-case-fit",
   appliesTo: ["bezelInsert", "case"],
+  familyDecides: ["bezelInsert", "case"],
   evaluate(build, catalog): Finding[] {
     const insert = getPart(build, catalog, "bezelInsert");
     const caseP = getPart(build, catalog, "case");

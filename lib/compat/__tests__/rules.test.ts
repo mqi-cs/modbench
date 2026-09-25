@@ -18,6 +18,9 @@ import { unverifiedPart } from "../rules/unverified-part";
 import { lumeMismatch } from "../rules/lume-mismatch";
 import { stockAvailability } from "../rules/stock-availability";
 import { multiVendorShipping } from "../rules/multi-vendor-shipping";
+import { dialMovementSize } from "../rules/dial-movement-size";
+import { crownStemLength } from "../rules/crown-stem-length";
+import { deriveTools } from "../tools";
 import { bezelCaseFit } from "../rules/bezel-case-fit";
 import { crownCaseFit } from "../rules/crown-case-fit";
 import { strapFit } from "../rules/strap-fit";
@@ -133,6 +136,14 @@ describe("date-window-alignment", () => {
     expect(severities(f)).toEqual(["error"]);
     expect(JSON.stringify(f)).toContain("about 3:48 o'clock");
   });
+  it("reads a movement's date position for the crown case it is sold for (NH36A '3.8 o'clock crown case')", () => {
+    const f = run(dateWindowAlignment, [
+      part("dial", "nh3x-dial-standard", { ...PLAIN_DIAL, supportedDatePositions: ["3"] }),
+      part("movement", "nh3x-movement", { ...NH36, dateWindowPosition: "3", crownPosition: "3.8" }),
+      part("case", "skx007-case", SKX007_CASE),
+    ]);
+    expect(f).toHaveLength(0);
+  });
   it("reads h:mm positions and wraps past twelve", () => {
     const f = run(dateWindowAlignment, [
       part("dial", "nh3x-dial-standard", { ...PLAIN_DIAL, supportedDatePositions: ["12:30"] }),
@@ -160,6 +171,36 @@ describe("date-window-alignment", () => {
   it("warns about a wasted date function on a dateless dial", () => {
     const f = run(dateWindowAlignment, [part("dial", "nh3x-dial-standard", { ...PLAIN_DIAL, hasDateWindow: false }), part("movement", "nh3x-movement", NH35)]);
     expect(severities(f)).toEqual(["warning"]);
+  });
+});
+
+describe("dial-movement-size (WS1 step 3)", () => {
+  it("is silent for a standard-dial caliber", () => {
+    expect(run(dialMovementSize, [part("dial", "nh3x-dial-standard", PLAIN_DIAL), part("movement", "nh3x-movement", NH35)])).toHaveLength(0);
+  });
+  it("warns, never errors, on a skeleton NH72", () => {
+    const f = run(dialMovementSize, [part("dial", "nh3x-dial-standard", PLAIN_DIAL), part("movement", "nh3x-movement", { caliber: "NH72" })]);
+    expect(severities(f)).toEqual(["warning"]);
+  });
+  it("warns when the caliber isn't recorded rather than assuming 28.5mm", () => {
+    const f = run(dialMovementSize, [part("dial", "nh3x-dial-standard", PLAIN_DIAL), part("movement", "nh3x-movement", { caliber: null })]);
+    expect(severities(f)).toEqual(["warning"]);
+  });
+  it("leaves VK chronographs and spare parts to their own rules", () => {
+    expect(run(dialMovementSize, [part("dial", "nh3x-dial-standard", PLAIN_DIAL), part("movement", "vk6x-movement")])).toHaveLength(0);
+    expect(run(dialMovementSize, [part("dial", "nh3x-dial-standard", PLAIN_DIAL), part("movement", "nh3x-movement-accessory")])).toHaveLength(0);
+  });
+});
+
+describe("crown-stem-length and the crystal press (WS1 step 3)", () => {
+  it("notes, as info only, that a stem may need cutting", () => {
+    expect(severities(run(crownStemLength, [part("crown", "skx007-crown"), part("case", "skx007-case", SKX007_CASE)]))).toEqual(["info"]);
+  });
+  it("adds a crystal press only when a crystal is bought separately", () => {
+    const withCrystal = [part("case", "skx007-case", SKX007_CASE), part("crystal", "skx007-crystal")];
+    expect(deriveTools(buildOf(withCrystal), catalogOf(withCrystal))).toContain("crystal-press");
+    const without = [part("case", "skx007-case", SKX007_CASE)];
+    expect(deriveTools(buildOf(without), catalogOf(without))).not.toContain("crystal-press");
   });
 });
 
@@ -208,9 +249,9 @@ describe("strap-fit", () => {
     const f = run(strapFit, [part("strap", "skx013-bracelet"), part("case", "skx007-case", SKX007_CASE)]);
     expect(severities(f)).toEqual(["error"]);
   });
-  it("errors on a generic strap whose lug width doesn't match", () => {
+  it("warns, never blocks, on a lug-width mismatch: the case figure is its line's standard, not vendor-stated", () => {
     const f = run(strapFit, [part("strap", "generic-strap", { lugWidthMm: 20 }), part("case", "skx007-case", SKX007_CASE)]);
-    expect(severities(f)).toEqual(["error"]);
+    expect(severities(f)).toEqual(["warning"]);
   });
   it("is silent on a generic strap at the matching lug width", () => {
     expect(run(strapFit, [part("strap", "generic-strap", { lugWidthMm: 22 }), part("case", "skx007-case", SKX007_CASE)])).toHaveLength(0);

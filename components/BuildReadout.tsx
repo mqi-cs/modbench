@@ -4,6 +4,7 @@ import { ASSEMBLY_ORDER } from "@/components/build/types";
 import type { BuildView } from "@/lib/build-view";
 import { configuratorHref } from "@/lib/build-view";
 import { WatchPreview } from "./build/WatchPreview";
+import { EvidenceTag } from "./build/EvidenceTag";
 
 const SLOT_LABEL = Object.fromEntries(ASSEMBLY_ORDER.map((s) => [s.slot, s.label]));
 
@@ -57,7 +58,7 @@ export function BuildReadout({ view, title, blurb }: { view: BuildView; title: s
           <div className="mt-6 border border-ruby/40 bg-ruby-tint p-4">
             <h2 className="text-[13px] font-semibold text-ruby">Won&rsquo;t go together</h2>
             <ul className="mt-2 space-y-2 text-[13px] leading-relaxed text-ink">
-              {errors.map((f, i) => <li key={i}>{f.message}</li>)}
+              {errors.map((f, i) => <li key={i}>{f.message}<EvidenceTag tier={f.tier} /></li>)}
             </ul>
           </div>
         )}
@@ -110,7 +111,7 @@ export function BuildReadout({ view, title, blurb }: { view: BuildView; title: s
           <div className="mt-6">
             <h2 className="border-b border-rule pb-1 text-[13px] font-semibold">Worth knowing</h2>
             <ul className="mt-2 space-y-2 text-[13px] leading-relaxed text-graphite">
-              {warnings.map((f, i) => <li key={i}>{f.message}</li>)}
+              {warnings.map((f, i) => <li key={i}>{f.message}<EvidenceTag tier={f.tier} /></li>)}
             </ul>
           </div>
         )}

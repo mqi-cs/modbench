@@ -4,6 +4,7 @@ import type { Build, BuildResult, CatalogSlice, SlotKey } from "@/lib/compat";
 import type { BuildTotals } from "@/lib/pricing";
 import { formatGbp, formatNative, formatDate } from "@/lib/money";
 import { ASSEMBLY_ORDER } from "./types";
+import { EvidenceTag } from "./EvidenceTag";
 
 export function BuildSummary({
   build,
@@ -182,7 +183,10 @@ export function BuildSummary({
                       : "border-l-rule-strong border-dotted"
                 }`}
               >
-                <p className="text-[12px] leading-snug">{f.message}</p>
+                <p className="text-[12px] leading-snug">
+                  {f.message}
+                  <EvidenceTag tier={f.tier} />
+                </p>
                 {f.fix && <p className="mt-1 text-[11px] text-graphite">{f.fix}</p>}
                 {f.slots.length > 0 && (
                   <p className="mt-1 flex flex-wrap gap-1">

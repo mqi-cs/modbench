@@ -2,6 +2,7 @@ import type { Build, BuildResult, CatalogSlice, Finding, Rule } from "./types";
 import { deriveTools } from "./tools";
 import { familyPlatform } from "./platform";
 import { partById } from "./types";
+import { withEvidence } from "./evidence";
 
 import { movementCaseFit } from "./rules/movement-case-fit";
 import { dialMovementFeet } from "./rules/dial-movement-feet";
@@ -25,6 +26,8 @@ import { insertCrystalProfileFit } from "./rules/insert-crystal-profile-fit";
 import { dialCaseModelExclusion } from "./rules/dial-case-model-exclusion";
 import { requiresChapterRing } from "./rules/requires-chapter-ring";
 import { braceletVendorScope } from "./rules/bracelet-vendor-scope";
+import { dialMovementSize } from "./rules/dial-movement-size";
+import { crownStemLength } from "./rules/crown-stem-length";
 
 // Registration order is cosmetic, not load-bearing -- rules are
 // order-independent by construction (each reads only Build/CatalogSlice,
@@ -56,6 +59,8 @@ export const RULES: Rule[] = [
   dialCaseModelExclusion,
   requiresChapterRing,
   braceletVendorScope,
+  dialMovementSize,
+  crownStemLength,
 ];
 
 // The chapter-ring family a case implies, used to tell the caller WHICH
@@ -84,7 +89,7 @@ function statusFromFindings(findings: Finding[]): BuildResult["status"] {
 export function evaluateBuild(build: Build, catalog: CatalogSlice): BuildResult {
   const findings: Finding[] = [];
   for (const rule of RULES) {
-    findings.push(...rule.evaluate(build, catalog));
+    for (const f of rule.evaluate(build, catalog)) findings.push(withEvidence(rule, f, build, catalog));
   }
 
   // requiredAdditions is derived from findings that carry a `fix` naming
@@ -111,6 +116,7 @@ export function evaluateBuild(build: Build, catalog: CatalogSlice): BuildResult 
   };
 }
 
-export type { Build, BuildResult, CatalogSlice, CatalogPart, CatalogFamilyException, CatalogListing, Finding, PartRef, Rule, Severity, SlotKey, ToolKey } from "./types";
+export type { Build, BuildResult, CatalogSlice, CatalogPart, CatalogFamilyException, CatalogListing, EvidenceTier, Finding, PartRef, Rule, Severity, SlotKey, SpecSource, ToolKey } from "./types";
 export { getToolCostRange } from "./tools";
+export { VERIFIED_RULES } from "./evidence";
 export { familyPlatform, platformsMatch, checkCaseShapeFit } from "./platform";
