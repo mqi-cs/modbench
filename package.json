@@ -27,6 +27,7 @@
     "backfill-phash": "tsx scripts/backfill-phash.ts",
     "prepare-assets": "tsx scripts/prepare-assets.ts",
     "verify-catalog": "tsx scripts/verify-catalog.ts",
+    "rule-inventory": "tsx scripts/rule-inventory.ts",
     "catalog:rebuild": "pnpm db:migrate && pnpm seed && pnpm ingest && pnpm tag && pnpm import-tagged && pnpm seed-exceptions && pnpm backfill-attributes && pnpm backfill-images && pnpm backfill-style-tags && pnpm backfill-shapes && pnpm backfill-dimensions && pnpm prepare-assets && pnpm backfill-phash && pnpm verify-catalog",
     "catalog:refresh": "pnpm tag && pnpm import-tagged && pnpm backfill-attributes && pnpm backfill-images && pnpm backfill-style-tags && pnpm backfill-shapes && pnpm backfill-dimensions && pnpm prepare-assets && pnpm backfill-phash && pnpm verify-catalog",
     "test": "vitest run",
