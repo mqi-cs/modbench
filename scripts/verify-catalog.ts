@@ -10,6 +10,7 @@ import { eq } from "drizzle-orm";
 import { nameFamilyConflict } from "../lib/db/name-family-conflict";
 import { fromJsonColumn } from "../lib/db/json";
 import { SHAPES, shapeById } from "../lib/preview/shape-vocabulary";
+import { caseDimensions } from "../lib/preview/dimensions";
 
 // GBP plausible-price ranges, checked against priceMinorBase (the real,
 // ingest-time-converted GBP figure) so one range covers all vendors
@@ -401,6 +402,14 @@ function main() {
     (p) => p.category === "case" && typeof fromJsonColumn<Record<string, unknown>>(p.attributes).caseDiameterMm === "number",
   ).length;
   const caseTotal = approvedParts.filter((p) => p.category === "case").length;
+  // A diameter the preview's bounds drop is a bad parse, not a small case:
+  // "SKX007 MM" once came through as 7mm (WS0 step 4).
+  const offRange = approvedParts.filter((p) => {
+    const d = fromJsonColumn<Record<string, unknown>>(p.attributes).caseDiameterMm;
+    return p.category === "case" && typeof d === "number" && caseDimensions({ caseDiameterMm: d }).caseDiameter === undefined;
+  });
+  if (offRange.length > 0) fail(`case diameter outside the physical range on ${offRange.length} approved case(s): ${offRange.map((p) => p.id).join(", ")}`);
+  else pass(`case diameter: every stated diameter on ${casesSized} approved cases is within the physical range`);
   pass(`dimensions: drawn from the vendor's own figures where stated -- case ${casesSized}/${caseTotal}, ${coverage.join(", ")}`);
 
   console.log(`\n${failures === 0 ? "PASS" : "FAIL"}: ${failures} hard failure(s).`);
