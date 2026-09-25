@@ -34,7 +34,7 @@ export function familyPlatform(family: string): string | null {
 // False for "no platform on one or both sides" too -- callers that want
 // to distinguish "confirmed mismatch" from "can't confirm" (and emit an
 // error vs a warning accordingly) should call familyPlatform() themselves
-// rather than relying on this alone. See insert-case-diameter.ts for the
+// rather than relying on this alone. See insert-case-fit.ts for the
 // canonical example.
 export function platformsMatch(familyA: string, familyB: string): boolean {
   const a = familyPlatform(familyA);

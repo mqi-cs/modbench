@@ -8,7 +8,7 @@ import { checkCaseShapeFit } from "../platform";
 // Phase 1 once it was confirmed to be a real, sizeable category (see
 // lib/db/schema.ts's CATEGORIES comment). A bezel ring threads or clips
 // onto the case's own bezel mount, so it's exactly the same case-shape
-// question as insert-case-diameter, chapter-ring-fit, and crown-case-fit
+// question as insert-case-fit, chapter-ring-fit, and crown-case-fit
 // -- error severity, since an unthreaded or wrong-diameter bezel simply
 // will not turn or attach.
 export const bezelCaseFit: Rule = {

@@ -6,10 +6,10 @@ import { buildOf, catalogOf, part, severities } from "./helpers";
 import { movementCaseFit } from "../rules/movement-case-fit";
 import { dialMovementFeet } from "../rules/dial-movement-feet";
 import { dialCaseDiameter } from "../rules/dial-case-diameter";
-import { handsMovementBore } from "../rules/hands-movement-bore";
+import { nh34HandStack } from "../rules/nh34-hand-stack";
 import { dateWindowAlignment } from "../rules/date-window-alignment";
 import { dayWindowPresence } from "../rules/day-window-presence";
-import { insertCaseDiameter } from "../rules/insert-case-diameter";
+import { insertCaseFit } from "../rules/insert-case-fit";
 import { crystalCaseFit } from "../rules/crystal-case-fit";
 import { chapterRingFit } from "../rules/chapter-ring-fit";
 import { handStackClearance } from "../rules/hand-stack-clearance";
@@ -81,14 +81,14 @@ describe("dial-case-diameter", () => {
   });
 });
 
-describe("hands-movement-bore", () => {
+describe("nh34-hand-stack", () => {
   it("warns (never errors) on an NH34 with non-GMT hands", () => {
-    const f = run(handsMovementBore, [part("hands", "nh3x-hands-standard", {}), part("movement", "nh3x-movement", NH34), part("case", "skx007-case", SKX007_CASE)]);
+    const f = run(nh34HandStack, [part("hands", "nh3x-hands-standard", {}), part("movement", "nh3x-movement", NH34), part("case", "skx007-case", SKX007_CASE)]);
     expect(f.length).toBeGreaterThan(0);
     expect(severities(f)).not.toContain("error");
   });
   it("drops the clearance warning when a double-domed crystal is present", () => {
-    const f = run(handsMovementBore, [
+    const f = run(nh34HandStack, [
       part("hands", "nh3x-hands-standard", { gmt: true }),
       part("movement", "nh3x-movement", NH34),
       part("crystal", "skx007-crystal", { profile: "domed" }, { name: "SKX007 Double Dome Sapphire" }),
@@ -96,11 +96,11 @@ describe("hands-movement-bore", () => {
     expect(f).toHaveLength(0);
   });
   it("warns instead of silently passing when the caliber is unknown", () => {
-    const f = run(handsMovementBore, [part("hands", "nh3x-hands-standard", {}), part("movement", "nh3x-movement", { caliber: null })]);
+    const f = run(nh34HandStack, [part("hands", "nh3x-hands-standard", {}), part("movement", "nh3x-movement", { caliber: null })]);
     expect(severities(f)).toEqual(["warning"]);
   });
   it("is silent for a plain NH35 with standard hands", () => {
-    expect(run(handsMovementBore, [part("hands", "nh3x-hands-standard", {}), part("movement", "nh3x-movement", NH35)])).toHaveLength(0);
+    expect(run(nh34HandStack, [part("hands", "nh3x-hands-standard", {}), part("movement", "nh3x-movement", NH35)])).toHaveLength(0);
   });
 });
 
@@ -112,6 +112,42 @@ describe("date-window-alignment", () => {
       part("case", "skx007-case", SKX007_CASE),
     ]);
     expect(severities(f)).toEqual(["error"]);
+  });
+  it("lets the case's crown position explain a movement/dial difference", () => {
+    // A 3 o'clock date wheel under a 3.8 crown lands at 3.8: a dial cut
+    // there fits. Comparing movement against dial alone would call it a
+    // mismatch -- the false positive this rule exists to avoid.
+    const f = run(dateWindowAlignment, [
+      part("dial", "nh3x-dial-standard", { ...PLAIN_DIAL, supportedDatePositions: ["3.8"] }),
+      part("movement", "nh3x-movement", { ...NH35, dateWindowPosition: "3" }),
+      part("case", "skx007-case", SKX007_CASE),
+    ]);
+    expect(f).toHaveLength(0);
+  });
+  it("errors when the crown position moves the date away from a cutout the movement alone would match", () => {
+    const f = run(dateWindowAlignment, [
+      part("dial", "nh3x-dial-standard", { ...PLAIN_DIAL, supportedDatePositions: ["3"] }),
+      part("movement", "nh3x-movement", { ...NH35, dateWindowPosition: "3" }),
+      part("case", "skx007-case", SKX007_CASE),
+    ]);
+    expect(severities(f)).toEqual(["error"]);
+    expect(JSON.stringify(f)).toContain("about 3:48 o'clock");
+  });
+  it("reads h:mm positions and wraps past twelve", () => {
+    const f = run(dateWindowAlignment, [
+      part("dial", "nh3x-dial-standard", { ...PLAIN_DIAL, supportedDatePositions: ["12:30"] }),
+      part("movement", "nh3x-movement", { ...NH35, dateWindowPosition: "11:42" }),
+      part("case", "skx007-case", SKX007_CASE),
+    ]);
+    expect(f).toHaveLength(0);
+  });
+  it("warns rather than guesses when a stated position isn't readable", () => {
+    const f = run(dateWindowAlignment, [
+      part("dial", "nh3x-dial-standard", { ...PLAIN_DIAL, supportedDatePositions: ["tilted"] }),
+      part("movement", "nh3x-movement", { ...NH35, dateWindowPosition: "3" }),
+      part("case", "skx007-case", SKX007_CASE),
+    ]);
+    expect(severities(f)).toEqual(["warning"]);
   });
   it("warns, never errors, when any of the three is unknown", () => {
     const f = run(dateWindowAlignment, [
@@ -144,7 +180,7 @@ describe("day-window-presence", () => {
 
 describe("case-shape platform rules", () => {
   const cases: [string, { evaluate: (b: never, c: never) => unknown[] }, ReturnType<typeof part>, ReturnType<typeof part>][] = [
-    ["insert-case-diameter", insertCaseDiameter, part("bezelInsert", "skx013-insert"), part("bezelInsert", "skx007-insert")],
+    ["insert-case-fit", insertCaseFit, part("bezelInsert", "skx013-insert"), part("bezelInsert", "skx007-insert")],
     ["crystal-case-fit", crystalCaseFit, part("crystal", "skx013-crystal"), part("crystal", "skx007-crystal")],
     ["chapter-ring-fit", chapterRingFit, part("chapterRing", "skx013-chapter-ring"), part("chapterRing", "skx007-chapter-ring")],
     ["bezel-case-fit", bezelCaseFit, part("bezel", "skx013-bezel"), part("bezel", "skx007-bezel")],

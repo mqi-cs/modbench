@@ -6,10 +6,10 @@ import { partById } from "./types";
 import { movementCaseFit } from "./rules/movement-case-fit";
 import { dialMovementFeet } from "./rules/dial-movement-feet";
 import { dialCaseDiameter } from "./rules/dial-case-diameter";
-import { handsMovementBore } from "./rules/hands-movement-bore";
+import { nh34HandStack } from "./rules/nh34-hand-stack";
 import { dateWindowAlignment } from "./rules/date-window-alignment";
 import { dayWindowPresence } from "./rules/day-window-presence";
-import { insertCaseDiameter } from "./rules/insert-case-diameter";
+import { insertCaseFit } from "./rules/insert-case-fit";
 import { crystalCaseFit } from "./rules/crystal-case-fit";
 import { chapterRingFit } from "./rules/chapter-ring-fit";
 import { handStackClearance } from "./rules/hand-stack-clearance";
@@ -37,10 +37,10 @@ export const RULES: Rule[] = [
   movementCaseFit,
   dialMovementFeet,
   dialCaseDiameter,
-  handsMovementBore,
+  nh34HandStack,
   dateWindowAlignment,
   dayWindowPresence,
-  insertCaseDiameter,
+  insertCaseFit,
   crystalCaseFit,
   chapterRingFit,
   handStackClearance,

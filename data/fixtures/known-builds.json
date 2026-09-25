@@ -273,7 +273,7 @@
         "bezelInsert": "Namoki SKX007/SRPD Steel Bezel Insert: Nautical Steel"
       },
       "source": "https://namokimods.com/products/nmk912-field-watch-case-bundle-sandblasted-finish",
-      "notes": "Case is skx013-case family (38mm) but dial and bezel insert are both skx007-case family (43mm case, larger bezel/dial aperture). WatchUSeek confirms the 5mm diameter difference between SKX007 and SKX013. All 5 parts are real audited SKUs; the mismatch is deliberately cross-family to test that the compat engine catches a dial-case-diameter AND insert-case-diameter mismatch simultaneously.",
+      "notes": "Case is skx013-case family (38mm) but dial and bezel insert are both skx007-case family (43mm case, larger bezel/dial aperture). WatchUSeek confirms the 5mm diameter difference between SKX007 and SKX013. All 5 parts are real audited SKUs; the mismatch is deliberately cross-family to test that the compat engine catches a dial-case-diameter AND insert-case-fit mismatch simultaneously.",
       "sourceQuote": "namokimods, NMK912 case listing: \"NMK912 SKX013 Field Watch Case Bundle... Diameter: 38mm, Lug to Lug: 46.5mm, Lug Width: 20mm... Compatible with SKX013 Crowns... Integrated Rehaut (Chapter Ring)\". The case is scoped by its own vendor to SKX013 parts and ships with an SKX013 crown; the bezel insert selected here is an SKX007/SRPD part. Replaces the previous citation (a WatchUSeek thread behind a Tollbit paywall, unverifiable per 01a-PHASE-0-FINDINGS.md Finding 3)."
     },
     {
@@ -301,6 +301,7 @@
         "bezelInsert": "Lucius Atelier SKX013 Ceramic Bezel Insert (Slope) - Submariner Green"
       },
       "source": "https://luciusatelier.com/products/skx013-diver-38-black-ultra-thin-edition",
+      "sourceQuote": "luciusatelier, SKX013 Diver 38 Black — Ultra Thin Watch Case listing: \"the bezel, ceramic insert, and sapphire crystal are unique to this case — standard SKX bezels, inserts, and crystals will not fit, and ours will not fit a stock SKX.\"",
       "notes": "THE key false-positive-trap fixture. This case's own body_html states directly: 'standard SKX bezels, inserts, and crystals will not fit, and ours will not fit a stock SKX.' The bezel insert used here is a standard fits-skx013 SKU (not one of Lucius's own Ultra Thin-scoped accessories), so despite every part individually being a real, high-confidence, vendor-tagged 'skx013' part, the case is a proprietary redesign that rejects them. This is the single most important bad-build fixture in the set -- if Phase 2's rules pass this as compatible, the zero-false-positive guarantee has already failed."
     },
     {

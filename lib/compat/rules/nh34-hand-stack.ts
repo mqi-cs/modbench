@@ -1,6 +1,8 @@
 import type { Rule, Finding } from "../types";
 import { getPart } from "../types";
 
+// Named `hands-movement-bore` until WS0 (2026-09-26); renamed because it checks NH34 hand-stack clearance, not a hand bore.
+
 // REBUILT 2026-09-01. The original version of this rule errored on
 // "NH34 GMT movement + hands not marked GMT", claiming the hands had
 // "nowhere for that pinion to go, not even a loose press-fit". That is
@@ -34,8 +36,8 @@ import { getPart } from "../types";
 //      build works; the 24-hour hand simply isn't there, so the GMT
 //      complication you paid for can't be read. Same "wasted complication"
 //      shape as day-window-presence, and warned for the same reason.
-export const handsMovementBore: Rule = {
-  key: "hands-movement-bore",
+export const nh34HandStack: Rule = {
+  key: "nh34-hand-stack",
   appliesTo: ["hands", "movement", "case", "crystal"],
   evaluate(build, catalog): Finding[] {
     const hands = getPart(build, catalog, "hands");
@@ -51,7 +53,7 @@ export const handsMovementBore: Rule = {
       // "everything is fine" -- the one direction the spec forbids.
       return [
         {
-          ruleKey: "hands-movement-bore",
+          ruleKey: "nh34-hand-stack",
           severity: "warning",
           message: `Can't confirm which caliber "${movement.name}" is, so the hand-fitting question can't be answered here. It matters mainly for the NH34: its hand post is about 0.4mm taller to carry the 24-hour hand, which can bring the seconds hand up against the crystal. Worth confirming the caliber on the vendor's listing before ordering hands.`,
           slots: ["hands", "movement"],
@@ -62,7 +64,7 @@ export const handsMovementBore: Rule = {
     if (caliber === "NH34") {
       if (hands.attributes.gmt !== true) {
         findings.push({
-          ruleKey: "hands-movement-bore",
+          ruleKey: "nh34-hand-stack",
           severity: "warning",
           message: `"${movement.name}" is an NH34 -- Seiko's GMT caliber, which drives a 4th, independently-set 24-hour hand. "${hands.name}" is a standard 3-hand set and doesn't include that hand. The set still mounts and the watch still runs; you just won't have a hand on the GMT pinion, so the second-time-zone function you paid the NH34 premium for can't be read.`,
           slots: ["hands", "movement"],
@@ -76,7 +78,7 @@ export const handsMovementBore: Rule = {
         caseP?.attributes.hasDoubleDomedCrystal === true || (crystal ? /double.?dome/i.test(crystal.name) : false);
       if (!doubleDomed) {
         findings.push({
-          ruleKey: "hands-movement-bore",
+          ruleKey: "nh34-hand-stack",
           severity: "warning",
           message: `"${movement.name}" is an NH34, whose hand post sits about 0.4mm taller than an NH35's to carry the 24-hour hand. That extra height can bring the seconds hand up against the underside of the crystal in a case without enough internal clearance${caseP ? ` -- and "${caseP.name}" isn't listed as having a double-domed crystal` : ""}. The standard fix is a double-domed crystal, which buys roughly the extra millimetre the GMT hand stack needs.`,
           slots: crystal ? ["hands", "movement", "crystal"] : ["hands", "movement", "case"],
