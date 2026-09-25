@@ -354,6 +354,38 @@ unmet, so it would buy a fragile dependency for a number that still fails.
 
 ---
 
+## D10 — WS0 leftovers (raised 2026-09-26)
+
+**a. The 25 mis-parsed case diameters are fixed in the parser, not yet in
+`data/modbench.db`.** `parseMmFromTitle` read "SKX007 MM" as 7mm,
+"NMK908 MM300" as 8mm and "NMK934 MM300" as 34mm. Fixed in
+`scripts/backfill-attributes.ts`; the 25 rows keep the old values until the
+owner applies them (the session's direct write to the committed database
+was refused). *Why:* re-running `backfill-attributes` alone wipes
+`shapeTag`/`styleTags`/`renderMm`, and the rest of the chain does not
+reproduce the committed database from this checkout, so only a targeted
+update of `caseDiameterMm` to 42.5 on those 25 ids is safe. *Restore
+signal:* the owner applies it. *Cost meanwhile:* none on the engine (no rule
+reads `caseDiameterMm`); the preview drops the 24 out-of-range values to its
+42.5mm default but draws NMK934 at 34mm. *Guardrail to add with it:* a
+`verify-catalog` hard failure for an approved case outside 30–48mm.
+
+**b. Three bad-build fixtures have no vendor quote** (bad-007, bad-008,
+bad-010). See `data/fixtures/bad-build-sources.md`. *Restore signal:*
+vendor text that states the incompatibility, or a decision to drop them.
+*Cost:* the headline count is 6 quoted, not 9.
+
+**c. `srpe-case` family constant is 43.8mm**; the DLW SRPE GS EVO listing
+states 38mm. Preview-only today. *Restore signal:* WS1 audit of family
+constants.
+
+**d. A chosen insert with no stated outer diameter still draws at the 38mm
+default**, which overhangs a 37.8mm case. The seat fix (WS0 step 1) covers
+the no-insert case only. *Restore signal:* WS2 render manifest, which sizes
+every layer from the case.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like
