@@ -7,6 +7,14 @@ a compatibility configurator + preview renderer sold to shops.
 Current work plan: `specs/10-PIVOT-PLAN.md`. Read only the workstream section
 you are working on — don't load the whole plan into every session.
 
+**The pivot plan is private and must never be committed or pushed.** It is
+kept out of git by `.git/info/exclude`, deliberately not `.gitignore`. Never
+`git add -f` it, move or copy it to a tracked path, paste its contents into a
+commit, PR, issue or tracked file, or add it to `.gitignore`. It exists only
+in the main checkout, so a git worktree won't have it: read it at
+`/Users/q/modbench/specs/10-PIVOT-PLAN.md`. Updating it in place there is
+fine.
+
 ## Non-negotiables
 
 These override everything else in this file, including plugin guidance.
@@ -91,7 +99,7 @@ the README says otherwise and is out of date.
 - `scripts/` — offline pipeline, run by hand.
 - `data/fixtures/` — fixtures plus the findings that justify them.
 - `specs/` — phase specs `00`–`08`, `09-COMPETITIVE-CONTEXT.md`, and the pivot
-  plan `10-PIVOT-PLAN.md`.
+  plan `10-PIVOT-PLAN.md` (local only, never committed — see top).
 - 3D render experiments live on an unmerged branch (`scripts/3d-test/`), not
   on `main`. See WS0 step 6 of the plan.
 
