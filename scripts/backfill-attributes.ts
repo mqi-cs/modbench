@@ -119,7 +119,7 @@ const DIAL_DEFAULTS: Record<string, { hasFeet: boolean | null; diameterMm: numbe
 };
 
 // Bezel insert outer diameters. NOTE: not currently consumed by any rule
-// (insert-case-diameter matches on the vendor's own family tag, which is
+// (insert-case-fit matches on the vendor's own family tag, which is
 // stronger evidence than these numbers) -- retained as reference data.
 // The previous skx007 figure (30.5mm) was never independently verified and
 // looks too small for a ~38mm aftermarket insert; cleared to null rather
@@ -130,8 +130,10 @@ const INSERT_DEFAULTS: Record<string, { outerDiameterMm: number | null }> = {
   "srp-turtle-insert": { outerDiameterMm: null },
 };
 
+// The number must stand alone: "SKX007 MM" (MarineMaster-style) and
+// "NMK908 MM300" used to parse as 7mm and 8mm, the tail of a model code.
 function parseMmFromTitle(title: string): number | null {
-  const m = /(\d{2}(?:\.\d)?)\s*mm/i.exec(title);
+  const m = /(?<![\w.])(\d{2}(?:\.\d)?)\s*mm\b/i.exec(title);
   return m ? Number(m[1]) : null;
 }
 
