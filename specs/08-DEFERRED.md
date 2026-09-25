@@ -383,6 +383,45 @@ every layer from the case.
 
 ---
 
+## D11 — WS1 leftovers (raised 2026-09-26)
+
+**a. Two rules can find errors but may not block yet** (`lib/compat/evidence.ts`).
+`date-window-alignment`: no dial in the catalog states its cutout position,
+so no real bad build exists. `dial-case-diameter`: the Panda and Skipper
+chronograph dials state "Dial Diameter: 29.5mm" but are recorded without a
+diameter; the session's write to the database was refused. *Cost:* their
+errors show as Checked warnings (neither fires on today's catalog: 0 raw
+errors each). *Restore signal:* a dial with a stated cutout position; the
+29.5mm values applied, then a fixture pairing the Panda dial with the RC0973
+SRPE case ("Can only accommodate 28.5mm dials"). *Guardrail:*
+`known-builds.test.ts` fails if a rule enters `VERIFIED_RULES` without a
+quoted fixture.
+
+**b. Movement calibers and crown variants are parsed but not applied.**
+`scripts/backfill-attributes.ts` now reads NH35A-style suffixes, NH70/71/72
+and "(3.8 o'clock crown case)" / "@ 4H Crown"; the database still has 10 real
+movements without a caliber and no movement crown positions (write refused).
+*Cost:* those 10 get a "can't confirm caliber" warning from
+`dial-movement-size` and `nh34-hand-stack`; the date rule treats every
+movement as sold for a 3 o'clock crown. *Restore signal:* owner applies the
+movement attributes (a targeted update, not a full backfill run — see D10a).
+
+**c. 26 Lucius "SKX Crown II" crowns block on SKX007 cases** although their
+listings say "For the SKX013 & SKX007": tagged `skx013-crown`, and a family
+has one case line. 26 × 278 SKX007 cases = 7,228 false blocks (never a false
+fit). *Restore signal:* a per-part list of extra case lines the listing
+names, read by `crown-case-fit`.
+
+**d. `marketplace-stated` and `user-entered` exist in the engine only.**
+`SpecSource` and the evidence policy handle them; `lib/db/schema.ts`'s
+`SPEC_SOURCES` check constraint does not, because no such rows exist until
+WS4. *Restore signal:* WS4 stores its first bring-your-own part.
+
+**e. The shop pitch** (WS1 step 7's third home for the guarantee) doesn't
+exist yet. *Restore signal:* WS7. Use `lib/guarantee.ts`.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like

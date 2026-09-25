@@ -1,5 +1,9 @@
 # Bad-build fixtures: the agreed count (WS0 step 5)
 
+> **Updated by WS1 (2026-09-26):** 17 bad builds, 14 quoted, each naming the
+> rules it evidences in `evidences`. Current per-rule evidence is in
+> `rule-inventory.md`; the table below is the WS0 snapshot.
+
 Counted 2026-09-26 from `known-builds.json` at WS0, with each fixture run
 through `evaluateBuild` to see which rules actually block it.
 

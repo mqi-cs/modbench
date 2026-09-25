@@ -16,9 +16,19 @@ doesn't assemble. A false negative costs them one option out of thousands.
 That asymmetry is why the engine warns rather than guesses. When a rule
 lacks the data to decide, it says so instead of passing. In practice most
 real builds come back `ok-with-warnings`, and that is the healthy state,
-not a defect — see the standing limitation in
-`specs/03-phase-2-compat-engine.md` for exactly what the guarantee does
-and does not cover.
+not a defect.
+
+## The guarantee
+
+Modbench only tells you parts fit when every check behind that answer uses the sellers' own published specifications — for that part, or for the product line it belongs to. Anything inferred, taken from a marketplace listing or entered by you is marked Unconfirmed: it can raise a warning, but it can never block a build or let one pass cleanly. Every finding shows which kind it is.
+
+The text lives in `lib/guarantee.ts`, and `lib/__tests__/guarantee.test.ts`
+ties each clause to a test. Every finding carries an evidence tier:
+**Verified** (the rule is backed by a real mismatched build quoted from the
+seller — the only kind that can block), **Checked** (seller data, rule tested
+by mechanism only, so it warns) or **Unconfirmed** (inferred, marketplace or
+user-entered data). Which rule sits where, with numbers, is in
+`data/fixtures/rule-inventory.md` (`pnpm rule-inventory`).
 
 ## Running it
 

@@ -7,6 +7,7 @@ import { buildView, configuratorHref, resolveByName } from "@/lib/build-view";
 import { WatchPreview } from "@/components/build/WatchPreview";
 import { Discover } from "@/components/Discover";
 import { formatGbp } from "@/lib/money";
+import { GUARANTEE } from "@/lib/guarantee";
 
 export const dynamic = "force-static";
 
@@ -103,17 +104,14 @@ export default function Home() {
           <div className="mx-auto max-w-[1100px] px-6 py-12">
             <h2 className="text-[20px] font-semibold tracking-tight">What the compatibility check actually promises</h2>
             <div className="mt-4 grid max-w-4xl gap-6 md:grid-cols-2">
+              <p className="text-[14px] leading-relaxed text-ink">{GUARANTEE}</p>
               <p className="text-[14px] leading-relaxed text-graphite">
-                One rule matters more than the rest: <span className="text-ink">nothing is marked compatible unless it is</span>.
-                Where a vendor hasn&rsquo;t published the measurement a check needs — and for some things, none of them
-                have — you get a warning saying so, never a silent pass. That means you will occasionally be warned
-                about a pairing that turns out fine. That trade is deliberate.
-              </p>
-              <p className="text-[14px] leading-relaxed text-graphite">
-                Every rule is written from vendor fitment notes and caliber documentation, and each one tells you the
-                verdict and the reason separately, so you can judge it yourself. Prices are converted to sterling once,
-                at ingest, at a recorded rate — the number you see is the number the vendor charges, not a live
-                estimate.
+                <span className="text-ink">Verified</span> findings come from a check backed by a real mismatched build,
+                quoted from the seller — only these can stop a build. <span className="text-ink">Checked</span> findings use
+                the seller&rsquo;s specifications but haven&rsquo;t been proven that way yet, so they warn.{" "}
+                <span className="text-ink">Unconfirmed</span> findings rest on information the seller didn&rsquo;t publish.
+                Where nobody has published the measurement a check needs, you get a warning saying so, never a silent
+                pass. Prices are converted to sterling once, at ingest, at a recorded rate.
               </p>
             </div>
           </div>

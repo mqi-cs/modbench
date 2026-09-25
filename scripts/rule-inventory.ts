@@ -14,7 +14,8 @@ import { RULES } from "../lib/compat/index";
 import { familyPlatform } from "../lib/compat/platform";
 import type { CatalogPart, Finding, SlotKey } from "../lib/compat/types";
 import { buildCatalogSlice, resolveBuild } from "../lib/compat/__tests__/test-catalog";
-import { evaluateBuild } from "../lib/compat/index";
+import { evaluateBuild, VERIFIED_RULES } from "../lib/compat/index";
+import { withEvidence } from "../lib/compat/evidence";
 
 type Outcome = "ok" | "warning" | "cant-confirm" | "error";
 const OUTCOMES: Outcome[] = ["ok", "warning", "cant-confirm", "error"];
@@ -39,7 +40,7 @@ const CHECKS: Record<string, [string, string]> = {
   "dial-movement-feet": ["chronograph dial vs movement; dial feet present", "family (vk6x) + dial.hasSubdials (C, justified)"],
   "dial-case-diameter": ["dial diameter vs case dial aperture", "dial.diameterMm, case.dialApertureMm (B)"],
   "nh34-hand-stack": ["NH34 hand-post clearance; missing GMT hand", "cannot block"],
-  "date-window-alignment": ["date lands under the dial's cutout (movement + crown − 3)", "dateWindowPosition (A), crownPosition (B), supportedDatePositions (D: never set)"],
+  "date-window-alignment": ["date lands under the dial's cutout (movement position + case crown − crown it's sold for)", "dateWindowPosition (A), crownPosition (B), supportedDatePositions (D: never set)"],
   "day-window-presence": ["dial day aperture vs day-date movement", "movement.hasDay (B), dial.hasDayWindow (A)"],
   "insert-case-fit": ["insert and case on the same case line", "family"],
   "crystal-case-fit": ["crystal and case on the same case line", "family"],
@@ -52,13 +53,14 @@ const CHECKS: Record<string, [string, string]> = {
   "multi-vendor-shipping": ["several vendors, several shipments", "cannot block"],
   "bezel-case-fit": ["bezel and case on the same case line", "family"],
   "crown-case-fit": ["crown and case on the same case line", "family"],
-  "strap-fit": ["strap lug width = case lug width; bracelet end-links on the same case line", "strap.lugWidthMm (A) vs **case.lugWidthMm (C)**; end-links: family"],
+  "strap-fit": ["strap lug width = case lug width (warning only); bracelet end-links on the same case line", "end-links: family. Lug width can't block: case.lugWidthMm is class C"],
+  "dial-movement-size": ["dial suits the movement's caliber (skeleton NH7x, unknown caliber)", "cannot block"],
+  "crown-stem-length": ["stem may need cutting; irreversible (info)", "cannot block"],
   "insert-crystal-profile-fit": ["flat insert vs double-dome crystal", "profile (A)"],
   "dial-case-model-exclusion": ["dial listing names case lines it won't fit", "dial.incompatibleCaseFamilies (A) + case family"],
   "requires-chapter-ring": ["case needs a chapter ring it doesn't include", "case.requiresChapterRing (A)"],
   "bracelet-vendor-scope": ["bracelet fits one maker's cases only", "strap.vendorScopedTo (A) + listing vendor"],
 };
-const FAMILY_DECIDED = new Set(["movement-case-fit", "dial-movement-feet", "insert-case-fit", "crystal-case-fit", "bezel-case-fit", "crown-case-fit", "strap-fit", "dial-case-model-exclusion"]);
 
 const catalog = buildCatalogSlice();
 const bySlot = new Map<SlotKey, CatalogPart[]>();
@@ -113,35 +115,39 @@ for (const r of perSlotRule) {
   for (let i = 0; i < s.length; i++) for (let j = i + 1; j < s.length; j++) pairKeys.set(`${s[i]} × ${s[j]}`, [s[i]!, s[j]!]);
 }
 
-interface PairStats { total: number; counts: Record<Outcome, number>; errorsWithInferred: number; inferredPairs: number }
+interface PairStats { total: number; counts: Record<Outcome, number>; rawErrors: number; inferredPairs: number }
 const pairStats = new Map<string, PairStats>();
-const ruleStats = new Map<string, { evaluated: number; counts: Record<Outcome, number>; errorsWithInferred: number }>();
-const strapSplit = { lug: 0, endLinks: 0 };
-for (const r of perSlotRule) ruleStats.set(r.key, { evaluated: 0, counts: { ok: 0, warning: 0, "cant-confirm": 0, error: 0 }, errorsWithInferred: 0 });
+const ruleStats = new Map<string, { evaluated: number; counts: Record<Outcome, number>; rawErrors: number }>();
+const strapSplit = { lug: 0 };
+for (const r of perSlotRule) ruleStats.set(r.key, { evaluated: 0, counts: { ok: 0, warning: 0, "cant-confirm": 0, error: 0 }, rawErrors: 0 });
 
 for (const [name, [a, b]] of [...pairKeys].sort()) {
   const rules = perSlotRule.filter((r) => r.appliesTo.includes(a) && r.appliesTo.includes(b));
-  const st: PairStats = { total: 0, counts: { ok: 0, warning: 0, "cant-confirm": 0, error: 0 }, errorsWithInferred: 0, inferredPairs: 0 };
+  const st: PairStats = { total: 0, counts: { ok: 0, warning: 0, "cant-confirm": 0, error: 0 }, rawErrors: 0, inferredPairs: 0 };
   for (const pa of inSlot(a)) {
     for (const pb of inSlot(b)) {
       const build = { parts: { [a]: pa.id, [b]: pb.id } };
       const inferred = pa.specSource !== "vendor-stated" || pb.specSource !== "vendor-stated";
       const all: Finding[] = [];
+      let rawError = false;
       for (const r of rules) {
-        const f = r.evaluate(build, catalog);
+        const raw = r.evaluate(build, catalog);
+        const f = raw.map((x) => withEvidence(r, x, build, catalog));
         all.push(...f);
         const rs = ruleStats.get(r.key)!;
-        const o = classify(f);
         rs.evaluated++;
-        rs.counts[o]++;
-        if (o === "error" && inferred && FAMILY_DECIDED.has(r.key)) rs.errorsWithInferred++;
-        if (r.key === "strap-fit" && o === "error") strapSplit[f.some((x) => x.message.includes("lugs are")) ? "lug" : "endLinks"]++;
+        rs.counts[classify(f)]++;
+        if (raw.some((x) => x.severity === "error")) {
+          rs.rawErrors++;
+          rawError = true;
+        }
+        if (r.key === "strap-fit") for (const x of raw) if (x.severity !== "info" && /lugs are/.test(x.message)) strapSplit.lug++;
       }
       const o = classify(all);
       st.total++;
       st.counts[o]++;
       if (inferred) st.inferredPairs++;
-      if (o === "error" && inferred) st.errorsWithInferred++;
+      if (rawError) st.rawErrors++;
     }
   }
   pairStats.set(name, st);
@@ -149,17 +155,14 @@ for (const [name, [a, b]] of [...pairKeys].sort()) {
 
 // ---- evidence: which rules the bad-build fixtures exercise -------------
 const fixtures = JSON.parse(readFileSync("data/fixtures/known-builds.json", "utf-8")).badBuilds as {
-  id: string; parts: Record<string, string | null>; sourceQuote?: string;
+  id: string; parts: Record<string, string | null>; sourceQuote?: string; evidences?: string[];
 }[];
-const evidence = new Map<string, { quoted: string[]; unquoted: string[] }>();
+const evidence = new Map<string, string[]>();
 for (const fx of fixtures) {
-  const result = evaluateBuild(resolveBuild(fx.parts, catalog), catalog);
-  for (const key of new Set(result.findings.filter((f) => f.severity === "error").map((f) => f.ruleKey))) {
-    const ruleKey = RULES.some((r) => r.key === key) ? key : "family-exception";
-    if (!evidence.has(ruleKey)) evidence.set(ruleKey, { quoted: [], unquoted: [] });
-    evidence.get(ruleKey)![fx.sourceQuote ? "quoted" : "unquoted"].push(fx.id);
-  }
+  if (!fx.sourceQuote) continue;
+  for (const key of fx.evidences ?? []) evidence.set(key, [...(evidence.get(key) ?? []), fx.id]);
 }
+const stillBlocked = fixtures.filter((fx) => evaluateBuild(resolveBuild(fx.parts, catalog), catalog).status === "blocked").length;
 
 // ---- write -----------------------------------------------------------------
 const lines: string[] = [];
@@ -172,34 +175,35 @@ out(`${approved.filter((p) => p.specSource !== "vendor-stated").length} approved
 out();
 out("## 1. Rules");
 out();
-out("Coverage is the share of approved parts in that slot with the value present. \"Can block\" is whether the rule has an error path; \"errors seen\" is how many part pairs it actually blocked. Evidence is the bad-build fixtures it blocks: quoted (verbatim vendor text) or not.");
+out("Coverage is the share of approved parts in that slot with the value present. \"Raw errors\" is how many pairs the rule itself called an error; \"blocks\" is how many still block after the evidence policy (lib/compat/evidence.ts): only a rule with a quoted bad build may block, and never on inferred, marketplace or user-entered data. Evidence is the bad-build fixtures that name the rule in `evidences`.");
 out();
-out("| Rule | What it actually checks | Error decided by | Data it reads (coverage) | Can block | Pairs judged | ok | warning | can't confirm | errors seen | family-decided errors with an inferred part | Evidence |");
+out("| Rule | What it actually checks | Error decided by | Data it reads (coverage) | May block | Pairs judged | ok | warning | can't confirm | raw errors | blocks | Evidence |");
 out("|---|---|---|---|---|---|---|---|---|---|---|---|");
 for (const f of facts) {
   const rs = ruleStats.get(f.key);
   const ev = evidence.get(f.key);
-  const evText = ev ? `${ev.quoted.length} quoted (${ev.quoted.join(", ") || "–"}); ${ev.unquoted.length} unquoted (${ev.unquoted.join(", ") || "–"})` : f.canError ? "**none — mechanism only**" : "n/a (cannot block)";
+  const evText = ev ? ev.join(", ") : f.canError ? "**none — errors shown as warnings (Checked)**" : "n/a (cannot block)";
   const row = rs
-    ? [rs.evaluated, pct(rs.counts.ok, rs.evaluated), pct(rs.counts.warning, rs.evaluated), pct(rs.counts["cant-confirm"], rs.evaluated), rs.counts.error, rs.errorsWithInferred]
+    ? [rs.evaluated, pct(rs.counts.ok, rs.evaluated), pct(rs.counts.warning, rs.evaluated), pct(rs.counts["cant-confirm"], rs.evaluated), rs.rawErrors, rs.counts.error]
     : ["per part", "–", "–", "–", "–", "–"];
   const [checks, decidedBy] = CHECKS[f.key] ?? ["?", "?"];
-  out(`| \`${f.key}\` | ${checks} | ${decidedBy} | ${f.data.join("; ") || "–"} | ${f.canError ? "yes" : "no"} | ${row.join(" | ")} | ${evText} |`);
+  out(`| \`${f.key}\` | ${checks} | ${decidedBy} | ${f.data.join("; ") || "–"} | ${VERIFIED_RULES.has(f.key) ? "yes" : "no"} | ${row.join(" | ")} | ${evText} |`);
 }
 out();
-out(`\`strap-fit\` errors split: ${strapSplit.lug} on lug width (decided by a class C case value), ${strapSplit.endLinks} on bracelet end-links (decided by family).`);
+out(`\`strap-fit\`: ${strapSplit.lug} pairs differ on lug width; that branch only warns, because the case figure is its line's standard (class C).`);
+out(`Bad-build fixtures: ${fixtures.length}, ${fixtures.filter((f) => f.sourceQuote).length} quoted, ${stillBlocked} blocked by the engine.`);
 out(`\`movement-case-fit\`: ${inSlot("movement").filter((p) => p.family === "nh3x-movement-accessory").length} of ${inSlot("movement").length} approved parts in the movement slot are spare parts, so most movement pairs are correctly blocked.`);
 out();
 out("## 2. Unknown rate by slot pair");
 out();
-out("Every approved part in one slot against every approved part in the other, judged by the rules that apply to both. A pair counts once, by its worst finding: error, then a real warning, then can't-confirm, then ok.");
+out("Every approved part in one slot against every approved part in the other, judged by the rules that apply to both, after the evidence policy. A pair counts once, by its worst finding: blocked, then a real warning, then can't-confirm, then ok. The last column is the same pairs before the policy.");
 out();
-out("| Slot pair | Pairs | ok | warning | can't confirm | error | pairs with an inferred part | errors involving an inferred part |");
+out("| Slot pair | Pairs | ok | warning | can't confirm | blocked | pairs with an inferred part | pairs a rule called an error |");
 out("|---|---|---|---|---|---|---|---|");
 let grand = { total: 0, ok: 0, warning: 0, cc: 0, error: 0 };
 for (const [name, st] of pairStats) {
   grand = { total: grand.total + st.total, ok: grand.ok + st.counts.ok, warning: grand.warning + st.counts.warning, cc: grand.cc + st.counts["cant-confirm"], error: grand.error + st.counts.error };
-  out(`| ${name} | ${st.total} | ${OUTCOMES.map((o) => pct(st.counts[o], st.total)).join(" | ")} | ${pct(st.inferredPairs, st.total)} | ${st.errorsWithInferred} of ${st.counts.error} |`);
+  out(`| ${name} | ${st.total} | ${OUTCOMES.map((o) => pct(st.counts[o], st.total)).join(" | ")} | ${pct(st.inferredPairs, st.total)} | ${pct(st.rawErrors, st.total)} |`);
 }
 out(`| **all pairs** | **${grand.total}** | **${pct(grand.ok, grand.total)}** | **${pct(grand.warning, grand.total)}** | **${pct(grand.cc, grand.total)}** | **${pct(grand.error, grand.total)}** | | |`);
 out();
