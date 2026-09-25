@@ -11,10 +11,10 @@ Coverage is the share of approved parts in that slot with the value present. "Ra
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `movement-case-fit` | a spare part is not a movement | family: movement tagged as accessory | movement case line 0.0% | yes | 56541 | 23.4% | 0.0% | 0.0% | 43308 | 43308 | bad-019 |
 | `dial-movement-feet` | chronograph dial vs movement; dial feet present | family (vk6x) + dial.hasSubdials (C, justified) | dial.hasSubdials 100.0%; dial.hasFeet 100.0%; movement case line 0.0% | yes | 66834 | 96.5% | 2.1% | 0.0% | 966 | 966 | bad-018 |
-| `dial-case-diameter` | dial diameter vs case dial aperture | dial.diameterMm, case.dialApertureMm (B) | dial.diameterMm 98.5%; case.dialApertureMm 94.8% | no | 190074 | 93.4% | 0.0% | 6.6% | 0 | 0 | **none — errors shown as warnings (Checked)** |
-| `nh34-hand-stack` | NH34 hand-post clearance; missing GMT hand | cannot block | movement.caliber 23.4%; hands.gmt 0.9% | no | 370471 | 86.7% | 0.6% | 12.7% | 0 | 0 | n/a (cannot block) |
-| `date-window-alignment` | date lands under the dial's cutout (movement position + case crown − crown it's sold for) | dateWindowPosition (A), crownPosition (B), supportedDatePositions (D: never set) | movement.dateWindowPosition 2.8%; dial.supportedDatePositions 0.0%; dial.hasDateWindow 35.7%; movement.hasDate 23.4%; movement.crownPosition 0.0% | no | 313449 | 78.7% | 0.6% | 20.7% | 0 | 0 | **none — errors shown as warnings (Checked)** |
-| `day-window-presence` | dial day aperture vs day-date movement | movement.hasDay (B), dial.hasDayWindow (A) | movement.hasDay 23.4%; dial.hasDayWindow 35.7% | yes | 66834 | 4.6% | 1.8% | 91.7% | 1254 | 1254 | bad-020 |
+| `dial-case-diameter` | dial diameter vs case dial aperture | dial.diameterMm, case.dialApertureMm (B) | dial.diameterMm 98.9%; case.dialApertureMm 94.8% | yes | 190074 | 93.4% | 0.0% | 6.2% | 760 | 760 | bad-021 |
+| `nh34-hand-stack` | NH34 hand-post clearance; missing GMT hand | cannot block | movement.caliber 38.3%; hands.gmt 0.9% | no | 370471 | 89.1% | 0.7% | 10.2% | 0 | 0 | n/a (cannot block) |
+| `date-window-alignment` | date lands under the dial's cutout (movement position + case crown − crown it's sold for) | dateWindowPosition (A), crownPosition (B), supportedDatePositions (D: never set) | movement.dateWindowPosition 2.8%; dial.supportedDatePositions 0.0%; dial.hasDateWindow 35.7%; movement.hasDate 36.9%; movement.crownPosition 4.3% | no | 313449 | 78.7% | 0.9% | 20.4% | 0 | 0 | **none — errors shown as warnings (Checked)** |
+| `day-window-presence` | dial day aperture vs day-date movement | movement.hasDay (B), dial.hasDayWindow (A) | movement.hasDay 36.9%; dial.hasDayWindow 35.7% | yes | 66834 | 6.6% | 4.4% | 86.9% | 1482 | 1482 | bad-020 |
 | `insert-case-fit` | insert and case on the same case line | family | case case line 100.0%; bezelInsert case line 100.0% | yes | 273081 | 56.3% | 2.6% | 0.0% | 119401 | 112335 | bad-002, bad-003, bad-006 |
 | `crystal-case-fit` | crystal and case on the same case line | family | case case line 100.0%; crystal case line 100.0% | yes | 32080 | 29.8% | 4.6% | 0.0% | 22535 | 21072 | bad-014 |
 | `chapter-ring-fit` | chapter ring and case on the same case line | cannot block | case case line 100.0%; chapterRing case line 100.0% | no | 520824 | 82.6% | 17.4% | 0.0% | 0 | 0 | n/a (cannot block) |
@@ -31,11 +31,11 @@ Coverage is the share of approved parts in that slot with the value present. "Ra
 | `dial-case-model-exclusion` | dial listing names case lines it won't fit | dial.incompatibleCaseFamilies (A) + case family | dial.incompatibleCaseFamilies 0.6%; case case line 100.0% | yes | 190074 | 99.9% | 0.0% | 0.0% | 150 | 129 | bad-012 |
 | `requires-chapter-ring` | case needs a chapter ring it doesn't include | case.requiresChapterRing (A) | case.requiresChapterRing 5.5% | yes | 520824 | 98.0% | 0.0% | 0.0% | 10428 | 10428 | bad-022 |
 | `bracelet-vendor-scope` | bracelet fits one maker's cases only | strap.vendorScopedTo (A) + listing vendor | strap.vendorScopedTo 4.8%; listings | yes | 101052 | 95.5% | 0.0% | 0.0% | 4512 | 4512 | bad-013 |
-| `dial-movement-size` | dial suits the movement's caliber (skeleton NH7x, unknown caliber) | cannot block | movement.caliber 23.4%; movement case line 0.0% | no | 66834 | 92.9% | 0.0% | 7.1% | 0 | 0 | n/a (cannot block) |
+| `dial-movement-size` | dial suits the movement's caliber (skeleton NH7x, unknown caliber) | cannot block | movement.caliber 38.3%; movement case line 0.0% | no | 66834 | 98.6% | 1.4% | 0.0% | 0 | 0 | n/a (cannot block) |
 | `crown-stem-length` | stem may need cutting; irreversible (info) | cannot block | – | no | 109072 | 100.0% | 0.0% | 0.0% | 0 | 0 | n/a (cannot block) |
 
 `strap-fit`: 4389 pairs differ on lug width; that branch only warns, because the case figure is its line's standard (class C).
-Bad-build fixtures: 17, 14 quoted, 17 blocked by the engine.
+Bad-build fixtures: 18, 15 quoted, 18 blocked by the engine.
 `movement-case-fit`: 108 of 141 approved parts in the movement slot are spare parts, so most movement pairs are correctly blocked.
 
 ## 2. Unknown rate by slot pair
@@ -50,7 +50,7 @@ Every approved part in one slot against every approved part in the other, judged
 | case × chapterRing | 151578 | 40.3% | 59.7% | 0.0% | 0.0% | 16.6% | 0.0% |
 | case × crown | 109072 | 43.7% | 3.4% | 0.0% | 52.9% | 6.7% | 56.3% |
 | case × crystal | 32080 | 29.8% | 4.6% | 0.0% | 65.7% | 6.7% | 70.2% |
-| case × dial | 190074 | 91.6% | 0.0% | 2.9% | 5.6% | 94.9% | 5.6% |
+| case × dial | 190074 | 91.6% | 0.0% | 2.5% | 5.9% | 94.9% | 5.9% |
 | case × hands | 174435 | 100.0% | 0.0% | 0.0% | 0.0% | 78.6% | 0.0% |
 | case × movement | 56541 | 23.4% | 0.0% | 0.0% | 76.6% | 6.7% | 76.6% |
 | case × strap | 101052 | 19.8% | 11.1% | 53.5% | 15.6% | 74.8% | 22.4% |
@@ -59,7 +59,7 @@ Every approved part in one slot against every approved part in the other, judged
 | crystal × hands | 34800 | 100.0% | 0.0% | 0.0% | 0.0% | 77.0% | 0.0% |
 | crystal × movement | 11280 | 100.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% |
 | dial × hands | 206190 | 100.0% | 0.0% | 0.0% | 0.0% | 98.7% | 0.0% |
-| dial × movement | 66834 | 0.1% | 5.7% | 90.9% | 3.3% | 94.5% | 3.3% |
-| hands × movement | 61335 | 19.9% | 3.5% | 76.6% | 0.0% | 77.0% | 0.0% |
-| **all pairs** | **2000368** | **58.5%** | **6.2%** | **19.1%** | **16.2%** | | |
+| dial × movement | 66834 | 0.2% | 9.9% | 86.3% | 3.7% | 94.5% | 3.7% |
+| hands × movement | 61335 | 34.0% | 4.3% | 61.7% | 0.0% | 77.0% | 0.0% |
+| **all pairs** | **2000368** | **59.0%** | **6.3%** | **18.4%** | **16.2%** | | |
 

@@ -385,26 +385,21 @@ every layer from the case.
 
 ## D11 — WS1 leftovers (raised 2026-09-26)
 
-**a. Two rules can find errors but may not block yet** (`lib/compat/evidence.ts`).
-`date-window-alignment`: no dial in the catalog states its cutout position,
-so no real bad build exists. `dial-case-diameter`: the Panda and Skipper
-chronograph dials state "Dial Diameter: 29.5mm" but are recorded without a
-diameter; the session's write to the database was refused. *Cost:* their
-errors show as Checked warnings (neither fires on today's catalog: 0 raw
-errors each). *Restore signal:* a dial with a stated cutout position; the
-29.5mm values applied, then a fixture pairing the Panda dial with the RC0973
-SRPE case ("Can only accommodate 28.5mm dials"). *Guardrail:*
+**a. `date-window-alignment` can find errors but may not block yet**
+(`lib/compat/evidence.ts`). No dial in the catalog states its cutout
+position, so no real bad build exists. *Cost:* its errors show as Checked
+warnings (0 raw errors on today's catalog). *Restore signal:* a dial with a
+stated cutout position, then a quoted fixture. *Guardrail:*
 `known-builds.test.ts` fails if a rule enters `VERIFIED_RULES` without a
-quoted fixture.
+quoted fixture. *Resolved 2026-09-26 for `dial-case-diameter`:* the Panda and
+Skipper dials now carry their stated 29.5mm, and bad-021 (Panda in the RC0973
+SRPE case, "Can only accommodate 28.5mm dials") backs it.
 
-**b. Movement calibers and crown variants are parsed but not applied.**
-`scripts/backfill-attributes.ts` now reads NH35A-style suffixes, NH70/71/72
-and "(3.8 o'clock crown case)" / "@ 4H Crown"; the database still has 10 real
-movements without a caliber and no movement crown positions (write refused).
-*Cost:* those 10 get a "can't confirm caliber" warning from
-`dial-movement-size` and `nh34-hand-stack`; the date rule treats every
-movement as sold for a 3 o'clock crown. *Restore signal:* owner applies the
-movement attributes (a targeted update, not a full backfill run — see D10a).
+**b. Resolved 2026-09-26 — movement calibers and crown variants applied.**
+A targeted update set `caliber`, `hasDay`, `hasDate`, `heightMm` and
+`crownPosition` on 23 approved movement-slot parts (10 complete movements, 13
+NH36A spare wheels, matching how the backfill already treats spares), exactly
+as `scripts/backfill-attributes.ts` now derives them.
 
 **c. 26 Lucius "SKX Crown II" crowns block on SKX007 cases** although their
 listings say "For the SKX013 & SKX007": tagged `skx013-crown`, and a family

@@ -516,6 +516,20 @@
       "source": "https://luciusatelier.com/products/skx013-watch-case-38mm-dlc-black-edition-nh34-ready",
       "sourceQuote": "luciusatelier, SKX013 Watch Case - 38mm (DLC BLACK EDITION) listing: \"Chapter Rings SKX013-spec (required, sold separately)\".",
       "notes": "WS1 step 4. A case that needs a chapter ring it doesn't include, built without one."
+    },
+    {
+      "id": "bad-021",
+      "expected": "blocked",
+      "evidences": [
+        "dial-case-diameter"
+      ],
+      "parts": {
+        "case": "RC0973 SRPE Replacement case - Steel",
+        "dial": "Watch Dial: Panda Chronograph"
+      },
+      "source": "https://watchandstyle.net/products/rc0973-srpe-replacement-case-silver",
+      "sourceQuote": "watchandstyle, RC0973 SRPE Replacement case listing: \"Can only accommodate 28.5mm dials\". namokimods, Panda Chronograph dial listing: \"Dial Diameter: 29.5mm\".",
+      "notes": "WS1 (D11a). A 29.5mm chronograph dial in a case its maker says takes 28.5mm dials only."
     }
   ]
 }

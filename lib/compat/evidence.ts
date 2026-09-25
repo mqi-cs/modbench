@@ -6,17 +6,16 @@ import { getPart } from "./types";
 // these may block a build. known-builds.test.ts fails if this set and the
 // fixtures disagree, in either direction.
 //
-// Not here, so their errors show as warnings (specs/08-DEFERRED.md D11):
+// Not here, so its errors show as warnings (specs/08-DEFERRED.md D11a):
 //   date-window-alignment -- no dial in the catalog states its cutout
 //     position, so no real bad build can be built for it yet.
-//   dial-case-diameter -- every dial in the catalog is recorded at 28.5mm;
-//     the two 29.5mm chronograph dials aren't yet recorded as such.
 export const VERIFIED_RULES: ReadonlySet<string> = new Set([
   "bezel-case-fit",
   "bracelet-vendor-scope",
   "crown-case-fit",
   "crystal-case-fit",
   "day-window-presence",
+  "dial-case-diameter",
   "dial-case-model-exclusion",
   "dial-movement-feet",
   "family-exception",
