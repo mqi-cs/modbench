@@ -100,8 +100,9 @@ the README says otherwise and is out of date.
 - `data/fixtures/` — fixtures plus the findings that justify them.
 - `specs/` — phase specs `00`–`08`, `09-COMPETITIVE-CONTEXT.md`, and the pivot
   plan `10-PIVOT-PLAN.md` (local only, never committed — see top).
-- 3D render experiments live on an unmerged branch (`scripts/3d-test/`), not
-  on `main`. See WS0 step 6 of the plan.
+- `scripts/3d-test/` — the 3D layered-preview prototype (Blender renderer,
+  texture scripts, layer viewers, `REPORT.md`). Merged as a prototype; render
+  output is gitignored. Moving it into a maintained pipeline is WS2b.
 
 ## Working method
 
