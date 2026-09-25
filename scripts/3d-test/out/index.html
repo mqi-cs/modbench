@@ -1,0 +1,258 @@
+<!doctype html>
+<!-- TEMPORARY — 3D proof-of-concept viewer. Static, served from scripts/3d-test/out. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D vs Tab 6</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
+<style>
+  :root { --paper:#f6f7f8; --card:#fff; --ink:#15191e; --graphite:#5b646e; --rule:#d3d8dd; --brass:#9a7328; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:14px/1.5 system-ui, sans-serif; }
+  main { max-width: 1320px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  h2 { font-size: 15px; margin: 40px 0 4px; }
+  p.note { color: var(--graphite); margin: 0 0 14px; max-width: 80ch; }
+  .row { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  figure { margin:0; background:var(--card); border:1px solid var(--rule); border-radius:6px; padding:8px; }
+  figure img { width:100%; display:block; }
+  figcaption { font-size:12px; color:var(--graphite); margin-top:6px; }
+  figcaption b { color:var(--ink); font-weight:600; }
+  .px img { image-rendering: pixelated; }
+  /* wipe */
+  .wipe { position:relative; max-width:800px; aspect-ratio:1; margin:0 auto; background:var(--card); border:1px solid var(--rule); border-radius:6px; overflow:hidden; user-select:none; }
+  .wipe img { position:absolute; inset:0; width:100%; height:100%; }
+  .wipe .top { clip-path: inset(0 0 0 var(--x,50%)); }
+  .wipe .bar { position:absolute; top:0; bottom:0; left:var(--x,50%); width:2px; background:var(--brass); pointer-events:none; }
+  .wipe .lab { position:absolute; top:8px; font-size:12px; background:#000a; color:#fff; padding:2px 6px; border-radius:3px; }
+  .controls { display:flex; gap:10px; align-items:center; justify-content:center; margin:10px 0; flex-wrap:wrap; }
+  input[type=range] { width: min(480px, 80vw); }
+  button { font:inherit; padding:4px 10px; border:1px solid var(--rule); background:var(--card); border-radius:4px; cursor:pointer; }
+  button[aria-pressed=true] { border-color:var(--brass); color:var(--brass); }
+</style>
+</head>
+<body>
+<main>
+  <h1>3D proof of concept vs tab 6: SKX007, 42.5 / 22 / 28.5</h1>
+  <p class="note">Newest work first. Every top-down image uses the preview's 800×800 frame, mm-to-px scale and paper colour. TEMPORARY: nothing here is wired into the app.</p>
+
+  <h2 style="margin-top:24px">New · Option 2 demo: pre-rendered layers</h2>
+  <p class="note"><a href="layers.html"><b>Open the layered configurator →</b></a> 21 part layers per view (2 case finishes, 4 dials, 3 rings, 2 hand sets, 4 inserts, 6 straps), composited in the browser. That covers 1,152 combinations from 1.3MB of WebP. Swapping a part takes about 20ms.</p>
+
+  <h2 style="margin-top:24px">Three finished builds</h2>
+  <p class="note">Real catalog parts, rendered from their stated dimensions. <b>Vendor photos:</b> the dials. <b>Generated:</b> insert prints, chapter ring prints, date wheels. <b>Representative:</b> strap colours. No crystal (your pick). Hero shots take ~40s at 2048 samples on this laptop's RTX 3050; top-down views take 10–17s.</p>
+  <div class="row" style="grid-template-columns:1fr">
+    <figure><img src="FINAL-blue.png" alt=""><figcaption><b>Alpine Blue:</b> steel SKX case, Alpine Sunburst Blue dial, silver sword hands, navy dive insert, jubilee</figcaption></figure>
+    <figure><img src="FINAL-green.png" alt=""><figcaption><b>Fumé Green:</b> NMK930 PVD black case, Fume Green dial, FPJ Gold hands, black/gold dive insert, rubber tropic</figcaption></figure>
+    <figure><img src="FINAL-cream.png" alt=""><figcaption><b>Alpine Cream:</b> steel SKX case, Alpine Cream dial, Fathoms Gold hands, black/aged-lume insert, brown leather</figcaption></figure>
+  </div>
+
+  <h2 style="margin-top:24px">Strap options</h2>
+  <p class="note">One of each strap shape the catalog carries, all on the same wrist curve. Crystal: none (your pick, option 7). Jubilee and oyster are link-by-link geometry. Mesh, rubber, leather and NATO are swept bands with procedural surface texture at real millimetre scale. Colours are representative, not taken from a specific listing.</p>
+  <div class="controls" id="straps">
+    <button data-k="jubilee" aria-pressed="true">Jubilee <small>(27 in catalog)</small></button>
+    <button data-k="oyster">Oyster <small>(29)</small></button>
+    <button data-k="mesh">Milanese mesh <small>(bracelet, 21)</small></button>
+    <button data-k="rubber">Rubber tropic <small>(band, 146)</small></button>
+    <button data-k="leather">Leather <small>(band)</small></button>
+    <button data-k="nato">Seatbelt NATO <small>(29)</small></button>
+  </div>
+  <div class="row" style="grid-template-columns: 1fr 1fr">
+    <figure><img id="stA" src="st-jubilee-34w-flat.png" alt=""><figcaption id="stCap"></figcaption></figure>
+    <figure><img id="stB" src="st-jubilee-topw-flat.png" alt=""><figcaption>Top-down, pulled back</figcaption></figure>
+  </div>
+  <script>
+    (() => {
+      const caps = {
+        jubilee: "Five-link jubilee: brushed outer links, staggered polished centre links.",
+        oyster: "Three-link oyster: broad flat centre link, no stagger.",
+        mesh: "Milanese mesh: continuous steel band. Weave drawn at ~0.9mm; the real ~0.3mm weave is below a pixel here.",
+        rubber: "Black FKM rubber, tropic-style raised block pattern.",
+        leather: "Brown leather with contrast stitching near each edge.",
+        nato: "Bond-style seatbelt NATO: black with grey stripes, runs under the case, two steel keepers.",
+      };
+      const a = document.getElementById("stA"), b = document.getElementById("stB"), cap = document.getElementById("stCap");
+      const set = k => { a.src = `st-${k}-34w-flat.png`; b.src = `st-${k}-topw-flat.png`; cap.innerHTML = `<b>${k}</b> · ${caps[k]}`;
+        document.querySelectorAll("#straps button").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.k === k))); };
+      document.querySelectorAll("#straps button").forEach(x => x.onclick = () => set(x.dataset.k));
+      set("jubilee");
+    })();
+  </script>
+
+  <h2 style="margin-top:24px">Crystal options (chosen: 7, no crystal)</h2>
+  <p class="note">The blur was mostly the <b>denoiser</b>. It takes its detail hints from the first surface a ray hits, and behind a crystal that's plain glass, so it smoothed the dial print away. Options 2–7 render without it, at 2048 samples. A pale disc over the dial was the key light reflecting in the crystal. Options 2–6 use light linking so the key light still lights the steel but the crystal never sees it. Click an option; the right panel is a 2× crop of the dial print.</p>
+  <div class="controls" id="crys">
+    <button data-k="1-current">1 · Current (denoised)</button>
+    <button data-k="2-clear" aria-pressed="true">2 · Clear AR (invisible)</button>
+    <button data-k="3-mineral">3 · Stock mineral, no AR</button>
+    <button data-k="4-arblue">4 · Sapphire, blue AR</button>
+    <button data-k="5-dome">5 · Double-domed sapphire</button>
+    <button data-k="6-streak">6 · Clear + studio streak</button>
+    <button data-k="7-none">7 · No crystal (control)</button>
+  </div>
+  <div class="row" style="grid-template-columns: 1fr 1fr">
+    <figure><img id="crysFull" src="cr-2-clear-flat.png" alt=""><figcaption id="crysCap"></figcaption></figure>
+    <figure class="px"><img id="crysCrop" src="cr-2-clear-crop.png" alt=""><figcaption>Dial print, 2× crop</figcaption></figure>
+  </div>
+  <script>
+    (() => {
+      const caps = {
+        "1-current": "IOR 1.1, denoiser on, key light reflects in crystal. What you saw before.",
+        "2-clear": "IOR 1.1 (≈0.2% reflectance, like a good AR coat), no denoiser, key light excluded. The crystal all but disappears.",
+        "3-mineral": "IOR 1.5, no coating: honest stock Hardlex. The light tent shows as a soft sheen; print stays sharp.",
+        "4-arblue": "IOR 1.3 with a blue-violet reflection tint, the look of AR-coated sapphire at an angle.",
+        "5-dome": "Double-domed, 0.9mm sag, IOR 1.6. The dial bends toward the edge like a real domed sapphire.",
+        "6-streak": "Clear crystal plus a strip softbox visible only in reflections: the product-photo highlight.",
+        "7-none": "No crystal at all. The reference for how sharp the dial can be.",
+      };
+      const full = document.getElementById("crysFull"), crop = document.getElementById("crysCrop"), cap = document.getElementById("crysCap");
+      const set = k => { full.src = `cr-${k}-flat.png`; crop.src = `cr-${k}-crop.png`; cap.innerHTML = `<b>${k.replace(/^\d-/, "").replace("-", " ")}</b> · ${caps[k]}`;
+        document.querySelectorAll("#crys button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.k === k))); };
+      document.querySelectorAll("#crys button").forEach(b => b.onclick = () => set(b.dataset.k));
+      set("2-clear");
+    })();
+  </script>
+
+  <h2 style="margin-top:24px">D full build: chapter ring, day-date, gasket, jubilee bracelet</h2>
+  <p class="note">Added: an angled chapter ring at the modal stated 30.5 / 27.7mm with a <b>generated</b> print (the catalog's ring photos are 3/4 perspective shots and can't be projected), the dial photo's day-date window cut open over a printed TUE 22 wheel, a black crystal gasket, and a 22mm jubilee bracelet (the catalog's <code>strap-jubilee</code> shape) with female end links fitted to the case curve. Not modelled: clasp, spring bars, movement.</p>
+  <div class="row">
+    <figure><img src="D3-34w-flat.png" alt=""><figcaption><b>Full build:</b> 3/4, pulled back</figcaption></figure>
+    <figure><img src="D3-topw-flat.png" alt=""><figcaption><b>Full build:</b> top-down, pulled back</figcaption></figure>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <figure><img src="D3-34-flat.png" alt=""><figcaption><b>Full build:</b> 3/4 close</figcaption></figure>
+    <figure><img src="D3-top-flat.png" alt=""><figcaption><b>Full build:</b> top-down at the preview's own frame and scale</figcaption></figure>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <figure><img src="ring-skx.png" alt=""><figcaption><b>Generated</b> chapter ring print</figcaption></figure>
+    <figure><img src="date-skx.png" alt=""><figcaption><b>Generated</b> day-date wheels</figcaption></figure>
+    <figure><img src="dial-cut.png" alt="" style="background:#c8d0d8"><figcaption>Vendor dial photo, window cut open</figcaption></figure>
+  </div>
+
+  <h2>Rotate it yourself (full build)</h2>
+  <p class="note">Drag to orbit, scroll to zoom. Full build as chosen: no crystal, jubilee bracelet. The viewer uses its own default lighting, not the Blender studio.</p>
+  <figure style="max-width:800px;margin:0 auto">
+    <model-viewer src="D3-model.glb" camera-controls touch-action="pan-y" shadow-intensity="0.6" exposure="1.1" environment-image="neutral"
+      camera-orbit="150deg 55deg auto" style="width:100%;height:560px;background:#f6f7f8" alt="Parametric SKX watch, rotatable"></model-viewer>
+  </figure>
+
+  <h2 style="margin-top:48px;border-top:1px solid var(--rule);padding-top:24px">D complete: hands, crystal, printed insert</h2>
+  <p class="note">Hands: the catalog's <code>hand-sword</code> shape with production's measured widths, at the modal stated 8.5 / 12.5 / 12.5mm, set to 10:10. Crystal: flat, 1.15mm, AR-coated (≈0.2% reflectance). Insert: a <b>generated</b> SKX-style print at the stated 38 / 31.8mm. Every lumed black insert asset in the catalog was photographed with its lume glowing. Dial: the vendor's own photo (SKX Black Lume). Not modelled: chapter ring (the grey band is bare steel), date wheel, strap.</p>
+  <div class="row">
+    <figure><img src="D2-34-flat.png" alt=""><figcaption><b>D complete:</b> 3/4</figcaption></figure>
+    <figure><img src="D2-top-flat.png" alt=""><figcaption><b>D complete:</b> top-down, same scale as tab 6</figcaption></figure>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <figure><img src="tab6-case.png" alt=""><figcaption><b>Tab 6:</b> case only, for scale</figcaption></figure>
+    <figure><img src="D-top-flat.png" alt=""><figcaption><b>D before:</b> no hands, crystal or print</figcaption></figure>
+    <figure><img src="insert-skx.png" alt=""><figcaption><b>Generated insert texture</b> (2048px, 38mm edge to edge)</figcaption></figure>
+  </div>
+
+  <h2 style="margin-top:48px;border-top:1px solid var(--rule);padding-top:24px">Options A and D: full solid case, before hands</h2>
+  <p class="note"><b>A</b> is the parametric solid in grey clay: geometry only, like Meshy's untextured view. <b>D</b> is the same geometry with a surface treatment: brushed tops, polished flanks, black insert, the vendor's own dial photo, and a light-tent studio. Built from 42.5 / 22 / 28.5 and measured back as 42.500 / 22.000 / 45.998 lug-to-lug. Not modelled: hands, crystal, insert print.</p>
+  <div class="row">
+    <figure><img src="A-34-flat.png" alt=""><figcaption><b>A:</b> clay, 3/4</figcaption></figure>
+    <figure><img src="D-34-flat.png" alt=""><figcaption><b>D:</b> steel + dial photo, 3/4</figcaption></figure>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <figure><img src="tab6-case.png" alt=""><figcaption><b>Tab 6:</b> production SVG, case only</figcaption></figure>
+    <figure><img src="A-top-flat.png" alt=""><figcaption><b>A:</b> clay, top-down, same scale</figcaption></figure>
+    <figure><img src="D-top-flat.png" alt=""><figcaption><b>D:</b> steel, top-down, same scale</figcaption></figure>
+  </div>
+  <p class="note" style="margin-top:12px">Lighting passes for D, in order: <a href="tent-D.png">plain HDRI, then flat white tent</a> · <a href="tent-D2.png">tent with a horizon gradient</a></p>
+
+  <h2 style="margin-top:48px;border-top:1px solid var(--rule);padding-top:24px">Earlier: the top-down heightfield test</h2>
+
+  <h2>1 · Wipe: drag to compare</h2>
+  <p class="note">Left of the line: <b id="labL">tab 6</b>. Right of the line: <b id="labR">3D (final)</b>. Press A/B or the buttons to flip instantly.</p>
+  <div class="controls">
+    <span>Right side:</span>
+    <button data-src="final-42.5-flat.png" aria-pressed="true">3D final (chamfer + directional surround)</button>
+    <button data-src="grad-flat.png">3D rounded edge</button>
+    <button data-src="sw-1.2e5-flat.png">3D strict one light</button>
+    <button data-src="tent-0.4-flat.png">3D uniform surround</button>
+  </div>
+  <div class="wipe" id="wipe">
+    <img src="tab6-case.png" alt="Tab 6 facet render">
+    <img class="top" id="wipeTop" src="final-42.5-flat.png" alt="3D render">
+    <div class="bar"></div>
+    <span class="lab" style="left:8px">tab 6</span>
+    <span class="lab" style="right:8px" id="wipeLab">3D</span>
+  </div>
+  <div class="controls">
+    <input type="range" id="slider" min="0" max="100" value="50" aria-label="Wipe position">
+    <button id="flip">Flip A/B</button>
+  </div>
+
+  <h2>2 · Three-way</h2>
+  <p class="note">The vendor photo is a three-quarter shot of NMK942, a squarer "Field" SKX variant, not top-down. Use it as a material reference, not a silhouette reference.</p>
+  <div class="row">
+    <figure><img src="tab6-case.png" alt=""><figcaption><b>Tab 6:</b> production facet SVG</figcaption></figure>
+    <figure><img src="final-42.5-flat.png" alt=""><figcaption><b>3D final:</b> Cycles, flat 45° chamfer, key light + directional surround</figcaption></figure>
+    <figure><img src="vendor-nmk942.png" alt=""><figcaption><b>Vendor photo:</b> NMK942 steel</figcaption></figure>
+  </div>
+
+  <h2>3 · Zoomed 2×, pixel-exact</h2>
+  <p class="note">Where to look: lug tops (falloff along their length, 3D only), the bezel seat step (tab 6 paints it, 3D reduces it to a hairline), and the edge band.</p>
+  <div class="row px" id="zooms"></div>
+
+  <h2>4 · Every lighting attempt, in order</h2>
+  <p class="note">This row is the lighting-tuning cost. The geometry didn't change between these except for the edge profile.</p>
+  <div class="row">
+    <figure><img src="try2-flat.png" alt=""><figcaption><b>try2:</b> strict one light, too bright</figcaption></figure>
+    <figure><img src="try3-flat.png" alt=""><figcaption><b>try3:</b> + uniform grey world: chalky</figcaption></figure>
+    <figure><img src="try5-flat.png" alt=""><figcaption><b>try5:</b> rounded edge, still blown</figcaption></figure>
+    <figure><img src="sw-2e4-flat.png" alt=""><figcaption><b>sweep:</b> strict one light, low</figcaption></figure>
+    <figure><img src="sw-1.2e5-flat.png" alt=""><figcaption><b>sweep:</b> strict one light: dark chrome</figcaption></figure>
+    <figure><img src="tent-0.4-flat.png" alt=""><figcaption><b>tent 0.4:</b> uniform surround: grey outline edges</figcaption></figure>
+    <figure><img src="grad-flat.png" alt=""><figcaption><b>grad:</b> directional surround, rounded edge: pillowy</figcaption></figure>
+    <figure><img src="final-42.5-flat.png" alt=""><figcaption><b>final:</b> directional surround, flat chamfer</figcaption></figure>
+  </div>
+
+  <h2>5 · Same pipeline, 37.8 / 20 / 28.5 dimension set</h2>
+  <p class="note">Geometry measures correct (37.83 / 19.99). The bezel seat is still cut for a 38mm insert, so it's wider than the case and the top rim disappears. Production <code>CaseBody</code> has the same bug.</p>
+  <div class="row">
+    <figure><img src="final-37.8-flat.png" alt=""><figcaption><b>3D:</b> 37.8mm case</figcaption></figure>
+  </div>
+</main>
+<script>
+  const wipe = document.getElementById('wipe'), top_ = document.getElementById('wipeTop'),
+        slider = document.getElementById('slider'), lab = document.getElementById('wipeLab');
+  const set = v => wipe.style.setProperty('--x', v + '%');
+  slider.addEventListener('input', e => set(e.target.value));
+  let drag = false;
+  const move = e => { const r = wipe.getBoundingClientRect(); const v = Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100)); slider.value = v; set(v); };
+  wipe.addEventListener('pointerdown', e => { drag = true; wipe.setPointerCapture(e.pointerId); move(e); });
+  wipe.addEventListener('pointermove', e => drag && move(e));
+  wipe.addEventListener('pointerup', () => drag = false);
+  const flip = () => { const v = slider.value > 50 ? 0 : 100; slider.value = v; set(v); };
+  document.getElementById('flip').onclick = flip;
+  addEventListener('keydown', e => { if (e.key === 'a' || e.key === 'b' || e.key === 'A' || e.key === 'B') flip(); });
+  document.querySelectorAll('button[data-src]').forEach(b => b.onclick = () => {
+    document.querySelectorAll('button[data-src]').forEach(x => x.setAttribute('aria-pressed', 'false'));
+    b.setAttribute('aria-pressed', 'true'); top_.src = b.dataset.src; lab.textContent = '3D';
+  });
+
+  // 2x crops drawn from the full renders onto canvases, nearest-neighbour.
+  const crops = [
+    ['Top-left lug (toward light)', 90, 0, 260, 260],
+    ['Lower-right lug + guard (away from light)', 470, 470, 260, 260],
+    ['Lower-left lug: tip falloff', 90, 540, 260, 260],
+    ['Seat step at 9 o’clock', 40, 270, 260, 260],
+  ];
+  const srcs = [['tab6-case.png', 'tab 6'], ['final-42.5-flat.png', '3D final']];
+  const zooms = document.getElementById('zooms');
+  const load = s => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.src = s; });
+  Promise.all(srcs.map(s => load(s[0]))).then(imgs => {
+    for (const [name, x, y, w, h] of crops) imgs.forEach((img, k) => {
+      const c = document.createElement('canvas'); c.width = w * 2; c.height = h * 2;
+      const g = c.getContext('2d'); g.imageSmoothingEnabled = false; g.drawImage(img, x, y, w, h, 0, 0, w * 2, h * 2);
+      const f = document.createElement('figure'); c.style.width = '100%'; f.appendChild(c);
+      const cap = document.createElement('figcaption'); cap.innerHTML = `<b>${srcs[k][1]}</b> · ${name}`; f.appendChild(cap);
+      zooms.appendChild(f);
+    });
+  });
+</script>
+</body>
+</html>

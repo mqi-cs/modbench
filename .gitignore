@@ -10,3 +10,12 @@ data/modbench.db-wal
 data/raw/*.json
 node_modules/
 data/raw/images/
+
+# 3D layered-preview prototype (scripts/3d-test): render output is hundreds
+# of MB of generated PNG/WebP and is reproducible from the scripts. The two
+# viewer pages live in out/ because they reference layers/ relatively, so
+# they are kept; a few small sample renders are in scripts/3d-test/samples/.
+__pycache__/
+scripts/3d-test/out/*
+!scripts/3d-test/out/index.html
+!scripts/3d-test/out/layers.html
