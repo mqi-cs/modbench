@@ -89,7 +89,10 @@ export function watchMm(input: MmInput): WatchMm {
   const stated: string[] = [];
   const caseDiameter = pick(input.case?.caseDiameter, DEFAULT_MM.caseDiameter, stated, "case");
   const lugWidth = pick(input.case?.lugWidth, DEFAULT_MM.lugWidth, stated, "lugWidth");
-  const insertOuter = pick(input.insert?.outer, DEFAULT_MM.insertOuter, stated, "insertOuter");
+  // An insert that states no size fills the bezel of the case it sits in:
+  // case - 4.5mm, which is the modal 38.0 on the stock 42.5 SKX and the
+  // same rule the 3D renderer uses. A fixed 38 overhung a 37.8mm case (D10d).
+  const insertOuter = pick(input.insert?.outer, caseDiameter - (DEFAULT_MM.caseDiameter - DEFAULT_MM.insertOuter), stated, "insertOuter");
   const insertInner = pick(input.insert?.inner, DEFAULT_MM.insertInner, stated, "insertInner");
   const ringOuter = pick(input.ring?.outer, DEFAULT_MM.ringOuter, stated, "ringOuter");
   const ringInner = pick(input.ring?.inner, DEFAULT_MM.ringInner, stated, "ringInner");

@@ -84,6 +84,14 @@ describe("resolving one build's millimetres", () => {
     expect(m.stated).not.toContain("ringOuter");
   });
 
+  it("sizes an insert that states nothing from its case, so it never overhangs (D10d)", () => {
+    expect(watchMm({ case: { caseDiameter: 42.5 } }).insertOuter).toBe(38.0);
+    const small = watchMm({ case: { caseDiameter: 37.8 } });
+    expect(small.insertOuter).toBeCloseTo(33.3, 5);
+    expect(small.insertOuter).toBeLessThan(small.caseDiameter);
+    expect(small.stated).not.toContain("insertOuter");
+  });
+
   it("lugs reach a fixed distance past whatever case they are cut into", () => {
     expect(watchMm({ case: { caseDiameter: 42.5 } }).lugToLug).toBe(46);
     expect(watchMm({ case: { caseDiameter: 37.8 } }).lugToLug).toBe(41.3);

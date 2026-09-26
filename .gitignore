@@ -19,3 +19,6 @@ __pycache__/
 scripts/3d-test/out/*
 !scripts/3d-test/out/index.html
 !scripts/3d-test/out/layers.html
+
+# Render pipeline output (scripts/render/run.ts): content-addressed, regenerable.
+scripts/render/out/

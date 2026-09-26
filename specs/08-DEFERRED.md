@@ -376,10 +376,10 @@ vendor text that states the incompatibility, or a decision to drop them.
 states 38mm. Preview-only today. *Restore signal:* WS1 audit of family
 constants.
 
-**d. A chosen insert with no stated outer diameter still draws at the 38mm
-default**, which overhangs a 37.8mm case. The seat fix (WS0 step 1) covers
-the no-insert case only. *Restore signal:* WS2 render manifest, which sizes
-every layer from the case.
+**d. Resolved 2026-09-26 (WS2b) — an insert with no stated outer diameter
+drew at 38mm**, overhanging a 37.8mm case. `watchMm` now falls back to case
+diameter − 4.5mm (38.0 on the stock 42.5 SKX, 33.3 on a 37.8 case), the rule
+the 3D renderer already used. Test in `lib/preview/__tests__/dimensions.test.ts`.
 
 ---
 
@@ -414,6 +414,56 @@ WS4. *Restore signal:* WS4 stores its first bring-your-own part.
 
 **e. The shop pitch** (WS1 step 7's third home for the guarantee) doesn't
 exist yet. *Restore signal:* WS7. Use `lib/guarantee.ts`.
+
+---
+
+## D12 — WS2b leftovers (raised 2026-09-26)
+
+**a. One Blender process per render job.** Scene build (~10s) costs more
+than the render (~5s at 256 spp + OIDN; WS2a). *Cost:* about two-thirds of
+runner wall time. *Restore signal:* the full manifest takes too long to
+rebuild (168 jobs today). *Fix:* build each case shape once and render its
+layers in one process.
+
+**b. One modelled shape per slot; 741 of 2,868 keyed parts are drawn with
+the nearest one and marked `approximated`** (owner's decision, 2026-09-26:
+nearest shape, labelled). By count: `ring-plain` 308 → angled ring;
+`crown-smooth` 115, `crown-chunky` 35, `crown-coin` 31, `crown-onion` 9,
+`crown-bolt` 4 → knurled; `hand-three-lobe` 54, `hand-dauphine` 39,
+`hand-baton` 32, `hand-faceted` 20, `hand-arrow` 12, `hand-cathedral` 7,
+`hand-syringe` 7, `hand-pencil` 4 → sword; `insert-slope` 29 → flat;
+`strap-bracelet` 21 → mesh; `strap-band` not named leather or rubber 14 →
+rubber. *Guardrail:* the index carries `approximated` and `actualShape` per
+part; WS2c step 8 must label them. *Restore signal:* model a shape, add its
+key in `lib/render/shape-keys.ts`; the manifest renders only what's new.
+
+**c. Stated part sizes aren't applied in 3D.** Insert, chapter ring, hands
+and crown are drawn at fixed modal sizes (insert sized from the case);
+`renderMm` is ignored. *Cost:* e.g. 12 inserts stating 33.6mm draw at the
+case's bezel size. *Restore signal:* renderer takes those sizes as
+parameters; they then join the shape key.
+
+**d. 25 approved cases not renderable.** SRP Turtle 4, VK63/64 3, Namoki N4
+3 (need their own outline; plan: paid setup job) and 15 Lucius Ultra Thin
+(no stated lug width or aperture). *Restore signal:* a pilot shop needs one
+of them, or Lucius dimensions stated.
+
+**e. Neutral renders bake prototype textures** from the gitignored
+`scripts/3d-test/out/` (dial cut-out, insert/ring/date prints). A fresh
+checkout can't run `scripts/render/run.ts` until the prototype's texture
+scripts have run; the runner fails loudly naming the missing files.
+*Restore signal:* WS2c (appearance moves to the browser).
+
+**f. Four of the six case shapes render wrong.** The renderer's fixed
+constants were only ever checked on the 42.5mm SKX. On `case:round/36`,
+`/37.8`, `/38` (SKX013, 50 cases) the insert vanishes and on `/39.5`
+(Alpinist-style, 9) it is a sliver: its outer follows the case (−4.5mm) but
+its bore is fixed at 31.8mm, while SKX013 inserts state 33.6/27.6. The 36mm
+case layer also shows a boolean hole through the front flank (hidden behind
+the strap when stacked). 42.5 and 43.8 look right. *Guardrail:* don't show
+these four shapes to users until fixed. *Restore signal:* D12c (stated or
+case-scaled insert bore) plus a per-case-shape visual check; WS2c's "SKX
+shape family end to end" measure covers it.
 
 ---
 
