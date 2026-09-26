@@ -14,7 +14,9 @@
 #   bash scripts/3d-test/render-batch.sh
 #   npx tsx scripts/3d-test/make-manifest.ts
 #
-# Roughly 12s per layer on an RTX 3050 (about 5s render, 7s scene build).
+# Roughly 15s per layer on an RTX 3050 (about 5s render at 256 spp + OIDN,
+# 10s scene build). Library layers already on disk were rendered at 768 spp
+# with no denoise; delete them to re-render at the WS2a setting.
 
 set -u
 cd "$(dirname "$0")/../.." || exit 1
@@ -27,8 +29,8 @@ skipped=0
 run() {
   out=$1; view=$2; shift 2
   if [ -f "$O/$out-$view.png" ]; then skipped=$((skipped + 1)); return; fi
-  env TENT=0.9 FLOOR=0.3 SAMPLES=768 "$@" "$B" -b --factory-startup \
-    --python scripts/3d-test/render_solid.py -- D "$view" "$O/$out-$view.png" >/tmp/layer.log 2>&1
+  env TENT=0.9 FLOOR=0.3 SAMPLES=256 DENOISE=on "$@" "$B" -b --factory-startup --python-exit-code 1 \
+    --python scripts/render/render_solid.py -- D "$view" "$O/$out-$view.png" >/tmp/layer.log 2>&1
   if [ -f "$O/$out-$view.png" ]; then rendered=$((rendered + 1)); echo "ok   $out-$view"
   else echo "FAIL $out-$view"; grep -iE "error" /tmp/layer.log | head -2; fi
 }

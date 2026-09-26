@@ -1,5 +1,5 @@
-# TEMPORARY -- 3D proof of concept, options A and D. Not wired into
-# anything; delete scripts/3d-test/ when the question is answered.
+# The 3D preview renderer. Moved out of the scripts/3d-test prototype in
+# WS2b; jobs come from the render manifest (lib/render/, scripts/render/run.ts).
 #
 # Option A: the case as a real closed solid -- flanks, lug undersides,
 # spring-bar holes, caseback -- plus a bezel with a coin edge, a plain
@@ -11,7 +11,7 @@
 # brushed tops, polished flanks and chamfers, black insert, the vendor's
 # own dial photograph, lit by Blender's bundled CC0 studio HDRI.
 #
-#   blender -b --factory-startup --python scripts/3d-test/render_solid.py -- <A|D> <top|34> <out.png>
+#   blender -b --factory-startup --python-exit-code 1 --python scripts/render/render_solid.py -- <A|D> <top|34|hero> <out.png>
 #
 # Env: CASE_DIMS='{"caseDiameter":..,"lugWidth":..,"aperture":..}'
 
@@ -29,11 +29,17 @@ from mathutils import Vector
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import case_geometry as geo  # noqa: E402
+import render_guards  # noqa: E402
+
+# Textures (prepared dial cut-outs, generated insert/ring/date prints) are
+# made by the prototype scripts in scripts/3d-test and live in its gitignored
+# out/. WS2c replaces baked textures with browser-side appearance.
+TEX = os.environ.get("TEX_DIR", os.path.join(HERE, "..", "3d-test", "out"))
 
 argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 MODE = argv[0] if argv else "A"
 VIEW = argv[1] if len(argv) > 1 else "34"
-OUT = os.path.abspath(argv[2] if len(argv) > 2 else os.path.join(HERE, "out", f"{MODE}-{VIEW}.png"))
+OUT = os.path.abspath(argv[2] if len(argv) > 2 else os.path.join(TEX, f"{MODE}-{VIEW}.png"))
 # Per-build switches (all optional):
 #   BUILD_TAG   picks dial-cut-<tag>, insert-<tag>, ring-<tag>, date-<tag> textures
 #   HAND_COLOR  steel | gold          LUME  r,g,b (0-1)
@@ -690,7 +696,7 @@ else:
     # Printed insert: the generated SKX print, anodised black under it.
     im, ib = principled("insert_print", (1, 1, 1), 0.0, 0.3)
     itex = im.node_tree.nodes.new("ShaderNodeTexImage")
-    itex.image = bpy.data.images.load(os.path.join(HERE, "out", texf("insert", "insert-skx.png")))
+    itex.image = bpy.data.images.load(os.path.join(TEX, texf("insert", "insert-skx.png")))
     itex.extension = "CLIP"
     im.node_tree.links.new(itex.outputs["Color"], ib.inputs["Base Color"])
     ib.inputs["Coat Weight"].default_value = 0.3
@@ -743,7 +749,7 @@ else:
     def textured(name, path, rough):
         m, b = principled(name, (1, 1, 1), 0.0, rough)
         t_ = m.node_tree.nodes.new("ShaderNodeTexImage")
-        t_.image = bpy.data.images.load(os.path.join(HERE, "out", path))
+        t_.image = bpy.data.images.load(os.path.join(TEX, path))
         t_.extension = "CLIP"
         m.node_tree.links.new(t_.outputs["Color"], b.inputs["Base Color"])
         return m
@@ -848,7 +854,7 @@ else:
     dm, db = principled("dial", (1, 1, 1), 0.0, 0.6)
     db.inputs["Specular IOR Level"].default_value = 0.15
     tex = dm.node_tree.nodes.new("ShaderNodeTexImage")
-    tex.image = bpy.data.images.load(os.path.join(HERE, "out", texf("dial-cut", "dial-cut.png")))
+    tex.image = bpy.data.images.load(os.path.join(TEX, texf("dial-cut", "dial-cut.png")))
     tex.extension = "CLIP"
     dm.node_tree.links.new(tex.outputs["Color"], db.inputs["Base Color"])
     dm.node_tree.links.new(tex.outputs["Alpha"], db.inputs["Alpha"])
@@ -984,15 +990,25 @@ for kind in ("OPTIX", "CUDA"):
             break
     except TypeError:
         continue
-scene.cycles.samples = int(os.environ.get("SAMPLES", "1024"))
-# DENOISE=on (default) | off | rgb. The default denoiser guides itself with
-# albedo and normal passes taken at the FIRST surface hit -- behind a
-# crystal that is flat glass, so it treats the dial's print as noise and
-# smooths it away. "rgb" drops those guides; "off" relies on samples.
-_dn = os.environ.get("DENOISE", "off")
-scene.cycles.use_denoising = _dn != "off"
-if _dn == "rgb":
-    scene.cycles.denoising_input_passes = "RGB"
+# 256 spp + OIDN: chosen by the WS2a side-by-side (REPORT.md), replacing
+# 768-1024 spp with no denoise. Closer to a 4096 spp ground truth than 768 on
+# every layer, in about 60% of the render time.
+scene.cycles.samples = int(os.environ.get("SAMPLES", "256"))
+# SAMPLES is a ceiling: adaptive sampling stops each pixel once its noise is
+# under ADAPTIVE (Blender's default 0.01, which every layer so far used).
+# ADAPTIVE=0 renders every pixel to SAMPLES -- the WS2a ground truth.
+_adaptive = float(os.environ.get("ADAPTIVE", "0.01"))
+scene.cycles.use_adaptive_sampling = _adaptive > 0
+if _adaptive > 0:
+    scene.cycles.adaptive_threshold = _adaptive
+# DENOISE=on (default) | off | rgb. OIDN guides itself with albedo and
+# normal passes taken at the FIRST surface hit -- behind a crystal that is
+# flat glass, so it treats the dial's print as noise and smooths it away.
+# render_guards refuses denoising with a crystal (use DENOISE=off
+# SAMPLES=2048 for crystal renders) and on any data pass.
+# "rgb" drops the guides; "off" relies on samples.
+render_guards.denoise_config(scene, os.environ.get("DENOISE", "on"),
+                             os.environ.get("CRYSTAL", "none") if MODE == "D" else "none")
 scene.render.resolution_x = scene.render.resolution_y = size
 scene.render.film_transparent = True
 scene.view_settings.view_transform = "AgX"
@@ -1064,6 +1080,7 @@ if LAYER:
         else:
             ob.hide_render = True
 
+render_guards.assert_data_passes_not_denoised(scene)
 T1 = time.perf_counter()
 bpy.ops.render.render(write_still=True)
 print("RESULT " + json.dumps({"out": OUT, "mesh_s": round(T_MESH, 1), "render_s": round(time.perf_counter() - T1, 1), "measure": MEASURE}))

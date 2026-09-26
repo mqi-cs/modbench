@@ -371,3 +371,98 @@ The paired set cost 24 renders (~7 min) and 1.6MB of WebP. The general rule:
 **group the parts that visibly light each other, keep the rest separate.** The
 count multiplies only inside a group — 6 finishes x 20 straps is 120 images,
 about 40 minutes, once.
+
+---
+
+## Denoiser side-by-side (WS2a, 2026-09-26)
+
+Denoising was off because OIDN, guided by the crystal, smoothed the dial
+print. The crystal is gone, so the question was whether that still holds.
+`denoise-check.ts` renders one build's hero layer set five ways and measures
+each against a ground truth.
+
+**Build:** stock SKX shape, steel case, jubilee, `ins-black` insert,
+`ring-white` ring, steel hands, day-date dial `d03`; plus the mother-of-pearl
+dial `d02` as a dial-only stress row. **Ground truth:** 4096 spp, no
+denoise, adaptive sampling off. That last part matters: Blender's adaptive
+sampling (threshold 0.01) was silently on for every render so far, so
+`SAMPLES` has been a ceiling. A first "4096 spp" ground truth stopped at the
+same noise level as 768 and was thrown away. `ADAPTIVE=0` now turns it off.
+
+**Timings** (RTX 3050, 7 hero layers; render excludes the ~9.5 s scene build
+per layer):
+
+| setting | render s | scene build s | wall s |
+|---|---|---|---|
+| 4096 spp, no denoise, not adaptive (truth) | 602.2 | 67.2 | 675.4 |
+| **768 spp, no denoise (was current)** | 59.3 | 67.7 | 132.7 |
+| 64 spp + OIDN | 20.6 | 65.4 | 91.5 |
+| 128 spp + OIDN | 26.9 | 65.3 | 97.9 |
+| **256 spp + OIDN (chosen)** | 36.4 | 66.6 | 108.8 |
+
+**Error vs the ground truth**, mean absolute difference, premultiplied RGBA,
+8-bit units, over covered pixels:
+
+| layer | 768 | 64+OIDN | 128+OIDN | 256+OIDN |
+|---|---|---|---|---|
+| case | 0.52 | 0.57 | 0.48 | 0.42 |
+| dial | 0.82 | 0.37 | 0.33 | 0.30 |
+| ring | 1.16 | 0.73 | 0.63 | 0.59 |
+| hands | 0.55 | 0.47 | 0.39 | 0.33 |
+| insert | 0.75 | 0.60 | 0.49 | 0.43 |
+| strap | 0.67 | 0.91 | 0.75 | 0.63 |
+| casestrap | 0.64 | 0.78 | 0.65 | 0.56 |
+| dial-mop | 0.83 | 0.40 | 0.36 | 0.34 |
+
+Against the 768 reference (what the plan asked for) every denoised layer is
+0.64–1.39 off, but that mostly measures the reference's own grain: 768 is
+0.52–1.16 off the truth.
+
+**Crops** (`out/denoise/SHEET-100.png`, `SHEET-200.png`; MAD vs truth, then
+99th-percentile worst channel):
+
+| crop | 768 | 64 | 128 | 256 |
+|---|---|---|---|---|
+| dial print | 1.01 / 9 | 0.79 / 10 | 0.65 / 8 | 0.57 / 7 |
+| day-date print | 0.95 / 9 | 0.79 / 9 | 0.64 / 7 | 0.57 / 7 |
+| lume plots | 0.95 / 8 | 0.49 / 5 | 0.46 / 5 | 0.42 / 5 |
+| hand edges | 1.08 / 9 | 0.71 / 8 | 0.60 / 7 | 0.55 / 6 |
+| insert numerals | 1.12 / 9 | 0.96 / 11 | 0.84 / 10 | 0.70 / 8 |
+| chamfer highlight | 0.39 / 5 | 0.45 / 6 | 0.35 / 5 | 0.30 / 4 |
+| crown knurl | **0.75 / 10** | 1.36 / 19 | 1.11 / 15 | 0.89 / 13 |
+| MOP dial | 0.82 / 5 | 0.30 / 3 | 0.28 / 3 | 0.27 / 3 |
+
+**By eye:** at 200% the 768 reference shows grain across the black dial and
+in the hands' shadow; every OIDN setting is clean, and the print (DLW,
+AUTOMATIC, TUE 22, insert 20 and 50) is intact at all three. The mother-of-pearl
+texture survives. The one loss is the crown knurl, the finest geometry in
+frame: the only crop where every OIDN setting is further from the truth than
+768. At 400% the highlight specks on the ridges are dimmer at 64, close to
+the truth at 256; at 100% and 200% no setting shows it.
+
+**Choice: 256 spp + OIDN.** It is the lowest setting that beats 768 on every
+whole layer (128 is worse on the strap, 0.75 vs 0.67). By eye alone 128 also
+passes at 100% and 200%; it would save a further 9.5 s per hero set. The
+owner's review of the sheet decides whether to drop to 128.
+
+**What it buys:** render time down 39% (59.3 → 36.4 s), wall time only 18%
+(132.7 → 108.8 s), because **scene build is now the larger cost** (67 s of
+the 109). The next speed-up is not samples: it is building each scene once
+and rendering its variants in the same Blender process (WS2b's runner).
+
+**Guards, in code** (`render_guards.py`, tested by `test_render_guards.py`,
+10 checks; the data-pass checks were confirmed to fail with the guard
+disabled):
+- A compositor Denoise node fed by anything but the render layer's image
+  (a UV, mask or AOV pass) raises before rendering. Cycles's own denoiser
+  writes only the Combined pass, so this is the only route to a denoised
+  data pass.
+- `DENOISE` on with any crystal raises. If a crystal comes back, rerun
+  `denoise-check.ts` with it before lifting that.
+
+Side finding: Blender exits 0 when the Python script raises unless it gets
+`--python-exit-code 1`. `render-batch.sh` only noticed failures because the
+PNG was missing; it now passes the flag too.
+
+The library layers in `out/layers/` were rendered at 768 spp with no denoise
+and were not re-rendered.
