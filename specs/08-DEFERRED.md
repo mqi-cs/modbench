@@ -467,6 +467,38 @@ shape family end to end" measure covers it.
 
 ---
 
+## D13 — WS3 leftovers (raised 2026-09-26)
+
+**a. WS3 step 1 deferred (owner, 2026-09-26): crystal pre-installed, stem
+included, sold as a kit.** No listing text is on this machine: `data/raw/`
+is empty and `data/tagged/` carries names and parsed attributes only. First-build
+mode therefore can't prefer kits with a fitted crystal, and the tool list
+can't drop the crystal press for them. "Matched bracelet" works without it:
+straps whose family shares the case's platform rank first. *Restore signal:*
+fetch the vendors' feeds into `data/raw/` (no DB write), parse the four
+attributes, then a targeted, owner-approved update.
+
+**b. Case `crownPosition` is the family value on all 321 cases that have
+one (3.8)**, including cases named "3 O'clock" (e.g. RC0494 … SKX Conversion
+Case). So nothing can pick the right "@ 4H crown" / 3.8 movement variant for
+a case. *Guardrail:* first-build mode offers only standard NH35/NH36
+variants (no crownPosition). *Restore signal:* per-case crown position read
+from the listing name.
+
+**c. Engine gaps found by first-build mode** — builds that evaluate with no
+error but aren't a watch a beginner can assemble: a caseback, gasket or tube
+in the case slot (`CASE_COMPONENT`); a hand cap or lone seconds/GMT hand in
+the hands slot; GMT or VK chronograph hands on an NH35/NH36. First-build
+mode excludes them (`lib/first-build.ts`); the full configurator still
+offers them as compatible. *Restore signal:* rules that say a component
+isn't the part the slot needs, with fixtures.
+
+**d. Pass measure 3 (three first-time builders complete the flow) needs
+people**, not code. *Restore signal:* owner runs the session and records
+where they hesitate.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like

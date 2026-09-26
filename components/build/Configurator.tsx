@@ -10,6 +10,9 @@ import { PartPicker } from "./PartPicker";
 import { BuildSummary } from "./BuildSummary";
 import { WatchPreview } from "./WatchPreview";
 import { StarterBuilds } from "./StarterBuilds";
+import { FirstBuild } from "./FirstBuild";
+import { AssemblyChecklist } from "./AssemblyChecklist";
+import { assemblyPlan } from "@/lib/assembly";
 import type { StarterBuild } from "@/data/fixtures/starter-builds";
 import { SLOT_PARAM, buildFromParams, droppedSlots, paramsFromBuild } from "./url-state";
 import { decodePreviewable } from "@/lib/preview/previewable";
@@ -25,6 +28,9 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
   const [includeTools, setIncludeTools] = useState(true);
   const [dropped, setDropped] = useState<SlotKey[]>([]);
   const [hydrated, setHydrated] = useState(false);
+  // First-build mode stays open once it has filled a slot; the starter
+  // panel only shows on an empty build.
+  const [firstBuildOn, setFirstBuildOn] = useState(false);
 
   const pushBuild = useCallback((next: Build) => {
     setBuild(next);
@@ -152,6 +158,19 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
 
   const filledCount = Object.keys(build.parts).length;
 
+  const plan = useMemo(
+    () => assemblyPlan(build, slice, includeTools ? totals : undefined),
+    [build, slice, totals, includeTools],
+  );
+
+  const chooseFirstBuild = useCallback(
+    (slot: SlotKey, partId: string) => {
+      setFirstBuildOn(true);
+      select(slot, partId);
+    },
+    [select],
+  );
+
   if (!hydrated) {
     return (
       <div className="p-10 text-graphite num text-sm" aria-live="polite">
@@ -181,8 +200,15 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
         </div>
       )}
 
+      {filledCount === 0 || firstBuildOn ? <FirstBuild build={build} catalog={slice} onChoose={chooseFirstBuild} /> : null}
       {filledCount === 0 ? (
-        <StarterBuilds starters={starters} onOpen={(parts) => pushBuild({ parts })} />
+        <StarterBuilds
+          starters={starters}
+          onOpen={(parts) => {
+            setFirstBuildOn(false);
+            pushBuild({ parts });
+          }}
+        />
       ) : null}
 
       <main className="mx-auto grid max-w-[1600px] grid-cols-[280px_minmax(0,1fr)_360px] gap-px bg-rule">
@@ -228,6 +254,7 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
             onToggleTools={() => setIncludeTools((v) => !v)}
             onJumpToSlot={setActiveSlot}
           />
+          {filledCount > 0 && <AssemblyChecklist plan={plan} />}
         </div>
       </main>
     </div>

@@ -2,6 +2,7 @@ import type { Build, CatalogSlice, SlotKey } from "./compat";
 import { evaluateBuild } from "./compat";
 import type { ParsedIntent } from "./intent";
 import { tagLabel } from "./style-vocabulary";
+import { CASE_COMPONENT } from "./first-build";
 
 // Deterministic candidate assembly.
 //
@@ -111,7 +112,7 @@ export function suggestBuilds(intent: ParsedIntent, catalog: CatalogSlice, optio
 
   const cases = (pools.get("case") ?? []).filter((c) => {
     if (!c.family.startsWith("skx")) return false;
-    if (/caseback|gasket|tube|bezel|insert|ring|spacer/i.test(c.name)) return false;
+    if (CASE_COMPONENT.test(c.name)) return false;
     return true;
   });
 
