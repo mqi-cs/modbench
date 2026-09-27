@@ -13,6 +13,7 @@ import { Preview3D } from "./Preview3D";
 import { StarterBuilds } from "./StarterBuilds";
 import { FirstBuild } from "./FirstBuild";
 import { AssemblyChecklist } from "./AssemblyChecklist";
+import { ByoLink } from "./ByoLink";
 import { assemblyPlan } from "@/lib/assembly";
 import type { StarterBuild } from "@/data/fixtures/starter-builds";
 import { SLOT_PARAM, buildFromParams, droppedSlots, paramsFromBuild } from "./url-state";
@@ -203,6 +204,8 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
           part that isn&rsquo;t in the catalog any more, so {dropped.length === 1 ? "it was" : "they were"} left empty.
         </div>
       )}
+
+      <ByoLink build={build} />
 
       {filledCount === 0 || firstBuildOn ? <FirstBuild build={build} catalog={slice} onChoose={chooseFirstBuild} /> : null}
       {filledCount === 0 ? (

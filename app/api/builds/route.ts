@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { loadCatalog } from "@/lib/catalog";
 import { checkRateLimit, saveBuild, RATE_LIMIT_PER_HOUR } from "@/lib/builds";
+import { withSubmitted } from "@/lib/byo/store";
 import type { CatalogSlice } from "@/lib/compat";
 
 export const runtime = "nodejs";
@@ -21,7 +22,7 @@ function callerKey(request: Request): string {
   return `builds:${ip}`;
 }
 
-function slice(): CatalogSlice {
+function slice(partIds: string[]): CatalogSlice {
   const catalog = loadCatalog();
   const listings = catalog.listings.map((l) => ({
     partId: l.partId,
@@ -32,7 +33,7 @@ function slice(): CatalogSlice {
   }));
   const listingsByPart: Record<string, typeof listings> = {};
   for (const l of listings) (listingsByPart[l.partId] ??= []).push(l);
-  return { parts: catalog.parts, familyExceptions: catalog.familyExceptions, listings, listingsByPart };
+  return { parts: withSubmitted(catalog.parts, partIds), familyExceptions: catalog.familyExceptions, listings, listingsByPart };
 }
 
 export async function POST(request: Request) {
@@ -50,7 +51,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Body must be JSON." }, { status: 400 });
   }
 
-  const result = saveBuild(body, slice());
+  const ids = typeof body === "object" && body !== null ? Object.values(body).filter((v): v is string => typeof v === "string") : [];
+  const result = saveBuild(body, slice(ids));
   if (!result.ok) {
     return NextResponse.json({ error: result.error, findings: result.findings }, { status: result.status });
   }

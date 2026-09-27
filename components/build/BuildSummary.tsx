@@ -1,7 +1,7 @@
 "use client";
 
 import type { Build, BuildResult, CatalogSlice, SlotKey } from "@/lib/compat";
-import type { BuildTotals } from "@/lib/pricing";
+import { unpricedParts, type BuildTotals } from "@/lib/pricing";
 import { formatGbp, formatNative, formatDate } from "@/lib/money";
 import { ASSEMBLY_ORDER } from "./types";
 import { EvidenceTag } from "./EvidenceTag";
@@ -30,6 +30,7 @@ export function BuildSummary({
   const warnings = result.findings.filter((f) => f.severity === "warning");
   const infos = result.findings.filter((f) => f.severity === "info");
   const empty = Object.keys(build.parts).length === 0;
+  const unpriced = unpricedParts(build, totals);
 
   return (
     <aside className="flex flex-col gap-px bg-rule" aria-label="Build summary">
@@ -124,6 +125,15 @@ export function BuildSummary({
               ))}
             </div>
           )}
+        </div>
+      )}
+
+      {/* Parts with no vendor listing -- bring-your-own links (WS4) -- are
+          priced on the listing itself. Saying so beats a total that is
+          silently short. */}
+      {unpriced.length > 0 && (
+        <div className="bg-card px-5 py-3 text-[12px] text-graphite">
+          Not in the total: {unpriced.map((id) => parts[id]?.name ?? id).join(", ")}. Priced on the listing you linked.
         </div>
       )}
 

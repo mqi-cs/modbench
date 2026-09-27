@@ -1,5 +1,6 @@
 import "server-only";
 import { loadCatalog, type CatalogPayload } from "./catalog";
+import { withSubmitted } from "./byo/store";
 import { computeTotals, type BuildTotals } from "./pricing";
 import { evaluateBuild, type Build, type BuildResult, type CatalogSlice, type SlotKey } from "./compat";
 import { decodePreviewable } from "./preview/previewable";
@@ -51,6 +52,7 @@ export function resolveByName(catalog: CatalogPayload, partNames: Partial<Record
 
 export function buildView(parts: Partial<Record<SlotKey, string>>, unresolved: SlotKey[] = []): BuildView {
   const catalog = loadCatalog();
+  catalog.parts = withSubmitted(catalog.parts, Object.values(parts) as string[]);
   const slice = catalogSlice(catalog);
   const build: Build = { parts };
   const result = evaluateBuild(build, slice);

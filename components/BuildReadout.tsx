@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { formatGbp, formatNative } from "@/lib/money";
+import { unpricedParts } from "@/lib/pricing";
 import { ASSEMBLY_ORDER } from "@/components/build/types";
 import type { BuildView } from "@/lib/build-view";
 import { configuratorHref } from "@/lib/build-view";
@@ -20,6 +21,7 @@ export function BuildReadout({ view, title, blurb }: { view: BuildView; title: s
   const { totals, result, preview, catalog, build } = view;
   const errors = result.findings.filter((f) => f.severity === "error");
   const warnings = result.findings.filter((f) => f.severity === "warning");
+  const unpriced = unpricedParts(build, totals);
 
   return (
     <div className="mx-auto grid max-w-[1100px] gap-px bg-rule md:grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
@@ -43,6 +45,11 @@ export function BuildReadout({ view, title, blurb }: { view: BuildView; title: s
           {totals.toolsMinorHigh > 0 && <> + tools {formatGbp(totals.toolsMinorLow)}–{formatGbp(totals.toolsMinorHigh)}</>}
           {catalog.fxAsOf && <> · non-GBP prices converted at rates from {catalog.fxAsOf}</>}
         </p>
+        {unpriced.length > 0 && (
+          <p className="text-[12px] text-graphite">
+            Not in the total: {unpriced.map((id) => catalog.parts[id]?.name ?? id).join(", ")}. Priced on the listing linked.
+          </p>
+        )}
 
         <Link
           href={configuratorHref(build.parts)}

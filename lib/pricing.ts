@@ -156,3 +156,9 @@ export function findConsolidationSavings(groups: VendorGroup[], listings: Displa
 
   return savings.sort((a, b) => b.netSavingMinor - a.netSavingMinor);
 }
+
+/** Chosen parts the total leaves out because no vendor listing prices them -- bring-your-own links (WS4). */
+export function unpricedParts(build: Build, totals: BuildTotals): string[] {
+  const priced = new Set(totals.groups.flatMap((g) => g.items.map((i) => i.partId)));
+  return Object.values(build.parts).filter((id): id is string => !!id && !priced.has(id));
+}

@@ -1,4 +1,4 @@
-import { defineConfig } from "vitest/config";
+import { configDefaults, defineConfig } from "vitest/config";
 import { fileURLToPath } from "node:url";
 
 export default defineConfig({
@@ -13,6 +13,9 @@ export default defineConfig({
     },
   },
   test: {
+    // Agent worktrees under .claude/worktrees hold older checkouts of this
+    // repo; their tests are those branches' business, not this one's.
+    exclude: [...configDefaults.exclude, ".claude/**"],
     coverage: {
       provider: "v8",
       // Pass measure 4 scopes the >=90% line coverage requirement to

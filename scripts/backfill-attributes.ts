@@ -14,6 +14,7 @@ import { eq, sql } from "drizzle-orm";
 import { db, sqlite } from "../lib/db/client";
 import { parts } from "../lib/db/schema";
 import { fromJsonColumn, toJsonColumn } from "../lib/db/json";
+import { parseCaliber, parseDialComplication, parseLumed, parseMaterial, parseMmFromTitle, parseMovementCrown, parseProfile } from "../lib/listing-text";
 
 // Real, well-established Seiko/aftermarket case dimensions (public
 // knowledge across the modding community, not vendor-specific per SKU).
@@ -130,78 +131,6 @@ const INSERT_DEFAULTS: Record<string, { outerDiameterMm: number | null }> = {
   "srp-turtle-insert": { outerDiameterMm: null },
 };
 
-// The number must stand alone: "SKX007 MM" (MarineMaster-style) and
-// "NMK908 MM300" used to parse as 7mm and 8mm, the tail of a model code.
-function parseMmFromTitle(title: string): number | null {
-  const m = /(?<![\w.])(\d{2}(?:\.\d)?)\s*mm\b/i.exec(title);
-  return m ? Number(m[1]) : null;
-}
-
-function parseMaterial(title: string): string | null {
-  const t = title.toLowerCase();
-  if (t.includes("ceramic")) return "ceramic";
-  if (t.includes("sapphire")) return "sapphire";
-  if (t.includes("aluminium") || t.includes("aluminum")) return "aluminum";
-  if (t.includes("steel bezel insert") || t.includes("steel insert")) return "steel";
-  if (t.includes("carbon")) return "carbon";
-  if (t.includes("glass")) return "glass";
-  return null;
-}
-
-function parseLumed(title: string, tags: string): boolean | null {
-  const blob = (title + " " + tags).toLowerCase();
-  if (blob.includes("no lume")) return false;
-  if (blob.includes("lume") || blob.includes("bgw9") || blob.includes("c3") || blob.includes("luminous")) return true;
-  return null;
-}
-
-// Bezel inserts and crystals have to agree on PROFILE, independently of
-// both being sized for the same case model. Real, repeated vendor
-// statements (watchandstyle, ~39 SKUs):
-//   "Ceramic Insert compatible with flat sapphire crystals only (not
-//    compatible with double dome sapphire)"  -- CI1707, CI1708
-//   "it takes flat crystals only, OEM or flat sapphire, and will not sit
-//    correctly under a double dome"          -- CI0024
-//   "Crystal will not fit SKX007 OEM aluminum insert"  -- SG003, SG007
-// A flat insert sits under a flat crystal; a sloped insert is cut to sit
-// under the curve of a double-domed one. Mixing profiles means the insert
-// doesn't seat correctly even when both parts are the right diameter for
-// the case -- which is exactly why platform matching alone can't catch it.
-//
-// Parsed from titles, which state the profile consistently across all four
-// vendors ("Flat Ceramic Insert", "Slope Ceramic Bezel Insert", "Double
-// Dome Sapphire Crystal", "Flat Sapphire Crystal"). Null when unstated.
-function parseProfile(title: string): "flat" | "domed" | "slope" | null {
-  const t = title.toLowerCase();
-  if (/double.?dome|domed/.test(t)) return "domed";
-  if (/\bslope[d]?\b/.test(t)) return "slope";
-  if (/\bflat\b/.test(t)) return "flat";
-  return null;
-}
-
-// "NH35A" is the same caliber as "NH35" (WS1: 10 real movements had no
-// caliber because of the suffix). NH70/71/72 are the skeleton calibers.
-function parseCaliber(title: string): string | null {
-  const m = /\bNH(?:3[4568]|7[012])(?=A?\b)/i.exec(title);
-  return m ? m[0].toUpperCase() : null;
-}
-
-function parseMovementCrown(title: string): string | null {
-  const m = /\((\d(?:\.\d)?) o'clock crown case\)|@ (\d)H Crown/i.exec(title);
-  return m ? (m[1] ?? m[2]!) : null;
-}
-
-// Real, positive vendor evidence only, per Amendment A -- "no date" in a
-// title is as much a vendor statement as "date" is. A title that mentions
-// neither leaves both fields null (never guessed) rather than assuming
-// "most dials have a date."
-function parseDialComplication(title: string): { hasDateWindow: boolean | null; hasDayWindow: boolean | null } {
-  const t = title.toLowerCase();
-  if (/day[\s\-/]?date/.test(t)) return { hasDateWindow: true, hasDayWindow: true };
-  if (/no date/.test(t)) return { hasDateWindow: false, hasDayWindow: false };
-  if (/\bdate\b/.test(t)) return { hasDateWindow: true, hasDayWindow: false };
-  return { hasDateWindow: null, hasDayWindow: null };
-}
 
 // Hand-verified against real vendor body_html (same rigor as CASE_DEFAULTS/
 // DIAL_DEFAULTS above, not a guess) -- these are the specific dial SKUs
