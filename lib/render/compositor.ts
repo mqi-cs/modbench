@@ -11,10 +11,26 @@
 //              print's alpha cuts through (a dial's date window shows the
 //              date layer beneath). Arithmetic mirrors scripts/render/pack-passes.ts
 //              composite(), which the offline check measures.
+//
+// Each layer is blended onto the stack by shader, per its `blend`:
+//   over     -- plain premultiplied over, in display values.
+//   disjoint -- for a layer rendered with what's beneath it held out (the
+//               case over the inner parts, a separate strap over the case).
+//               At a seam the two coverages don't overlap, so they add:
+//               below is weighted by min(1, (1 - a) / a_below), not (1 - a).
+//               Plain over left a coverage hole on every seam pixel.
+//   linear   -- over in linear light (display values mapped back through
+//               Blender's AgX curve), for layers whose edges mix bright
+//               with dark: polished hands over a dial. A display-space mix
+//               of the two comes out darker than the render's.
+// WS2c whole-build check: seams and hand edges were the worst 1% of pixels.
+
+export type Blend = "over" | "disjoint" | "linear";
 
 export interface BeautyLayer {
   kind: "beauty";
   src: string;
+  blend?: Blend;
 }
 export interface SurfaceLayer {
   kind: "surface";
@@ -22,6 +38,7 @@ export interface SurfaceLayer {
   stem: string;
   /** Print image (vendor photo or generated), UV-mapped by the renderer. */
   print: string;
+  blend?: Blend;
 }
 export type Layer = BeautyLayer | SurfaceLayer;
 
@@ -85,6 +102,45 @@ void main() {
   o = vec4(disp * alpha, alpha);
 }`;
 
+// Blends a layer (uLayer) onto the stack so far (uAcc); both premultiplied display RGBA.
+const COMBINE_FRAG = `#version 300 es
+precision highp float;
+out vec4 o;
+uniform sampler2D uLayer, uAcc;
+uniform int uMode;          // 0 over, 1 disjoint, 2 linear
+uniform float uCurve[${N}]; // AgX display value along the grey axis, per LUT step
+float toLin(float d) {
+  float t = 1.0;
+  if (d <= uCurve[0]) t = 0.0;
+  else for (int i = 1; i < ${N}; i++) if (d <= uCurve[i]) { t = (float(i - 1) + (d - uCurve[i - 1]) / max(uCurve[i] - uCurve[i - 1], 1e-6)) / ${(N - 1).toFixed(1)}; break; }
+  return exp2(${LUT_MIN_EV.toFixed(1)} + t * ${(LUT_MAX_EV - LUT_MIN_EV).toFixed(1)});
+}
+float fromLin(float l) {
+  float x = clamp((log2(max(l, 1e-12)) - (${LUT_MIN_EV.toFixed(1)})) / ${(LUT_MAX_EV - LUT_MIN_EV).toFixed(1)}, 0.0, 1.0) * ${(N - 1).toFixed(1)};
+  int i = min(int(x), ${N - 2});
+  return mix(uCurve[i], uCurve[i + 1], x - float(i));
+}
+vec3 toLin3(vec3 c) { return vec3(toLin(c.r), toLin(c.g), toLin(c.b)); }
+vec3 fromLin3(vec3 c) { return vec3(fromLin(c.r), fromLin(c.g), fromLin(c.b)); }
+void main() {
+  ivec2 q = ivec2(gl_FragCoord.xy);
+  vec4 s = texelFetch(uLayer, q, 0), d = texelFetch(uAcc, q, 0);
+  float a = s.a, ab = d.a;
+  float f = uMode == 1 ? (ab > 0.0 ? min(1.0, (1.0 - a) / ab) : 1.0) : 1.0 - a;
+  float na = min(a + ab * f, 1.0);
+  vec3 c = s.rgb + d.rgb * f;
+  if (uMode == 2 && a > 0.0 && ab > 0.0) {
+    vec3 lin = (toLin3(s.rgb / a) * a + toLin3(d.rgb / ab) * ab * f) / max(a + ab * f, 1e-6);
+    c = fromLin3(lin) * na;
+  }
+  o = vec4(c, na);
+}`;
+
+const COPY_FRAG = `#version 300 es
+precision highp float;
+out vec4 o; uniform sampler2D uAcc;
+void main() { o = texelFetch(uAcc, ivec2(gl_FragCoord.xy), 0); }`;
+
 async function bitmap(src: string, premultiply: boolean): Promise<ImageBitmap> {
   const res = await fetch(src);
   if (!res.ok) throw new Error(`${src}: ${res.status}`);
@@ -112,7 +168,12 @@ export class Compositor {
   private gl: WebGL2RenderingContext;
   private beauty: WebGLProgram;
   private surface: WebGLProgram;
+  private combine: WebGLProgram;
+  private copy: WebGLProgram;
   private lut: WebGLTexture | null = null;
+  private curve = new Float32Array(N);
+  // Offscreen targets: one layer, two stacks (ping-pong), at the layers' size.
+  private targets: { size: number; tex: WebGLTexture[]; fbo: WebGLFramebuffer[] } | null = null;
   private textures = new Map<string, { tex: WebGLTexture; w: number; abar?: [number, number, number] }>();
   private layers: Layer[] = [];
 
@@ -123,6 +184,8 @@ export class Compositor {
     this.gl = gl;
     this.beauty = this.program(BEAUTY_FRAG);
     this.surface = this.program(SURFACE_FRAG);
+    this.combine = this.program(COMBINE_FRAG);
+    this.copy = this.program(COPY_FRAG);
     const buf = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
@@ -156,6 +219,10 @@ export class Compositor {
     for (let b = 0; b < N; b++) for (let gg = 0; gg < N; gg++) for (let r = 0; r < N; r++) {
       const s = (gg * img.width + b * N + r) * 4;
       out.set([d[s]!, d[s + 1]!, d[s + 2]!, 255], ((b * N + gg) * N + r) * 4);
+    }
+    for (let i = 0; i < N; i++) {
+      const s = (i * img.width + i * N + i) * 4;
+      this.curve[i] = (d[s]! + d[s + 1]! + d[s + 2]!) / 3 / 255;
     }
     const gl = this.gl;
     this.lut = gl.createTexture();
@@ -200,6 +267,38 @@ export class Compositor {
   }
   private dir = "";
 
+  private ensureTargets(size: number) {
+    if (this.targets?.size === size) return;
+    const gl = this.gl;
+    if (this.targets) {
+      this.targets.tex.forEach((t) => gl.deleteTexture(t));
+      this.targets.fbo.forEach((f) => gl.deleteFramebuffer(f));
+    }
+    const tex: WebGLTexture[] = [];
+    const fbo: WebGLFramebuffer[] = [];
+    for (let i = 0; i < 3; i++) {
+      const t = gl.createTexture()!;
+      gl.bindTexture(gl.TEXTURE_2D, t);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, size, size, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+      const f = gl.createFramebuffer()!;
+      gl.bindFramebuffer(gl.FRAMEBUFFER, f);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, t, 0);
+      tex.push(t);
+      fbo.push(f);
+    }
+    this.targets = { size, tex, fbo };
+  }
+
+  private quad(p: WebGLProgram) {
+    const gl = this.gl;
+    gl.useProgram(p);
+    const loc = gl.getAttribLocation(p, "p");
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  }
+
   draw() {
     const gl = this.gl;
     // Canvas matches the layers' own size (hero 1600px, top 800px): the
@@ -207,35 +306,52 @@ export class Compositor {
     const first = this.layers[0];
     const size = !first ? 1 : this.textures.get(first.kind === "beauty" ? `${this.dir}/${first.src}` : `${this.dir}/${first.stem}-base.png`)!.w;
     if (this.canvas.width !== size) this.canvas.width = this.canvas.height = size;
-    gl.viewport(0, 0, this.canvas.width, this.canvas.height);
+    this.ensureTargets(size);
+    const { tex, fbo } = this.targets!;
+    gl.viewport(0, 0, size, size);
+    gl.disable(gl.BLEND);
     gl.clearColor(0, 0, 0, 0);
+    // tex[0] = this layer; tex[1] / tex[2] = stack so far, ping-pong.
+    let acc = 1;
+    gl.bindFramebuffer(gl.FRAMEBUFFER, fbo[acc]!);
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.enable(gl.BLEND);
-    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+    const bind = (p: WebGLProgram, unit: number, name: string, t: WebGLTexture, target: number = gl.TEXTURE_2D) => {
+      gl.activeTexture(gl.TEXTURE0 + unit);
+      gl.bindTexture(target, t);
+      gl.uniform1i(gl.getUniformLocation(p, name), unit);
+    };
     for (const l of this.layers) {
+      gl.bindFramebuffer(gl.FRAMEBUFFER, fbo[0]!);
+      gl.clear(gl.COLOR_BUFFER_BIT);
       const p = l.kind === "beauty" ? this.beauty : this.surface;
-      gl.useProgram(p);
-      const loc = gl.getAttribLocation(p, "p");
-      gl.enableVertexAttribArray(loc);
-      gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-      const bind = (unit: number, name: string, tex: WebGLTexture, target: number = gl.TEXTURE_2D) => {
-        gl.activeTexture(gl.TEXTURE0 + unit);
-        gl.bindTexture(target, tex);
-        gl.uniform1i(gl.getUniformLocation(p, name), unit);
-      };
+      this.quad(p);
       if (l.kind === "beauty") {
-        bind(0, "uImg", this.textures.get(`${this.dir}/${l.src}`)!.tex);
+        bind(p, 0, "uImg", this.textures.get(`${this.dir}/${l.src}`)!.tex);
       } else {
         ["uv", "light", "bounce", "base"].forEach((k, i) =>
-          bind(i, `u${k === "uv" ? "UV" : k[0]!.toUpperCase() + k.slice(1)}`, this.textures.get(`${this.dir}/${l.stem}-${k}.png`)!.tex),
+          bind(p, i, `u${k === "uv" ? "UV" : k[0]!.toUpperCase() + k.slice(1)}`, this.textures.get(`${this.dir}/${l.stem}-${k}.png`)!.tex),
         );
         const pr = this.textures.get(l.print)!;
-        bind(4, "uPrint", pr.tex);
-        bind(5, "uLut", this.lut!, gl.TEXTURE_3D);
+        bind(p, 4, "uPrint", pr.tex);
+        bind(p, 5, "uLut", this.lut!, gl.TEXTURE_3D);
         gl.uniform3fv(gl.getUniformLocation(p, "uAbar"), pr.abar ?? [0, 0, 0]);
       }
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+      const next = acc === 1 ? 2 : 1;
+      gl.bindFramebuffer(gl.FRAMEBUFFER, fbo[next]!);
+      this.quad(this.combine);
+      bind(this.combine, 0, "uLayer", tex[0]!);
+      bind(this.combine, 1, "uAcc", tex[acc]!);
+      gl.uniform1i(gl.getUniformLocation(this.combine, "uMode"), l.blend === "disjoint" ? 1 : l.blend === "linear" ? 2 : 0);
+      gl.uniform1fv(gl.getUniformLocation(this.combine, "uCurve"), this.curve);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      acc = next;
     }
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    this.quad(this.copy);
+    bind(this.copy, 0, "uAcc", tex[acc]!);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     gl.finish();
   }
 
