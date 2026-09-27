@@ -63,6 +63,16 @@ describe("resolveScene", () => {
     expect(top.ok && top.layers.map((l) => l.kind === "beauty" && l.src)).toEqual(["s1.png", "s3.png"]);
   });
 
+  // WS2c whole-build p99: the case holds out the inner parts (and a separate
+  // strap the case), so their seams must add, not overlap; hand edges mix
+  // with the dial in linear light. Plain over darkened both.
+  it("blends the held-out case and strap disjointly and the hands in linear light", () => {
+    const hero = resolveScene({ index, view: "hero", parts: { case: "case1", strap: "jub", hands: "merc", dial: "dialA" }, prints: { dial: photo("dialA"), date } });
+    const top = resolveScene({ index: { ...index, jobs: { ...index.jobs } }, view: "top", parts: { case: "case1", strap: "jub" }, prints: {} });
+    expect(hero.ok && hero.layers.map((l) => l.blend ?? "over")).toEqual(["over", "over", "linear", "disjoint"]);
+    expect(top.ok && top.layers.map((l) => l.blend ?? "over")).toEqual(["disjoint", "disjoint"]);
+  });
+
   it("falls back, with the reason, when the case can't be drawn or the dial has no photo", () => {
     expect(resolveScene({ index, view: "hero", parts: { case: "turtle" }, prints: {} })).toEqual({ ok: false, reason: "case family srp-turtle-case needs its own outline" });
     expect(resolveScene({ index, view: "hero", parts: { case: "case1", dial: "dialA" }, prints: { date } })).toEqual({ ok: false, reason: "no dial photo" });
