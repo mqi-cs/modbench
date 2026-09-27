@@ -18,6 +18,7 @@
 // The browser computes, in linear light, then tone-maps:
 //   colour = base + coverage * texture(uv) * (light + meanAlbedo(texture) * bounce)
 
+import { readFileSync } from "node:fs";
 import sharp from "sharp";
 
 type F = { data: Float32Array; w: number; h: number; c: number };
@@ -51,9 +52,9 @@ function pass(dir: string, name: string) {
  * Grey levels the two pass renders use (render_solid.py PASSES_GREY). Light on
  * a printed surface includes its own bounce off the polished bore wall, which
  * grows with the print's brightness; two greys give L(a) = L0 + a * slope, and
- * the browser plugs in the texture's mean albedo.
+ * the browser plugs in the texture's mean albedo. From render-config.json.
  */
-export const GREYS = [0.05, 0.5] as const;
+export const GREYS = (JSON.parse(readFileSync("scripts/render/render-config.json", "utf8")) as { passes: { greys: [number, number] } }).passes.greys;
 
 /** The 8-bit images the browser loads, from one layer's 16-bit passes at the two greys. */
 export async function pack(dir: string, dir2?: string) {

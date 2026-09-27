@@ -30,9 +30,9 @@ run() {
   out=$1; view=$2; shift 2
   if [ -f "$O/$out-$view.png" ]; then skipped=$((skipped + 1)); return; fi
   env TENT=0.9 FLOOR=0.3 SAMPLES=256 DENOISE=on "$@" "$B" -b --factory-startup --python-exit-code 1 \
-    --python scripts/render/render_solid.py -- D "$view" "$O/$out-$view.png" >/tmp/layer.log 2>&1
+    --python scripts/render/render_solid.py -- D "$view" "$O/$out-$view.png" >"$O/.layer.log" 2>&1
   if [ -f "$O/$out-$view.png" ]; then rendered=$((rendered + 1)); echo "ok   $out-$view"
-  else echo "FAIL $out-$view"; grep -iE "error" /tmp/layer.log | head -2; fi
+  else echo "FAIL $out-$view"; grep -iE "error" "$O/.layer.log" | head -2; fi
 }
 
 # key:shape:rgb  (empty rgb keeps the material default)
