@@ -1,0 +1,66 @@
+{
+  "//": "Every setting that decides a render's pixels. render_solid.py applies these explicitly (env vars may override per job); run.ts hashes this file and the running Blender's version into every output's name, and refuses a different Blender version. The cycles block equals Blender 4.5.14's factory defaults, read from Blender (not guessed), so renders made before this file existed are unchanged.",
+  "blender": {
+    "version": "4.5.14 LTS",
+    "download": "https://download.blender.org/release/Blender4.5/"
+  },
+  "device": {
+    "//": "auto tries OPTIX, CUDA, METAL, HIP, ONEAPI in order, then CPU. RENDER_DEVICE=<name> forces one and fails if it is missing. Not in the hash: devices differ only in noise, not in what is drawn.",
+    "default": "auto",
+    "order": ["OPTIX", "CUDA", "METAL", "HIP", "ONEAPI"]
+  },
+  "sampling": {
+    "samples": 256,
+    "adaptive_threshold": 0.01,
+    "adaptive_min_samples": 0,
+    "seed": 0,
+    "use_animated_seed": false,
+    "use_light_tree": true,
+    "light_sampling_threshold": 0.01
+  },
+  "denoise": {
+    "mode": "on",
+    "denoiser": "OPENIMAGEDENOISE",
+    "prefilter": "ACCURATE",
+    "input_passes": "RGB_ALBEDO_NORMAL",
+    "use_gpu": true
+  },
+  "cycles": {
+    "max_bounces": 12,
+    "diffuse_bounces": 4,
+    "glossy_bounces": 4,
+    "transmission_bounces": 12,
+    "volume_bounces": 0,
+    "transparent_max_bounces": 8,
+    "caustics_reflective": true,
+    "caustics_refractive": true,
+    "blur_glossy": 1.0,
+    "sample_clamp_direct": 0.0,
+    "sample_clamp_indirect": 10.0,
+    "pixel_filter_type": "BLACKMAN_HARRIS",
+    "filter_width": 1.5
+  },
+  "colour": {
+    "view_transform": "AgX",
+    "look": "None",
+    "exposure": 0.0,
+    "gamma": 1.0,
+    "display_device": "sRGB",
+    "film_transparent": true
+  },
+  "output": {
+    "resolution": { "hero": 1600, "top": 800 },
+    "format": "PNG",
+    "color_mode": "RGBA",
+    "color_depth": "8"
+  },
+  "scene": {
+    "//": "Studio environment (render_solid.py TENT / FLOOR).",
+    "tent": 0.9,
+    "floor": 0.3
+  },
+  "passes": {
+    "//": "Grey levels the two surface-pass renders use (pack-passes.ts GREYS).",
+    "greys": [0.05, 0.5]
+  }
+}

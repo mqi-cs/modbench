@@ -1,4 +1,38 @@
-# Render pipeline — WS2c: geometry-only passes and browser compositor
+# Render pipeline
+
+## Running it on another machine (2026-09-27)
+
+What was tied to the machine it was built on, and what it is now:
+
+| Item | Was | Now |
+|---|---|---|
+| GPU backend | Tried OptiX, then CUDA; anything else silently fell to CPU | `RENDER_DEVICE` = auto (OPTIX → CUDA → METAL → HIP → ONEAPI → CPU) or a named backend, which fails loudly if missing. Device used is in every RESULT line. Not in the hash: devices differ in noise, not content |
+| OIDN denoiser | GPU | GPU where the backend supports it, else Blender's CPU fallback |
+| Studio HDRI | Path built from the Blender binary's folder — breaks inside a macOS app bundle | Found through `bpy.utils.system_resource("DATAFILES")` |
+| Blender version | 4.5.14 LTS, unrecorded; 4.x APIs used (compositor via `scene.node_tree`, Principled v2 input names, AgX, `Raw` view) | Pinned in `render-config.json`; `run.ts` refuses another version and hashes the running version into every output name |
+| Cycles settings | Bounces, clamping, filter, seed, light tree left at 4.5 defaults | All set explicitly from `render-config.json` (values read from Blender 4.5.14, not guessed) |
+| Scene values | TENT / FLOOR passed by the runner | In the config |
+| Line endings | Hash read source bytes: a CRLF (Windows) and LF checkout of one commit got different hashes, so one would re-render everything | Text inputs hashed with LF |
+| Blender path | Env `BLENDER` (was a Windows temp-folder install here) | Same; default `blender` on PATH |
+| Prototype textures | `scripts/3d-test/out`, gitignored, made by the prototype scripts | Still required (D12e); `TEX_DIR` overrides in both renderer and runner |
+| Temp files | `run.ts` used `os.tmpdir()` (portable); `render-batch.sh` wrote `/tmp/layer.log` | Log beside the outputs |
+| Pivot-plan path | `CLAUDE.md` named `/Users/q/...` | Repo-relative |
+| Python deps | `bpy`, `bmesh`, `mathutils`, `numpy` — all bundled with Blender | Nothing to install |
+| Node deps | `sharp`, `better-sqlite3` ship per-platform binaries | `pnpm install` on the new machine |
+| Blender crash exit code | 0 unless `--python-exit-code 1` | Passed everywhere |
+
+`RENDER_DRY=1` builds a scene, applies the config and picks the device
+without rendering — checked here: auto → OPTIX, CPU, CUDA each apply the
+config (256 spp, adaptive 0.01, OIDN, filter 1.5, 12 bounces, clamp 10,
+AgX); `RENDER_DEVICE=METAL` exits 1 with "no such device on this machine".
+
+Existing outputs were re-keyed, not re-rendered (`run.ts --adopt`): the
+config records exactly the settings they were rendered with, so only
+their names changed. 336 of 336 adopted; a dry run then has 0 to render.
+
+---
+
+# WS2c: geometry-only passes and browser compositor
 
 *2026-09-27. Earlier history: `scripts/3d-test/REPORT.md` (prototype, WS2a denoiser check).*
 

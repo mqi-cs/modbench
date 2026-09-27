@@ -55,9 +55,16 @@ def texf(stem, default):
 DIMS = json.loads(os.environ.get("CASE_DIMS", '{"caseDiameter": 42.5, "lugWidth": 22.0, "aperture": 28.5}'))
 
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
+# Every setting that decides the pixels (render-config.json); env vars override per job.
+with open(os.path.join(HERE, "render-config.json"), encoding="utf-8") as _f:
+    CONFIG = json.load(_f)
 DIAL_PNG = os.path.join(REPO, "public", "assets", "dial", "ZDs4QjjlRw6lbypEnGaFV.webp")  # SKX Black Lume
-HDRI = os.path.join(os.path.dirname(bpy.app.binary_path), f"{bpy.app.version[0]}.{bpy.app.version[1]}",
-                    "datafiles", "studiolights", "world", "studio.exr")
+# Blender's bundled studio HDRI, found through Blender itself: the install
+# layout differs by OS (a macOS app bundle keeps datafiles in Resources, not
+# beside the binary).
+HDRI = os.path.join(bpy.utils.system_resource("DATAFILES", path="studiolights/world"), "studio.exr")
+if not HDRI or not os.path.exists(HDRI):
+    raise SystemExit("studio.exr not found in Blender's datafiles -- is this Blender " + CONFIG["blender"]["version"] + "?")
 
 # Heights, mm. NOT from the catalog -- read off SKX case photos, like the
 # SVG's lug constants. Listed so the report can say exactly which is which.
@@ -875,7 +882,7 @@ wl.new(wtc.outputs["Generated"], wmap.inputs["Vector"])
 wl.new(wmap.outputs["Vector"], env.inputs["Vector"])
 # TENT: add a flat white surround on top of the studio HDRI -- the light
 # tent vendors shoot cases in. Metal is only as bright as what it reflects.
-tent = float(os.environ.get("TENT", "0"))
+tent = float(os.environ.get("TENT", CONFIG["scene"]["tent"]))
 add = wn.new("ShaderNodeMix"); add.data_type = "RGBA"; add.blend_type = "ADD"
 add.inputs["Factor"].default_value = 1.0
 # Bright above the horizon, dark floor below it: vertical polished
@@ -886,7 +893,7 @@ wl.new(wtc.outputs["Generated"], sep.inputs["Vector"])
 hz = wn.new("ShaderNodeMapRange")
 hz.inputs["From Min"].default_value = -0.15
 hz.inputs["From Max"].default_value = 0.45
-hz.inputs["To Min"].default_value = float(os.environ.get("FLOOR", "0.3")) * tent
+hz.inputs["To Min"].default_value = float(os.environ.get("FLOOR", CONFIG["scene"]["floor"])) * tent
 hz.inputs["To Max"].default_value = tent
 wl.new(sep.outputs["Z"], hz.inputs["Value"])
 wl.new(hz.outputs["Result"], add.inputs["B"])
@@ -968,7 +975,7 @@ if VIEW in ("top", "topw"):
     # "topw" pulls back to show the bracelet; "top" is the preview's frame.
     cam.ortho_scale = geo.FRAME_MM if VIEW == "top" else 100
     co_.location = (0, 0, 80)
-    size = geo.CANVAS_PX if VIEW == "top" else 1200
+    size = CONFIG["output"]["resolution"]["top"] if VIEW == "top" else 1200
 else:
     # Three-quarter, from the crown side and slightly below twelve-six --
     # the angle vendors shoot cases at.
@@ -976,46 +983,81 @@ else:
     caz, cel, cdist = math.radians(150), math.radians(38), {"34": 165, "hero": 225}.get(VIEW, 300)
     co_.location = (cdist * math.cos(cel) * math.sin(caz), cdist * math.cos(cel) * math.cos(caz), cdist * math.sin(cel))
     ct = co_.constraints.new("TRACK_TO"); ct.target = target; ct.track_axis = "TRACK_NEGATIVE_Z"; ct.up_axis = "UP_Y"
-    size = 1600 if VIEW == "hero" else 1200
+    size = CONFIG["output"]["resolution"]["hero"] if VIEW == "hero" else 1200
 cam.clip_start, cam.clip_end = 1, 1000
 
 scene.render.engine = "CYCLES"
-prefs = bpy.context.preferences.addons["cycles"].preferences
-for kind in ("OPTIX", "CUDA"):
-    try:
-        prefs.compute_device_type = kind
+
+
+def select_device():
+    """RENDER_DEVICE=auto|OPTIX|CUDA|METAL|HIP|ONEAPI|CPU (default from render-config.json).
+
+    auto takes the first backend in the config's order that has a device,
+    else the CPU. A named backend that isn't there is an error, not a silent
+    CPU fallback. Returns what was used, for the RESULT line.
+    """
+    want = os.environ.get("RENDER_DEVICE", CONFIG["device"]["default"]).upper()
+    if want == "CPU":
+        scene.cycles.device = "CPU"
+        return "CPU"
+    prefs = bpy.context.preferences.addons["cycles"].preferences
+    for kind in CONFIG["device"]["order"] if want == "AUTO" else [want]:
+        try:
+            prefs.compute_device_type = kind
+        except TypeError:
+            continue  # backend not compiled into this Blender build (e.g. METAL off macOS)
         prefs.get_devices()
         if any(dv.type == kind for dv in prefs.devices):
             for dv in prefs.devices:
                 dv.use = dv.type == kind
             scene.cycles.device = "GPU"
-            break
-    except TypeError:
-        continue
-# 256 spp + OIDN: chosen by the WS2a side-by-side (REPORT.md), replacing
+            return kind
+    if want != "AUTO":
+        raise SystemExit(f"RENDER_DEVICE={want}: no such device on this machine")
+    scene.cycles.device = "CPU"
+    return "CPU"
+
+
+DEVICE = select_device()
+cy, smp = scene.cycles, CONFIG["sampling"]
+# 256 spp + OIDN: chosen by the WS2a side-by-side (3d-test/REPORT.md), replacing
 # 768-1024 spp with no denoise. Closer to a 4096 spp ground truth than 768 on
 # every layer, in about 60% of the render time.
-scene.cycles.samples = int(os.environ.get("SAMPLES", "256"))
+cy.samples = int(os.environ.get("SAMPLES", smp["samples"]))
 # SAMPLES is a ceiling: adaptive sampling stops each pixel once its noise is
-# under ADAPTIVE (Blender's default 0.01, which every layer so far used).
-# ADAPTIVE=0 renders every pixel to SAMPLES -- the WS2a ground truth.
-_adaptive = float(os.environ.get("ADAPTIVE", "0.01"))
-scene.cycles.use_adaptive_sampling = _adaptive > 0
+# under ADAPTIVE. ADAPTIVE=0 renders every pixel to SAMPLES -- the WS2a ground truth.
+_adaptive = float(os.environ.get("ADAPTIVE", smp["adaptive_threshold"]))
+cy.use_adaptive_sampling = _adaptive > 0
 if _adaptive > 0:
-    scene.cycles.adaptive_threshold = _adaptive
+    cy.adaptive_threshold = _adaptive
+cy.adaptive_min_samples = smp["adaptive_min_samples"]
+cy.seed = smp["seed"]
+cy.use_animated_seed = smp["use_animated_seed"]
+cy.use_light_tree = smp["use_light_tree"]
+cy.light_sampling_threshold = smp["light_sampling_threshold"]
+for k, v in CONFIG["cycles"].items():
+    setattr(cy, k, v)
 # DENOISE=on (default) | off | rgb. OIDN guides itself with albedo and
 # normal passes taken at the FIRST surface hit -- behind a crystal that is
 # flat glass, so it treats the dial's print as noise and smooths it away.
 # render_guards refuses denoising with a crystal (use DENOISE=off
 # SAMPLES=2048 for crystal renders) and on any data pass.
-# "rgb" drops the guides; "off" relies on samples.
-render_guards.denoise_config(scene, os.environ.get("DENOISE", "on"),
+# "rgb" drops the guides; "off" relies on samples. OIDN on the GPU where the
+# backend supports it; Blender falls back to the CPU otherwise.
+render_guards.denoise_config(scene, os.environ.get("DENOISE", CONFIG["denoise"]["mode"]),
                              os.environ.get("CRYSTAL", "none") if MODE == "D" else "none")
 scene.render.resolution_x = scene.render.resolution_y = size
-scene.render.film_transparent = True
-scene.view_settings.view_transform = "AgX"
-scene.render.image_settings.file_format = "PNG"
-scene.render.image_settings.color_mode = "RGBA"
+col = CONFIG["colour"]
+scene.render.film_transparent = col["film_transparent"]
+scene.display_settings.display_device = col["display_device"]
+scene.view_settings.view_transform = col["view_transform"]
+scene.view_settings.look = col["look"]
+scene.view_settings.exposure = col["exposure"]
+scene.view_settings.gamma = col["gamma"]
+out_ = CONFIG["output"]
+scene.render.image_settings.file_format = out_["format"]
+scene.render.image_settings.color_mode = out_["color_mode"]
+scene.render.image_settings.color_depth = out_["color_depth"]
 scene.render.filepath = OUT
 
 # --- LAYER: render one slot on its own, for browser-side compositing -------------
@@ -1188,9 +1230,18 @@ if PASSES and MODE == "D":
         tree.links.new(sock, fo.inputs[name])
 
 render_guards.assert_data_passes_not_denoised(scene)
+if os.environ.get("RENDER_DRY") == "1":
+    # Build the scene, apply the config, pick the device -- then stop. For
+    # checking a machine without spending a render.
+    cy_ = scene.cycles
+    print("DRY " + json.dumps({"device": DEVICE, "blender": bpy.app.version_string, "samples": cy_.samples,
+                               "adaptive": cy_.adaptive_threshold, "denoise": cy_.use_denoising, "filter": cy_.filter_width,
+                               "bounces": cy_.max_bounces, "clamp_indirect": cy_.sample_clamp_indirect,
+                               "view": scene.view_settings.view_transform, "size": scene.render.resolution_x, "hdri": os.path.basename(HDRI)}))
+    raise SystemExit(0)
 T1 = time.perf_counter()
 bpy.ops.render.render(write_still=True)
-print("RESULT " + json.dumps({"out": OUT, "mesh_s": round(T_MESH, 1), "render_s": round(time.perf_counter() - T1, 1), "measure": MEASURE}))
+print("RESULT " + json.dumps({"out": OUT, "device": DEVICE, "blender": bpy.app.version_string, "mesh_s": round(T_MESH, 1), "render_s": round(time.perf_counter() - T1, 1), "measure": MEASURE}))
 
 if os.environ.get("EXPORT_GLB"):
     # The shadow-ray trick is a Cycles node graph glTF can't carry; give the

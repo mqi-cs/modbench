@@ -11,9 +11,9 @@ you are working on — don't load the whole plan into every session.
 kept out of git by `.git/info/exclude`, deliberately not `.gitignore`. Never
 `git add -f` it, move or copy it to a tracked path, paste its contents into a
 commit, PR, issue or tracked file, or add it to `.gitignore`. It exists only
-in the main checkout, so a git worktree won't have it: read it at
-`/Users/q/modbench/specs/10-PIVOT-PLAN.md`. Updating it in place there is
-fine.
+in the main checkout, so a git worktree won't have it: read it from the main
+checkout, at `specs/10-PIVOT-PLAN.md` or the repo root, whichever that
+machine uses (both are excluded). Updating it in place there is fine.
 
 ## Non-negotiables
 
