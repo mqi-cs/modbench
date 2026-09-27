@@ -1,0 +1,47 @@
+{
+  "about": "WS5 evaluation set for 'describe a watch in words'. Thresholds were set 2026-09-27, before the first run, and are not to be moved after seeing results. Run: pnpm eval:describe. `must` constraints are what a correct reading has to recover; `nice` tags are credited but not required. Tags are the controlled vocabulary in lib/style-vocabulary.ts. budgetMaxMinor is pence.",
+  "thresholds": {
+    "setOn": "2026-09-27",
+    "zeroErrorShare": 1.0,
+    "mustRecallModel": 0.9,
+    "inventedTagsAfterFilter": 0,
+    "queriesWithABuild": 0.9,
+    "humanRatingMean": 3.5,
+    "humanRatingMin": 2,
+    "keywordPath": "recorded as a baseline; no threshold"
+  },
+  "queries": [
+    { "id": "h1", "kind": "homage", "query": "Submariner-like diver, black dial and bezel", "must": { "styleTags": ["dive-bezel", "black"] }, "nice": ["lumed", "silver-tone"] },
+    { "id": "h2", "kind": "homage", "query": "something like a Pepsi GMT", "must": { "styleTags": ["gmt-bezel", "two-tone-bezel"], "requiresGmt": true }, "nice": ["blue", "red"] },
+    { "id": "h3", "kind": "homage", "query": "Royal Oak style blue dial", "must": { "styleTags": ["blue"] }, "nice": ["textured", "plain-bezel"] },
+    { "id": "h4", "kind": "homage", "query": "Explorer-ish field watch, black with numerals", "must": { "styleTags": ["black", "arabic-numerals"] }, "nice": ["tool-watch", "lumed"] },
+    { "id": "h5", "kind": "homage", "query": "Datejust style with a fluted bezel and silver dial", "must": { "styleTags": ["plain-bezel", "silver-tone"], "requiresDate": true }, "nice": ["dressy"] },
+    { "id": "h6", "kind": "homage", "query": "Alpinist homage, green dial, gold hands", "must": { "styleTags": ["green", "gold-tone"] }, "nice": ["sunburst", "vintage"] },
+    { "id": "h7", "kind": "homage", "query": "snowflake hands like a Tudor diver", "must": { "styleTags": ["faceted-hands"] }, "nice": ["dive-bezel", "tool-watch"] },
+    { "id": "h8", "kind": "homage", "query": "Speedmaster vibe, black, no date", "must": { "styleTags": ["black"], "requiresDate": false }, "nice": ["tool-watch"] },
+    { "id": "h9", "kind": "homage", "query": "Black Bay style, burgundy bezel, vintage lume", "must": { "styleTags": ["red", "aged-lume"] }, "nice": ["dive-bezel", "vintage"] },
+
+    { "id": "p1", "kind": "plain", "query": "blue sunburst dress watch", "must": { "styleTags": ["blue", "sunburst", "dressy"] }, "nice": [] },
+    { "id": "p2", "kind": "plain", "query": "white enamel dial with roman numerals", "must": { "styleTags": ["white", "enamel", "roman-numerals"] }, "nice": ["dressy"] },
+    { "id": "p3", "kind": "plain", "query": "green dial vintage diver with aged lume", "must": { "styleTags": ["green", "aged-lume"] }, "nice": ["dive-bezel", "vintage", "tool-watch"] },
+    { "id": "p4", "kind": "plain", "query": "sterile black tool watch", "must": { "styleTags": ["no-branding", "black", "tool-watch"] }, "nice": [] },
+    { "id": "p5", "kind": "plain", "query": "pilot watch with arrow hands and a cream dial", "must": { "styleTags": ["pilot", "arrow-hands", "cream"] }, "nice": ["tool-watch"] },
+    { "id": "p6", "kind": "plain", "query": "mother of pearl dial, dauphine hands", "must": { "styleTags": ["mother-of-pearl", "dauphine-hands"] }, "nice": ["dressy"] },
+    { "id": "p7", "kind": "plain", "query": "grey matte dial, sword hands, ceramic bezel", "must": { "styleTags": ["grey", "matte", "sword-hands", "ceramic"] }, "nice": [] },
+    { "id": "p8", "kind": "plain", "query": "brown tropical dial with a plain bezel", "must": { "styleTags": ["brown", "plain-bezel"] }, "nice": ["vintage"] },
+    { "id": "p9", "kind": "plain", "query": "orange dial diver with a black bezel", "must": { "styleTags": ["orange", "black"] }, "nice": ["dive-bezel", "tool-watch"] },
+    { "id": "p10", "kind": "plain", "query": "skeleton hands and a textured dial", "must": { "styleTags": ["skeleton-hands", "textured"] }, "nice": [] },
+    { "id": "p11", "kind": "plain", "query": "rose gold dress watch with a white dial", "must": { "styleTags": ["rose-gold", "white", "dressy"] }, "nice": [] },
+    { "id": "p12", "kind": "plain", "query": "a watch that glows really bright at night", "must": { "styleTags": ["lumed"] }, "nice": ["tool-watch"] },
+
+    { "id": "b1", "kind": "budget", "query": "black diver under £200", "must": { "styleTags": ["black", "dive-bezel"], "budgetMaxMinor": 20000 }, "nice": ["tool-watch"] },
+    { "id": "b2", "kind": "budget", "query": "blue GMT under £300", "must": { "styleTags": ["blue"], "requiresGmt": true, "budgetMaxMinor": 30000 }, "nice": ["gmt-bezel"] },
+    { "id": "b3", "kind": "budget", "query": "dress watch without a date, around £250", "must": { "styleTags": ["dressy"], "requiresDate": false, "budgetMaxMinor": 25000 }, "nice": [] },
+    { "id": "b4", "kind": "budget", "query": "cheapest possible build with a day-date", "must": { "requiresDate": true }, "nice": [] },
+    { "id": "b5", "kind": "budget", "query": "38mm cream dial field watch", "must": { "styleTags": ["cream", "tool-watch"], "caseDiameterMm": 38 }, "nice": [] },
+    { "id": "b6", "kind": "budget", "query": "40mm black dial with date, max £180", "must": { "styleTags": ["black"], "caseDiameterMm": 40, "requiresDate": true, "budgetMaxMinor": 18000 }, "nice": [] },
+    { "id": "b7", "kind": "budget", "query": "I want a second time zone and a two-colour bezel", "must": { "styleTags": ["two-tone-bezel"], "requiresGmt": true }, "nice": ["gmt-bezel"] },
+    { "id": "b8", "kind": "budget", "query": "vintage look for under 150 quid", "must": { "styleTags": ["vintage"], "budgetMaxMinor": 15000 }, "nice": ["aged-lume"] },
+    { "id": "b9", "kind": "budget", "query": "gold-tone case, green dial, no date, £350 budget", "must": { "styleTags": ["gold-tone", "green"], "requiresDate": false, "budgetMaxMinor": 35000 }, "nice": [] }
+  ]
+}

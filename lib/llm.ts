@@ -7,7 +7,35 @@ import { findReservedTerms } from "./trademarks";
 // specs/07-phase-6-nl-image-input.md: "These are the only runtime LLM
 // calls in the product. Nothing in lib/compat changes."
 
-const MODEL = "claude-sonnet-5";
+// Which model reads descriptions and photos. Placeholders until a
+// provider is chosen (WS5, specs/08-DEFERRED.md D16a) -- set in .env.local:
+//   LLM_PROVIDER  "anthropic" (default) or "openai-compatible" (OpenAI,
+//                 OpenRouter, Gemini's OpenAI endpoint, Ollama, ...)
+//   LLM_MODEL     model id. Defaults to claude-sonnet-5 for anthropic;
+//                 required for openai-compatible.
+//   LLM_API_KEY   the key. For anthropic, ANTHROPIC_API_KEY also works.
+//   LLM_BASE_URL  openai-compatible only, e.g. https://api.openai.com/v1
+// Unset or incomplete: everything falls back to the keyword parser.
+export interface LlmConfig {
+  provider: "anthropic" | "openai-compatible";
+  model: string;
+  key: string;
+  baseUrl: string;
+}
+
+export function llmConfig(env: Record<string, string | undefined> = process.env): LlmConfig | null {
+  if ((env.LLM_PROVIDER ?? "anthropic") === "anthropic") {
+    const key = env.LLM_API_KEY || env.ANTHROPIC_API_KEY;
+    return key ? { provider: "anthropic", model: env.LLM_MODEL || "claude-sonnet-5", key, baseUrl: "https://api.anthropic.com/v1" } : null;
+  }
+  if (env.LLM_PROVIDER !== "openai-compatible") return null;
+  if (!env.LLM_API_KEY || !env.LLM_MODEL || !env.LLM_BASE_URL) return null;
+  return { provider: "openai-compatible", model: env.LLM_MODEL, key: env.LLM_API_KEY, baseUrl: env.LLM_BASE_URL.replace(/\/+$/, "") };
+}
+
+/** Calls and tokens so far in this process -- read by the WS5 evaluation for its cost cap. */
+export const modelUsage = { calls: 0, failures: 0, inputTokens: 0, outputTokens: 0 };
+
 const TIMEOUT_MS = 10_000;
 const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
 
@@ -22,7 +50,7 @@ export interface ParseOutcome {
 }
 
 export function hasApiKey(): boolean {
-  return Boolean(process.env.ANTHROPIC_API_KEY);
+  return llmConfig() !== null;
 }
 
 const SYSTEM_PROMPT = `You turn a shopping request for a Seiko watch-mod build into structured constraints.
@@ -37,29 +65,60 @@ Rules:
 - Use null, never a guess, for anything the request does not state.
 - Never name a watch brand or model in freeText. Describe the look instead.`;
 
-interface AnthropicMessage {
-  role: "user";
-  content: unknown;
+interface ModelInput {
+  text: string;
+  image?: { mime: string; base64: string };
 }
 
-async function callModel(messages: AnthropicMessage[], maxTokens = 700): Promise<string | null> {
-  const key = process.env.ANTHROPIC_API_KEY;
-  if (!key) return null;
+function requestFor(c: LlmConfig, input: ModelInput, maxTokens: number): { url: string; headers: Record<string, string>; body: unknown } {
+  if (c.provider === "anthropic") {
+    const content = input.image
+      ? [{ type: "image", source: { type: "base64", media_type: input.image.mime, data: input.image.base64 } }, { type: "text", text: input.text }]
+      : input.text;
+    return {
+      url: `${c.baseUrl}/messages`,
+      headers: { "content-type": "application/json", "x-api-key": c.key, "anthropic-version": "2023-06-01" },
+      body: { model: c.model, max_tokens: maxTokens, system: SYSTEM_PROMPT, messages: [{ role: "user", content }] },
+    };
+  }
+  const content = input.image
+    ? [{ type: "text", text: input.text }, { type: "image_url", image_url: { url: `data:${input.image.mime};base64,${input.image.base64}` } }]
+    : input.text;
+  return {
+    url: `${c.baseUrl}/chat/completions`,
+    headers: { "content-type": "application/json", authorization: `Bearer ${c.key}` },
+    // ponytail: max_tokens, which most OpenAI-compatible servers take; some newer OpenAI models want max_completion_tokens.
+    body: { model: c.model, max_tokens: maxTokens, messages: [{ role: "system", content: SYSTEM_PROMPT }, { role: "user", content }] },
+  };
+}
+
+type Reply = {
+  content?: { type: string; text?: string }[];
+  choices?: { message?: { content?: string | null } }[];
+  usage?: { input_tokens?: number; output_tokens?: number; prompt_tokens?: number; completion_tokens?: number };
+};
+
+async function callModel(input: ModelInput, maxTokens = 700): Promise<string | null> {
+  const c = llmConfig();
+  if (!c) return null;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  modelUsage.calls++;
   try {
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
-      body: JSON.stringify({ model: MODEL, max_tokens: maxTokens, system: SYSTEM_PROMPT, messages }),
-      signal: controller.signal,
-    });
-    if (!response.ok) return null;
-    const data = (await response.json()) as { content?: { type: string; text?: string }[] };
-    return data.content?.find((c) => c.type === "text")?.text ?? null;
+    const { url, headers, body } = requestFor(c, input, maxTokens);
+    const response = await fetch(url, { method: "POST", headers, body: JSON.stringify(body), signal: controller.signal });
+    if (!response.ok) {
+      modelUsage.failures++;
+      return null;
+    }
+    const data = (await response.json()) as Reply;
+    modelUsage.inputTokens += data.usage?.input_tokens ?? data.usage?.prompt_tokens ?? 0;
+    modelUsage.outputTokens += data.usage?.output_tokens ?? data.usage?.completion_tokens ?? 0;
+    return data.content?.find((b) => b.type === "text")?.text ?? data.choices?.[0]?.message?.content ?? null;
   } catch {
     // Timeout, network failure, malformed response: all the same to the
     // caller, which falls back to the keyword parser. Never a dead end.
+    modelUsage.failures++;
     return null;
   } finally {
     clearTimeout(timer);
@@ -124,7 +183,7 @@ export async function parseQuery(input: string): Promise<ParseOutcome> {
     };
   }
 
-  const text = await callModel([{ role: "user", content: trimmed }]);
+  const text = await callModel({ text: trimmed });
   const parsed = text ? extractJson(text) : null;
   if (!parsed) {
     return {
@@ -257,18 +316,7 @@ function scrubValue(value: unknown): unknown {
 
 export async function readImage(buffer: Uint8Array, mime: string): Promise<ImageAttributes | null> {
   if (!hasApiKey()) return null;
-  const text = await callModel(
-    [
-      {
-        role: "user",
-        content: [
-          { type: "image", source: { type: "base64", media_type: mime, data: Buffer.from(buffer).toString("base64") } },
-          { type: "text", text: IMAGE_PROMPT },
-        ],
-      },
-    ],
-    600,
-  );
+  const text = await callModel({ text: IMAGE_PROMPT, image: { mime, base64: Buffer.from(buffer).toString("base64") } }, 600);
   const parsed = text ? extractJson(text) : null;
   if (!parsed || typeof parsed !== "object") return null;
   return scrubOutput(parsed as ImageAttributes);
