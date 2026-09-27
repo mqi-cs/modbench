@@ -75,7 +75,7 @@ export function isHandComponent(name: string): boolean {
  * chronograph (VK6x subdials). First builds use NH35/NH36, and the engine
  * doesn't flag GMT or chronograph hands on them (08-DEFERRED D13c).
  */
-const forOtherMovement = (name: string, attributes: Record<string, unknown>) =>
+export const forOtherMovement = (name: string, attributes: Record<string, unknown>) =>
   attributes.gmt === true || attributes.hasSubdials === true || /\bgmt\b|\bnh34\b|\bchrono|\bvk\d*\b/i.test(name);
 
 function eligible(slot: SlotKey, name: string, attributes: Record<string, unknown>): boolean {
