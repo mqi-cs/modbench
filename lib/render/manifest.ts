@@ -14,12 +14,20 @@ import { createHash } from "node:crypto";
 import { shapeKey, type RenderPart, type Renderable } from "./shape-keys";
 
 export const VIEWS = ["hero", "top"] as const;
-/** Beauty only until WS2c adds the UV / shading / highlight passes. */
-export const PASSES = ["beauty"] as const;
 
-/** Layers the renderer draws for every case shape, besides straps. */
+/**
+ * Layers whose look is a print the browser applies (WS2c): rendered once as
+ * geometry-only passes ("surface": UV, light, bounce, base), so a new dial,
+ * insert or ring print costs no render. The rest are finished images
+ * ("beauty"), whose look is the geometry and its finish.
+ */
+export const SURFACE_LAYERS = new Set(["dial", "date", "ring", "insert"]);
+export const passFor = (layer: string) => (SURFACE_LAYERS.has(layer) ? "surface" : "beauty");
+
+/** Layers the renderer draws for every case shape, besides straps. The date wheel shares the dial's key. */
 const PER_CASE: { layer: string; slot: Renderable["slot"] }[] = [
   { layer: "case", slot: "case" },
+  { layer: "date", slot: "dial" },
   { layer: "dial", slot: "dial" },
   { layer: "ring", slot: "ring" },
   { layer: "hands", slot: "hands" },
@@ -53,6 +61,10 @@ export interface Manifest {
   /** Distinct shape keys per render slot, across the scope. */
   keysPerSlot: Record<string, string[]>;
 }
+
+/** `case:round/42.5/22/28.5#gold` -> `case:round/42.5/22/28.5`. */
+export const geometryKey = (key: string) => key.split("#")[0]!;
+const withoutFinish = ({ CASE_FINISH: _f, ...env }: Record<string, string>) => env;
 
 const hash = (v: unknown) => createHash("sha256").update(JSON.stringify(v)).digest("hex").slice(0, 32);
 
@@ -89,21 +101,24 @@ export function buildManifest(parts: RenderPart[], rendererVersion: string): Man
     });
   };
 
-  for (const c of keysOf("case")) {
-    for (const view of VIEWS) {
-      for (const pass of PASSES) {
-        for (const { layer, slot } of PER_CASE) {
-          // The case layer is the case itself; the rest only if the scope has that slot.
-          if (slot === "case") add(layer, view, pass, c);
-          else for (const part of keysOf(slot)) add(layer, view, pass, c, part);
-        }
-        for (const s of keysOf("strap")) {
-          add("strap", view, pass, c, s);
-          // Case and strap in one layer so they light each other; the junction
-          // barely shows from straight above, so hero only.
-          if (view === "hero") add("casestrap", view, pass, c, s);
-        }
+  // A case key is geometry + finish (`#gold`). Layers that only hold the case
+  // out depend on its geometry, so they're keyed by that and shared across
+  // finishes; the case itself and the case+strap pair carry the finish.
+  const cases = keysOf("case");
+  const geometry = [...new Map(cases.map((c) => [geometryKey(c.key), { ...c, key: geometryKey(c.key), env: withoutFinish(c.env) }])).values()];
+  for (const view of VIEWS) {
+    for (const c of cases) {
+      add("case", view, "beauty", c);
+      // Case and strap in one layer so they light each other; the junction
+      // barely shows from straight above, so hero only.
+      if (view === "hero") for (const s of keysOf("strap")) add("casestrap", view, "beauty", c, s);
+    }
+    for (const g of geometry) {
+      for (const { layer, slot } of PER_CASE) {
+        if (slot === "case") continue;
+        for (const part of keysOf(slot)) add(layer, view, passFor(layer), g, part);
       }
+      for (const s of keysOf("strap")) add("strap", view, "beauty", g, s);
     }
   }
 

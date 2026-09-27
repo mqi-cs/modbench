@@ -58,6 +58,29 @@ export type ShapeKey = Renderable | NotRenderable;
 export const ROUND_CASE_FAMILIES = new Set(["skx007-case", "skx013-case", "srpe-case", "alpinist-style-case"]);
 
 const no = (reason: string): NotRenderable => ({ ok: false, reason });
+
+const styleTags = (p: RenderPart) => (Array.isArray(p.attributes.styleTags) ? (p.attributes.styleTags as string[]) : []);
+
+/**
+ * Metal finish, from the part's own style tags. A finish can't be a tint of
+ * the steel render (WS2c step 6: MAD 6-25 against real renders; roughness
+ * differs, not just colour), so each finish is its own render and part of
+ * the key after `#`.
+ */
+export function caseFinish(p: RenderPart): "steel" | "pvd" | "matte" | "gold" | "rose" {
+  const t = styleTags(p);
+  if (t.includes("rose-gold")) return "rose";
+  if (t.includes("gold-tone")) return "gold";
+  if (t.includes("black")) return t.includes("matte") ? "matte" : "pvd";
+  return "steel";
+}
+export function handColour(p: RenderPart): "steel" | "gold" | "rose" | "black" {
+  const t = styleTags(p);
+  if (t.includes("rose-gold")) return "rose";
+  if (t.includes("gold-tone")) return "gold";
+  if (t.includes("black")) return "black";
+  return "steel";
+}
 const yes = (slot: RenderSlot, key: string, env: Record<string, string>, actualShape?: string): Renderable =>
   actualShape ? { ok: true, slot, key, env, approximated: true, actualShape } : { ok: true, slot, key, env, approximated: false };
 
@@ -102,7 +125,8 @@ export function shapeKey(p: RenderPart): ShapeKey {
       const missing = (["caseDiameter", "lugWidth", "aperture"] as const).filter((k) => d[k] === undefined);
       if (missing.length) return no(`case states no ${missing.join(", ")}`);
       const dims = { caseDiameter: d.caseDiameter, lugWidth: d.lugWidth, aperture: d.aperture };
-      return yes("case", `case:round/${dims.caseDiameter}/${dims.lugWidth}/${dims.aperture}`, { CASE_DIMS: JSON.stringify(dims) });
+      const finish = caseFinish(p);
+      return yes("case", `case:round/${dims.caseDiameter}/${dims.lugWidth}/${dims.aperture}#${finish}`, { CASE_DIMS: JSON.stringify(dims), CASE_FINISH: finish });
     }
     case "dial":
       // The dial disc is cut to the case's aperture; the print is appearance.
@@ -113,8 +137,10 @@ export function shapeKey(p: RenderPart): ShapeKey {
       return yes("insert", "insert:flat", {}, p.attributes.profile === "slope" ? "insert-slope" : undefined);
     case "chapter_ring":
       return yes("ring", MODELLED.ring.key, {}, tag === MODELLED.ring.exact ? undefined : (tag ?? "ring-unknown"));
-    case "hands":
-      return yes("hands", MODELLED.hands.key, {}, tag === MODELLED.hands.exact ? undefined : (tag ?? "hand-unknown"));
+    case "hands": {
+      const c = handColour(p);
+      return yes("hands", `${MODELLED.hands.key}#${c}`, { HAND_COLOR: c }, tag === MODELLED.hands.exact ? undefined : (tag ?? "hand-unknown"));
+    }
     case "crown":
       // Drawn in the case layer, so it doesn't add a layer of its own.
       return yes("case", MODELLED.crown.key, {}, tag === MODELLED.crown.exact ? undefined : (tag ?? "crown-unknown"));

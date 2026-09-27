@@ -17,7 +17,25 @@
 # Plain bpy, no scene building, so it can be tested on its own:
 #   blender -b --factory-startup --python-exit-code 1 --python scripts/render/test_render_guards.py
 
-BEAUTY_SOCKETS = {"Image", "Noisy Image"}
+# Render-layer outputs that carry numbers, not light. Lighting passes
+# (diffuse/glossy direct and indirect) may be denoised; these never.
+DATA_SOCKETS = {"UV", "Vector", "Normal", "Depth", "Position", "Mist", "IndexOB", "IndexMA", "Alpha",
+                "Denoising Normal", "Denoising Albedo", "Denoising Depth"}
+
+
+def _upstream_sources(socket, seen=None):
+    """Every render-layer output that feeds `socket`, through any chain of nodes."""
+    seen = set() if seen is None else seen
+    out = []
+    for link in socket.links:
+        node = link.from_node
+        if node.type == "R_LAYERS":
+            out.append((node, link.from_socket.name))
+        elif node.name not in seen:
+            seen.add(node.name)
+            for inp in node.inputs:
+                out += _upstream_sources(inp, seen)
+    return out
 
 
 def denoise_config(scene, mode, crystal):
@@ -38,17 +56,17 @@ def denoise_config(scene, mode, crystal):
 
 
 def assert_data_passes_not_denoised(scene):
-    """Refuse any compositor Denoise node whose image is not the beauty pass."""
+    """Refuse any compositor Denoise node whose image traces back to a data pass or AOV."""
     tree = scene.node_tree if scene.use_nodes else None
     if tree is None:
         return
+    aovs = {a.name for vl in scene.view_layers for a in vl.aovs}
     for node in tree.nodes:
         if node.type != "DENOISE":
             continue
-        for link in node.inputs["Image"].links:
-            src = link.from_socket
-            if link.from_node.type != "R_LAYERS" or src.name not in BEAUTY_SOCKETS:
+        for rl, name in _upstream_sources(node.inputs["Image"]):
+            if name in DATA_SOCKETS or name in aovs:
                 raise ValueError(
-                    f"compositor node {node.name!r} denoises {link.from_node.name}.{src.name}: "
-                    "only the beauty image may be denoised, never a data pass (UV, mask, AOV)"
+                    f"compositor node {node.name!r} denoises {rl.name}.{name}: "
+                    "light passes may be denoised, never a data pass (UV, mask, AOV)"
                 )

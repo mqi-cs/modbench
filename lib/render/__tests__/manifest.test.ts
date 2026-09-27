@@ -15,7 +15,7 @@ const skx = part("case", { caseDiameterMm: 42.5, lugWidthMm: 22, dialApertureMm:
 
 describe("shapeKey", () => {
   it("keys a round case by its three stated millimetres", () => {
-    expect(shapeKey(skx)).toMatchObject({ ok: true, key: "case:round/42.5/22/28.5", approximated: false });
+    expect(shapeKey(skx)).toMatchObject({ ok: true, key: "case:round/42.5/22/28.5#steel", approximated: false });
   });
 
   it("refuses a case missing a dimension, naming it", () => {
@@ -36,11 +36,11 @@ describe("shapeKey", () => {
 
   it("marks an unmodelled shape as approximated and keeps the real one", () => {
     expect(shapeKey(part("hands", { shapeTag: "hand-three-lobe" }))).toMatchObject({
-      key: "hands:sword",
+      key: "hands:sword#steel",
       approximated: true,
       actualShape: "hand-three-lobe",
     });
-    expect(shapeKey(part("hands", { shapeTag: "hand-sword" }))).toMatchObject({ key: "hands:sword", approximated: false });
+    expect(shapeKey(part("hands", { shapeTag: "hand-sword" }))).toMatchObject({ key: "hands:sword#steel", approximated: false });
     expect(shapeKey(part("chapter_ring", { shapeTag: "ring-plain" }))).toMatchObject({ approximated: true });
     expect(shapeKey(part("crown", { shapeTag: "crown-onion" }))).toMatchObject({ key: "crown:knurled", approximated: true });
     expect(shapeKey(part("bezel_insert", { profile: "slope" }))).toMatchObject({ approximated: true, actualShape: "insert-slope" });
@@ -58,11 +58,23 @@ describe("buildManifest", () => {
 
   it("multiplies layers by case shape and pairs case+strap for hero only", () => {
     const m = buildManifest(scope, "v1");
-    // per view: case, dial, 2 straps; plus 2 casestrap in hero.
-    expect(m.jobs.length).toBe(2 * 4 + 2);
+    // per view: case, date, dial, 2 straps; plus 2 casestrap in hero.
+    expect(m.jobs.length).toBe(2 * 5 + 2);
+    // Printed layers are geometry-only surface passes; the rest finished images.
+    expect(m.jobs.filter((j) => j.pass === "surface").map((j) => j.layer).sort()).toEqual(["date", "date", "dial", "dial"]);
     expect(m.jobs.filter((j) => j.layer === "casestrap").every((j) => j.view === "hero")).toBe(true);
     // A slot the scope doesn't have renders nothing.
     expect(m.jobs.some((j) => j.layer === "hands")).toBe(false);
+  });
+
+  it("renders each finish's case, but shares printed layers across finishes", () => {
+    const gold = part("case", { caseDiameterMm: 42.5, lugWidthMm: 22, dialApertureMm: 28.5, styleTags: ["gold-tone"] }, { id: "gold" });
+    expect(shapeKey(gold)).toMatchObject({ key: "case:round/42.5/22/28.5#gold", env: { CASE_FINISH: "gold" } });
+    const one = buildManifest(scope, "v1");
+    const two = buildManifest([...scope, gold], "v1");
+    const layerHashes = (m: typeof one, layer: string) => m.jobs.filter((j) => j.layer === layer).map((j) => j.hash).sort();
+    expect(layerHashes(two, "dial")).toEqual(layerHashes(one, "dial"));
+    expect(layerHashes(two, "case").length).toBe(2 * layerHashes(one, "case").length);
   });
 
   it("hashes geometry, not the part: same key, same hash, across scopes", () => {

@@ -9,6 +9,7 @@ import { SlotRail } from "./SlotRail";
 import { PartPicker } from "./PartPicker";
 import { BuildSummary } from "./BuildSummary";
 import { WatchPreview } from "./WatchPreview";
+import { Preview3D } from "./Preview3D";
 import { StarterBuilds } from "./StarterBuilds";
 import { FirstBuild } from "./FirstBuild";
 import { AssemblyChecklist } from "./AssemblyChecklist";
@@ -163,6 +164,9 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
     [build, slice, totals, includeTools],
   );
 
+  const partAttributes = useCallback((id: string) => slice.parts[id]?.attributes, [slice]);
+  const hasDialPhoto = useCallback((id: string) => previewable.has(id), [previewable]);
+
   const chooseFirstBuild = useCallback(
     (slot: SlotKey, partId: string) => {
       setFirstBuildOn(true);
@@ -235,14 +239,21 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
             drawing is what you look at while reading the total, so the two
             belong in the same field of view. */}
         <div className="flex flex-col gap-px bg-rule">
-          <WatchPreview
-            input={{
-              parts: build.parts as Partial<Record<string, string>>,
-              previewable,
-              meta: artMeta,
-            }}
-            title="Diagram of the build so far"
-            className="p-5"
+          <Preview3D
+            parts={build.parts as Partial<Record<string, string>>}
+            attributes={partAttributes}
+            hasDialPhoto={hasDialPhoto}
+            fallback={
+              <WatchPreview
+                input={{
+                  parts: build.parts as Partial<Record<string, string>>,
+                  previewable,
+                  meta: artMeta,
+                }}
+                title="Diagram of the build so far"
+                className="p-5"
+              />
+            }
           />
           <BuildSummary
             build={build}

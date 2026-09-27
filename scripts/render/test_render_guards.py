@@ -45,9 +45,24 @@ def denoise_from(socket):
     g.assert_data_passes_not_denoised(scene)
 
 
+def denoise_via_add(a, b):
+    """Two passes summed by a Mix node, then denoised -- how the shading pass is built."""
+    scene, tree, rl, dn = fresh()
+    scene.view_layers[0].use_pass_diffuse_direct = scene.view_layers[0].use_pass_diffuse_indirect = True
+    add = tree.nodes.new("CompositorNodeMixRGB")
+    add.blend_type = "ADD"
+    tree.links.new(rl.outputs[a], add.inputs[1])
+    tree.links.new(rl.outputs[b], add.inputs[2])
+    tree.links.new(add.outputs["Image"], dn.inputs["Image"])
+    g.assert_data_passes_not_denoised(scene)
+
+
 check("beauty image into a Denoise node is allowed", lambda: denoise_from("Image"), raises=False)
 check("UV pass into a Denoise node is refused", lambda: denoise_from("UV"), raises=True)
 check("AOV mask into a Denoise node is refused", lambda: denoise_from("lume_mask"), raises=True)
+check("diffuse light summed then denoised is allowed", lambda: denoise_via_add("DiffDir", "DiffInd"), raises=False)
+check("a UV pass hidden behind a Mix node is refused", lambda: denoise_via_add("DiffDir", "UV"), raises=True)
+check("an AOV hidden behind a Mix node is refused", lambda: denoise_via_add("lume_mask", "DiffInd"), raises=True)
 check("no compositor is allowed", lambda: (setattr(bpy.context.scene, "use_nodes", False),
                                            g.assert_data_passes_not_denoised(bpy.context.scene)), raises=False)
 

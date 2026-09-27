@@ -499,6 +499,46 @@ where they hesitate.
 
 ---
 
+## D14 — WS2c leftovers (raised 2026-09-27)
+
+**a. Whole-build p99 over threshold on two of three builds** (V1 41, V2 34
+against ≤ 30; MAD passes on all three). The error sits on the polished
+hands, darker than the full render. *Restore signal:* a visible difference
+reported, or time to trace the hands layer's shadow-catcher lighting.
+
+**b. Strap colour isn't applied.** Straps are finished renders per build
+(six shapes), drawn in their default colours; labelled "shape only, colour
+not shown". *Restore signal:* UV-mapped strap passes like the printed layers.
+
+**c. Insert, chapter ring and date wheel use generic generated prints** by
+colour (black / blue / gold / steel inserts; white / gold / cream rings).
+Labelled "generic print … not this part's own design". No catalog photo is
+usable (inserts shot lume-lit, rings at three-quarters). *Restore signal:*
+top-down vendor photos, unwrapped by polar transform (plan step 5).
+
+**d. Dials without a prepared photo (30.8 %) fall back to the SVG diagram**,
+with the reason shown. Dial windows aren't cut: the vendor photo's window
+shows as photographed, and the date layer only shows through a print that
+has a transparent window. *Restore signal:* prepare-assets cuts windows by
+flood fill for every dial.
+
+**e. The date layer is lit as if the dial had no window** (the dial is hidden
+for it, since solid geometry would shade it completely). Slightly bright
+through a real window. *Restore signal:* a visible difference.
+
+**f. Render output isn't deployed.** `public/render/layers/` is gitignored
+(content-addressed, regenerable, ~hundreds of MB); a production site must
+host it. *Restore signal:* WS7 hosting.
+
+**g. The configurator re-evaluates every picker option on each change**
+(over a second of wall time in the swap test), separate from the 5–43 ms
+preview swap. *Restore signal:* part swaps feel slow.
+
+D12e is partly resolved: printed layers no longer bake any texture, but the
+renderer still loads the prototype textures when it builds a scene.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like

@@ -754,8 +754,10 @@ else:
         m.node_tree.links.new(t_.outputs["Color"], b.inputs["Base Color"])
         return m
 
-    ring_ob.data.materials.append(textured("chapter_ring", texf("ring", "ring-skx.png"), 0.45))
-    date_ob.data.materials.append(textured("date_wheels", texf("date", "date-skx.png"), 0.5))
+    ring_m = textured("chapter_ring", texf("ring", "ring-skx.png"), 0.45)
+    date_m = textured("date_wheels", texf("date", "date-skx.png"), 0.5)
+    ring_ob.data.materials.append(ring_m)
+    date_ob.data.materials.append(date_m)
     rubber, _ = principled("gasket", (0.02, 0.02, 0.02), 0.0, 0.7)
     gasket.data.materials.append(rubber)
     for ob in bracelet_brushed:
@@ -1036,8 +1038,12 @@ if LAYER:
             return "case"
         if base in HAND_G:
             return "hands"
-        if base in ("dial", "date_wheels"):
+        if base == "dial":
             return "dial"
+        if base == "date_wheels":
+            # Its own layer, under the dial: the dial's date window is part of
+            # the print, so the browser shows this through it (WS2c).
+            return "date"
         if base == "chapter_ring":
             return "ring"
         if base == "insert":
@@ -1051,34 +1057,135 @@ if LAYER:
     # strap reflected in the case, the case reflected in a steel bracelet.
     # The cost is multiplicative but only inside the pair (finishes x straps).
     LAYER_PARTS = {"casestrap": {"case", "strap"}}.get(LAYER, {LAYER})
+    # Browser stacking order (WS2c): date, dial, ring, hands, insert, then the
+    # case (or case+strap) OVER them, then a separate strap. A layer holds out
+    # only what is in front of it and drawn EARLIER; anything drawn later is
+    # merely invisible to the camera -- it still casts light, shadow and
+    # reflections -- and covers the layer when stacked. Holding out parts
+    # drawn later left half-covered edge pixels over an empty background: the
+    # bright rings at every bezel and ring edge (whole-build check, WS2c).
+    INNER = {"date", "dial", "ring", "hands", "insert"}
     HOLD = {
-        "casestrap": set(),
-        "case": set(),
-        "dial": {"case", "insert", "ring"},
-        "ring": {"case", "insert"},
-        "hands": {"case", "insert", "ring"},
-        "insert": {"case"},
+        "casestrap": INNER,
+        "case": INNER,
+        "date": set(),
+        "dial": set(),
+        "ring": set(),
+        "hands": {"ring"},
+        "insert": set(),
         "strap": {"case"},
     }[LAYER]
     for ob in list(scene.objects):
         if ob.type != "MESH":
             continue
         cat = category(ob)
-        if cat in LAYER_PARTS:
+        if cat in LAYER_PARTS or cat == "none":
             continue
-        if cat in HOLD:
-            ob.is_holdout = True
-            if LAYER == "hands":
-                # The dial layer already carries the case's shadow; the
-                # shadow catcher must record only what the hands add.
-                ob.visible_shadow = False
-                ob.visible_diffuse = False
-                ob.visible_glossy = False
-                ob.visible_transmission = False
+        if LAYER == "date" and cat == "dial":
+            # Solid geometry would shade the date wheel completely; the window
+            # is only in the print.
+            ob.hide_render = True
         elif LAYER == "hands" and cat == "dial":
             ob.is_shadow_catcher = True
-        else:
+        elif cat in HOLD:
+            ob.is_holdout = True
+        elif LAYER == "strap" or (LAYER == "case" and cat == "strap"):
             ob.hide_render = True
+        else:
+            ob.visible_camera = False
+        if LAYER == "hands" and cat != "dial":
+            # The dial layer already has everything else's shadow and bounce
+            # light; the catcher must record only what the hands add. The
+            # hands still reflect the rest (polished steel mirrors the dial
+            # and case -- without that they came out dark).
+            ob.visible_shadow = False
+            ob.visible_diffuse = False
+            ob.visible_transmission = False
+
+# --- PASSES: geometry-only passes for browser-side appearance (WS2c) --------------
+# PASSES=<dir> writes, besides the beauty PNG, linear 16-bit PNGs the pack
+# step (scripts/render/pack-passes.ts) turns into what the browser loads:
+#   combined  Combined, linear, x0.25 (film is premultiplied)
+#   diffcol   Diffuse Color            difflight  (DiffDir+DiffInd) x0.25, denoised
+#   uv        AOV: the part's UV map    mask       AOV: 1 on printed surfaces
+# Printed surfaces are the four whose look is a texture: dial, insert,
+# chapter ring, date wheel. Their diffuse term is what the browser swaps;
+# everything else stays baked. The dial is made opaque -- a date window is
+# part of the print, so the browser cuts it.
+PASSES = os.environ.get("PASSES")
+if PASSES and MODE == "D":
+    vl = scene.view_layers[0]
+    vl.use_pass_diffuse_direct = vl.use_pass_diffuse_indirect = vl.use_pass_diffuse_color = True
+    for name, typ in (("uv", "COLOR"), ("mask", "VALUE")):
+        aov = vl.aovs.add()
+        aov.name, aov.type = name, typ
+    for mat in (dm, im, ring_m, date_m):
+        nt = mat.node_tree
+        uvn = nt.nodes.new("ShaderNodeUVMap")
+        uvn.uv_map = "uv"
+        for name, sock, src in (("uv", "Color", uvn.outputs["UV"]), ("mask", "Value", None)):
+            o = nt.nodes.new("ShaderNodeOutputAOV")
+            o.aov_name = name
+            if src is not None:
+                nt.links.new(src, o.inputs[sock])
+            else:
+                o.inputs[sock].default_value = 1.0
+        # Plain mid-grey, no print. Cycles stores diffuse light with the
+        # surface colour divided out, so under a black print (a date window,
+        # dark indices) the light pass is empty or noisy and a brighter print
+        # swapped in later gets no light; and the denoiser's touch on a
+        # rendered print would stay behind in `base` as a ghost.
+        # PASSES_KEEP_PRINT=1 keeps it (opaque): the reference a composite is checked against.
+        bsdf = next(n for n in nt.nodes if n.type == "BSDF_PRINCIPLED")
+        for sock in (("Alpha",) if os.environ.get("PASSES_KEEP_PRINT") == "1" else ("Base Color", "Alpha")):
+            for link in list(bsdf.inputs[sock].links):
+                nt.links.remove(link)
+        if not bsdf.inputs["Base Color"].links:
+            g_ = float(os.environ.get("PASSES_GREY", "0.5"))
+            bsdf.inputs["Base Color"].default_value = (g_, g_, g_, 1)
+        bsdf.inputs["Alpha"].default_value = 1.0
+
+    scene.use_nodes = True
+    tree = scene.node_tree
+    for n in list(tree.nodes):
+        tree.nodes.remove(n)
+    rl = tree.nodes.new("CompositorNodeRLayers")
+    comp = tree.nodes.new("CompositorNodeComposite")
+    tree.links.new(rl.outputs["Image"], comp.inputs["Image"])
+
+    def exposure(sock, stops):
+        e = tree.nodes.new("CompositorNodeExposure")
+        e.inputs["Exposure"].default_value = stops
+        tree.links.new(sock, e.inputs["Image"])
+        return e.outputs["Image"]
+
+    add = tree.nodes.new("CompositorNodeMixRGB")
+    add.blend_type = "ADD"
+    tree.links.new(rl.outputs["DiffDir"], add.inputs[1])
+    tree.links.new(rl.outputs["DiffInd"], add.inputs[2])
+    light = add.outputs["Image"]
+    if scene.cycles.use_denoising:
+        dn = tree.nodes.new("CompositorNodeDenoise")
+        tree.links.new(light, dn.inputs["Image"])
+        light = dn.outputs["Image"]
+
+    fo = tree.nodes.new("CompositorNodeOutputFile")
+    fo.base_path = PASSES
+    fo.format.file_format = "PNG"
+    fo.format.color_mode = "RGBA"
+    fo.format.color_depth = "16"
+    fo.format.color_management = "OVERRIDE"
+    fo.format.view_settings.view_transform = "Raw"
+    fo.file_slots.clear()
+    for name, sock in (
+        ("combined", exposure(rl.outputs["Image"], -2)),
+        ("diffcol", rl.outputs["DiffCol"]),
+        ("difflight", exposure(light, -2)),
+        ("uv", rl.outputs["uv"]),
+        ("mask", rl.outputs["mask"]),
+    ):
+        fo.file_slots.new(name)
+        tree.links.new(sock, fo.inputs[name])
 
 render_guards.assert_data_passes_not_denoised(scene)
 T1 = time.perf_counter()

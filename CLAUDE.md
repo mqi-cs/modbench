@@ -104,9 +104,16 @@ the README says otherwise and is out of date.
   reason), `manifest.ts` (jobs + content hashes), `load.ts` (read-only,
   optional vendor scope). Pure; tested under `pnpm check`.
 - `scripts/render/` — the maintained 3D renderer (`render_solid.py`,
-  `case_geometry.py`, `render_guards.py`) and `run.ts`, which renders
-  missing manifest jobs to content-addressed `out/<hash>.png` (gitignored).
-  Needs Blender 4.5 (`BLENDER=`) and the prototype's textures (D12e).
+  `case_geometry.py`, `render_guards.py`), `run.ts` (renders missing
+  manifest jobs into `public/render/layers/`, gitignored; `--prune`),
+  `pack-passes.ts` (geometry-only passes → browser images, plus the offline
+  composite check), `make_agx_lut.py` (bakes Blender's AgX into
+  `public/render/agx-lut.png`). How it works and what was measured:
+  `scripts/render/REPORT.md`. Needs Blender 4.5 (`BLENDER=`) and the
+  prototype's textures (D12e).
+- `lib/render/compositor.ts`, `scene.ts`, `prints.ts` — browser compositor
+  (WebGL2) and the build → layers + labels mapping; shown by
+  `components/build/Preview3D.tsx`, falling back to the SVG diagram.
   Guard tests: `blender -b --factory-startup --python-exit-code 1 --python
   scripts/render/test_render_guards.py`.
 - `scripts/3d-test/` — the 3D prototype's texture scripts, layer viewers,

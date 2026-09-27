@@ -21,4 +21,7 @@ scripts/3d-test/out/*
 !scripts/3d-test/out/layers.html
 
 # Render pipeline output (scripts/render/run.ts): content-addressed, regenerable.
+# public/render/layers is what the browser compositor loads; host it with the
+# site (WS7), don't commit it.
 scripts/render/out/
+public/render/layers/
