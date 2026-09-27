@@ -9,12 +9,13 @@ What was tied to the machine it was built on, and what it is now:
 | GPU backend | Tried OptiX, then CUDA; anything else silently fell to CPU | `RENDER_DEVICE` = auto (OPTIX → CUDA → METAL → HIP → ONEAPI → CPU) or a named backend, which fails loudly if missing. Device used is in every RESULT line. Not in the hash: devices differ in noise, not content |
 | OIDN denoiser | GPU | GPU where the backend supports it, else Blender's CPU fallback |
 | Studio HDRI | Path built from the Blender binary's folder — breaks inside a macOS app bundle | Found through `bpy.utils.system_resource("DATAFILES")` |
-| Blender version | 4.5.14 LTS, unrecorded; 4.x APIs used (compositor via `scene.node_tree`, Principled v2 input names, AgX, `Raw` view) | Pinned in `render-config.json`; `run.ts` refuses another version and hashes the running version into every output name |
+| Blender version | 4.5.14 LTS, unrecorded; 4.x APIs used (compositor via `scene.node_tree`, Principled v2 input names, AgX, `Raw` view) | `referenceRenderer.blender` in `render-config.json`; `run.ts` refuses another version |
 | Cycles settings | Bounces, clamping, filter, seed, light tree left at 4.5 defaults | All set explicitly from `render-config.json` (values read from Blender 4.5.14, not guessed) |
 | Scene values | TENT / FLOOR passed by the runner | In the config |
-| Line endings | Hash read source bytes: a CRLF (Windows) and LF checkout of one commit got different hashes, so one would re-render everything | Text inputs hashed with LF |
+| Content hash | Hashed the renderer's source files, device selection included: moving a device check re-rendered everything | `lib/render/config.ts`: `referenceRenderer` {name, revision, blender} + the resolved pixel settings (canonical JSON, device and comments excluded) + input textures' bytes keyed by file name. Source is not hashed; `sourceFingerprint` (outside the hash) makes a test fail when pixel-deciding code changes, forcing a revision decision. Device selection lives in `render_device.py`, outside the fingerprint |
+| Line endings | Hash read source bytes: a CRLF (Windows) and LF checkout of one commit got different hashes, so one would re-render everything | Fingerprint LF-normalised; source no longer in the hash |
 | Blender path | Env `BLENDER` (was a Windows temp-folder install here) | Same; default `blender` on PATH |
-| Prototype textures | `scripts/3d-test/out`, gitignored, made by the prototype scripts | Still required (D12e); `TEX_DIR` overrides in both renderer and runner |
+| Prototype textures | `scripts/3d-test/out`, gitignored, made by the prototype scripts | Committed via Git LFS (107 files, 12.9 MB): the scripts don't reproduce them — regenerating gave a different `dial-cut.png` (142 bytes, up to 255) and `date-skx.png` (2,325 bytes, up to 213), and they draw text with system fonts. `TEX_DIR` overrides the location |
 | Temp files | `run.ts` used `os.tmpdir()` (portable); `render-batch.sh` wrote `/tmp/layer.log` | Log beside the outputs |
 | Pivot-plan path | `CLAUDE.md` named `/Users/q/...` | Repo-relative |
 | Python deps | `bpy`, `bmesh`, `mathutils`, `numpy` — all bundled with Blender | Nothing to install |
@@ -26,9 +27,33 @@ without rendering — checked here: auto → OPTIX, CPU, CUDA each apply the
 config (256 spp, adaptive 0.01, OIDN, filter 1.5, 12 bounces, clamp 10,
 AgX); `RENDER_DEVICE=METAL` exits 1 with "no such device on this machine".
 
-Existing outputs were re-keyed, not re-rendered (`run.ts --adopt`): the
-config records exactly the settings they were rendered with, so only
-their names changed. 336 of 336 adopted; a dry run then has 0 to render.
+Existing outputs were re-keyed, not re-rendered (`run.ts --adopt`), twice:
+`6d68522a…` → `710d632d…` (config and Blender version added) →
+`5a89a18f…` (hash rebuilt from resolved settings + `referenceRenderer`).
+336 of 336 each time; mappings in `scripts/render/adoptions/`. A dry run
+then has 0 to render.
+
+**The claim that re-keying was safe was then checked, not assumed**
+(`verify-renders.ts`: re-render with the current renderer and config on
+OptiX, diff against the stored file):
+
+| Job | File | Mean diff R/G/B/A | Max | Pixels differing |
+|---|---|---|---|---|
+| hero case, steel | beauty | 0.0024 / 0.0022 / 0.0024 / 0 | 1 | 16,964 / 2.56 M |
+| hero dial (surface) | uv | 0 / 0.0002 / 0 / 0 | 1 (G: 240\*) | 32 |
+| | light | 0 | 1 | 13 |
+| | bounce | ≤ 0.0001 | 1 | 382 |
+| | base | ≤ 0.0009 | 1 | 5,946 |
+| top hands, steel | beauty | 0.0005 RGB / 0.0111 A | 1 | 7,942 / 640 k |
+
+\* The uv G byte holds U's low 4 bits and V's high 4; a 1/4095 step in U
+flips it by up to 240. Decoded, every UV difference is ≤ 1/4095. Every
+other difference is ≤ 1 level in 8 bits: GPU floating-point jitter.
+
+**Storage:** `public/render/layers` — 484 files, 325.7 MB: 288 beauty
+layers (one PNG per job) + 48 surface jobs × 4 passes (192 PNGs) = 480 for
+336 jobs, plus 3 full-render references (`check-v1..3.png`) and
+`index.json`. The PNGs and the input textures are in Git LFS.
 
 ---
 

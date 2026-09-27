@@ -30,6 +30,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import case_geometry as geo  # noqa: E402
 import render_guards  # noqa: E402
+import render_device  # noqa: E402  (not hashed: where a render runs, not what it draws)
 
 # Textures (prepared dial cut-outs, generated insert/ring/date prints) are
 # made by the prototype scripts in scripts/3d-test and live in its gitignored
@@ -64,7 +65,7 @@ DIAL_PNG = os.path.join(REPO, "public", "assets", "dial", "ZDs4QjjlRw6lbypEnGaFV
 # beside the binary).
 HDRI = os.path.join(bpy.utils.system_resource("DATAFILES", path="studiolights/world"), "studio.exr")
 if not HDRI or not os.path.exists(HDRI):
-    raise SystemExit("studio.exr not found in Blender's datafiles -- is this Blender " + CONFIG["blender"]["version"] + "?")
+    raise SystemExit("studio.exr not found in Blender's datafiles -- is this Blender " + CONFIG["referenceRenderer"]["blender"] + "?")
 
 # Heights, mm. NOT from the catalog -- read off SKX case photos, like the
 # SVG's lug constants. Listed so the report can say exactly which is which.
@@ -988,37 +989,7 @@ cam.clip_start, cam.clip_end = 1, 1000
 
 scene.render.engine = "CYCLES"
 
-
-def select_device():
-    """RENDER_DEVICE=auto|OPTIX|CUDA|METAL|HIP|ONEAPI|CPU (default from render-config.json).
-
-    auto takes the first backend in the config's order that has a device,
-    else the CPU. A named backend that isn't there is an error, not a silent
-    CPU fallback. Returns what was used, for the RESULT line.
-    """
-    want = os.environ.get("RENDER_DEVICE", CONFIG["device"]["default"]).upper()
-    if want == "CPU":
-        scene.cycles.device = "CPU"
-        return "CPU"
-    prefs = bpy.context.preferences.addons["cycles"].preferences
-    for kind in CONFIG["device"]["order"] if want == "AUTO" else [want]:
-        try:
-            prefs.compute_device_type = kind
-        except TypeError:
-            continue  # backend not compiled into this Blender build (e.g. METAL off macOS)
-        prefs.get_devices()
-        if any(dv.type == kind for dv in prefs.devices):
-            for dv in prefs.devices:
-                dv.use = dv.type == kind
-            scene.cycles.device = "GPU"
-            return kind
-    if want != "AUTO":
-        raise SystemExit(f"RENDER_DEVICE={want}: no such device on this machine")
-    scene.cycles.device = "CPU"
-    return "CPU"
-
-
-DEVICE = select_device()
+DEVICE = render_device.select_device(scene, CONFIG)
 cy, smp = scene.cycles, CONFIG["sampling"]
 # 256 spp + OIDN: chosen by the WS2a side-by-side (3d-test/REPORT.md), replacing
 # 768-1024 spp with no denoise. Closer to a 4096 spp ground truth than 768 on
@@ -1230,15 +1201,7 @@ if PASSES and MODE == "D":
         tree.links.new(sock, fo.inputs[name])
 
 render_guards.assert_data_passes_not_denoised(scene)
-if os.environ.get("RENDER_DRY") == "1":
-    # Build the scene, apply the config, pick the device -- then stop. For
-    # checking a machine without spending a render.
-    cy_ = scene.cycles
-    print("DRY " + json.dumps({"device": DEVICE, "blender": bpy.app.version_string, "samples": cy_.samples,
-                               "adaptive": cy_.adaptive_threshold, "denoise": cy_.use_denoising, "filter": cy_.filter_width,
-                               "bounces": cy_.max_bounces, "clamp_indirect": cy_.sample_clamp_indirect,
-                               "view": scene.view_settings.view_transform, "size": scene.render.resolution_x, "hdri": os.path.basename(HDRI)}))
-    raise SystemExit(0)
+render_device.dry_exit_if_asked(scene, DEVICE, HDRI)
 T1 = time.perf_counter()
 bpy.ops.render.render(write_still=True)
 print("RESULT " + json.dumps({"out": OUT, "device": DEVICE, "blender": bpy.app.version_string, "mesh_s": round(T_MESH, 1), "render_s": round(time.perf_counter() - T1, 1), "measure": MEASURE}))

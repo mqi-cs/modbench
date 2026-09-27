@@ -109,8 +109,13 @@ the README says otherwise and is out of date.
   `pack-passes.ts` (geometry-only passes → browser images, plus the offline
   composite check), `make_agx_lut.py` (bakes Blender's AgX into
   `public/render/agx-lut.png`). How it works and what was measured:
-  `scripts/render/REPORT.md`. Needs Blender 4.5 (`BLENDER=`) and the
-  prototype's textures (D12e).
+  `scripts/render/REPORT.md`. Needs Blender 4.5.14 (`BLENDER=`, pinned in
+  `render-config.json`) and `git lfs pull` (outputs and input textures are
+  in Git LFS). `RENDER_DEVICE` picks the GPU backend; `RENDER_DRY=1` checks a
+  machine without rendering; `verify-renders.ts` re-renders jobs and diffs
+  them against the stored files. Changing pixel-deciding renderer code
+  fails `render-config.test.ts` until `sourceFingerprint` (and, if pixels can
+  change, `referenceRenderer.revision`) is updated.
 - `lib/render/compositor.ts`, `scene.ts`, `prints.ts` — browser compositor
   (WebGL2) and the build → layers + labels mapping; shown by
   `components/build/Preview3D.tsx`, falling back to the SVG diagram.

@@ -1,9 +1,17 @@
 {
-  "//": "Every setting that decides a render's pixels. render_solid.py applies these explicitly (env vars may override per job); run.ts hashes this file and the running Blender's version into every output's name, and refuses a different Blender version. The cycles block equals Blender 4.5.14's factory defaults, read from Blender (not guessed), so renders made before this file existed are unchanged.",
-  "blender": {
-    "version": "4.5.14 LTS",
-    "download": "https://download.blender.org/release/Blender4.5/"
+  "//": "Every setting that decides a render's pixels. render_solid.py applies these explicitly (env vars may override per job). An output's content hash (run.ts) is built from referenceRenderer, the resolved settings below (sampling, denoise, cycles, colour, output, scene, passes -- not device, not comments) and the input textures' bytes; never from source code. The cycles block equals Blender 4.5.14's factory defaults, read from Blender (not guessed).",
+  "referenceRenderer": {
+    "//": "Bump revision when a renderer change can alter pixels: every output re-renders. run.ts refuses any other Blender version.",
+    "name": "modbench render_solid",
+    "revision": 1,
+    "blender": "4.5.14 LTS"
   },
+  "sourceFingerprint": {
+    "//": "sha256 (LF-normalised) of the code that decides pixels. NOT hashed into outputs. lib/render/__tests__/render-config.test.ts fails when the code changes: decide whether pixels can change (bump referenceRenderer.revision) or not (only update this), so editing e.g. device selection never silently re-renders -- nor silently keeps stale renders. render_device.py is deliberately excluded.",
+    "files": ["scripts/render/render_solid.py", "scripts/render/case_geometry.py", "scripts/render/render_guards.py", "scripts/render/pack-passes.ts"],
+    "sha256": "418ffad66d92f9d49e69fce6fc00e9249b24d234f7b1ea6ffabf616afc6651f2"
+  },
+  "blenderDownload": "https://download.blender.org/release/Blender4.5/",
   "device": {
     "//": "auto tries OPTIX, CUDA, METAL, HIP, ONEAPI in order, then CPU. RENDER_DEVICE=<name> forces one and fails if it is missing. Not in the hash: devices differ only in noise, not in what is drawn.",
     "default": "auto",

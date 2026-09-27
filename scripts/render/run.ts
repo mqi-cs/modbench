@@ -26,77 +26,60 @@
 // the layer at two greys -- packed by pack-passes.ts.
 
 import { spawnSync } from "node:child_process";
-import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import sharp from "sharp";
 import { loadRenderParts } from "../../lib/render/load";
 import { buildManifest, type RenderJob } from "../../lib/render/manifest";
+import { loadConfig, rendererVersion as computeRendererVersion, sourceFingerprint } from "../../lib/render/config";
 import { GREYS, pack } from "./pack-passes";
 
 // Served to the browser compositor from here; gitignored (content-addressed, regenerable).
 const OUT = "public/render/layers";
 const BLENDER = process.env.BLENDER ?? "blender";
 const TEX = process.env.TEX_DIR ?? "scripts/3d-test/out";
-const CONFIG_FILE = "scripts/render/render-config.json";
-const CONFIG = JSON.parse(readFileSync(CONFIG_FILE, "utf8")) as { blender: { version: string } };
-/** Everything that decides a render's pixels apart from the job itself (plus the Blender version, below). */
-const VERSION_INPUTS = [
-  CONFIG_FILE,
-  "scripts/render/render_solid.py",
-  "scripts/render/case_geometry.py",
-  "scripts/render/render_guards.py",
-  "scripts/render/pack-passes.ts",
-  "public/assets/dial/ZDs4QjjlRw6lbypEnGaFV.webp",
-  `${TEX}/dial-cut.png`,
-  `${TEX}/insert-skx.png`,
-  `${TEX}/ring-skx.png`,
-  `${TEX}/date-skx.png`,
-];
+const CONFIG = loadConfig();
+/** Input images every job's scene loads (hashed by content, keyed by name). */
+const TEXTURES = ["public/assets/dial/ZDs4QjjlRw6lbypEnGaFV.webp", `${TEX}/dial-cut.png`, `${TEX}/insert-skx.png`, `${TEX}/ring-skx.png`, `${TEX}/date-skx.png`];
 
 const args = process.argv.slice(2);
 const vendor = args.includes("--vendor") ? args[args.indexOf("--vendor") + 1] : undefined;
 const dryRun = args.includes("--dry-run");
 
-const missingInputs = VERSION_INPUTS.filter((f) => !existsSync(f));
+const missingInputs = TEXTURES.filter((f) => !existsSync(f));
 if (missingInputs.length) {
-  throw new Error(`missing renderer inputs (textures come from scripts/3d-test; see render-batch.sh):\n  ${missingInputs.join("\n  ")}`);
+  throw new Error(`missing renderer inputs (TEX_DIR=${TEX}):\n  ${missingInputs.join("\n  ")}`);
+}
+if (sourceFingerprint(CONFIG) !== CONFIG.sourceFingerprint.sha256) {
+  throw new Error(
+    "renderer source changed since render-config.json's sourceFingerprint: if the change can alter pixels, bump " +
+      "referenceRenderer.revision; either way update sourceFingerprint.sha256 (lib/render/__tests__/render-config.test.ts prints it).",
+  );
 }
 
 /** "Blender 4.5.14 LTS" -> "4.5.14 LTS". A dry run may go without Blender; a render may not. */
-function blenderVersion(): string {
+function checkBlender() {
+  const want = CONFIG.referenceRenderer.blender;
   const r = spawnSync(BLENDER, ["--version"], { encoding: "utf8" });
   const v = r.stdout?.match(/^Blender (.+)$/m)?.[1]?.trim();
   if (!v) {
-    if (dryRun) {
-      console.warn(`warning: can't run ${BLENDER}; hashing with the config's Blender version`);
-      return CONFIG.blender.version;
-    }
-    throw new Error(`can't run Blender (${BLENDER}): set BLENDER to Blender ${CONFIG.blender.version}`);
+    if (dryRun) return console.warn(`warning: can't run ${BLENDER}; a render needs Blender ${want}`);
+    throw new Error(`can't run Blender (${BLENDER}): set BLENDER to Blender ${want}`);
   }
-  if (v !== CONFIG.blender.version) {
-    throw new Error(`Blender ${v} found; render-config.json pins ${CONFIG.blender.version}. Install that version, or change the config deliberately (every output re-renders).`);
+  if (v !== want) {
+    throw new Error(`Blender ${v} found; render-config.json's referenceRenderer pins ${want}. Install that version, or change the reference deliberately (every output re-renders).`);
   }
-  return v;
 }
-
-// Text is hashed with LF line endings: a Windows checkout (CRLF) and a Linux
-// one must agree on the version, or one of them re-renders everything.
-const TEXT = /\.(py|ts|json)$/;
-const version = createHash("sha256");
-for (const f of VERSION_INPUTS) {
-  const raw = readFileSync(f);
-  version.update(f).update(TEXT.test(f) ? raw.toString("utf8").replace(/\r\n/g, "\n") : raw);
-}
-version.update(`blender ${blenderVersion()}`);
-const rendererVersion = version.digest("hex").slice(0, 16);
+checkBlender();
+const rendererVersion = computeRendererVersion(CONFIG, TEXTURES);
 
 const m = buildManifest(loadRenderParts(undefined, vendor), rendererVersion);
 /** A beauty job is one PNG; a surface job is four, and -base.png is written last. */
 const file = (j: RenderJob) => (j.pass === "surface" ? `${OUT}/${j.hash}-base.png` : `${OUT}/${j.hash}.png`);
 // --adopt <old-index.json>: re-key existing outputs by job id (see header).
 if (args.includes("--adopt")) {
-  const old = JSON.parse(readFileSync(args[args.indexOf("--adopt") + 1]!, "utf8")) as { jobs: Record<string, { stem: string; pass: string }> };
+  const old = JSON.parse(readFileSync(args[args.indexOf("--adopt") + 1]!, "utf8")) as { rendererVersion?: string; jobs: Record<string, { stem: string; pass: string }> };
+  const mapping: Record<string, { from: string; to: string; pass: string }> = {};
   const suffixes = (pass: string) => (pass === "surface" ? ["-uv", "-light", "-bounce", "-base"] : [""]);
   let moved = 0;
   let missing = 0;
@@ -110,9 +93,14 @@ if (args.includes("--adopt")) {
     }
     // -base.png last, so an interrupted adopt never looks complete.
     suffixes(j.pass).forEach((s, i) => renameSync(from[i]!, `${OUT}/${j.hash}${s}.png`));
+    mapping[j.id] = { from: prev.stem, to: j.hash, pass: j.pass };
     moved++;
   }
-  console.log(`adopted ${moved} jobs under the new hashes (${missing} listed but missing on disk)`);
+  // The old -> new mapping is committed, so anyone can trace a renamed output.
+  mkdirSync("scripts/render/adoptions", { recursive: true });
+  const mapFile = `scripts/render/adoptions/${old.rendererVersion ?? "unknown"}-to-${rendererVersion}.json`;
+  writeFileSync(mapFile, JSON.stringify({ from: old.rendererVersion, to: rendererVersion, adopted: moved, missing, jobs: mapping }, null, 1) + "\n");
+  console.log(`adopted ${moved} jobs under the new hashes (${missing} listed but missing on disk); mapping: ${mapFile}`);
 }
 // --case <prefix>: render only jobs for matching case keys first (e.g. case:round/42.5).
 const onlyCase = args.includes("--case") ? args[args.indexOf("--case") + 1] : undefined;
