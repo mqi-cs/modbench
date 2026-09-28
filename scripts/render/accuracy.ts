@@ -9,7 +9,8 @@
 //
 //   npx tsx scripts/render/accuracy.ts [--out <dir>]     (--out also writes the composites)
 //
-// Env: CHROME (default: the macOS Google Chrome app). Needs `git lfs pull`
+// Env: CHROME (default: the macOS Google Chrome app; on Windows e.g.
+// "C:\Program Files\Google\Chrome\Application\chrome.exe"). Needs `git lfs pull`
 // (layers, check renders, the scripts/3d-test/out prints).
 
 import { spawn } from "node:child_process";
@@ -110,7 +111,8 @@ const finished = new Promise<void>((done) => {
   server.listen(0, () => {
     const port = (server.address() as { port: number }).port;
     const profile = mkdtempSync(path.join(tmpdir(), "accuracy-"));
-    const chrome = spawn(CHROME, ["--headless=new", `--user-data-dir=${profile}`, "--use-angle=metal", "--enable-gpu", "--ignore-gpu-blocklist", "--no-first-run", `http://localhost:${port}/`], { stdio: "ignore" });
+    const angle = process.platform === "darwin" ? ["--use-angle=metal"] : []; // elsewhere: Chrome's default backend
+    const chrome = spawn(CHROME, ["--headless=new", `--user-data-dir=${profile}`, ...angle, "--enable-gpu", "--ignore-gpu-blocklist", "--no-first-run", `http://localhost:${port}/`], { stdio: "ignore" });
     chrome.on("exit", () => rmSync(profile, { recursive: true, force: true, maxRetries: 5 }));
     server.on("close", () => chrome.kill());
   });

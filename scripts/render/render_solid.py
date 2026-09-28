@@ -54,6 +54,10 @@ def texf(stem, default):
         return default
     return f"{stem}-{t}.png"
 DIMS = json.loads(os.environ.get("CASE_DIMS", '{"caseDiameter": 42.5, "lugWidth": 22.0, "aperture": 28.5}'))
+# Crown at 3 o'clock / no crown guard, from the case's title (shape-keys.ts).
+# Separate from CASE_DIMS so layers other than the case can share one render.
+DIMS["crownAngle"] = 90.0 if os.environ.get("CASE_CROWN") == "3" else geo.CROWN_ANGLE
+DIMS["guard"] = os.environ.get("CASE_GUARD") != "0"
 
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 # Every setting that decides the pixels (render-config.json); env vars override per job.
@@ -279,14 +283,19 @@ boolean(under, prism("keep", circle(R + 0.02, 512), -6, LUG_UNDER + 1))
 boolean(case, under)
 
 # Spring-bar holes through each lug, at the centre of the tip radius.
+# Drilled through each lug only: one full-width drill also grooved the case
+# body between the lugs once the tips grew longer (2026-09-28).
 tip_cy = (DIMS["caseDiameter"] + 2 * geo.LUG_OVERHANG_MM) / 2 - geo.LUG_TIP_MM / 2
+lug_in = DIMS["lugWidth"] / 2 - 0.2
+lug_out = DIMS["lugWidth"] / 2 + geo.LUG_ROOT_MM + 1.0
 for sy in (1, -1):
-    hole = prism("hole", circle(HOLE_R, 32), -30, 30)
-    for v in hole.data.vertices:
-        x, y, z = v.co
-        v.co = (z, y + sy * tip_cy, x + LUG_UNDER + 1.3)
-    hole.data.update()
-    boolean(case, hole)
+    for sx in (1, -1):
+        hole = prism("hole", circle(HOLE_R, 32), lug_in, lug_out)
+        for v in hole.data.vertices:
+            x, y, z = v.co
+            v.co = (sx * z, y + sy * tip_cy, x + LUG_UNDER + 1.3)
+        hole.data.update()
+        boolean(case, hole)
 smooth(case)
 
 caseback = prism("caseback", circle(R - 1.2), -CASEBACK, 0.0)
@@ -313,7 +322,7 @@ stem = prism("stem", circle(1.4, 48), -1.6, 0.1)
 for ob in (crown, stem):
     ob.rotation_euler = (0, math.pi / 2, 0)              # local +z -> world +x
     ob.location = (0, 0, 0)
-d = math.radians(geo.CROWN_ANGLE)
+d = math.radians(DIMS["crownAngle"])
 for ob in (crown, stem):
     ob.rotation_euler = (0, math.pi / 2, math.pi / 2 - d)
     ob.location = (R * math.sin(d), R * math.cos(d), Z_TOP * 0.5)

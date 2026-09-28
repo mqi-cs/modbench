@@ -118,6 +118,11 @@ const CASE_INTEGRATED_BEZEL = /^NMK9(26|3[1678]|52|55|58)\b/;
 // and "Square Case" (square), "Nautilus" (octagonal), "Tuna" (a shroud round
 // the body), "Turtle" (cushion). The 3D preview draws one round SKX outline,
 // so it can't show these (lib/render/scene.ts; 2026-09-28).
+// Crown position and crown guard, as the vendor's title states them: "3
+// O'Clock", "3H" (crown at 3, not the SKX's 3.8); "No Crown Guard", "NCG".
+// Drawing only (the 3D outline) -- the engine's crownPosition is untouched.
+const CASE_CROWN_AT_THREE = /3 ?o'?clock|\b3H\b/i;
+const CASE_NO_CROWN_GUARD = /no crown guard|\bNCG\b/i;
 const CASE_OUTLINE: [string, RegExp][] = [
   ["square", /\bB&R\b|\bsquare\b/i],
   ["octagonal", /nautilus|royal oak/i],
@@ -268,6 +273,8 @@ function main() {
         separateChapterRingExcluded: CASE_EXCLUDES_SEPARATE_CHAPTER_RING.test(p.name) ? true : null,
         integratedBezel: CASE_INTEGRATED_BEZEL.test(p.name) ? true : null,
         outline: CASE_OUTLINE.find(([, re]) => re.test(p.name))?.[0] ?? null,
+        crownAtThree: CASE_CROWN_AT_THREE.test(p.name) ? true : null,
+        noCrownGuard: CASE_NO_CROWN_GUARD.test(p.name) ? true : null,
         requiresSpacerFor: (existing.requiresSpacerFor as string[] | undefined) ?? [],
       };
       db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();

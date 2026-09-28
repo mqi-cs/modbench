@@ -49,6 +49,8 @@ exact product.
 | `case.separateChapterRingExcluded` | 4 | body_html: *"Fits all SKX007/SRPD parts … except Chapter Ring"* (NMK941, 2026-09-28) |
 | `case.integratedBezel` | 16 | body_html: *"integrated bezel and chapter ring (rehaut)"* (2026-09-28) |
 | `case.outline` | 51 | title: *"B&R"*, *"Square Case"*, *"Nautilus"*, *"Tuna"*, *"Turtle"* (2026-09-28) |
+| `case.crownAtThree` | 50 | title: *"3 O'Clock"*, *"3H"* -- drawing only; `crownPosition` untouched (2026-09-28) |
+| `case.noCrownGuard` | 32 | title: *"No Crown Guard"*, *"NCG"* (2026-09-28) |
 | `strap.vendorScopedTo` | 12 | body_html: *"Fits Lucius Atelier cases only"* |
 | `dial.incompatibleCaseFamilies` | 3 | body_html: *"Not compatible with SKX013, SKX015 and SKX017"* |
 
