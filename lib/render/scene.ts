@@ -35,7 +35,7 @@ export interface SceneInput {
 export type Scene = { ok: true; layers: Layer[]; labels: string[] } | { ok: false; reason: string };
 
 const SLOT_OF_LAYER: Record<string, string> = { dial: "dial", date: "dial", ring: "chapterRing", insert: "bezelInsert", hands: "hands", strap: "strap" };
-const NAMES: Record<string, string> = { dial: "Dial", date: "Date wheel", ring: "Chapter ring", insert: "Insert", hands: "Hands", strap: "Strap", crown: "Crown" };
+const NAMES: Record<string, string> = { dial: "Dial", date: "Date wheel", ring: "Chapter ring", insert: "Insert", hands: "Hands", strap: "Strap", crown: "Crown", bezel: "Bezel", crystal: "Crystal" };
 
 export function resolveScene({ index, view, parts, prints }: SceneInput): Scene {
   const caseId = parts.case;
