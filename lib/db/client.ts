@@ -4,7 +4,8 @@ import { mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import * as schema from "./schema";
 
-const DB_PATH = "./data/modbench.db";
+// Tests that write point this at a throwaway copy (lib/__tests__/temp-db.ts).
+const DB_PATH = process.env.MODBENCH_DB ?? "./data/modbench.db";
 
 mkdirSync(dirname(DB_PATH), { recursive: true });
 
