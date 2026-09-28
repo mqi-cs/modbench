@@ -544,6 +544,20 @@
       "source": "https://namokimods.com/products/nmk941-gmt-sub-case-steel-finish-nh34-compatible",
       "sourceQuote": "namokimods, NMK941 GMT Sub SKX007/SRPD Watch Case Mk 2 listing: \"Integrated brushed chapter ring (rehaut)\" and \"Fits all SKX007/SRPD parts including SKX007 bracelets except Chapter Ring\".",
       "notes": "WS2c follow-up, 2026-09-28. A case with the chapter ring built in, plus a separate SKX007 ring the vendor says it doesn't take."
+    },
+    {
+      "id": "bad-024",
+      "expected": "blocked",
+      "evidences": [
+        "integrated-bezel"
+      ],
+      "parts": {
+        "case": "Namoki NMK926 Nautilus SKX007/SPRD Watch Case Bundle: Polished Finish",
+        "bezelInsert": "Namoki SKX007/SRPD Steel Bezel Insert: Vintage U1 Black"
+      },
+      "source": "https://namokimods.com/products/nmk926-nautilus-skx-watch-case-polished",
+      "sourceQuote": "namokimods, NMK926 Nautilus SKX007 Watch Case Bundle listing: \"it comes with an integrated bezel and brushed rehaut\" and \"Parts Compatibility: Fits all SKX007 Crowns and SKX casebacks and is compatible with all our existing dials and hands\" -- no bezel or insert, where the same vendor's other SKX cases list \"Bezels, Bezel Inserts\".",
+      "notes": "WS2c follow-up, 2026-09-28 (D19e). Before this rule, family matching said an SKX007 insert fits this case."
     }
   ]
 }

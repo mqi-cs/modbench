@@ -35,7 +35,7 @@ export function FirstBuild({
     <section className="border-b border-rule bg-card px-6 py-6" aria-label="First build">
       <h2 className="text-[17px] font-semibold tracking-tight">Never built a watch? Start here</h2>
       <p className="mt-1 max-w-[70ch] text-[13px] text-graphite">
-        Six choices (seven if your case needs a chapter ring), and every option shown already fits what you&rsquo;ve picked. We choose the movement for you.
+        Six choices, and every option shown already fits what you&rsquo;ve picked. We choose the movement for you.
       </p>
 
       {!style ? (

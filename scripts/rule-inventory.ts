@@ -61,6 +61,7 @@ const CHECKS: Record<string, [string, string]> = {
   "requires-chapter-ring": ["case needs a chapter ring it doesn't include", "case.requiresChapterRing (A)"],
   "bracelet-vendor-scope": ["bracelet fits one maker's cases only", "strap.vendorScopedTo (A) + listing vendor"],
   "integrated-chapter-ring": ["separate ring in a case with the ring built in (rehaut)", "case.separateChapterRingExcluded (A); otherwise warns"],
+  "integrated-bezel": ["separate insert or bezel in a case with the bezel built in", "case.integratedBezel (A)"],
   "chapter-ring-unstated": ["no ring, and the case doesn't say whether it needs one (warning)", "cannot block"],
 };
 

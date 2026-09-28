@@ -28,6 +28,7 @@ import { insertCrystalProfileFit } from "../rules/insert-crystal-profile-fit";
 import { dialCaseModelExclusion } from "../rules/dial-case-model-exclusion";
 import { integratedChapterRing } from "../rules/integrated-chapter-ring";
 import { chapterRingUnstated } from "../rules/chapter-ring-unstated";
+import { integratedBezel } from "../rules/integrated-bezel";
 
 const NH35 = { caliber: "NH35", hasDay: false, hasDate: true, dateWindowPosition: null };
 const NH36 = { caliber: "NH36", hasDay: true, hasDate: true, dateWindowPosition: null };
@@ -393,6 +394,18 @@ describe("integrated-chapter-ring", () => {
   it("is silent without a separate ring, or on a case without a built-in one", () => {
     expect(run(integratedChapterRing, [part("case", "skx007-case", { ...SKX007_CASE, integratedChapterRing: true })])).toHaveLength(0);
     expect(run(integratedChapterRing, [part("case", "skx007-case", SKX007_CASE), RING])).toHaveLength(0);
+  });
+});
+
+describe("integrated-bezel", () => {
+  it("errors on a separate insert or bezel in a case whose bezel is built in", () => {
+    const c = part("case", "skx007-case", { ...SKX007_CASE, integratedBezel: true });
+    expect(severities(run(integratedBezel, [c, part("bezelInsert", "skx007-insert")]))).toEqual(["error"]);
+    expect(severities(run(integratedBezel, [c, part("bezelInsert", "skx007-insert"), part("bezel", "skx007-bezel")]))).toEqual(["error", "error"]);
+  });
+  it("is silent on an ordinary case, or with no insert or bezel", () => {
+    expect(run(integratedBezel, [part("case", "skx007-case", SKX007_CASE), part("bezelInsert", "skx007-insert")])).toHaveLength(0);
+    expect(run(integratedBezel, [part("case", "skx007-case", { ...SKX007_CASE, integratedBezel: true })])).toHaveLength(0);
   });
 });
 

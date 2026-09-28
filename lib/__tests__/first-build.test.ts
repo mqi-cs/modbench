@@ -67,21 +67,24 @@ describe("first-build mode, over the live catalog", () => {
     }
   });
 
-  it("asks for a chapter ring only when the case states it needs one, and then offers dials again", () => {
-    // bad-022's case: "Chapter Rings SKX013-spec (required, sold separately)".
-    const ringCase = Object.values(catalog.parts).find((p) => p.name === "SKX013 Watch Case - 38mm (DLC BLACK EDITION) [NH34-Ready]")!;
-    expect(ringCase.attributes.requiresChapterRing).toBe(true);
-    const style = FIRST_BUILD_STYLES[3]!;
-    const build: Build = { parts: { case: ringCase.id } };
-    expect(firstBuildSteps(build, catalog).map((s) => s.slot)).toContain("chapterRing");
-    expect(firstBuildSteps({ parts: { case: suggestFirstBuild(catalog, style).parts.case } }, catalog).map((s) => s.slot)).not.toContain("chapterRing");
+  it("never offers a case that needs a chapter ring: it would be a 7th part", () => {
+    const required = Object.values(catalog.parts).filter((p) => p.slot === "case" && p.attributes.requiresChapterRing === true);
+    expect(required.length).toBe(22);
+    const offered = new Set(firstBuildOptions("case", { parts: {} }, catalog, FIRST_BUILD_STYLES[3]!, 10_000).map((o) => o.partId));
+    expect(required.filter((p) => offered.has(p.id))).toEqual([]);
+  });
+
+  it("skips the insert on a case whose bezel is built in, and finishes with zero errors", () => {
+    const nautilus = Object.values(catalog.parts).find((p) => p.name === "NMK926 Nautilus SKX007/SPRD Watch Case Bundle: Polished Finish")!;
+    const build: Build = { parts: { case: nautilus.id } };
+    expect(firstBuildSteps(build, catalog).map((s) => s.slot)).not.toContain("bezelInsert");
     for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
-      const top = firstBuildOptions(step.slot, build, catalog, style)[0];
+      const top = firstBuildOptions(step.slot, build, catalog, FIRST_BUILD_STYLES[3]!)[0];
       expect(top, `no options for ${step.slot}`).toBeDefined();
       build.parts[step.slot] = top!.partId;
     }
     expect(evaluateBuild(build, catalog).findings.filter((f) => f.severity === "error")).toEqual([]);
-    expect(Object.keys(build.parts)).toHaveLength(FIRST_BUILD_MAX_PARTS + 1); // the ring is the 7th part
+    expect(Object.keys(build.parts)).toHaveLength(FIRST_BUILD_MAX_PARTS - 1);
   });
 
   // WS2c follow-up, Step 2: every prefix of the guided order, on the SKX

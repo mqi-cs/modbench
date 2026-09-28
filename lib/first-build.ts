@@ -3,8 +3,9 @@
 // hands, strap -- with the movement filled in, and the engine run on every
 // step: an option is offered only if the build so far plus that part has
 // zero errors. Target, set before building (owner, 2026-09-26): at most 6
-// parts, inclusive. The insert step (2026-09-28) takes a build to exactly 6;
-// a case that states it needs a chapter ring adds a 7th.
+// parts, inclusive. The insert step (2026-09-28) takes a build to exactly 6,
+// so cases that state they need a chapter ring (a 7th part) aren't offered
+// (owner, 2026-09-28).
 //
 // Pure. Style ranks the options, never filters them, so no style can leave a
 // step empty. Kit preferences (crystal pre-installed, sold as a kit) wait
@@ -31,26 +32,24 @@ export const FIRST_BUILD_STYLES: FirstBuildStyle[] = [
 
 /**
  * Order of the steps: outside in, as the preview builds up (WS2c follow-up,
- * 2026-09-28) -- case, insert, chapter ring, dial, hands, strap. The
- * movement is picked for the user, after the dial, so the engine can match
- * it to the dial's day and date windows. The chapter ring is a step only
- * when the case says it needs one (firstBuildSteps). Six parts, or seven
- * with that ring.
+ * 2026-09-28) -- case, insert, dial, hands, strap. The movement is picked
+ * for the user, after the dial, so the engine can match it to the dial's
+ * day and date windows. The insert is skipped on a case whose bezel is
+ * built in (firstBuildSteps).
  */
 export const FIRST_BUILD_STEPS: { slot: SlotKey; auto: boolean; label: string }[] = [
   { slot: "case", auto: false, label: "Case" },
   { slot: "bezelInsert", auto: false, label: "Bezel insert" },
-  { slot: "chapterRing", auto: false, label: "Chapter ring" },
   { slot: "dial", auto: false, label: "Dial" },
   { slot: "movement", auto: true, label: "Movement" },
   { slot: "hands", auto: false, label: "Hands" },
   { slot: "strap", auto: false, label: "Strap" },
 ];
 
-/** The steps that apply so far: the chapter ring only if the chosen case states it needs one. */
+/** The steps that apply so far: no insert on a case whose bezel is built in (integrated-bezel). */
 export function firstBuildSteps(build: Build, catalog: CatalogSlice): typeof FIRST_BUILD_STEPS {
   const caseP = build.parts.case ? catalog.parts[build.parts.case] : undefined;
-  return FIRST_BUILD_STEPS.filter((s) => s.slot !== "chapterRing" || caseP?.attributes.requiresChapterRing === true);
+  return FIRST_BUILD_STEPS.filter((s) => s.slot !== "bezelInsert" || caseP?.attributes.integratedBezel !== true);
 }
 
 export interface FirstBuildOption {
@@ -98,7 +97,7 @@ export const forOtherMovement = (name: string, attributes: Record<string, unknow
   attributes.gmt === true || attributes.hasSubdials === true || /\bgmt\b|\bnh34\b|\bchrono|\bvk\d*\b/i.test(name);
 
 function eligible(slot: SlotKey, name: string, attributes: Record<string, unknown>): boolean {
-  if (slot === "case") return !isCaseComponent(name);
+  if (slot === "case") return !isCaseComponent(name) && attributes.requiresChapterRing !== true;
   if (slot === "hands") return !isHandComponent(name) && !forOtherMovement(name, attributes);
   if (slot === "dial") return !forOtherMovement(name, attributes);
   if (slot === "movement") {
