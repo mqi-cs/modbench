@@ -743,38 +743,38 @@ WS2a's ~15 s per job (~10 s scene build + ~5 s render, D12a) about 19 min
 of wall time, plus ~50 s first-compile. Then a scene branch and a label.
 
 **b. No hands or strap stand-ins** (owner). *Restore signal:* a measured
-failure. **It has fired, see c.**
+failure. It fired (c), and was answered by fixing the render, not with a
+stand-in; still none needed.
 
-**c. The hands' shadow is baked into the dial surface pass.** Hands are
-hidden from the camera in the dial layer but still cast shadow, so a
-build without hands shows a hand-shaped shadow on the dial: top view,
-8,414 px of the hands' footprint over 20% darker than the rest of a clay
-dial (2,846 with hands drawn); 16 of 32 V1 subsets per view. Present on
-develop. A possible second effect, unverified: with hands drawn, the
-hands layer's shadow catcher adds the shadow again (compare §17 4a,
-composite darker than the reference on 81% of V1's worst pixels).
-*Restore signal:* owner's choice between a hands stand-in (0 renders) and
-hiding the hands from the dial and date layers in `render_solid.py`.
-*Cost:* the stand-in S; the render fix is S in code plus 8 matte surface
-jobs, but it changes pixels, so `sourceFingerprint` and
-`referenceRenderer.revision` move (owner's call).
+**c. Resolved 2026-09-28 (b88c6cc) — the hands' shadow was baked into the
+dial pass, and drawn twice on complete builds.** Confirmed on V1 without
+rendering: in the shadow the composite was 7.3 levels darker than the
+full render, and the composite without hands already matched it (+0.9).
+Hands are now hidden in the dial and date layers (revision 2,
+owner-approved); all 24 dial/date surface jobs re-rendered (matte, Metal),
+the other 312 adopted. After: no-hands shadow 0 px; V1 shadow −2.3,
+pixels over 8 levels too dark 6,316 → 1,289.
 
 **d. Exploded view** (owner, out of scope). *Restore signal:* a shop or
 user asks to see how the parts stack. *Cost:* M.
 
 **e. Cases with a built-in bezel** (16, `integratedBezel`) aren't drawn in
-3D, and the engine doesn't flag a separate bezel or insert on them.
-*Restore signal:* a build pairs an insert with one of them. *Cost:* S, a
-rule plus a quoted bad build if a vendor states an insert won't fit.
+3D. The engine part is resolved 2026-09-28 (b8472ee): `integrated-bezel`
+errors on a separate insert or bezel (bad-024; 16,240 pairs blocked that
+family matching passed), and first-build skips the insert on them.
+*Restore signal (3D only):* a pilot shop sells these cases. *Cost:* L, a
+new case outline (paid setup job, WS7).
 
 **f. A built-in ring is drawn with the generic white printed ring**, while
 the vendors describe a brushed rehaut; labelled "generic print … not this
 case's own design". *Restore signal:* a user or shop points at it.
 *Cost:* S, a plain brushed print.
 
-**g. `chapter-ring-unstated` warns on every ring-less build of a case that
-doesn't say** (370 approved cases). In the rule inventory, case × dial
-pairs judged clean fell from 91.6% to 6.9%. No vendor says a ring is
+**g. `chapter-ring-unstated` warns once on a ring-less build of a case that
+doesn't say** (310 of 363 approved cases). Reworked 2026-09-28 (owner,
+b69bfff): no ring chosen and none built in, once per build, fix names the
+ring to add, no longer tied to the dial; case × dial pairs judged clean
+6.9% → 90.8%. No vendor says a ring is
 optional: DLW lists it under "Complete your mod with", namokimods under
 "Fits all … Chapter Rings", Watch & Style under "sold separately" (two
 Samurai conversion cases, RC0683/RC0684, say "All you need are the insert,
@@ -783,21 +783,21 @@ glass, and chapter ring" -- read as a shopping list, not a requirement).
 `requiresChapterRing: false` for that line), or the warning count
 becomes a complaint. *Cost:* S per vendor line.
 
-**h. First builds on a case that needs a ring have 7 parts**, one over
-WS3's limit of 6 (22 luciusatelier cases, none drawn in 3D). Before the
-ring step they dead-ended at the dial. *Restore signal:* owner's call on
-the WS3 measure. *Cost:* S either way (allow 7, or drop those cases from
-first-build).
+**h. Resolved 2026-09-28 (owner, b8472ee) — the 22 cases that need a
+chapter ring aren't offered in first-build**, so first builds stay at 6
+parts; the ring step is gone. *Restore signal for offering them:* a
+first-build limit above 6. *Cost:* S (the ring step is in git history,
+2407f81).
 
-**i. `public/render/layers/index.json` still lists the 37 casebacks
-rejected on 2026-09-28** (not selectable, so not shown). *Restore signal:*
-the next `scripts/render/run.ts` run, which rewrites it. *Cost:* 0.
+**i. Resolved 2026-09-28 (b88c6cc)** — the revision-2 run rewrote the
+index; the 37 rejected casebacks are gone from it.
 
-**j. V1–V3 accuracy isn't reproducible to the §17 numbers.** The §17 tool
-wasn't committed; a rebuilt harness (same compositor, same layers) gives
-V1 1.11 / 21, V2 1.50 / 21, V3 0.83 / 13 against 1.13 / 27, 1.50 / 22,
-0.81 / 15 -- on develop and on this branch alike. *Restore signal:* the
-next accuracy claim. *Cost:* S, commit a measurement script.
+**j. Resolved 2026-09-28 — V1–V3 accuracy is reproducible.**
+`scripts/render/accuracy.ts` (4164191). §17's tool was never committed
+and its numbers (1.13/27, 1.50/22, 0.81/15) couldn't be reproduced; this
+script's are the baseline (owner): revision 1 at 4164191 V1 1.11/21,
+V2 1.50/21, V3 0.83/13; revision 2 at b88c6cc V1 0.95/14, V2 1.42/21,
+V3 0.76/10.
 
 ---
 
