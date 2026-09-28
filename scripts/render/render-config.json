@@ -3,13 +3,13 @@
   "referenceRenderer": {
     "//": "Bump revision when a renderer change can alter pixels: every output re-renders. run.ts refuses any other Blender version.",
     "name": "modbench render_solid",
-    "revision": 2,
+    "revision": 3,
     "blender": "4.5.14 LTS"
   },
   "sourceFingerprint": {
     "//": "sha256 (LF-normalised) of the code that decides pixels. NOT hashed into outputs. lib/render/__tests__/render-config.test.ts fails when the code changes: decide whether pixels can change (bump referenceRenderer.revision) or not (only update this), so editing e.g. device selection never silently re-renders -- nor silently keeps stale renders. render_device.py is deliberately excluded.",
     "files": ["scripts/render/render_solid.py", "scripts/render/case_geometry.py", "scripts/render/render_guards.py", "scripts/render/pack-passes.ts"],
-    "sha256": "2bd4cea5a072460a00d86e80de0838d679e6dd2f46849308fd64721719b13e56"
+    "sha256": "92bd7dcc838b86d230652babd7e034bb7d0e528508a7daeddca8cbb11d30de7a"
   },
   "blenderDownload": "https://download.blender.org/release/Blender4.5/",
   "device": {

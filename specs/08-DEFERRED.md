@@ -801,6 +801,35 @@ V3 0.76/10.
 
 ---
 
+## D20 — Top-view look (renderer revision 3, raised 2026-09-28)
+
+The view from above read as an illustration. Shipped (owner chose #2 and #6
+of the lever sheet): an 85 mm lens instead of orthographic (the flanks and
+bezel edge show), and a top-down studio set seen in reflections only (dim
+surround, two strip boxes, an overhead softbox), with stronger brushed
+grain. Diffuse light is unchanged, so prints and lume are lit as before.
+Hero untouched (231 jobs adopted); 105 top-view jobs re-rendered.
+
+**a. Rendered on Metal, not the 3050** (owner, 2026-09-28), against §17's
+rule for glossy renders; 57 of the 105 are glossy (case finishes, straps).
+*Restore signal:* the next 3050 session, or a visible difference reported
+between top and hero metal. *Cost:* ~15 min on OptiX (`run.ts` after
+removing the top-view outputs; nothing else changes).
+
+**b. V2 composite accuracy dropped** from 1.42/21 to 2.36/28 (still inside
+WS2c's MAD ≤ 3, p99 ≤ 30). Not traced. *Restore signal:* a visible seam in
+the top view, or the next accuracy claim. *Cost:* S–M, locate the worst
+pixels as §17 4a did.
+
+**c. Levers not taken yet** (sheet in the owner's temp folder): bigger
+bezel with a wider polished bevel (#4), a curved case top, the case outline
+and crown guards, bracelet link detail, then a wider frame showing the
+whole watch (#1). No drop shadow: a shadow-catcher table greyed the whole
+48 mm frame. *Restore signal:* owner picks the next lever. *Cost:* M–L
+each; geometry changes re-render both views.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like

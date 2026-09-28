@@ -661,7 +661,8 @@ def brushed(name):
     L(tc.outputs["Object"], mp.inputs["Vector"])
     nz = N("ShaderNodeTexNoise"); nz.inputs["Scale"].default_value = 1.0; nz.inputs["Detail"].default_value = 6.0
     L(mp.outputs["Vector"], nz.inputs["Vector"])
-    bp = N("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.12; bp.inputs["Distance"].default_value = 0.01
+    # Stronger grain from above, where the studio light rakes across it.
+    bp = N("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.3 if VIEW in ("top", "topw") else 0.12; bp.inputs["Distance"].default_value = 0.01
     L(nz.outputs["Fac"], bp.inputs["Height"])
     L(bp.outputs["Normal"], b.inputs["Normal"])
     return m
@@ -916,6 +917,48 @@ target.location = (0, 0, Z_TOP * 0.6)
 scene.collection.objects.link(target)
 tr = ko.constraints.new("TRACK_TO"); tr.target = target; tr.track_axis = "TRACK_NEGATIVE_Z"; tr.up_axis = "UP_Y"
 
+# Studio set for the view from above (2026-09-28). Straight down, the tent put
+# the same white in every reflection, so brushed tops came out an even grey
+# and polished flanks as outlines -- an illustration. Instead, a product
+# photographer's top-down set: a dim surround for the metal to reflect as
+# dark, two long strip boxes either side (bright/dark bands down the flanks,
+# a falloff across the tops) and an overhead softbox the camera shoots
+# through (keeps the hands and brushed tops bright). All of it is seen in
+# reflections only; diffuse light is unchanged, so dial prints and lume are
+# lit as before. Every top-view layer uses it, so one full render still
+# matches the composite (accuracy.ts, V2).
+if VIEW in ("top", "topw"):
+    lpw = wn.new("ShaderNodeLightPath")
+    wstr = wn.new("ShaderNodeMix"); wstr.data_type = "FLOAT"
+    wstr.inputs["A"].default_value = wn["Background"].inputs["Strength"].default_value
+    wstr.inputs["B"].default_value = 0.35
+    wl.new(lpw.outputs["Is Glossy Ray"], wstr.inputs["Factor"])
+    wl.new(wstr.outputs["Result"], wn["Background"].inputs["Strength"])
+    strip_e, strip_el = 6.0e4, math.radians(32)
+    for side, e_mul in ((-1, 1.0), (1, 0.7)):
+        sl = bpy.data.lights.new(f"strip{side}", "AREA")
+        sl.shape = "RECTANGLE"
+        sl.size, sl.size_y = 9, 110  # long along 12-6
+        sl.energy = strip_e * e_mul
+        # No shadow: from this low it would cover the frame.
+        sl.use_shadow = False
+        so = bpy.data.objects.new(f"strip{side}", sl)
+        so.visible_diffuse = False
+        so.location = (side * 75 * math.cos(strip_el), 0, 75 * math.sin(strip_el))
+        scene.collection.objects.link(so)
+        st = so.constraints.new("TRACK_TO"); st.target = target; st.track_axis = "TRACK_NEGATIVE_Z"; st.up_axis = "UP_Y"
+    # Overhead softbox the camera shoots through: what flat, upward-facing
+    # metal (brushed tops, the hands) reflects straight back into the lens.
+    ol = bpy.data.lights.new("overhead", "AREA")
+    ol.shape = "DISK"
+    ol.size, ol.energy = 140, 8e4  # 2e5 washed the black insert out
+    ol.use_shadow = False
+    oo = bpy.data.objects.new("overhead", ol)
+    oo.location = (0, 0, 160)
+    scene.collection.objects.link(oo)
+    oo.visible_diffuse = False
+    oo.visible_camera = False
+
 # Crystal presentation extras -- need the key light and target to exist.
 if MODE == "D":
     if os.environ.get("KEY_ON_CRYSTAL", "1") == "0":
@@ -976,6 +1019,13 @@ if VIEW in ("top", "topw"):
     # "topw" pulls back to show the bracelet; "top" is the preview's frame.
     cam.ortho_scale = geo.FRAME_MM if VIEW == "top" else 100
     co_.location = (0, 0, 80)
+    # A real 85 mm lens, not orthographic (2026-09-28): same framing at the
+    # case top, so the flanks, lug sides and bezel edge show toward the
+    # outside and the case has thickness.
+    cam.type = "PERSP"
+    cam.lens = 85
+    fov = 2 * math.atan(cam.sensor_width / (2 * cam.lens))
+    co_.location = (0, 0, Z_TOP + cam.ortho_scale / 2 / math.tan(fov / 2))
     size = CONFIG["output"]["resolution"]["top"] if VIEW == "top" else 1200
 else:
     # Three-quarter, from the crown side and slightly below twelve-six --
