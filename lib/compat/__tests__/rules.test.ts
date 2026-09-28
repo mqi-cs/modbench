@@ -411,13 +411,15 @@ describe("integrated-bezel", () => {
 
 describe("chapter-ring-unstated", () => {
   const DIAL = part("dial", "nh3x-dial-standard", PLAIN_DIAL);
-  it("warns (never errors) when the case doesn't say and the build has a dial but no ring", () => {
-    expect(severities(run(chapterRingUnstated, [part("case", "skx007-case", SKX007_CASE), DIAL]))).toEqual(["warning"]);
+  it("warns once (never errors) when the case doesn't say and no ring is chosen, naming the ring to add", () => {
+    const f = run(chapterRingUnstated, [part("case", "skx007-case", SKX007_CASE), DIAL]) as { severity: string; fix?: string }[];
+    expect(severities(f)).toEqual(["warning"]);
+    expect(f[0]!.fix).toContain("a chapter ring made for the SKX007 line");
+    expect(severities(run(chapterRingUnstated, [part("case", "skx007-case", SKX007_CASE)]))).toEqual(["warning"]);
   });
-  it("is silent with a ring, without a dial, or when the case states it (required or built in)", () => {
+  it("is silent with a ring, or when the case states it (required or built in)", () => {
     const c = part("case", "skx007-case", SKX007_CASE);
     expect(run(chapterRingUnstated, [c, DIAL, part("chapterRing", "skx007-chapter-ring")])).toHaveLength(0);
-    expect(run(chapterRingUnstated, [c])).toHaveLength(0);
     expect(run(chapterRingUnstated, [part("case", "skx007-case", { ...SKX007_CASE, requiresChapterRing: true }), DIAL])).toHaveLength(0);
     expect(run(chapterRingUnstated, [part("case", "skx007-case", { ...SKX007_CASE, integratedChapterRing: true }), DIAL])).toHaveLength(0);
   });

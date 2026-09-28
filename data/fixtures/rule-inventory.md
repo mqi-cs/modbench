@@ -34,7 +34,7 @@ Coverage is the share of approved parts in that slot with the value present. "Ra
 | `dial-movement-size` | dial suits the movement's caliber (skeleton NH7x, unknown caliber) | cannot block | movement.caliber 38.3%; movement case line 0.0% | no | 66834 | 98.6% | 1.4% | 0.0% | 0 | 0 | n/a (cannot block) |
 | `crown-stem-length` | stem may need cutting; irreversible (info) | cannot block | – | no | 98736 | 100.0% | 0.0% | 0.0% | 0 | 0 | n/a (cannot block) |
 | `integrated-chapter-ring` | separate ring in a case with the ring built in (rehaut) | case.separateChapterRingExcluded (A); otherwise warns | case.integratedChapterRing 8.5%; case.separateChapterRingExcluded 1.1% | yes | 137214 | 91.5% | 7.4% | 0.0% | 1512 | 1512 | bad-023 |
-| `chapter-ring-unstated` | no ring, and the case doesn't say whether it needs one (warning) | cannot block | – | no | 488448 | 69.9% | 0.0% | 30.1% | 0 | 0 | n/a (cannot block) |
+| `chapter-ring-unstated` | no ring, and the case doesn't say whether it needs one (warning) | cannot block | case case line 100.0% | no | 137214 | 100.0% | 0.0% | 0.0% | 0 | 0 | n/a (cannot block) |
 | `integrated-bezel` | separate insert or bezel in a case with the bezel built in | case.integratedBezel (A) | case.integratedBezel 4.4% | yes | 595899 | 97.3% | 0.0% | 0.0% | 16240 | 16240 | bad-024 |
 
 `strap-fit`: 3895 pairs differ on lug width; that branch only warns, because the case figure is its line's standard (class C).
@@ -54,7 +54,7 @@ Every approved part in one slot against every approved part in the other, judged
 | case × chapterRing | 137214 | 36.9% | 62.0% | 0.0% | 1.1% | 12.3% | 1.1% |
 | case × crown | 98736 | 42.5% | 1.4% | 0.0% | 56.1% | 1.9% | 57.5% |
 | case × crystal | 29040 | 28.8% | 1.7% | 0.0% | 69.5% | 1.9% | 71.2% |
-| case × dial | 172062 | 7.6% | 0.0% | 85.9% | 6.5% | 94.6% | 6.5% |
+| case × dial | 172062 | 90.8% | 0.0% | 2.6% | 6.5% | 94.6% | 6.5% |
 | case × hands | 157905 | 100.0% | 0.0% | 0.0% | 0.0% | 77.5% | 0.0% |
 | case × movement | 51183 | 23.4% | 0.0% | 0.0% | 76.6% | 1.9% | 76.6% |
 | case × strap | 91476 | 19.3% | 10.9% | 53.5% | 16.4% | 73.5% | 23.0% |
@@ -65,5 +65,5 @@ Every approved part in one slot against every approved part in the other, judged
 | dial × hands | 206190 | 100.0% | 0.0% | 0.0% | 0.0% | 98.7% | 0.0% |
 | dial × movement | 66834 | 0.2% | 9.9% | 86.3% | 3.7% | 94.5% | 3.7% |
 | hands × movement | 61335 | 34.0% | 4.3% | 61.7% | 0.0% | 77.0% | 0.0% |
-| **all pairs** | **2112036** | **55.6%** | **5.3%** | **24.0%** | **15.1%** | | |
+| **all pairs** | **2112036** | **62.4%** | **5.3%** | **17.2%** | **15.1%** | | |
 
