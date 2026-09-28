@@ -70,13 +70,13 @@
       "expected": "not-blocked",
       "parts": {
         "movement": "Seiko (TMI) NH35 Automatic Movement - Date @ 6H (White)",
-        "case": "Lucius Atelier SKX Solid Caseback - Silver Mirror Polished",
+        "case": "DLW Case - SKX007 Classic - Polished Steel (With Case Back)",
         "dial": "Namoki Watch Dial: 556 White",
         "hands": "Namoki Watch Hands: Syringe Silver",
         "bezelInsert": "DLW Sapphire Insert - SKX Dual Time Racing Green X White - Luminous Green"
       },
       "source": "https://luciusatelier.com/products/skx-solid-caseback-silver-mirror-polished",
-      "notes": "Uses the audited caseback row (medium confidence -- caseback thread compatibility across SKX007/013 shells is a vendor-tag claim, not independently confirmed) standing in for the case slot, since it's the only case-category audit row explicitly tagged for a generic SKX007 shell rather than a specific finish. Case/dial/hands/insert combination otherwise straightforward skx007-case family."
+      "notes": "Case/dial/hands/insert combination straightforward skx007-case family. Case was the audited caseback row standing in for the case slot until 2026-09-28, when casebacks were rejected from the case slot (every rule judged one as a whole case); now a DLW SKX007 case sold with its caseback."
     },
     {
       "id": "reg-007",
@@ -252,13 +252,13 @@
       "expected": "not-blocked",
       "parts": {
         "movement": "NH36 Movement - Black",
-        "case": "Lucius Atelier SKX Solid Caseback - Silver Mirror Polished",
+        "case": "DLW Case - SKX007 Classic - Polished Steel (With Case Back)",
         "dial": "DLW Dial - Reverse Sub - Sterile - No Date",
         "hands": "DLW Hands - Sumo",
         "bezelInsert": "DLW Ceramic Insert - 007 GMT COKE"
       },
       "source": "https://dlwwatches.com/products/dial-reverse-sub-sterile-no-date",
-      "notes": "All 5 audited. Uses the caseback row for the case slot (medium confidence, same caveat as good-006). Sterile dial under a day-date NH36 leaves BOTH day and date function inert -- benign cosmetically but worth a Phase 2 info-level note ('day-date movement, dial has no day/date window') even though it isn't a blocking error."
+      "notes": "All 5 audited. Case swapped 2026-09-28 from the caseback row to a DLW SKX007 case sold with its caseback, as reg-006. Sterile dial under a day-date NH36 leaves BOTH day and date function inert -- benign cosmetically but worth a Phase 2 info-level note ('day-date movement, dial has no day/date window') even though it isn't a blocking error."
     }
   ],
   "badBuilds": [

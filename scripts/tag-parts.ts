@@ -24,7 +24,9 @@
 
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import type { ShopifyProduct } from "../lib/vendor-feed-schema";
-import { checkOutOfScope, isMovementAccessory, resolveCaseModelPrefix } from "../lib/listing-text";
+import { checkOutOfScope, isCaseback, isMovementAccessory, resolveCaseModelPrefix } from "../lib/listing-text";
+
+const CASEBACK_REASON = "a caseback, not a case -- there is no caseback slot, and in the case slot every rule judged it as a whole case";
 
 interface TaggedEntry {
   sourceUrl: string;
@@ -687,7 +689,10 @@ function main() {
 
   for (const v of vendors) {
     const products = loadProducts(v.key);
-    const { tagged, rejected, unmatched } = v.fn(products);
+    const { tagged: all, rejected, unmatched } = v.fn(products);
+    // Every vendor's branches can land a caseback in the case slot; one pass here.
+    const tagged = all.filter((t) => t.category !== "case" || !isCaseback(t.name));
+    for (const t of all) if (!tagged.includes(t)) rejected.push({ sourceUrl: t.sourceUrl, productName: t.name, reason: CASEBACK_REASON });
     writeFileSync(`data/tagged/${v.key}.json`, JSON.stringify(tagged, null, 2));
     writeFileSync(`data/tagged/${v.key}-rejected.json`, JSON.stringify(rejected.map((r) => ({ ...r, vendorKey: v.key })), null, 2));
     console.log(`${v.key}: ${tagged.length} tagged, ${rejected.length} rejected, ${unmatched.length} unmatched (from ${products.length} raw products)`);

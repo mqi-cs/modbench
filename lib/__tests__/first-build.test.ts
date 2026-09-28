@@ -3,7 +3,8 @@ import { evaluateBuild } from "../compat";
 import { buildCatalogSlice } from "../compat/__tests__/test-catalog";
 import type { Build } from "../compat/types";
 import { assemblyPlan } from "../assembly";
-import { CASE_COMPONENT, FIRST_BUILD_MAX_PARTS, FIRST_BUILD_STYLES, firstBuildOptions, firstBuildSteps, isHandComponent, nextFirstBuildStep, suggestFirstBuild } from "../first-build";
+import { FIRST_BUILD_MAX_PARTS, FIRST_BUILD_STYLES, firstBuildOptions, firstBuildSteps, isCaseComponent, isHandComponent, nextFirstBuildStep, suggestFirstBuild } from "../first-build";
+import { isCaseback } from "../listing-text";
 import { readFileSync } from "node:fs";
 import { resolveScene, type RenderIndex } from "../render/scene";
 import { printsFor } from "../render/prints";
@@ -15,6 +16,20 @@ describe("isHandComponent", () => {
     expect(isHandComponent("GMT Hand - Snowflake")).toBe(true);
     expect(isHandComponent("Watch Hands: Baton Black Finish + Red Seconds Hand")).toBe(false);
     expect(isHandComponent("Watch Hands: Syringe Silver")).toBe(false);
+  });
+});
+
+describe("isCaseComponent / isCaseback", () => {
+  it("keeps a case that lists its caseback or bezel, and drops the caseback sold alone", () => {
+    for (const n of ["Case - SKX007 Sub - Polished Steel (With Case Back)", "NMK917 Pilot SRPE Watch Case Bundle w Coil Bezel: Polished Finish", "RC1427 SKX007 Replacement Case - Sandblasted Titanium - MM Bezel"]) {
+      expect(isCaseComponent(n), n).toBe(false);
+      expect(isCaseback(n), n).toBe(false);
+    }
+    for (const n of ["SKX Slim Caseback: Gold Finish", "C0367 SKX007 Sterile Case Back - NH Movement"]) {
+      expect(isCaseComponent(n), n).toBe(true);
+      expect(isCaseback(n), n).toBe(true);
+    }
+    expect(isCaseComponent("SKX007 Crystal Gasket")).toBe(true);
   });
 });
 import { deriveTools } from "../compat/tools";
@@ -104,7 +119,7 @@ describe("first-build mode, over the live catalog", () => {
         expect(["NH35", "NH36"]).toContain(catalog.parts[o.partId]!.attributes.caliber);
       }
       for (const o of firstBuildOptions("case", { parts: {} }, catalog, style, 50)) {
-        expect(o.name, "a case component was offered as a case").not.toMatch(CASE_COMPONENT);
+        expect(isCaseComponent(o.name), `a case component was offered as a case: ${o.name}`).toBe(false);
       }
       for (const o of firstBuildOptions("hands", { parts: { case: b.parts.case, movement: b.parts.movement } }, catalog, style, 50)) {
         expect(isHandComponent(o.name), `a hand component was offered as a set: ${o.name}`).toBe(false);

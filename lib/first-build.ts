@@ -68,8 +68,13 @@ const tagsOf = (a: Record<string, unknown>) => (Array.isArray(a.styleTags) ? (a.
  * Case-slot parts that are components, not a case you can build in. The
  * engine doesn't reject them (no rule says a caseback isn't a case), so a
  * caseback in the case slot evaluates clean; shared with lib/suggest.ts.
+ * A name that names a case is a case, whatever else it lists: "Case - SKX007
+ * Sub - Polished Steel (With Case Back)", "Case Bundle w Coil Bezel" (110
+ * approved cases the bare pattern turned away, 2026-09-28).
  */
 export const CASE_COMPONENT = /caseback|case back|gasket|tube|bezel|insert|ring|spacer/i;
+export const isCaseComponent = (name: string) =>
+  CASE_COMPONENT.test(name) && !/\bcase\b(?!\s*back)/i.test(name.replace(/\(with case ?back\)/i, ""));
 
 /**
  * Movements a first build is offered: the three-hand automatics every
@@ -93,7 +98,7 @@ export const forOtherMovement = (name: string, attributes: Record<string, unknow
   attributes.gmt === true || attributes.hasSubdials === true || /\bgmt\b|\bnh34\b|\bchrono|\bvk\d*\b/i.test(name);
 
 function eligible(slot: SlotKey, name: string, attributes: Record<string, unknown>): boolean {
-  if (slot === "case") return !CASE_COMPONENT.test(name);
+  if (slot === "case") return !isCaseComponent(name);
   if (slot === "hands") return !isHandComponent(name) && !forOtherMovement(name, attributes);
   if (slot === "dial") return !forOtherMovement(name, attributes);
   if (slot === "movement") {

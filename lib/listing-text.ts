@@ -46,6 +46,14 @@ export function resolveCaseModelPrefix(text: string): string | null {
 // parts always name the part itself ("... Day Wheel Disc", "... Movement
 // Rotor", "... Movement Stem", "... Spacer Ring"), so title-only matching
 // is both sufficient and precise here.
+// A caseback sold on its own ("SKX Slim Caseback", "C0367 SKX007 Sterile Case
+// Back"), not a case that comes with one ("Case - SKX007 Sub - Polished Steel
+// (With Case Back)"). There's no caseback slot, and in the case slot every
+// rule judged one as a whole SKX case (WS2c follow-up, 2026-09-28).
+export function isCaseback(title: string): boolean {
+  return /case ?back/i.test(title) && !/with case ?back/i.test(title);
+}
+
 export function isMovementAccessory(title: string): boolean {
   return /day.?wheel|date.?wheel|\brotor\b|\bbridge\b|corrector|\bwheel\b|washer|\bscrews?\b|\bbarrel\b|mainspring|\bc clip\b|\bsnap\b|\bspacer\b|\bpinion\b|\bgasket\b|movement stem|\bstem\b|holding spacer/i.test(title);
 }
