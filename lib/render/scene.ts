@@ -9,7 +9,7 @@
 // approximated, and that metal finishes aren't shown.
 
 import type { Layer } from "./compositor";
-import { PLACEHOLDER, STANDIN_KEYS, STANDIN_PRINT, type RingStatus } from "./standins";
+import { PLACEHOLDER, STANDIN_KEYS, STANDIN_PRINT, ringStatus, type RingStatus } from "./standins";
 
 export interface RenderIndex {
   order: string[];
@@ -31,9 +31,17 @@ export interface SceneInput {
   /** slot -> part id, as in a Build. */
   parts: Partial<Record<string, string>>;
   prints: Partial<Record<"dial" | "date" | "ring" | "insert", Print>>;
-  /** What the case's vendor says about a chapter ring (standins.ts ringStatus). Default: unstated. */
-  ring?: RingStatus;
+  /** The case's catalog attributes: its chapter ring (standins.ts ringStatus) and whether its bezel is built in. */
+  caseAttributes?: Record<string, unknown>;
 }
+
+/**
+ * Case shapes checked by eye in 3D (WS2c: SKX 42.5 and 43.8 mm). Anything
+ * else falls back to the diagram: on 36, 37.8, 38 and 39.5 mm the insert
+ * vanishes or is a sliver (08-DEFERRED D12f), and a shape rendered since
+ * hasn't been checked.
+ */
+export const CHECKED_CASE_SHAPES: ReadonlySet<string> = new Set(["case:round/42.5/22/28.5", "case:round/43.8/22/28.5"]);
 
 export type Scene = { ok: true; layers: Layer[]; labels: string[] } | { ok: false; reason: string };
 
@@ -46,11 +54,14 @@ const RING_WHY: Record<RingStatus, string> = {
   unstated: "none chosen, and the case's vendor doesn't say whether it needs one",
 };
 
-export function resolveScene({ index, view, parts, prints, ring = "unstated" }: SceneInput): Scene {
+export function resolveScene({ index, view, parts, prints, caseAttributes }: SceneInput): Scene {
   const caseId = parts.case;
   if (!caseId) return { ok: false, reason: "no case chosen" };
   const caseEntry = index.parts[caseId];
   if (!caseEntry) return { ok: false, reason: index.notRenderable[caseId] ?? "case not in the render index" };
+  if (!CHECKED_CASE_SHAPES.has(caseEntry.key.split("#")[0]!)) return { ok: false, reason: "this case size isn't checked in 3D yet" };
+  if (caseAttributes?.integratedBezel === true) return { ok: false, reason: "this case's bezel is built in, and its shape isn't modelled in 3D" };
+  const ring = ringStatus(caseAttributes);
   const keyOf = (slot: string) => (parts[slot] ? index.parts[parts[slot]!]?.key : undefined);
   const strapKey = keyOf("strap");
   const paired = Boolean(strapKey) && index.pair.views.includes(view);

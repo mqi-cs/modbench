@@ -108,6 +108,12 @@ const CASE_INTEGRATED_CHAPTER_RING = /^NMK9(12|26|3[1678]|39|4[015]|4[89]|5[0235
 //   "Fits all SKX007/SRPD parts including SKX007 bracelets except Chapter Ring"
 //   -- namokimods, NMK941 GMT Sub SKX007/SRPD Watch Case Mk 2 (4 finishes)
 const CASE_EXCLUDES_SEPARATE_CHAPTER_RING = /^NMK941\b/;
+// The bezel is part of the case too -- no separate bezel or insert:
+//   "integrated bezel and chapter ring (rehaut)" -- NMK926, 931, 936, 937, 938, 952
+//   "integrated fixed bezel and chapter ring (rehaut)" -- NMK955, 958
+// (namokimods body_html). The 3D preview draws a separate SKX bezel, so it
+// can't show these (lib/render/scene.ts).
+const CASE_INTEGRATED_BEZEL = /^NMK9(26|3[1678]|52|55|58)\b/;
 
 // "Fits Lucius Atelier cases only. The end-links are shaped to our case
 // profiles -- this bracelet does not fit generic 20mm lugs or OEM [cases]"
@@ -250,6 +256,7 @@ function main() {
         // CASE_INTEGRATED_CHAPTER_RING.
         integratedChapterRing: CASE_INTEGRATED_CHAPTER_RING.test(p.name) ? true : null,
         separateChapterRingExcluded: CASE_EXCLUDES_SEPARATE_CHAPTER_RING.test(p.name) ? true : null,
+        integratedBezel: CASE_INTEGRATED_BEZEL.test(p.name) ? true : null,
         requiresSpacerFor: (existing.requiresSpacerFor as string[] | undefined) ?? [],
       };
       db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();
