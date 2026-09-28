@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { resolveScene, type RenderIndex } from "../scene";
 import { readFileSync } from "node:fs";
 import { printsFor } from "../prints";
-import { INTEGRATED_RING_PRINT, STANDIN_KEYS, STANDIN_PRINT } from "../standins";
+import { INTEGRATED_RING_PRINT, PLACEHOLDER, STANDIN_KEYS, STANDIN_PRINT } from "../standins";
 
 const C = "case:round/42.5/22/28.5";
 const index: RenderIndex = {
@@ -20,6 +20,10 @@ const index: RenderIndex = {
       ["hero/beauty/hands/" + C + "/hands:sword#steel", "beauty"],
       ["hero/surface/ring/" + C + "/ring:angled", "surface"],
       ["top/surface/ring/" + C + "/ring:angled", "surface"],
+      ["top/surface/dial/" + C + "/dial:disc", "surface"],
+      ["top/surface/insert/" + C + "/insert:flat", "surface"],
+      ["top/beauty/hands/" + C + "/hands:sword#steel", "beauty"],
+      ["top/surface/date/" + C + "/dial:disc", "surface"],
     ].map(([id, pass], i) => [id!, { stem: `s${i}`, pass: pass as "beauty" | "surface" }]),
   ),
   parts: {
@@ -66,7 +70,9 @@ describe("resolveScene", () => {
     expect(s.labels).toContain("Dial not previewed: not in the render index");
     expect(s.labels).toContain("Chapter ring not previewed: case family srp-turtle-case needs its own outline");
     expect(s.labels).toContain("Crystal not previewed: not in the render index");
-    expect(s.layers).toHaveLength(1); // only the case is drawn
+    // The case, plus labelled stand-ins where the dial, ring and insert go.
+    expect(s.layers.map((l) => (l.kind === "surface" ? l.print : l.src))).toEqual([STANDIN_PRINT, STANDIN_PRINT, STANDIN_PRINT, "s1.png"]);
+    expect(s.labels.filter((l) => l.includes("the chosen part can't be previewed · placeholder shape"))).toHaveLength(3);
   });
 
   it("labels an approximated shape with what it really is", () => {
@@ -88,9 +94,9 @@ describe("resolveScene", () => {
   it("blends the held-out case and strap disjointly and the hands in linear light", () => {
     const hero = resolveScene({ index, view: "hero", parts: { case: "case1", strap: "jub", hands: "merc", dial: "dialA" }, prints: { dial: photo("dialA"), date } });
     const top = resolveScene({ index: { ...index, jobs: { ...index.jobs } }, view: "top", parts: { case: "case1", strap: "jub" }, prints: {} });
-    // date, dial, ring (stand-in), hands, case+strap / ring, case, strap
-    expect(hero.ok && hero.layers.map((l) => l.blend ?? "over")).toEqual(["over", "over", "over", "linear", "disjoint"]);
-    expect(top.ok && top.layers.map((l) => l.blend ?? "over")).toEqual(["over", "disjoint", "disjoint"]);
+    // date, dial, ring, hands, insert, case+strap / dial, ring, insert, case, strap (stand-ins where not chosen)
+    expect(hero.ok && hero.layers.map((l) => l.blend ?? "over")).toEqual(["over", "over", "over", "linear", "over", "disjoint"]);
+    expect(top.ok && top.layers.map((l) => l.blend ?? "over")).toEqual(["over", "over", "over", "disjoint", "disjoint"]);
   });
 
   // The case layer holds the ring out and the dial was lit with it, so the
@@ -113,6 +119,38 @@ describe("resolveScene", () => {
     it("draws the chosen ring, not the stand-in, once one is picked", () => {
       const s = resolveScene({ index: { ...index, parts: { ...index.parts, r1: { key: "ring:angled", approximated: false } } }, view: "hero", parts: { case: "case1", chapterRing: "r1" }, prints: { ring: { src: "/render/prints/ring-ring-gold.webp", generated: true } }, caseAttributes: { integratedChapterRing: true } });
       expect(ringLayer(s)).toMatchObject({ print: "/render/prints/ring-ring-gold.webp" });
+    });
+  });
+
+  // Every subset of the optional slots, each chosen, missing or not drawable,
+  // in both views and for every ring status.
+  describe("any build", () => {
+    const withRing = { ...index, parts: { ...index.parts, r1: { key: "ring:angled", approximated: false } } };
+    const choices = { dial: ["dialA", "byo_d"], chapterRing: ["r1", "turtle"], bezelInsert: ["ins", "gone"], hands: ["merc"], strap: ["jub"] } as const;
+    const builds: Record<string, string>[] = [{ case: "case1" }];
+    for (const [slot, ids] of Object.entries(choices)) for (const b of [...builds]) for (const id of ids) builds.push({ ...b, [slot]: id });
+    const cases = builds.flatMap((parts) =>
+      (["hero", "top"] as const).flatMap((view) => [{}, { requiresChapterRing: true }, { integratedChapterRing: true }].map((caseAttributes) => ({ parts, view, caseAttributes }))),
+    );
+    const prints = { dial: photo("dialA"), date, insert: insertPrint, ring: { src: INTEGRATED_RING_PRINT, generated: true } };
+    const scenes = cases.map((c) => resolveScene({ index: withRing, prints, ...c }));
+
+    it("always draws the dial, ring and insert the case holds out", () => {
+      expect(scenes.length).toBe(3 * 3 * 3 * 2 * 2 * 2 * 3);
+      for (const s of scenes) {
+        expect(s.ok).toBe(true);
+        if (!s.ok) continue;
+        const surfaces = s.layers.filter((l) => l.kind === "surface").length;
+        expect(surfaces === 3 || surfaces === 4).toBe(true); // + the date wheel under a real dial
+      }
+    });
+
+    it("labels every stand-in it shows (fails on an unlabelled one)", () => {
+      for (const s of scenes) {
+        if (!s.ok) continue;
+        const shown = s.layers.filter((l) => l.kind === "surface" && l.print === STANDIN_PRINT).length;
+        expect(s.labels.filter((l) => l.endsWith(` · ${PLACEHOLDER}`))).toHaveLength(shown);
+      }
     });
   });
 
