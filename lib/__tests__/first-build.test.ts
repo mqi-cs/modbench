@@ -3,7 +3,10 @@ import { evaluateBuild } from "../compat";
 import { buildCatalogSlice } from "../compat/__tests__/test-catalog";
 import type { Build } from "../compat/types";
 import { assemblyPlan } from "../assembly";
-import { CASE_COMPONENT, FIRST_BUILD_MAX_PARTS, FIRST_BUILD_STEPS, FIRST_BUILD_STYLES, firstBuildOptions, isHandComponent, suggestFirstBuild } from "../first-build";
+import { CASE_COMPONENT, FIRST_BUILD_MAX_PARTS, FIRST_BUILD_STYLES, firstBuildOptions, firstBuildSteps, isHandComponent, nextFirstBuildStep, suggestFirstBuild } from "../first-build";
+import { readFileSync } from "node:fs";
+import { resolveScene, type RenderIndex } from "../render/scene";
+import { printsFor } from "../render/prints";
 
 describe("isHandComponent", () => {
   it("separates caps and lone hands from sets", () => {
@@ -24,7 +27,8 @@ describe("first-build mode, over the live catalog", () => {
   for (const style of FIRST_BUILD_STYLES) {
     it(`${style.id}: every option offered at every step has zero errors`, () => {
       const build: Build = { parts: {} };
-      for (const { slot } of FIRST_BUILD_STEPS) {
+      for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
+        const { slot } = step;
         const options = firstBuildOptions(slot, build, catalog, style);
         expect(options.length, `no options for ${slot}`).toBeGreaterThan(0);
         for (const o of options) {
@@ -41,8 +45,55 @@ describe("first-build mode, over the live catalog", () => {
   it("the default suggestion for each style is complete and unblocked", () => {
     for (const style of FIRST_BUILD_STYLES) {
       const b = suggestFirstBuild(catalog, style);
-      expect(Object.keys(b.parts).sort()).toEqual(FIRST_BUILD_STEPS.map((s) => s.slot).sort());
+      expect(Object.keys(b.parts).sort()).toEqual(firstBuildSteps(b, catalog).map((s) => s.slot).sort());
       expect(evaluateBuild(b, catalog).findings.some((f) => f.severity === "error")).toBe(false);
+      // The limit is inclusive: the insert step takes a build to exactly 6.
+      expect(Object.keys(b.parts)).toHaveLength(FIRST_BUILD_MAX_PARTS);
+    }
+  });
+
+  it("asks for a chapter ring only when the case states it needs one, and then offers dials again", () => {
+    // bad-022's case: "Chapter Rings SKX013-spec (required, sold separately)".
+    const ringCase = Object.values(catalog.parts).find((p) => p.name === "SKX013 Watch Case - 38mm (DLC BLACK EDITION) [NH34-Ready]")!;
+    expect(ringCase.attributes.requiresChapterRing).toBe(true);
+    const style = FIRST_BUILD_STYLES[3]!;
+    const build: Build = { parts: { case: ringCase.id } };
+    expect(firstBuildSteps(build, catalog).map((s) => s.slot)).toContain("chapterRing");
+    expect(firstBuildSteps({ parts: { case: suggestFirstBuild(catalog, style).parts.case } }, catalog).map((s) => s.slot)).not.toContain("chapterRing");
+    for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
+      const top = firstBuildOptions(step.slot, build, catalog, style)[0];
+      expect(top, `no options for ${step.slot}`).toBeDefined();
+      build.parts[step.slot] = top!.partId;
+    }
+    expect(evaluateBuild(build, catalog).findings.filter((f) => f.severity === "error")).toEqual([]);
+    expect(Object.keys(build.parts)).toHaveLength(FIRST_BUILD_MAX_PARTS + 1); // the ring is the 7th part
+  });
+
+  // WS2c follow-up, Step 2: every prefix of the guided order, on the SKX
+  // 42.5 case in both views, draws everything the case layer holds out --
+  // so no holdout hole and no ring-less dial rim at any step.
+  it("draws the dial, ring and insert at every step of the order on the SKX 42.5 case", () => {
+    const index = JSON.parse(readFileSync("public/render/layers/index.json", "utf-8")) as RenderIndex;
+    const sumo = Object.values(catalog.parts).find((p) => p.name === "NMK960 Sumo SKX007/SRPD Case: Steel Finish")!;
+    expect(index.parts[sumo.id]?.key).toBe("case:round/42.5/22/28.5#steel");
+    const attributes = (id: string) => catalog.parts[id]?.attributes;
+    const build: Build = { parts: { case: sumo.id } };
+    const prefixes: Build[] = [{ parts: { ...build.parts } }];
+    for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
+      build.parts[step.slot] = firstBuildOptions(step.slot, build, catalog, FIRST_BUILD_STYLES[0]!)[0]!.partId;
+      prefixes.push({ parts: { ...build.parts } });
+    }
+    expect(prefixes.map((p) => Object.keys(p.parts).length)).toEqual([1, 2, 3, 4, 5, 6]);
+    for (const { parts } of prefixes) {
+      for (const view of ["hero", "top"] as const) {
+        const s = resolveScene({ index, view, parts, prints: printsFor(parts, attributes, () => true), caseAttributes: attributes(sumo.id) });
+        expect(s.ok, JSON.stringify(parts)).toBe(true);
+        if (!s.ok) continue;
+        const stems = new Set(s.layers.map((l) => (l.kind === "surface" ? l.stem : "")));
+        for (const layer of ["dial", "ring", "insert"]) {
+          expect([...stems].some((st) => Object.entries(index.jobs).some(([id, j]) => j.stem === st && id.startsWith(`${view}/surface/${layer}/case:round/42.5/`))), `${view} ${layer} ${JSON.stringify(parts)}`).toBe(true);
+        }
+      }
     }
   });
 
