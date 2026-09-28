@@ -45,7 +45,7 @@ const COLOUR_WORD = "black|white|blue|green|red|orange|yellow|grey|gray|gold|sil
  * worse than a missing one, because a user filtering on it gets a page of
  * results that look like answers.
  */
-const TWO_COLOUR = new RegExp(`\\b(?:${COLOUR_WORD})\\b\\s*(?:/|-|\\band\\b)\\s*\\b(?:${COLOUR_WORD})\\b|\\bpepsi\\b|\\bbatman\\b|\\bcoke\\b|\\broot\\s?beer\\b`, "i");
+const TWO_COLOUR = new RegExp(`\\b(?:${COLOUR_WORD})\\b\\s*(?:/|-|\\band\\b)\\s*\\b(?:${COLOUR_WORD})\\b|\\btwo[\\s-]?(?:tone|colou?r)\\b|\\bpepsi\\b|\\bbatman\\b|\\bcoke\\b|\\broot\\s?beer\\b`, "i");
 
 export const STYLE_TAGS: StyleTag[] = [
   // --- Colour. The single most common thing anyone asks for.
@@ -90,7 +90,7 @@ export const STYLE_TAGS: StyleTag[] = [
   { tag: "faceted-hands", category: "hands", label: "faceted hands", evidence: /\bsnowflake\b|\bfacet/i, slots: ["hands"] },
   { tag: "three-lobe-hands", category: "hands", label: "three-lobe hands", evidence: /\bmercedes\b|\bmerc\b/i, slots: ["hands"] },
   { tag: "skeleton-hands", category: "hands", label: "skeleton hands", evidence: /\bskeleton\b/i, slots: ["hands"] },
-  { tag: "lumed", category: "hands", label: "strongly lumed", evidence: /\blume(d)?\b|\bluminous\b|\bbgw\b|\bsuper\s?luminova\b/i, slots: ["dial", "hands", "bezel_insert"] },
+  { tag: "lumed", category: "hands", label: "strongly lumed", evidence: /\blume(d)?\b|\bluminous\b|\bbgw\b|\bsuper\s?luminova\b|\bglow/i, slots: ["dial", "hands", "bezel_insert"] },
 
   // --- Bezel insert character.
   { tag: "dive-bezel", category: "bezel", label: "count-up dive scale", evidence: /\bdive\b|\bcount\s?(up|down)\b|\bsub\b|\bdiver\b|\btimer\b/i, slots: ["bezel_insert"] },

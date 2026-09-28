@@ -2,7 +2,7 @@ import type { Build, CatalogSlice, SlotKey } from "./compat";
 import { evaluateBuild } from "./compat";
 import type { ParsedIntent } from "./intent";
 import { tagLabel } from "./style-vocabulary";
-import { CASE_COMPONENT } from "./first-build";
+import { CASE_COMPONENT, forOtherMovement, isHandComponent } from "./first-build";
 
 // Deterministic candidate assembly.
 //
@@ -94,6 +94,10 @@ export function suggestBuilds(intent: ParsedIntent, catalog: CatalogSlice, optio
     if (price === null || !Number.isFinite(price)) continue;
     const slot = part.slot as SlotKey;
     if (!CORE_SLOTS.includes(slot)) continue;
+    // WS5 eval: lone GMT hands and hand caps were being suggested as the
+    // hand set, and GMT/chronograph dials and hands on a three-hand build.
+    if (slot === "hands" && isHandComponent(part.name)) continue;
+    if ((slot === "hands" || slot === "dial") && intent.requiresGmt !== true && forOtherMovement(part.name, part.attributes)) continue;
     const priced: Priced = { id: part.id, slot, name: part.name, family: part.family, price, tags: styleTagsOf(part.attributes) };
     const pool = pools.get(slot);
     if (pool) pool.push(priced);
@@ -168,13 +172,21 @@ export function suggestBuilds(intent: ParsedIntent, catalog: CatalogSlice, optio
   return candidates;
 }
 
+/** Why one part was chosen, for the list under each suggestion. */
+export function partReason(part: CandidatePart): string {
+  return part.matched.length > 0 ? `chosen for ${listWords(part.matched.map(tagLabel))}` : "cheapest that fits the rest";
+}
+
 /** A plain-language summary, used when no model is available to write one. */
 export function describeCandidate(candidate: Candidate): string {
   const matched = candidate.tagsMatched.map(tagLabel);
   const missed = candidate.tagsMissed.map(tagLabel);
   const parts: string[] = [];
-  if (matched.length > 0) parts.push(`Matches what you asked for on ${listWords(matched)}.`);
-  else parts.push("Nothing in the catalog matched the style you described, so this is the cheapest build that goes together.");
+  // "Closest available", never "match" (WS5 step 6): tags describe the
+  // look a listing claims, and the catalog may simply not have the watch
+  // someone has in mind.
+  if (matched.length > 0) parts.push(`Closest available: covers ${listWords(matched)}.`);
+  else parts.push("Nothing in the catalog is tagged for the style you described, so this is the cheapest build that goes together.");
   if (missed.length > 0) parts.push(`No part in this build covers ${listWords(missed)} — the catalog has nothing tagged that way that also fits.`);
   return parts.join(" ");
 }

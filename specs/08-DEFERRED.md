@@ -592,6 +592,44 @@ catalog pipeline is the only thing that writes it.
 
 ---
 
+## D16 — WS5 leftovers (raised 2026-09-27)
+
+WS5's harness runs with one command (`pnpm eval:describe`) and the keyword
+path is measured. The model path waits on a provider choice and a key.
+
+**a. No model chosen, no key.** `lib/llm.ts` reads `LLM_PROVIDER` /
+`LLM_MODEL` / `LLM_API_KEY` / `LLM_BASE_URL` (see `.env.example`):
+Anthropic, or any OpenAI-compatible API. It's untested against a live
+provider; both request shapes are tested with a stubbed `fetch`. *Restore
+signal:* a key in `.env.local`, then `pnpm eval:describe --mode model`.
+*Cost:* S. The run is capped at `EVAL_MAX_USD` (default $1); about $0.07
+on Sonnet 5.
+
+**b. Human 1–5 ratings not done.** `data/eval/describe-to-rate.md` lists the
+top build for each query; ratings go in `data/eval/describe-ratings.json`.
+*Restore signal:* the owner rates them. *Cost:* S (about 30 minutes).
+
+**c. The eval set was written by the same session that knew the
+vocabulary,** so the keyword path's 98.6% must-have recall is optimistic.
+*Restore signal:* real user queries (logs, or a small user test); add
+them to `data/fixtures/describe-eval.json` without moving the thresholds.
+
+**d. Every suggestion fills a bezel insert, even for dress watches.**
+"Blue sunburst dress watch" gets world-time, GMT and dive-scale inserts,
+and the cheapest movement variant (day-date, 4 o'clock crown). *Restore
+signal:* ratings below 2 on dress queries. *Cost:* S (rank `plain-bezel`
+first when `dressy` is asked for, or leave the insert out).
+
+**e. The image path sends the text-parsing system prompt** alongside its own
+image prompt (this predates WS5, unchanged). *Restore signal:* WS6 image
+evaluation.
+
+**f. OpenAI-compatible requests send `max_tokens`.** Most servers accept
+it; some newer OpenAI models want `max_completion_tokens`. *Restore
+signal:* a 400 from the chosen provider.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like

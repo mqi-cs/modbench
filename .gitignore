@@ -19,9 +19,12 @@ __pycache__/
 scripts/3d-test/out/*
 !scripts/3d-test/out/index.html
 !scripts/3d-test/out/layers.html
+# ...except the textures the render pipeline loads (Git LFS; see .gitattributes).
+!scripts/3d-test/out/dial-cut*.png
+!scripts/3d-test/out/date*.png
+!scripts/3d-test/out/ring*.png
+!scripts/3d-test/out/insert*.png
 
-# Render pipeline output (scripts/render/run.ts): content-addressed, regenerable.
-# public/render/layers is what the browser compositor loads; host it with the
-# site (WS7), don't commit it.
+# Render pipeline: public/render/layers (outputs + index.json) is committed,
+# its PNGs via Git LFS; old build output dir below.
 scripts/render/out/
-public/render/layers/

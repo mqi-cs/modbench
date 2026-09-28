@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import { formatGbp } from "@/lib/money";
 import type { SuggestionResult } from "@/lib/suggest-service";
+import { partReason } from "@/lib/suggest";
 
 /**
  * Natural-language and image entry.
@@ -183,7 +184,7 @@ export function Discover() {
 
           {result.candidates.length === 0 ? (
             <p className="text-[13px] text-graphite">
-              Nothing in the catalog matches all of that at once.{" "}
+              Nothing in the catalog fits all of that at once.{" "}
               <Link href="/build" className="underline">
                 Start from the configurator
               </Link>{" "}
@@ -197,8 +198,9 @@ export function Discover() {
                   <p className="mt-1 text-[12px] leading-relaxed text-graphite">{candidate.explanation}</p>
                   <ul className="mt-2 space-y-0.5 text-[12px] text-graphite">
                     {candidate.chosen.map((part) => (
-                      <li key={part.partId} className="truncate">
-                        {part.name}
+                      <li key={part.partId}>
+                        <span className="block truncate text-ink">{part.name}</span>
+                        <span className="text-[11px]">{partReason(part)}</span>
                       </li>
                     ))}
                   </ul>

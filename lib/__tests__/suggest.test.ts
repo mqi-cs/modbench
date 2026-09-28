@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { loadCatalog } from "../catalog";
 import { catalogSlice } from "../build-view";
 import { suggestBuilds, describeCandidate } from "../suggest";
+import { forOtherMovement, isHandComponent } from "../first-build";
 import { EMPTY_INTENT, normaliseIntent, type ParsedIntent } from "../intent";
 import { attributesToTags, checkImage, extractJson, parseWithKeywords, scrubOutput, type ImageAttributes } from "../llm";
 import { STYLE_TAGS, TAG_NAMES, validateTags } from "../style-vocabulary";
@@ -277,5 +278,19 @@ describe("candidate quality", () => {
   it("prefers parts that actually match over cheaper ones that do not", () => {
     const green = suggestBuilds(intent({ styleTags: ["green"] }), slice);
     expect(green[0]!.tagsMatched).toContain("green");
+  });
+
+  // WS5 eval: "cheapest possible build with a day-date" was offered a single
+  // GMT hand as its hand set.
+  it("never offers a lone hand or cap as the hands, or GMT/chronograph parts on a three-hand build", () => {
+    for (const query of [...QUERIES, "cheapest possible build with a day-date", "a watch that glows really bright at night"]) {
+      for (const c of suggestBuilds(parseWithKeywords(query), slice)) {
+        for (const p of c.chosen) {
+          const part = slice.parts[p.partId]!;
+          if (p.slot === "hands") expect(isHandComponent(part.name), `${query}: ${part.name}`).toBe(false);
+          if ((p.slot === "hands" || p.slot === "dial") && !/gmt|time zone/i.test(query)) expect(forOtherMovement(part.name, part.attributes), `${query}: ${part.name}`).toBe(false);
+        }
+      }
+    }
   });
 });

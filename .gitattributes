@@ -14,6 +14,17 @@ data/modbench.db binary
 *.png binary
 *.jpg binary
 
+# Render pipeline images, in Git LFS: the outputs the browser compositor
+# loads (content-addressed; scripts/render/run.ts) and the textures they were
+# rendered from. The textures are stored, not regenerated: make-textures.ts
+# does not reproduce them byte for byte (flood fill, system fonts), and the
+# render hashes depend on their bytes. Later lines override `*.png binary`.
+public/render/layers/*.png filter=lfs diff=lfs merge=lfs -text
+scripts/3d-test/out/dial-cut*.png filter=lfs diff=lfs merge=lfs -text
+scripts/3d-test/out/date*.png filter=lfs diff=lfs merge=lfs -text
+scripts/3d-test/out/ring*.png filter=lfs diff=lfs merge=lfs -text
+scripts/3d-test/out/insert*.png filter=lfs diff=lfs merge=lfs -text
+
 # Generated. Collapsed in diffs and PR reviews so a catalog re-run does
 # not bury a real change under thousands of lines.
 pnpm-lock.yaml -diff linguist-generated
