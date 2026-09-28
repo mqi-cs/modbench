@@ -27,13 +27,12 @@ import {
   findComponents,
   findHoles,
   assignHoles,
-  measure,
   handGeometry,
   assignHandRoles,
   type HandGeometry,
   type HandRole,
 } from "../lib/preview/segment";
-import { classify, isFrameSpanning, isHandShaped, partitionSubjects, HAND_SUBJECT_SHARE, NOISE_FLOOR, type PreviewCategory, type AssetState } from "../lib/preview/classify";
+import { analyseRaster, classify, HAND_SUBJECT_SHARE, isHandShaped, NOISE_FLOOR, partitionSubjects, type PreviewCategory, type AssetState } from "../lib/preview/classify";
 import { CANVAS, renderRadiusPx } from "../lib/preview/layers";
 
 const CACHE_DIR = "data/raw/images";
@@ -201,19 +200,6 @@ export async function analyse(buf: Buffer, category: PreviewCategory): Promise<A
     };
   }
   return { state: verdict.state, reason: verdict.reason, box, hands, scale: 800 / ANALYSIS_SIZE, unsquash };
-}
-
-function analyseRaster(img: Rgba, category: PreviewCategory) {
-  const bg = probeBackground(img);
-  const mask = subjectMask(img, bg.color);
-  markEnclosed(img, mask, bg.color);
-  const minArea = Math.round(NOISE_FLOOR * img.width * img.height);
-  const { components: all, labels } = findComponents(mask, img.width, img.height, minArea);
-  assignHoles(all, findHoles(mask, labels, img.width, img.height));
-  const { subjects: components } = partitionSubjects(all, category === "hands" ? HAND_SUBJECT_SHARE : undefined);
-  const frameSpanning = components.filter((c) => isFrameSpanning(c, img.width, img.height)).length;
-  const shape = components[0] ? measure(components[0], img.width, img.height) : null;
-  return { bg, mask, components, labels, shape, frameSpanning };
 }
 
 /** Cuts the alpha at full resolution and returns an RGBA buffer plus its mask. */

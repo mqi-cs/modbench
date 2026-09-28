@@ -253,3 +253,39 @@ export const mergeCandidates = sqliteTable("merge_candidates", {
   check("merge_candidates_source_check", inList("source", MERGE_CANDIDATE_SOURCES)),
   index("merge_candidates_status_idx").on(table.status),
 ]);
+
+// WS4: bring-your-own-link parts. Kept out of `parts` on purpose: the
+// catalog pipeline owns that table (catalog:rebuild regenerates it), and a
+// shared build pointing at a submitted part must survive a rebuild. Never
+// in loadCatalog(); only merged into a request's catalog when a build names
+// one (lib/byo/store.ts). Every value is a seller's claim or the user's
+// entry, so the engine can't let it block or come back clean (D11d).
+export const BYO_SOURCES = ["marketplace-stated", "user-entered"] as const;
+export const BYO_PLATFORMS = ["ebay", "aliexpress"] as const;
+
+export const submittedParts = sqliteTable("submitted_parts", {
+  // "byo_" + nanoid, so a URL slot value says where to look it up.
+  id: text("id").primaryKey(),
+  category: text("category").notNull(),
+  // A real family key when the listing names a case line or caliber the
+  // catalog knows, else "unknown" -- which the platform rules read as
+  // "can't confirm", never as a mismatch.
+  family: text("family").notNull(),
+  name: text("name").notNull(),
+  attributes: text("attributes").notNull(), // JSON, via lib/db/json.ts
+  specSource: text("spec_source").notNull(),
+  platform: text("platform").notNull(),
+  itemId: text("item_id").notNull(),
+  sourceUrl: text("source_url").notNull(),
+  // What extraction proposed and what it could not find, before the user
+  // edited anything -- the audit trail for review and promotion.
+  extraction: text("extraction").notNull(), // JSON
+  reviewState: text("review_state").notNull().default("pending"),
+  createdAt: integer("created_at").notNull(),
+}, (table) => [
+  check("submitted_parts_category_check", inList("category", CATEGORIES)),
+  check("submitted_parts_spec_source_check", inList("spec_source", BYO_SOURCES)),
+  check("submitted_parts_platform_check", inList("platform", BYO_PLATFORMS)),
+  check("submitted_parts_review_state_check", inList("review_state", REVIEW_STATES)),
+  index("submitted_parts_review_state_idx").on(table.reviewState),
+]);

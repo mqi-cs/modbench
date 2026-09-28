@@ -539,6 +539,68 @@ renderer still loads the prototype textures when it builds a scene.
 
 ---
 
+## D15 — WS4 leftovers (raised 2026-09-27)
+
+WS4's offline core is built: host allow list, `submitted_parts` table,
+extraction from title and item specifics, confirmation screen, storage and
+the engine at the Unconfirmed tier. No marketplace API credentials exist on
+the build machine, so everything that needs one is deferred.
+
+**a. Parser fixtures from 20 real listings per platform** (pass measure 1).
+The extraction tests use synthetic, marketplace-style titles. *Restore
+signal:* `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` set; pull 20 real items
+through `lib/byo/ebay.ts` into a fixture with expected extraction. *Cost:*
+S per platform.
+
+**b. AliExpress has no client.** Its links are accepted and go straight to
+manual entry. Open Platform product details need approved developer access.
+*Restore signal:* approval granted. *Cost:* S (a second `fetch*Listing`).
+
+**c. The eBay Browse client is untested against the live API.** Zod
+validation means a changed shape falls back to manual entry, never a
+half-filled part. Multi-variation listings (`get_item_by_legacy_id` error
+11006) also fall back. *Restore signal:* credentials, as (a).
+
+**d. No canonical-part match** (step 5, hash plus colour). It needs the
+listing photo, which only the API returns. *Restore signal:* (a); reuse
+`lib/dedup/`. *Cost:* M.
+
+**e. The photo quality gate is built but not wired in; submitted parts
+aren't previewed in 3D** (step 8, pass measure 4). *Updated 2026-09-28:*
+`lib/byo/photo-gate.ts` rejects low-resolution (< 500 px short side),
+lume-lit, non-frontal and not-alone photos, using the catalog's own asset
+classifier plus a roundness test. It's tested on the synthetic images in
+`data/fixtures/photo-gate/` only. Nothing calls it yet, because the manual
+flow has no photo. In the 3D preview, every submitted part is labelled
+"not previewed: not in the render index", and it draws in the SVG diagram
+from its stated sizes. *Restore signal:* (a) and (c): real listing photos.
+Then check the thresholds against them, fetch images only from the
+platform's image host, and feed passing dial and insert photos to the
+compositor. *Cost:* M.
+
+**f. No affiliate links** (step 9). Submitted parts link to their canonical
+listing URL only. *Restore signal:* EPN / AliExpress affiliate accounts.
+
+**g. No review or promotion script.** Submitted parts land `pending` in
+`submitted_parts`; nothing moves one into `parts`. *Restore signal:* the
+first submission worth promoting. *Cost:* S, modelled on
+`scripts/review-merges.ts`.
+
+**h. Submitted parts are left out of the build total.** There's no
+listing price without the API. The summary and shared page name each part
+the total leaves out. *Restore signal:* (a); take the price from the API
+response.
+
+**i. Retention and dead listings** (open question): submitted parts are
+kept indefinitely. *Restore signal:* a storage or terms-of-use decision.
+
+D11d is resolved differently from how it was worded. The new sources live in
+`submitted_parts`, whose check constraint allows only `marketplace-stated`
+and `user-entered`. `parts.spec_source` stays vendor-only, because the
+catalog pipeline is the only thing that writes it.
+
+---
+
 ## D16 — WS5 leftovers (raised 2026-09-27)
 
 WS5's harness runs with one command (`pnpm eval:describe`) and the keyword

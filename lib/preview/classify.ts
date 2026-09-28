@@ -10,7 +10,7 @@
 // looks plausible and is a lie. False accepts cost far more than false
 // rejects here, and the thresholds are set accordingly.
 
-import type { Component, HandGeometry, ShapeMeasures } from "./segment";
+import { assignHoles, findComponents, findHoles, markEnclosed, measure, probeBackground, subjectMask, type Component, type HandGeometry, type Raster, type ShapeMeasures } from "./segment";
 
 export type AssetState = "ready" | "needs-manual" | "unavailable";
 
@@ -315,4 +315,22 @@ export function isHandShaped(g: HandGeometry): boolean {
   if (g.thickness <= 0) return false;
   if (g.length / g.thickness < MIN_HAND_SLENDERNESS) return false;
   return g.tailRatio <= MAX_HAND_TAIL_RATIO;
+}
+
+/**
+ * The measuring half of the asset pipeline: backdrop, subject mask,
+ * components with their holes, and the largest one's shape. Shared by
+ * scripts/prepare-assets.ts and the bring-your-own photo gate.
+ */
+export function analyseRaster(img: Raster, category: PreviewCategory) {
+  const bg = probeBackground(img);
+  const mask = subjectMask(img, bg.color);
+  markEnclosed(img, mask, bg.color);
+  const minArea = Math.round(NOISE_FLOOR * img.width * img.height);
+  const { components: all, labels } = findComponents(mask, img.width, img.height, minArea);
+  assignHoles(all, findHoles(mask, labels, img.width, img.height));
+  const { subjects: components } = partitionSubjects(all, category === "hands" ? HAND_SUBJECT_SHARE : undefined);
+  const frameSpanning = components.filter((c) => isFrameSpanning(c, img.width, img.height)).length;
+  const shape = components[0] ? measure(components[0], img.width, img.height) : null;
+  return { bg, mask, components, labels, shape, frameSpanning };
 }
