@@ -1,6 +1,8 @@
 import { afterAll, describe, expect, it } from "vitest";
+// Must come before the db client: this file stores parts and saves builds.
+import "../../__tests__/temp-db";
 import { like } from "drizzle-orm";
-import { db } from "../../db/client";
+import { db, sqlite } from "../../db/client";
 import { submittedParts } from "../../db/schema";
 import { loadCatalog } from "../../catalog";
 import { catalogSlice } from "../../build-view";
@@ -22,6 +24,10 @@ afterAll(() => {
 });
 
 describe("bring-your-own link: storing a confirmed part", () => {
+  it("writes to a throwaway copy, never the committed database", () => {
+    expect(sqlite.name).toBe(process.env.MODBENCH_DB);
+  });
+
   it("stores it user-entered, with the family derived server-side", async () => {
     const r = await submit({ slot: "case", name: "SKX007 Style Case 42.5mm", attributes: { caseDiameterMm: 42.5, lugWidthMm: 22, crownPosition: "4", family: "srpe-case" } });
     expect(r.ok).toBe(true);
