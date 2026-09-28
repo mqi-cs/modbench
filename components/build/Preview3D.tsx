@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Compositor } from "@/lib/render/compositor";
 import { resolveScene, type RenderIndex } from "@/lib/render/scene";
 import { printsFor } from "@/lib/render/prints";
+import { ringStatus } from "@/lib/render/standins";
 
 const DIR = "/render/layers";
 
@@ -37,7 +38,10 @@ export function Preview3D({
   }, []);
 
   const scene = useMemo(
-    () => (index ? resolveScene({ index, view, parts, prints: printsFor(parts, attributes, hasDialPhoto) }) : null),
+    () =>
+      index
+        ? resolveScene({ index, view, parts, prints: printsFor(parts, attributes, hasDialPhoto), ring: ringStatus(parts.case ? attributes(parts.case) : undefined) })
+        : null,
     [index, view, parts, attributes, hasDialPhoto],
   );
 

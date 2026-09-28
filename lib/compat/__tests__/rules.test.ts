@@ -26,6 +26,8 @@ import { crownCaseFit } from "../rules/crown-case-fit";
 import { strapFit } from "../rules/strap-fit";
 import { insertCrystalProfileFit } from "../rules/insert-crystal-profile-fit";
 import { dialCaseModelExclusion } from "../rules/dial-case-model-exclusion";
+import { integratedChapterRing } from "../rules/integrated-chapter-ring";
+import { chapterRingUnstated } from "../rules/chapter-ring-unstated";
 
 const NH35 = { caliber: "NH35", hasDay: false, hasDate: true, dateWindowPosition: null };
 const NH36 = { caliber: "NH36", hasDay: true, hasDate: true, dateWindowPosition: null };
@@ -377,5 +379,33 @@ describe("multi-vendor-shipping", () => {
   });
   it("is silent for a single-vendor build", () => {
     expect(run(multiVendorShipping, [part("dial", "nh3x-dial-standard", PLAIN_DIAL)])).toHaveLength(0);
+  });
+});
+
+describe("integrated-chapter-ring", () => {
+  const RING = part("chapterRing", "skx007-chapter-ring");
+  it("errors when the vendor says a separate ring isn't taken, warns when that's only inferred", () => {
+    const stated = part("case", "skx007-case", { ...SKX007_CASE, integratedChapterRing: true, separateChapterRingExcluded: true });
+    const inferred = part("case", "skx007-case", { ...SKX007_CASE, integratedChapterRing: true });
+    expect(severities(run(integratedChapterRing, [stated, RING]))).toEqual(["error"]);
+    expect(severities(run(integratedChapterRing, [inferred, RING]))).toEqual(["warning"]);
+  });
+  it("is silent without a separate ring, or on a case without a built-in one", () => {
+    expect(run(integratedChapterRing, [part("case", "skx007-case", { ...SKX007_CASE, integratedChapterRing: true })])).toHaveLength(0);
+    expect(run(integratedChapterRing, [part("case", "skx007-case", SKX007_CASE), RING])).toHaveLength(0);
+  });
+});
+
+describe("chapter-ring-unstated", () => {
+  const DIAL = part("dial", "nh3x-dial-standard", PLAIN_DIAL);
+  it("warns (never errors) when the case doesn't say and the build has a dial but no ring", () => {
+    expect(severities(run(chapterRingUnstated, [part("case", "skx007-case", SKX007_CASE), DIAL]))).toEqual(["warning"]);
+  });
+  it("is silent with a ring, without a dial, or when the case states it (required or built in)", () => {
+    const c = part("case", "skx007-case", SKX007_CASE);
+    expect(run(chapterRingUnstated, [c, DIAL, part("chapterRing", "skx007-chapter-ring")])).toHaveLength(0);
+    expect(run(chapterRingUnstated, [c])).toHaveLength(0);
+    expect(run(chapterRingUnstated, [part("case", "skx007-case", { ...SKX007_CASE, requiresChapterRing: true }), DIAL])).toHaveLength(0);
+    expect(run(chapterRingUnstated, [part("case", "skx007-case", { ...SKX007_CASE, integratedChapterRing: true }), DIAL])).toHaveLength(0);
   });
 });

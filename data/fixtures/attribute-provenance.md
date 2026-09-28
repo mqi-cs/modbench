@@ -45,6 +45,8 @@ exact product.
 | `strap.lugWidthMm` | 28 | title ("20/16mm", "22mm") |
 | `hands.gmt` | 4 | vendor tag `gmt - nh34` |
 | `case.requiresChapterRing` | 22 | body_html: *"mandatory and never included"* |
+| `case.integratedChapterRing` | 31 | body_html: *"integrated brushed chapter ring (rehaut)"* (2026-09-28) |
+| `case.separateChapterRingExcluded` | 4 | body_html: *"Fits all SKX007/SRPD parts … except Chapter Ring"* (NMK941, 2026-09-28) |
 | `strap.vendorScopedTo` | 12 | body_html: *"Fits Lucius Atelier cases only"* |
 | `dial.incompatibleCaseFamilies` | 3 | body_html: *"Not compatible with SKX013, SKX015 and SKX017"* |
 

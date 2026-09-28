@@ -82,7 +82,7 @@ the README says otherwise and is out of date.
 ## Where things live
 
 - `lib/compat/` — the engine. `index.ts` entry, `types.ts` contracts,
-  `platform.ts` family naming, `tools.ts` tool/cost derivation. 24 rules, one
+  `platform.ts` family naming, `tools.ts` tool/cost derivation. 26 rules, one
   per file, in `lib/compat/rules/`. Tests in `lib/compat/__tests__/`
   (`known-builds`, `property`, `rules`).
 - `lib/db/schema.ts` — Drizzle schema; parts are separate from listings.

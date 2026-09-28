@@ -8,6 +8,7 @@
 // flagged `generated` and the scene labels it.
 
 import type { Print } from "./scene";
+import { INTEGRATED_RING_PRINT, ringStatus } from "./standins";
 
 const tagsOf = (a: Record<string, unknown> | undefined) => (Array.isArray(a?.styleTags) ? (a!.styleTags as string[]) : []);
 
@@ -30,6 +31,8 @@ export function printsFor(
     const t = tagsOf(attributes(parts.chapterRing));
     const c = t.includes("gold-tone") || t.includes("rose-gold") ? "gold" : t.includes("cream") ? "cream" : "white";
     out.ring = { src: `/render/prints/ring-ring-${c}.webp`, generated: true };
+  } else if (parts.case && ringStatus(attributes(parts.case)) === "integrated") {
+    out.ring = { src: INTEGRATED_RING_PRINT, generated: true };
   }
   return out;
 }

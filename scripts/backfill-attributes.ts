@@ -93,6 +93,22 @@ const DIAL_INCOMPATIBLE_CASE_FAMILIES: Record<string, string[]> = {
 // cases that carry no such statement.
 const CASE_REQUIRES_CHAPTER_RING = /ultra thin|\[nh34-ready\]|watch case - 3[689]mm|datejust watch case|gs watch case|gs diver watch case|explorer watch case|seikonaut watch case/i;
 
+// Vendor text (namokimods body_html, WS2c follow-up 2026-09-28): these case
+// lines have the chapter ring machined into the case, so a build without a
+// separate ring still shows one.
+//   "integrated brushed chapter ring (rehaut)" -- NMK939, 940, 941, 945, 950
+//   "integrated bezel and chapter ring (rehaut)" -- NMK926, 931, 936, 937, 938, 952
+//   "integrated rehaut (chapter ring)" -- NMK912, 948, 949; "integrated rehaut" -- NMK963
+//   "integrated fixed bezel and chapter ring (rehaut)" -- NMK955, 958
+//   "integrated engine turned chapter ring" -- NMK953
+// Model code, not family: the families (skx007-case, skx013-case, ...) also
+// hold cases with a separate ring.
+const CASE_INTEGRATED_CHAPTER_RING = /^NMK9(12|26|3[1678]|39|4[015]|4[89]|5[0235]|58|63)\b/;
+// And one says outright that a separate ring doesn't go in:
+//   "Fits all SKX007/SRPD parts including SKX007 bracelets except Chapter Ring"
+//   -- namokimods, NMK941 GMT Sub SKX007/SRPD Watch Case Mk 2 (4 finishes)
+const CASE_EXCLUDES_SEPARATE_CHAPTER_RING = /^NMK941\b/;
+
 // "Fits Lucius Atelier cases only. The end-links are shaped to our case
 // profiles -- this bracelet does not fit generic 20mm lugs or OEM [cases]"
 // -- luciusatelier, 20 bracelet listings. Stronger than the usual
@@ -230,6 +246,10 @@ function main() {
         // Vendor-stated: this case will not seat a dial at the right
         // height without a chapter ring. See CASE_REQUIRES_CHAPTER_RING.
         requiresChapterRing: CASE_REQUIRES_CHAPTER_RING.test(p.name) ? true : null,
+        // Vendor-stated: the ring is part of the case (rehaut). See
+        // CASE_INTEGRATED_CHAPTER_RING.
+        integratedChapterRing: CASE_INTEGRATED_CHAPTER_RING.test(p.name) ? true : null,
+        separateChapterRingExcluded: CASE_EXCLUDES_SEPARATE_CHAPTER_RING.test(p.name) ? true : null,
         requiresSpacerFor: (existing.requiresSpacerFor as string[] | undefined) ?? [],
       };
       db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();

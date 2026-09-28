@@ -530,6 +530,20 @@
       "source": "https://watchandstyle.net/products/rc0973-srpe-replacement-case-silver",
       "sourceQuote": "watchandstyle, RC0973 SRPE Replacement case listing: \"Can only accommodate 28.5mm dials\". namokimods, Panda Chronograph dial listing: \"Dial Diameter: 29.5mm\".",
       "notes": "WS1 (D11a). A 29.5mm chronograph dial in a case its maker says takes 28.5mm dials only."
+    },
+    {
+      "id": "bad-023",
+      "expected": "blocked",
+      "evidences": [
+        "integrated-chapter-ring"
+      ],
+      "parts": {
+        "case": "Namoki NMK941 GMT Sub SKX007/SRPD Watch Case Mk 2: Steel Finish (NH34 Compatible)",
+        "chapterRing": "Namoki SKX007/SRPD Angled Chapter Ring: Brushed"
+      },
+      "source": "https://namokimods.com/products/nmk941-gmt-sub-case-steel-finish-nh34-compatible",
+      "sourceQuote": "namokimods, NMK941 GMT Sub SKX007/SRPD Watch Case Mk 2 listing: \"Integrated brushed chapter ring (rehaut)\" and \"Fits all SKX007/SRPD parts including SKX007 bracelets except Chapter Ring\".",
+      "notes": "WS2c follow-up, 2026-09-28. A case with the chapter ring built in, plus a separate SKX007 ring the vendor says it doesn't take."
     }
   ]
 }
