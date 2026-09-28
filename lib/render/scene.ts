@@ -35,7 +35,7 @@ export interface SceneInput {
 export type Scene = { ok: true; layers: Layer[]; labels: string[] } | { ok: false; reason: string };
 
 const SLOT_OF_LAYER: Record<string, string> = { dial: "dial", date: "dial", ring: "chapterRing", insert: "bezelInsert", hands: "hands", strap: "strap" };
-const NAMES: Record<string, string> = { dial: "Dial", date: "Date wheel", ring: "Chapter ring", insert: "Insert", hands: "Hands", strap: "Strap", crown: "Crown" };
+const NAMES: Record<string, string> = { dial: "Dial", date: "Date wheel", ring: "Chapter ring", insert: "Insert", hands: "Hands", strap: "Strap", crown: "Crown", bezel: "Bezel", crystal: "Crystal" };
 
 export function resolveScene({ index, view, parts, prints }: SceneInput): Scene {
   const caseId = parts.case;
@@ -90,7 +90,10 @@ export function resolveScene({ index, view, parts, prints }: SceneInput): Scene 
     const e = index.parts[id];
     const name = NAMES[Object.keys(SLOT_OF_LAYER).find((l) => SLOT_OF_LAYER[l] === slot) ?? slot] ?? slot;
     if (e?.approximated) labels.push(`${name} shape approximated: ${e.actualShape} drawn as ${e.key.split(":")[1]!.split("#")[0]}`);
-    if (!e && slot !== "case" && slot !== "movement" && index.notRenderable[id]) labels.push(`${name} not drawn: ${index.notRenderable[id]}`);
+    // Any chosen part the index doesn't know -- a recorded reason, a part
+    // added since the last render run, a submitted (byo_) part -- is left
+    // out of the picture, so it must be named. The movement sits hidden.
+    if (!e && slot !== "case" && slot !== "movement") labels.push(`${name} not previewed: ${index.notRenderable[id] ?? "not in the render index"}`);
   }
   return { ok: true, layers, labels };
 }

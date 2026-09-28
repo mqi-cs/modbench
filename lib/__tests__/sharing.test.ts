@@ -1,4 +1,6 @@
 import { describe, expect, it, beforeAll } from "vitest";
+// Must come before ../db/client: saving builds and rate limiting write rows.
+import "./temp-db";
 import { sqlite } from "../db/client";
 import { loadCatalog } from "../catalog";
 import { catalogSlice, buildView, configuratorHref, resolveByName } from "../build-view";
@@ -20,6 +22,11 @@ function workingBuild(): Partial<Record<SlotKey, string>> {
 }
 
 describe("saving builds", () => {
+  it("writes to a throwaway copy, never the committed database", () => {
+    expect(sqlite.name).toBe(process.env.MODBENCH_DB);
+    expect(sqlite.name).not.toMatch(/data[\\/]modbench\.db$/);
+  });
+
   // specs/06-phase-5-sharing.md pass measure 1.
   it("saves a valid build and loads it back identically", () => {
     const parts = workingBuild();

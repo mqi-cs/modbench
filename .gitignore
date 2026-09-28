@@ -28,3 +28,6 @@ scripts/3d-test/out/*
 # Render pipeline: public/render/layers (outputs + index.json) is committed,
 # its PNGs via Git LFS; old build output dir below.
 scripts/render/out/
+
+# TypeScript incremental cache (tsc --noEmit rewrites it on every pnpm check)
+*.tsbuildinfo
