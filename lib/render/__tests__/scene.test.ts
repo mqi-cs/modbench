@@ -51,6 +51,18 @@ describe("resolveScene", () => {
     expect(s.labels).toContain("Dial: print from vendor photo");
   });
 
+  it("names every chosen part it leaves out, including ids the index has never seen", () => {
+    const parts = { case: "case1", dial: "byo_dial1", hands: "byo_hands1", bezelInsert: "gone", chapterRing: "turtle", strap: "byo_strap1", crystal: "c1", crown: "byo_crown1", movement: "byo_mv1" };
+    const s = resolveScene({ index, view: "top", parts, prints: {} });
+    expect(s.ok).toBe(true);
+    if (!s.ok) return;
+    // Every chosen part but the case (drawn) and the movement (hidden): 7.
+    expect(s.labels.filter((l) => l.includes(" not previewed: "))).toHaveLength(7);
+    expect(s.labels).toContain("Dial not previewed: not in the render index");
+    expect(s.labels).toContain("Chapter ring not previewed: case family srp-turtle-case needs its own outline");
+    expect(s.layers).toHaveLength(1); // only the case is drawn
+  });
+
   it("labels an approximated shape with what it really is", () => {
     const s = resolveScene({ index, view: "hero", parts: { case: "case1", hands: "merc" }, prints: {} });
     expect(s.ok && s.labels).toContain("Hands shape approximated: hand-three-lobe drawn as sword");

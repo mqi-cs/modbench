@@ -1,8 +1,12 @@
 # Bad-build fixtures: the agreed count (WS0 step 5)
 
-> **Updated by WS1 (2026-09-26):** 17 bad builds, 14 quoted, each naming the
-> rules it evidences in `evidences`. Current per-rule evidence is in
-> `rule-inventory.md`; the table below is the WS0 snapshot.
+> **Current count (2026-09-28, from `known-builds.json`): 18 bad builds, all
+> blocked, 15 quoted.** Unquoted: bad-007, bad-008 and bad-010 (see below).
+> Each fixture names the rules it evidences in `evidences`, and
+> `known-builds.test.ts` keeps `VERIFIED_RULES` equal to the rules with a
+> quoted fixture. The table directly below is the WS0 snapshot (9 fixtures);
+> the 9 added since are listed after it. Per-rule evidence is in
+> `rule-inventory.md`.
 
 Counted 2026-09-26 from `known-builds.json` at WS0, with each fixture run
 through `evaluateBuild` to see which rules actually block it.
@@ -30,6 +34,22 @@ was roughly the number of rules with a quoted fixture behind them, now 5.
 Quoted fixtures by rule: `insert-case-fit` 3, `insert-crystal-profile-fit`
 1, `dial-case-model-exclusion` 1, `bracelet-vendor-scope` 1, plus the
 `lucius-ultra-thin-no-stock-skx-accessories` family exception on bad-006.
+
+### Added since WS0 (WS1 and its follow-up), all quoted
+
+| Fixture | Evidences | Vendor text |
+|---|---|---|
+| bad-014 | `crystal-case-fit` | dlwwatches Sapphire Flat - SRPE: "Fits 5 SRPE 51, 53, 55, 57, 61, 63, 65, 67, 69" |
+| bad-015 | `bezel-case-fit` | watchandstyle R0879: "Will fit SKX007, SKX009, SKX011 (0200 Case)" |
+| bad-016 | `crown-case-fit` | dlwwatches Crown - SRPE: "Fits 5 SRPE 51, 53, 55, 57, 61, 63, 65, 67, 69" |
+| bad-017 | `strap-fit` | namokimods SKX007 Jubilee: "Female End Links designed to fit the SKX007 and our own range of SKX007 watch cases" |
+| bad-018 | `dial-movement-feet` | namokimods Panda Chronograph dial: "compatible with Seiko VK63 Mechaquartz Chronograph Movement only" |
+| bad-019 | `movement-case-fit` | namokimods NH35/36 Day-Date Corrector Wheel (a spare part, not a movement) |
+| bad-020 | `day-window-presence` | luciusatelier Nautilus Arctic White Dial (Day Date): "Day Date NH36 Day + date at 3 o'clock" |
+| bad-021 | `dial-case-diameter` | watchandstyle RC0973 SRPE case: "Can only accommodate 28.5mm dials" |
+| bad-022 | `requires-chapter-ring` | luciusatelier SKX013 case (DLC Black): "Chapter Rings SKX013-spec (required, sold separately)" |
+
+Full quotes are in each fixture's `sourceQuote`.
 
 ## Open problems
 

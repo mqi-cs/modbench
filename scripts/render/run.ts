@@ -140,7 +140,7 @@ console.log(`parts: ${Object.keys(m.parts).length} keyed (${Object.values(m.part
 console.log(`shape keys: ${perSlot}`);
 console.log(`jobs: ${m.jobs.length}; to render: ${todo.length}; already rendered: ${m.jobs.length - todo.length}`);
 
-mkdirSync(OUT, { recursive: true });
+if (!dryRun) mkdirSync(OUT, { recursive: true });
 const writeIndex = () =>
   writeFileSync(
     `${OUT}/index${vendor ? `-${vendor}` : ""}.json`,
@@ -174,6 +174,9 @@ async function main() {
       console.log(`${String(done).padStart(4)}/${todo.length} ${((performance.now() - t0) / 1000).toFixed(1)}s ${j.id}`);
     }
   }
+  // A dry run writes nothing: the index is tracked (LFS library), and a
+  // "check" that rewrites it leaves the tree touched.
+  if (dryRun) return console.log("dry run: index not written");
   writeIndex();
   console.log(`index: ${OUT}/index${vendor ? `-${vendor}` : ""}.json`);
   // --prune (full scope only): delete outputs no job references -- earlier

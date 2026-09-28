@@ -630,6 +630,82 @@ signal:* a 400 from the chosen provider.
 
 ---
 
+## D17 — WS5 search quality deferred (owner, 2026-09-28)
+
+**What's deferred:** improving what describe-a-watch suggests. The harness
+(`pnpm eval:describe`) and its thresholds stay as they are; only the work of
+making the suggestions good is put off.
+
+**Why:** the top builds for the 30 evaluation queries
+(`data/eval/describe-to-rate.md`, keyword path) are often poor matches for
+what was asked, even though all 88 suggested builds have zero errors:
+- h2 "something like a Pepsi GMT" gets a root-beer dual-time insert
+  (CI1256) and a dark-blue 62mas dial: "GMT" and "two-colour" are read,
+  the red/blue colours of a Pepsi bezel are not.
+- h3 "Royal Oak style blue dial" gets a round SKX Samurai case with a
+  blue world-time insert: no octagonal case exists (D12d, WS2c known
+  limits), and nothing says so.
+- D16d: dress queries get dive, GMT and world-time inserts (p1 "blue
+  sunburst dress watch" → AI0079 world-time insert on a 4 o'clock
+  day-date build).
+- b3 "dress watch without a date, around £250" gets an NH34A GMT movement,
+  a date dial and an orange diver insert.
+The owner prefers to spend time on WS4 and shop readiness first.
+
+**Guardrails:**
+- WS5 stays "merged, not passed" in the plan. Nothing here marks it passed.
+- WS6 (photo-to-build) stays blocked: it depends on WS5 passing.
+- Don't change the eval set, the thresholds (`47c1860`) or
+  `data/eval/describe-ratings.json` to make the numbers look better.
+- The zero-error guarantee still holds: suggestions go through
+  `evaluateBuild` and blocked builds are discarded.
+
+**Restore signal:** before WS6 starts, or before any shop is shown the
+describe feature, whichever comes first.
+
+**Cost:** M. D16a (a model run, about $0.07 per run on Sonnet 5), D16b
+(owner ratings, about 30 minutes), D16c (blind queries), D16d (S), plus
+ranking fixes: honour negations ("without a date"), treat named homages
+without a buildable case shape as "not available" rather than silently
+substituting, and don't fill an insert for dress queries.
+
+---
+
+## D18 — 3D preview polish deferred (owner, 2026-09-28)
+
+**What's deferred:** the 3D preview beyond the round 42.5/43.8 mm SKX shapes.
+- **D12f, still open:** on `case:round/36`, `/37.8` and `/38` (SKX013
+  sizes) the insert disappears, and on `/39.5` it's a sliver. The render
+  index keys 59 approved cases to these four shapes (36 mm 11, 37.8 mm 36,
+  38 mm 3, 39.5 mm 9), and `resolveScene` draws them in the configurator
+  today. That goes against D12f's own guardrail ("don't show these four
+  shapes to users until fixed").
+- **Non-round cases** (octagonal and integrated-bracelet homages, Turtle,
+  VK63/64, Namoki N4, and the other D12d cases) aren't renderable in 3D.
+  They fall back to the SVG diagram, with the reason shown.
+
+**Why:** WS2c was validated only on SKX-family builds (V1/V2/V3, the round
+42.5 mm case). Fixing the small-case insert bore (D12c) and modelling new
+case outlines is render-machine work (glossy renders go on the OptiX
+machine, see the plan's §17), so it's deferred behind WS4 and shop readiness.
+
+**Guardrails:**
+- WS2c pass measure 1 ("SKX family end to end") is partial because of
+  D12f. It counts as met only if the owner accepts this deferral.
+- Every approximated or unrenderable case keeps its label in the preview.
+- Don't claim 3D coverage beyond the 42.5 and 43.8 mm round shapes in any
+  pitch.
+
+**Restore signal:** a pilot shop's catalog is mostly SKX013-size or
+non-round cases, or a user reports a missing insert in the 3D preview.
+Either way, fix D12f before any shop-facing demo that uses those sizes.
+
+**Cost:** D12f is S–M: a case-scaled or stated insert bore (D12c), a
+re-render of the 4 shapes on OptiX, and a visual check. Each new case
+outline is L, and is costed as a paid setup job in WS7.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like

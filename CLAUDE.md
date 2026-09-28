@@ -82,7 +82,7 @@ the README says otherwise and is out of date.
 ## Where things live
 
 - `lib/compat/` — the engine. `index.ts` entry, `types.ts` contracts,
-  `platform.ts` family naming, `tools.ts` tool/cost derivation. 22 rules, one
+  `platform.ts` family naming, `tools.ts` tool/cost derivation. 24 rules, one
   per file, in `lib/compat/rules/`. Tests in `lib/compat/__tests__/`
   (`known-builds`, `property`, `rules`).
 - `lib/db/schema.ts` — Drizzle schema; parts are separate from listings.
@@ -105,7 +105,8 @@ the README says otherwise and is out of date.
   optional vendor scope). Pure; tested under `pnpm check`.
 - `scripts/render/` — the maintained 3D renderer (`render_solid.py`,
   `case_geometry.py`, `render_guards.py`), `run.ts` (renders missing
-  manifest jobs into `public/render/layers/`, gitignored; `--prune`),
+  manifest jobs into `public/render/layers/`, committed via Git LFS with
+  `index.json`; `--dry-run` writes nothing; `--prune`),
   `pack-passes.ts` (geometry-only passes → browser images, plus the offline
   composite check), `make_agx_lut.py` (bakes Blender's AgX into
   `public/render/agx-lut.png`). How it works and what was measured:
@@ -122,7 +123,9 @@ the README says otherwise and is out of date.
   Guard tests: `blender -b --factory-startup --python-exit-code 1 --python
   scripts/render/test_render_guards.py`.
 - `scripts/3d-test/` — the 3D prototype's texture scripts, layer viewers,
-  denoiser check and `REPORT.md`. Render output is gitignored.
+  denoiser check and `REPORT.md`. Its render output is gitignored, except the
+  input textures the renderer loads (`out/dial-cut*`, `date*`, `ring*`,
+  `insert*`: 107 files), which are committed via Git LFS.
 
 ## Working method
 
