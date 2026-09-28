@@ -21,11 +21,15 @@ import { build } from "esbuild";
 import sharp from "sharp";
 import { resolveScene, type RenderIndex } from "../../lib/render/scene";
 
-/** Measured with this script, 2026-09-28; see 08-DEFERRED D19j for the commit. */
+/**
+ * Measured with this script. Renderer revision 1 (commit 4164191): V1 1.11/21,
+ * V2 1.50/21, V3 0.83/13. Revision 2, 2026-09-28 (hands no longer cast their
+ * shadow into the dial and date passes, D19c): below.
+ */
 export const BASELINE: Record<string, { mad: number; p99: number }> = {
-  V1: { mad: 1.11, p99: 21 },
-  V2: { mad: 1.5, p99: 21 },
-  V3: { mad: 0.83, p99: 13 },
+  V1: { mad: 0.95, p99: 14 },
+  V2: { mad: 1.42, p99: 21 },
+  V3: { mad: 0.76, p99: 10 },
 };
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

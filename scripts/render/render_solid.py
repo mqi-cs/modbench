@@ -1098,6 +1098,12 @@ if LAYER:
             # Solid geometry would shade the date wheel completely; the window
             # is only in the print.
             ob.hide_render = True
+        elif LAYER in ("dial", "date") and cat == "hands":
+            # The hands layer brings its own shadow (the dial is its shadow
+            # catcher). Casting it here too drew it twice on a complete build
+            # (V1: 7.3 levels too dark in the shadow) and drew it with no
+            # hands chosen (WS2c follow-up, 2026-09-28, D19c).
+            ob.hide_render = True
         elif LAYER == "hands" and cat == "dial":
             ob.is_shadow_catcher = True
         elif cat in HOLD:
