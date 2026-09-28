@@ -2,12 +2,12 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { Build, CatalogSlice, SlotKey } from "@/lib/compat";
-import { FIRST_BUILD_STEPS, FIRST_BUILD_STYLES, firstBuildOptions, type FirstBuildStyle } from "@/lib/first-build";
+import { FIRST_BUILD_STYLES, firstBuildOptions, firstBuildSteps, nextFirstBuildStep, type FirstBuildStyle } from "@/lib/first-build";
 import { formatGbp } from "@/lib/money";
 
-// First-build mode (WS3): about five choices, each list already checked by
-// the engine against everything chosen so far, so nothing offered here can
-// produce an error. The movement is filled in for the user.
+// First-build mode (WS3): about six choices, outside in, each list already
+// checked by the engine against everything chosen so far, so nothing offered
+// here can produce an error. The movement is filled in for the user.
 export function FirstBuild({
   build,
   catalog,
@@ -18,7 +18,7 @@ export function FirstBuild({
   onChoose: (slot: SlotKey, partId: string) => void;
 }) {
   const [style, setStyle] = useState<FirstBuildStyle | null>(null);
-  const next = FIRST_BUILD_STEPS.find((s) => !build.parts[s.slot]);
+  const next = nextFirstBuildStep(build, catalog);
   const options = useMemo(
     () => (style && next ? firstBuildOptions(next.slot, build, catalog, style) : []),
     [style, next, build, catalog],
@@ -29,13 +29,13 @@ export function FirstBuild({
     if (style && next?.auto && options[0]) onChoose(next.slot, options[0].partId);
   }, [style, next, options, onChoose]);
 
-  const stepNo = next ? FIRST_BUILD_STEPS.filter((s) => !s.auto).findIndex((s) => s.slot === next.slot) + 2 : null;
+  const stepNo = next ? firstBuildSteps(build, catalog).filter((s) => !s.auto).findIndex((s) => s.slot === next.slot) + 2 : null;
 
   return (
     <section className="border-b border-rule bg-card px-6 py-6" aria-label="First build">
       <h2 className="text-[17px] font-semibold tracking-tight">Never built a watch? Start here</h2>
       <p className="mt-1 max-w-[70ch] text-[13px] text-graphite">
-        Five choices, and every option shown already fits what you&rsquo;ve picked. We choose the movement for you.
+        Six choices, and every option shown already fits what you&rsquo;ve picked. We choose the movement for you.
       </p>
 
       {!style ? (

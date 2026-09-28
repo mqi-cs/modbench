@@ -713,6 +713,92 @@ Either way, fix D12f before any shop-facing demo that uses those sizes.
 re-render of the 4 shapes on OptiX, and a visual check. Each new case
 outline is L, and is costed as a paid setup job in WS7.
 
+**Update 2026-09-28 (WS2c follow-up, D19):** the D12f guardrail is now
+enforced. `resolveScene` draws only `CHECKED_CASE_SHAPES` (42.5 and 43.8 mm)
+and cases without a built-in bezel; anything else falls back to the diagram
+with the reason. Hidden: 63 approved cases (59 by size, 4 NMK926 by bezel).
+
+---
+
+## D19 — WS2c follow-up: preview stand-ins (raised 2026-09-28)
+
+**Un-deferred from D18, and why.** D18 deferred 3D preview polish. Part of
+it was pulled back the same day (owner, 2026-09-28) because it wasn't
+polish: any build without a chapter ring showed a transparent band and a
+black rim at the dial edge (the case layer holds the ring out; the dial is
+lit with the ring's shadow). That was every first build and every starter
+build, on 317 in-scope cases. Done: the case's own ring where the vendor
+states one is built in (31 cases), a labelled clay stand-in for the dial,
+ring and insert otherwise, a `chapter-ring-unstated` warning, the D12f
+guardrail, and an outside-in first-build order. Scope: SKX family only
+(42.5 and 43.8 mm).
+
+**a. Bore-wall renders for builds with no ring (option A).** A ring-less
+build draws a clay stand-in ring labelled "placeholder shape, not part of
+this build", not the bare bore the watch would really show. *Restore
+signal:* the next session on the 3050. *Cost:* 72 glossy case jobs (9 hero
+case, 9 top case, 54 hero case+strap, rendered without the ring held out)
+on OptiX, plus 4 matte dial surface jobs without the ring's shadow; at
+WS2a's ~15 s per job (~10 s scene build + ~5 s render, D12a) about 19 min
+of wall time, plus ~50 s first-compile. Then a scene branch and a label.
+
+**b. No hands or strap stand-ins** (owner). *Restore signal:* a measured
+failure. It fired (c), and was answered by fixing the render, not with a
+stand-in; still none needed.
+
+**c. Resolved 2026-09-28 (b88c6cc) — the hands' shadow was baked into the
+dial pass, and drawn twice on complete builds.** Confirmed on V1 without
+rendering: in the shadow the composite was 7.3 levels darker than the
+full render, and the composite without hands already matched it (+0.9).
+Hands are now hidden in the dial and date layers (revision 2,
+owner-approved); all 24 dial/date surface jobs re-rendered (matte, Metal),
+the other 312 adopted. After: no-hands shadow 0 px; V1 shadow −2.3,
+pixels over 8 levels too dark 6,316 → 1,289.
+
+**d. Exploded view** (owner, out of scope). *Restore signal:* a shop or
+user asks to see how the parts stack. *Cost:* M.
+
+**e. Cases with a built-in bezel** (16, `integratedBezel`) aren't drawn in
+3D. The engine part is resolved 2026-09-28 (b8472ee): `integrated-bezel`
+errors on a separate insert or bezel (bad-024; 16,240 pairs blocked that
+family matching passed), and first-build skips the insert on them.
+*Restore signal (3D only):* a pilot shop sells these cases. *Cost:* L, a
+new case outline (paid setup job, WS7).
+
+**f. A built-in ring is drawn with the generic white printed ring**, while
+the vendors describe a brushed rehaut; labelled "generic print … not this
+case's own design". *Restore signal:* a user or shop points at it.
+*Cost:* S, a plain brushed print.
+
+**g. `chapter-ring-unstated` warns once on a ring-less build of a case that
+doesn't say** (310 of 363 approved cases). Reworked 2026-09-28 (owner,
+b69bfff): no ring chosen and none built in, once per build, fix names the
+ring to add, no longer tied to the dial; case × dial pairs judged clean
+6.9% → 90.8%. No vendor says a ring is
+optional: DLW lists it under "Complete your mod with", namokimods under
+"Fits all … Chapter Rings", Watch & Style under "sold separately" (two
+Samurai conversion cases, RC0683/RC0684, say "All you need are the insert,
+glass, and chapter ring" -- read as a shopping list, not a requirement).
+*Restore signal:* a vendor states a ring is optional (then
+`requiresChapterRing: false` for that line), or the warning count
+becomes a complaint. *Cost:* S per vendor line.
+
+**h. Resolved 2026-09-28 (owner, b8472ee) — the 22 cases that need a
+chapter ring aren't offered in first-build**, so first builds stay at 6
+parts; the ring step is gone. *Restore signal for offering them:* a
+first-build limit above 6. *Cost:* S (the ring step is in git history,
+2407f81).
+
+**i. Resolved 2026-09-28 (b88c6cc)** — the revision-2 run rewrote the
+index; the 37 rejected casebacks are gone from it.
+
+**j. Resolved 2026-09-28 — V1–V3 accuracy is reproducible.**
+`scripts/render/accuracy.ts` (4164191). §17's tool was never committed
+and its numbers (1.13/27, 1.50/22, 0.81/15) couldn't be reproduced; this
+script's are the baseline (owner): revision 1 at 4164191 V1 1.11/21,
+V2 1.50/21, V3 0.83/13; revision 2 at b88c6cc V1 0.95/14, V2 1.42/21,
+V3 0.76/10.
+
 ---
 
 ## Not deferred — decisions, recorded here so they are not re-opened as work

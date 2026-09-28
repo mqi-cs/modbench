@@ -20,6 +20,8 @@ export const VERIFIED_RULES: ReadonlySet<string> = new Set([
   "dial-movement-feet",
   "family-exception",
   "insert-case-fit",
+  "integrated-bezel",
+  "integrated-chapter-ring",
   "insert-crystal-profile-fit",
   "movement-case-fit",
   "requires-chapter-ring",

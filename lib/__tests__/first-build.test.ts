@@ -3,7 +3,11 @@ import { evaluateBuild } from "../compat";
 import { buildCatalogSlice } from "../compat/__tests__/test-catalog";
 import type { Build } from "../compat/types";
 import { assemblyPlan } from "../assembly";
-import { CASE_COMPONENT, FIRST_BUILD_MAX_PARTS, FIRST_BUILD_STEPS, FIRST_BUILD_STYLES, firstBuildOptions, isHandComponent, suggestFirstBuild } from "../first-build";
+import { FIRST_BUILD_MAX_PARTS, FIRST_BUILD_STYLES, firstBuildOptions, firstBuildSteps, isCaseComponent, isHandComponent, nextFirstBuildStep, suggestFirstBuild } from "../first-build";
+import { isCaseback } from "../listing-text";
+import { readFileSync } from "node:fs";
+import { resolveScene, type RenderIndex } from "../render/scene";
+import { printsFor } from "../render/prints";
 
 describe("isHandComponent", () => {
   it("separates caps and lone hands from sets", () => {
@@ -12,6 +16,20 @@ describe("isHandComponent", () => {
     expect(isHandComponent("GMT Hand - Snowflake")).toBe(true);
     expect(isHandComponent("Watch Hands: Baton Black Finish + Red Seconds Hand")).toBe(false);
     expect(isHandComponent("Watch Hands: Syringe Silver")).toBe(false);
+  });
+});
+
+describe("isCaseComponent / isCaseback", () => {
+  it("keeps a case that lists its caseback or bezel, and drops the caseback sold alone", () => {
+    for (const n of ["Case - SKX007 Sub - Polished Steel (With Case Back)", "NMK917 Pilot SRPE Watch Case Bundle w Coil Bezel: Polished Finish", "RC1427 SKX007 Replacement Case - Sandblasted Titanium - MM Bezel"]) {
+      expect(isCaseComponent(n), n).toBe(false);
+      expect(isCaseback(n), n).toBe(false);
+    }
+    for (const n of ["SKX Slim Caseback: Gold Finish", "C0367 SKX007 Sterile Case Back - NH Movement"]) {
+      expect(isCaseComponent(n), n).toBe(true);
+      expect(isCaseback(n), n).toBe(true);
+    }
+    expect(isCaseComponent("SKX007 Crystal Gasket")).toBe(true);
   });
 });
 import { deriveTools } from "../compat/tools";
@@ -24,7 +42,8 @@ describe("first-build mode, over the live catalog", () => {
   for (const style of FIRST_BUILD_STYLES) {
     it(`${style.id}: every option offered at every step has zero errors`, () => {
       const build: Build = { parts: {} };
-      for (const { slot } of FIRST_BUILD_STEPS) {
+      for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
+        const { slot } = step;
         const options = firstBuildOptions(slot, build, catalog, style);
         expect(options.length, `no options for ${slot}`).toBeGreaterThan(0);
         for (const o of options) {
@@ -41,8 +60,58 @@ describe("first-build mode, over the live catalog", () => {
   it("the default suggestion for each style is complete and unblocked", () => {
     for (const style of FIRST_BUILD_STYLES) {
       const b = suggestFirstBuild(catalog, style);
-      expect(Object.keys(b.parts).sort()).toEqual(FIRST_BUILD_STEPS.map((s) => s.slot).sort());
+      expect(Object.keys(b.parts).sort()).toEqual(firstBuildSteps(b, catalog).map((s) => s.slot).sort());
       expect(evaluateBuild(b, catalog).findings.some((f) => f.severity === "error")).toBe(false);
+      // The limit is inclusive: the insert step takes a build to exactly 6.
+      expect(Object.keys(b.parts)).toHaveLength(FIRST_BUILD_MAX_PARTS);
+    }
+  });
+
+  it("never offers a case that needs a chapter ring: it would be a 7th part", () => {
+    const required = Object.values(catalog.parts).filter((p) => p.slot === "case" && p.attributes.requiresChapterRing === true);
+    expect(required.length).toBe(22);
+    const offered = new Set(firstBuildOptions("case", { parts: {} }, catalog, FIRST_BUILD_STYLES[3]!, 10_000).map((o) => o.partId));
+    expect(required.filter((p) => offered.has(p.id))).toEqual([]);
+  });
+
+  it("skips the insert on a case whose bezel is built in, and finishes with zero errors", () => {
+    const nautilus = Object.values(catalog.parts).find((p) => p.name === "NMK926 Nautilus SKX007/SPRD Watch Case Bundle: Polished Finish")!;
+    const build: Build = { parts: { case: nautilus.id } };
+    expect(firstBuildSteps(build, catalog).map((s) => s.slot)).not.toContain("bezelInsert");
+    for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
+      const top = firstBuildOptions(step.slot, build, catalog, FIRST_BUILD_STYLES[3]!)[0];
+      expect(top, `no options for ${step.slot}`).toBeDefined();
+      build.parts[step.slot] = top!.partId;
+    }
+    expect(evaluateBuild(build, catalog).findings.filter((f) => f.severity === "error")).toEqual([]);
+    expect(Object.keys(build.parts)).toHaveLength(FIRST_BUILD_MAX_PARTS - 1);
+  });
+
+  // WS2c follow-up, Step 2: every prefix of the guided order, on the SKX
+  // 42.5 case in both views, draws everything the case layer holds out --
+  // so no holdout hole and no ring-less dial rim at any step.
+  it("draws the dial, ring and insert at every step of the order on the SKX 42.5 case", () => {
+    const index = JSON.parse(readFileSync("public/render/layers/index.json", "utf-8")) as RenderIndex;
+    const sumo = Object.values(catalog.parts).find((p) => p.name === "NMK960 Sumo SKX007/SRPD Case: Steel Finish")!;
+    expect(index.parts[sumo.id]?.key).toBe("case:round/42.5/22/28.5#steel");
+    const attributes = (id: string) => catalog.parts[id]?.attributes;
+    const build: Build = { parts: { case: sumo.id } };
+    const prefixes: Build[] = [{ parts: { ...build.parts } }];
+    for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
+      build.parts[step.slot] = firstBuildOptions(step.slot, build, catalog, FIRST_BUILD_STYLES[0]!)[0]!.partId;
+      prefixes.push({ parts: { ...build.parts } });
+    }
+    expect(prefixes.map((p) => Object.keys(p.parts).length)).toEqual([1, 2, 3, 4, 5, 6]);
+    for (const { parts } of prefixes) {
+      for (const view of ["hero", "top"] as const) {
+        const s = resolveScene({ index, view, parts, prints: printsFor(parts, attributes, () => true), caseAttributes: attributes(sumo.id) });
+        expect(s.ok, JSON.stringify(parts)).toBe(true);
+        if (!s.ok) continue;
+        const stems = new Set(s.layers.map((l) => (l.kind === "surface" ? l.stem : "")));
+        for (const layer of ["dial", "ring", "insert"]) {
+          expect([...stems].some((st) => Object.entries(index.jobs).some(([id, j]) => j.stem === st && id.startsWith(`${view}/surface/${layer}/case:round/42.5/`))), `${view} ${layer} ${JSON.stringify(parts)}`).toBe(true);
+        }
+      }
     }
   });
 
@@ -53,7 +122,7 @@ describe("first-build mode, over the live catalog", () => {
         expect(["NH35", "NH36"]).toContain(catalog.parts[o.partId]!.attributes.caliber);
       }
       for (const o of firstBuildOptions("case", { parts: {} }, catalog, style, 50)) {
-        expect(o.name, "a case component was offered as a case").not.toMatch(CASE_COMPONENT);
+        expect(isCaseComponent(o.name), `a case component was offered as a case: ${o.name}`).toBe(false);
       }
       for (const o of firstBuildOptions("hands", { parts: { case: b.parts.case, movement: b.parts.movement } }, catalog, style, 50)) {
         expect(isHandComponent(o.name), `a hand component was offered as a set: ${o.name}`).toBe(false);

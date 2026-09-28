@@ -37,7 +37,10 @@ export function Preview3D({
   }, []);
 
   const scene = useMemo(
-    () => (index ? resolveScene({ index, view, parts, prints: printsFor(parts, attributes, hasDialPhoto) }) : null),
+    () =>
+      index
+        ? resolveScene({ index, view, parts, prints: printsFor(parts, attributes, hasDialPhoto), caseAttributes: parts.case ? attributes(parts.case) : undefined })
+        : null,
     [index, view, parts, attributes, hasDialPhoto],
   );
 

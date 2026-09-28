@@ -1,8 +1,11 @@
 // First-build mode (WS3): a short route to a complete watch for someone who
-// has never built one. About five choices -- style, case, dial, hands,
-// strap -- with the movement filled in, and the engine run on every step:
-// an option is offered only if the build so far plus that part has zero
-// errors. Target, set before building (owner, 2026-09-26): at most 6 parts.
+// has never built one. About six choices -- style, case, insert, dial,
+// hands, strap -- with the movement filled in, and the engine run on every
+// step: an option is offered only if the build so far plus that part has
+// zero errors. Target, set before building (owner, 2026-09-26): at most 6
+// parts, inclusive. The insert step (2026-09-28) takes a build to exactly 6,
+// so cases that state they need a chapter ring (a 7th part) aren't offered
+// (owner, 2026-09-28).
 //
 // Pure. Style ranks the options, never filters them, so no style can leave a
 // step empty. Kit preferences (crystal pre-installed, sold as a kit) wait
@@ -28,16 +31,26 @@ export const FIRST_BUILD_STYLES: FirstBuildStyle[] = [
 ];
 
 /**
- * Order of the steps. The movement is picked for the user, after the dial,
- * so the engine can match it to the dial's day and date windows.
+ * Order of the steps: outside in, as the preview builds up (WS2c follow-up,
+ * 2026-09-28) -- case, insert, dial, hands, strap. The movement is picked
+ * for the user, after the dial, so the engine can match it to the dial's
+ * day and date windows. The insert is skipped on a case whose bezel is
+ * built in (firstBuildSteps).
  */
 export const FIRST_BUILD_STEPS: { slot: SlotKey; auto: boolean; label: string }[] = [
   { slot: "case", auto: false, label: "Case" },
+  { slot: "bezelInsert", auto: false, label: "Bezel insert" },
   { slot: "dial", auto: false, label: "Dial" },
   { slot: "movement", auto: true, label: "Movement" },
   { slot: "hands", auto: false, label: "Hands" },
   { slot: "strap", auto: false, label: "Strap" },
 ];
+
+/** The steps that apply so far: no insert on a case whose bezel is built in (integrated-bezel). */
+export function firstBuildSteps(build: Build, catalog: CatalogSlice): typeof FIRST_BUILD_STEPS {
+  const caseP = build.parts.case ? catalog.parts[build.parts.case] : undefined;
+  return FIRST_BUILD_STEPS.filter((s) => s.slot !== "bezelInsert" || caseP?.attributes.integratedBezel !== true);
+}
 
 export interface FirstBuildOption {
   partId: string;
@@ -54,8 +67,13 @@ const tagsOf = (a: Record<string, unknown>) => (Array.isArray(a.styleTags) ? (a.
  * Case-slot parts that are components, not a case you can build in. The
  * engine doesn't reject them (no rule says a caseback isn't a case), so a
  * caseback in the case slot evaluates clean; shared with lib/suggest.ts.
+ * A name that names a case is a case, whatever else it lists: "Case - SKX007
+ * Sub - Polished Steel (With Case Back)", "Case Bundle w Coil Bezel" (110
+ * approved cases the bare pattern turned away, 2026-09-28).
  */
 export const CASE_COMPONENT = /caseback|case back|gasket|tube|bezel|insert|ring|spacer/i;
+export const isCaseComponent = (name: string) =>
+  CASE_COMPONENT.test(name) && !/\bcase\b(?!\s*back)/i.test(name.replace(/\(with case ?back\)/i, ""));
 
 /**
  * Movements a first build is offered: the three-hand automatics every
@@ -79,7 +97,7 @@ export const forOtherMovement = (name: string, attributes: Record<string, unknow
   attributes.gmt === true || attributes.hasSubdials === true || /\bgmt\b|\bnh34\b|\bchrono|\bvk\d*\b/i.test(name);
 
 function eligible(slot: SlotKey, name: string, attributes: Record<string, unknown>): boolean {
-  if (slot === "case") return !CASE_COMPONENT.test(name);
+  if (slot === "case") return !isCaseComponent(name) && attributes.requiresChapterRing !== true;
   if (slot === "hands") return !isHandComponent(name) && !forOtherMovement(name, attributes);
   if (slot === "dial") return !forOtherMovement(name, attributes);
   if (slot === "movement") {
@@ -120,9 +138,15 @@ export function firstBuildOptions(slot: SlotKey, build: Build, catalog: CatalogS
 /** Walks the steps taking the top option each time: the default suggestion for a style. */
 export function suggestFirstBuild(catalog: CatalogSlice, style: FirstBuildStyle): Build {
   const build: Build = { parts: {} };
-  for (const { slot } of FIRST_BUILD_STEPS) {
-    const top = firstBuildOptions(slot, build, catalog, style, 1)[0];
-    if (top) build.parts[slot] = top.partId;
+  for (let step = nextFirstBuildStep(build, catalog); step; step = nextFirstBuildStep(build, catalog)) {
+    const top = firstBuildOptions(step.slot, build, catalog, style, 1)[0];
+    if (!top) break;
+    build.parts[step.slot] = top.partId;
   }
   return build;
+}
+
+/** The first step still open, or undefined once the build is complete. */
+export function nextFirstBuildStep(build: Build, catalog: CatalogSlice) {
+  return firstBuildSteps(build, catalog).find((s) => !build.parts[s.slot]);
 }

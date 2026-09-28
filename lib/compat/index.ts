@@ -28,6 +28,9 @@ import { requiresChapterRing } from "./rules/requires-chapter-ring";
 import { braceletVendorScope } from "./rules/bracelet-vendor-scope";
 import { dialMovementSize } from "./rules/dial-movement-size";
 import { crownStemLength } from "./rules/crown-stem-length";
+import { integratedChapterRing } from "./rules/integrated-chapter-ring";
+import { chapterRingUnstated } from "./rules/chapter-ring-unstated";
+import { integratedBezel } from "./rules/integrated-bezel";
 
 // Registration order is cosmetic, not load-bearing -- rules are
 // order-independent by construction (each reads only Build/CatalogSlice,
@@ -61,6 +64,9 @@ export const RULES: Rule[] = [
   braceletVendorScope,
   dialMovementSize,
   crownStemLength,
+  integratedChapterRing,
+  chapterRingUnstated,
+  integratedBezel,
 ];
 
 // The chapter-ring family a case implies, used to tell the caller WHICH
