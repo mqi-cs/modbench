@@ -60,6 +60,7 @@ describe("resolveScene", () => {
     expect(s.labels.filter((l) => l.includes(" not previewed: "))).toHaveLength(7);
     expect(s.labels).toContain("Dial not previewed: not in the render index");
     expect(s.labels).toContain("Chapter ring not previewed: case family srp-turtle-case needs its own outline");
+    expect(s.labels).toContain("Crystal not previewed: not in the render index");
     expect(s.layers).toHaveLength(1); // only the case is drawn
   });
 
