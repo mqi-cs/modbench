@@ -114,7 +114,9 @@ the README says otherwise and is out of date.
   `render-config.json`) and `git lfs pull` (outputs and input textures are
   in Git LFS). `RENDER_DEVICE` picks the GPU backend; `RENDER_DRY=1` checks a
   machine without rendering; `verify-renders.ts` re-renders jobs and diffs
-  them against the stored files. Changing pixel-deciding renderer code
+  them against the stored files; `accuracy.ts` composites the reference
+  builds V1–V3 in headless Chrome and checks MAD/p99 against the full
+  renders and a recorded baseline. Changing pixel-deciding renderer code
   fails `render-config.test.ts` until `sourceFingerprint` (and, if pixels can
   change, `referenceRenderer.revision`) is updated.
 - `lib/render/compositor.ts`, `scene.ts`, `prints.ts` — browser compositor
