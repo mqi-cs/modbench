@@ -565,9 +565,18 @@ half-filled part. Multi-variation listings (`get_item_by_legacy_id` error
 listing photo, which only the API returns. *Restore signal:* (a); reuse
 `lib/dedup/`. *Cost:* M.
 
-**e. No photo quality gate or 3D preview for submitted parts** (step 8,
-pass measure 4). They draw in the labelled SVG diagram from their stated
-sizes. *Restore signal:* (a) plus WS2c passing. *Cost:* M.
+**e. The photo quality gate is built but not wired in; submitted parts
+aren't previewed in 3D** (step 8, pass measure 4). *Updated 2026-09-28:*
+`lib/byo/photo-gate.ts` rejects low-resolution (< 500 px short side),
+lume-lit, non-frontal and not-alone photos, using the catalog's own asset
+classifier plus a roundness test. It's tested on the synthetic images in
+`data/fixtures/photo-gate/` only. Nothing calls it yet, because the manual
+flow has no photo. In the 3D preview, every submitted part is labelled
+"not previewed: not in the render index", and it draws in the SVG diagram
+from its stated sizes. *Restore signal:* (a) and (c): real listing photos.
+Then check the thresholds against them, fetch images only from the
+platform's image host, and feed passing dial and insert photos to the
+compositor. *Cost:* M.
 
 **f. No affiliate links** (step 9). Submitted parts link to their canonical
 listing URL only. *Restore signal:* EPN / AliExpress affiliate accounts.
