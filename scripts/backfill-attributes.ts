@@ -114,6 +114,16 @@ const CASE_EXCLUDES_SEPARATE_CHAPTER_RING = /^NMK941\b/;
 // (namokimods body_html). The 3D preview draws a separate SKX bezel, so it
 // can't show these (lib/render/scene.ts).
 const CASE_INTEGRATED_BEZEL = /^NMK9(26|3[1678]|52|55|58)\b/;
+// Cases whose outline isn't round, named in the vendor's own title: "B&R"
+// and "Square Case" (square), "Nautilus" (octagonal), "Tuna" (a shroud round
+// the body), "Turtle" (cushion). The 3D preview draws one round SKX outline,
+// so it can't show these (lib/render/scene.ts; 2026-09-28).
+const CASE_OUTLINE: [string, RegExp][] = [
+  ["square", /\bB&R\b|\bsquare\b/i],
+  ["octagonal", /nautilus|royal oak/i],
+  ["shrouded", /\btuna\b/i],
+  ["cushion", /turtle/i],
+];
 
 // "Fits Lucius Atelier cases only. The end-links are shaped to our case
 // profiles -- this bracelet does not fit generic 20mm lugs or OEM [cases]"
@@ -257,6 +267,7 @@ function main() {
         integratedChapterRing: CASE_INTEGRATED_CHAPTER_RING.test(p.name) ? true : null,
         separateChapterRingExcluded: CASE_EXCLUDES_SEPARATE_CHAPTER_RING.test(p.name) ? true : null,
         integratedBezel: CASE_INTEGRATED_BEZEL.test(p.name) ? true : null,
+        outline: CASE_OUTLINE.find(([, re]) => re.test(p.name))?.[0] ?? null,
         requiresSpacerFor: (existing.requiresSpacerFor as string[] | undefined) ?? [],
       };
       db.update(parts).set({ attributes: toJsonColumn(attrs), updatedAt: Date.now() }).where(eq(parts.id, p.id)).run();

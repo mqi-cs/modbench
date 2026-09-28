@@ -162,6 +162,10 @@ describe("resolveScene", () => {
       ok: false,
       reason: "this case's bezel is built in, and its shape isn't modelled in 3D",
     });
+    expect(resolveScene({ index, view: "top", parts: { case: "case1" }, prints: {}, caseAttributes: { outline: "square" } })).toEqual({
+      ok: false,
+      reason: "this case's square shape isn't modelled in 3D",
+    });
   });
 
   it("picks each stand-in shape as the most common key in the real render index, nothing else", () => {

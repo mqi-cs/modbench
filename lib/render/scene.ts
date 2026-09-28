@@ -61,6 +61,9 @@ export function resolveScene({ index, view, parts, prints, caseAttributes }: Sce
   if (!caseEntry) return { ok: false, reason: index.notRenderable[caseId] ?? "case not in the render index" };
   if (!CHECKED_CASE_SHAPES.has(caseEntry.key.split("#")[0]!)) return { ok: false, reason: "this case size isn't checked in 3D yet" };
   if (caseAttributes?.integratedBezel === true) return { ok: false, reason: "this case's bezel is built in, and its shape isn't modelled in 3D" };
+  // Square, octagonal, shrouded (Tuna) and cushion (Turtle) cases, named in
+  // the vendor's title: the renderer draws one round SKX outline.
+  if (typeof caseAttributes?.outline === "string") return { ok: false, reason: `this case's ${caseAttributes.outline} shape isn't modelled in 3D` };
   const ring = ringStatus(caseAttributes);
   const keyOf = (slot: string) => (parts[slot] ? index.parts[parts[slot]!]?.key : undefined);
   const strapKey = keyOf("strap");
