@@ -27,13 +27,16 @@ import { resolveScene, type RenderIndex } from "../../lib/render/scene";
  * V2 1.50/21, V3 0.83/13. Revision 2, 2026-09-28 (hands no longer cast their
  * shadow into the dial and date passes, D19c): V1 0.95/14, V2 1.42/21,
  * V3 0.76/10. Revision 3, 2026-09-28 (top view: 85 mm lens, studio
- * reflections; hero unchanged): below. V2's composite moved further from its
- * full render (still inside WS2c's MAD <= 3, p99 <= 30).
+ * reflections; hero unchanged): V1 0.95/14, V2 2.36/28, V3 0.76/10. V2's
+ * composite moved further from its full render (still inside WS2c's
+ * MAD <= 3, p99 <= 30).
+ * Revision 4, 2026-09-29 (case outline, crown variants; rendered on OptiX):
+ * V1 0.95/14, V2 2.47/29, V3 0.77/10 (below). V2 is 1 under the p99 limit.
  */
 export const BASELINE: Record<string, { mad: number; p99: number }> = {
   V1: { mad: 0.95, p99: 14 },
-  V2: { mad: 2.36, p99: 28 },
-  V3: { mad: 0.76, p99: 10 },
+  V2: { mad: 2.47, p99: 29 },
+  V3: { mad: 0.77, p99: 10 },
 };
 
 const ROOT = path.resolve(import.meta.dirname, "../..");

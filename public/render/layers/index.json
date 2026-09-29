@@ -1,5 +1,5 @@
 {
- "rendererVersion": "dd85126da6a64062",
+ "rendererVersion": "00157eb3e549c43a",
  "views": [
   "hero",
   "top"
@@ -25,1347 +25,2115 @@
  },
  "jobs": {
   "hero/beauty/case/case:round/36/20/28.5#gold": {
-   "stem": "a7938aa04f5407ace9a714f2e3322f2e",
+   "stem": "e795c30fdfc711656a0f6a9adceb1b06",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#gold/strap:jubilee": {
-   "stem": "e4fed6f1ff022724a07d1e9a8e80291f",
+   "stem": "f0632d87d81c614dffcfd8f4b58685d7",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#gold/strap:leather": {
-   "stem": "0523b4a757e2718796dfa25e7d6ebd8c",
+   "stem": "3cc8b17c8364a69618ecb203ec0308fd",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#gold/strap:mesh": {
-   "stem": "0cd0dcd20bb870d60eaa1611ce089b5d",
+   "stem": "e68119e419037a1e0fb4a2ba94beae30",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#gold/strap:nato": {
-   "stem": "1992b51e8fcfea40784e05f5f6725a3d",
+   "stem": "e4131bc3e0dd4aad68d443000b7d9972",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#gold/strap:oyster": {
-   "stem": "4db90e535e14bfa93326451a0bf6435d",
+   "stem": "d3ba84112550cfa56e6241341c45dc4d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#gold/strap:rubber": {
-   "stem": "c32e5d0666d54dc56c9a790227ef5348",
+   "stem": "d2d1a82b5ef54a84398d76b334acf1dc",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/36/20/28.5#pvd": {
-   "stem": "44fb6649a6da0c47f6034d3831157214",
+   "stem": "1376c54362f6e6b11d082a441ee894cc",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#pvd/strap:jubilee": {
-   "stem": "55ee92bfa7ac9623ae6935f2bfdd3b28",
+   "stem": "2f5c74f33d8f1a9c0502d52d0ac5a6b8",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#pvd/strap:leather": {
-   "stem": "a6652028eac58d35c48fc6a72c8245c1",
+   "stem": "a014e500720fddfc565dd3682c313746",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#pvd/strap:mesh": {
-   "stem": "6586c7736e16f7d84be7327ac1bfb40a",
+   "stem": "9c2892815d62c680dbcee20f6c2a9905",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#pvd/strap:nato": {
-   "stem": "12500b359e0b0db9f1e66f562bd89267",
+   "stem": "88914a5e3077de9afea96aa83fd3eaeb",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#pvd/strap:oyster": {
-   "stem": "b8201f9d606b9cad785c46190b353e53",
+   "stem": "f913720f7f9cfd1192503388e4d02a0f",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#pvd/strap:rubber": {
-   "stem": "947434947aae84e0f01d9cd394d40329",
+   "stem": "1766ef7e3f5b65ff4034cf64f85e71b9",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/36/20/28.5#steel": {
-   "stem": "15ab580fc4dffe4107737fcb3296862e",
+   "stem": "56257991da70bcc2fb160587f92116c6",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#steel/strap:jubilee": {
-   "stem": "fcf3cb0994ad70d9fb4d9e487cd6a0df",
+   "stem": "72c7069c19cb0f66e6cfa6eae408fa68",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#steel/strap:leather": {
-   "stem": "82d1253e1f89e3e408a7ad2a8fa35564",
+   "stem": "58cd3e38dd8fc7a859c7dd8d9471898d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#steel/strap:mesh": {
-   "stem": "2c24c18b7993ded1a3b86ca89745e536",
+   "stem": "693215fcef670b4b6d80cede749cdc4a",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#steel/strap:nato": {
-   "stem": "1432d9e8d146eac3d99823d12d217e8a",
+   "stem": "f24d83743c24b693749be27f2e35c894",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#steel/strap:oyster": {
-   "stem": "3057529aa2fcfd42be2286b473fa469d",
+   "stem": "f8e3ad8f6506528dc5f46c475264e5e7",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/36/20/28.5#steel/strap:rubber": {
-   "stem": "c7348939d570b9dcffaf3fa8e04f2dc2",
+   "stem": "2042912bc639c609e2ea8027af4bf54d",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/37.8/20/28.5/c3/ng#steel": {
+   "stem": "97b72fcdd9683852a056b21b76255787",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3/ng#steel/strap:jubilee": {
+   "stem": "1f1202228422fb11b2e62dc47727e19b",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3/ng#steel/strap:leather": {
+   "stem": "5c6694984665ba4d1d1ccab1622a0d94",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3/ng#steel/strap:mesh": {
+   "stem": "000ac5ce32a1cabbe906eb9612e733b0",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3/ng#steel/strap:nato": {
+   "stem": "caa981a31913fafbc793276736dafc23",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3/ng#steel/strap:oyster": {
+   "stem": "00e5b00d4cf61c04a004475162d2c49a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3/ng#steel/strap:rubber": {
+   "stem": "8e5157d0eb8b5e509f2d7796b1573a98",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/37.8/20/28.5/c3#steel": {
+   "stem": "2a2e3c9b34014ed064b40d2c906956eb",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3#steel/strap:jubilee": {
+   "stem": "a9a11d0096c983e585b6b852ca249cfa",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3#steel/strap:leather": {
+   "stem": "665828d21e0724652b5cdc94e2a7711f",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3#steel/strap:mesh": {
+   "stem": "e1b4f988397f2f05014c0b4f6cd143fb",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3#steel/strap:nato": {
+   "stem": "779b9854f88d6dcdf06d21ef20bcaf8c",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3#steel/strap:oyster": {
+   "stem": "8536c5cd089840bc6b2110d2ab7a1997",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/c3#steel/strap:rubber": {
+   "stem": "16cb8053d4a1419fe771c7ec87add8cf",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/37.8/20/28.5/ng#steel": {
+   "stem": "8a1836456261393add3eff272d865669",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/ng#steel/strap:jubilee": {
+   "stem": "81dd62ca416ac3bc9f42c61c47d53035",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/ng#steel/strap:leather": {
+   "stem": "86af2642cbdee349ae3cfb992a5c85a4",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/ng#steel/strap:mesh": {
+   "stem": "79a9f75041205621242fde1bfc9efdac",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/ng#steel/strap:nato": {
+   "stem": "ebc27969cbf3fe0a68ea00e3a746ad4d",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/ng#steel/strap:oyster": {
+   "stem": "9f89be37f019428c0b34e9dff7ffdad0",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/37.8/20/28.5/ng#steel/strap:rubber": {
+   "stem": "2ac79c20b0e0b7c7f35a0a22c8bd5177",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/37.8/20/28.5#gold": {
-   "stem": "3a68dbf44465e56b2389bee012ed679f",
+   "stem": "0bc551eb22230ee254f8b05aed9c1428",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#gold/strap:jubilee": {
-   "stem": "c1ab45a2d78825968c37f788de92dfe4",
+   "stem": "e031d7076adaeb29b0599fa0e7209016",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#gold/strap:leather": {
-   "stem": "2bf31d5f8ccc429bcceb092e87b090fd",
+   "stem": "12adc82e24e3081fe271427072c97372",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#gold/strap:mesh": {
-   "stem": "dc8295e0df57a4c1e0d9f7f8dcfbfd13",
+   "stem": "8dba4331fd2c1948ae774687de4d2065",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#gold/strap:nato": {
-   "stem": "0db9238ccc108d4ebb0cf84f5d52ded4",
+   "stem": "4786e9375c03524606fe0eba430b0757",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#gold/strap:oyster": {
-   "stem": "8cb757a497fd9cb7cc151c01f12b576f",
+   "stem": "6838d795c33dc69daf4e935cafd86b73",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#gold/strap:rubber": {
-   "stem": "7063d55987604a4b35ac14fd3f092a97",
+   "stem": "8fda8d5002ad5aebf10d2b4c62128c87",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/37.8/20/28.5#matte": {
-   "stem": "56e9b272066b006f1a82534213095a94",
+   "stem": "a800ed6580966b3aa8aba2ef923ed7a4",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#matte/strap:jubilee": {
-   "stem": "27f46c1306ec258609c2ffa0ed1972ef",
+   "stem": "940244ce2b6645d7d2474d49701f4256",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#matte/strap:leather": {
-   "stem": "a3a13be9dcadac7d939f2b99f3e6209a",
+   "stem": "33b40424ccf7307a6232d89a022d739d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#matte/strap:mesh": {
-   "stem": "2e05f629e23c4a6d990543c190e96d09",
+   "stem": "5756ddf532e956d69527d2f19e30e962",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#matte/strap:nato": {
-   "stem": "70b6f6cd58c4416e02a8863c7cf3e9cc",
+   "stem": "4a19b3f96dec43f444b6e8f3c2e304d9",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#matte/strap:oyster": {
-   "stem": "ee02d2495e0c92d766eb0acaa75291f3",
+   "stem": "65e4d570976064affba17eda6e880c30",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#matte/strap:rubber": {
-   "stem": "cca272ca440f980db6535768ffff3106",
+   "stem": "5c5a6c27b107a6942ab839903c9fcf7c",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/37.8/20/28.5#pvd": {
-   "stem": "27036fdede3026efd5220c92dcacb8e6",
+   "stem": "eaf11c18409eb736bf69a90bda7ac8be",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#pvd/strap:jubilee": {
-   "stem": "a01dd0f71f0e4f94e7059f3337e67251",
+   "stem": "ad6b0c27626f8bc29dce603e187bc591",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#pvd/strap:leather": {
-   "stem": "e45b2ae67a0a1b9491d88b12647383fe",
+   "stem": "e076374ca176f44b59e9020d9b0369ea",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#pvd/strap:mesh": {
-   "stem": "85029f505c94636bb8b3638faf26c922",
+   "stem": "65d56192b5e2e6cb6c2ed969642a13a1",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#pvd/strap:nato": {
-   "stem": "4e99380d3a9a7d543f88574ccc3dfbcd",
+   "stem": "5c7fd28f957118ddcfe1f02287489c4d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#pvd/strap:oyster": {
-   "stem": "f02b12121e19ab1494af60214e2a2f0f",
+   "stem": "33589d35983042db06c4865427844fd0",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#pvd/strap:rubber": {
-   "stem": "71644cf15ac6b3b242264d4c097f5f7a",
+   "stem": "8c1f1af7c0b811e8649b865193519cea",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/37.8/20/28.5#rose": {
-   "stem": "07e356bc3ace2e248a379c8cafed9e36",
+   "stem": "77f2d0a68f18ee639356104c8c588042",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#rose/strap:jubilee": {
-   "stem": "0d4db872e2140d96635f514147f07c6a",
+   "stem": "bc46dee1b5c5d23f63d2dbece904576d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#rose/strap:leather": {
-   "stem": "2caea8b2b0639538387a56fb77cfbf12",
+   "stem": "d37b8de2f6ad2315588b05801afa70e6",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#rose/strap:mesh": {
-   "stem": "e00e934fbbfe4fea46e1978ee46ec6b1",
+   "stem": "647f711fc84bf6bd70b26ca2e14c30f5",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#rose/strap:nato": {
-   "stem": "530392c42ecce52e2190aec417c3c34b",
+   "stem": "72f16dbea04f464dbedc92dd22926b57",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#rose/strap:oyster": {
-   "stem": "4078f220cdbb5af65502312e2e3735ea",
+   "stem": "1763d980742d29c562ab237351baf94d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#rose/strap:rubber": {
-   "stem": "19b2a3fea75a71800c8ec8ecd7ecb8d4",
+   "stem": "142799673ec3a9ba765d6663f7eec0cc",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/37.8/20/28.5#steel": {
-   "stem": "2f1bd697e0f4abf29a7936ddfcf422f4",
+   "stem": "83de453f26008a89e5f2abbf89e3bd9c",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#steel/strap:jubilee": {
-   "stem": "1f872d860ad49d53cb7da0032adef5d3",
+   "stem": "5b41d8521c6a34be4281c12e99f60ee7",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#steel/strap:leather": {
-   "stem": "0a0618fe1f0f8bede91ebafb3df161a6",
+   "stem": "9238b6ec07725f1ae051b036833a1f31",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#steel/strap:mesh": {
-   "stem": "66db0a6c53446c1325f0e0659c709a41",
+   "stem": "e0db708bb1c6f412ee7e585bf04bcb8d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#steel/strap:nato": {
-   "stem": "057d5fccbe37199de883de15c7b3be69",
+   "stem": "b6ef7b4521abea9c35a264a5cbfff0ce",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#steel/strap:oyster": {
-   "stem": "295d18b25b72c1a90d634e8c305cca1f",
+   "stem": "6f7acbd4946875beb6c0f7fe99d60a40",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/37.8/20/28.5#steel/strap:rubber": {
-   "stem": "4549e1e83ee47f88b98b01191cdeac96",
+   "stem": "ecd39d1338bfea90eb6b2a045f399cec",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/38/20/28.5#pvd": {
-   "stem": "6b2942b05db704a3bfb753432d755695",
+   "stem": "5ee733dc8a0fd90458931a5375883458",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#pvd/strap:jubilee": {
-   "stem": "ff2c8d828668d32e804fd07c32c75ecb",
+   "stem": "f95f7382c6952780d4537605d0fa7cf9",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#pvd/strap:leather": {
-   "stem": "8e2c37904a77dc280af698dbaefe6f47",
+   "stem": "5fe6c3c72948fe7d75d6f67cf879427e",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#pvd/strap:mesh": {
-   "stem": "5083cc20af5b254a1a9468eadd31e44e",
+   "stem": "7e75dc49e32d5959fd8f0d9d48c372cf",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#pvd/strap:nato": {
-   "stem": "6c27870f3fc7f989983318231ebc1c90",
+   "stem": "215d5724dfd54f4c83db0e83ff92268f",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#pvd/strap:oyster": {
-   "stem": "192c38819320d30e205b6344b1326acb",
+   "stem": "77c6afd98802b488475db9f38ae00ecd",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#pvd/strap:rubber": {
-   "stem": "dc7a476b47701c1e37e43016208a9095",
+   "stem": "6bbed7bace07c415e8fcf8d24f584e46",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/38/20/28.5#steel": {
-   "stem": "f8ff26983d1974c41e8f1a200e1dabe2",
+   "stem": "69959bc930ea28c4058ae9dd216b7a06",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#steel/strap:jubilee": {
-   "stem": "9d99f96af750557015768a1042fe1890",
+   "stem": "44c6bacdf68138e7ae832612d44ea500",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#steel/strap:leather": {
-   "stem": "90c66073d53c4ad1d6b6e5e04ed8acd6",
+   "stem": "6a8aa1fb34160708fedad06f464f1746",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#steel/strap:mesh": {
-   "stem": "94b0a133238a24d8b7e70d823fc84dfa",
+   "stem": "6a2c234260c56acb347bb0b6e41023cc",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#steel/strap:nato": {
-   "stem": "f0f7d95d46bc26931e4878f4aea23e17",
+   "stem": "91dca40550373e62bd9f058188deae4d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#steel/strap:oyster": {
-   "stem": "17cd6025a91dfa6a8a63f127fc9f2c7c",
+   "stem": "ec61061e6edded850734025de8dbbed9",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/38/20/28.5#steel/strap:rubber": {
-   "stem": "24514eb0a02d7fbb87891b774628828f",
+   "stem": "d5955eeb855167e0531292f7e4e352ac",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/39.5/20/28.5#pvd": {
-   "stem": "24bc56184af2459dd9b6fee09b6be93e",
+   "stem": "0bcbf563ea4ac014112882cfade738cf",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#pvd/strap:jubilee": {
-   "stem": "c2e3254d2ae86ded7cb1cba85139f7fc",
+   "stem": "d04dc5735724a0f505759bd2b0efef75",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#pvd/strap:leather": {
-   "stem": "31ec120898ddf8d69e87af239fe58115",
+   "stem": "69c3771bd08f53d4552f0b0b61a8ec28",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#pvd/strap:mesh": {
-   "stem": "de17c0611611296f61a76cc78757848c",
+   "stem": "2625e889c50db4b33ad472b1c34a29d0",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#pvd/strap:nato": {
-   "stem": "627ac81e127f2aba60b530beecdd6405",
+   "stem": "d12455eb228db4dac0199c22f7b4f2d2",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#pvd/strap:oyster": {
-   "stem": "de4df42b27a79cb4934a4ffb068259b1",
+   "stem": "82335428af662141aa0e3e5cf132f73f",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#pvd/strap:rubber": {
-   "stem": "08641566cffab1b6f2975003134355b0",
+   "stem": "063b54f366ba314998bbc487d409bf45",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/39.5/20/28.5#steel": {
-   "stem": "6483276ecc0edf48b9e6379975d70eef",
+   "stem": "597e71f3aa8f5ee99fd02f53203ed326",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#steel/strap:jubilee": {
-   "stem": "af56d67d94c7d7e2ba5e59ba88054ac7",
+   "stem": "f987268cb42657887961d0778408be73",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#steel/strap:leather": {
-   "stem": "347e4497f681f1e9f220219fbf06fc46",
+   "stem": "830de49e3b1a94ea49af21eb24ca875b",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#steel/strap:mesh": {
-   "stem": "95afe5ba7c56d0f794c840f3ad244be4",
+   "stem": "d43b64fdd61b6ed7b490758034e4f1f9",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#steel/strap:nato": {
-   "stem": "3591b86a55557e1e6609af23ec636fa4",
+   "stem": "54a62b6bfc91442efafdb1cc60563c07",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#steel/strap:oyster": {
-   "stem": "657fd12a818c951afeb481736d0b8aad",
+   "stem": "f3b51b323a0d621a8ba97343263be60a",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/39.5/20/28.5#steel/strap:rubber": {
-   "stem": "dec573a9f666d5bb9bbe2c5fef9451c0",
+   "stem": "37117e1d63ad54692dcad93b62927c86",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3/ng#gold": {
+   "stem": "1b647f696c2675f4d35074d49511d97a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#gold/strap:jubilee": {
+   "stem": "c3818a11dbb11bac2a6a049e053e1032",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#gold/strap:leather": {
+   "stem": "14188c311f355403e8ce8924469a00be",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#gold/strap:mesh": {
+   "stem": "90db865d745eedab900b58ff3c261c76",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#gold/strap:nato": {
+   "stem": "87e6d1a6a05be868d26a110c24c62d92",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#gold/strap:oyster": {
+   "stem": "35323f11bfae3af9b4d79cd75d317fcd",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#gold/strap:rubber": {
+   "stem": "6e757979cd34f795719f8053421ca54b",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3/ng#pvd": {
+   "stem": "6e8c690504e1f3dc79f18608f0288572",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#pvd/strap:jubilee": {
+   "stem": "20f8fd57845dd2386725df78067f3114",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#pvd/strap:leather": {
+   "stem": "8dea6bf075589bc8eef76dd5ddee8568",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#pvd/strap:mesh": {
+   "stem": "586b41bf997952a5ebf019d3057d65e6",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#pvd/strap:nato": {
+   "stem": "42ff2660d384da6d48c23c4e4510f470",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#pvd/strap:oyster": {
+   "stem": "a19fd456e9b0563541640bb0e33bcdcc",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#pvd/strap:rubber": {
+   "stem": "62ef41e2aa638ebb0dc33b2c39998698",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3/ng#rose": {
+   "stem": "3fc78cfeefcbc716de83a58aee477482",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#rose/strap:jubilee": {
+   "stem": "6805aeb2d37039be3c08d6adfb6f0f8f",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#rose/strap:leather": {
+   "stem": "6fab1f5044dc2a13626d4d6deefee9db",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#rose/strap:mesh": {
+   "stem": "a67ffd76fb6729866db228eb70a3b588",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#rose/strap:nato": {
+   "stem": "75b1ae4d999f260c167c5c83bffd4399",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#rose/strap:oyster": {
+   "stem": "79c992b2526ae5246bbf719fd5fadc4f",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#rose/strap:rubber": {
+   "stem": "dcff1253d0e3928b66ecfed8141377a3",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3/ng#steel": {
+   "stem": "285d6393a8c607f0c84425d9548b4e4a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#steel/strap:jubilee": {
+   "stem": "ae112a6b9329c746c0524d6b7eeae381",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#steel/strap:leather": {
+   "stem": "da909ea5255dbe30f642b988410cd353",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#steel/strap:mesh": {
+   "stem": "d010b92cf84f314e924339b0e2ee864c",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#steel/strap:nato": {
+   "stem": "7224eb6ceb1a0a19e58fa07ca8d8ac4b",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#steel/strap:oyster": {
+   "stem": "025a0dd763f963c1c91486d029ac5531",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3/ng#steel/strap:rubber": {
+   "stem": "409c8c0d78aed8ec0580b267ff3bd074",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3#gold": {
+   "stem": "0515f8d167f2e117a3b1f3cc49b48650",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#gold/strap:jubilee": {
+   "stem": "ca79649bd4d3706506e8efb625df80a2",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#gold/strap:leather": {
+   "stem": "e63dcbea4e15a90c4324844d9551caa0",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#gold/strap:mesh": {
+   "stem": "02a6d45c8f940c14e64b176c80187645",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#gold/strap:nato": {
+   "stem": "1bd5d255e6e5bf41f4eba174ed0f5ddd",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#gold/strap:oyster": {
+   "stem": "f55ae3dfef7300f10fe8f76146abf935",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#gold/strap:rubber": {
+   "stem": "7c435088f04b79091430087e31ab464a",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3#matte": {
+   "stem": "2ae2203850310327ccfc0dee218236f2",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#matte/strap:jubilee": {
+   "stem": "287dde81b802b56f3608c6fdb74a557a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#matte/strap:leather": {
+   "stem": "f147f80911a56a7c058a7da23cea9792",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#matte/strap:mesh": {
+   "stem": "10fff6270400ee8d5089d9dfbc921501",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#matte/strap:nato": {
+   "stem": "72f3915763250204e9bbe9a1557b5cfa",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#matte/strap:oyster": {
+   "stem": "ca370becf2982f2cb71216199ff8bb94",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#matte/strap:rubber": {
+   "stem": "41199e42787932ab5356c1bad57139d1",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3#pvd": {
+   "stem": "5cfe6957939fc899d5df8f1ae6b5f982",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#pvd/strap:jubilee": {
+   "stem": "613a8a3224dbcac09a3721c49db72f69",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#pvd/strap:leather": {
+   "stem": "c3500b1debf2473659adaf1f7e7728d4",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#pvd/strap:mesh": {
+   "stem": "0eedc4f14a8ececae071a2c9d27fa10c",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#pvd/strap:nato": {
+   "stem": "1cd9beed73c8b94597c1c63a3e2a7ded",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#pvd/strap:oyster": {
+   "stem": "e148361edb9bbf727ee6575c780cea00",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#pvd/strap:rubber": {
+   "stem": "8511f1229dbf9fb7a06103ddc45122e5",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3#rose": {
+   "stem": "2eb7636a4ebb5ec42f2640082f7b9889",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#rose/strap:jubilee": {
+   "stem": "03def742a82416e1711cc583c5fb4f89",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#rose/strap:leather": {
+   "stem": "c80dac27e7b06e8b4dc088179089d099",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#rose/strap:mesh": {
+   "stem": "18d35c4788019745ffba07da84218520",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#rose/strap:nato": {
+   "stem": "fdc64726b1518437494175a7530617b8",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#rose/strap:oyster": {
+   "stem": "a6588d84614bd0705ca67244b6975366",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#rose/strap:rubber": {
+   "stem": "ef33919e8194c49972114627e67c7655",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/c3#steel": {
+   "stem": "667c324c174dd393131ff193192e5e59",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#steel/strap:jubilee": {
+   "stem": "208014f0cbba464aa92ce27a6f490fd9",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#steel/strap:leather": {
+   "stem": "270686c87f2b4f077ea76d13ca4acea6",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#steel/strap:mesh": {
+   "stem": "3907c4066bea230123be112325d15b95",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#steel/strap:nato": {
+   "stem": "9530fc327e9f21aed17de61f6afa48bd",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#steel/strap:oyster": {
+   "stem": "3e90cbd6b1a8c9a7750b317eec9886e7",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/c3#steel/strap:rubber": {
+   "stem": "a6a60b4d45ac6535f8655366194e3863",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/ng#gold": {
+   "stem": "16e647be64f8569a8e81ee1b884f72f6",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#gold/strap:jubilee": {
+   "stem": "ff33b69580479ea50e83f98f6bb34b00",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#gold/strap:leather": {
+   "stem": "9aadc4fe5b34dc98959169856fbfaff2",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#gold/strap:mesh": {
+   "stem": "2c7b12dd9b03435307f70376980b7920",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#gold/strap:nato": {
+   "stem": "c1323ed9d12ec763bda615f72f1a6519",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#gold/strap:oyster": {
+   "stem": "ee2aea16c319e5968d3b1fb3ec06eb76",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#gold/strap:rubber": {
+   "stem": "c7420f4d5f67bab0095d63308c92ad10",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/ng#matte": {
+   "stem": "d47c150bcae31b8f0035adc9f304daf7",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#matte/strap:jubilee": {
+   "stem": "a8b1d8f8a622aeba3c7250c96084b536",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#matte/strap:leather": {
+   "stem": "a0de42ee7772262bdf30aace10726875",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#matte/strap:mesh": {
+   "stem": "a15da7cb144a7bc11f0694004ead4808",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#matte/strap:nato": {
+   "stem": "b97e4edc37c02d14cf4ac6e52b4c7c7b",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#matte/strap:oyster": {
+   "stem": "dee885e5706f3e564f483dc0f28d8991",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#matte/strap:rubber": {
+   "stem": "3f9d200bf20a6497c3662dd3632edb0a",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/ng#pvd": {
+   "stem": "74b5888549e392f0f5d1b882718f63f2",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#pvd/strap:jubilee": {
+   "stem": "6fcb00558ce247b29fa94361aede2645",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#pvd/strap:leather": {
+   "stem": "0926404c6e0e06c66eeeea6003704bc4",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#pvd/strap:mesh": {
+   "stem": "93d72ea7a729ee779dbce1bf2988786e",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#pvd/strap:nato": {
+   "stem": "c269f72af9aa96c769a6b44c1503309c",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#pvd/strap:oyster": {
+   "stem": "42080200409b7e8ad1851f3010739753",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#pvd/strap:rubber": {
+   "stem": "6c4de98dca477d2128250b7b1f763a84",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/ng#rose": {
+   "stem": "ebb6e1fed294864260b1b2c67de6810c",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#rose/strap:jubilee": {
+   "stem": "3a7f61de85e7daa995e1ff8ec186dceb",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#rose/strap:leather": {
+   "stem": "e0d9231e57880e96bd2c93ad7d37155a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#rose/strap:mesh": {
+   "stem": "e2383d4239869f5ce640e903febca45d",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#rose/strap:nato": {
+   "stem": "74ed81ca85ab836df95f7c8d9e907b1a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#rose/strap:oyster": {
+   "stem": "5749243eebcf904352fbb78e917e57cf",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#rose/strap:rubber": {
+   "stem": "59f89f9eb5b6a1d38fe4773582d67820",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/42.5/22/28.5/ng#steel": {
+   "stem": "24a21a27837cd8e6f55fd4334b68d463",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#steel/strap:jubilee": {
+   "stem": "ed0894b2b93ac4bc50702b501322958d",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#steel/strap:leather": {
+   "stem": "d9ba14e0060dc48c72275cd218f6afae",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#steel/strap:mesh": {
+   "stem": "de7081df56436597e31ff4c5bf8e87ed",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#steel/strap:nato": {
+   "stem": "d93699aad2f64226cd5844dcf9b1cb51",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#steel/strap:oyster": {
+   "stem": "8c1bc0c760305893d8cf18b1d76dcdc9",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/42.5/22/28.5/ng#steel/strap:rubber": {
+   "stem": "6bc55b78f6c4782cabca263e215f5d77",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/42.5/22/28.5#gold": {
-   "stem": "c254c6097a2953f9524714d02c164542",
+   "stem": "f455abc77508aaa00a6129b92e1bfe29",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#gold/strap:jubilee": {
-   "stem": "f03e0cd44fb9729d8564b6ac25828abb",
+   "stem": "89f9a4072de5e0912ac7d288c2bc9ebd",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#gold/strap:leather": {
-   "stem": "b8b2a41dc81fdaa3c058477f8d2a0d05",
+   "stem": "2b8e694896831d61299f720edc8d8438",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#gold/strap:mesh": {
-   "stem": "ff2ed5216ba5caf5d33720b408837dad",
+   "stem": "9ac85ff42c008b4bec3bd2a4518bc160",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#gold/strap:nato": {
-   "stem": "8bb7201b6293c39f37fcf18fb6b10639",
+   "stem": "36a26980d5b1a6379da2bcbc15fec61d",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#gold/strap:oyster": {
-   "stem": "d94c034347d4a757cdff78ab5032e7f4",
+   "stem": "7dc9017ac56232b22b515c689ce8cbec",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#gold/strap:rubber": {
-   "stem": "fe5b4b0654ad454f11abaf926ced9d26",
+   "stem": "aa46590dbe4dd5bdfe69d99b2294994d",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/42.5/22/28.5#matte": {
-   "stem": "d5db09be99b257b5292b21ed94984a04",
+   "stem": "190e51f36b10912aa3a04bd44d4dc555",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#matte/strap:jubilee": {
-   "stem": "a2f2c3de663c31012d02d3926c82196a",
+   "stem": "b87e9ab7ad3dfb76a69a65e8e40d2f23",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#matte/strap:leather": {
-   "stem": "9551dcb87e6ae16ec004cd6b5811c285",
+   "stem": "12d2a997a4c15cf3ba3cd6e864adcfa2",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#matte/strap:mesh": {
-   "stem": "5e6dbe1f77d095a673cf8bd0fea71f76",
+   "stem": "3b7ed84112140a92c6985aeb7f1b3414",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#matte/strap:nato": {
-   "stem": "273e4d9f2185410af9ad471a69a26204",
+   "stem": "859887023cd2dd9d1e26a98c12ab6bcc",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#matte/strap:oyster": {
-   "stem": "6a66172e14d523f9e75de2cb53ea94a8",
+   "stem": "f8b03f012fc4f9b4857b1d9d801b5c01",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#matte/strap:rubber": {
-   "stem": "18a4533f638f6efad8edd2932679fb76",
+   "stem": "b4f604cd5b75e7f711ecbde3135414c1",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/42.5/22/28.5#pvd": {
-   "stem": "c22a9421fbb222730cc4f17afc3268e7",
+   "stem": "efaccb615a9014c96d5625e4638c08c2",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#pvd/strap:jubilee": {
-   "stem": "ea65bab1794357e9c9d9afe296a4c1bc",
+   "stem": "3627b81d416a7952e17c5699e63b1ab1",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#pvd/strap:leather": {
-   "stem": "681bdfbca83b1ee5e5cf50e95e4e7924",
+   "stem": "ef5bc86496765131caf2b69fa9d1c059",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#pvd/strap:mesh": {
-   "stem": "eaec703dce5bbc32374d7f00d454c684",
+   "stem": "bf3d5747204a15f3d495bedf74b1c4b1",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#pvd/strap:nato": {
-   "stem": "b4fbafc4a18c3740dfdc4cdda3ad9c86",
+   "stem": "ccc792a455c092635e13bf8f9f04de87",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#pvd/strap:oyster": {
-   "stem": "d301cd1344aaf40fb3a0dba637fd3a23",
+   "stem": "c30b5e4c692a53bc34b73384e6599578",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#pvd/strap:rubber": {
-   "stem": "bc544d2ad4576665ab92069f1b4a783a",
+   "stem": "7ccbf0e4bab4c595d1a1d82a0e42ab9f",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/42.5/22/28.5#rose": {
-   "stem": "5ff7d523f27ac535170c7ba10f1c5eab",
+   "stem": "0399e194b998c9f0facf8239b9ffe47b",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#rose/strap:jubilee": {
-   "stem": "7da76dfbf4fb8b76fb877f64fb3cc992",
+   "stem": "93622b66eaa08b2127f7cfc7765ca492",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#rose/strap:leather": {
-   "stem": "e5cac4c25848eac1cdbbdb58d3de99b2",
+   "stem": "964989ddc496d8f0d6a0b0d58fffd01a",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#rose/strap:mesh": {
-   "stem": "42ad89ba63a3ea491ae149592843eb82",
+   "stem": "0c63edf3ad34c6d1d5cba7a4e4e8cd03",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#rose/strap:nato": {
-   "stem": "6a5fe40d5c8981d3b3b5d04473e9c438",
+   "stem": "92734fad1dd5705cd661b69685ffd871",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#rose/strap:oyster": {
-   "stem": "a32802663fc1a9826b441d13824f068c",
+   "stem": "63c404ae71814e3ebaee20e6aa4b49c9",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#rose/strap:rubber": {
-   "stem": "5309113b7779de4ef3ddd58cddb4954f",
+   "stem": "66d789dfffc765642d574b00dbe4feae",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/42.5/22/28.5#steel": {
-   "stem": "b85275cdb58e4fd1b8f43273f60131a4",
+   "stem": "bb7153f58c026157248e422cdaa4dc62",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#steel/strap:jubilee": {
-   "stem": "abe0439e7440db94809c8e5e964d81a7",
+   "stem": "98372ae60e03f4b682baf9ce6edd34cb",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#steel/strap:leather": {
-   "stem": "098efcecc7b6d3ea0ca8c8da509c9afd",
+   "stem": "675cafc9c0e340f28a40d50c363d112e",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#steel/strap:mesh": {
-   "stem": "f9c411b32413ab6c39c3adff7ecb0c06",
+   "stem": "63ff72dab249b1a54de2f8e06466ca3a",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#steel/strap:nato": {
-   "stem": "f75a7b32df78b0df7f6d6736e78b223d",
+   "stem": "e0f08592945b27921f50c8018e9c93c7",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#steel/strap:oyster": {
-   "stem": "ca69e6a6a6db4f78500474d2cefb9d50",
+   "stem": "b3761c96eed8e4b31da76e7d63c1cbab",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/42.5/22/28.5#steel/strap:rubber": {
-   "stem": "c834e4e8e26c477077503376ab90277d",
+   "stem": "787da5848b65e34d5530a242df611e53",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/43.8/22/28.5/c3/ng#gold": {
+   "stem": "36c8ae5632170e6bf8bd6784cde34a24",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#gold/strap:jubilee": {
+   "stem": "3916aa2d6ddf77b311d762489fdee9fc",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#gold/strap:leather": {
+   "stem": "f6dd9fbec05051989ddb11a3d2cb7cab",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#gold/strap:mesh": {
+   "stem": "55960d88261b10b6325447606581f935",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#gold/strap:nato": {
+   "stem": "4c684b8282c6aa7c0f2a0b133bacb763",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#gold/strap:oyster": {
+   "stem": "b60358154f1523ba763e05b0c26d4d42",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#gold/strap:rubber": {
+   "stem": "0c1cc1bb984cb07e7c31ef3e967472f1",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/43.8/22/28.5/c3/ng#pvd": {
+   "stem": "b7890583904cfab93cf3d38e537cfd5b",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#pvd/strap:jubilee": {
+   "stem": "b48a7d8fe2c3e5f3b23d2b3ec536c2a0",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#pvd/strap:leather": {
+   "stem": "11419197953c3f18fb828c6689f900d9",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#pvd/strap:mesh": {
+   "stem": "5cf0664a7b0723f745d5dc8ec87ac18c",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#pvd/strap:nato": {
+   "stem": "ea8db71504958bde233572fb16385223",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#pvd/strap:oyster": {
+   "stem": "415a04cf98cb068096bcf646a292f456",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#pvd/strap:rubber": {
+   "stem": "8ca65ab586fac42de155a0ccd1146528",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/43.8/22/28.5/c3/ng#steel": {
+   "stem": "5640a1c0da1e34c41224a04a9a18e45d",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#steel/strap:jubilee": {
+   "stem": "2d62a6958e21a35600774431b9c3b8c6",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#steel/strap:leather": {
+   "stem": "bc68ab20ce4fbe99e7c76e301d935a0f",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#steel/strap:mesh": {
+   "stem": "028cdac87661711e36f5c53370de904c",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#steel/strap:nato": {
+   "stem": "4581b1223b17523ead796b0fe7d6b9dc",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#steel/strap:oyster": {
+   "stem": "1edfbf9723b52113bf953e92a0c1dee8",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3/ng#steel/strap:rubber": {
+   "stem": "3f2d338b42a5317e90e0c98dfad29567",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/43.8/22/28.5/c3#gold": {
+   "stem": "f5dc3a61cf73bf75b3d98449a96c12e5",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#gold/strap:jubilee": {
+   "stem": "70b404ac550b1f7a48a846fcec2ecfd0",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#gold/strap:leather": {
+   "stem": "b0a39d8e4eb35d6f95d3721b746a59ec",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#gold/strap:mesh": {
+   "stem": "62da8bdf76a335b5d5fbd7564711b71e",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#gold/strap:nato": {
+   "stem": "af50aa755dc749a49d2161fde516b872",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#gold/strap:oyster": {
+   "stem": "ff81fc2c04ebd2cf6dedfbcaa30e7cab",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#gold/strap:rubber": {
+   "stem": "3a2eb9b9a93ffd3c1b0be70ecfb1cf77",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/43.8/22/28.5/c3#pvd": {
+   "stem": "a3d9653005f94a6341ee5485a0ddc1d7",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#pvd/strap:jubilee": {
+   "stem": "5a4f0a47e21982172e2b3e3178f8539d",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#pvd/strap:leather": {
+   "stem": "d17af96a41e873b20432824d8de99341",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#pvd/strap:mesh": {
+   "stem": "231fef48b616b3b0f2fb662547d01ca2",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#pvd/strap:nato": {
+   "stem": "3d1a6040b6fe8f2f71a075d2baf5e5dc",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#pvd/strap:oyster": {
+   "stem": "400883f5ba2ee0c9589fedd7d43ddfa7",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#pvd/strap:rubber": {
+   "stem": "405adff39fb71f1dd43949d0153531da",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/43.8/22/28.5/c3#rose": {
+   "stem": "190941aed6036d60f5089fdc67ee1db1",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#rose/strap:jubilee": {
+   "stem": "3dd03f43ef2e0ef0235d673928861cbc",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#rose/strap:leather": {
+   "stem": "7dad344abecd281b37a39b8f3a4e9341",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#rose/strap:mesh": {
+   "stem": "9286b271458fef8f86abd15c5043973f",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#rose/strap:nato": {
+   "stem": "935e6dd241b9df54576d91ca65c2c2a5",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#rose/strap:oyster": {
+   "stem": "6c9620ff79bd0463a7b9e25a0db87d2b",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#rose/strap:rubber": {
+   "stem": "64c4adab1ca843a1a7b59470c50a20c0",
+   "pass": "beauty"
+  },
+  "hero/beauty/case/case:round/43.8/22/28.5/c3#steel": {
+   "stem": "db1830f55698c9544ee58c62b222868a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#steel/strap:jubilee": {
+   "stem": "9b4b631fc2bb301483bc8f1c96846958",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#steel/strap:leather": {
+   "stem": "1e4abd4767805f952edbc50e02eae359",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#steel/strap:mesh": {
+   "stem": "3abba625073ba84d499c0685ec70479a",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#steel/strap:nato": {
+   "stem": "b92774f901a926703f1830b9b2ea1078",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#steel/strap:oyster": {
+   "stem": "b2616c8cd922cc773c551eaba6ae8fd3",
+   "pass": "beauty"
+  },
+  "hero/beauty/casestrap/case:round/43.8/22/28.5/c3#steel/strap:rubber": {
+   "stem": "63378ed9d5bb691342f21216ac4f8f47",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/43.8/22/28.5#gold": {
-   "stem": "6dd2184faab78dd0831d1df621fc2490",
+   "stem": "21227d9f766431090c448602525f3bcf",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#gold/strap:jubilee": {
-   "stem": "661392c57d2cc035080591f606fd556d",
+   "stem": "6168707b998cc3b7b335aedc9d6624fb",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#gold/strap:leather": {
-   "stem": "2463a5b72a379fac9a8adff84ae072e8",
+   "stem": "6a363d6910552f407c7fc1162b3e0a33",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#gold/strap:mesh": {
-   "stem": "2a4ee4c3fb2da52024fc48de9b3a0783",
+   "stem": "158a93854ae8a62e17202fc963e2c526",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#gold/strap:nato": {
-   "stem": "ed5aae3ebe0d6e26497cdcf33e31c44d",
+   "stem": "05df0dfee95539e896e2296d2ac1f6f8",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#gold/strap:oyster": {
-   "stem": "7e9b672c845ebd351b1a42542519245f",
+   "stem": "a107577907d865518c1d6225b2f6b801",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#gold/strap:rubber": {
-   "stem": "bc480f1beb08d8527d91a595cc8a6100",
+   "stem": "fcf546bdb51bb202746e9813416199e5",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/43.8/22/28.5#pvd": {
-   "stem": "4036bb9f43afdddc3f4a9b33ebf72369",
+   "stem": "01079c07346066dd4a5a58c7d16ceeeb",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#pvd/strap:jubilee": {
-   "stem": "e4d57486734a2d8276579998afe5c586",
+   "stem": "8c9ba84d5b9ed70c6695b1fd1d1a654b",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#pvd/strap:leather": {
-   "stem": "9cc70eede35ac52817c7ec2e884ec801",
+   "stem": "49112b4a544a44365d256d71109f2e5f",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#pvd/strap:mesh": {
-   "stem": "a49ab6fbf982872cff5a1cc2cd39a32a",
+   "stem": "6aec3db3f091ea9894771006b3524f85",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#pvd/strap:nato": {
-   "stem": "65ee0dca0fff3a5566b472167aae4172",
+   "stem": "94f22a55810f3786f4894afd84fa38db",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#pvd/strap:oyster": {
-   "stem": "a555f75684c33d2d0f675d17cbc925c3",
+   "stem": "69c9549eed9fc7b417c3fef1fd87864a",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#pvd/strap:rubber": {
-   "stem": "49087dccfb9565200aaf8e5a6fba690f",
+   "stem": "6a728362a86ece2f0a4155ba12ebc9e0",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/43.8/22/28.5#rose": {
-   "stem": "bb6a418e80ece27a620270eedf50a496",
+   "stem": "876353a2f8fdd02aa6ad8f46d7d0d023",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#rose/strap:jubilee": {
-   "stem": "de01f02f5c273fa40bfd827bc86334ef",
+   "stem": "737aeb73ea93125a9b664e3c977f28b6",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#rose/strap:leather": {
-   "stem": "0b207c69701cf26c187dd2415cc5cc2a",
+   "stem": "7e6ea30237450ee350ba977d3017362b",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#rose/strap:mesh": {
-   "stem": "c0cdb1795f1643312945bc6921d90c75",
+   "stem": "9da32ac7b513cb9dabf0334a13cebd6a",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#rose/strap:nato": {
-   "stem": "788c220ff699713b90c462ed97fec891",
+   "stem": "28063e76e98d16edf9005f10cfbd45d2",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#rose/strap:oyster": {
-   "stem": "e8faf5a07f770640d75cd15ffa977819",
+   "stem": "19c711cda639d2fb6aa04734e7634176",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#rose/strap:rubber": {
-   "stem": "ddeebe08f2efcc081e726eaa069730ee",
+   "stem": "acbe5327adea4f54e7e9f564b4cb9dc6",
    "pass": "beauty"
   },
   "hero/beauty/case/case:round/43.8/22/28.5#steel": {
-   "stem": "b658515c2b2fbdb9f30e8aa6a48ba87e",
+   "stem": "0943a3b89acede62ffe73e9e35826210",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#steel/strap:jubilee": {
-   "stem": "9b4187970fd0dd2ae530a56dbcc2135f",
+   "stem": "b95baba1985d9c4dd959747e5b9f89f1",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#steel/strap:leather": {
-   "stem": "679367f4032d8559240f23610dabb6f7",
+   "stem": "b8ac83adde46be52b302d9bd9ce5e2c7",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#steel/strap:mesh": {
-   "stem": "43dd15777de23060ee04938ae0c780b6",
+   "stem": "ea6a532d5b42969aa45edc0d76aada4e",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#steel/strap:nato": {
-   "stem": "d057e8a1d94d850bf1584f79c84673b9",
+   "stem": "69a3d9dc4ad773425205c062e6e92bf0",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#steel/strap:oyster": {
-   "stem": "7554d91b9d43da7ea49d08eb9033676e",
+   "stem": "a7b872065fe924cf2da33837e6e6946b",
    "pass": "beauty"
   },
   "hero/beauty/casestrap/case:round/43.8/22/28.5#steel/strap:rubber": {
-   "stem": "b2c420d70bc65de79e4547748c50e22d",
+   "stem": "308eccd490114604fa785e0f8f3e011a",
    "pass": "beauty"
   },
   "hero/surface/date/case:round/36/20/28.5/dial:disc": {
-   "stem": "0104d5c3496d314adab4a24c7a781d49",
+   "stem": "360cabc2ed6eda14b8b9a8c5ed823bbb",
    "pass": "surface"
   },
   "hero/surface/dial/case:round/36/20/28.5/dial:disc": {
-   "stem": "7df35ca240192941630099df04356d8f",
+   "stem": "362147507034cb96d6abfb996a07cc85",
    "pass": "surface"
   },
   "hero/surface/ring/case:round/36/20/28.5/ring:angled": {
-   "stem": "755ec9676392816a38eafac42d5a578d",
+   "stem": "5f7568a8369239e6fcac56efaf0abd8b",
    "pass": "surface"
   },
   "hero/beauty/hands/case:round/36/20/28.5/hands:sword#black": {
-   "stem": "d6bbccd48b54e61d83e6b682d2b04fd7",
+   "stem": "6b4ddb06f754c1f2e67b24e8fd6bd83d",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/36/20/28.5/hands:sword#gold": {
-   "stem": "4dd3e56bd925ecc58c597a39b4712c7e",
+   "stem": "3fcc448b3901a31be950e9e39725a277",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/36/20/28.5/hands:sword#rose": {
-   "stem": "163d2b1890f31859adcf91d7815652e9",
+   "stem": "7e2f07bd8ba2476043495d505cbe43a9",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/36/20/28.5/hands:sword#steel": {
-   "stem": "4f2965daf8dd890ed62e8e8457c4f975",
+   "stem": "06ac63fd9d152844ad7f1ab878cbfec6",
    "pass": "beauty"
   },
   "hero/surface/insert/case:round/36/20/28.5/insert:flat": {
-   "stem": "e1c6ff3ac67d759283becd330cb64961",
+   "stem": "02724b68660b4dfdb4159edd123deadd",
    "pass": "surface"
   },
   "hero/beauty/strap/case:round/36/20/28.5/strap:jubilee": {
-   "stem": "15f5255ddfb25fa8f1ee863e970958f1",
+   "stem": "720e98c8e5a7e1f7082c6d85f1a32e54",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/36/20/28.5/strap:leather": {
-   "stem": "79a1f4c1aff3e00ef8e0ebcea02a876f",
+   "stem": "cbf1ea5b861abe9eaa7acb23ba9f68f0",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/36/20/28.5/strap:mesh": {
-   "stem": "bc4e0a59c5f903f2b34efa41a6f0fcb1",
+   "stem": "2e0f4e2f8ea61f39d5e602843c8917a3",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/36/20/28.5/strap:nato": {
-   "stem": "c9bd50c4b1090938a298bcbe5d7ac28a",
+   "stem": "1b022574a42ea167948273cf7efb6b66",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/36/20/28.5/strap:oyster": {
-   "stem": "79dde750791872ddc0ec5e4eafab21b5",
+   "stem": "5b3cd25f453156f99006c228d96ba941",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/36/20/28.5/strap:rubber": {
-   "stem": "d9ec41974c2b3ae872ceebb16c258688",
+   "stem": "3c1ae56b8b3413afd9e8eee31a7a0036",
    "pass": "beauty"
   },
   "hero/surface/date/case:round/37.8/20/28.5/dial:disc": {
-   "stem": "0e86b4889076e97e41fe009406916892",
+   "stem": "b85dd5e666a1ff13d1101cd1a153b6e1",
    "pass": "surface"
   },
   "hero/surface/dial/case:round/37.8/20/28.5/dial:disc": {
-   "stem": "a6445206649cc1287036816e8e6410a5",
+   "stem": "358299d1f7d629abfcf927e685df803b",
    "pass": "surface"
   },
   "hero/surface/ring/case:round/37.8/20/28.5/ring:angled": {
-   "stem": "be47e09c72ef0f71deedbb5952c010d6",
+   "stem": "a76b14a48e639d6dc03c27cbeb5ea819",
    "pass": "surface"
   },
   "hero/beauty/hands/case:round/37.8/20/28.5/hands:sword#black": {
-   "stem": "3aadfb83fa457b2db0e303573ccd137f",
+   "stem": "03c018c5bd46fff3404845922c0a6418",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/37.8/20/28.5/hands:sword#gold": {
-   "stem": "61f44e4ff6a863ab4f658867e5c0c6bd",
+   "stem": "d82f6d8b1837a7f580eb68f8f56666bf",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/37.8/20/28.5/hands:sword#rose": {
-   "stem": "97ec6e6d30261574b09c44858d82bafb",
+   "stem": "a466abdc4898fa9b276057af2267770d",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/37.8/20/28.5/hands:sword#steel": {
-   "stem": "684ef2505e6a684a109b7389180d0b43",
+   "stem": "fd2561d6ec00d539a4383b22e0bd5af1",
    "pass": "beauty"
   },
   "hero/surface/insert/case:round/37.8/20/28.5/insert:flat": {
-   "stem": "42688aa14cc875d9507ae4fbb012dae5",
+   "stem": "3e6fb9a4b0197a1e78635ca9f6b3f2e9",
    "pass": "surface"
   },
   "hero/beauty/strap/case:round/37.8/20/28.5/strap:jubilee": {
-   "stem": "44d9f374d6ad8e30045844e399e186a9",
+   "stem": "0f0382da1fb28afce528611c6edb47f0",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/37.8/20/28.5/strap:leather": {
-   "stem": "c3fad1c6d934f6b1d167b37d38224ac8",
+   "stem": "b32ff7bdbc83ebc80b6f6092664a3154",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/37.8/20/28.5/strap:mesh": {
-   "stem": "cd85b8536ffdbd9c122c4c610f3fe7c7",
+   "stem": "eff98496f9ce2bf17302a47b73dd4d89",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/37.8/20/28.5/strap:nato": {
-   "stem": "002cc59b65734e64a736e911e9bc858b",
+   "stem": "b5264a493cc107d2a3f53d16246e07bd",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/37.8/20/28.5/strap:oyster": {
-   "stem": "e60864b89a4613ba254cfd5238e5fe14",
+   "stem": "4dbee79ce5183874c6e26222fd9ab13e",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/37.8/20/28.5/strap:rubber": {
-   "stem": "f78ad289b89c611bdb5033507400fe67",
+   "stem": "c8f84cb78e8c919c6bdd6547831cc496",
    "pass": "beauty"
   },
   "hero/surface/date/case:round/38/20/28.5/dial:disc": {
-   "stem": "29d3d881b2900713a374296dbe36d183",
+   "stem": "0ddff417cf53eb1470afc2ebefef7b76",
    "pass": "surface"
   },
   "hero/surface/dial/case:round/38/20/28.5/dial:disc": {
-   "stem": "c3ec640027490fb31fe8241e458d5410",
+   "stem": "6a0d67b4cd8d6f1272d9e38c9014c117",
    "pass": "surface"
   },
   "hero/surface/ring/case:round/38/20/28.5/ring:angled": {
-   "stem": "3b775d05b51ad5388ae4b6a64b34dd77",
+   "stem": "7cd867cc1cd0226adc802f2c37680ecf",
    "pass": "surface"
   },
   "hero/beauty/hands/case:round/38/20/28.5/hands:sword#black": {
-   "stem": "fc7e94ac7ab0399e532a55ac983cf386",
+   "stem": "1e74f803d18c5af39bce6168872d4093",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/38/20/28.5/hands:sword#gold": {
-   "stem": "35d01f02e835e4da30e8edd2deb489c9",
+   "stem": "ef8d7077ae5b66c35c249301c71321d0",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/38/20/28.5/hands:sword#rose": {
-   "stem": "12daa97564ac6539d4bc9475fe901f7c",
+   "stem": "83b8a1dcb28f540b8456ba4f2205d340",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/38/20/28.5/hands:sword#steel": {
-   "stem": "90c2edfd91cdb94164763944530be49f",
+   "stem": "c182636c7989190aca1286b61821ad4b",
    "pass": "beauty"
   },
   "hero/surface/insert/case:round/38/20/28.5/insert:flat": {
-   "stem": "863ae2490750d546b6be86675bcdc64d",
+   "stem": "9860b0c016cca17ac22d3e2137ea50e8",
    "pass": "surface"
   },
   "hero/beauty/strap/case:round/38/20/28.5/strap:jubilee": {
-   "stem": "9372dbb0268fa7e2c628ce18d9873256",
+   "stem": "37b0a66fcf69218cc44d6a5c6383ef5b",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/38/20/28.5/strap:leather": {
-   "stem": "ce4474f3c666859207cfe3692d609ba7",
+   "stem": "b3b19e3dc42e680b94f43453380a91f1",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/38/20/28.5/strap:mesh": {
-   "stem": "89e1c1cff2e76a7998118a029c04b812",
+   "stem": "688c8f7f930c7ee7f85fd566941cd431",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/38/20/28.5/strap:nato": {
-   "stem": "40cdfd6db000cc2f7169e55a2a2b8945",
+   "stem": "d334456d87143dd46867fe5722be0c03",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/38/20/28.5/strap:oyster": {
-   "stem": "15578d8f04bbd7ef97b67f20155a0af9",
+   "stem": "f72da9b337447883a5289e90f50d1812",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/38/20/28.5/strap:rubber": {
-   "stem": "bace1aad2bca883cb5f2d247a428c2cc",
+   "stem": "912337d5c74d49b3acd9cf2a9afc8cd2",
    "pass": "beauty"
   },
   "hero/surface/date/case:round/39.5/20/28.5/dial:disc": {
-   "stem": "cf9dd728926f83266f05dc24be1a7c66",
+   "stem": "f0f8b24c56e101f26bf69350bcec46e3",
    "pass": "surface"
   },
   "hero/surface/dial/case:round/39.5/20/28.5/dial:disc": {
-   "stem": "17e031951fb821dff1eec1e3beecbda6",
+   "stem": "ca1b93def5efdbbce7fcf9d47a59a611",
    "pass": "surface"
   },
   "hero/surface/ring/case:round/39.5/20/28.5/ring:angled": {
-   "stem": "7ef9cba6dacb61ee2701a828df149c52",
+   "stem": "3f855c2d1b742c696ee0575f3c3edb98",
    "pass": "surface"
   },
   "hero/beauty/hands/case:round/39.5/20/28.5/hands:sword#black": {
-   "stem": "7114eedf913adc91f6c9a29307df70db",
+   "stem": "82b8c62d2b7c64388b6d6703b66b3859",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/39.5/20/28.5/hands:sword#gold": {
-   "stem": "d58a634216c06f5dc8172aa7a0cbc078",
+   "stem": "8ecf66788ddea4f67399f0515b77e6b4",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/39.5/20/28.5/hands:sword#rose": {
-   "stem": "9159699b894871a7fafe39e5908d6b39",
+   "stem": "91da8cc22ce2785da17c30869be5c912",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/39.5/20/28.5/hands:sword#steel": {
-   "stem": "93180afa5c8b567d7ccc1d1f78a3b56c",
+   "stem": "21245530778e03ac4345d39e47ccdb99",
    "pass": "beauty"
   },
   "hero/surface/insert/case:round/39.5/20/28.5/insert:flat": {
-   "stem": "ca7b532a41f831662f6fd8ad4cb6c02d",
+   "stem": "97b773f41345150908f58ad44cd72db2",
    "pass": "surface"
   },
   "hero/beauty/strap/case:round/39.5/20/28.5/strap:jubilee": {
-   "stem": "dc7b10fbb67bf796824ed2dfcf1d32d2",
+   "stem": "7155874f2e47e08ae526f65950d92c97",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/39.5/20/28.5/strap:leather": {
-   "stem": "5e7111f00fbc4944370f18cf43ea32e1",
+   "stem": "ba59e07ea483c91a2038e7ae822b165f",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/39.5/20/28.5/strap:mesh": {
-   "stem": "7e9816daf15ece1233c0a45b2ab73349",
+   "stem": "78be916b2073556fa3c07a9529899f29",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/39.5/20/28.5/strap:nato": {
-   "stem": "0306a0e8a0982fc324e5dfc9b2b9f0c1",
+   "stem": "b3d80766f1f3d7857aa7f193c518e1fd",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/39.5/20/28.5/strap:oyster": {
-   "stem": "67764b287e3a918cc9dcd9da3a14dc5d",
+   "stem": "2f4147b3511f11acab069473f3dae206",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/39.5/20/28.5/strap:rubber": {
-   "stem": "2abf76de1be4cef96a1a9f998059da80",
+   "stem": "d39077d9b08058333b1b279d8b0a0fbb",
    "pass": "beauty"
   },
   "hero/surface/date/case:round/42.5/22/28.5/dial:disc": {
-   "stem": "c5a180e3ac7b17321129613ff2e165c2",
+   "stem": "bdaef1be7c07d97d6f301c8f46b321e1",
    "pass": "surface"
   },
   "hero/surface/dial/case:round/42.5/22/28.5/dial:disc": {
-   "stem": "e24b858c3606a1dea84325d6d3944f77",
+   "stem": "cf978440d292ca1b67e882ca4b232ca8",
    "pass": "surface"
   },
   "hero/surface/ring/case:round/42.5/22/28.5/ring:angled": {
-   "stem": "028ac56efd5862f89d6f9596f356d8f0",
+   "stem": "4ef08a614e15787f925b49c61ec7a1b4",
    "pass": "surface"
   },
   "hero/beauty/hands/case:round/42.5/22/28.5/hands:sword#black": {
-   "stem": "1abcca3d8426603f997337a9e6eb0d66",
+   "stem": "f299d8a11b914313efb5ab3f9cb2b6c8",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/42.5/22/28.5/hands:sword#gold": {
-   "stem": "3a450848a641fa350e954048e2b374cb",
+   "stem": "3a1431eae618920d091bc8f8688d88a6",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/42.5/22/28.5/hands:sword#rose": {
-   "stem": "dbfa2545474241c4c4e89eb678f9957e",
+   "stem": "5c21849ee2574c741b898a0bd08ab263",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/42.5/22/28.5/hands:sword#steel": {
-   "stem": "5f3d39d01ac5a322c21b5dac4e62d913",
+   "stem": "820e211907d6e53bac863fa936a7ddb7",
    "pass": "beauty"
   },
   "hero/surface/insert/case:round/42.5/22/28.5/insert:flat": {
-   "stem": "cab5fb11b54024189a853bf357a2ab1f",
+   "stem": "d3e0b1f1bd7b50dba8592ae4fcc9c6b0",
    "pass": "surface"
   },
   "hero/beauty/strap/case:round/42.5/22/28.5/strap:jubilee": {
-   "stem": "c9907fb4b72f36db0c14ed8dc6da43e1",
+   "stem": "200756875a353f83e2a876120a0cf99c",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/42.5/22/28.5/strap:leather": {
-   "stem": "384ca091d4fceb79ab1ecac187909d39",
+   "stem": "242a8038a568eaa2920c5768c5c1e554",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/42.5/22/28.5/strap:mesh": {
-   "stem": "a52d8108bcb15ab98ac07a73085e3065",
+   "stem": "b8910b254048fc0dd4ae666340d45162",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/42.5/22/28.5/strap:nato": {
-   "stem": "cf2947c222a4b35b64c085caa168ceca",
+   "stem": "b180b3746fcb238c285e10ae42a3ac31",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/42.5/22/28.5/strap:oyster": {
-   "stem": "36542a597025767ffa1b273cdd050ca0",
+   "stem": "72d1cd94c2e5348bd9a4b45faf6fc858",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/42.5/22/28.5/strap:rubber": {
-   "stem": "9b8751d1eac8f969a6802a5ad2193a86",
+   "stem": "836d2f22bc9b25640c20ea748afef409",
    "pass": "beauty"
   },
   "hero/surface/date/case:round/43.8/22/28.5/dial:disc": {
-   "stem": "4c381d39a2dffecbb4da2db798c4eec5",
+   "stem": "693d8362412a391f9081afa5306a216d",
    "pass": "surface"
   },
   "hero/surface/dial/case:round/43.8/22/28.5/dial:disc": {
-   "stem": "fcf1877f37ced6ed806f58d64e3b9d1e",
+   "stem": "e8725b1c07ede80ccd0fab1abe5b830a",
    "pass": "surface"
   },
   "hero/surface/ring/case:round/43.8/22/28.5/ring:angled": {
-   "stem": "664bd65b5d0c3fae6e916caf98693cb8",
+   "stem": "18b2674deea6416f807176ca43a1c3e6",
    "pass": "surface"
   },
   "hero/beauty/hands/case:round/43.8/22/28.5/hands:sword#black": {
-   "stem": "178bfe6ad7ef7766b004f76d65d1b725",
+   "stem": "bb2f0ae9b4bc0810d9b4ada3779a95bf",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/43.8/22/28.5/hands:sword#gold": {
-   "stem": "3c59d73e42f5d067cc0a48c3e095221d",
+   "stem": "8926dfaeba25cecc740dd5febdb2b4c6",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/43.8/22/28.5/hands:sword#rose": {
-   "stem": "d62c4eb183c65c50fc013661e7e1aff1",
+   "stem": "0ae4f56618554de3a53bdbf14a7d7368",
    "pass": "beauty"
   },
   "hero/beauty/hands/case:round/43.8/22/28.5/hands:sword#steel": {
-   "stem": "ebd373586c437c784c4bdbcd41570b04",
+   "stem": "25c34e2f6460a213a2f21ee2568ac40f",
    "pass": "beauty"
   },
   "hero/surface/insert/case:round/43.8/22/28.5/insert:flat": {
-   "stem": "92eae6f15f1ca0dd00ae1ba7ca695430",
+   "stem": "2eb40c23d675d1ca6d862d60d293cda9",
    "pass": "surface"
   },
   "hero/beauty/strap/case:round/43.8/22/28.5/strap:jubilee": {
-   "stem": "21782b746c09e94859b95f0384d9e896",
+   "stem": "e027383735ab966d5c8546ef0227a5a8",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/43.8/22/28.5/strap:leather": {
-   "stem": "f73fb058c7f44e92b8002f48713d1283",
+   "stem": "c19568d24e7c6d016094c19abf4d6149",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/43.8/22/28.5/strap:mesh": {
-   "stem": "b7410c7aa7f1a3b4c05f69e7d4f184b1",
+   "stem": "a42a4a62525206f8bd2021209a388a76",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/43.8/22/28.5/strap:nato": {
-   "stem": "5b97523642327a73126f49c74deabfbc",
+   "stem": "7e2f92b082946c3897dc83cd1ee08c8b",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/43.8/22/28.5/strap:oyster": {
-   "stem": "b4db2420994b2bacd94a24134482a56e",
+   "stem": "b91f071002607ea5fbe4cb93ffa778c7",
    "pass": "beauty"
   },
   "hero/beauty/strap/case:round/43.8/22/28.5/strap:rubber": {
-   "stem": "79e1adaa530c21e4a6699e3e636f3465",
+   "stem": "c2f1cb7c53e4352ea12400061d8124cd",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/36/20/28.5#gold": {
-   "stem": "517231a8a4356001616f1fb6fec9e173",
+   "stem": "e6dbf55022c08b9490c82a0ba76508b5",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/36/20/28.5#pvd": {
-   "stem": "bdb7f0e1fd8f1d0622693eddd91ad305",
+   "stem": "232233464f406eb190b57ef108dd3c62",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/36/20/28.5#steel": {
-   "stem": "96f9665da839d3cdaf9b71b98b04d3d0",
+   "stem": "91389b228426a395313c2fe299ae891f",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/37.8/20/28.5/c3/ng#steel": {
+   "stem": "c70bac419f22a008650169c13ab45955",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/37.8/20/28.5/c3#steel": {
+   "stem": "87a36b80ef61d0744e4700ad71b70245",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/37.8/20/28.5/ng#steel": {
+   "stem": "67dca88fe1f0d8e7124add719f5a6197",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/37.8/20/28.5#gold": {
-   "stem": "021b74e2ecc28d02ac1e2335a1957e11",
+   "stem": "2b5a56125977f1e235afccd8c1e3c8fd",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/37.8/20/28.5#matte": {
-   "stem": "7a79439298e53bd5ee9752d30c1a7b3b",
+   "stem": "be79f0baa4790d5673291c0612c7784f",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/37.8/20/28.5#pvd": {
-   "stem": "66d466e7ebb165919e76ae596fe7cc11",
+   "stem": "074b83f34d7e08021469052c763630f2",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/37.8/20/28.5#rose": {
-   "stem": "0528dd1727d677b085da900141926b40",
+   "stem": "bb3801ddef932be866c2f8ca22bc8b7d",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/37.8/20/28.5#steel": {
-   "stem": "26450ad34cd4a1cce52046c30d549449",
+   "stem": "747dbd1b76842b6f04f529de8226ec12",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/38/20/28.5#pvd": {
-   "stem": "7be65e1d1ba4f9d4bbb358a8e2b252bf",
+   "stem": "64aa3e64e19465f5164e4cddbd323059",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/38/20/28.5#steel": {
-   "stem": "1197e52f7045792d3e5c6aa7a1105ced",
+   "stem": "af7e7f30fbfd80c24b60b751c0585b69",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/39.5/20/28.5#pvd": {
-   "stem": "13a9240a7799a06e861405ae004fa350",
+   "stem": "d685aee11cf8a5fa933691d7eddfd5f3",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/39.5/20/28.5#steel": {
-   "stem": "11b7bb8eaf36ebeb84a723408dabe30a",
+   "stem": "73ef4298941887d8536207c169478b77",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3/ng#gold": {
+   "stem": "b050075fc5d5efbe50bb35b5c59f3286",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3/ng#pvd": {
+   "stem": "f9b6344fb510e1c38bb97f28493048a4",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3/ng#rose": {
+   "stem": "1f004ec510ef87a2862e8cb94d46dcf6",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3/ng#steel": {
+   "stem": "cddaeca024570af918d8e9fcfb841dc7",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3#gold": {
+   "stem": "3d5a283cb66b0918df8c51f5f9308348",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3#matte": {
+   "stem": "ed00d2fcce495b1c6ef3046cf35a1e16",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3#pvd": {
+   "stem": "1f7df5b4671994e476fcd8f81e5f0964",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3#rose": {
+   "stem": "27230a52c6a3a7e65da18e7bacd00516",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/c3#steel": {
+   "stem": "74c4c4165adc0755d27a91da792b09a8",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/ng#gold": {
+   "stem": "e3b4176894c6e7a7b820314d4250b32c",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/ng#matte": {
+   "stem": "05520ddbc4509dc3538a1ab9926a81c7",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/ng#pvd": {
+   "stem": "058c148ae498ad56c085e7fc6c166c6b",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/ng#rose": {
+   "stem": "80e157ffd1adaa44d28eaff42669aac0",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/42.5/22/28.5/ng#steel": {
+   "stem": "e9f7207211767613b27e0dafb023217f",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/42.5/22/28.5#gold": {
-   "stem": "397846fe824048456efe46bea7a8f65d",
+   "stem": "40525c39f85bfb29f36d039da293206b",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/42.5/22/28.5#matte": {
-   "stem": "c61ade77e73db8a50c6e20a2e2db5226",
+   "stem": "d9ba4794decb47be786a0bcaa6ca796f",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/42.5/22/28.5#pvd": {
-   "stem": "bc1ddf375a55a38bb07e57b04c0a62b8",
+   "stem": "b9e10ca45738eab58999ceb27c0640c2",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/42.5/22/28.5#rose": {
-   "stem": "c6a9660009bb3b8c897f5d75d178775b",
+   "stem": "e36d0858250893a791cdb0025e66a7f8",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/42.5/22/28.5#steel": {
-   "stem": "0008f41abdc977add2a518f64d1228e1",
+   "stem": "bbffd2637d4134b10193ddc26e40a5f1",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/43.8/22/28.5/c3/ng#gold": {
+   "stem": "98837082c97449bfaab2c7d09bba2c9b",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/43.8/22/28.5/c3/ng#pvd": {
+   "stem": "32ddde5159e92433d523a15e7a885f90",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/43.8/22/28.5/c3/ng#steel": {
+   "stem": "e993e88be18c8f68da1b1aa6f5d1cc63",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/43.8/22/28.5/c3#gold": {
+   "stem": "f012c17853a9bcd1b7a6a60d8c9e7e3c",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/43.8/22/28.5/c3#pvd": {
+   "stem": "b2e785db545af0e7d7890bd9faf91d90",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/43.8/22/28.5/c3#rose": {
+   "stem": "18b826e6b9311ec07342fd705bf3d626",
+   "pass": "beauty"
+  },
+  "top/beauty/case/case:round/43.8/22/28.5/c3#steel": {
+   "stem": "daa3a737ff205759de85cbed41135a16",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/43.8/22/28.5#gold": {
-   "stem": "75a54ab325baef456a1fef7df51e0ce1",
+   "stem": "084234065b609dd27b428a92928257f0",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/43.8/22/28.5#pvd": {
-   "stem": "13f2dd84616e2b76dddda1f39dec8150",
+   "stem": "120f40d306b377449f63ac8e701a01ef",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/43.8/22/28.5#rose": {
-   "stem": "1f5817448ff437a727916ec851da2a62",
+   "stem": "837d64ad102d5a3f4e6d95823cfd8f31",
    "pass": "beauty"
   },
   "top/beauty/case/case:round/43.8/22/28.5#steel": {
-   "stem": "e4dffb9127a97b3a3e678dadf49493b5",
+   "stem": "807e777fc0d7a7c5cfea2d5102d1d7bc",
    "pass": "beauty"
   },
   "top/surface/date/case:round/36/20/28.5/dial:disc": {
-   "stem": "3918adbc76f8bb7f62e0d544c25c69d6",
+   "stem": "55c76d4fd0e9f9bd9e7c31da289ac2f8",
    "pass": "surface"
   },
   "top/surface/dial/case:round/36/20/28.5/dial:disc": {
-   "stem": "36c3f32dabffd61e2597c79a046275bf",
+   "stem": "43fcc8b5f092905adcd83d21ead5793d",
    "pass": "surface"
   },
   "top/surface/ring/case:round/36/20/28.5/ring:angled": {
-   "stem": "f9e91b70eac4462df6b7fdd60f052f7d",
+   "stem": "8ff6fd99902f499b967a2bd37acc60ba",
    "pass": "surface"
   },
   "top/beauty/hands/case:round/36/20/28.5/hands:sword#black": {
-   "stem": "43cabc7273b14efd0e3ba3f15ac17bc8",
+   "stem": "a3b220d010b71114c7421ba816d63d31",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/36/20/28.5/hands:sword#gold": {
-   "stem": "568a6dfed402d06ae13e52025bae2d4a",
+   "stem": "2c50b89a5a3d9b4a19f165df21d89d40",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/36/20/28.5/hands:sword#rose": {
-   "stem": "cf5935ea2885345d2c691d9709f5458e",
+   "stem": "333de7896148955628ca84ed4044f917",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/36/20/28.5/hands:sword#steel": {
-   "stem": "a5f0000dc6173d3a926de80965e62c02",
+   "stem": "fbee7d9f5349c7836c884158ac4f9ffc",
    "pass": "beauty"
   },
   "top/surface/insert/case:round/36/20/28.5/insert:flat": {
-   "stem": "b6dfc3b1bb1ad77309b95e626968262c",
+   "stem": "1f56540cc79823b594ad0791605d7ff0",
    "pass": "surface"
   },
   "top/beauty/strap/case:round/36/20/28.5/strap:jubilee": {
-   "stem": "3491c365efc789d86fc891bdb7011871",
+   "stem": "5e1ea655a672e7c247065feb7a25fdc9",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/36/20/28.5/strap:leather": {
-   "stem": "19a0441e790fb3a77f5dbb98068ad295",
+   "stem": "3cbf2678c93821e590144c9755ce3e0a",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/36/20/28.5/strap:mesh": {
-   "stem": "85af97624a233fde142351b8c7c14993",
+   "stem": "685a5bdd095914430c3ca88083356ba3",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/36/20/28.5/strap:nato": {
-   "stem": "1d8dbddbe5bd438c99f8329b95be8b08",
+   "stem": "1df316ce4514853d681ea1ba518c581f",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/36/20/28.5/strap:oyster": {
-   "stem": "b8dec5562afec5fd7e344896f178e8fb",
+   "stem": "cea9ba60d612f0f028f9b24dcd155d88",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/36/20/28.5/strap:rubber": {
-   "stem": "e094dfa4c9f45aeb44c043ae574bf8eb",
+   "stem": "ec885708dbc6b69e20e85a53ba427804",
    "pass": "beauty"
   },
   "top/surface/date/case:round/37.8/20/28.5/dial:disc": {
-   "stem": "affa6d0a32f323f9a85164129acf2799",
+   "stem": "f858f798bf448f20ff2cb0a82f652a1b",
    "pass": "surface"
   },
   "top/surface/dial/case:round/37.8/20/28.5/dial:disc": {
-   "stem": "47869ffbe56d16353f75611bd3d9a3c1",
+   "stem": "24754e04cdaddb423675d057cc0caedb",
    "pass": "surface"
   },
   "top/surface/ring/case:round/37.8/20/28.5/ring:angled": {
-   "stem": "38ef71d968029f51ff92960a815468e5",
+   "stem": "dfcc538cfde764bfee29249d8b200310",
    "pass": "surface"
   },
   "top/beauty/hands/case:round/37.8/20/28.5/hands:sword#black": {
-   "stem": "6047414bfde1548e193f19c46d31110f",
+   "stem": "1e7f332ca16c9ed6271afa20f582a915",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/37.8/20/28.5/hands:sword#gold": {
-   "stem": "0bc2db588273e93c0e0bc9a907e0ff3a",
+   "stem": "bc89bd939516303e2fa599fa766c9762",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/37.8/20/28.5/hands:sword#rose": {
-   "stem": "4e78bde2813a8e2237cdb2dd05683c50",
+   "stem": "6b4a039648b8da0e3d448a0730bf02bc",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/37.8/20/28.5/hands:sword#steel": {
-   "stem": "c1ac118281deb8cb0fd7f997c81e6867",
+   "stem": "fcb7f3ea95de89aee157af8e1173fa37",
    "pass": "beauty"
   },
   "top/surface/insert/case:round/37.8/20/28.5/insert:flat": {
-   "stem": "e38f3e0626bf1f35e7c9ce59a407ed32",
+   "stem": "ef254532990eda15a371ef0d90167d6f",
    "pass": "surface"
   },
   "top/beauty/strap/case:round/37.8/20/28.5/strap:jubilee": {
-   "stem": "129196ca0ee888526486ddaafee194e3",
+   "stem": "11e33a4a3634f64fb3085382c149ec94",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/37.8/20/28.5/strap:leather": {
-   "stem": "9aabb24d8c0373288a079e320e227bc0",
+   "stem": "94e2841a4dea7f9a48eb7b87df5e511b",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/37.8/20/28.5/strap:mesh": {
-   "stem": "4a27095ab612d82f50bbdeada658b42f",
+   "stem": "ac89db79801491f9548d02754ab94ede",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/37.8/20/28.5/strap:nato": {
-   "stem": "208e6e3a7ebce16630ec2b645cd02533",
+   "stem": "94254d9e6b70b99764d942fe29050994",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/37.8/20/28.5/strap:oyster": {
-   "stem": "2d6f6943d8928bd9c5e022e2d84f8ed2",
+   "stem": "f18ec13e824aa92c23d5721561449920",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/37.8/20/28.5/strap:rubber": {
-   "stem": "d4a45580923867da57aae74c394ee71e",
+   "stem": "5b244455875c742e4a5cffe09c2c4b53",
    "pass": "beauty"
   },
   "top/surface/date/case:round/38/20/28.5/dial:disc": {
-   "stem": "95854c5499e978e0f8907c197414860d",
+   "stem": "8479454974088c94a537eab300c48f60",
    "pass": "surface"
   },
   "top/surface/dial/case:round/38/20/28.5/dial:disc": {
-   "stem": "3d31aa7871f5fe860e962452645fd7be",
+   "stem": "5bc7d52bc999843d41783d163fb54138",
    "pass": "surface"
   },
   "top/surface/ring/case:round/38/20/28.5/ring:angled": {
-   "stem": "21f9340d0665ee633b35efead5582a59",
+   "stem": "8497e259172ef758dc7a2b2cbfb4c57e",
    "pass": "surface"
   },
   "top/beauty/hands/case:round/38/20/28.5/hands:sword#black": {
-   "stem": "f4de990a9181a89759e156ff447b0c22",
+   "stem": "8098fa0cbf9faedb25848270c53f68b7",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/38/20/28.5/hands:sword#gold": {
-   "stem": "3841853cddcda546a5350e6815b8a221",
+   "stem": "f998ea5ba52ed9c751a5118eee188775",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/38/20/28.5/hands:sword#rose": {
-   "stem": "95d686bfbc30c294d673d10579e8f35c",
+   "stem": "37ba4eb5186799dc0edef5e2860cd544",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/38/20/28.5/hands:sword#steel": {
-   "stem": "b5280c715c0ca3e3c315b4774946b902",
+   "stem": "08743ba254fa5eb9343cfb7a75163310",
    "pass": "beauty"
   },
   "top/surface/insert/case:round/38/20/28.5/insert:flat": {
-   "stem": "ca68b7c9bdc5a9a33115705f5778d610",
+   "stem": "05668b799b2b4fdffe6065ac3cd70c00",
    "pass": "surface"
   },
   "top/beauty/strap/case:round/38/20/28.5/strap:jubilee": {
-   "stem": "ed8d373b174567aada56a4ec9cb0c2d9",
+   "stem": "98ba27b1000ac414ab289987259a3af2",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/38/20/28.5/strap:leather": {
-   "stem": "a05a7be89e1efee4cb6fa0352ea601f0",
+   "stem": "f4d14f632c92ead6b293330770c47a8e",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/38/20/28.5/strap:mesh": {
-   "stem": "507eb1799bbef929dae911b495469cf6",
+   "stem": "f4a06c23db1ed478c2e8656e9d7147ba",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/38/20/28.5/strap:nato": {
-   "stem": "a9c6af59dda76a5320f3693241e0b50a",
+   "stem": "7370fcc49d83f2ba0788d887436541da",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/38/20/28.5/strap:oyster": {
-   "stem": "90b14ed7c08847ce5f4636676cb193d8",
+   "stem": "d8499b6355d0adb23df914c74258f721",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/38/20/28.5/strap:rubber": {
-   "stem": "6f405cdfc4e70e2c5b73c30ecceef3aa",
+   "stem": "70a77b26e00336cc55be21318f00e158",
    "pass": "beauty"
   },
   "top/surface/date/case:round/39.5/20/28.5/dial:disc": {
-   "stem": "8ae63ac72e6d94e7b2bcdd91d7b22ce8",
+   "stem": "7a6d8688fefe185eabb77cbdd03eca5e",
    "pass": "surface"
   },
   "top/surface/dial/case:round/39.5/20/28.5/dial:disc": {
-   "stem": "f3e1f11ab66b8c65dfe1615039decfe5",
+   "stem": "83b645d15d6a8bcdfca02d9ee319c36d",
    "pass": "surface"
   },
   "top/surface/ring/case:round/39.5/20/28.5/ring:angled": {
-   "stem": "47bbde1704381f68fbc5b63c7b592af0",
+   "stem": "b3d58a6ea4387ec64d8f52af98af8305",
    "pass": "surface"
   },
   "top/beauty/hands/case:round/39.5/20/28.5/hands:sword#black": {
-   "stem": "2b82a953b6c0c786ebb9e48a1d612a90",
+   "stem": "807de54af9e7817d3d1b9bad55520be5",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/39.5/20/28.5/hands:sword#gold": {
-   "stem": "99b269ff215c1ea31841688d06889dff",
+   "stem": "9f40942a34852e4a6aba5a81d58cbdf5",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/39.5/20/28.5/hands:sword#rose": {
-   "stem": "f09b4e42dc5a4cb2110bb911e606588d",
+   "stem": "9d3d47798cf19055da3f21ae8de063b2",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/39.5/20/28.5/hands:sword#steel": {
-   "stem": "76f4931d49d7dd2f9b05452a8f23f709",
+   "stem": "606429e76ef348d5adf41e443b944448",
    "pass": "beauty"
   },
   "top/surface/insert/case:round/39.5/20/28.5/insert:flat": {
-   "stem": "64ebe1a270601e429f07bb9f4c9afee5",
+   "stem": "fedf7e2487721e521fc0a858c98f9a1f",
    "pass": "surface"
   },
   "top/beauty/strap/case:round/39.5/20/28.5/strap:jubilee": {
-   "stem": "50b2a522984ce6369d76e8ff3a653253",
+   "stem": "c0dc6a623173d16c43900b9f407829ce",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/39.5/20/28.5/strap:leather": {
-   "stem": "5685bb3b35f0ba133c07151bf815f08c",
+   "stem": "16b07c1f19f1693bf703e8534bc3837a",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/39.5/20/28.5/strap:mesh": {
-   "stem": "b893c1dcaf11f9bb4496ae8709623e5f",
+   "stem": "1650f7de49087fd3bc65da40ea557364",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/39.5/20/28.5/strap:nato": {
-   "stem": "2ce303e8588515fea3a09dd15af9ca9b",
+   "stem": "e3ca352927b2563ba07627895fbf1fba",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/39.5/20/28.5/strap:oyster": {
-   "stem": "38c270540f1852e81b7f276da3931d59",
+   "stem": "e47b0ce17d5314a274b0d3d07a646a7c",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/39.5/20/28.5/strap:rubber": {
-   "stem": "aafb91136ff250694957ea50455b40c0",
+   "stem": "10ddd208d00194e1fc31a1e2e5ff91dc",
    "pass": "beauty"
   },
   "top/surface/date/case:round/42.5/22/28.5/dial:disc": {
-   "stem": "18475ce46e600e8e5eec30389170f53d",
+   "stem": "f5731e37cabfe23358a70af8e865ec39",
    "pass": "surface"
   },
   "top/surface/dial/case:round/42.5/22/28.5/dial:disc": {
-   "stem": "11f071db6fc11c39b9f4a4132560c75c",
+   "stem": "a6549c7ed52d72492872b1d5c75d31c2",
    "pass": "surface"
   },
   "top/surface/ring/case:round/42.5/22/28.5/ring:angled": {
-   "stem": "9585ff5cc4b15e8efd5f9fb73582882f",
+   "stem": "d986ddfe27b65aa5d04d83fe266bae11",
    "pass": "surface"
   },
   "top/beauty/hands/case:round/42.5/22/28.5/hands:sword#black": {
-   "stem": "eedf0f40d86174311c1b328834c033b0",
+   "stem": "4618077dbed3ffe0287f586575d3819f",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/42.5/22/28.5/hands:sword#gold": {
-   "stem": "186cc18f811c4ab485e5a7832494e20f",
+   "stem": "3e67f1b8e79db90310ca910d24496f7e",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/42.5/22/28.5/hands:sword#rose": {
-   "stem": "1df45aa0faec40d8fee3d1cf6563ed66",
+   "stem": "c6244863fcf1fd2f8135972ff9af4ba3",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/42.5/22/28.5/hands:sword#steel": {
-   "stem": "dc8b89f56987170f489f614ad4423a99",
+   "stem": "5d4e31aa56507c7f5b76cd3f4e27afbc",
    "pass": "beauty"
   },
   "top/surface/insert/case:round/42.5/22/28.5/insert:flat": {
-   "stem": "6c940314b1db3f7efb23580b48dd9dab",
+   "stem": "96a71fdfb1d5b791b515f238b353b414",
    "pass": "surface"
   },
   "top/beauty/strap/case:round/42.5/22/28.5/strap:jubilee": {
-   "stem": "3c1ad24b681ff4edc0192f98dbd1cf39",
+   "stem": "0563b0729979d988576c7f7f43f36b1d",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/42.5/22/28.5/strap:leather": {
-   "stem": "068f64b2bcc72882ede6d7af97f2b18f",
+   "stem": "7eafcf281e9f6ecc4bc7a2f2f5109321",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/42.5/22/28.5/strap:mesh": {
-   "stem": "37bbf848185498c5216f0974f4613cb0",
+   "stem": "5c764f9132bb3696af4495f0a8723ee1",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/42.5/22/28.5/strap:nato": {
-   "stem": "64c73866f8cb1fafe59b8a8531dbcc4f",
+   "stem": "49c47309f3f9a943f9cd72c9b8ec5774",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/42.5/22/28.5/strap:oyster": {
-   "stem": "71e179a43ea63046ff1da9fb7dc88118",
+   "stem": "e399ff3fd322bc52d91f2713635267a2",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/42.5/22/28.5/strap:rubber": {
-   "stem": "378b77568452db71333f5565b601923f",
+   "stem": "61fd63e2be4a871527e4e01b52a33925",
    "pass": "beauty"
   },
   "top/surface/date/case:round/43.8/22/28.5/dial:disc": {
-   "stem": "f3c9e6b4edd80c96404a83174178cf5f",
+   "stem": "eb3fe44f86f812f28eddf357c5569e58",
    "pass": "surface"
   },
   "top/surface/dial/case:round/43.8/22/28.5/dial:disc": {
-   "stem": "6c6febde315eb4e5cf909e3dc0bdef0b",
+   "stem": "cd181eb5fc8d9ebdf33762aab3129ef8",
    "pass": "surface"
   },
   "top/surface/ring/case:round/43.8/22/28.5/ring:angled": {
-   "stem": "f5635a9ea6d8775b3b361d2cad090e54",
+   "stem": "2fd3308b2d7802cbe2e91d641c7f1b0c",
    "pass": "surface"
   },
   "top/beauty/hands/case:round/43.8/22/28.5/hands:sword#black": {
-   "stem": "077d765463aa9035145b4e98b0bdadca",
+   "stem": "dd9792fd3cf1680e497851b38ca84c3d",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/43.8/22/28.5/hands:sword#gold": {
-   "stem": "10e7c356ae39508a55271344cbcb392b",
+   "stem": "e8f8240081a31f1017582e48f9925433",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/43.8/22/28.5/hands:sword#rose": {
-   "stem": "f6353f8aa1b4dacb5e8e270ad5215def",
+   "stem": "ccbe2eca5667dc70b989c33d775342b6",
    "pass": "beauty"
   },
   "top/beauty/hands/case:round/43.8/22/28.5/hands:sword#steel": {
-   "stem": "e18dcfe14b8f98436ed458879ab40aff",
+   "stem": "65c709ff7791d660cbc7d7992a3b72a7",
    "pass": "beauty"
   },
   "top/surface/insert/case:round/43.8/22/28.5/insert:flat": {
-   "stem": "2eda8bc0f8c03bae356e9d5c41aae83d",
+   "stem": "feb4a3e3427e50baf986045aa5b5780b",
    "pass": "surface"
   },
   "top/beauty/strap/case:round/43.8/22/28.5/strap:jubilee": {
-   "stem": "47e1e6a78061c151cf130965262993f8",
+   "stem": "0974258bb9e5d89cc156e2dba45b3faf",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/43.8/22/28.5/strap:leather": {
-   "stem": "e5c014247af92ab4eda9cc6ac6b252c3",
+   "stem": "4ecdb94d47e892a860bcaeb8c8f332a9",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/43.8/22/28.5/strap:mesh": {
-   "stem": "8816ebdf365608bd76c72e8b53573909",
+   "stem": "b5237e909bea27f4137175ce8d235b41",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/43.8/22/28.5/strap:nato": {
-   "stem": "70698b3fd73adb8f818a0525ec515587",
+   "stem": "358013a052931d20f38ecb926f508f17",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/43.8/22/28.5/strap:oyster": {
-   "stem": "e010c3c7cde8874a5955fdf1233c7576",
+   "stem": "64d6ff6fe8d6678d67899ea01e314bba",
    "pass": "beauty"
   },
   "top/beauty/strap/case:round/43.8/22/28.5/strap:rubber": {
-   "stem": "f6637c1e9d1b350437b048c5481244a5",
+   "stem": "6331917308b96056e4fb04951e253cd3",
    "pass": "beauty"
   }
  },
@@ -3147,15 +3915,15 @@
    "actualShape": "hand-cathedral"
   },
   "DKTFwqUgtfGmDD4GQ9wCe": {
-   "key": "case:round/43.8/22/28.5#pvd",
+   "key": "case:round/43.8/22/28.5/c3/ng#pvd",
    "approximated": false
   },
   "_QOxYEYDBHljBzPJcvgRi": {
-   "key": "case:round/43.8/22/28.5#steel",
+   "key": "case:round/43.8/22/28.5/c3/ng#steel",
    "approximated": false
   },
   "KTQwiVCmfdXYqzXQmAVov": {
-   "key": "case:round/43.8/22/28.5#gold",
+   "key": "case:round/43.8/22/28.5/c3/ng#gold",
    "approximated": false
   },
   "wJ0ShCbRQi2gJKc97boRx": {
@@ -3563,11 +4331,11 @@
    "approximated": false
   },
   "z_O-oH4hQjPASv0-IP5o1": {
-   "key": "case:round/37.8/20/28.5#steel",
+   "key": "case:round/37.8/20/28.5/ng#steel",
    "approximated": false
   },
   "ryVZGCkHfX-P8mF-kFFHY": {
-   "key": "case:round/37.8/20/28.5#steel",
+   "key": "case:round/37.8/20/28.5/c3/ng#steel",
    "approximated": false
   },
   "lIN9YIMQiYC7TBMrSOKps": {
@@ -3632,7 +4400,7 @@
    "actualShape": "crown-chunky"
   },
   "3cv610lkSc4GRWZLzjYms": {
-   "key": "case:round/37.8/20/28.5#steel",
+   "key": "case:round/37.8/20/28.5/c3#steel",
    "approximated": false
   },
   "ijiDUL4sdYed_aS1KsBLQ": {
@@ -3640,11 +4408,11 @@
    "approximated": false
   },
   "FhV0JRdWV2csQkhnjy29A": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3#pvd",
    "approximated": false
   },
   "3mYgPgesQTeH1U1zjY62a": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "e50aAZi-luPfsw3NgQLEy": {
@@ -4693,11 +5461,11 @@
    "approximated": false
   },
   "efsdaXRmB1m3odMjmz_XB": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3/ng#pvd",
    "approximated": false
   },
   "ibEAnjDJwMeuYiXn3kRRL": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3/ng#steel",
    "approximated": false
   },
   "qx4I3Mhgs4zture73CxOV": {
@@ -4814,11 +5582,11 @@
    "approximated": false
   },
   "s23ZKVhoJ3m_RaBdj2NiS": {
-   "key": "case:round/42.5/22/28.5#matte",
+   "key": "case:round/42.5/22/28.5/ng#matte",
    "approximated": false
   },
   "Sez_2zP5DJck7hv3YHMg0": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/ng#steel",
    "approximated": false
   },
   "aHjjto7n5jexU25A2To9d": {
@@ -4834,19 +5602,19 @@
    "approximated": false
   },
   "CfHgcmYrScTBSoqksYngY": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "KBAcOLtSMI0kmzOA36brU": {
-   "key": "case:round/42.5/22/28.5#matte",
+   "key": "case:round/42.5/22/28.5/c3#matte",
    "approximated": false
   },
   "da1IUz5fX5h0z1kNYvTJg": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/c3#gold",
    "approximated": false
   },
   "x2-7A1P1bDjeAj_s1s2bq": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "NaOc-KBUAxUuLb0NRTklV": {
@@ -7666,27 +8434,27 @@
    "approximated": false
   },
   "B_kD_t-j5EM1dvBJsXhFN": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3/ng#pvd",
    "approximated": false
   },
   "1mTqSLIRDg6YZBsGrD9Q5": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3/ng#steel",
    "approximated": false
   },
   "SlZ4t2BU_3vSAu1gIQEnA": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/c3/ng#rose",
    "approximated": false
   },
   "hdjm2vO0lP1-eCD6-sOM7": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/c3/ng#gold",
    "approximated": false
   },
   "ZJLtfKzUuTv_bZyuOqsvk": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3/ng#pvd",
    "approximated": false
   },
   "Z6-jnKWm6GrFhSHTMOp6a": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3/ng#steel",
    "approximated": false
   },
   "-k9nLUQHov4_hffFGEwEe": {
@@ -7694,27 +8462,27 @@
    "approximated": false
   },
   "gyP20KzWV_ZU1VNA_R_sU": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "Mqy8TDaRpegBhFo0Js_5K": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3#pvd",
    "approximated": false
   },
   "qlEzjxUIqJv-3jIRnBTl5": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/c3#gold",
    "approximated": false
   },
   "rMgVqyVIEtyNyX21t6Sw1": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/c3#rose",
    "approximated": false
   },
   "rqBKKtDjU9d-Q45j6wcvH": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "8twxg72IoSVE4aseICFDh": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3#pvd",
    "approximated": false
   },
   "-Cb7o_9zGl3OG5kTjSFBH": {
@@ -7758,35 +8526,35 @@
    "approximated": false
   },
   "CWdFTG76oyWgPYYgwzVep": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3#pvd",
    "approximated": false
   },
   "GCuMAuda2dzxmMClQAt1S": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "XnFopnICh8SfOWSRNhFDS": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/c3#pvd",
    "approximated": false
   },
   "9JvFbOXBs2DyV2HtEYDBg": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/c3#gold",
    "approximated": false
   },
   "wRsL2vdyLPHRuWg6H8z6-": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/c3#rose",
    "approximated": false
   },
   "j_359HQkrmFWCTIK3q_pD": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "COvkYS5p2EefhEB1pu1-f": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/ng#rose",
    "approximated": false
   },
   "nfFGbjdXVPVwLc0EN0jKs": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/ng#gold",
    "approximated": false
   },
   "Vv4z9VLSpMoSupRGxJMIh": {
@@ -8006,19 +8774,19 @@
    "approximated": false
   },
   "vdnHm4P9hHyKaMaCLr0gx": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/ng#pvd",
    "approximated": false
   },
   "B5_7L_DYSUGs6V4wfNA45": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/ng#steel",
    "approximated": false
   },
   "6A9AMepkzMEMGKpCGM5Q2": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/ng#pvd",
    "approximated": false
   },
   "h3-J8gRN1jqJxY-V-LRrN": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/ng#steel",
    "approximated": false
   },
   "FiG3rCC0cni5xUuMObgNt": {
@@ -8120,19 +8888,19 @@
    "actualShape": "strap-band"
   },
   "6kyigPrNYZg4TcD3BTD7K": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/ng#pvd",
    "approximated": false
   },
   "KHxl3l2qm2utqsJnd3gOf": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/ng#steel",
    "approximated": false
   },
   "jwlM86y7LOwR1lY2pFz9q": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/ng#pvd",
    "approximated": false
   },
   "4nM_aPReOsUwdKdzO1LDQ": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/ng#steel",
    "approximated": false
   },
   "4GRsn7TgGfhAANubl8H3H": {
@@ -10222,7 +10990,7 @@
    "approximated": false
   },
   "RYTOUTgU4Fa8a1ZN2HixK": {
-   "key": "case:round/42.5/22/28.5#pvd",
+   "key": "case:round/42.5/22/28.5/ng#pvd",
    "approximated": false
   },
   "fBV0hwnb1oZpMw-4YQzmK": {
@@ -10390,7 +11158,7 @@
    "approximated": false
   },
   "xld3qCObBe-D3Q1rzU4IX": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "ddlEXv5E7TAgfVSf8SYgM": {
@@ -10616,7 +11384,7 @@
    "approximated": false
   },
   "0i1qyr5YUztlPzLT785O2": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "2-dXSLgqUi7xBl5IZqQX2": {
@@ -11168,11 +11936,11 @@
    "approximated": false
   },
   "uHX_-e9eXkpv9nNWHcu0f": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/ng#rose",
    "approximated": false
   },
   "BuKJmcG2WYSjoN57PoNwM": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/ng#gold",
    "approximated": false
   },
   "JYvlvrTxjhdDVj1g9_kPO": {
@@ -11180,7 +11948,7 @@
    "approximated": false
   },
   "C1X4x1hYJOm5zpSKBha-M": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/ng#steel",
    "approximated": false
   },
   "VN-JOh9BZ5YD5Gkqc0Thv": {
@@ -11310,19 +12078,19 @@
    "approximated": false
   },
   "uuWppzLcu2AeSiSjRfV_g": {
-   "key": "case:round/43.8/22/28.5#pvd",
+   "key": "case:round/43.8/22/28.5/c3#pvd",
    "approximated": false
   },
   "q42fX8NLjFJNf0l1HjRWP": {
-   "key": "case:round/43.8/22/28.5#rose",
+   "key": "case:round/43.8/22/28.5/c3#rose",
    "approximated": false
   },
   "1VEu63zFyWrV5svzlBaCf": {
-   "key": "case:round/43.8/22/28.5#gold",
+   "key": "case:round/43.8/22/28.5/c3#gold",
    "approximated": false
   },
   "8evFMMwQhZhdylA_73fNQ": {
-   "key": "case:round/43.8/22/28.5#steel",
+   "key": "case:round/43.8/22/28.5/c3#steel",
    "approximated": false
   },
   "vRpblepMDfmzZPVt3zvUa": {
@@ -11981,7 +12749,7 @@
    "approximated": false
   },
   "nJl2NvCDPSzWvf1sQRe-y": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/c3#rose",
    "approximated": false
   },
   "wjAvT2O30947GEYSBGJh_": {
@@ -12029,11 +12797,11 @@
    "approximated": false
   },
   "oL7upIuWYqjGszfmxzDnT": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/c3#gold",
    "approximated": false
   },
   "Cw85OsEINLZk_fVCvWPGf": {
-   "key": "case:round/42.5/22/28.5#matte",
+   "key": "case:round/42.5/22/28.5/c3#matte",
    "approximated": false
   },
   "4jaFJIA_hTYbC1EkqH7WH": {
@@ -12226,11 +12994,11 @@
    "approximated": false
   },
   "bTIWY-ZKDFiiNgS9021Jw": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "7xjFHquAeQptg2MM2Od8E": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "omCCEEWFvlRUNvUGdTn9l": {
@@ -12434,7 +13202,7 @@
    "approximated": false
   },
   "oMFMLy4557uUtJOM6i7sC": {
-   "key": "case:round/37.8/20/28.5#steel",
+   "key": "case:round/37.8/20/28.5/c3#steel",
    "approximated": false
   },
   "UjtETcj3PFTT_UWlSAIYK": {
@@ -12610,11 +13378,11 @@
    "approximated": false
   },
   "EBDhGiQaG0y1etLgEubJY": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/c3#rose",
    "approximated": false
   },
   "DM7s8-zjc9CrGr9uLiuDi": {
-   "key": "case:round/42.5/22/28.5#matte",
+   "key": "case:round/42.5/22/28.5/c3#matte",
    "approximated": false
   },
   "ZeWPka2uyhLvy5I4sCN-g": {
@@ -12710,19 +13478,19 @@
    "actualShape": "ring-plain"
   },
   "tqeKBTI0FCAvd507oaM8x": {
-   "key": "case:round/42.5/22/28.5#matte",
+   "key": "case:round/42.5/22/28.5/ng#matte",
    "approximated": false
   },
   "AkQDdPABDEYupS5KlRDUK": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "msblv_51lGKd6VudZ5-l5": {
-   "key": "case:round/42.5/22/28.5#gold",
+   "key": "case:round/42.5/22/28.5/c3#gold",
    "approximated": false
   },
   "Aw0aSOpxOkSCiQZE_udIn": {
-   "key": "case:round/42.5/22/28.5#matte",
+   "key": "case:round/42.5/22/28.5/c3#matte",
    "approximated": false
   },
   "nwk5b7Qh3bqc3-hMtJNOp": {
@@ -12773,7 +13541,7 @@
    "approximated": false
   },
   "FXe5EbQOK0cLb-s8Gusq6": {
-   "key": "case:round/37.8/20/28.5#steel",
+   "key": "case:round/37.8/20/28.5/ng#steel",
    "approximated": false
   },
   "_tUr4iYbgeb_bKBDZIjWy": {
@@ -12903,7 +13671,7 @@
    "actualShape": "ring-plain"
   },
   "WP0KCQLmwrrVSE-a1E4tG": {
-   "key": "case:round/42.5/22/28.5#rose",
+   "key": "case:round/42.5/22/28.5/c3#rose",
    "approximated": false
   },
   "ZxP2B0u5KsNyPjOj5kBeG": {
@@ -12931,7 +13699,7 @@
    "approximated": false
   },
   "9e-jagRjAE2LauIFEc35z": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/c3#steel",
    "approximated": false
   },
   "4J0BBRwpJ1-9SRKqGgDlA": {
@@ -13029,7 +13797,7 @@
    "actualShape": "ring-plain"
   },
   "-uwnWcKHpX3x2SSup-AhS": {
-   "key": "case:round/42.5/22/28.5#steel",
+   "key": "case:round/42.5/22/28.5/ng#steel",
    "approximated": false
   },
   "uFed8ESJOGR-fnzGeY8MK": {
