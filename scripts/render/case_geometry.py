@@ -29,13 +29,21 @@ import math
 
 import numpy as np
 
-# Constants shared with lib/preview/art/parts.tsx and geometry.ts.
-LUG_ROOT_MM = 6.5
-LUG_TIP_MM = 4.4
+# Constants first shared with lib/preview/art/parts.tsx and geometry.ts. The
+# 3D outline was reworked on 2026-09-28 (the SVG diagram keeps the old one):
+# SKX lugs are chunkier and straighter than the diagram's, with squared-off
+# tips, and the crown guard hugs the crown on both sides instead of one long
+# shoulder. Crown position and guard follow the case (dims "crownAngle",
+# "guard"), from the vendor's title: "3 O'Clock", "No Crown Guard".
+LUG_ROOT_MM = 7.0
+LUG_TIP_MM = 5.2
+LUG_FLANK_BULGE_MM = 0.35    # was 0.9: a straighter outer flank
+LUG_TIP_CORNER_MM = 1.0      # squared tip with rounded corners (was a semicircle)
 FILLET_MM = 1.6
-GUARD_MM = 1.5
-GUARD_LEAD = 22.0
-CROWN_ANGLE = 120.0          # degrees clockwise from twelve
+GUARD_MM = 1.6
+GUARD_HALF_DEG = 11.0        # guard plateau, each side of the crown
+GUARD_RAMP_DEG = 14.0        # ramp from the case round into the guard
+CROWN_ANGLE = 120.0          # degrees clockwise from twelve (3.8 o'clock)
 LUG_OVERHANG_MM = 1.75       # lugToLug = caseDiameter + 3.5
 INSERT_OUTER_MM = 38.0       # modal stated insert OD; the bezel seat is cut for it
 
@@ -92,27 +100,26 @@ def lug_polygon(dims):
     outer_x = inner_x + LUG_ROOT_MM
     tip_x = inner_x + LUG_TIP_MM
     reach = (dims["caseDiameter"] + 2 * LUG_OVERHANG_MM) / 2
-    tip_r = LUG_TIP_MM / 2
-    tip_cy = reach - tip_r
+    rc = LUG_TIP_CORNER_MM
+    tip_cy = reach - rc
     root_y = math.sqrt(max(R * R - min(outer_x, R * 0.995) ** 2, 1e-6))
 
     pts = [(inner_x, root_y - 4.0), (outer_x, root_y - 4.0), (outer_x, root_y)]
     # Flank: quadratic from root to tip, control = chord midpoint pushed
-    # 0.9mm out along its own radius (same as parts.tsx `flank`).
+    # out along its own radius.
     mx, my = (outer_x + tip_x) / 2, (root_y + tip_cy) / 2
     ln = math.hypot(mx, my)
-    cx, cy = mx + mx / ln * 0.9, my + my / ln * 0.9
+    cx, cy = mx + mx / ln * LUG_FLANK_BULGE_MM, my + my / ln * LUG_FLANK_BULGE_MM
     for i in range(1, 17):
         t = i / 16
         x = (1 - t) ** 2 * outer_x + 2 * (1 - t) * t * cx + t * t * tip_x
         y = (1 - t) ** 2 * root_y + 2 * (1 - t) * t * cy + t * t * tip_cy
         pts.append((x, y))
-    # Round tip, from the outer corner over the top to the inner face.
-    ccx = (inner_x + tip_x) / 2
-    for i in range(1, 24):
-        a = math.pi * i / 24
-        pts.append((ccx + tip_r * math.cos(a), tip_cy + tip_r * math.sin(a)))
-    pts.append((inner_x, tip_cy))
+    # Squared tip: outer rounded corner, flat end, inner corner meets the lug's inner face.
+    for i in range(1, 9):
+        a = math.pi / 2 * i / 8
+        pts.append((tip_x - rc + rc * math.cos(a), tip_cy + rc * math.sin(a)))
+    pts.append((inner_x, reach))
     return pts
 
 
@@ -122,17 +129,12 @@ def outline_sdf(X, Y, dims):
     r = np.hypot(X, Y)
     theta = np.degrees(np.arctan2(X, Y)) % 360     # clockwise from twelve
 
-    # Body, with the crown guard as an angular shoulder that peaks AT the
-    # crown and runs straight into the lower-right lug root.
-    inner_x = dims["lugWidth"] / 2
-    outer_x = inner_x + LUG_ROOT_MM
-    root_angle = 180 - math.degrees(math.asin(min(outer_x / R, 0.995)))
-    peak = min(CROWN_ANGLE, root_angle - 4)
-    guard = GUARD_MM * np.where(
-        theta <= peak,
-        smoothstep(peak - GUARD_LEAD, peak, theta),
-        1 - smoothstep(peak, root_angle, theta),
-    )
+    # Body, with the crown guard as a shoulder either side of the crown.
+    c = dims.get("crownAngle", CROWN_ANGLE)
+    guard = 0.0
+    if dims.get("guard", True):
+        dist = np.abs(theta - c)
+        guard = GUARD_MM * (1 - smoothstep(GUARD_HALF_DEG, GUARD_HALF_DEG + GUARD_RAMP_DEG, dist))
     sd_body = r - (R + guard)
 
     sd_lug = polygon_sdf(np.abs(X), np.abs(Y), lug_polygon(dims))

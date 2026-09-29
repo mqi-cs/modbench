@@ -18,6 +18,17 @@ describe("shapeKey", () => {
     expect(shapeKey(skx)).toMatchObject({ ok: true, key: "case:round/42.5/22/28.5#steel", approximated: false });
   });
 
+  it("keys a crown at 3 and a missing crown guard into the case, and nothing else", () => {
+    const c3ng = part("case", { caseDiameterMm: 42.5, lugWidthMm: 22, dialApertureMm: 28.5, crownAtThree: true, noCrownGuard: true });
+    expect(shapeKey(c3ng)).toMatchObject({ ok: true, key: "case:round/42.5/22/28.5/c3/ng#steel", env: { CASE_CROWN: "3", CASE_GUARD: "0" } });
+    const m = buildManifest([skx, c3ng, part("dial", {})], "v");
+    const layer = (l: string) => m.jobs.filter((j) => j.layer === l && j.view === "top");
+    expect(layer("case").map((j) => j.caseKey).sort()).toEqual(["case:round/42.5/22/28.5#steel", "case:round/42.5/22/28.5/c3/ng#steel"]);
+    // Shared: one dial job per view for both variants, rendered without the crown env.
+    expect(layer("dial").map((j) => j.caseKey)).toEqual(["case:round/42.5/22/28.5"]);
+    expect(layer("dial")[0]!.env).not.toHaveProperty("CASE_CROWN");
+  });
+
   it("refuses a case missing a dimension, naming it", () => {
     const k = shapeKey(part("case", { caseDiameterMm: 36 }, { family: "skx013-case" }));
     expect(k).toMatchObject({ ok: false });

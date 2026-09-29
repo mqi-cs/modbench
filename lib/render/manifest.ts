@@ -11,7 +11,7 @@
 // case shape. Jobs multiply by case shapes; they add across parts.
 
 import { createHash } from "node:crypto";
-import { shapeKey, type RenderPart, type Renderable } from "./shape-keys";
+import { geometryKey, shapeKey, type RenderPart, type Renderable } from "./shape-keys";
 
 export const VIEWS = ["hero", "top"] as const;
 
@@ -62,9 +62,8 @@ export interface Manifest {
   keysPerSlot: Record<string, string[]>;
 }
 
-/** `case:round/42.5/22/28.5#gold` -> `case:round/42.5/22/28.5`. */
-export const geometryKey = (key: string) => key.split("#")[0]!;
-const withoutFinish = ({ CASE_FINISH: _f, ...env }: Record<string, string>) => env;
+export { geometryKey };
+const withoutFinish = ({ CASE_FINISH: _f, CASE_CROWN: _c, CASE_GUARD: _g, ...env }: Record<string, string>) => env;
 
 const hash = (v: unknown) => createHash("sha256").update(JSON.stringify(v)).digest("hex").slice(0, 32);
 
@@ -101,9 +100,10 @@ export function buildManifest(parts: RenderPart[], rendererVersion: string): Man
     });
   };
 
-  // A case key is geometry + finish (`#gold`). Layers that only hold the case
-  // out depend on its geometry, so they're keyed by that and shared across
-  // finishes; the case itself and the case+strap pair carry the finish.
+  // A case key is geometry + crown variant + finish (`/c3#gold`). Layers
+  // that only hold the case out depend on its geometry, so they're keyed by
+  // that and shared across variants and finishes; the case itself and the
+  // case+strap pair carry both.
   const cases = keysOf("case");
   const geometry = [...new Map(cases.map((c) => [geometryKey(c.key), { ...c, key: geometryKey(c.key), env: withoutFinish(c.env) }])).values()];
   for (const view of VIEWS) {

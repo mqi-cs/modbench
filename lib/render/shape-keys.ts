@@ -55,7 +55,14 @@ export type ShapeKey = Renderable | NotRenderable;
  * (chronograph pushers) and Namoki N4 need their own outline -- a paid setup
  * job in the plan, not an approximation.
  */
-export const ROUND_CASE_FAMILIES = new Set(["skx007-case", "skx013-case", "srpe-case", "alpinist-style-case"]);
+/**
+ * `case:round/42.5/22/28.5/c3/ng#gold` -> `case:round/42.5/22/28.5`: what the
+ * layers other than the case itself are keyed by. They hold the case out or
+ * sit inside it, so the finish and the crown variant don't change them.
+ */
+export const geometryKey = (key: string) => key.split("#")[0]!.split("/").slice(0, 4).join("/");
+
+export const ROUND_CASE_FAMILIES =new Set(["skx007-case", "skx013-case", "srpe-case", "alpinist-style-case"]);
 
 const no = (reason: string): NotRenderable => ({ ok: false, reason });
 
@@ -126,7 +133,16 @@ export function shapeKey(p: RenderPart): ShapeKey {
       if (missing.length) return no(`case states no ${missing.join(", ")}`);
       const dims = { caseDiameter: d.caseDiameter, lugWidth: d.lugWidth, aperture: d.aperture };
       const finish = caseFinish(p);
-      return yes("case", `case:round/${dims.caseDiameter}/${dims.lugWidth}/${dims.aperture}#${finish}`, { CASE_DIMS: JSON.stringify(dims), CASE_FINISH: finish });
+      // Crown at 3 / no crown guard, from the vendor's title: only the case
+      // layer's outline changes, so the variant sits after the geometry.
+      const c3 = p.attributes.crownAtThree === true, ng = p.attributes.noCrownGuard === true;
+      const variant = `${c3 ? "/c3" : ""}${ng ? "/ng" : ""}`;
+      return yes("case", `case:round/${dims.caseDiameter}/${dims.lugWidth}/${dims.aperture}${variant}#${finish}`, {
+        CASE_DIMS: JSON.stringify(dims),
+        CASE_FINISH: finish,
+        ...(c3 ? { CASE_CROWN: "3" } : {}),
+        ...(ng ? { CASE_GUARD: "0" } : {}),
+      });
     }
     case "dial":
       // The dial disc is cut to the case's aperture; the print is appearance.

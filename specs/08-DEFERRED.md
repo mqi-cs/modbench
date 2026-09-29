@@ -801,6 +801,71 @@ V3 0.76/10.
 
 ---
 
+## D20 — Top-view look (renderer revision 3, raised 2026-09-28)
+
+The view from above read as an illustration. Shipped (owner chose #2 and #6
+of the lever sheet): an 85 mm lens instead of orthographic (the flanks and
+bezel edge show), and a top-down studio set seen in reflections only (dim
+surround, two strip boxes, an overhead softbox), with stronger brushed
+grain. Diffuse light is unchanged, so prints and lume are lit as before.
+Hero untouched (231 jobs adopted); 105 top-view jobs re-rendered.
+
+**a. Rendered on Metal, not the 3050** (owner, 2026-09-28), against §17's
+rule for glossy renders; 57 of the 105 are glossy (case finishes, straps).
+*Restore signal:* the next 3050 session, or a visible difference reported
+between top and hero metal. *Cost:* ~15 min on OptiX (`run.ts` after
+removing the top-view outputs; nothing else changes).
+
+**b. V2 composite accuracy dropped** from 1.42/21 to 2.36/28 (still inside
+WS2c's MAD ≤ 3, p99 ≤ 30). Not traced. *Restore signal:* a visible seam in
+the top view, or the next accuracy claim. *Cost:* S–M, locate the worst
+pixels as §17 4a did.
+
+**c. Levers not taken yet** (sheet in the owner's temp folder): bigger
+bezel with a wider polished bevel (#4), a curved case top, the case outline
+and crown guards, bracelet link detail, then a wider frame showing the
+whole watch (#1). No drop shadow: a shadow-catcher table greyed the whole
+48 mm frame. *Restore signal:* owner picks the next lever. *Cost:* M–L
+each; geometry changes re-render both views.
+
+## D21 — Case outline accuracy (raised 2026-09-28)
+
+Measured: the 3D outline was one parametric SKX silhouette (diameter + lug
+width) for all 276 drawn cases, 147 distinct models. Done (renderer
+revision 4): cases whose title names a non-round outline (B&R/"Square",
+Nautilus, Tuna, Turtle: 38 drawn) fall back to the diagram; crown at 3 (50)
+and no crown guard (32) come from the title into the case layer's key; the
+generic outline has chunkier, straighter lugs with squared tips and a guard
+either side of the crown; spring-bar holes are drilled per lug.
+
+**a. The engine's crownPosition contradicts 47 case titles.** Cases titled
+"3 O'Clock" / "3H" carry `crownPosition: "3.8"`, the skx007-case family
+constant (backfill-attributes.ts CASE_CROWN_POSITIONS). Rules that read it
+(movement crown variants, date alignment) may judge them as 3.8 cases.
+Not changed: it would move engine results. *Restore signal:* owner rules
+on whether the title's statement overrides the family constant (it is
+vendor-stated). *Cost:* S, one pattern in the backfill plus a quoted
+fixture.
+
+**b. Non-round outlines** (square, octagonal, shrouded, cushion) aren't
+modelled. *Restore signal:* a pilot shop sells them. *Cost:* L per outline.
+
+**c. Models drawn with the generic outline though theirs differs:** MM300
+style 29, Samurai 17, Sumo 2. Vendor photos are one three-quarter shot per
+listing, so an outline means rectifying that photo (the round case opening
+gives the tilt) or vendor drawings. *Restore signal:* a shop's catalog is
+mostly one of these. *Cost:* M per model.
+
+**d. The SVG diagram keeps the old outline** (lib/preview/art/parts.tsx).
+*Restore signal:* the two side by side look inconsistent to a user. *Cost:*
+S–M, port the constants and the tip shape.
+
+**e. Renders are made for cases the preview won't show** (other sizes,
+non-round outlines): the manifest keys every renderable part. *Restore
+signal:* render time matters. *Cost:* S, skip hidden cases in the manifest.
+
+---
+
 ## Not deferred — decisions, recorded here so they are not re-opened as work
 
 These have no restore signal. They are listed only because each looks like

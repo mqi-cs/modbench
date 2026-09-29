@@ -10,6 +10,7 @@
 
 import type { Layer } from "./compositor";
 import { PLACEHOLDER, STANDIN_KEYS, STANDIN_PRINT, ringStatus, type RingStatus } from "./standins";
+import { geometryKey } from "./shape-keys";
 
 export interface RenderIndex {
   order: string[];
@@ -59,8 +60,12 @@ export function resolveScene({ index, view, parts, prints, caseAttributes }: Sce
   if (!caseId) return { ok: false, reason: "no case chosen" };
   const caseEntry = index.parts[caseId];
   if (!caseEntry) return { ok: false, reason: index.notRenderable[caseId] ?? "case not in the render index" };
-  if (!CHECKED_CASE_SHAPES.has(caseEntry.key.split("#")[0]!)) return { ok: false, reason: "this case size isn't checked in 3D yet" };
+  const geo = geometryKey(caseEntry.key);
+  if (!CHECKED_CASE_SHAPES.has(geo)) return { ok: false, reason: "this case size isn't checked in 3D yet" };
   if (caseAttributes?.integratedBezel === true) return { ok: false, reason: "this case's bezel is built in, and its shape isn't modelled in 3D" };
+  // Square, octagonal, shrouded (Tuna) and cushion (Turtle) cases, named in
+  // the vendor's title: the renderer draws one round SKX outline.
+  if (typeof caseAttributes?.outline === "string") return { ok: false, reason: `this case's ${caseAttributes.outline} shape isn't modelled in 3D` };
   const ring = ringStatus(caseAttributes);
   const keyOf = (slot: string) => (parts[slot] ? index.parts[parts[slot]!]?.key : undefined);
   const strapKey = keyOf("strap");
@@ -70,9 +75,8 @@ export function resolveScene({ index, view, parts, prints, caseAttributes }: Sce
   const labels = ["Shape from the case's stated dimensions"];
   const need = (id: string) => index.jobs[id] ?? null;
 
-  // The case (and the case+strap pair) carry the finish; everything else is
-  // keyed by the case's geometry alone.
-  const geo = caseEntry.key.split("#")[0]!;
+  // The case (and the case+strap pair) carry the finish and crown variant;
+  // everything else is keyed by the case's geometry alone.
   const caseJob = paired ? need(`${view}/beauty/casestrap/${caseEntry.key}/${strapKey}`) : need(`${view}/beauty/case/${caseEntry.key}`);
   if (!caseJob) return { ok: false, reason: "case not rendered yet" };
 
