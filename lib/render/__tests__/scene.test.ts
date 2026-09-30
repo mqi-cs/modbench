@@ -154,10 +154,9 @@ describe("resolveScene", () => {
     });
   });
 
-  // D12f: on 36, 37.8, 38 and 39.5 mm the insert vanishes or is a sliver.
   it("falls back, with the reason, for a case size not checked in 3D or a built-in bezel", () => {
-    const small = { ...index, parts: { ...index.parts, c38: { key: "case:round/38/20/28.5#steel", approximated: false } } };
-    expect(resolveScene({ index: small, view: "hero", parts: { case: "c38" }, prints: {} })).toEqual({ ok: false, reason: "this case size isn't checked in 3D yet" });
+    const small = { ...index, parts: { ...index.parts, c41: { key: "case:round/41/20/28.5#steel", approximated: false } } };
+    expect(resolveScene({ index: small, view: "hero", parts: { case: "c41" }, prints: {} })).toEqual({ ok: false, reason: "this case size isn't checked in 3D yet" });
     expect(resolveScene({ index, view: "hero", parts: { case: "case1" }, prints: {}, caseAttributes: { integratedBezel: true } })).toEqual({
       ok: false,
       reason: "this case's bezel is built in, and its shape isn't modelled in 3D",

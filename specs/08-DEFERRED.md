@@ -465,6 +465,19 @@ these four shapes to users until fixed. *Restore signal:* D12c (stated or
 case-scaled insert bore) plus a per-case-shape visual check; WS2c's "SKX
 shape family end to end" measure covers it.
 
+**Fixed 2026-09-30 (renderer revision 5).** The insert bore is SKX's
+31.8mm, or a 3.1mm band where the case is too small for it (stated bands
+are ~3mm: SKX013 33.6/27.6, SKX 38/31.8). Insert OD/ID now: 36mm 31.5/25.3,
+37.8mm 33.3/27.1, 38mm 33.5/27.3, 39.5mm 35.0/28.8; 42.5 and 43.8 are
+unchanged (31.8 bore, bit-identical geometry). The re-render showed a second
+fault: on 36 and 37.8 the bezel's bevel leaves its underside as one bridged
+n-gon whose tessellation covers part of the bore -- opaque steel over the
+dial (the old renders had it too, hidden behind the missing insert). The
+bezel now refills any face found inside the bore; it fires on those two
+sizes only. The flank hole didn't reproduce. 232 jobs re-rendered on Metal
+(D20a applies), 296 adopted; V1-V3 accuracy within baseline (0.95/14,
+2.50/29, 0.77/10).
+
 ---
 
 ## D13 — WS3 leftovers (raised 2026-09-26)
@@ -718,6 +731,11 @@ enforced. `resolveScene` draws only `CHECKED_CASE_SHAPES` (42.5 and 43.8 mm)
 and cases without a built-in bezel; anything else falls back to the diagram
 with the reason. Hidden: 63 approved cases (59 by size, 4 NMK926 by bezel).
 
+**Update 2026-09-30 (D12f fixed, renderer revision 5):** 36, 37.8, 38 and
+39.5mm added to `CHECKED_CASE_SHAPES` after an eye check (contact sheet and
+localhost, both views). Cases on those sizes with a built-in bezel or a
+non-round outline still fall back (D21).
+
 ---
 
 ## D19 — WS2c follow-up: preview stand-ins (raised 2026-09-28)
@@ -815,6 +833,9 @@ rule for glossy renders; 57 of the 105 are glossy (case finishes, straps).
 *Restore signal:* the next 3050 session, or a visible difference reported
 between top and hero metal. *Cost:* ~15 min on OptiX (`run.ts` after
 removing the top-view outputs; nothing else changes).
+Revision 5 (D12f, 2026-09-30) did the same on the owner's call: the 232
+jobs for the 36, 37.8, 38 and 39.5mm cases, both views, rendered on Metal.
+*Cost to redo on OptiX:* ~45 min for those jobs.
 
 **b. V2 composite accuracy dropped** from 1.42/21 to 2.36/28 (still inside
 WS2c's MAD ≤ 3, p99 ≤ 30). Not traced. *Restore signal:* a visible seam in
