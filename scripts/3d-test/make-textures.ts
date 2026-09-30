@@ -27,6 +27,7 @@
 //   npx tsx scripts/3d-test/make-textures.ts
 
 import sharp from "sharp";
+import { ringSvg } from "../render/print-art";
 
 const OUT = "scripts/3d-test/out";
 // Per build: DIAL_ID picks the dial photo; TAG suffixes every output;
@@ -37,26 +38,7 @@ const RING_BG = process.env.RING_BG ?? "#141516";
 const RING_INK = process.env.RING_INK ?? "#eeede6";
 
 async function ring() {
-  const PX = 2048;
-  const OUTER = 30.5; // modal stated chapter ring (66 rings)
-  const INNER = 27.7;
-  const s = PX / OUTER;
-  const c = PX / 2;
-  const ro = (OUTER / 2) * s;
-  const ri = (INNER / 2) * s;
-  const at = (r: number, deg: number): [number, number] => {
-    const a = ((deg - 90) * Math.PI) / 180;
-    return [c + r * Math.cos(a), c + r * Math.sin(a)];
-  };
-  const marks: string[] = [];
-  for (let i = 0; i < 60; i++) {
-    const five = i % 5 === 0;
-    const [x1, y1] = at(ri + (ro - ri) * 0.12, i * 6);
-    const [x2, y2] = at(ri + (ro - ri) * (five ? 0.8 : 0.55), i * 6);
-    marks.push(`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${RING_INK}" stroke-width="${(five ? 0.32 : 0.16) * s}"/>`);
-  }
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${PX}" height="${PX}"><rect width="${PX}" height="${PX}" fill="${RING_BG}"/>${marks.join("")}</svg>`;
-  await sharp(Buffer.from(svg)).png().toFile(`${OUT}/ring${TAG || "-skx"}.png`);
+  await sharp(Buffer.from(ringSvg({ bg: RING_BG, ink: RING_INK }))).png().toFile(`${OUT}/ring${TAG || "-skx"}.png`);
 }
 
 /** Bounding box of the white window, grown from a seed inside it. */

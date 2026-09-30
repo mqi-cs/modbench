@@ -165,7 +165,7 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
     [build, slice, totals, includeTools],
   );
 
-  const partAttributes = useCallback((id: string) => slice.parts[id]?.attributes, [slice]);
+  const partOf = useCallback((id: string) => slice.parts[id], [slice]);
   const hasDialPhoto = useCallback((id: string) => previewable.has(id), [previewable]);
 
   const chooseFirstBuild = useCallback(
@@ -244,7 +244,7 @@ export function Configurator({ catalog, starters }: { catalog: Catalog; starters
         <div className="flex flex-col gap-px bg-rule">
           <Preview3D
             parts={build.parts as Partial<Record<string, string>>}
-            attributes={partAttributes}
+            part={partOf}
             hasDialPhoto={hasDialPhoto}
             fallback={
               <WatchPreview

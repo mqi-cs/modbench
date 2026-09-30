@@ -57,6 +57,18 @@ describe("shapeKey", () => {
     expect(shapeKey(part("bezel_insert", { profile: "slope" }))).toMatchObject({ approximated: true, actualShape: "insert-slope" });
   });
 
+  it("renders blued and white hands, but not a blue seconds hand or white lume", () => {
+    const hands = (name: string, styleTags: string[]) => (shapeKey(part("hands", { shapeTag: "hand-sword", styleTags }, { name })) as { key: string }).key;
+    expect(hands("Breguet Hands - Polished Blue", ["blue"])).toBe("hands:sword#blue");
+    expect(hands("H0573 Snowflake Hands - Blue/White", ["blue", "white"])).toBe("hands:sword#blue");
+    expect(hands("Watch Hands: Pitched Dauphine + Blue Seconds Hand", ["blue"])).toBe("hands:sword#steel");
+    expect(hands("Grand Seiko Dauphine Hands - Brushed Top Silver & Blue", ["blue", "silver-tone"])).toBe("hands:sword#steel");
+    expect(hands("Watch Hands: Milspec White", ["white"])).toBe("hands:sword#white");
+    expect(hands("H0572 Snowflake Hands - Black/White", ["black", "white"])).toBe("hands:sword#black");
+    expect(hands("Watch Hands: Fathoms White Patina Lume Finish", ["white"])).toBe("hands:sword#steel");
+    expect(hands("SEIKO SRPD Lumibrite Hands - Yellow Gold", ["gold-tone", "yellow"])).toBe("hands:sword#gold");
+  });
+
   it("splits band straps into leather and rubber by the vendor's name", () => {
     expect(shapeKey(part("strap", { shapeTag: "strap-band" }, { name: "Italian Leather Strap" }))).toMatchObject({ key: "strap:leather", approximated: false });
     expect(shapeKey(part("strap", { shapeTag: "strap-band" }, { name: "FKM Rubber Strap" }))).toMatchObject({ key: "strap:rubber", approximated: false });
