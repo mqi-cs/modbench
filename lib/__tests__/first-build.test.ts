@@ -104,7 +104,7 @@ describe("first-build mode, over the live catalog", () => {
     expect(prefixes.map((p) => Object.keys(p.parts).length)).toEqual([1, 2, 3, 4, 5, 6]);
     for (const { parts } of prefixes) {
       for (const view of ["hero", "top"] as const) {
-        const s = resolveScene({ index, view, parts, prints: printsFor(parts, attributes, () => true), caseAttributes: attributes(sumo.id) });
+        const s = resolveScene({ index, view, parts, prints: printsFor(parts, (id) => catalog.parts[id], () => true), caseAttributes: attributes(sumo.id) });
         expect(s.ok, JSON.stringify(parts)).toBe(true);
         if (!s.ok) continue;
         const stems = new Set(s.layers.map((l) => (l.kind === "surface" ? l.stem : "")));

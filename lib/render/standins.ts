@@ -21,7 +21,7 @@ export const STANDIN_KEYS = { dial: "dial:disc", ring: "ring:angled", insert: "i
 export const PLACEHOLDER = "placeholder shape, not part of this build";
 
 /** Generic print for a ring built into the case (the case's own photo isn't usable). */
-export const INTEGRATED_RING_PRINT = "/render/prints/ring-ring-white.webp";
+export const INTEGRATED_RING_PRINT = "/render/prints/ring-black-white.webp";
 
 export type RingStatus = "integrated" | "required" | "unstated";
 

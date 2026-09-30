@@ -13,12 +13,12 @@ const DIR = "/render/layers";
 // renders missing, no WebGL2).
 export function Preview3D({
   parts,
-  attributes,
+  part,
   hasDialPhoto,
   fallback,
 }: {
   parts: Partial<Record<string, string>>;
-  attributes: (id: string) => Record<string, unknown> | undefined;
+  part: (id: string) => { name: string; attributes: Record<string, unknown> } | undefined;
   hasDialPhoto: (id: string) => boolean;
   fallback: ReactNode;
 }) {
@@ -39,9 +39,9 @@ export function Preview3D({
   const scene = useMemo(
     () =>
       index
-        ? resolveScene({ index, view, parts, prints: printsFor(parts, attributes, hasDialPhoto), caseAttributes: parts.case ? attributes(parts.case) : undefined })
+        ? resolveScene({ index, view, parts, prints: printsFor(parts, part, hasDialPhoto), caseAttributes: parts.case ? part(parts.case)?.attributes : undefined })
         : null,
-    [index, view, parts, attributes, hasDialPhoto],
+    [index, view, parts, part, hasDialPhoto],
   );
 
   useEffect(() => {

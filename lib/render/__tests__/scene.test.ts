@@ -178,10 +178,10 @@ describe("resolveScene", () => {
   });
 
   it("gives a case's built-in ring a generic print only when no separate ring is chosen", () => {
-    const attrs = (id: string) => (id === "own" ? { integratedChapterRing: true } : {});
+    const attrs = (id: string) => ({ name: id === "r" ? "Mirror Polished Black Chapter Ring" : "", attributes: id === "own" ? { integratedChapterRing: true } : {} });
     expect(printsFor({ case: "own" }, attrs, () => false).ring).toEqual({ src: INTEGRATED_RING_PRINT, generated: true });
     expect(printsFor({ case: "plain" }, attrs, () => false).ring).toBeUndefined();
-    expect(printsFor({ case: "own", chapterRing: "r" }, attrs, () => false).ring?.src).toBe("/render/prints/ring-ring-white.webp");
+    expect(printsFor({ case: "own", chapterRing: "r" }, attrs, () => false).ring?.src).toBe("/render/prints/ring-black-white.webp");
   });
 
   it("falls back, with the reason, when the case can't be drawn or the dial has no photo", () => {
