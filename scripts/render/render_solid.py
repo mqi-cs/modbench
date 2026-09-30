@@ -96,8 +96,10 @@ R = DIMS["caseDiameter"] / 2
 SEAT_R = min(geo.INSERT_OUTER_MM / 2 + 0.6, R - 1.0)
 BORE_R = DIMS["aperture"] / 2 + 1.2
 BEZEL_OUT = R - 1.1
-BEZEL_IN = 31.8 / 2
 INSERT_OUT = BEZEL_OUT - 1.15
+# Insert bore: SKX's 31.8mm, or a 3.1mm band on cases too small for it (D12f:
+# stated inserts are ~3mm bands, SKX013 33.6/27.6). 42.5 and 43.8 stay 15.9.
+BEZEL_IN = min(31.8 / 2, INSERT_OUT - 3.1)
 
 T0 = time.perf_counter()
 bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -308,6 +310,31 @@ bezel = prism("bezel", circle(BEZEL_OUT, 120 * 8, coin), Z_TOP, BEZEL_TOP)
 boolean(bezel, prism("bin", circle(BEZEL_IN), Z_TOP - 1, BEZEL_TOP + 1))
 boolean(bezel, prism("pocket", circle(INSERT_OUT), BEZEL_TOP - INSERT_POCKET, BEZEL_TOP + 1))
 bevel(bezel, 0.2, segments=2)
+# D12f: on the 36 and 37.8mm cases the bevel leaves the bezel's underside as
+# one bridged n-gon whose tessellation spans part of the bore -- opaque steel
+# over the dial. Refill any face found inside the bore (a 0.5mm grid) with the
+# bore kept as a hole; the other sizes have none, so they are untouched.
+bad = set()
+for gx in np.arange(-BEZEL_IN, BEZEL_IN, 0.5):
+    for gy in np.arange(-BEZEL_IN, BEZEL_IN, 0.5):
+        if math.hypot(gx, gy) < BEZEL_IN - 0.3:
+            hit, _, _, fi = bezel.ray_cast(Vector((gx, gy, BEZEL_TOP + 1)), Vector((0, 0, -1)))
+            if hit:
+                bad.add(fi)
+if bad:
+    print(f"bezel: refilled {len(bad)} face(s) over the bore")
+    bm = bmesh.new()
+    bm.from_mesh(bezel.data)
+    bm.faces.ensure_lookup_table()
+    faces = [bm.faces[i] for i in bad]
+    edges = list({e for f in faces for e in f.edges})
+    bmesh.ops.delete(bm, geom=faces, context="FACES_ONLY")
+    new = bmesh.ops.triangle_fill(bm, use_beauty=True, use_dissolve=False, edges=edges)["geom"]
+    for f in new:
+        if isinstance(f, bmesh.types.BMFace) and f.normal.z > 0:
+            f.normal_flip()
+    bm.to_mesh(bezel.data)
+    bm.free()
 smooth(bezel)
 
 insert = prism("insert", circle(INSERT_OUT - 0.05), BEZEL_TOP - INSERT_POCKET, BEZEL_TOP - 0.1)
