@@ -885,6 +885,59 @@ S–M, port the constants and the tip shape.
 non-round outlines): the manifest keys every renderable part. *Restore
 signal:* render time matters. *Cost:* S, skip hidden cases in the manifest.
 
+## D22 — Part colours in the 3D preview (raised 2026-09-30)
+
+Measured: inserts had 4 prints and every other colour fell to black (274
+colour lost, 176 two-tone flattened); every chapter-ring print was a black
+ring (all 378 drawn black); blued and white hands drew steel; the insert's
+roughness 0.3 laid a reflection veil over 95.5% of it (Pepsi blue saturation
+0.65 → 0.26). Done: the insert and ring print comes from the listing name
+(`lib/render/prints.ts`, 116 generated prints by `make-prints.ts`, no
+render); hands `#blue` and `#white` (24 jobs); the insert polished, with no
+coat and Specular IOR Level 0.1 (renderer revision 6; 12 jobs, 516 adopted).
+Roughness alone only moved Pepsi blue to 0.29: the veil is the tent's white
+surround, which the metal needs. Now 0.39 hero / 0.53 top; the half of the
+insert that faces the softbox keeps a real reflection.
+
+**a. Strap colour isn't drawn** (owner, 2026-09-30). Rubber is always black,
+leather brown, NATO and metal fixed; 190 straps name another colour, and the
+preview says "Strap: shape only, colour not shown". `STRAP_RGB` exists in
+render_solid.py but no key sets it. *Restore signal:* a pilot shop selling
+coloured rubber straps. *Cost:* about 57 jobs per colour per strap type (12
+strap + 45 case+strap pairs), about 340 for the top six rubber colours; or L
+to make straps a print layer like inserts.
+
+**b. Accent hands** (orange minute hand, red or blue seconds: about 25) draw
+in the set's main finish. *Restore signal:* a user report. *Cost:* M, a
+second hand material and a key per accent.
+
+**c. Marking colours other than white, black, gold and grey** ("with Yellow
+Markers", Black Series' red and orange) draw white or black. *Restore
+signal:* a user report. *Cost:* S, add inks to `INKS` (every body colour
+gets a print).
+
+**d. GMT inserts show the 60-minute dive scale** (269 tagged `gmt-bezel`).
+Two-tone splits are drawn top and bottom on that scale. *Restore signal:*
+owner review finds it misleading. *Cost:* S, a 24-hour variant in
+`scripts/render/print-art.ts` and a key.
+
+**e. Two-tone orientation is fixed per nickname,** not read from the name
+(vendors write Pepsi both "Red/Blue" and "Blue/Red"). Batman is drawn black
+over blue and Root Beer black over brown, both unconfirmed against the
+originals. *Restore signal:* owner's eye check. *Cost:* S, swap the pair in
+`NICKNAMES`.
+
+**f. Revision 6 rendered on Metal, and accuracy.ts not re-baselined.** The
+12 insert jobs are Metal (as D20a and revision 5). The references
+check-v1..3 still show the old coated insert, so `accuracy.ts` fails (V1
+5.49/77, V2 11.55/80, V3 5.31/77). Metal references can't replace them: §17's
+Metal/OptiX gap put the whole watch outside (V1 1.36/26, V2 3.28/52, V3
+1.14/20), with the error spread over the case, dial and hands, not the
+insert. On insert pixels alone, composite vs Metal reference: V1 1.91/27,
+V2 1.61/22, V3 1.97/27, inside WS2c's MAD 3 / p99 30. *Restore signal:*
+before merging to main. *Cost:* ~15 min on the 3050: remove the 12 insert
+outputs, `run.ts`, `references.ts`, `accuracy.ts`, record the baseline.
+
 ---
 
 ## Not deferred — decisions, recorded here so they are not re-opened as work

@@ -739,20 +739,32 @@ else:
     for ob in (caseback, bezel, crown, stem):
         ob.data.materials.append(steel_p)
     # Printed insert: the generated SKX print, anodised black under it.
-    im, ib = principled("insert_print", (1, 1, 1), 0.0, 0.3)
+    # Revision 6: polished, no coat and a fifth of the default reflectance.
+    # Roughness 0.3 plus a 0.3 coat mirrored the tent's white surround over
+    # 95.5% of the insert and cut a Pepsi blue's saturation from 0.65 to 0.26
+    # (hero) / 0.32 (top); now 0.39 / 0.53. Roughness alone moved it to 0.29:
+    # the veil is the tent's brightness, which the metal needs, so the insert
+    # reflects less of it -- as a photographer flags a bezel.
+    im, ib = principled("insert_print", (1, 1, 1), 0.0, 0.05)
+    ib.inputs["Specular IOR Level"].default_value = 0.1
     itex = im.node_tree.nodes.new("ShaderNodeTexImage")
     itex.image = bpy.data.images.load(os.path.join(TEX, texf("insert", "insert-skx.png")))
     itex.extension = "CLIP"
     im.node_tree.links.new(itex.outputs["Color"], ib.inputs["Base Color"])
-    ib.inputs["Coat Weight"].default_value = 0.3
     insert.data.materials.append(im)
 
     HAND_RGB = {
         "steel": (0.75, 0.75, 0.75), "gold": (0.95, 0.72, 0.40),
         "rose": (0.92, 0.66, 0.53), "black": (0.045, 0.045, 0.05),
+        # Heat-blued steel, and painted white (not metal, satin).
+        "blue": (0.05, 0.12, 0.55), "white": (0.80, 0.80, 0.78),
     }
-    hand_rgb = HAND_RGB.get(os.environ.get("HAND_COLOR", "steel"), HAND_RGB["steel"])
-    hand_steel, _ = principled("hand_steel", hand_rgb, 1.0, 0.16 if os.environ.get("HAND_COLOR") == "black" else 0.08)
+    hand_col = os.environ.get("HAND_COLOR", "steel")
+    hand_rgb = HAND_RGB.get(hand_col, HAND_RGB["steel"])
+    if hand_col == "white":
+        hand_steel, _ = principled("hand_steel", hand_rgb, 0.0, 0.4)
+    else:
+        hand_steel, _ = principled("hand_steel", hand_rgb, 1.0, 0.16 if hand_col == "black" else 0.08)
     lume_rgb = tuple(float(v) for v in os.environ.get("LUME", "0.86,0.85,0.78").split(","))
     lume_m, _ = principled("lume", lume_rgb, 0.0, 0.6)
     for ob in hand_metal:

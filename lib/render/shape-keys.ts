@@ -81,11 +81,15 @@ export function caseFinish(p: RenderPart): "steel" | "pvd" | "matte" | "gold" | 
   if (t.includes("black")) return t.includes("matte") ? "matte" : "pvd";
   return "steel";
 }
-export function handColour(p: RenderPart): "steel" | "gold" | "rose" | "black" {
+export function handColour(p: RenderPart): "steel" | "gold" | "rose" | "black" | "blue" | "white" {
   const t = styleTags(p);
   if (t.includes("rose-gold")) return "rose";
   if (t.includes("gold-tone")) return "gold";
+  // Blued steel, unless the blue is only the seconds hand or a silver-and-blue two-tone.
+  if (t.includes("blue") && !/\bblue\s+second|\bsilver\s*&\s*blue/i.test(p.name)) return "blue";
   if (t.includes("black")) return "black";
+  // Painted white hands; "White Patina Lume" is the lume colour.
+  if (t.includes("white") && !/\bwhite\s+patina\b/i.test(p.name)) return "white";
   return "steel";
 }
 const yes = (slot: RenderSlot, key: string, env: Record<string, string>, actualShape?: string): Renderable =>
