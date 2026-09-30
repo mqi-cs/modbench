@@ -731,6 +731,11 @@ enforced. `resolveScene` draws only `CHECKED_CASE_SHAPES` (42.5 and 43.8 mm)
 and cases without a built-in bezel; anything else falls back to the diagram
 with the reason. Hidden: 63 approved cases (59 by size, 4 NMK926 by bezel).
 
+**Update 2026-09-30 (D12f fixed, renderer revision 5):** 36, 37.8, 38 and
+39.5mm added to `CHECKED_CASE_SHAPES` after an eye check (contact sheet and
+localhost, both views). Cases on those sizes with a built-in bezel or a
+non-round outline still fall back (D21).
+
 ---
 
 ## D19 — WS2c follow-up: preview stand-ins (raised 2026-09-28)

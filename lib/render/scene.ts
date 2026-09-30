@@ -37,12 +37,14 @@ export interface SceneInput {
 }
 
 /**
- * Case shapes checked by eye in 3D (WS2c: SKX 42.5 and 43.8 mm). Anything
- * else falls back to the diagram: on 36, 37.8, 38 and 39.5 mm the insert
- * vanishes or is a sliver (08-DEFERRED D12f), and a shape rendered since
- * hasn't been checked.
+ * Case shapes checked by eye in 3D: SKX 42.5 and 43.8 mm (WS2c), and 36,
+ * 37.8, 38 and 39.5 mm since renderer revision 5 fixed their insert
+ * (08-DEFERRED D12f). A shape rendered since falls back to the diagram
+ * until it has been checked.
  */
-export const CHECKED_CASE_SHAPES: ReadonlySet<string> = new Set(["case:round/42.5/22/28.5", "case:round/43.8/22/28.5"]);
+export const CHECKED_CASE_SHAPES: ReadonlySet<string> = new Set(
+  ["36/20", "37.8/20", "38/20", "39.5/20", "42.5/22", "43.8/22"].map((s) => `case:round/${s}/28.5`),
+);
 
 export type Scene = { ok: true; layers: Layer[]; labels: string[] } | { ok: false; reason: string };
 
